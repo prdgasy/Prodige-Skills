@@ -4,6 +4,7 @@ import { Menu } from "@src/menu";
 import { Tool } from "@src/misc/tool";
 import { Text } from "@lib/text";
 import { _, Objective } from "sandstone";
+import { Mask } from "../../mask";
 
 export class Items {
 	public static index = Objective.create('menu.shop.items.index')('@s');
@@ -13,6 +14,7 @@ export class Items {
 	}
 
 	public static init(g: Gui, p: Page) {
+		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
 		const tools = Object.values(Tool.tools);
 
 		p.add(() => {
@@ -32,7 +34,7 @@ export class Items {
 			}
 		});
 
-		p.add(() => Menu.sliders(p, Items.index, Math.floor(tools.length / 18)));
+		p.add(() => Menu.sliders(p, Items.index, Math.max(0, Math.ceil(tools.length / 18) - 1)));
 
 
 

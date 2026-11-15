@@ -80,29 +80,21 @@ export class Task {
 	}
 
 	private finished() {
-		_.if(Player.sound, () => Player.playSound('info'));
-		Player.task(this.id, 'progress').remove();
+		Reward.enqueueAll(this.rewards);
 		Player.task(this.id, 'done').add();
-		Player.send(`Task done! ${this.name} §8• §e${this.goal}§6/§e${this.goal} §7§o(Claim in the Menu)`, '§6');
-	}
-
-	public claim() {
-		Reward.giveAll(this.rewards);
-		Player.task(this.id, 'claimed').add();
-		Player.task(this.id, 'done').remove();
+		Player.task(this.id, 'progress').remove();
 		Player.playSound('levelup', 2);
 		smartTellraw([
 			Global.encapsuler + '\n',
-			` §6§lTASK COMPLETE!\n\n`,
+			` §e§lTASK COMPLETE!\n\n`,
 			` §f§lTask:\n`,
 			`  §8• §9${this.name}§7: §e${this.goal}§6/§e${this.goal}\n\n`,
-			' §f§lRewards Collected:\n',
+			' §f§lRewards Collected: §7(See the Reward Vault)\n',
 			...this.rewards.map(r => `  §8• ${r.name}\n`),
 			'\n',
 			' §8Keep going and take on your next challenge!\n',
 			Global.encapsuler
 		], '@p');
-
 	}
 
 	public static manageTimer() {
@@ -133,7 +125,6 @@ export class Task {
 
 				_.with([roll], () => {
 					Player.addMacroTask(roll, "progress");
-					Player.addMacroTask(roll, "assigned");
 				});
 				assigned.push(Variable(roll));
 			}
@@ -149,8 +140,6 @@ export class Task {
 			task.executed.reset();
 			Player.task(task.id, 'progress').remove();
 			Player.task(task.id, 'done').remove();
-			Player.task(task.id, 'claimed').remove();
-			Player.task(task.id, 'assigned').remove();
 		}
 	}
 

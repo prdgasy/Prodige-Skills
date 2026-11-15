@@ -4,6 +4,7 @@ import { Buyable } from "@src/misc/buyable";
 import { Booster } from "@src/misc/booster";
 import { Shop } from ".";
 import { Menu } from "@src/menu";
+import { Mask } from "../../mask";
 
 const BOOSTER_PRICES: Record<number, number> = {
 	2: 500,
@@ -18,6 +19,7 @@ export class Boosters {
 	}
 
 	public static init(g: Gui, p: Page) {
+		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
 		for (let i = 1; i < 5; i++) {
 			const multiplier = i + 1;
 			p.add(

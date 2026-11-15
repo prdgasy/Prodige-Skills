@@ -36,11 +36,11 @@ export class Navigation {
 					'§a§l┃ Skill Progression',
 					...Text.wrap(skill.description, '§a┃ §7'),
 					'',
-					'§d§l┃ Next Level',
-					$`§d┃ §8• §7Current level: §e${skill.name} ${Roman.get(skill.level)}`,
-					$`§d┃ §8• §7Target: §d${skill.name} ${next}`,
-					$`§d┃ §8• §7Progress: §e${progress.show()}%`,
-					$`§d┃ §8> ${bar} §7${skill.xp.show()}§8/§e${skill.goal} XP`,
+					'§f§lNext Level:',
+					$` §8• §7Current level: §e${skill.name} ${Roman.get(skill.level)}`,
+					$` §8• §7Target: §d${skill.name} ${next}`,
+					$` §8• §7Progress: §e${progress.show()}%`,
+					$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
 					'',
 					'§eClick to view!'
 				],
@@ -59,9 +59,9 @@ export class Navigation {
 					'§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.',
 					'',
 					'§b§l┃ Perks',
-					'§b┃ §8• §7Review the current effect and next tier bonus.',
-					'§b┃ §8• §7Check level and point requirements to upgrade.',
-					'§b┃ §8• §7Toggle the ability perk on or off on its page.',
+					'§b┃ §7Review the current effect and next tier bonus.',
+					'§b┃ §7Check level and point requirements to upgrade.',
+					'§b┃ §7Toggle the ability perk on or off on its page.',
 					'',
 					'§eClick to view!'
 				],
@@ -73,10 +73,10 @@ export class Navigation {
 					'§6§l┃ Skill Actions',
 					...Text.wrap(`Review recorded actions for ${skill.name} and the XP and points they generate.`, '§6┃ §7'),
 					'',
-					'§6§l┃ Lifetime Totals',
-					$`§6┃ §8• §7Total skill XP earned: §3${skill.totalXp.show()} XP`,
-					$`§6┃ §8• §7Total skill points earned: §e${skill.totalPts} points`,
-					$`§6┃ §8• §7Tracked action types: §b${skill.onEvents.length}`,
+					'§f§lLifetime Totals:',
+					$` §8• §7Total skill XP earned: §3${skill.totalXp.show()} XP`,
+					$` §8• §7Total skill points earned: §e${skill.totalPts} points`,
+					$` §8• §7Tracked action types: §b${skill.onEvents.length}`,
 					'',
 					'§eClick to view!'
 				], item: 'book', page: Actions, f: () => {
@@ -116,11 +116,9 @@ export class Navigation {
 			'arrow', 18, '§cBack', [], () => g.switch(Main.getName())
 		));
 		p.emit(new Button(
-			skill.item, 20, `§e${skill.name}`,
+			skill.item, 20, `§d${skill.name}`,
 			[
-				...Text.wrap(skill.description, '§e┃ §7'),
-				'',
-				'§e┃ §7Your current skill'
+				...Text.wrap(skill.description)
 			],
 			() => { },
 			1,
@@ -129,6 +127,6 @@ export class Navigation {
 	}
 
 	public static addBottomMask(p: Page) {
-		p.add(() => Mask.bottom(p, 'black_stained_glass_pane', 24));
+		p.add(() => Mask.bottom(p, 'gray_stained_glass_pane'));
 	}
 }

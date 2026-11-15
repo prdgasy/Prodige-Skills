@@ -8,7 +8,8 @@ import type { Item } from "@src/types";
 import { Macro as $, _, comment, DataPointClass, Objective, Score, Variable } from "sandstone";
 import { MacroLiteral } from "sandstone/core";
 
-export type AllRewards = ToolName | 'Common Crate Key'
+
+
 
 export class Reward {
 	public static registry = new Map<string, Reward>();
@@ -18,8 +19,10 @@ export class Reward {
 	public icon: Item;
 	public takesPlace: boolean;
 	public pending: Score;
-	public static common: Reward[];
-	public static rare: Reward[];
+
+	public static common: () => Reward[];
+	public static rare: () => Reward[];
+	public static epic: () => Reward[];
 
 	constructor(
 		name: string,
@@ -38,15 +41,13 @@ export class Reward {
 		Reward.registry.set(this.resourceId, this);
 	}
 
+	public static choose(rewards: Reward[]) {
+		return rewards[Math.floor(Math.random() * rewards.length)];
+	}
+
 	/** Assemble multiple rewards into a string[] */
 	public static join(rewards: Reward[]): string[] {
 		return rewards.map(r => ` §8• ${r.name}`);
-	}
-
-	/** Give every rewards inside rewards */
-	public static giveAll(rewards: Reward[]) {
-		comment(`Reward.giveAll::${rewards.map(r => r.name).join(', ')}`);
-		rewards.forEach(r => r.give());
 	}
 
 	public static enqueue(reward: Reward) {
@@ -98,37 +99,15 @@ export class Reward {
 	}
 
 	public static level(skill: Skill, level: number): Reward[] {
-		return skill.rewards.get(level) ?? Reward.common;
+		return skill.rewards.get(level)!;
 	}
 
-	/** Runs `f` once per reward case: one branch per custom level, plus the default one. */
+	/** Runs `f` once per reward case: one branch per custom level */
 	public static cases(skill: Skill, lvl: Score, f: (rewards: Reward[]) => void) {
-		const found = Variable(0);
 		skill.rewards.forEach((rewards, level) => {
 			_.if(lvl["=="](level), () => {
 				f(rewards);
-				found.set(1);
 			});
 		});
-
-		_.if(_.not(found), () => f(Reward.common));
-	}
-
-	public static giveFn(name: AllRewards): string;
-	public static giveFn(name: DataPointClass): MacroLiteral;
-	public static giveFn(name: AllRewards | DataPointClass) {
-		if (typeof name === 'string') return `misc/give/${Global.toResource(name)}`;
-
-		return $`misc/give/${name}`;
-	}
-
-	public static get(r: AllRewards): Reward {
-		const reward = Reward.registry.get(Global.toResource(r));
-
-		if (!reward) {
-			throw Error(`"${r}" is not registered into "Reward.registry".`);
-		}
-
-		return reward;
 	}
 }

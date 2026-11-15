@@ -1,6 +1,6 @@
 import { Bar } from "@lib/bar";
 import { macro as $, smartTellraw } from "@prodigelib/easymacro";
-import { SkillName } from "@src/data/definitions";
+import type { SkillName } from "@src/data/definitions";
 import { Reward } from "@src/misc/reward";
 import { Tool } from "@src/misc/tool";
 import { Player } from "@src/player";
@@ -160,7 +160,7 @@ export class Skill {
 			const nextRoman = Roman.get(this.level['+'](1));
 
 			Reward.cases(this, this.level, (rewards: Reward[]) => {
-				title('@s').title([{ text: '§aSKILL LEVEL UP!', bold: true }]);
+				title('@s').title([{ text: '§eSKILL LEVEL UP!', bold: true }]);
 				_.with([roman, prevRoman], () => {
 					S.title('@s').subtitle(S`${this.name} §7${prevRoman}➜§d§l${roman}`);
 				});
@@ -172,22 +172,28 @@ export class Skill {
 
 				smartTellraw([
 					Global.encapsuler + '\n',
-					$` §e§l${this.name.toUpperCase()} LEVEL UP! §7${prevRoman}➜§e§l${roman} §7§o(${this.level})\n\n`,
-					$` §b§lNext Level:\n`,
-					$`  §8• §7Target: §d${this.name} ${nextRoman} §7§o(${this.level['+'](1)})\n`,
-					$`  §8• §7Progress: §e${progress.show()}%\n`,
-					$`  §8> ${bar.toData()} §e${this.xp.show()}§6/§e${this.goal} XP\n\n`,
-					` §a§lRewards: §7(Claim them in the Reward Vault)\n`,
-					...rewards.map(r => ` §8• ${r.name}\n`),
+					$` §e§l${this.name.toUpperCase()} LEVEL UP! §7${prevRoman}➜§d§l${roman} §7§o(${this.level})\n\n`,
+					` §f§lRewards: §8(See the Reward Vault)\n`,
+					...rewards.map(r => ` §8• ${r.name}\n`)
 				], '@p');
-			});
-			for (const title of this.titles) {
-				if (title.obtain === 'level') {
-					_.if(this.level['=='](title.requires), () => {
-						Player.send(`New title unlocked: ${title.name}`, '§a');
-					});
+
+				for (const title of this.titles) {
+					if (title.obtain === 'level') {
+						_.if(this.level['=='](title.requires), () => {
+							Player.send(`Title unlocked! ${title.name}\n`, '§a');
+						});
+					}
 				}
-			}
+
+				smartTellraw([
+					$` §f§lNext Level:\n`,
+					$`  §8• §7Target: §d${this.name} ${nextRoman} §7(${this.level['+'](1)})\n`,
+					$`  §8• §7Progress: §e${progress.show()}%\n`,
+					$`  §8> ${bar.toData()} §e${this.xp.show()}§6/§e${this.goal} Xp\n`,
+				])
+			});
+
+
 			tellraw('@p', [Global.encapsuler]);
 		});
 	}

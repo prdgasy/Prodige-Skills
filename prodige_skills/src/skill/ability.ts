@@ -79,14 +79,12 @@ export class Ability {
 
 		smartTellraw([
 			`${Global.encapsuler}\n`,
-			$` §d§l${this.skill.name.toUpperCase()} ${title}! `,
-			$`§c§l${this.name} §8[§7${romanPreviousTier}➜§c§l${romanTier}§8]\n\n`,
-			...Text.wrap(this.description, ` §7§o`), '\n\n',
-			$` §6§lPerks §8• §8${this.buff['-'](2.5).show()}%»§c§l${this.buff.show()}%\n\n`,
-			$`§b§lNext Tier:\n §c${this.name} §8[§7${romanTier}➜§c§l${Roman.get(this.tier['+'](1))}§8]\n`,
-			$` §8• §e${this.price} Pts\n`,
-			$` §8• §d${this.skill.name} ${romanLevelRequired} §7(${levelRequired})\n`,
-			$` §8• §6§lPerks §8• §7${this.buff.show()}%»§c§l${this.buff['+'](2.5).show()}%\n\n`,
+			$` §e§l${this.skill.name.toUpperCase()} ${title}! §4§l${this.name} §8[§7${romanPreviousTier}➜§4§l${romanTier}§8]\n\n`,
+			...Text.wrap(this.description, ` §7`),
+			$` §8${this.buff['-'](2.5).show()}%»§4§l${this.buff.show()}%\n\n`,
+			$` §f§lNext Tier Requirements: §4§l${this.name} §8[§7${romanTier}➜§4§l${Roman.get(this.tier['+'](1))}§8]\n`,
+			$`  §8• §e${this.price} Pts\n`,
+			$`  §8• §d${this.skill.name} ${romanLevelRequired} §7(${levelRequired})\n`,
 			Global.encapsuler
 		], '@p');
 	}

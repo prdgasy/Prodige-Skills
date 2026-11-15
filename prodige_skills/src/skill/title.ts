@@ -44,7 +44,7 @@ export class Title extends Buyable {
 		});
 	}
 
-	public purchaseOrToggle() {
+	public buyOrToggle() {
 		const fn = MCFunction(`title/interact/${this.resourceId}`, () => {
 			_.if(_.not(this.owned), () => {
 				if (this.obtain === 'level')

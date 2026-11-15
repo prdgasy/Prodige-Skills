@@ -1,12 +1,12 @@
-import { crateDefs, CrateName, skillDefs, SkillName, toolDefs, ToolName } from '@src/data/definitions';
+import { crateDefs, skillDefs, toolDefs } from '@src/data/definitions';
+import type { CrateName, SkillName, ToolName } from '@src/data/definitions';
 import { Crate } from '@src/misc/crate';
-import { AllRewards, Reward } from '@src/misc/reward';
+import { Reward } from '@src/misc/reward';
 import { Tool } from '@src/misc/tool';
-import { Ability } from '@src/skill/ability';
 import { Achievement } from '@src/skill/achievement';
 import { Skill } from '@src/skill/index';
 import { Action } from '@src/skill/action';
-import { Criteria } from '@src/types';
+import type { Criteria } from '@src/types';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Task } from '@src/misc/task';
@@ -56,10 +56,17 @@ export class Loader {
 
 		// -- Achievements --
 		const achievementsData = Loader.parseCSV(path.join(dirPath, 'achievements.csv'));
+		let step = 0;
+		let previous = "undefined";
 		for (const row of achievementsData) {
 			try {
+				step++;
+				if (previous != row.skillName) step = 0;
+				previous = row.skillName;
+
 				const skill = Skill.get(row.skillName as SkillName);
-				if (skill) skill.achievements.push(new Achievement(skill, row.name, row.item as any, parseInt(row.target, 10) || 0, row.criteria as Criteria, row.description));
+
+				skill.achievements.push(new Achievement(skill, row.name, row.item as any, parseInt(row.target, 10) || 0, row.criteria as Criteria, row.description, step));
 			} catch (e) {
 				throw Error(`${e}: Skill ${row.skillName} isn't define inside loader.ts`);
 			}
@@ -70,31 +77,50 @@ export class Loader {
 	// SKILL LEVEL REWARDS
 	// ------------------------------------------------------------------------
 	private static setSkillsRewards() {
-
-		const Mining = Skill.get('Mining');
-		const r1 = Reward.get('§bExpert Sword');
-		const r2 = Reward.point(200);
-		Mining.rewards.set(10, [r1, r2]);
-		Mining.rewards.set(20, [r2, r2]);
-		Mining.rewards.set(21, Reward.rare);
+		for (const skill of Object.values(Skill.skills)) {
+			this.setSkillRewards(skill);
+			this.setAbilityRewards(skill);
+			this.setTitleRewards(skill);
+		}
 	}
 
-	public static setAbilityRewards() {
-		for (const skill of Object.values(Skill.skills)) {
-			if (skill.ability) {
-				for (let tier = 1; tier <= 10; tier++) {
-					const reward = Reward.ability(skill.ability, tier);
-					const level = tier * 10;
-					if (!skill.rewards.has(level)) skill.rewards.set(level, []);
-					skill.rewards.get(level)?.push(reward);
-				}
+	private static setAbilityRewards(skill: Skill) {
+		if (skill.ability) {
+			for (let tier = 1; tier <= 10; tier++) {
+				const reward = Reward.ability(skill.ability, tier);
+				const level = tier * 10;
+				skill.rewards.get(level)!.push(reward);
+			}
+		}
+	}
+
+	private static setTitleRewards(skill: Skill) {
+		for (const t of skill.titles) {
+			if (t.obtain === 'level') skill.rewards.get(t.requires)!.push(t);
+		}
+	}
+
+	private static setSkillRewards(skill: Skill) {
+		for (let i = 0; i <= 100; i++) {
+			if (i % 10 == 0) {
+				skill.rewards.set(i, Reward.epic());
+			} else if (i % 5 == 0) {
+				skill.rewards.set(i, Reward.rare());
+			} else {
+				skill.rewards.set(i, Reward.common());
 			}
 		}
 	}
 
 	private static setDefaultRewards() {
-		Reward.common = [Reward.point(100)];
-		Reward.rare = [Reward.point(100), Reward.get('§aNovice Pickaxe')];
+		const LOW_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
+		const MEDIUM_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
+		const HIGH_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
+		const epicKeys = [Crate.get('§c§lMythic').key, Crate.get('§6§lLegendary').key];
+
+		Reward.common = () => [Reward.choose(LOW_POINTS),];
+		Reward.rare = () => [Reward.choose(MEDIUM_POINTS)];
+		Reward.epic = () => [Reward.choose(HIGH_POINTS), Reward.choose(epicKeys)];
 	}
 
 	// ------------------------------------------------------------------------
@@ -143,12 +169,11 @@ export class Loader {
 		Tool.tools = Loader.tools<Record<ToolName, Tool>>();
 		Crate.crates = Loader.crates<Record<CrateName, Crate>>();
 
-		// 3. Default rewards (needed when achievements are created from CSV)
+
 		Loader.setDefaultRewards();
 
 		// 5. Skill level rewards
 		Loader.setSkillsRewards();
-		Loader.setAbilityRewards();
 
 		// 4. CSV data (attached to the skills)
 		Loader.loadDataFromCSV(path.join(__dirname, 'csv'));

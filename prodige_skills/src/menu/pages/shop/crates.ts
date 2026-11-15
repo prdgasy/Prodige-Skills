@@ -5,6 +5,7 @@ import { Shop } from ".";
 import { Menu } from "@src/menu";
 import { _, Data, item, MCFunction, Objective, Score, Variable, say } from "sandstone";
 import { ItemSlotSource } from "sandstone/commands";
+import { Mask } from "../../mask";
 
 export class Crates {
 	public static frame = Objective.create('gui.crates.frame')('@s');
@@ -14,6 +15,7 @@ export class Crates {
 	}
 
 	public static init(g: Gui, p: Page) {
+		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
 		p.add(this.howItWorks());
 
 		const crates = Object.values(Crate.crates);

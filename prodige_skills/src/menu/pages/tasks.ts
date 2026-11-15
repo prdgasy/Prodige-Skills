@@ -36,7 +36,8 @@ export class Tasks {
 				else(() => {
 					const s = Variable(SLOTS[0]);
 					for (const task of Task.tasks) {
-						_.if(Player.task(task.id, 'assigned'), () => {
+						const assigned = _.or(Player.task(task.id, 'progress'), Player.task(task.id, 'done'));
+						_.if(assigned, () => {
 							this.btn(p, task, s);
 							s['+='](2);
 						});
@@ -81,9 +82,8 @@ export class Tasks {
 	}
 
 	private static btn(p: Page, task: Task, s: Score) {
-		_.if(Player.task(task.id, 'progress'), () => this.progress(p, task, s)).
-			elseIf(Player.task(task.id, 'done'), () => this.done(p, task, s)).
-			elseIf(Player.task(task.id, 'claimed'), () => this.claimed(p, task, s));
+		_.if(Player.task(task.id, "progress"), () => this.progress(p, task, s)).
+			else(() => this.done(p, task, s))
 	}
 
 	private static progress(p: Page, task: Task, s: Score) {
@@ -122,20 +122,7 @@ export class Tasks {
 				...task.rewards.map(r => ` §8• ${r.name}`),
 				'',
 				'§eClick to collect!'
-			], () => task.claim(), 1, ['!attribute_modifiers', 'enchantment_glint_override=true']
+			], () => Player.throw('This Task is already complete!'), 1, ['!attribute_modifiers', 'enchantment_glint_override=true']
 		))
-	}
-
-	private static claimed(p: Page, task: Task, s: Score) {
-		return p.emit(new Button(
-			'gunpowder', $(s), `§7${task.name} §8• §7${task.goal}§8/§7${task.goal}`,
-			[
-				'',
-				'§7This task has already been completed.',
-				'',
-				'§d• REWARD CLAIMED',
-				'§8Keep an eye out for your next challenge!'
-			], () => Player.throw('This Task has already been claimed!'), 1, ['!attribute_modifiers']
-		));
 	}
 }

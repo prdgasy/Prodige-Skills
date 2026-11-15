@@ -14,30 +14,9 @@ export class Abilities {
 	}
 
 	public static init(g: Gui, p: Page, s: Skill) {
-		p.add(() => Mask.layered(p, "white_stained_glass_pane", "gray_stained_glass_pane"));
+		p.add(() => Mask.layered(p, "black_stained_glass_pane", "gray_stained_glass_pane"));
 
 		p.add(() => {
-			const info = new Button(
-				"knowledge_book", 10, "§a§lAbility Guide",
-				[
-					...Text.wrap("§7Abilities are §dpassive bonuses §7that enhance your performance as you master each skill."),
-					"",
-					"§e§l┃ Progression",
-					"§e┃ §7Unlocked at §eLevel 10",
-					"§e┃ §7Upgraded every §b10 levels",
-					"§e┃ §7Maximum rank: §cTier X §8(§eLevel 100§8)",
-					"",
-					"§6§l┃ Ability Perks",
-					...Text.wrap("Each skill has a §bunique passive ability. Higher tiers grant §bstronger effects§7!", "§6┃ §7"),
-					"",
-					"§d§l┃ Activation",
-					...Text.wrap("No activation key required. Effects are always active!", "§d┃ §7"),
-					"",
-					...Text.wrap("Master your skills to unlock their full potential!", "§8")
-				]
-			);
-			p.emit(info);
-
 			const a = s.ability;
 			if (a) {
 				_.if(a.tier['=='](0), () => this.locked(p, s, a))
@@ -59,11 +38,9 @@ export class Abilities {
 
 		p.emit(
 			new Button(
-				'lever', 16, '§d§lAbility Perks',
+				'lever', 4, $`§d§lAbility Perks §8• [${status}§8]`,
 				[
 					'§7Toggle your ability perks and buffs.',
-					'',
-					$`§7Status §8• [${status}§8]`,
 					'',
 					'§eClick to toggle!'
 				], () => {
@@ -103,21 +80,25 @@ export class Abilities {
 			icon.set('amethyst_block');
 		});
 
+		const active = DataVariable('§bActive!');
+		_.if(_.not(a.state), () => {
+			active.set('§7Inactive!')
+		})
+
 		p.emit(
 			new Button(
-				$(icon), 13, $`§c§l${a.name} §8[§c§l${roman}§8] ${unlock}`,
+				$(icon), 13, $`§4§l${a.name} §8[§4§l${roman}§8] ${unlock}`,
 				[
+					'§4§l┃ Ability Perks',
+					...Text.wrap(a.description, '§4┃ §7'),
+
 					'',
-					'§d§l┃ Ability Perks',
-					...Text.wrap(a.description, '§d┃ §7'),
+					'§f§lNext Tier:',
+					$` §8> §4§l${a.name} §8[${roman}➜§4§l${romanNext}§8] §8• ${a.buff.show()}%»§4§l${a.buff['+'](2.5).show()}%`,
 					'',
-					'§d§l┃ Next Tier',
-					$`§d┃ §c${a.name} §8[${roman}➜§c§l${romanNext}§8] §8• ${a.buff.show()}%»§c§l${a.buff['+'](2.5).show()}%`,
-					'§d┃',
-					$`§d┃ ${level} §8• §d${s.name} §l${romanLevelRequired} §7(${levelRequired})`,
-					$`§d┃ ${point} §8• §e${a.price} Pts`,
-					'§d┃',
-					...Text.wrap('Improve your skill to unlock stronger ability effects.', '§d┃ §7'),
+					'§f§lRequirements:',
+					$` §8• ${level} §8- §d${s.name} §l${romanLevelRequired} §7(${levelRequired})`,
+					$` §8• ${point} §8- §e${a.price} Pts`,
 					'',
 					'§eClick to upgrade!'
 				],

@@ -3,11 +3,12 @@ import { Button, Gui, GuiMacro as $, Page } from "@prodigelib/gui";
 import { Menu } from "@src/menu";
 import { Skill } from "@src/skill";
 import { Title } from "@src/skill/title";
-import { _, DataVariable, Label, Objective, Score, Variable } from "sandstone";
+import { _, DataPointClass, DataVariable, Label, Objective, Score, Variable } from "sandstone";
 import { EntityLabel } from "sandstone/variables";
 import { Shop } from ".";
 import { Item } from "@src/types";
 import { Player } from "@src/player";
+import { Mask } from "../../mask";
 
 const FILTER_ICONS: Item[] = ['chest', 'ender_chest', 'barrel'];
 const FILTER_NAMES = ['All Titles', 'Owned Titles', 'Locked Titles'];
@@ -21,6 +22,7 @@ export class Titles {
 	}
 
 	public static init(g: Gui, p: Page) {
+		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
 		const titles = Object.values(Skill.skills).flatMap(skill => skill.titles);
 
 		p.add(() => {
@@ -55,22 +57,19 @@ export class Titles {
 					...Text.wrap('There are no titles matching this filter on this page.', '§7'),
 				], () => { }));
 			})
-				.else(() => Menu.sliders(p, this.index, toRender['/'](18)));
+				.else(() => Menu.sliders(p, this.index, toRender['-'](1)['/'](18)));
 		});
 
 		p.add(new Button(
-			"emerald",
-			22,
-			"§a⚒ Items & Gear",
+			"book",
+			20,
+			"§e§lTitle Guide",
 			[
 				'',
-				'§e§l┃ Gear for Your Journey',
-				...Text.wrap('Browse equipment made to support your skill progression.', '§e┃ §7'),
+				'§e§l┃ Unlocking Titles',
+				...Text.wrap('Some titles unlock at a skill level; others can be purchased with points.', '§e┃ §7'),
 				'',
-				'§a§l┃ What You Can Find',
-				'§a┃ §7Tools and weapons',
-				'§a┃ §7Special item effects',
-				'§a┃ §7Equipment details and prices',
+				'§e┃ §7Owned titles can be equipped or unequipped.'
 			]
 		));
 
@@ -110,11 +109,16 @@ export class Titles {
 		});
 		_.if(title.equipped, () => equipped.set(' §8• §b§lUNEQUIP'));
 
-		const requirement = title.obtain === 'level'
-			? `Unlock at §d${title.skill.name} §7level: §d${title.requires}`
-			: `Price: §6${title.price} Pts`;
-		const action = DataVariable('§eClick to purchase this title!');
-		_.if(title.owned, () => action.set('§eClick to equip or unequip this title!'));
+		let action: DataPointClass;
+		let requirement: string;
+		if (title.obtain === 'level') {
+			requirement = `Unlock at §d${title.skill.name} §7level: §d${title.requires}`;
+			action = DataVariable('§8You cannot buy this.');
+		} else {
+			requirement = `Price: §6${title.price} Pts`;
+			action = DataVariable('§eClick to buy!');
+			_.if(title.owned, () => action.set('§bClick to equip or unequip this title!'));
+		}
 
 		p.emit(new Button(
 			title.icon,
@@ -129,7 +133,7 @@ export class Titles {
 				'',
 				$`${action}`,
 			],
-			() => title.purchaseOrToggle()
+			() => title.buyOrToggle()
 		));
 	}
 }

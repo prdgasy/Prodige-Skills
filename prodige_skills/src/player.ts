@@ -68,11 +68,11 @@ export class Player {
 		return smartTellraw([E`${color}[Prodige Skill] §8• ${color}${msg}`], '@p');
 	}
 
-	public static addMacroTask(id: Score, type: 'progress' | 'done' | 'claimed' | 'assigned') {
+	public static addMacroTask(id: Score, type: 'progress' | 'done') {
 		return $.tag('@p').add($`prodige_skills.misc.task.${id}.${type}`);
 	}
 
-	public static task(id: number, type: 'progress' | 'done' | 'claimed' | 'assigned') {
+	public static task(id: number, type: 'progress' | 'done') {
 		return Label(`misc.task.${id}.${type}` as NonEmptyString)('@p');
 	}
 }

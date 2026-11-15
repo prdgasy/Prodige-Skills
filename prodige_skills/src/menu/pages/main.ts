@@ -47,12 +47,11 @@ export class Main {
 			22,
 			$`§dReward Vault §8• §e${pending}`,
 			[
-				'',
 				'§d§l┃ Your Unclaimed Rewards',
 				'§d┃ §7Achievement, crate and skill rewards wait here.',
 				'§d┃ §7Claim each reward whenever you are ready.',
-				'',
-				$`§e┃ §7Rewards waiting: §d${pending}`,
+				'§d┃',
+				$`§d┃ §8• §7Rewards waiting: §e${pending}`,
 				'',
 				'§eClick to view your rewards!'
 			],
@@ -85,7 +84,6 @@ export class Main {
 		return p.emit(
 			new Button('amethyst_shard', 4, '§bInfo & Preferences',
 				[
-					'',
 					'§e§l┃ Player Stats',
 					$`§e┃ §7Total Skill Xp: §b${totalXp.show()}`,
 					$`§e┃ §7Available Points: §6${Player.pts}`,
@@ -103,7 +101,6 @@ export class Main {
 		return p.emit(
 			new Button('emerald', 21, `§aShop`,
 				[
-					'',
 					'§a§l┃ Skill Shop',
 					'§a┃ §7Browse items, boosters, crates, and titles.',
 					'§a┃ §7Spend your points on useful rewards.',
@@ -123,7 +120,7 @@ export class Main {
 	private static tasks(g: Gui, p: Page) {
 		const done = Variable(0);
 		for (const task of Task.tasks) {
-			_.if(_.or(Player.task(task.id, 'done'), Player.task(task.id, 'claimed')), () => {
+			_.if(Player.task(task.id, 'done'), () => {
 				done['++'];
 			});
 		}
@@ -138,13 +135,12 @@ export class Main {
 		return p.emit(
 			new Button("wheat", 23, $`§6Tasks §8• §e${done}§6/§e3`,
 				[
-					'',
 					'§l§6┃ §lChallenge Board',
 					'§6┃ §7Complete tasks to earn their rewards.',
 					'§6┃ §7Claim finished tasks from this menu.',
-					'',
-					$`§e┃ §7Completed: §a${done}§8/§a3`,
-					$`§e┃ §7Next refresh: ${refresh}`,
+					'§e┃',
+					$`§e┃ §8• §7Completed: §e${done}§6/§e3`,
+					$`§e┃ §8• §7Next refresh: ${refresh}`,
 					'',
 					'§eClick to view your tasks!'
 				], () => {
@@ -174,13 +170,13 @@ export class Main {
 					"",
 					...Text.wrap(skill.description),
 					"",
-					"§d§l┃ Next Level Goal",
-					$`§d┃ §8• §7Target: §d${skill.name} ${nextRoman}`,
-					$`§d┃ §8• §7Progress: §e${progress.show()}%`,
-					$`§d┃ §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
+					"§f§lNext Level Goal:",
+					$` §8• §7Target: §d${skill.name} ${nextRoman}`,
+					$` §8• §7Progress: §e${progress.show()}%`,
+					$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
 					"",
-					$`§e§l┃ ${skill.name} ${nextRoman} Rewards`,
-					...rewards.map(r => `§e┃ §8• §e${r.name}`),
+					$`§f§l${skill.name} ${nextRoman} Rewards:`,
+					...rewards.map(r => ` §8• §e${r.name}`),
 					"",
 					"§eClick to view!",
 				], () => {

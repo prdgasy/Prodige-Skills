@@ -19,3 +19,49 @@ Foraging,Mangrove Log,mangrove_log,minecraft.mined:minecraft.mangrove_log,4,5
 Foraging,Cherry Log,cherry_log,minecraft.mined:minecraft.cherry_log,4,5
 Foraging,Crimson Stem,crimson_stem,minecraft.mined:minecraft.crimson_stem,10,8
 Foraging,Warped Stem,warped_stem,minecraft.mined:minecraft.warped_stem,10,8
+Farming,Farm Wheat,wheat,minecraft.mined:minecraft.wheat,1,2
+Farming,Farm Carrots,carrot,minecraft.mined:minecraft.carrots,1,2
+Farming,Farm Potatoes,potato,minecraft.mined:minecraft.potatoes,1,2
+Farming,Farm Beetroot,beetroot,minecraft.mined:minecraft.beetroots,1,2
+Farming,Farm Melon,melon,minecraft.mined:minecraft.melon,2,3
+Farming,Farm Pumpkin,pumpkin,minecraft.mined:minecraft.pumpkin,2,3
+Farming,Farm Sugar Cane,sugar_cane,minecraft.mined:minecraft.sugar_cane,1,2
+Farming,Farm Cactus,cactus,minecraft.mined:minecraft.cactus,1,2
+Farming,Farm Nether Wart,nether_wart,minecraft.mined:minecraft.nether_wart,3,4
+Farming,Farm Cocoa,cocoa_beans,minecraft.mined:minecraft.cocoa,2,3
+Farming,Farm Sweet Berries,sweet_berries,minecraft.mined:minecraft.sweet_berry_bush,2,3
+Farming,Farm Bamboo,bamboo,minecraft.mined:minecraft.bamboo,1,2
+Hunting,Hunt Cow,leather,minecraft.killed:minecraft.cow,3,4
+Hunting,Hunt Pig,porkchop,minecraft.killed:minecraft.pig,3,4
+Hunting,Hunt Sheep,mutton,minecraft.killed:minecraft.sheep,3,4
+Hunting,Hunt Chicken,chicken,minecraft.killed:minecraft.chicken,2,3
+Hunting,Hunt Rabbit,rabbit_hide,minecraft.killed:minecraft.rabbit,4,5
+Hunting,Hunt Fox,sweet_berries,minecraft.killed:minecraft.fox,5,6
+Hunting,Hunt Goat,goat_horn,minecraft.killed:minecraft.goat,6,8
+Hunting,Hunt Polar Bear,cod,minecraft.killed:minecraft.polar_bear,8,10
+Hunting,Hunt Wolf,bone,minecraft.killed:minecraft.wolf,6,8
+Hunting,Hunt Bee,honey_bottle,minecraft.killed:minecraft.bee,5,6
+Hunting,Hunt Llama,leather,minecraft.killed:minecraft.llama,5,6
+Hunting,Hunt Hoglin,porkchop,minecraft.killed:minecraft.hoglin,10,12
+Hunting,Hunt Ravager,saddle,minecraft.killed:minecraft.ravager,15,20
+Hunting,Hunt Phantom,phantom_membrane,minecraft.killed:minecraft.phantom,8,10
+Hunting,Hunt Enderman,ender_pearl,minecraft.killed:minecraft.enderman,8,10
+Hunting,Hunt Ender Dragon,dragon_head,minecraft.killed:minecraft.ender_dragon,100,100
+Fishing,Fishing Cast,fishing_rod,minecraft.used:minecraft.fishing_rod,1,1
+Fishing,Fishing Catch,cod,minecraft.custom:minecraft.fish_caught,5,6
+Excavating,Excavate Dirt,dirt,minecraft.mined:minecraft.dirt,1,1
+Excavating,Excavate Grass,grass_block,minecraft.mined:minecraft.grass_block,1,1
+Excavating,Excavate Coarse Dirt,coarse_dirt,minecraft.mined:minecraft.coarse_dirt,2,2
+Excavating,Excavate Rooted Dirt,rooted_dirt,minecraft.mined:minecraft.rooted_dirt,2,2
+Excavating,Excavate Podzol,podzol,minecraft.mined:minecraft.podzol,2,2
+Excavating,Excavate Mycelium,mycelium,minecraft.mined:minecraft.mycelium,2,2
+Excavating,Excavate Sand,sand,minecraft.mined:minecraft.sand,1,1
+Excavating,Excavate Red Sand,red_sand,minecraft.mined:minecraft.red_sand,2,2
+Excavating,Excavate Gravel,gravel,minecraft.mined:minecraft.gravel,2,2
+Excavating,Excavate Clay,clay,minecraft.mined:minecraft.clay,3,3
+Excavating,Excavate Mud,mud,minecraft.mined:minecraft.mud,2,2
+Excavating,Excavate Soul Sand,soul_sand,minecraft.mined:minecraft.soul_sand,4,4
+Excavating,Excavate Soul Soil,soul_soil,minecraft.mined:minecraft.soul_soil,4,4
+Excavating,Excavate Snow,snow_block,minecraft.mined:minecraft.snow_block,2,2
+Excavating,Excavate Powder Snow,powder_snow,minecraft.mined:minecraft.powder_snow,2,2
+Excavating,Excavate Terracotta,terracotta,minecraft.mined:minecraft.terracotta,3,3

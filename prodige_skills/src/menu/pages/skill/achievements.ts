@@ -50,7 +50,7 @@ export class Achievements {
 				);
 
 				const done = new Button(
-					a.item, slot, `§d${a.name}`,
+					a.item, slot, `§a${a.name}`,
 					[
 						...Text.wrap(a.description),
 						``,

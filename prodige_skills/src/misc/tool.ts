@@ -1,9 +1,11 @@
-import { ToolName } from "@src/data/definitions";
+import type { ToolName } from "@src/data/definitions";
 import { Buyable } from "@src/misc/buyable";
-import { Skill } from "@src/skill";
-import { give, MCFunction } from "sandstone";
-import { Item } from "../types";
+import type { Skill } from "@src/skill";
+import { DataPointClass, give, MCFunction, Macro as $ } from "sandstone";
+import type { Item } from "../types";
 import { Reward } from "./reward";
+import { Global } from "@src/global";
+import { MacroLiteral } from "sandstone/core";
 
 export type ToolOptions = {
 	name: string;
@@ -54,10 +56,20 @@ export class Tool extends Buyable {
 	}
 
 	public static getFromOpt(opt: ToolOptions) {
-		const fn = MCFunction(Reward.giveFn(opt.name as ToolName), () => {
+		const fn = MCFunction(`misc/tool/${Global.toResource(opt.name)}/give`, () => {
 			give('@p', opt.item, { custom_name: opt.name, lore: [{ text: opt.rarity }, { text: opt.description }] });
 		}, { onConflict: 'ignore' });
 
 		return () => fn();
+	}
+
+	public static get(t: ToolName): Reward {
+		const tool = Reward.registry.get(Global.toResource(t));
+
+		if (!tool) {
+			throw Error(`"${t}" is not registered into "Reward.registry".`);
+		}
+
+		return tool;
 	}
 }

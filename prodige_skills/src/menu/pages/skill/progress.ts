@@ -29,14 +29,14 @@ export class Progress {
 					const count = Variable(processedLevel);
 					_.if(count['=='](100), () => count.set(1));
 					Reward.cases(skill, processedLevel, (rewards: Reward[]) => {
-						const rewardLore = rewards.map(r => `§e┃ §8• ${r.name}`);
+						const rewardLore = rewards.map(r => ` §8• ${r.name}`);
 
 						const notReached = new Button(
 							"red_stained_glass_pane", G(slot), G`§c${skill.name} ${roman}`,
 							[
 								G`§9${skill.name} ${processedLevel}`,
 								"",
-								"§e§l┃ Rewards",
+								"§f§lRewards",
 								...rewardLore,
 							], () => { }, G(count), ['max_stack_size=99'],
 						);
@@ -46,11 +46,10 @@ export class Progress {
 							[
 								G`§9${skill.name} ${processedLevel}`,
 								"",
-								G`§d§l┃ ${skill.name} ${roman} Goal`,
-								G`§d┃ §8• §7Progress: §e${progress.show()}%`,
-								G`§d┃ §8> ${bar.toData()} §e${skill.xp.show()}§6/§e${skill.goal}`,
+								G`§f§lProgress: §e${progress.show()}%`,
+								G` §8> ${bar.toData()} §e${skill.xp.show()}§6/§e${skill.goal}`,
 								"",
-								G`§e§l┃ ${skill.name} ${roman} Rewards`,
+								`§f§lRewards:`,
 								...rewardLore,
 							], () => { }, G(count), ['max_stack_size=99']
 						);
@@ -60,7 +59,7 @@ export class Progress {
 							[
 								G`§9${skill.name} ${processedLevel}`,
 								"",
-								'§e§l┃ Rewards:',
+								'§f§lRewards:',
 								...rewardLore
 							], () => { }, G(count), ['max_stack_size=99'],
 						);

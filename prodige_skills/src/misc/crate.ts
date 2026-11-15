@@ -7,6 +7,7 @@ import { _, clear, execute, give, ItemPredicate, item, MCFunction, Objective, Sc
 import { Reward } from "./reward";
 import { macro as T, smartTellraw } from "@prodigelib/easymacro";
 import { ItemSlotSource } from "sandstone/commands";
+import type { CrateName } from "@src/data/definitions";
 
 export type CrateOption = {
 	name: string;
@@ -27,7 +28,7 @@ export class Crate {
 	public rewards: Map<Reward, number>;
 	public animated: boolean;
 	private keyPredicate: ReturnType<typeof ItemPredicate>;
-	public static crates: Record<string, Crate>;
+	public static crates: Record<CrateName, Crate>;
 	public static storage = Global.storage.select("crate");
 	private static usedKey = Objective.create('crate.key.used', 'minecraft.used:minecraft.carrot_on_a_stick')('@p');
 	private static animation = Objective.create('crate.animation')('@s');
@@ -71,7 +72,7 @@ export class Crate {
 		return [
 			'§e§l┃ Possible Rewards',
 			...Array.from(this.rewards, ([reward, weight]) => {
-				const chance = Math.round((weight / totalWeight) * 10000) / 100;
+				const chance = Math.round((weight / totalWeight) * 1000) / 10;
 				return `§e┃ §7${reward.name} §8• §7${chance}%`;
 			})
 		];
@@ -95,9 +96,9 @@ export class Crate {
 		const fn = MCFunction(`misc/crate/roll/${Global.toResource(this.name)}`, () => {
 			smartTellraw([
 				Global.encapsuler + '\n',
-				` §5§lCRATE OPENED!\n\n`,
-				` §7You opened x1 §8[${this.name} Crate §8]!\n\n`,
-				' §e§lRewards added to your Reward Vault:'
+				` §e§lCRATE OPENED!\n\n`,
+				` §bYou opened x1 §8[${this.name} Crate§8]§b!\n\n`,
+				' §f§lRewards:'
 			]);
 
 			let total = 0;
@@ -119,7 +120,7 @@ export class Crate {
 			});
 
 			smartTellraw([
-				' \n§7Claim your rewards from the Reward Vault!\n',
+				'\n §8Claim your rewards from the Reward Vault!\n',
 				Global.encapsuler
 			]);
 		}, { onConflict: 'ignore' });
@@ -165,7 +166,7 @@ export class Crate {
 		}, { runEveryTick: true });
 	}
 
-	public static get(c: string): Crate {
+	public static get(c: CrateName): Crate {
 		return Crate.crates[c];
 	}
 }

@@ -15,7 +15,7 @@ import { Preferences } from './pages/preferences';
 import { Tasks } from './pages/tasks';
 import { RewardVault } from './pages/rewards';
 import { ConditionClass, targetParser } from 'sandstone/variables';
-import { Score, DataVariable, _ } from 'sandstone';
+import { Score, DataVariable, _, say } from 'sandstone';
 
 export class Menu {
 	public static init() {
@@ -66,16 +66,16 @@ export class Menu {
 			name: string,
 			action: () => void
 		) => {
-			const icon = DataVariable('arrow');
+			const icon = DataVariable('spectral_arrow');
 			const label = DataVariable('§e' + name);
 
 			_.if(condition, () => {
-				icon.set('tipped_arrow');
+				icon.set('arrow');
 				label.set('§7' + name);
 			});
 
 			p.emit(new Button(
-				G(icon), slot, G(label), [],
+				G(icon), slot, G`${label}`, [],
 				() => _.if(_.not(condition), action)
 			));
 		};

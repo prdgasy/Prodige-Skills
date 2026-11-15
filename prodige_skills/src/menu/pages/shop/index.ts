@@ -8,6 +8,7 @@ import { Menu } from "@src/menu";
 import { Main } from "@src/menu/main";
 import { Player } from "@src/player";
 import { macro as E } from "@prodigelib/easymacro";
+import { Mask } from "../../mask";
 
 export class Shop {
 	public static getName() {
@@ -15,34 +16,45 @@ export class Shop {
 	}
 
 	public static init(g: Gui, p: Page) {
+		p.add(() => Mask.layered(p, "black_stained_glass_pane", "gray_stained_glass_pane"));
 		p.add(
+			this.header(),
 			this.items(g),
 			this.boosters(g),
 			this.crates(g),
-			this.titles(g),
-			this.balance()
+			this.titles(g)
 		);
 
-		p.add(Menu.back(g, Main));
+		p.add(Menu.back(g, Main), this.balance(), this.guide());
 		return p;
+	}
+
+	private static header() {
+		return new Button(
+			"nether_star",
+			4,
+			"§d§lProdige Exchange",
+			[
+				"",
+				"§d§l┃ Welcome to the Shop",
+				...Text.wrap("Spend your skill points on equipment, boosters, crates, and titles.", "§d┃ §7"),
+				"",
+				"§e┃ §7Select a category below to browse its offers."
+			]
+		);
 	}
 
 	private static items(g: Gui) {
 		return new Button(
-			"emerald",
-			11,
-			"§a⚒ Items & Gear",
+			"diamond_pickaxe",
+			10,
+			"§a§lTools & Gear",
 			[
+				"",
+				'§a§l┃ Equipment',
+				...Text.wrap('Browse tools and gear to support your journey.', '§a┃ §7'),
 				'',
-				'§e§l┃ Gear for Your Journey',
-				...Text.wrap('Browse equipment made to support your skill progression.', '§e┃ §7'),
-				'',
-				'§a§l┃ What You Can Find',
-				'§a┃ §7Tools and weapons',
-				'§a┃ §7Special item effects',
-				'§a┃ §7Equipment details and prices',
-				'',
-				'§eClick to browse the gear!'
+				'§eClick to view the available gear.'
 			],
 			() => {
 				Items.index.set(0);
@@ -55,18 +67,13 @@ export class Shop {
 		return new Button(
 			"experience_bottle",
 			12,
-			"§b✦ Boosters",
+			"§b§lBoosters",
 			[
+				"",
+				'§b§l┃ Accelerate Progress',
+				...Text.wrap('Temporarily multiply XP or points from skill actions.', '§b┃ §7'),
 				'',
-				'§e§l┃ Speed Up Your Progress',
-				...Text.wrap('Boosters multiply the rewards you earn from skill actions.', '§e┃ §7'),
-				'',
-				'§b§l┃ Booster Types',
-				'§b┃ §7XP Boosters increase skill experience.',
-				'§b┃ §7Point Boosters increase skill points.',
-				'§b┃ §7Choose from multipliers ranging from §ex2 §7to §ex5§7!',
-				'',
-				'§eClick to view the available boosters!'
+				'§eClick to view the boosters.'
 			],
 			() => g.switch(Boosters.getName())
 		);
@@ -76,17 +83,13 @@ export class Shop {
 		return new Button(
 			"ender_chest",
 			14,
-			"§6✧ Crates",
+			"§6§lCrates",
 			[
+				"",
+				'§6§l┃ Rewards & Surprises',
+				...Text.wrap('Buy matching keys and open crates for valuable rewards.', '§6┃ §7'),
 				'',
-				'§e§l┃ A Chance at Great Rewards',
-				...Text.wrap('Open a crate to claim its rewards and add them to your collection.', '§e┃ §7'),
-				'',
-				'§6§l┃ Discover What Awaits',
-				'§6┃ §7Check each crate for its rewards.',
-				'§6┃ §7Choose a crate and see what luck brings!',
-				'',
-				'§eClick to explore the crates!'
+				'§eClick to browse the crates.'
 			],
 			() => {
 				Crates.frame.set(0);
@@ -99,23 +102,34 @@ export class Shop {
 	private static titles(g: Gui) {
 		return new Button(
 			"name_tag",
-			15,
-			"§d✦ Titles",
+			16,
+			"§d§lTitles",
 			[
+				"",
+				'§d§l┃ Make Your Mark',
+				...Text.wrap('Unlock titles through skill milestones or purchase them here.', '§d┃ §7'),
 				'',
-				'§e§l┃ Make Your Mark',
-				...Text.wrap('§7Discover titles earned through your skill progression.', '§e┃ §7'),
-				'',
-				'§d§l┃ Show Your Achievements',
-				'§d┃ §7Titles celebrate your progress in each skill.',
-				'§d┃ §7Read each description to learn how it was earned.',
-				'',
-				'§eClick to browse the titles!'
+				'§eClick to browse the titles.'
 			],
 			() => {
 				Titles.index.set(0);
 				g.switch(Titles.getName());
 			}
+		);
+	}
+
+	private static guide() {
+		return new Button(
+			"knowledge_book",
+			23,
+			"§e§lShop Guide",
+			[
+				"",
+				"§e§l┃ How to Shop",
+				"§e┃ §7Browse a category to see prices and details.",
+				"§e┃ §7Your balance is shown below.",
+				"§e┃ §7Purchases are confirmed when clicked.",
+			]
 		);
 	}
 
