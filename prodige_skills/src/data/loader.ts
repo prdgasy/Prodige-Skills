@@ -116,9 +116,9 @@ export class Loader {
 	}
 
 	private static setDefaultRewards() {
-		const LOW_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
-		const MEDIUM_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
-		const HIGH_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
+		const COMMON_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
+		const RARE_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
+		const EPIC_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
 		const LEGENDARY_POINTS = [6000, 7500, 9000, 12000].map(points => Reward.point(points));
 		const skills = Object.values(Skill.skills);
 		const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
@@ -131,28 +131,24 @@ export class Loader {
 		};
 
 		Reward.common = () => [
-			Reward.choose(LOW_POINTS),
-			Crate.get('§a§lCommon').key,
-			boosterReward(2, 'Xp'),
+			...Reward.choose(COMMON_POINTS),
+			...Reward.choose([boosterReward(2, 'Xp'), boosterReward(2, 'Pts'), Crate.get('§a§lCommon').key]),
 			Reward.randomXp(40, 100, skills)
 		];
 		Reward.rare = () => [
-			Reward.choose(MEDIUM_POINTS),
-			Crate.get('§9§lRare').key,
-			boosterReward(3, 'Pts'),
+			...Reward.choose(RARE_POINTS),
+			...Reward.choose([boosterReward(3, 'Xp'), boosterReward(3, 'Pts'), Crate.get('§9§lRare').key]),
 			Reward.randomXp(100, 250, skills)
 		];
 		Reward.epic = () => [
-			Reward.choose(HIGH_POINTS),
-			Reward.choose([Crate.get('§6§lLegendary').key, Crate.get('§c§lMythic').key]),
-			boosterReward(3, 'Xp'),
+			...Reward.choose(EPIC_POINTS),
+			...Reward.choose([boosterReward(4, 'Xp'), boosterReward(4, 'Pts'), Crate.get('§5§lEpic').key]),
 			Reward.randomXp(250, 500, skills)
 		];
 		Reward.legendary = () => [
-			Reward.choose(LEGENDARY_POINTS),
-			Reward.choose([Crate.get('§6§lLegendary').key, Crate.get('§c§lMythic').key]),
-			boosterReward(4, 'Pts'),
-			Reward.randomXp(500, 1000, skills)
+			...Reward.choose(LEGENDARY_POINTS),
+			...Reward.choose([boosterReward(4, 'Xp'), boosterReward(4, 'Pts'), Crate.get('§6§lLegendary').key]),
+			Reward.randomXp(1000, 2000, skills)
 		];
 	}
 

@@ -43,8 +43,17 @@ export class Reward {
 		Reward.registry.set(this.resourceId, this);
 	}
 
-	public static choose(rewards: Reward[]) {
-		return rewards[Math.floor(Math.random() * rewards.length)];
+	public static choose(rewards: Reward[], n = 1) {
+		if (n > rewards.length) throw Error('Number of element choosed is greater than the array\'s length');
+		const choosed: Reward[] = [];
+		for (let i = 0; i < n; i++) {
+			const r = rewards[Math.floor(Math.random() * rewards.length)]
+			const a = rewards.indexOf(r);
+			rewards[a] = rewards[-1];
+			rewards[-1] = r;
+			choosed.push(rewards.pop()!);
+		}
+		return choosed;
 	}
 
 	/** Assemble multiple rewards into a string[] */
