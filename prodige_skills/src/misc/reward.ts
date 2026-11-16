@@ -46,12 +46,10 @@ export class Reward {
 	public static choose(rewards: Reward[], n = 1) {
 		if (n > rewards.length) throw Error('Number of element choosed is greater than the array\'s length');
 		const choosed: Reward[] = [];
+		const pool = [...rewards];
 		for (let i = 0; i < n; i++) {
-			const r = rewards[Math.floor(Math.random() * rewards.length)]
-			const a = rewards.indexOf(r);
-			rewards[a] = rewards[-1];
-			rewards[-1] = r;
-			choosed.push(rewards.pop()!);
+			const index = Math.floor(Math.random() * pool.length);
+			choosed.push(pool.splice(index, 1)[0]);
 		}
 		return choosed;
 	}
@@ -97,7 +95,7 @@ export class Reward {
 
 	public static ability(ability: Ability, tier: number): Reward {
 		return new Reward(
-			`§dUpgrade avaible: §c§l${ability.name} §8[§c§l${Roman.get(tier)}§8] • ${(tier - 1) * 2.5}%»§c${tier * 2.5}%`
+			`§dUpgrade available: §c§l${ability.name} §8[§c§l${Roman.get(tier)}§8] • ${(tier - 1) * 2.5}%»§c${tier * 2.5}%`
 			, () => { }, { icon: 'experience_bottle', takesPlace: false });
 	}
 

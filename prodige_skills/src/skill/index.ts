@@ -79,7 +79,7 @@ export class Skill {
 
 	public onEventTriggered(addedXp: Float, addedPoint: Score) {
 		const fn = MCFunction(`skill/${this.resourceId}/on_event_triggered`, () => {
-			this.xp.add(addedXp);
+			_.if(this.level['<'](100), () => this.xp.add(addedXp));
 			Player.pts.add(addedPoint);
 			this.totalPts.add(addedPoint);
 			this.totalXp.add(addedXp);
@@ -97,7 +97,7 @@ export class Skill {
 	}
 
 	public grantRewardXp(amount: number | Score) {
-		this.xp.add(amount);
+		_.if(this.level['<'](100), () => this.xp.add(amount));
 		this.totalXp.add(amount);
 		_.if(_.and(this.xp['>='](this.goal), this.level['<'](100)), () => this.levelUp());
 	}
@@ -112,6 +112,7 @@ export class Skill {
 			});
 
 			this.level["++"];
+			_.if(this.level['=='](100), () => this.xp.set(0));
 
 			Reward.cases(this, this.level, Reward.enqueueAll);
 			for (const title of this.titles) {
@@ -139,7 +140,11 @@ export class Skill {
 			_.with([key, roman, xp, this.goal, added, pointAdded, progress, round], () => {
 				const id = S`prodige_skills.${this.resourceId}.${key}`;
 
-				S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §e${xp}§6/§e${this.goal} Xp §8• §7${progress}% §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
+				_.if(this.level['>='](100), () => {
+					S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §aMAX LEVEL §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
+				}).else(() => {
+					S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §e${xp}§6/§e${this.goal} Xp §8• §7${progress}% §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
+				});
 				_.if(this.level['=='](0), () => S.bossbar.set(id).name(`§aUnlocking ${this.name}...`))
 
 				S.bossbar.set(id).max(this.goal);
@@ -164,7 +169,6 @@ export class Skill {
 		_.if(Skill.levelUpNotifState, () => {
 			const roman = Roman.get(this.level);
 			const prevRoman = Roman.get(this.level['-'](1));
-			const nextRoman = Roman.get(this.level['+'](1));
 
 			Reward.cases(this, this.level, (rewards: Reward[]) => {
 				title('@s').title([{ text: '§eSKILL LEVEL UP!', bold: true }]);
@@ -184,20 +188,29 @@ export class Skill {
 					...rewards.map(r => ` §8• ${r.name}\n`)
 				], '@p');
 
-				for (const title of this.titles) {
-					if (title.obtain === 'level') {
-						_.if(this.level['=='](title.requires), () => {
-							Player.send(`Title unlocked! ${title.name}\n`, '§a');
+				for (const unlockedTitle of this.titles) {
+					if (unlockedTitle.obtain === 'level') {
+						_.if(this.level['=='](unlockedTitle.requires), () => {
+							Player.send(`Title unlocked! ${unlockedTitle.name}\n`, '§a');
 						});
 					}
 				}
 
-				smartTellraw([
-					$` §f§lNext Level:\n`,
-					$`  §8• §7Target: §d${this.name} ${nextRoman} §7(${this.level['+'](1)})\n`,
-					$`  §8• §7Progress: §e${progress.show()}%\n`,
-					$`  §8> ${bar.toData()} §e${this.xp.show()}§6/§e${this.goal} Xp\n`,
-				])
+				_.if(this.level['=='](100), () => {
+					smartTellraw([
+						' §f§lProgress:\n',
+						'  §8• §aMaximum level reached!\n',
+						'  §8• §7You have mastered this skill.\n'
+					]);
+				}).else(() => {
+					const nextRoman = Roman.get(this.level['+'](1));
+					smartTellraw([
+						$` §f§lProgress:\n`,
+						$`  §8• §7Next: §d${this.name} ${nextRoman} §7(${this.level['+'](1)})\n`,
+						$`  §8• §7Progress: §e${progress.show()}%\n`,
+						$`  §8> ${bar.toData()} §e${this.xp.show()}§6/§e${this.goal} Xp\n`,
+					]);
+				});
 			});
 
 

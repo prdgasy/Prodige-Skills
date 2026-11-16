@@ -12,7 +12,8 @@ import { Tasks } from "./tasks";
 import { Player } from "@src/player";
 import { Task } from "@src/misc/task";
 import { Float } from "@prodigelib/floatVar";
-import { Booster, BOOSTER_TYPE, BoosterType } from "@src/misc/booster";
+import { Booster, BOOSTER_TYPE } from "@src/misc/booster";
+import { Boosters } from "@src/menu/shop/booster";
 import { RewardVault } from "@src/menu/rewards";
 import { Mask } from "../mask";
 
@@ -65,21 +66,7 @@ export class Main {
 	private static infoAndPreferences(g: Gui, p: Page) {
 		const totalXp = Float.variable();
 		for (const skill of Object.values(Skill.skills)) {
-			totalXp['+='](skill.xp);
-		}
-		const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
-
-		for (const type of BOOSTER_TYPE) {
-			const m = Booster.getMult(type);
-			const t = Booster.getTimer(type);
-			const c = Booster.getColor(type);
-			const status = DataVariable(`§7No ${type} Booster active`);
-			_.if(t['>'](0), () => {
-				_.with([m, t], () =>
-					S.data.modify(status).set.value(S`${c}x${m} ${type} Booster §8• §c${t}m`)
-				);
-			});
-			boosterStatuses.push(status);
+			totalXp['+='](skill.totalXp);
 		}
 		const infoButton = new Button('amethyst_shard', 4, '§bInfo & Preferences',
 			[
@@ -87,15 +74,13 @@ export class Main {
 				$`§e┃ §7Total Skill Xp: §b${totalXp.show()}`,
 				$`§e┃ §7Available Points: §6${Player.pts}`,
 				'',
-				'§f§lActive Boosters:',
-				...boosterStatuses.map(status => $` §8• ${status}`),
-				'',
 				'§eClick to edit your preferences!'
 			], () => g.switch(Preferences.getName())
 		);
 		p.emit(infoButton);
 
-		for (const [index, type] of BOOSTER_TYPE.entries()) {
+		const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
+		for (const type of BOOSTER_TYPE) {
 			const color = Booster.getColor(type);
 			const multiplier = Booster.getMult(type);
 			const timer = Booster.getTimer(type);
@@ -105,19 +90,23 @@ export class Main {
 					S.data.modify(status).set.value(S`${color}x${multiplier} ${type} Booster §8• §c${timer}m`)
 				);
 			});
-			p.emit(new Button(
-				type === 'Xp' ? 'experience_bottle' : 'gold_ingot',
-				19 + index,
-				$`${color}${type} Booster Status`,
-				[
-					$`§8• ${status}`,
-					'',
-					'§7Boosters multiply rewards earned',
-					'§7from skill actions while active.'
-				]
-			));
+			boosterStatuses.push(status);
 		}
 
+		p.emit(new Button(
+			'experience_bottle',
+			19,
+			'§bBoosters & Shop',
+			[
+				'§b§l┃ Active Boosters',
+				...boosterStatuses.map(status => $`§b┃ §8• ${status}`),
+				'',
+				'§7Open the booster shop to browse or buy boosters.',
+				'',
+				'§eClick to open the Booster Shop!'
+			],
+			() => g.switch(Boosters.getName())
+		));
 		return infoButton;
 	}
 
@@ -184,32 +173,51 @@ export class Main {
 			const progress = skill.xp["*"](100)["/"](skill.goal);
 			const nLvl = skill.level["+"](1);
 			const lvlRoman = Roman.get(skill.level);
-			const nextRoman = Roman.get(nLvl);
 			const bar = new Bar(progress.toScore()).toData();
+			const openProgress = () => {
+				Progress.index.set(skill.level["/"](18));
+				g.switch(Progress.getName(skill));
+			};
 
-			Reward.cases(skill, nLvl, rewards => {
+			_.if(skill.level['>='](100), () => {
 				p.emit(new Button(
 					skill.item, s, $`§d${skill.name} ${lvlRoman}`, [
 					$`§9${skill.name} ${skill.level}`,
 					"",
 					...Text.wrap(skill.description),
 					"",
-					"§f§lNext Level Goal:",
-					$` §8• §7Target: §d${skill.name} ${nextRoman}`,
-					$` §8• §7Progress: §e${progress.show()}%`,
-					$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
-					"",
-					$`§f§l${skill.name} ${nextRoman} Rewards:`,
-					...rewards.map(r => ` §8• §e${r.name}`),
+					"§f§lProgress:",
+					" §8• §aMaximum level reached!",
+					" §8• §7All skill milestones are complete.",
 					"",
 					"§eClick to view!",
-				], () => {
-					Progress.index.set(skill.level["/"](18));
-					g.switch(Progress.getName(skill));
-				},
+				], openProgress,
 					1,
 					["!attribute_modifiers"],
 				));
+			}).else(() => {
+				const nextRoman = Roman.get(nLvl);
+				Reward.cases(skill, nLvl, rewards => {
+					p.emit(new Button(
+						skill.item, s, $`§d${skill.name} ${lvlRoman}`, [
+						$`§9${skill.name} ${skill.level}`,
+						"",
+						...Text.wrap(skill.description),
+						"",
+						"§f§lProgress:",
+						$` §8• §7Target: §d${skill.name} ${nextRoman}`,
+						$` §8• §7Progress: §e${progress.show()}%`,
+						$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
+						"",
+						$`§f§l${skill.name} ${nextRoman} Rewards:`,
+						...rewards.map(r => ` §8• §e${r.name}`),
+						"",
+						"§eClick to view!",
+					], openProgress,
+						1,
+						["!attribute_modifiers"],
+					));
+				});
 			});
 		}
 

@@ -15,7 +15,7 @@ export class Shop {
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.layered(p, "green_stained_glass_pane", "lime_stained_glass_pane"));
+		p.add(() => Mask.layered(p, "cyan_stained_glass_pane", "light_blue_stained_glass_pane"));
 		p.add(
 			this.header(),
 			this.items(g),

@@ -54,6 +54,19 @@ export class Progress {
 							], () => { }, G(count), ['max_stack_size=99']
 						);
 
+						const maxLevel = new Button(
+							"yellow_stained_glass_pane", G(slot), G`§e${skill.name} ${roman}`,
+							[
+								G`§9${skill.name} ${processedLevel}`,
+								"",
+								"§a§lMAX LEVEL",
+								"§7You have mastered this skill.",
+								"",
+								"§f§lRewards:",
+								...rewardLore,
+							], () => { }, G(count), ['max_stack_size=99']
+						);
+
 						const reached = new Button(
 							"green_stained_glass_pane", G(slot), G`§a${skill.name} ${roman}`,
 							[
@@ -65,15 +78,15 @@ export class Progress {
 						);
 
 
-						const nextLevel = skill.level['+'](1);
-						_.if(nextLevel['<'](processedLevel), () => {
+						_.if(skill.level['<'](processedLevel), () => {
 							p.emit(notReached);
 						})
-							.elseIf(nextLevel['>'](processedLevel), () => {
+							.elseIf(skill.level['>'](processedLevel), () => {
 								p.emit(reached);
 							})
-							.elseIf(nextLevel["=="](processedLevel), () => {
-								p.emit(current);
+							.elseIf(skill.level["=="](processedLevel), () => {
+								_.if(processedLevel['=='](100), () => p.emit(maxLevel))
+									.else(() => p.emit(current));
 							});
 					});
 				})
