@@ -1,87 +1,54 @@
-# Audit du projet Prodige Skills
+# Prodige Skills Project Audit
 
-**Date :** 4 novembre 2026  
-**Périmètre :** code source Sandstone, données CSV, menus et documentation du datapack. Le dossier `OLD/` contient une ancienne version JMC et n’est pas évalué comme implémentation active.
+**Date:** 16 November 2026
+**Scope:** Active Sandstone source, CSV data, menus, crate/skill rewards, and project documentation. `OLD/` is an archived JMC implementation and is not part of the active datapack.
 
-## Résumé
+## Summary
 
-Le datapack se compile, mais plusieurs fonctions présentées dans les menus ne sont pas implémentées ou ne sont pas reliées à leur logique métier. Un défaut de calcul des points peut aussi faire dépendre la récompense du solde déjà accumulé. Les priorités sont de corriger l’économie, rendre les systèmes de progression fonctionnels, puis terminer les pages de boutique.
+Compared with the audit from 4 November, several of its findings are already resolved in the current source: action points use the configured per-action value, achievement objectives track their criteria, ability triggers have real effects, the tools and titles shops are functional, and action pagination uses 18 entries consistently. The old audit also missed a shared reward-list mutation that could stop pack generation.
 
-## À corriger en priorité
+This update adds 50 skill-themed tools (10 for each skill), awards one at every 10-level milestone through level 100, adds the tools to tiered crate pools, and increases crate rolls. Level-100 menus and notifications now show a completed/max-level state. The main menu’s booster status is on a button that opens the Booster Shop directly, and the shop mask uses a cyan/light-blue palette.
 
-| Priorité | Constat | Emplacement | Conséquence |
+The source build is the required validation for generated datapack functions. It does not replace in-game checks of GUI navigation, reward claims, crate odds, inventory capacity, or progression at the level cap.
+
+## Changes requested and implemented
+
+| Area | Current behavior |
+|---|---|
+| Skill tools | Five skills each define 10 unique, skill-themed tools. One is added to the skill reward at levels 10, 20, …, 100. All 50 are also available in the paginated Tools & Gear shop. |
+| Crates | Crates include skill-tool pools appropriate to their tier and now award 3, 4, 5, 6, and 7 rolls from Common through Mythic. Tool rewards remain claimable from the Reward Vault. |
+| Level 100 | Skill XP stops accumulating after level 100; residual XP is cleared on reaching the cap. The main menu, skill progress tab, level list, action bossbar, and level-up notification avoid presenting level 101 as a real target. |
+| Main menu | Preferences no longer lists active boosters. The separate Boosters & Shop button shows their status and opens the Booster Shop directly. |
+| Player stats | Total Skill XP now sums each skill's lifetime XP, matching the lifetime-total concept used in skill statistics. |
+| Shop masks | The shop root uses alternating cyan/light-blue panes; all shop category pages use cyan for the bottom mask. Other menu layout and styling are unchanged. |
+| Reward selection | `Reward.choose` now samples from a copy, so repeated level-reward generation does not mutate and eventually exhaust shared reward pools. |
+
+## Findings carried forward
+
+| Priority | Finding | Location | Recommended action |
 |---|---|---|---|
-| **P0** | Les points gagnés sont calculés à partir du solde actuel (`Player.pts`) au lieu des points définis pour l’action (`this.pts`). Le total attribué dépend donc du solde et du nombre d’actions ; il peut croître de façon incontrôlée. | [`src/skill/action.ts`](./src/skill/action.ts#L44) | Économie déséquilibrée et statistiques de points fausses. Calculer la récompense à partir de `this.pts × multiplicateur × quantité`. |
-| **P1** | Les achievements sont chargés et affichés, mais leur progression n’est jamais augmentée : seule leur initialisation à zéro est présente. | [`src/data/loader.ts`](./src/data/loader.ts#L62), [`src/skill/index.ts`](./src/skill/index.ts#L194), [`src/menu/pages/skill/achievements.ts`](./src/menu/pages/skill/achievements.ts#L19) | Les objectifs ne peuvent pas être atteints ; les boutons de réclamation ne sont pas accessibles normalement. Relier les critères aux événements et mettre à jour le compteur/la séquence d’achievements. |
-| **P1** | L’aptitude a une chance de déclenchement et un bouton d’amélioration, mais les deux aptitudes configurées ne font qu’afficher un message (`say`). Le bonus décrit comme un effet utile ne modifie pas le gameplay. | [`src/data/definitions.ts`](./src/data/definitions.ts#L98), [`src/data/definitions.ts`](./src/data/definitions.ts#L103), [`src/skill/ability.ts`](./src/skill/ability.ts#L96) | Les améliorations consomment des points sans fournir l’effet attendu. Définir les effets réels et ajuster les descriptions, ou masquer la progression jusqu’à leur implémentation. |
-| **P1** | La récompense d’aptitude est enregistrée avec une fonction `give` vide. En parallèle, la notification de montée de niveau convertit chaque récompense en objet plutôt qu’en `reward.name`. | [`src/misc/reward.ts`](./src/misc/reward.ts#L43), [`src/skill/index.ts`](./src/skill/index.ts#L175) | Récompenses d’aptitude sans effet et notification susceptible d’afficher `[object Object]`. Implémenter l’octroi ou ne pas présenter cette entrée comme une récompense attribuée ; afficher `r.name`. |
-| **P1** | La page **Items & Gear** n’affiche aucun outil : la boucle de création des boutons est entièrement commentée. | [`src/menu/pages/shop/items.ts`](./src/menu/pages/shop/items.ts#L13) | La catégorie est visible, mais aucun achat d’outil n’est possible depuis cette page. Rétablir la liste, ses descriptions et l’appel d’achat. |
-| **P1** | Les tâches `brick`, `diamond` et `sandstone` reprennent respectivement le même critère que `stone`, `dirt` et `sand`, avec des noms et objectifs copiés. | [`src/data/loader.ts`](./src/data/loader.ts#L127) | Les tâches se chevauchent et ne correspondent pas à leur nom. Définir des critères, objectifs et récompenses distincts, ou supprimer les doublons. |
+| **P1** | Ability milestone rewards are still informational no-ops: `Reward.ability` has an empty `give` callback, while the actual ability upgrades are purchased separately on the ability page. The level-up display can therefore list an “upgrade available” reward that is not itself claimable or granted. | `src/misc/reward.ts`, `src/data/loader.ts`, `src/menu/pages/skill/abilities.ts` | Decide whether milestones should grant a free tier, unlock the paid upgrade, or only display an availability notice. Make the reward text and action match that decision. |
+| **P1** | Three of the six task definitions are duplicates: `brick`, `diamond`, and `sandstone` repeat the stone/dirt/sand criteria, names, goals, and rewards. The task menu also displays a fixed `.../3` count. | `src/data/loader.ts`, `src/menu/pages/main.ts` | Give each task a distinct criterion, goal, and reward; derive the displayed total from the selected task set. |
+| **P2** | Custom tools have names, lore, and durability, but no unique enchantments, attributes, or skill-specific gameplay modifiers. | `src/data/definitions.ts`, `src/misc/tool.ts` | Keep gear descriptions explicit about the effects that are actually implemented. Add real effects only when their behavior can be supported and tested. |
+| **P2** | CSV loading is permissive: malformed or missing numeric fields can become zero, and parsing does not validate required headers, criteria, skill names, or duplicate identifiers. | `src/data/loader.ts`, `src/data/csv/` | Validate required columns and values during initialization and report the file/row/field for invalid data. |
+| **P2** | Skill level tiles are informational but still have empty click callbacks. | `src/menu/pages/skill/progress.ts` | Render them without a callback or provide a useful explanation; avoid implying that locked, completed, or current levels are interactive. |
+| **P2** | The README remains the Sandstone template and does not explain installation, supported Minecraft/Sandstone versions, menu access, or gameplay systems. | `README.md` | Replace it with player-facing setup, usage, configuration, and troubleshooting documentation. |
+| **P2** | There are no declared automated test or lint scripts. A successful build cannot exercise in-game interactions or verify weighted outcomes and inventory edge cases. | `package.json` | Add focused tests for pure reward/data logic if a test harness is introduced; otherwise maintain a concise in-game verification checklist. |
+| **P2** | Pack generation and source inspection cannot verify that all item IDs/components, menu clicks, scoreboards, and level-cap transitions behave correctly in the target Minecraft runtime. | Runtime behavior | Test a fresh player and an existing save in-game, especially level 99→100, claiming milestone tools with a full inventory, crate opening, and booster navigation. |
 
-## Fonctions incomplètes ou boutons sans action utile
+## Findings from the previous audit now resolved in source
 
-| Élément | Emplacement | État observé / action recommandée |
-|---|---|---|
-| Bouton de niveau courant | [`src/menu/pages/skill/progress.ts`](./src/menu/pages/skill/progress.ts#L41) | Le clic exécute `say('test')`. Remplacer par une action utile ou retirer le comportement de clic. |
-| Niveaux verrouillés / déjà atteints | [`src/menu/pages/skill/progress.ts`](./src/menu/pages/skill/progress.ts#L31) | Les callbacks sont vides. Si ces éléments sont uniquement informatifs, les rendre non cliquables ; sinon expliquer les conditions et donner un retour. |
-| Boutique de titres | [`src/menu/pages/shop/titles.ts`](./src/menu/pages/shop/titles.ts#L15) | La page ne fait qu’afficher les titres configurés ; aucun titre n’est défini dans les données actuelles et les boutons n’ont pas de callback. Il manque la définition, le déblocage, l’achat ou l’équipement du titre. |
-| Guide des boosters et guide des caisses | [`src/menu/pages/shop/booster.ts`](./src/menu/pages/shop/booster.ts#L69), [`src/menu/pages/shop/crates.ts`](./src/menu/pages/shop/crates.ts#L94) | Les boutons ont des callbacks vides. Les rendre non interactifs ou leur donner une action explicative. |
-| Achievements | [`src/skill/achievement.ts`](./src/skill/achievement.ts#L24) | La réclamation existe, mais elle dépend d’une progression qui n’est pas alimentée (voir P1). |
-| Récompenses de niveau | [`src/data/loader.ts`](./src/data/loader.ts#L86) | Plusieurs niveaux affichent une amélioration d’aptitude ; vérifier que la récompense annoncée correspond à l’amélioration réellement accordée et à son coût. |
-| Actions paginées | [`src/menu/pages/skill/actions.ts`](./src/menu/pages/skill/actions.ts#L17) | La page affiche au plus 17 actions, tandis que le calcul du nombre de pages divise par 18. Les compétences actuelles ont peu d’actions, mais une liste plus grande peut rendre des entrées inaccessibles. Utiliser une capacité unique pour le rendu et la pagination. |
+- Action points are calculated from the action’s configured `pts` value and the active booster, not from the player’s current balance.
+- Achievement objectives use their configured criteria, and the achievement listener advances the sequential milestone after completion.
+- Ability definitions now trigger their configured potion effects.
+- The Tools & Gear shop renders purchasable items; the Titles page supports level unlocks, purchases, and equip/unequip behavior.
+- Action pagination uses the same 18-item page capacity for rendering and navigation.
+- Level-up reward messages use each reward’s name rather than object stringification.
+- The previous `say('test')` action is gone, but skill level tiles still have empty click callbacks (see the remaining findings).
+- The previous report’s claims that achievements never progress, abilities only send messages, the tools shop is empty, the title system is absent, and action pagination divides by a different page size do not match the current source.
 
-## Descriptions et contenus à compléter
+## Verification
 
-- [`src/data/definitions.ts`](./src/data/definitions.ts#L11) contient des descriptions temporaires (`This is a simple description`, `A very cool sword`) et des descriptions d’aptitude génériques (`Cool miner`, `Cool Forager`). Écrire des descriptions correspondant aux effets réels.
-- La description de **Mining** est encore `This is a mining description` dans [`src/data/definitions.ts`](./src/data/definitions.ts#L97).
-- Les effets des aptitudes, les conditions de déclenchement et les bonus des outils doivent être documentés précisément dans le menu. Les champs `durability`, `characteristics`, `onUse`, `onBreak` et `onHold` de [`src/misc/tool.ts`](./src/misc/tool.ts#L8) ne sont pas exploités par la boutique actuelle.
-- Les noms et les critères des tâches doivent être revus ensemble ; les descriptions de tâches ne sont pas définies dans les données.
-- La présentation de la boutique des titres annonce des titres gagnés par progression, mais le mécanisme de déblocage et d’équipement reste à construire.
-
-## Améliorations recommandées
-
-1. **Fiabiliser les données** : valider à l’initialisation les colonnes CSV, les critères, les nombres positifs, les noms de compétences et l’unicité des identifiants ; éviter les conversions permissives en `0` pour les données invalides dans [`src/data/loader.ts`](./src/data/loader.ts#L18).
-2. **Tester les parcours de jeu** : progression XP/points avec et sans booster, montée de niveau, réclamation de récompenses, objectifs d’achievements, tirage et réinitialisation des tâches, ouverture de caisses et achats sans fonds/inventaire plein.
-3. **Renforcer la cohérence des menus** : n’afficher que les fonctionnalités disponibles, indiquer clairement les éléments informatifs non cliquables et vérifier les limites de pagination.
-4. **Clarifier l’installation et l’utilisation** : remplacer le [`README.md`](./README.md) de type template par une documentation utilisateur (version Minecraft/Sandstone visée, installation, commande d’ouverture du menu, fonctionnalités, configuration et dépannage).
-5. **Compléter les métadonnées et scripts** : [`package.json`](./package.json) conserve une description générique, un auteur vide et aucun script de test ou de vérification de types. Ajouter ces éléments lorsque les commandes et tests correspondants existent.
-6. **Prévoir les commandes de maintenance** : documenter le comportement de désinstallation et vérifier que les scores, tags, bossbars et données persistantes sont tous nettoyés.
-
-## Vérification réalisée
-
-- `npm run dev:build` exécuté depuis `prodige_skills` : **réussi** — Sandstone a généré 51 fonctions et 4 autres ressources.
-- Cette compilation ne simule pas les clics d’interface ni les parties en jeu ; les comportements listés doivent être validés en jeu ou par des tests de fonctions dédiés.
-- Aucun script de test ou de lint n’est déclaré dans le `package.json` actuel.
-
-## Liste de suivi
-
-### Corrections
-
-- [ ] Corriger le calcul des points gagnés par action et vérifier l’effet des boosters.
-- [ ] Relier les critères des actions à la progression des achievements.
-- [ ] Vérifier la progression, le déblocage et la réclamation des achievements.
-- [ ] Implémenter les effets réels des aptitudes ou masquer leur amélioration jusqu’à ce qu’ils existent.
-- [ ] Implémenter les récompenses d’aptitude et afficher correctement leur nom dans les notifications.
-- [ ] Corriger ou supprimer les tâches en doublon (`brick`, `diamond`, `sandstone`).
-- [ ] Vérifier que les récompenses annoncées sont effectivement données.
-- [ ] Corriger et tester la pagination des actions.
-
-### Menus et fonctionnalités
-
-- [ ] Rendre les outils visibles et achetables dans **Items & Gear**.
-- [ ] Remplacer l’action de test du bouton de niveau courant.
-- [ ] Rendre les niveaux informatifs non cliquables ou leur donner un comportement utile.
-- [ ] Ajouter des titres et leur système de déblocage/équipement, ou retirer la catégorie incomplète.
-- [ ] Rendre les boutons des guides non cliquables ou leur donner une action utile.
-- [ ] Vérifier le parcours complet d’achat, de réclamation et d’ouverture de caisse.
-
-### Contenu et qualité
-
-- [ ] Remplacer les descriptions temporaires des compétences, outils et aptitudes.
-- [ ] Documenter les effets, conditions de déclenchement et bonus réellement disponibles.
-- [ ] Ajouter des descriptions et des objectifs cohérents aux tâches.
-- [ ] Valider les CSV, critères, valeurs numériques, compétences et identifiants au chargement.
-- [ ] Tester en jeu la progression, les boosters, les récompenses, les tâches, les caisses et les achats.
-- [ ] Améliorer le README avec les prérequis, l’installation, l’utilisation, la configuration et le dépannage.
-- [ ] Compléter les métadonnées du projet et ajouter des scripts de test/vérification lorsqu’ils existent.
-- [ ] Vérifier que la désinstallation nettoie les scores, tags, bossbars et données persistantes.
+- Build command: `npm run dev:build` from `prodige_skills`.
+- A successful build validates TypeScript compilation and Sandstone function generation, but not live gameplay.
+- No in-game testing is recorded in this audit.

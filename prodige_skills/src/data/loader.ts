@@ -1,5 +1,5 @@
-import { crateDefs, skillDefs, toolDefs } from '@src/data/definitions';
-import type { CrateName, SkillName, ToolName } from '@src/data/definitions';
+import { crateDefs, skillDefs, skillToolMilestones, toolDefs } from '@src/data/definitions';
+import type { CrateName, SkillName, SkillToolTier, ToolName } from '@src/data/definitions';
 import { Crate } from '@src/misc/crate';
 import { Reward } from '@src/misc/reward';
 import { Tool } from '@src/misc/tool';
@@ -80,6 +80,14 @@ export class Loader {
 	private static setSkillsRewards() {
 		for (const skill of Object.values(Skill.skills)) {
 			this.setSkillRewards(skill);
+			const milestones = skillToolMilestones[skill.name];
+			if (!milestones || milestones.length !== 10) {
+				throw new Error(`Skill "${skill.name}" must define one skill tool for each level milestone from 10 to 100.`);
+			}
+			for (let level = 10; level <= 100; level += 10) {
+				const toolName = milestones[level / 10 - 1];
+				skill.rewards.get(level)!.push(Tool.get(toolName as ToolName));
+			}
 			this.setAbilityRewards(skill);
 			this.setTitleRewards(skill);
 		}
@@ -166,9 +174,23 @@ export class Loader {
 			Object.entries(Crate.crates).map(([name, crate]) => [name, crate.key])
 		) as Record<string, Reward>;
 		const skills = Object.values(Skill.skills);
+		const toolTiers: SkillToolTier[] = ['common', 'rare', 'epic', 'legendary', 'mythic'];
+		const skillTools: Record<SkillToolTier, Reward[]> = {
+			common: [],
+			rare: [],
+			epic: [],
+			legendary: [],
+			mythic: []
+		};
+		for (const toolNames of Object.values(skillToolMilestones)) {
+			toolNames.forEach((toolName, index) => {
+				skillTools[toolTiers[Math.floor(index / 2)]].push(Tool.get(toolName as ToolName));
+			});
+		}
 		const context = {
 			keys,
-			randomSkillXp: (min: number, max: number) => Reward.randomXp(min, max, skills)
+			randomSkillXp: (min: number, max: number) => Reward.randomXp(min, max, skills),
+			skillTools
 		};
 
 		for (const [name, opt] of Object.entries(crateDefs)) {

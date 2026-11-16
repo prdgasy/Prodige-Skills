@@ -8,7 +8,7 @@ import { Booster } from "@src/misc/booster";
 import { effect } from "sandstone";
 
 // TOOL
-export const toolDefs = {
+const baseToolDefs = {
 	'§aNovice Pickaxe': {
 		item: 'iron_pickaxe', description: 'A dependable starter pickaxe for everyday mining.',
 		rarity: '§a§lCOMMON', durability: 250,
@@ -57,6 +57,96 @@ export const toolDefs = {
 
 } satisfies Record<string, Omit<ToolOptions, 'name'>>;
 
+type SkillToolDefinition = Pick<ToolOptions, 'name' | 'item' | 'price' | 'description' | 'rarity' | 'durability'>;
+
+const skillTool = (
+	name: string,
+	item: ToolOptions['item'],
+	level: number,
+	description: string
+): SkillToolDefinition => ({
+	name,
+	item,
+	price: [500, 1500, 3000, 5000, 8000, 12000, 18000, 25000, 35000, 50000][level / 10 - 1],
+	durability: [300, 600, 900, 1200, 1600, 2000, 2400, 3000, 4000, 5000][level / 10 - 1],
+	rarity: level < 30 ? '§a§lCOMMON' : level < 50 ? '§9§lRARE' : level < 80 ? '§d§lEPIC' : '§6§lLEGENDARY',
+	description,
+});
+
+export const skillTools = {
+	Mining: [
+		skillTool('§aStonewake Pickaxe', 'iron_pickaxe', 10, 'A sturdy pickaxe for a miner beginning to explore the depths.'),
+		skillTool('§aCoppervein Pickaxe', 'golden_pickaxe', 20, 'A quick pickaxe for gathering common ores.'),
+		skillTool('§9Deepslate Prospector', 'diamond_pickaxe', 30, 'A reliable pickaxe made for long deepslate expeditions.'),
+		skillTool('§9Redstone Extractor', 'netherite_pickaxe', 40, 'A reinforced pickaxe for tracing rich mineral veins.'),
+		skillTool('§dDiamond Seeker', 'diamond_pickaxe', 50, 'A precision pickaxe for miners searching for rare gems.'),
+		skillTool('§dNether Delver', 'netherite_pickaxe', 60, 'A durable pickaxe suited to the harshest underground trips.'),
+		skillTool('§dObsidian Breaker', 'netherite_pickaxe', 70, 'A heavy-duty pickaxe for the most resilient stone.'),
+		skillTool('§6Ancient Vein Pick', 'netherite_pickaxe', 80, 'A masterwork pickaxe for uncovering ancient riches.'),
+		skillTool('§6Bedrock Borer', 'netherite_pickaxe', 90, 'An elite miner\'s tool forged for a lifetime of expeditions.'),
+		skillTool('§6Worldshaper Pickaxe', 'netherite_pickaxe', 100, 'The ultimate pickaxe, awarded to a fully accomplished miner.'),
+	],
+	Foraging: [
+		skillTool('§aSapling Cutter', 'stone_axe', 10, 'A dependable axe for gathering a first harvest of timber.'),
+		skillTool('§aBark Stripper', 'iron_axe', 20, 'A balanced axe for tending young forests.'),
+		skillTool('§9Canopy Hatchet', 'diamond_axe', 30, 'A sharp hatchet for exploring dense woodland canopies.'),
+		skillTool('§9Wildwood Axe', 'netherite_axe', 40, 'A strong axe made for seasoned foresters.'),
+		skillTool('§dHeartwood Chopper', 'diamond_axe', 50, 'A precision axe for harvesting the finest timber.'),
+		skillTool('§dCrimson Timber Axe', 'netherite_axe', 60, 'A reinforced axe for gathering wood in the Nether.'),
+		skillTool('§dPalegrove Cleaver', 'netherite_axe', 70, 'A durable cleaver for the rarest and oldest forests.'),
+		skillTool('§6Elderwood Hatchet', 'netherite_axe', 80, 'A master forester\'s axe, crafted for endless journeys.'),
+		skillTool('§6Worldroot Axe', 'netherite_axe', 90, 'An elite axe worthy of the guardian of every woodland.'),
+		skillTool('§6Evergreen Reaper', 'netherite_axe', 100, 'The ultimate axe for a legend of the forests.'),
+	],
+	Farming: [
+		skillTool('§aFirst Harvest Hoe', 'stone_hoe', 10, 'A simple hoe for preparing your first productive fields.'),
+		skillTool('§aFieldhand Hoe', 'iron_hoe', 20, 'A reliable hoe for a growing farm.'),
+		skillTool('§9Cropkeeper Hoe', 'diamond_hoe', 30, 'A balanced hoe for tending thriving crops.'),
+		skillTool('§9Harvest Warden', 'netherite_hoe', 40, 'A reinforced hoe built for a seasoned cultivator.'),
+		skillTool('§dGolden Furrow', 'diamond_hoe', 50, 'A fine hoe for tending valuable and varied harvests.'),
+		skillTool('§dBountiful Planter', 'netherite_hoe', 60, 'A durable hoe for cultivating fields across the realm.'),
+		skillTool('§dOrchard Keeper', 'netherite_hoe', 70, 'A masterwork hoe for orchards and distant farms.'),
+		skillTool('§6Everbloom Hoe', 'netherite_hoe', 80, 'A prized tool for farmers with an exceptional harvest.'),
+		skillTool('§6World Harvester', 'netherite_hoe', 90, 'An elite hoe for the greatest grower in the realm.'),
+		skillTool('§6Eternal Harvest Hoe', 'netherite_hoe', 100, 'The ultimate farming tool, earned through complete mastery.'),
+	],
+	Hunting: [
+		skillTool('§aTrailwatch Bow', 'bow', 10, 'A steady bow for a hunter learning to track their quarry.'),
+		skillTool('§aPathfinder Crossbow', 'crossbow', 20, 'A dependable crossbow for dangerous trails.'),
+		skillTool('§9Beasttracker Blade', 'iron_sword', 30, 'A balanced blade for a practiced monster hunter.'),
+		skillTool('§9Wildstalker Bow', 'bow', 40, 'A durable bow for hunters venturing beyond the safe paths.'),
+		skillTool('§dApex Crossbow', 'crossbow', 50, 'A powerful crossbow for tracking the toughest creatures.'),
+		skillTool('§dDragonfang Sword', 'diamond_sword', 60, 'A finely balanced sword for high-risk hunts.'),
+		skillTool('§dDreadhunter Blade', 'netherite_sword', 70, 'A reinforced blade for the realm\'s most dangerous foes.'),
+		skillTool('§6Ender Tracker Bow', 'bow', 80, 'A master hunter\'s bow for quarry in every dimension.'),
+		skillTool('§6Wardenbreaker Sword', 'netherite_sword', 90, 'An elite sword for hunters who fear no creature.'),
+		skillTool('§6Legend of the Hunt', 'netherite_sword', 100, 'The ultimate weapon for a fully accomplished hunter.'),
+	],
+	Excavating: [
+		skillTool('§aGroundbreaker Shovel', 'stone_shovel', 10, 'A sturdy shovel for breaking ground and gathering soil.'),
+		skillTool('§aDune Walker Spade', 'iron_shovel', 20, 'A balanced spade for deserts, beaches, and riverbeds.'),
+		skillTool('§9Clay Delver', 'diamond_shovel', 30, 'A sharp shovel for digging clay and softer terrain.'),
+		skillTool('§9Gravel Prospector', 'netherite_shovel', 40, 'A reinforced shovel for rugged excavation work.'),
+		skillTool('§dSoul Sand Spade', 'diamond_shovel', 50, 'A durable spade suited to the dangerous Nether wastes.'),
+		skillTool('§dTerracotta Breaker', 'netherite_shovel', 60, 'A heavy-duty shovel for broad excavation projects.'),
+		skillTool('§dRuin Prospector', 'brush', 70, 'A specialist brush for carefully exploring buried ruins.'),
+		skillTool('§6Strata Shaper', 'netherite_shovel', 80, 'A master excavator\'s shovel for every kind of terrain.'),
+		skillTool('§6Deep Digger', 'netherite_shovel', 90, 'An elite shovel made for the deepest expeditions.'),
+		skillTool('§6Earthshaper Spade', 'netherite_shovel', 100, 'The ultimate spade, earned by a master of the land.'),
+	],
+} satisfies Record<string, SkillToolDefinition[]>;
+
+export const toolDefs: Record<string, Omit<ToolOptions, 'name'>> = {
+	...baseToolDefs,
+	...Object.fromEntries(Object.values(skillTools).flatMap(tools =>
+		tools.map(({ name, ...options }) => [name, options])
+	))
+};
+
+export const skillToolMilestones = Object.fromEntries(
+	Object.entries(skillTools).map(([skill, tools]) => [skill, tools.map(tool => tool.name)])
+) as Record<string, string[]>;
+
 export type ToolName = keyof typeof toolDefs;
 
 // CRATE
@@ -64,9 +154,12 @@ type CrateDef = Omit<CrateOption, 'name' | 'rewards'> & {
 	rewards: (context: CrateRewardContext) => Map<Reward, number>
 };
 
+export type SkillToolTier = 'common' | 'rare' | 'epic' | 'legendary' | 'mythic';
+
 type CrateRewardContext = {
 	keys: Record<string, Reward>;
 	randomSkillXp: (min: number, max: number) => Reward;
+	skillTools: Record<SkillToolTier, Reward[]>;
 };
 
 const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
@@ -76,7 +169,7 @@ const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
 
 export const crateDefs = {
 	'§a§lCommon': {
-		description: 'A starter cache with useful points, skill XP, boosters, keys, and basic gear.',
+		description: 'A starter cache with useful points, skill XP, boosters, keys, and skill-specific starter tools.',
 		item: 'chest',
 		keyPrice: 250,
 		rewards: context => new Map<Reward, number>([
@@ -86,12 +179,13 @@ export const crateDefs = {
 			[boosterReward(2, 'Pts'), 12],
 			[context.keys['§a§lCommon'], 8],
 			[Tool.get('§aNovice Pickaxe'), 10],
-			[Tool.get('§fField Shovel'), 8]
+			[Tool.get('§fField Shovel'), 8],
+			...context.skillTools.common.map(reward => [reward, 4] as [Reward, number])
 		]),
-		roll: 2
+		roll: 3
 	},
 	'§9§lRare': {
-		description: 'A well-stocked cache with better XP, stronger boosters, keys, and rare equipment.',
+		description: 'A well-stocked cache with better XP, stronger boosters, keys, and more skill-specific gear.',
 		item: 'barrel',
 		keyPrice: 750,
 		rewards: context => new Map<Reward, number>([
@@ -103,12 +197,14 @@ export const crateDefs = {
 			[context.keys['§9§lRare'], 6],
 			[Tool.get('§aNovice Pickaxe'), 10],
 			[Tool.get('§9Verdant Hatchet'), 8],
-			[Tool.get('§9Gale Recurve'), 8]
+			[Tool.get('§9Gale Recurve'), 8],
+			...context.skillTools.common.map(reward => [reward, 2] as [Reward, number]),
+			...context.skillTools.rare.map(reward => [reward, 4] as [Reward, number])
 		]),
-		roll: 2
+		roll: 4
 	},
 	'§5§lEpic': {
-		description: 'An epic cache with substantial points, random skill XP, powerful boosters, keys, and gear.',
+		description: 'An epic cache with substantial points, random skill XP, powerful boosters, keys, and advanced gear.',
 		item: 'ender_chest',
 		keyPrice: 1500,
 		rewards: context => new Map<Reward, number>([
@@ -120,12 +216,14 @@ export const crateDefs = {
 			[context.keys['§5§lEpic'], 6],
 			[Tool.get('§dDeepstone Drill'), 12],
 			[Tool.get('§bExpert Sword'), 8],
-			[Tool.get('§dWarden Edge'), 6]
+			[Tool.get('§dWarden Edge'), 6],
+			...context.skillTools.rare.map(reward => [reward, 2] as [Reward, number]),
+			...context.skillTools.epic.map(reward => [reward, 4] as [Reward, number])
 		]),
-		roll: 3
+		roll: 5
 	},
 	'§6§lLegendary': {
-		description: 'A legendary collection of high-value points, skill XP, boosters, keys, and elite gear.',
+		description: 'A legendary collection of high-value points, skill XP, boosters, keys, and elite skill gear.',
 		item: 'ancient_debris',
 		keyPrice: 5000,
 		rewards: context => new Map<Reward, number>([
@@ -137,12 +235,14 @@ export const crateDefs = {
 			[context.keys['§6§lLegendary'], 6],
 			[Tool.get('§dWarden Edge'), 8],
 			[Tool.get('§6Astral Cleaver'), 8],
-			[Tool.get('§6Voidfall Pickaxe'), 8]
+			[Tool.get('§6Voidfall Pickaxe'), 8],
+			...context.skillTools.epic.map(reward => [reward, 2] as [Reward, number]),
+			...context.skillTools.legendary.map(reward => [reward, 4] as [Reward, number])
 		]),
-		roll: 4
+		roll: 6
 	},
 	'§c§lMythic': {
-		description: 'The rarest cache, offering top-tier skill XP, boosters, keys, points, and legendary gear.',
+		description: 'The rarest cache, offering top-tier skill XP, boosters, keys, points, and mastery-level gear.',
 		item: 'dragon_egg',
 		keyPrice: 10000,
 		rewards: context => new Map<Reward, number>([
@@ -154,9 +254,11 @@ export const crateDefs = {
 			[context.keys['§c§lMythic'], 5],
 			[Tool.get('§6Astral Cleaver'), 10],
 			[Tool.get('§6Voidfall Pickaxe'), 10],
-			[Tool.get('§dDeepstone Drill'), 5]
+			[Tool.get('§dDeepstone Drill'), 5],
+			...context.skillTools.legendary.map(reward => [reward, 2] as [Reward, number]),
+			...context.skillTools.mythic.map(reward => [reward, 4] as [Reward, number])
 		]),
-		roll: 4
+		roll: 7
 	}
 } satisfies Record<string, CrateDef>;
 
@@ -167,7 +269,7 @@ type SkillDefType = Omit<SkillOptions, 'name'>;
 export const skillDefs = {
 	'Mining': {
 		item: 'diamond_pickaxe', starting: 20,
-		description: 'This is a mining description',
+		description: 'Mine stone, deepslate, ores, and ancient debris to master the depths.',
 		titles: [
 			{ name: '§6Stone Seeker', description: 'A miner who has begun mastering the depths.', icon: 'stone_pickaxe', level: 10 },
 			{ name: '§bDeep Delver', description: 'A seasoned explorer of the underground.', icon: 'deepslate', level: 30 },

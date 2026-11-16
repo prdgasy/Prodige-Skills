@@ -2,7 +2,7 @@ import { Roman } from "@lib/roman";
 import { Float } from "@prodigelib/floatVar";
 import { Button, Page, Gui, GuiMacro as $, MacroTemplate } from "@prodigelib/gui";
 import { Skill } from "@src/skill";
-import { _, DataPointClass, DataVariable, raw, say, Score, tellraw } from "sandstone";
+import { _, DataPointClass, DataVariable, Macro as S, raw, say, Score, tellraw } from "sandstone";
 import { Item, SubSkillPage } from '@src/types';
 import { Progress } from "./progress";
 import { Actions } from "./actions";
@@ -27,8 +27,22 @@ export class Navigation {
 
 	public static generateTabs(g: Gui, p: Page, skill: Skill) {
 		const progress = skill.xp['*'](100)['/'](skill.goal);
-		const bar = new Bar(progress.toScore()).toData();
-		const next = Roman.get(skill.level['+'](1));
+		const progressTitle = DataVariable('§f§lProgress:');
+		const progressTarget = DataVariable('');
+		const progressText = DataVariable('');
+		const progressBar = DataVariable('');
+		_.if(skill.level['>='](100), () => {
+			progressTitle.set('§f§lProgress:');
+			progressTarget.set(' §8• §aMaximum level reached.');
+		}).else(() => {
+			const next = Roman.get(skill.level['+'](1));
+			const bar = new Bar(progress.toScore()).toData();
+			_.with([next, progress.show(), bar, skill.xp.show(), skill.goal], () => {
+				S.data.modify(progressTarget).set.value(S` §8• §7Target: §d${skill.name} ${next}`);
+				S.data.modify(progressText).set.value(S` §8• §7Progress: §e${progress.show()}%`);
+				S.data.modify(progressBar).set.value(S` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`);
+			});
+		});
 		const tabs: Tab[] = [
 			{
 				name: '§aProgress',
@@ -36,11 +50,11 @@ export class Navigation {
 					'§a§l┃ Skill Progression',
 					...Text.wrap(skill.description, '§a┃ §7'),
 					'',
-					'§f§lNext Level:',
+					$`${progressTitle}`,
 					$` §8• §7Current level: §e${skill.name} ${Roman.get(skill.level)}`,
-					$` §8• §7Target: §d${skill.name} ${next}`,
-					$` §8• §7Progress: §e${progress.show()}%`,
-					$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
+					$`${progressTarget}`,
+					$`${progressText}`,
+					$`${progressBar}`,
 					'',
 					'§eClick to view!'
 				],

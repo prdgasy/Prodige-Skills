@@ -22,7 +22,7 @@ export class Titles {
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
+		p.add(() => Mask.bottom(p, "cyan_stained_glass_pane"));
 		p.add(this.title());
 		const titles = Object.values(Skill.skills).flatMap(skill => skill.titles);
 

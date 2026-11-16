@@ -12,7 +12,7 @@ export class Boosters {
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
+		p.add(() => Mask.bottom(p, "cyan_stained_glass_pane"));
 		p.add(this.boosters());
 		for (let i = 1; i <= 3; i++) {
 			const multiplier = i + 1;
