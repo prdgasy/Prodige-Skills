@@ -1,17 +1,10 @@
 import { Text } from "@lib/text";
 import { Button, Gui, Page } from "@prodigelib/gui";
 import { Buyable } from "@src/misc/buyable";
-import { Booster } from "@src/misc/booster";
+import { Booster, BOOSTER_TYPE } from "@src/misc/booster";
 import { Shop } from ".";
 import { Menu } from "@src/menu";
 import { Mask } from "../../mask";
-
-const BOOSTER_PRICES: Record<number, number> = {
-	2: 500,
-	3: 1000,
-	4: 2000,
-	5: 4000
-};
 
 export class Boosters {
 	public static getName() {
@@ -19,12 +12,13 @@ export class Boosters {
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
-		for (let i = 1; i < 5; i++) {
+		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
+		p.add(this.boosters());
+		for (let i = 1; i <= 3; i++) {
 			const multiplier = i + 1;
 			p.add(
-				this.boosterButton('Xp', multiplier, i + 9),
-				this.boosterButton('Pts', multiplier, i + 13)
+				this.boosterButton(BOOSTER_TYPE[0], multiplier, i + 9),
+				this.boosterButton(BOOSTER_TYPE[1], multiplier, i + 13)
 			);
 		}
 
@@ -32,9 +26,21 @@ export class Boosters {
 		p.add(Shop.balance(), Menu.back(g, Shop));
 		return p;
 	}
-
+	private static boosters() {
+		return new Button(
+			"experience_bottle",
+			12,
+			"§b§lBoosters",
+			[
+				'§b§l┃ Accelerate Progress',
+				...Text.wrap('Temporarily multiply XP or points from skill actions.', '§b┃ §7'),
+				'',
+				'§eClick to view the boosters.'
+			]
+		);
+	}
 	private static boosterButton(type: 'Xp' | 'Pts', multiplier: number, slot: number) {
-		const booster = new Booster(multiplier, type, BOOSTER_PRICES[multiplier]);
+		const booster = Booster.get(multiplier, type);
 		const buyable = new Buyable(
 			booster.name,
 			booster.description,
@@ -58,8 +64,8 @@ export class Boosters {
 					'§e┃ §7'
 				),
 				'',
-				`§e┃ §7Duration: §d${booster.duration} minutes`,
-				`§e┃ §7Price: §6${booster.price} Points`,
+				`§8• §7Duration: §d${booster.duration} minutes`,
+				`§8• §7Price: §6${booster.price} Points`,
 				'',
 				'§eClick to purchase!'
 			],
@@ -69,7 +75,7 @@ export class Boosters {
 	private static howItWorks() {
 		return new Button(
 			'knowledge_book',
-			4,
+			22,
 			'§6§lHow Boosters Work',
 			[
 				'',
@@ -78,8 +84,8 @@ export class Boosters {
 				...Text.wrap('Hold the item and right-click to use it.', '§e┃ §7'),
 				...Text.wrap('The multiplier activates for the duration shown on the item.', '§e┃ §7'),
 				'',
-				'§c┃ §7Only one booster of each type can be active at a time.',
-				'§e┃ §7XP and Point boosters can be active together.',
+				'§7Only one booster of each type can be active at a time.',
+				'§7XP and Point boosters can be active together.',
 				'',
 				'§eUse your boosters wisely!'
 			],

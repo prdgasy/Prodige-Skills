@@ -81,31 +81,55 @@ export class Main {
 			});
 			boosterStatuses.push(status);
 		}
-		return p.emit(
-			new Button('amethyst_shard', 4, '§bInfo & Preferences',
-				[
-					'§e§l┃ Player Stats',
-					$`§e┃ §7Total Skill Xp: §b${totalXp.show()}`,
-					$`§e┃ §7Available Points: §6${Player.pts}`,
-					'',
-					'§b§l┃ Active Boosters',
-					...boosterStatuses.map(status => $`§b┃ ${status}`),
-					'',
-					'§eClick to view your preferences!'
-				], () => g.switch(Preferences.getName())
-			)
+		const infoButton = new Button('amethyst_shard', 4, '§bInfo & Preferences',
+			[
+				'§e§l┃ Player Stats',
+				$`§e┃ §7Total Skill Xp: §b${totalXp.show()}`,
+				$`§e┃ §7Available Points: §6${Player.pts}`,
+				'',
+				'§f§lActive Boosters:',
+				...boosterStatuses.map(status => $` §8• ${status}`),
+				'',
+				'§eClick to edit your preferences!'
+			], () => g.switch(Preferences.getName())
 		);
+		p.emit(infoButton);
+
+		for (const [index, type] of BOOSTER_TYPE.entries()) {
+			const color = Booster.getColor(type);
+			const multiplier = Booster.getMult(type);
+			const timer = Booster.getTimer(type);
+			const status = DataVariable(`§7No ${type} Booster active`);
+			_.if(timer['>'](0), () => {
+				_.with([multiplier, timer], () =>
+					S.data.modify(status).set.value(S`${color}x${multiplier} ${type} Booster §8• §c${timer}m`)
+				);
+			});
+			p.emit(new Button(
+				type === 'Xp' ? 'experience_bottle' : 'gold_ingot',
+				19 + index,
+				$`${color}${type} Booster Status`,
+				[
+					$`§8• ${status}`,
+					'',
+					'§7Boosters multiply rewards earned',
+					'§7from skill actions while active.'
+				]
+			));
+		}
+
+		return infoButton;
 	}
 
 	private static shop(g: Gui, p: Page) {
 		return p.emit(
-			new Button('emerald', 21, `§aShop`,
+			new Button('emerald', 21, $`§aShop §8• ${Player.pts}`,
 				[
 					'§a§l┃ Skill Shop',
 					'§a┃ §7Browse items, boosters, crates, and titles.',
 					'§a┃ §7Spend your points on useful rewards.',
 					'',
-					$`§e┃ §7Your balance: §6${Player.pts} Points`,
+					$`§8• §7Your balance: §6${Player.pts} Pts`,
 					'',
 					'§eClick to explore the shop!'
 				], () => {
@@ -138,9 +162,9 @@ export class Main {
 					'§l§6┃ §lChallenge Board',
 					'§6┃ §7Complete tasks to earn their rewards.',
 					'§6┃ §7Claim finished tasks from this menu.',
-					'§e┃',
-					$`§e┃ §8• §7Completed: §e${done}§6/§e3`,
-					$`§e┃ §8• §7Next refresh: ${refresh}`,
+					'',
+					$`§8• §7Completed: §e${done}§6/§e3`,
+					$`§8• §7Next refresh: ${refresh}`,
 					'',
 					'§eClick to view your tasks!'
 				], () => {
@@ -153,7 +177,7 @@ export class Main {
 	}
 
 	private static skillBts(g: Gui, p: Page) {
-		let slot = 10;
+		let slot = 11;
 
 		for (const skill of Object.values(Skill.skills)) {
 			const s = slot++;

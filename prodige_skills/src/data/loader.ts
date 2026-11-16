@@ -10,6 +10,7 @@ import type { Criteria } from '@src/types';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Task } from '@src/misc/task';
+import { Booster } from '@src/misc/booster';
 
 export class Loader {
 	// ------------------------------------------------------------------------
@@ -102,9 +103,11 @@ export class Loader {
 
 	private static setSkillRewards(skill: Skill) {
 		for (let i = 0; i <= 100; i++) {
-			if (i % 10 == 0) {
+			if (i > 0 && i % 25 == 0) {
+				skill.rewards.set(i, Reward.legendary());
+			} else if (i > 0 && i % 10 == 0) {
 				skill.rewards.set(i, Reward.epic());
-			} else if (i % 5 == 0) {
+			} else if (i > 0 && i % 5 == 0) {
 				skill.rewards.set(i, Reward.rare());
 			} else {
 				skill.rewards.set(i, Reward.common());
@@ -116,11 +119,41 @@ export class Loader {
 		const LOW_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
 		const MEDIUM_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
 		const HIGH_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
-		const epicKeys = [Crate.get('§c§lMythic').key, Crate.get('§6§lLegendary').key];
+		const LEGENDARY_POINTS = [6000, 7500, 9000, 12000].map(points => Reward.point(points));
+		const skills = Object.values(Skill.skills);
+		const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
+			const booster = Booster.get(multiplier, type);
+			return Reward.itemReward(
+				booster.name,
+				type === 'Xp' ? 'experience_bottle' : 'gold_ingot',
+				() => booster.giveItem()
+			);
+		};
 
-		Reward.common = () => [Reward.choose(LOW_POINTS),];
-		Reward.rare = () => [Reward.choose(MEDIUM_POINTS)];
-		Reward.epic = () => [Reward.choose(HIGH_POINTS), Reward.choose(epicKeys)];
+		Reward.common = () => [
+			Reward.choose(LOW_POINTS),
+			Crate.get('§a§lCommon').key,
+			boosterReward(2, 'Xp'),
+			Reward.randomXp(40, 100, skills)
+		];
+		Reward.rare = () => [
+			Reward.choose(MEDIUM_POINTS),
+			Crate.get('§9§lRare').key,
+			boosterReward(3, 'Pts'),
+			Reward.randomXp(100, 250, skills)
+		];
+		Reward.epic = () => [
+			Reward.choose(HIGH_POINTS),
+			Reward.choose([Crate.get('§6§lLegendary').key, Crate.get('§c§lMythic').key]),
+			boosterReward(3, 'Xp'),
+			Reward.randomXp(250, 500, skills)
+		];
+		Reward.legendary = () => [
+			Reward.choose(LEGENDARY_POINTS),
+			Reward.choose([Crate.get('§6§lLegendary').key, Crate.get('§c§lMythic').key]),
+			boosterReward(4, 'Pts'),
+			Reward.randomXp(500, 1000, skills)
+		];
 	}
 
 	// ------------------------------------------------------------------------
@@ -128,8 +161,23 @@ export class Loader {
 	// ------------------------------------------------------------------------
 	private static crates<T>(): T {
 		return Object.fromEntries(Object.entries(crateDefs).map(([name, opt]) => {
-			return [name, new Crate({ ...opt, name, rewards: opt.rewards() })]
+			return [name, new Crate({ ...opt, name, rewards: new Map() })]
 		})) as T;
+	}
+
+	private static setCrateRewards() {
+		const keys = Object.fromEntries(
+			Object.entries(Crate.crates).map(([name, crate]) => [name, crate.key])
+		) as Record<string, Reward>;
+		const skills = Object.values(Skill.skills);
+		const context = {
+			keys,
+			randomSkillXp: (min: number, max: number) => Reward.randomXp(min, max, skills)
+		};
+
+		for (const [name, opt] of Object.entries(crateDefs)) {
+			Crate.get(name as CrateName).rewards = opt.rewards(context);
+		}
 	}
 
 	private static tools<T>(): T {
@@ -169,13 +217,12 @@ export class Loader {
 		Tool.tools = Loader.tools<Record<ToolName, Tool>>();
 		Crate.crates = Loader.crates<Record<CrateName, Crate>>();
 
-
+		Loader.setCrateRewards();
 		Loader.setDefaultRewards();
 
 		// 5. Skill level rewards
 		Loader.setSkillsRewards();
 
-		// 4. CSV data (attached to the skills)
 		Loader.loadDataFromCSV(path.join(__dirname, 'csv'));
 
 		// TASKS

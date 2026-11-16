@@ -96,6 +96,12 @@ export class Skill {
 		return fn();
 	}
 
+	public grantRewardXp(amount: number | Score) {
+		this.xp.add(amount);
+		this.totalXp.add(amount);
+		_.if(_.and(this.xp['>='](this.goal), this.level['<'](100)), () => this.levelUp());
+	}
+
 	private levelUp() {
 		const fn = MCFunction(`skill/${this.resourceId}/level_up`, () => {
 			this.xp["-="](this.goal);
@@ -113,7 +119,8 @@ export class Skill {
 			}
 
 			this.levelUpNotif();
-		});
+			_.if(_.and(this.level['<'](100), this.xp['>='](this.goal)), () => fn());
+		}, { onConflict: 'ignore' });
 
 		return fn();
 	}

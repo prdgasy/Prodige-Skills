@@ -5,8 +5,7 @@ import { Player } from "@src/player";
 import type { Skill } from "@src/skill";
 import type { Ability } from "@src/skill/ability";
 import type { Item } from "@src/types";
-import { Macro as $, _, comment, DataPointClass, Objective, Score, Variable } from "sandstone";
-import { MacroLiteral } from "sandstone/core";
+import { Macro as $, _, execute, Objective, Score, Variable } from "sandstone";
 
 
 
@@ -23,6 +22,9 @@ export class Reward {
 	public static common: () => Reward[];
 	public static rare: () => Reward[];
 	public static epic: () => Reward[];
+	public static legendary: () => Reward[];
+	private static reusableItemRewards = new Map<string, Reward>();
+	private static reusableXpRewards = new Map<string, Reward>();
 
 	constructor(
 		name: string,
@@ -95,7 +97,35 @@ export class Reward {
 	}
 
 	public static xp(x: number, skill: Skill): Reward {
-		return new Reward(`§3${x} ${skill.name} Xp`, () => skill.xp.add(x));
+		return new Reward(`§3${x} ${skill.name} Xp`, () => skill.grantRewardXp(x), { icon: 'experience_bottle' });
+	}
+
+	public static randomXp(min: number, max: number, skills: Skill[]): Reward {
+		const key = `${min}_${max}`;
+		const cached = this.reusableXpRewards.get(key);
+		if (cached) return cached;
+
+		const reward = new Reward(`§3${min}-${max} Random Skill Xp`, () => {
+			const amount = Variable(0);
+			const skillIndex = Variable(0);
+			execute.store.result(amount).run.random.value([min, max]);
+			execute.store.result(skillIndex).run.random.value([0, skills.length - 1]);
+			skills.forEach((skill, index) => {
+				_.if(skillIndex['=='](index), () => skill.grantRewardXp(amount));
+			});
+		}, { icon: 'experience_bottle' });
+		this.reusableXpRewards.set(key, reward);
+		return reward;
+	}
+
+	public static itemReward(name: string, icon: Item, give: () => void): Reward {
+		const key = Global.toResource(name);
+		const cached = this.reusableItemRewards.get(key);
+		if (cached) return cached;
+
+		const reward = new Reward(name, give, { icon, takesPlace: true });
+		this.reusableItemRewards.set(key, reward);
+		return reward;
 	}
 
 	public static level(skill: Skill, level: number): Reward[] {

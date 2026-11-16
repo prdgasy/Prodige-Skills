@@ -3,19 +3,56 @@ import { Reward } from "@src/misc/reward";
 import { Tool } from "@src/misc/tool";
 import type { ToolOptions } from "@src/misc/tool";
 import type { SkillOptions } from "@src/skill";
+import { Skill } from "@src/skill";
+import { Booster } from "@src/misc/booster";
 import { effect } from "sandstone";
 
 // TOOL
 export const toolDefs = {
 	'§aNovice Pickaxe': {
-		item: 'diamond_pickaxe', description: 'This is a simple description tester a b c',
-		rarity: '§f§lCOMMON', durability: 100,
-		price: 2500, characteristics: ['§7This is a characteristic', '§7This is another characteristic'],
+		item: 'iron_pickaxe', description: 'A dependable starter pickaxe for everyday mining.',
+		rarity: '§a§lCOMMON', durability: 250,
+		price: 1500, characteristics: ['§7A balanced tool for stone and common ores.'],
 	},
 	'§bExpert Sword': {
-		item: 'diamond_sword', description: 'A very cool sword',
+		item: 'diamond_sword', description: 'A finely balanced blade for dangerous expeditions.',
 		rarity: '§d§lEPIC', durability: 2000,
-		price: 5000
+		price: 12000, characteristics: ['§7Reliable damage and long-lasting durability.']
+	},
+	'§fField Shovel': {
+		item: 'iron_shovel', description: 'A sturdy shovel made for long days in the field.',
+		rarity: '§a§lCOMMON', durability: 250, price: 1800,
+		characteristics: ['§7Ideal for dirt, sand, gravel, and snow.']
+	},
+	'§9Verdant Hatchet': {
+		item: 'diamond_axe', description: 'A precision axe favored by experienced foresters.',
+		rarity: '§9§lRARE', durability: 1200, price: 7500,
+		characteristics: ['§7Made for gathering wood across every biome.']
+	},
+	'§9Gale Recurve': {
+		item: 'bow', description: 'A lightweight bow for hunters who value accuracy.',
+		rarity: '§9§lRARE', durability: 700, price: 8000,
+		characteristics: ['§7A dependable ranged weapon for the hunt.']
+	},
+	'§dDeepstone Drill': {
+		item: 'netherite_pickaxe', description: 'A reinforced pickaxe built for the deepest mines.',
+		rarity: '§d§lEPIC', durability: 3000, price: 26000,
+		characteristics: ['§7Designed for long expeditions underground.']
+	},
+	'§dWarden Edge': {
+		item: 'netherite_sword', description: 'A heavy blade forged for the most dangerous foes.',
+		rarity: '§d§lEPIC', durability: 2600, price: 32000,
+		characteristics: ['§7A treasured weapon for veteran hunters.']
+	},
+	'§6Astral Cleaver': {
+		item: 'netherite_axe', description: 'A legendary axe with an edge worthy of the stars.',
+		rarity: '§6§lLEGENDARY', durability: 4000, price: 60000,
+		characteristics: ['§7A rare masterpiece for an elite adventurer.']
+	},
+	'§6Voidfall Pickaxe': {
+		item: 'netherite_pickaxe', description: 'An exceptional pickaxe reserved for master miners.',
+		rarity: '§6§lLEGENDARY', durability: 5000, price: 75000,
+		characteristics: ['§7The pinnacle of custom mining gear.']
 	},
 
 } satisfies Record<string, Omit<ToolOptions, 'name'>>;
@@ -24,66 +61,102 @@ export type ToolName = keyof typeof toolDefs;
 
 // CRATE
 type CrateDef = Omit<CrateOption, 'name' | 'rewards'> & {
-	rewards: () => Map<Reward, number>
+	rewards: (context: CrateRewardContext) => Map<Reward, number>
+};
+
+type CrateRewardContext = {
+	keys: Record<string, Reward>;
+	randomSkillXp: (min: number, max: number) => Reward;
+};
+
+const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
+	const booster = Booster.get(multiplier, type);
+	return Reward.itemReward(booster.name, type === 'Xp' ? 'experience_bottle' : 'gold_ingot', () => booster.giveItem());
 };
 
 export const crateDefs = {
 	'§a§lCommon': {
-		description: 'A crate with dependable rewards for every skill adventurer.',
+		description: 'A starter cache with useful points, skill XP, boosters, keys, and basic gear.',
 		item: 'chest',
 		keyPrice: 250,
-		rewards: () => new Map<Reward, number>([
-			[Reward.point(100), 65],
-			[Tool.get('§aNovice Pickaxe'), 35]
+		rewards: context => new Map<Reward, number>([
+			[Reward.point(100), 25],
+			[context.randomSkillXp(40, 100), 25],
+			[boosterReward(2, 'Xp'), 12],
+			[boosterReward(2, 'Pts'), 12],
+			[context.keys['§a§lCommon'], 8],
+			[Tool.get('§aNovice Pickaxe'), 10],
+			[Tool.get('§fField Shovel'), 8]
 		]),
-		roll: 1
+		roll: 2
 	},
 	'§9§lRare': {
-		description: 'A rare collection of useful gear and valuable points.',
+		description: 'A well-stocked cache with better XP, stronger boosters, keys, and rare equipment.',
 		item: 'barrel',
 		keyPrice: 750,
-		rewards: () => new Map<Reward, number>([
-			[Reward.point(250), 55],
-			[Tool.get('§aNovice Pickaxe'), 30],
-			[Tool.get('§bExpert Sword'), 15]
+		rewards: context => new Map<Reward, number>([
+			[Reward.point(250), 20],
+			[context.randomSkillXp(100, 250), 20],
+			[boosterReward(2, 'Xp'), 10],
+			[boosterReward(3, 'Pts'), 10],
+			[context.keys['§a§lCommon'], 8],
+			[context.keys['§9§lRare'], 6],
+			[Tool.get('§aNovice Pickaxe'), 10],
+			[Tool.get('§9Verdant Hatchet'), 8],
+			[Tool.get('§9Gale Recurve'), 8]
 		]),
-		roll: 1
+		roll: 2
 	},
 	'§5§lEpic': {
-		description: 'A mythic cache with powerful gear and a generous points reward.',
+		description: 'An epic cache with substantial points, random skill XP, powerful boosters, keys, and gear.',
 		item: 'ender_chest',
 		keyPrice: 1500,
-		animated: true,
-		rewards: () => new Map<Reward, number>([
+		rewards: context => new Map<Reward, number>([
 			[Reward.point(500), 20],
-			[Tool.get('§bExpert Sword'), 62],
-			[Tool.get('§aNovice Pickaxe'), 100]
+			[context.randomSkillXp(200, 500), 20],
+			[boosterReward(3, 'Xp'), 10],
+			[boosterReward(3, 'Pts'), 10],
+			[context.keys['§9§lRare'], 8],
+			[context.keys['§5§lEpic'], 6],
+			[Tool.get('§dDeepstone Drill'), 12],
+			[Tool.get('§bExpert Sword'), 8],
+			[Tool.get('§dWarden Edge'), 6]
+		]),
+		roll: 3
+	},
+	'§6§lLegendary': {
+		description: 'A legendary collection of high-value points, skill XP, boosters, keys, and elite gear.',
+		item: 'ancient_debris',
+		keyPrice: 5000,
+		rewards: context => new Map<Reward, number>([
+			[Reward.point(1000), 20],
+			[context.randomSkillXp(400, 900), 20],
+			[boosterReward(4, 'Xp'), 10],
+			[boosterReward(4, 'Pts'), 10],
+			[context.keys['§5§lEpic'], 10],
+			[context.keys['§6§lLegendary'], 6],
+			[Tool.get('§dWarden Edge'), 8],
+			[Tool.get('§6Astral Cleaver'), 8],
+			[Tool.get('§6Voidfall Pickaxe'), 8]
 		]),
 		roll: 4
 	},
-	'§6§lLegendary': {
-		description: 'A legendary chest holding exceptional rewards for dedicated players.',
-		item: 'ancient_debris',
-		keyPrice: 5000,
-		animated: true,
-		rewards: () => new Map<Reward, number>([
-			[Reward.point(1000), 50],
-			[Tool.get('§bExpert Sword'), 40],
-			[Reward.point(2000), 10]
-		]),
-		roll: 1
-	},
 	'§c§lMythic': {
-		description: 'An epic trove packed with the most valuable rewards in the shop.',
+		description: 'The rarest cache, offering top-tier skill XP, boosters, keys, points, and legendary gear.',
 		item: 'dragon_egg',
 		keyPrice: 10000,
-		animated: true,
-		rewards: () => new Map<Reward, number>([
-			[Reward.point(2000), 55],
-			[Tool.get('§bExpert Sword'), 35],
-			[Tool.get('§aNovice Pickaxe'), 10]
+		rewards: context => new Map<Reward, number>([
+			[Reward.point(2000), 20],
+			[context.randomSkillXp(800, 1500), 20],
+			[boosterReward(4, 'Xp'), 10],
+			[boosterReward(4, 'Pts'), 10],
+			[context.keys['§6§lLegendary'], 10],
+			[context.keys['§c§lMythic'], 5],
+			[Tool.get('§6Astral Cleaver'), 10],
+			[Tool.get('§6Voidfall Pickaxe'), 10],
+			[Tool.get('§dDeepstone Drill'), 5]
 		]),
-		roll: 1
+		roll: 4
 	}
 } satisfies Record<string, CrateDef>;
 
@@ -103,6 +176,9 @@ export const skillDefs = {
 			{ name: '§dVein Sovereign', description: 'A legendary master of every mineral vein.', icon: 'netherite_pickaxe', level: 90 },
 			{ name: '§cMaster Miner', description: 'A legend among the miners of the realm.', icon: 'diamond_pickaxe', price: 25000 },
 			{ name: '§5Bedrock Baron', description: 'A title reserved for the wealthiest mining magnates.', icon: 'netherite_pickaxe', price: 50000 },
+			{ name: '§8Cave Cartographer', description: 'A mapper of every hidden cavern and winding tunnel.', icon: 'map', level: 20 },
+			{ name: '§6Ore Oracle', description: 'A discerning eye that finds riches where others see stone.', icon: 'raw_gold', price: 35000 },
+			{ name: '§bDiamond Crown', description: 'A title for a miner whose fortune shines like diamond.', icon: 'diamond', price: 75000 },
 		],
 		ability: {
 			name: 'Ore Rush',
@@ -122,6 +198,9 @@ export const skillDefs = {
 			{ name: '§dVerdant Sovereign', description: 'The undisputed master of the wilds.', icon: 'cherry_log', level: 90 },
 			{ name: '§5Verdant Legend', description: 'A true master of woodlands and wild growth.', icon: 'cherry_sapling', price: 25000 },
 			{ name: '§aHeart of the Forest', description: 'A treasured title for the greatest foresters.', icon: 'mangrove_propagule', price: 50000 },
+			{ name: '§2Timber Baron', description: 'A master of the great forests and their finest timber.', icon: 'spruce_log', level: 40 },
+			{ name: '§aBloomkeeper', description: 'A devoted steward of wild gardens and flowering groves.', icon: 'azalea', price: 30000 },
+			{ name: '§dElderwood', description: 'A venerable guardian whose roots run deep.', icon: 'dark_oak_sapling', price: 70000 },
 		],
 		ability: {
 			name: 'Forest Stride',
@@ -141,6 +220,8 @@ export const skillDefs = {
 			{ name: '§dEternal Harvest', description: 'The ultimate champion of the cultivated lands.', icon: 'enchanted_golden_apple', level: 90 },
 			{ name: '§aGreen Thumb', description: 'A distinguished title for a dedicated grower.', icon: 'wheat_seeds', price: 15000 },
 			{ name: '§6The Golden Farmer', description: "A prestigious title for the realm's finest farmer.", icon: 'golden_carrot', price: 50000 },
+			{ name: '§eGrain Baron', description: 'A respected grower whose fields stretch beyond the horizon.', icon: 'hay_block', level: 20 },
+			{ name: '§aOrchard Master', description: 'A patient cultivator of the finest fruit and crops.', icon: 'apple', price: 30000 },
 		],
 		ability: {
 			name: 'Bountiful Harvest',
@@ -150,7 +231,7 @@ export const skillDefs = {
 		}
 	},
 	'Hunting': {
-		item: 'netherite_sword', starting: 20,
+		item: 'bow', starting: 20,
 		description: 'Track and hunt creatures across the Overworld and beyond.',
 		titles: [
 			{ name: '§7Trail Scout', description: 'A newcomer learning to follow the tracks.', icon: 'leather', level: 10 },
@@ -160,31 +241,14 @@ export const skillDefs = {
 			{ name: '§4Legend of the Hunt', description: 'The greatest hunter in every dimension.', icon: 'netherite_sword', level: 90 },
 			{ name: '§2Keeper of the Wild', description: 'A celebrated title for a master tracker.', icon: 'compass', price: 15000 },
 			{ name: '§4The Unerring', description: 'A prestigious title for a peerless hunter.', icon: 'spyglass', price: 50000 },
+			{ name: '§cMonster Stalker', description: 'A fearless tracker of the creatures that roam at night.', icon: 'skeleton_skull', level: 20 },
+			{ name: '§6Dragon Tracker', description: 'A legendary hunter who has faced the Ender Dragon.', icon: 'dragon_breath', price: 40000 },
 		],
 		ability: {
 			name: "Hunter's Focus",
 			description: 'Chance to gain Strength I for 6 seconds after a hunt.',
 			basePrice: 600,
 			trigger: () => effect.give('@s', 'minecraft:strength', 6, 0, true)
-		}
-	},
-	'Fishing': {
-		item: 'fishing_rod', starting: 15,
-		description: 'Cast your line, land the catch, and explore the waters.',
-		titles: [
-			{ name: '§bMinnow Catcher', description: 'A beginner learning the patience of fishing.', icon: 'cod', level: 10 },
-			{ name: '§3Deep Angler', description: 'A practiced angler at home on open water.', icon: 'salmon', level: 30 },
-			{ name: '§9Master Angler', description: 'A fisher with a keen eye for every catch.', icon: 'fishing_rod', level: 50 },
-			{ name: '§5Tidecaller', description: 'A master whose casts seem guided by the tides.', icon: 'nautilus_shell', level: 70 },
-			{ name: "§dLeviathan's Bane", description: 'The greatest angler beneath the waves.', icon: 'heart_of_the_sea', level: 90 },
-			{ name: '§bPearl Diver', description: 'A celebrated title for a patient explorer.', icon: 'prismarine_shard', price: 15000 },
-			{ name: '§3Lord of the Tides', description: 'A prestigious title for a true water wanderer.', icon: 'trident', price: 50000 },
-		],
-		ability: {
-			name: 'Tidal Fortune',
-			description: 'Chance to gain Luck I for 30 seconds when fishing.',
-			basePrice: 500,
-			trigger: () => effect.give('@s', 'minecraft:luck', 30, 0, true)
 		}
 	},
 	'Excavating': {
@@ -198,6 +262,8 @@ export const skillDefs = {
 			{ name: '§dEarthshaper', description: 'The ultimate master of the land beneath your feet.', icon: 'netherite_shovel', level: 90 },
 			{ name: '§eDune Walker', description: 'A distinguished title for a desert wanderer.', icon: 'sandstone', price: 15000 },
 			{ name: '§6Lord of the Strata', description: 'A prestigious title for a master excavator.', icon: 'suspicious_sand', price: 50000 },
+			{ name: '§6Desert Cartographer', description: 'A guide who knows every dune, canyon, and buried ruin.', icon: 'map', level: 20 },
+			{ name: '§eDune Sovereign', description: 'A ruler of the sands and all the lands beneath them.', icon: 'red_sand', price: 30000 },
 		],
 		ability: {
 			name: 'Deep Digger',

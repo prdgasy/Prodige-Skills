@@ -3,19 +3,15 @@ import { Button, Gui, Page } from "@prodigelib/gui";
 import { Crate } from "@src/misc/crate";
 import { Shop } from ".";
 import { Menu } from "@src/menu";
-import { _, Data, item, MCFunction, Objective, Score, Variable, say } from "sandstone";
-import { ItemSlotSource } from "sandstone/commands";
 import { Mask } from "../../mask";
 
 export class Crates {
-	public static frame = Objective.create('gui.crates.frame')('@s');
-
 	public static getName() {
 		return this.name;
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
+		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
 		p.add(this.howItWorks());
 
 		const crates = Object.values(Crate.crates);
@@ -26,42 +22,8 @@ export class Crates {
 			);
 		}
 
-		p.add(() => Crates.animate());
-
-		p.add(Shop.balance(), Menu.back(g, Shop, () => this.frame.reset()));
+		p.add(Shop.balance(), Menu.back(g, Shop));
 		return p;
-	}
-
-	private static animate() {
-		const fn = MCFunction('misc/crate/animate', () => {
-			_.if(Crates.frame['>='](0), () => {
-				Crates.frame['++'];
-				Crates.frame['%='](5);
-				for (const [index, crate] of Object.values(Crate.crates).entries()) {
-					if (crate.animated) this.setFrame(crate, index + 2, Crates.frame);
-				}
-				_.await.sleep('7t');
-				fn();
-			});
-		}, { onConflict: 'ignore', asyncContext: true });
-		return fn();
-	}
-
-	private static setFrame(crate: Crate, slot: number, frame: Score) {
-		const titles = [
-			`§b✦ ${crate.name} Crate §b✦`,
-			`§3✧ ${crate.name} Crate §f✧`,
-			`§d❖ ${crate.name} Crate §d❖`,
-			`§5✹ ${crate.name} Crate §f✹`,
-			`§f✧ ${crate.name} Crate §5✧`
-		];
-
-		for (let i = 0; i < titles.length; i++) {
-			_.if(frame['=='](i), () => {
-				const name = Data('entity', '@s', `Items[{Slot:${slot}b}].components."minecraft:custom_name"`);
-				name.set({ text: titles[i], italic: false, color: 'white' });
-			});
-		}
 	}
 
 	private static crateButton(crate: Crate, slot: number) {
@@ -97,19 +59,18 @@ export class Crates {
 	private static howItWorks() {
 		return new Button(
 			'knowledge_book',
-			0,
-			'§6§lHow Crates Work',
+			22,
+			'§e§lHow Crates Work',
 			[
 				'',
 				'§e§l┃ Buy the Matching Key',
 				...Text.wrap('Purchase a key that matches the crate you want to open.', '§e┃ §7'),
 				'',
-				'§b§l┃ Open Your Crate',
-				...Text.wrap('Hold the key in your main hand and click on the corresponding crate to open it!', '§b┃ §7'),
+				'§e§l┃ Open Your Crate',
+				...Text.wrap('Hold the key in your main hand and click on the corresponding crate to open it!', '§e┃ §7'),
 				'',
 				'§8Reward chances are listed on each crate.'
-			],
-			() => { }
+			]
 		);
 	}
 }

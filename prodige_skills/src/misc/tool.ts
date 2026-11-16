@@ -21,7 +21,7 @@ export type ToolOptions = {
 	onHold?: () => void;
 };
 
-type ToolRarity = "§f§lCOMMON" | "§9§lRARE" | "§d§lEPIC" | "§6§lLEGENDARY";
+type ToolRarity = "§a§lCOMMON" | "§9§lRARE" | "§d§lEPIC" | "§6§lLEGENDARY";
 
 export class Tool extends Buyable {
 	public static tools: Record<ToolName, Tool>;
@@ -57,7 +57,18 @@ export class Tool extends Buyable {
 
 	public static getFromOpt(opt: ToolOptions) {
 		const fn = MCFunction(`misc/tool/${Global.toResource(opt.name)}/give`, () => {
-			give('@p', opt.item, { custom_name: opt.name, lore: [{ text: opt.rarity }, { text: opt.description }] });
+			give('@p', opt.item, {
+				'minecraft:custom_name': opt.name,
+				'minecraft:lore': [
+					opt.rarity,
+					`§7${opt.description}`,
+					`§8Durability: ${opt.durability}`,
+					...(opt.characteristics ?? []).map(characteristic => `§8• ${characteristic.replace(/^§7/, '')}`)
+				],
+				'minecraft:max_damage': opt.durability,
+				'minecraft:custom_data': { prodige_skills: { gear: Global.toResource(opt.name) } },
+				'enchantment_glint_override': opt.rarity === '§d§lEPIC' || opt.rarity === '§6§lLEGENDARY'
+			});
 		}, { onConflict: 'ignore' });
 
 		return () => fn();

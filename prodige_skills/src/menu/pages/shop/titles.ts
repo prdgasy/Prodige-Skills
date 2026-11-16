@@ -11,18 +11,19 @@ import { Player } from "@src/player";
 import { Mask } from "../../mask";
 
 const FILTER_ICONS: Item[] = ['chest', 'ender_chest', 'barrel'];
-const FILTER_NAMES = ['All Titles', 'Owned Titles', 'Locked Titles'];
+const FILTER_NAMES = ['All Titles', 'Owned Titles', 'Not Owned Titles'];
 
 export class Titles {
 	public static index = Objective.create('menu.shop.titles.index')('@s');
-	private static filter = Objective.create('title.filter')('@p');
+	private static filter = Objective.create('title.filter')('@s');
 
 	public static getName() {
 		return this.name;
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
+		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
+		p.add(this.title());
 		const titles = Object.values(Skill.skills).flatMap(skill => skill.titles);
 
 		p.add(() => {
@@ -32,16 +33,16 @@ export class Titles {
 				.case(2, this.setFilter(p, FILTER_ICONS[2]))
 			);
 
-			const toRender = Variable(0);
-			const slot = Variable(0);
+			const matchCount = Variable(0);
+			const pageCount = Variable(0);
 
-			for (const [i, title] of titles.entries()) {
+			for (const title of titles) {
 				const render = () => {
-					_.if(this.index['=='](Math.floor(i / 18)), () => {
-						this.renderTitle(p, title, slot);
-						slot['++']['%='](18);
+					_.if(this.index['=='](matchCount['/'](18)), () => {
+						this.renderTitle(p, title, matchCount['%'](18));
+						pageCount['++'];
 					});
-					toRender['++'];
+					matchCount['++'];
 				}
 
 				_.switch(this.filter, _
@@ -51,30 +52,38 @@ export class Titles {
 				)
 			}
 
-			_.if(toRender['=='](0), () => {
+			_.if(matchCount['=='](0), () => {
 				p.emit(new Button('barrier', 13, '§cNo Titles Here', [
 					'',
-					...Text.wrap('There are no titles matching this filter on this page.', '§7'),
+					...Text.wrap('No titles match this filter.', '§7'),
 				], () => { }));
 			})
-				.else(() => Menu.sliders(p, this.index, toRender['-'](1)['/'](18)));
+				.else(() => {
+					_.if(pageCount['=='](0), () => {
+						p.emit(new Button('barrier', 13, '§cNo Titles Here', [
+							'',
+							...Text.wrap('There are no titles on this page.', '§7'),
+						], () => { }));
+					});
+					Menu.sliders(p, this.index, matchCount['-'](1)['/'](18));
+				});
 		});
 
-		p.add(new Button(
-			"book",
-			20,
-			"§e§lTitle Guide",
-			[
-				'',
-				'§e§l┃ Unlocking Titles',
-				...Text.wrap('Some titles unlock at a skill level; others can be purchased with points.', '§e┃ §7'),
-				'',
-				'§e┃ §7Owned titles can be equipped or unequipped.'
-			]
-		));
 
 		p.add(Shop.balance(), Menu.back(g, Shop));
 		return p;
+	}
+
+	public static title() {
+		return new Button(
+			"name_tag",
+			20,
+			"§d§lTitles",
+			[
+				'§d§l┃ Make Your Mark',
+				...Text.wrap('Unlock titles through skill milestones or purchase them here.', '§d┃ §7')
+			]
+		);
 	}
 
 	private static setFilter(p: Page, icon: string) {
@@ -91,7 +100,7 @@ export class Titles {
 	}
 
 	private static filterBtn(p: Page, name: string, icon: string) {
-		return p.emit(new Button(icon as Item, 23, name, [],
+		return p.emit(new Button(icon as Item, 22, name, [],
 			() => {
 				this.filter['++']['%='](3);
 				this.index.set(0);
@@ -103,7 +112,9 @@ export class Titles {
 	private static renderTitle(p: Page, title: Title, slot: Score) {
 		const isOwned = DataVariable('§cNOT OWNED');
 		const equipped = DataVariable('');
+		const icon = DataVariable("charcoal" as Item);
 		_.if(title.owned, () => {
+			icon.set(title.icon);
 			isOwned.set('§a§lOWNED');
 			equipped.set(' §8• §a§lEQUIP');
 		});
@@ -121,7 +132,7 @@ export class Titles {
 		}
 
 		p.emit(new Button(
-			title.icon,
+			$(icon),
 			$(slot),
 			$`${title.name}${equipped}`,
 			[
@@ -129,11 +140,12 @@ export class Titles {
 				'',
 				'§d§l┃ Title',
 				...Text.wrap(title.description, '§d┃ §7'),
-				$`§d┃ §7${requirement}`,
+				'§d┃',
+				$`§d┃ §8• §7${requirement}`,
 				'',
 				$`${action}`,
 			],
-			() => title.buyOrToggle()
+			() => title.buyOrToggle(), 1, ['!attribute_modifiers']
 		));
 	}
 }

@@ -7,6 +7,12 @@ export const BOOSTER_TYPE: BoosterType[] = ['Xp', 'Pts'];
 
 export class Booster {
 	public static boosters: Booster[] = [];
+	public static readonly PRICES: Record<number, number> = {
+		2: 500,
+		3: 1000,
+		4: 2000
+	};
+	private static catalog = new Map<string, Booster>();
 	private static used = Objective.create('boost.used', 'minecraft.used:minecraft.warped_fungus_on_a_stick')('@p');
 
 	public name: string;
@@ -32,6 +38,19 @@ export class Booster {
 		this.duration = duration;
 		this.predicate = predicate;
 		Booster.boosters.push(this);
+	}
+
+	public static get(mult: number, type: BoosterType): Booster {
+		const key = `${type}_${mult}`;
+		const existing = this.catalog.get(key);
+		if (existing) return existing;
+
+		const price = this.PRICES[mult];
+		if (price === undefined) throw new Error(`Unsupported ${mult}x ${type} booster.`);
+
+		const booster = new Booster(mult, type, price);
+		this.catalog.set(key, booster);
+		return booster;
 	}
 
 	public giveItem() {

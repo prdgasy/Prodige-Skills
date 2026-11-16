@@ -47,8 +47,6 @@ Hunting,Hunt Ravager,saddle,minecraft.killed:minecraft.ravager,15,20
 Hunting,Hunt Phantom,phantom_membrane,minecraft.killed:minecraft.phantom,8,10
 Hunting,Hunt Enderman,ender_pearl,minecraft.killed:minecraft.enderman,8,10
 Hunting,Hunt Ender Dragon,dragon_head,minecraft.killed:minecraft.ender_dragon,100,100
-Fishing,Fishing Cast,fishing_rod,minecraft.used:minecraft.fishing_rod,1,1
-Fishing,Fishing Catch,cod,minecraft.custom:minecraft.fish_caught,5,6
 Excavating,Excavate Dirt,dirt,minecraft.mined:minecraft.dirt,1,1
 Excavating,Excavate Grass,grass_block,minecraft.mined:minecraft.grass_block,1,1
 Excavating,Excavate Coarse Dirt,coarse_dirt,minecraft.mined:minecraft.coarse_dirt,2,2
@@ -65,3 +63,117 @@ Excavating,Excavate Soul Soil,soul_soil,minecraft.mined:minecraft.soul_soil,4,4
 Excavating,Excavate Snow,snow_block,minecraft.mined:minecraft.snow_block,2,2
 Excavating,Excavate Powder Snow,powder_snow,minecraft.mined:minecraft.powder_snow,2,2
 Excavating,Excavate Terracotta,terracotta,minecraft.mined:minecraft.terracotta,3,3
+Mining,Deepslate Coal Ore,deepslate_coal_ore,minecraft.mined:minecraft.deepslate_coal_ore,6,6
+Mining,Deepslate Copper Ore,deepslate_copper_ore,minecraft.mined:minecraft.deepslate_copper_ore,7,7
+Mining,Deepslate Iron Ore,deepslate_iron_ore,minecraft.mined:minecraft.deepslate_iron_ore,11,11
+Mining,Deepslate Gold Ore,deepslate_gold_ore,minecraft.mined:minecraft.deepslate_gold_ore,16,16
+Mining,Deepslate Redstone Ore,deepslate_redstone_ore,minecraft.mined:minecraft.deepslate_redstone_ore,14,12
+Mining,Deepslate Lapis Ore,deepslate_lapis_ore,minecraft.mined:minecraft.deepslate_lapis_ore,14,12
+Mining,Deepslate Diamond Ore,deepslate_diamond_ore,minecraft.mined:minecraft.deepslate_diamond_ore,55,45
+Mining,Deepslate Emerald Ore,deepslate_emerald_ore,minecraft.mined:minecraft.deepslate_emerald_ore,60,50
+Mining,Emerald Ore,emerald_ore,minecraft.mined:minecraft.emerald_ore,55,45
+Mining,Nether Quartz Ore,nether_quartz_ore,minecraft.mined:minecraft.nether_quartz_ore,8,7
+Mining,Nether Gold Ore,nether_gold_ore,minecraft.mined:minecraft.nether_gold_ore,12,10
+Mining,Obsidian,obsidian,minecraft.mined:minecraft.obsidian,8,8
+Mining,Amethyst Cluster,amethyst_cluster,minecraft.mined:minecraft.amethyst_cluster,12,10
+Foraging,Oak Wood,oak_wood,minecraft.mined:minecraft.oak_wood,2,3
+Foraging,Stripped Oak Log,stripped_oak_log,minecraft.mined:minecraft.stripped_oak_log,2,3
+Foraging,Stripped Oak Wood,stripped_oak_wood,minecraft.mined:minecraft.stripped_oak_wood,2,3
+Foraging,Spruce Wood,spruce_wood,minecraft.mined:minecraft.spruce_wood,2,3
+Foraging,Stripped Spruce Log,stripped_spruce_log,minecraft.mined:minecraft.stripped_spruce_log,2,3
+Foraging,Stripped Spruce Wood,stripped_spruce_wood,minecraft.mined:minecraft.stripped_spruce_wood,2,3
+Foraging,Birch Wood,birch_wood,minecraft.mined:minecraft.birch_wood,2,3
+Foraging,Stripped Birch Log,stripped_birch_log,minecraft.mined:minecraft.stripped_birch_log,2,3
+Foraging,Stripped Birch Wood,stripped_birch_wood,minecraft.mined:minecraft.stripped_birch_wood,2,3
+Foraging,Jungle Wood,jungle_wood,minecraft.mined:minecraft.jungle_wood,3,4
+Foraging,Stripped Jungle Log,stripped_jungle_log,minecraft.mined:minecraft.stripped_jungle_log,3,4
+Foraging,Stripped Jungle Wood,stripped_jungle_wood,minecraft.mined:minecraft.stripped_jungle_wood,3,4
+Foraging,Acacia Wood,acacia_wood,minecraft.mined:minecraft.acacia_wood,3,4
+Foraging,Stripped Acacia Log,stripped_acacia_log,minecraft.mined:minecraft.stripped_acacia_log,3,4
+Foraging,Stripped Acacia Wood,stripped_acacia_wood,minecraft.mined:minecraft.stripped_acacia_wood,3,4
+Foraging,Dark Oak Wood,dark_oak_wood,minecraft.mined:minecraft.dark_oak_wood,3,4
+Foraging,Stripped Dark Oak Log,stripped_dark_oak_log,minecraft.mined:minecraft.stripped_dark_oak_log,3,4
+Foraging,Stripped Dark Oak Wood,stripped_dark_oak_wood,minecraft.mined:minecraft.stripped_dark_oak_wood,3,4
+Foraging,Mangrove Wood,mangrove_wood,minecraft.mined:minecraft.mangrove_wood,4,5
+Foraging,Stripped Mangrove Log,stripped_mangrove_log,minecraft.mined:minecraft.stripped_mangrove_log,4,5
+Foraging,Stripped Mangrove Wood,stripped_mangrove_wood,minecraft.mined:minecraft.stripped_mangrove_wood,4,5
+Foraging,Cherry Wood,cherry_wood,minecraft.mined:minecraft.cherry_wood,4,5
+Foraging,Stripped Cherry Log,stripped_cherry_log,minecraft.mined:minecraft.stripped_cherry_log,4,5
+Foraging,Stripped Cherry Wood,stripped_cherry_wood,minecraft.mined:minecraft.stripped_cherry_wood,4,5
+Foraging,Crimson Hyphae,crimson_hyphae,minecraft.mined:minecraft.crimson_hyphae,10,8
+Foraging,Stripped Crimson Stem,stripped_crimson_stem,minecraft.mined:minecraft.stripped_crimson_stem,10,8
+Foraging,Stripped Crimson Hyphae,stripped_crimson_hyphae,minecraft.mined:minecraft.stripped_crimson_hyphae,10,8
+Foraging,Warped Hyphae,warped_hyphae,minecraft.mined:minecraft.warped_hyphae,10,8
+Foraging,Stripped Warped Stem,stripped_warped_stem,minecraft.mined:minecraft.stripped_warped_stem,10,8
+Foraging,Stripped Warped Hyphae,stripped_warped_hyphae,minecraft.mined:minecraft.stripped_warped_hyphae,10,8
+Foraging,Pale Oak Log,pale_oak_log,minecraft.mined:minecraft.pale_oak_log,5,6
+Foraging,Pale Oak Wood,pale_oak_wood,minecraft.mined:minecraft.pale_oak_wood,5,6
+Foraging,Stripped Pale Oak Log,stripped_pale_oak_log,minecraft.mined:minecraft.stripped_pale_oak_log,5,6
+Foraging,Stripped Pale Oak Wood,stripped_pale_oak_wood,minecraft.mined:minecraft.stripped_pale_oak_wood,5,6
+Foraging,Bamboo Block,bamboo_block,minecraft.mined:minecraft.bamboo_block,5,5
+Foraging,Mangrove Roots,mangrove_roots,minecraft.mined:minecraft.mangrove_roots,2,3
+Farming,Plant Wheat Seeds,wheat_seeds,minecraft.used:minecraft.wheat_seeds,0.5,1
+Farming,Plant Carrots,carrot,minecraft.used:minecraft.carrot,0.5,1
+Farming,Plant Potatoes,potato,minecraft.used:minecraft.potato,0.5,1
+Farming,Plant Beetroot Seeds,beetroot_seeds,minecraft.used:minecraft.beetroot_seeds,0.5,1
+Farming,Plant Pumpkin Seeds,pumpkin_seeds,minecraft.used:minecraft.pumpkin_seeds,0.5,1
+Farming,Plant Melon Seeds,melon_seeds,minecraft.used:minecraft.melon_seeds,0.5,1
+Farming,Plant Nether Wart,nether_wart,minecraft.used:minecraft.nether_wart,1,1
+Farming,Plant Cocoa Beans,cocoa_beans,minecraft.used:minecraft.cocoa_beans,0.5,1
+Farming,Plant Sweet Berries,sweet_berries,minecraft.used:minecraft.sweet_berries,0.5,1
+Farming,Plant Bamboo,bamboo,minecraft.used:minecraft.bamboo,0.5,1
+Farming,Plant Torchflower,torchflower_seeds,minecraft.used:minecraft.torchflower_seeds,1,1
+Farming,Plant Pitcher Plant,pitcher_pod,minecraft.used:minecraft.pitcher_pod,1,1
+Hunting,Hunt Zombie,zombie,minecraft.killed:minecraft.zombie,4,5
+Hunting,Hunt Skeleton,skeleton,minecraft.killed:minecraft.skeleton,4,5
+Hunting,Hunt Creeper,gunpowder,minecraft.killed:minecraft.creeper,5,6
+Hunting,Hunt Spider,string,minecraft.killed:minecraft.spider,4,5
+Hunting,Hunt Cave Spider,spider_eye,minecraft.killed:minecraft.cave_spider,6,7
+Hunting,Hunt Drowned,trident,minecraft.killed:minecraft.drowned,6,7
+Hunting,Hunt Husk,sand,minecraft.killed:minecraft.husk,5,6
+Hunting,Hunt Stray,arrow,minecraft.killed:minecraft.stray,5,6
+Hunting,Hunt Witch,glass_bottle,minecraft.killed:minecraft.witch,8,9
+Hunting,Hunt Slime,slime_ball,minecraft.killed:minecraft.slime,5,6
+Hunting,Hunt Pillager,crossbow,minecraft.killed:minecraft.pillager,8,9
+Hunting,Hunt Vindicator,emerald,minecraft.killed:minecraft.vindicator,10,12
+Hunting,Hunt Evoker,totem_of_undying,minecraft.killed:minecraft.evoker,15,20
+Hunting,Hunt Vex,iron_sword,minecraft.killed:minecraft.vex,8,10
+Hunting,Hunt Guardian,prismarine_shard,minecraft.killed:minecraft.guardian,8,10
+Hunting,Hunt Elder Guardian,prismarine_crystals,minecraft.killed:minecraft.elder_guardian,20,25
+Hunting,Hunt Blaze,blaze_rod,minecraft.killed:minecraft.blaze,8,10
+Hunting,Hunt Ghast,ghast_tear,minecraft.killed:minecraft.ghast,12,15
+Hunting,Hunt Wither Skeleton,wither_skeleton_skull,minecraft.killed:minecraft.wither_skeleton,12,15
+Hunting,Hunt Piglin Brute,gold_ingot,minecraft.killed:minecraft.piglin_brute,12,15
+Hunting,Hunt Shulker,shulker_shell,minecraft.killed:minecraft.shulker,12,15
+Hunting,Hunt Endermite,ender_pearl,minecraft.killed:minecraft.endermite,5,6
+Hunting,Hunt Silverfish,stone,minecraft.killed:minecraft.silverfish,4,5
+Hunting,Hunt Warden,sculk_catalyst,minecraft.killed:minecraft.warden,30,40
+Hunting,Hunt Wither,nether_star,minecraft.killed:minecraft.wither,50,60
+Hunting,Hunt Turtle,turtle_scute,minecraft.killed:minecraft.turtle,6,7
+Hunting,Hunt Horse,leather,minecraft.killed:minecraft.horse,4,5
+Hunting,Hunt Camel,cactus,minecraft.killed:minecraft.camel,5,6
+Hunting,Hunt Armadillo,armadillo_scute,minecraft.killed:minecraft.armadillo,6,7
+Hunting,Hunt Sniffer,sniffer_egg,minecraft.killed:minecraft.sniffer,8,10
+Hunting,Hunt Frog,froglight,minecraft.killed:minecraft.frog,4,5
+Hunting,Hunt Axolotl,tropical_fish,minecraft.killed:minecraft.axolotl,5,6
+Hunting,Hunt Ocelot,phantom_membrane,minecraft.killed:minecraft.ocelot,5,6
+Hunting,Hunt Panda,bamboo,minecraft.killed:minecraft.panda,6,8
+Excavating,Excavate Dirt Path,dirt_path,minecraft.mined:minecraft.dirt_path,1,1
+Excavating,Excavate Farmland,farmland,minecraft.mined:minecraft.farmland,1,1
+Excavating,Excavate Short Grass,short_grass,minecraft.mined:minecraft.short_grass,0.5,1
+Excavating,Excavate Fern,fern,minecraft.mined:minecraft.fern,0.5,1
+Excavating,Excavate Dead Bush,dead_bush,minecraft.mined:minecraft.dead_bush,1,1
+Excavating,Excavate Suspicious Sand,suspicious_sand,minecraft.mined:minecraft.suspicious_sand,5,5
+Excavating,Excavate Suspicious Gravel,suspicious_gravel,minecraft.mined:minecraft.suspicious_gravel,5,5
+Excavating,Excavate White Terracotta,white_terracotta,minecraft.mined:minecraft.white_terracotta,3,3
+Excavating,Excavate Red Terracotta,red_terracotta,minecraft.mined:minecraft.red_terracotta,3,3
+Excavating,Excavate Yellow Terracotta,yellow_terracotta,minecraft.mined:minecraft.yellow_terracotta,3,3
+Excavating,Excavate Orange Terracotta,orange_terracotta,minecraft.mined:minecraft.orange_terracotta,3,3
+Excavating,Excavate Brown Terracotta,brown_terracotta,minecraft.mined:minecraft.brown_terracotta,3,3
+Excavating,Excavate White Concrete Powder,white_concrete_powder,minecraft.mined:minecraft.white_concrete_powder,2,2
+Excavating,Excavate Sandstone,sandstone,minecraft.mined:minecraft.sandstone,2,2
+Excavating,Excavate Red Sandstone,red_sandstone,minecraft.mined:minecraft.red_sandstone,2,2
+Excavating,Excavate Gravelly Sand,sand,minecraft.mined:minecraft.sand,1,1
+Excavating,Excavate Snow Layer,snow,minecraft.mined:minecraft.snow,1,1
+Excavating,Excavate Packed Mud,packed_mud,minecraft.mined:minecraft.packed_mud,3,3
+Excavating,Excavate Clay Block,clay,minecraft.mined:minecraft.clay,3,3

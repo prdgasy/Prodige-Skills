@@ -1,7 +1,6 @@
 import { Text } from "@lib/text";
 import { smartTellraw } from "@prodigelib/easymacro";
 import { Global } from "@src/global";
-import { Crate } from "@src/misc/crate";
 import { Reward } from "@src/misc/reward";
 import { Player } from "@src/player";
 import { Skill } from "@src/skill";
@@ -29,12 +28,10 @@ export class Achievement {
 		this.description = description;
 		this.progress = Objective.create(`${this.parent.resourceId}.achievement.${this.resourceId}`, criteria)('@p');
 
-		if (step % 5 == 0) this.rewards = [
-			...Reward.epic(),
-			Reward.choose([Crate.get('§a§lCommon').key, Crate.get('§5§lEpic').key])
-		];
-		else if (step % 3 == 0) this.rewards = [Reward.choose([Crate.get('§9§lRare').key])];
-		else this.rewards = [Reward.choose([Crate.get('§a§lCommon').key])];
+		if (step > 0 && step % 10 == 9) this.rewards = Reward.legendary();
+		else if (step > 0 && step % 5 == 4) this.rewards = Reward.epic();
+		else if (step > 0 && step % 3 == 2) this.rewards = Reward.rare();
+		else this.rewards = Reward.common();
 	}
 
 	public static init() {

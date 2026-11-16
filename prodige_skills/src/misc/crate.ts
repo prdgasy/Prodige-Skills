@@ -3,10 +3,9 @@ import { Item } from "@src/types";
 import { Global } from "@src/global";
 import { Player } from "@src/player";
 import { Text } from "@lib/text";
-import { _, clear, execute, give, ItemPredicate, item, MCFunction, Objective, Score, Variable, raw, say } from "sandstone";
+import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Variable } from "sandstone";
 import { Reward } from "./reward";
 import { macro as T, smartTellraw } from "@prodigelib/easymacro";
-import { ItemSlotSource } from "sandstone/commands";
 import type { CrateName } from "@src/data/definitions";
 
 export type CrateOption = {
@@ -16,7 +15,6 @@ export type CrateOption = {
 	roll: number;
 	keyPrice: number;
 	rewards: Map<Reward, number>;
-	animated?: boolean;
 }
 
 export class Crate {
@@ -26,12 +24,10 @@ export class Crate {
 	public roll: number;
 	public key: Buyable;
 	public rewards: Map<Reward, number>;
-	public animated: boolean;
 	private keyPredicate: ReturnType<typeof ItemPredicate>;
 	public static crates: Record<CrateName, Crate>;
 	public static storage = Global.storage.select("crate");
 	private static usedKey = Objective.create('crate.key.used', 'minecraft.used:minecraft.carrot_on_a_stick')('@p');
-	private static animation = Objective.create('crate.animation')('@s');
 
 	public constructor(opt: CrateOption) {
 		this.name = opt.name;
@@ -39,7 +35,6 @@ export class Crate {
 		this.rewards = opt.rewards;
 		this.description = opt.description;
 		this.item = opt.item;
-		this.animated = opt.animated ?? false;
 
 		const keyId = Global.toResource(this.name);
 		const keyData = { prodige_skills: { crate_key: keyId } };
@@ -97,7 +92,7 @@ export class Crate {
 			smartTellraw([
 				Global.encapsuler + '\n',
 				` §e§lCRATE OPENED!\n\n`,
-				` §bYou opened x1 §8[${this.name} Crate§8]§b!\n\n`,
+				` §7You opened a §8[${this.name} Crate§8] §7and rolled ${n} times!\n\n`,
 				' §f§lRewards:'
 			]);
 

@@ -35,3 +35,45 @@ Foraging,chop_warped_1,Warped Collector I,warped_stem,50,minecraft.mined:minecra
 Foraging,chop_warped_2,Warped Collector II,warped_hyphae,500,minecraft.mined:minecraft.warped_stem,Gather 500 warped stems.
 Foraging,chop_total_1,Master Forester I,diamond_axe,2500,dummy,Chop a total of 2 500 logs of any type.
 Foraging,chop_total_2,Master Forester II,netherite_axe,10000,dummy,Chop a total of 10 000 logs. You are a legendary lumberjack.
+Mining,mine_deepslate_copper,Deep Copper,raw_copper,100,minecraft.mined:minecraft.deepslate_copper_ore,Extract 100 deepslate copper ores.
+Mining,mine_deepslate_gold,Deep Gold,raw_gold,75,minecraft.mined:minecraft.deepslate_gold_ore,Find 75 gold veins beneath the deepslate.
+Mining,mine_emerald,Emerald Expert,emerald,50,minecraft.mined:minecraft.emerald_ore,Mine 50 emerald ores from mountain stone.
+Mining,mine_quartz,Nether Prospector,quartz,500,minecraft.mined:minecraft.nether_quartz_ore,Gather 500 quartz ores from the Nether.
+Mining,mine_nether_gold,Nether Gold Rush,gold_nugget,250,minecraft.mined:minecraft.nether_gold_ore,Extract 250 gold ores from the Nether.
+Mining,mine_amethyst,Amethyst Collector,amethyst_shard,250,minecraft.mined:minecraft.amethyst_cluster,Harvest 250 amethyst clusters.
+Foraging,chop_pale_oak_1,Pale Forest Forager,pale_oak_log,100,minecraft.mined:minecraft.pale_oak_log,Harvest 100 pale oak logs.
+Foraging,chop_pale_oak_2,Pale Forest Keeper,pale_oak_wood,1000,minecraft.mined:minecraft.pale_oak_log,Gather 1 000 pale oak logs.
+Foraging,chop_bamboo,Bamboo Gatherer,bamboo_block,250,minecraft.mined:minecraft.bamboo_block,Harvest 250 bamboo blocks.
+Foraging,chop_stripped,Timber Finisher,stripped_oak_log,500,minecraft.mined:minecraft.stripped_oak_log,Harvest 500 stripped oak logs.
+Foraging,chop_mangrove_roots,Mangrove Rooter,mangrove_roots,250,minecraft.mined:minecraft.mangrove_roots,Clear 250 mangrove roots.
+Foraging,chop_cherry_wood,Cherrywood Collector,cherry_wood,500,minecraft.mined:minecraft.cherry_wood,Gather 500 cherry wood blocks.
+Farming,farm_wheat_1,First Harvest,wheat,100,minecraft.mined:minecraft.wheat,Harvest 100 mature wheat crops.
+Farming,farm_wheat_2,Golden Fields,wheat,1000,minecraft.mined:minecraft.wheat,Harvest 1 000 mature wheat crops.
+Farming,plant_wheat,Wheat Planter,wheat_seeds,250,minecraft.used:minecraft.wheat_seeds,Plant wheat seeds 250 times.
+Farming,farm_carrots,Carrot Crop,carrot,500,minecraft.mined:minecraft.carrots,Harvest 500 carrot crops.
+Farming,plant_carrots,Carrot Planter,carrot,250,minecraft.used:minecraft.carrot,Plant carrots 250 times.
+Farming,farm_potatoes,Potato Patch,potato,500,minecraft.mined:minecraft.potatoes,Harvest 500 potato crops.
+Farming,farm_beetroot,Beetroot Bounty,beetroot,500,minecraft.mined:minecraft.beetroots,Harvest 500 beetroot crops.
+Farming,farm_melon,Melon Merchant,melon,250,minecraft.mined:minecraft.melon,Harvest 250 melons.
+Farming,farm_nether_wart,Nether Cultivator,nether_wart,250,minecraft.mined:minecraft.nether_wart,Harvest 250 nether wart.
+Farming,farm_berries,Berry Picker,sweet_berries,500,minecraft.mined:minecraft.sweet_berry_bush,Harvest 500 sweet berry bushes.
+Hunting,hunt_zombie_1,Zombie Slayer,zombie_head,100,minecraft.killed:minecraft.zombie,Defeat 100 zombies.
+Hunting,hunt_skeleton_1,Bone Collector,skeleton_skull,100,minecraft.killed:minecraft.skeleton,Defeat 100 skeletons.
+Hunting,hunt_creeper_1,Creeper Tamer,gunpowder,50,minecraft.killed:minecraft.creeper,Defeat 50 creepers.
+Hunting,hunt_enderman_1,Ender Tracker,ender_pearl,50,minecraft.killed:minecraft.enderman,Defeat 50 endermen.
+Hunting,hunt_blaze_1,Blaze Breaker,blaze_rod,50,minecraft.killed:minecraft.blaze,Defeat 50 blazes.
+Hunting,hunt_warden,Deep Dark Champion,sculk_catalyst,1,minecraft.killed:minecraft.warden,Defeat a warden in the deep dark.
+Hunting,hunt_wither,Wither Vanquisher,nether_star,1,minecraft.killed:minecraft.wither,Defeat the Wither.
+Hunting,hunt_dragon,Dragon Conqueror,dragon_head,1,minecraft.killed:minecraft.ender_dragon,Defeat the Ender Dragon.
+Hunting,hunt_ravager,Ravager Breaker,saddle,25,minecraft.killed:minecraft.ravager,Defeat 25 ravagers.
+Hunting,hunt_elder_guardian,Monument Conqueror,prismarine_shard,10,minecraft.killed:minecraft.elder_guardian,Defeat 10 elder guardians.
+Excavating,excavate_dirt_1,Groundbreaker,dirt,500,minecraft.mined:minecraft.dirt,Dig up 500 dirt blocks.
+Excavating,excavate_sand_1,Desert Digger,sand,500,minecraft.mined:minecraft.sand,Dig up 500 sand blocks.
+Excavating,excavate_gravel,Gravel Gatherer,gravel,500,minecraft.mined:minecraft.gravel,Dig up 500 gravel blocks.
+Excavating,excavate_clay,Clay Collector,clay_ball,250,minecraft.mined:minecraft.clay,Harvest 250 clay blocks.
+Excavating,excavate_red_sand,Red Dune Digger,red_sand,250,minecraft.mined:minecraft.red_sand,Dig up 250 red sand blocks.
+Excavating,excavate_soul_sand,Soul Sand Prospector,soul_sand,250,minecraft.mined:minecraft.soul_sand,Dig up 250 soul sand blocks.
+Excavating,excavate_snow,Snow Shoveler,snow_block,250,minecraft.mined:minecraft.snow_block,Clear 250 snow blocks.
+Excavating,excavate_mud,Mud Mover,mud,250,minecraft.mined:minecraft.mud,Dig up 250 mud blocks.
+Excavating,excavate_terracotta,Colorful Digger,terracotta,500,minecraft.mined:minecraft.terracotta,Excavate 500 terracotta blocks.
+Excavating,excavate_suspicious_sand,Ruin Prospector,brush,10,minecraft.mined:minecraft.suspicious_sand,Uncover 10 suspicious sand blocks.

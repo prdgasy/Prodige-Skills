@@ -49,6 +49,9 @@ export class Action {
 			this.totalPts['+='](Action.addedPts);
 			this.totalXp['+='](Action.addedXp);
 			this.totalExecuted['+='](this.watcher);
+			for (const achievement of this.parent.achievements) {
+				if (achievement.criteria === 'dummy') achievement.progress.add(this.watcher);
+			}
 
 
 			this.parent.onEventTriggered(Action.addedXp, Action.addedPts);

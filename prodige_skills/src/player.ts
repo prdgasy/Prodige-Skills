@@ -1,4 +1,4 @@
-import { _, Data, execute, Label, MCFunction, NonEmptyString, Objective, playsound, rel, tellraw, Macro as $, Score, Variable } from "sandstone";
+import { _, execute, Label, MCFunction, NonEmptyString, Objective, playsound, rel, tellraw, Macro as $, Score } from "sandstone";
 import type { ConditionClass } from "sandstone/variables";
 import { macro as E, smartTellraw } from "@prodigelib/easymacro";
 
@@ -11,6 +11,7 @@ export class Player {
 	static achievementNotif = Label('player.achievement_notif')('@p');
 	public static taskNotif = Label('player.task_notif')('@p');
 	public static gotFirstTask = Label('player.gotFirstTask')('@p');
+	private static inventorySlots = Objective.create('player.inventory.slots')('@p');
 
 	public static init(setup: () => void) {
 		MCFunction('player/first_join', () => {
@@ -30,7 +31,8 @@ export class Player {
 	}
 
 	public static isInvFull(): ConditionClass {
-		return Variable(Data('entity', '@p', 'Inventory'))['>'](35);
+		execute.store.result(this.inventorySlots).if.slots.entity('@p', 'inventory.*');
+		return this.inventorySlots['>='](36);
 	}
 
 	public static playSound(sound: 'error' | 'success' | 'levelup' | 'info' | 'tick' | SoundType, pitch: number = 1) {

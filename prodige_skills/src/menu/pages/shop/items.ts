@@ -14,7 +14,8 @@ export class Items {
 	}
 
 	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.bottom(p, "black_stained_glass_pane"));
+		p.add(() => Mask.bottom(p, "green_stained_glass_pane"));
+		p.add(this.items());
 		const tools = Object.values(Tool.tools);
 
 		p.add(() => {
@@ -40,6 +41,18 @@ export class Items {
 
 		p.add(Shop.balance(), Menu.back(g, Shop));
 		return p;
+	}
+private static items() {
+		return new Button(
+			"diamond_pickaxe",
+			20,
+			"§a§lTools & Gear",
+			[
+				'§a§l┃ Equipment',
+				...Text.wrap('Browse tools and gear to support your journey.', '§a┃ §7'),
+			],
+			() => { }, 1, ['!attribute_modifiers']
+		);
 	}
 
 	private static displayItem(tool: Tool, slot: number) {
