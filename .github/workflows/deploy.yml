@@ -22,6 +22,7 @@ jobs:
             code/.sandstone/output/datapack
           sparse-checkout-cone-mode: true
 
+      
       - name: Copy datapack
         id: copy
         shell: powershell
@@ -36,10 +37,15 @@ jobs:
           New-Item -ItemType Directory -Force -Path $destination | Out-Null
 
           robocopy $source $destination /MIR /NFL /NDL /NJH /NJS /NP
+          $copyCode = $LASTEXITCODE
 
-          if ($LASTEXITCODE -ge 8) {
-            throw "Robocopy failed with exit code $LASTEXITCODE"
+          if ($copyCode -ge 8) {
+            throw "Robocopy failed with exit code $copyCode"
           }
+
+          Write-Host "Datapack deployed successfully! Robocopy code: $copyCode"
+          exit 0
+
 
 
       - name: Windows notification

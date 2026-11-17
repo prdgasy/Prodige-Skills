@@ -24,7 +24,7 @@ export class Progress {
 		const renderLevel = MCFunction('menu/progress/render', () => {
 			raw(`$scoreboard players set #pg_level ${levelObjective} $(level)`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman run data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
-			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).rewardLore run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(level).rewardLore`);
+			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).rewardLoreSnbt run data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(level).rewardLoreSnbt`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level < #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/locked with storage ${argsStorage} args`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level > #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/reached with storage ${argsStorage} args`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level = #pg_level ${levelObjective} unless score #pg_level ${levelObjective} matches 100 run function ${Gui.ns}:menu/progress/render/current with storage ${argsStorage} args`);
@@ -34,7 +34,7 @@ export class Progress {
 		const component = (text: string) =>
 			`{text:${JSON.stringify(text)},italic:false,color:"white"}`;
 		const renderItem = (item: string, titleColor: string, lore: string[]) =>
-			`$item replace entity @s container.$(slot) with ${item}[custom_name=${component(`${titleColor}$(skillName) $(roman)`)},lore=[${lore.map(component).join(',')},$(rewardLore)],max_stack_size=99,custom_data={${Gui.ns}:1b}] $(count)`;
+			`$item replace entity @s container.$(slot) with ${item}[custom_name=${component(`${titleColor}$(skillName) $(roman)`)},lore=[${lore.map(component).join(',')},$(rewardLoreSnbt)],max_stack_size=99,custom_data={${Gui.ns}:1b}] $(count)`;
 
 		MCFunction('menu/progress/render/locked', () => {
 			raw(renderItem('red_stained_glass_pane', '§c', [

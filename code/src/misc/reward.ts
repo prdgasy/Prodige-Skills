@@ -38,10 +38,14 @@ export class Reward {
 				skillData.set({});
 
 				for (const [level, rewards] of skill.rewards) {
+					const rewardLore = Reward.loreComponents(rewards);
+					const mainRewardLore = Reward.loreComponents(rewards, '§e');
 					skillData.select(String(level)).set({
 						roman: Roman.get(level),
-						rewardLore: Reward.loreComponents(rewards),
-						mainRewardLore: Reward.loreComponents(rewards, '§e'),
+						rewardLore,
+						rewardLoreSnbt: Reward.loreComponentsSnbt(rewardLore),
+						mainRewardLore,
+						mainRewardLoreSnbt: Reward.loreComponentsSnbt(mainRewardLore),
 						rewardNotice: Reward.noticeComponents(rewards),
 					});
 				}
@@ -49,10 +53,19 @@ export class Reward {
 		}
 	}
 
-	public static loreComponents(rewards: Reward[], nameColor = ''): string {
+	public static loreComponents(rewards: Reward[], nameColor = ''): { text: string; italic: boolean; color: string }[] {
 		const bullet = ' §8• ';
 		return Reward.join(rewards)
-			.map(text => `{text:${JSON.stringify(`${bullet}${nameColor}${text.slice(bullet.length)}`)},italic:false,color:"white"}`)
+			.map(text => ({
+				text: `${bullet}${nameColor}${text.slice(bullet.length)}`,
+				italic: false,
+				color: 'white',
+			}));
+	}
+
+	private static loreComponentsSnbt(components: { text: string; italic: boolean; color: string }[]): string {
+		return components
+			.map(({ text, italic, color }) => `{text:${JSON.stringify(text)},italic:${italic},color:${JSON.stringify(color)}}`)
 			.join(',');
 	}
 

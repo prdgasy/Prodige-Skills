@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.reward.pending.7500_pts 1
-scoreboard players add @p prodige_skills.reward.pending.legendary_crate_key 1
+scoreboard players add @p prodige_skills.reward.pending.6000_pts 1
+scoreboard players add @p prodige_skills.reward.pending.x4_pts_booster 1
 scoreboard players add @p prodige_skills.reward.pending.1000-2000_random_skill_xp 1
 scoreboard players add @p prodige_skills.foraging.achievement 1
 scoreboard players reset @p prodige_skills.foraging.achievement.swamp_forester_i
