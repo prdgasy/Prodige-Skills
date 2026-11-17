@@ -1,6 +1,6 @@
 scoreboard players set anon_cnoL-r-9_32 __sandstone 0
-scoreboard players set anon_cnoL-r-9_7091 __sandstone 0
-scoreboard players set anon_cnoL-r-9_7092 __sandstone 0
+scoreboard players set anon_cnoL-r-9_7096 __sandstone 0
+scoreboard players set anon_cnoL-r-9_7097 __sandstone 0
 execute if score @p prodige_skills.reward.pending.stone_seeker matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if
 execute if score @p prodige_skills.reward.pending.deep_delver matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if2
 execute if score @p prodige_skills.reward.pending.cavern_pathfinder matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if3
@@ -190,18 +190,18 @@ execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_viii__17.520 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if187
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_ix__2022.5 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if188
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_x__22.525 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if189
-scoreboard players set anon_cnoL-r-9_7471 __sandstone 0
-execute if score anon_cnoL-r-9_7092 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if190
-data modify storage __sandstone:variable anon_cnoL-r-9_3135 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3136 set value '§ePrevious'
+scoreboard players set anon_cnoL-r-9_7476 __sandstone 0
+execute if score anon_cnoL-r-9_7097 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if190
+data modify storage __sandstone:variable anon_cnoL-r-9_3145 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3146 set value '§ePrevious'
 execute if score @s prodige_skills.menu.rewards.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if191
 # prodige_skills::rewardvault::click -> $(macro_arg_5197)(25)
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if192/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3137 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3138 set value '§eNext'
-execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7471 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if193
+data modify storage __sandstone:variable anon_cnoL-r-9_3147 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3148 set value '§eNext'
+execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7476 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if193
 # prodige_skills::rewardvault::click -> $(macro_arg_5199)(26)
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if194/if
-execute if score anon_cnoL-r-9_7091 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if195
+execute if score anon_cnoL-r-9_7096 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if195
 # prodige_skills::rewardvault::click -> §cBack(18)
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if196/if

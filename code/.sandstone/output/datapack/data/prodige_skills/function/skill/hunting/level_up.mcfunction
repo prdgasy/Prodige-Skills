@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_9155 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_9155 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.hunting.xp -= anon_cnoL-r-9_9155 __sandstone
+scoreboard players operation anon_cnoL-r-9_9160 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_9160 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.hunting.xp -= anon_cnoL-r-9_9160 __sandstone
 scoreboard players operation @p prodige_skills.hunting.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.hunting.goal /= 10 __sandstone
 execute if score @p prodige_skills.hunting.goal matches 5001.. run scoreboard players set @p prodige_skills.hunting.goal 5000
@@ -114,6 +114,6 @@ execute if score @p prodige_skills.hunting.level matches 70 unless entity @p[tag
 execute if score @p prodige_skills.hunting.level matches 90 unless entity @p[tag=prodige_skills.title.owned.legend_of_the_hunt] run tag @p add prodige_skills.title.owned.legend_of_the_hunt
 execute if score @p prodige_skills.hunting.level matches 20 unless entity @p[tag=prodige_skills.title.owned.monster_stalker] run tag @p add prodige_skills.title.owned.monster_stalker
 function prodige_skills:skill/hunting/level_up/notification
-scoreboard players operation anon_cnoL-r-9_9157 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_9157 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.hunting.level matches ..99 if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_9157 __sandstone run function prodige_skills:skill/hunting/level_up
+scoreboard players operation anon_cnoL-r-9_9162 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_9162 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.hunting.level matches ..99 if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_9162 __sandstone run function prodige_skills:skill/hunting/level_up

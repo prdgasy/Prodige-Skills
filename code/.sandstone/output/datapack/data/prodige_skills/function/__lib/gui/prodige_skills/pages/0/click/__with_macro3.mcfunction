@@ -1,1 +1,1 @@
-$data modify storage __sandstone:variable anon_cnoL-r-9_27 set value §ex$(env_0) Pts Booster §8• §c$(env_1)m
+$data modify storage __sandstone:variable anon_cnoL-r-9_37 set value §ex$(env_0) Pts Booster §8• §c$(env_1)m

@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_9152 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_9152 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_9152 __sandstone
+scoreboard players operation anon_cnoL-r-9_9157 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_9157 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_9157 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal /= 10 __sandstone
 execute if score @p prodige_skills.farming.goal matches 5001.. run scoreboard players set @p prodige_skills.farming.goal 5000
@@ -114,6 +114,6 @@ execute if score @p prodige_skills.farming.level matches 70 unless entity @p[tag
 execute if score @p prodige_skills.farming.level matches 90 unless entity @p[tag=prodige_skills.title.owned.eternal_harvest] run tag @p add prodige_skills.title.owned.eternal_harvest
 execute if score @p prodige_skills.farming.level matches 20 unless entity @p[tag=prodige_skills.title.owned.grain_baron] run tag @p add prodige_skills.title.owned.grain_baron
 function prodige_skills:skill/farming/level_up/notification
-scoreboard players operation anon_cnoL-r-9_9154 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_9154 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_9154 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players operation anon_cnoL-r-9_9159 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_9159 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_9159 __sandstone run function prodige_skills:skill/farming/level_up

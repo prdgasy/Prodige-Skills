@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_1576 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1577 set value '§7Next'
+data modify storage __sandstone:variable anon_cnoL-r-9_1586 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1587 set value '§7Next'

@@ -1,25 +1,25 @@
 scoreboard players set anon_cnoL-r-9_2 __sandstone 1
-scoreboard players set anon_cnoL-r-9_8538 __sandstone 500
-scoreboard players operation var_1402 prodige_skills.prodigelib.float = anon_cnoL-r-9_8538 __sandstone
-scoreboard players operation anon_cnoL-r-9_8539 __sandstone = var_1402 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8540 __sandstone = @p prodige_skills.misc.booster.Xp.mult
-scoreboard players operation anon_cnoL-r-9_8540 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8539 __sandstone *= anon_cnoL-r-9_8540 __sandstone
-scoreboard players operation anon_cnoL-r-9_8539 __sandstone /= 10 __sandstone
-scoreboard players operation var_1403 prodige_skills.prodigelib.float = anon_cnoL-r-9_8539 __sandstone
-scoreboard players operation anon_cnoL-r-9_8541 __sandstone = var_1403 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8542 __sandstone = @p prodige_skills.Hunting.event.HuntWither
-scoreboard players operation anon_cnoL-r-9_8542 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8541 __sandstone *= anon_cnoL-r-9_8542 __sandstone
-scoreboard players operation anon_cnoL-r-9_8541 __sandstone /= 10 __sandstone
-scoreboard players operation var_1404 prodige_skills.prodigelib.float = anon_cnoL-r-9_8541 __sandstone
+scoreboard players set anon_cnoL-r-9_8543 __sandstone 500
+scoreboard players operation var_1402 prodige_skills.prodigelib.float = anon_cnoL-r-9_8543 __sandstone
+scoreboard players operation anon_cnoL-r-9_8544 __sandstone = var_1402 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8545 __sandstone = @p prodige_skills.misc.booster.Xp.mult
+scoreboard players operation anon_cnoL-r-9_8545 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8544 __sandstone *= anon_cnoL-r-9_8545 __sandstone
+scoreboard players operation anon_cnoL-r-9_8544 __sandstone /= 10 __sandstone
+scoreboard players operation var_1403 prodige_skills.prodigelib.float = anon_cnoL-r-9_8544 __sandstone
+scoreboard players operation anon_cnoL-r-9_8546 __sandstone = var_1403 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8547 __sandstone = @p prodige_skills.Hunting.event.HuntWither
+scoreboard players operation anon_cnoL-r-9_8547 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8546 __sandstone *= anon_cnoL-r-9_8547 __sandstone
+scoreboard players operation anon_cnoL-r-9_8546 __sandstone /= 10 __sandstone
+scoreboard players operation var_1404 prodige_skills.prodigelib.float = anon_cnoL-r-9_8546 __sandstone
 scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1404 prodige_skills.prodigelib.float
-scoreboard players set anon_cnoL-r-9_8543 __sandstone 60
-scoreboard players operation anon_cnoL-r-9_8544 __sandstone = @p prodige_skills.misc.booster.Pts.mult
-scoreboard players operation anon_cnoL-r-9_8544 __sandstone *= @p prodige_skills.Hunting.event.HuntWither
-scoreboard players operation anon_cnoL-r-9_8545 __sandstone = anon_cnoL-r-9_8543 __sandstone
-scoreboard players operation anon_cnoL-r-9_8545 __sandstone *= anon_cnoL-r-9_8544 __sandstone
-scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_8545 __sandstone
+scoreboard players set anon_cnoL-r-9_8548 __sandstone 60
+scoreboard players operation anon_cnoL-r-9_8549 __sandstone = @p prodige_skills.misc.booster.Pts.mult
+scoreboard players operation anon_cnoL-r-9_8549 __sandstone *= @p prodige_skills.Hunting.event.HuntWither
+scoreboard players operation anon_cnoL-r-9_8550 __sandstone = anon_cnoL-r-9_8548 __sandstone
+scoreboard players operation anon_cnoL-r-9_8550 __sandstone *= anon_cnoL-r-9_8549 __sandstone
+scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_8550 __sandstone
 scoreboard players operation @p prodige_skills.Hunting.total_event.HuntWither.pts += anon_cnoL-r-9_1 __sandstone
 scoreboard players operation @p prodige_skills.Hunting.total_event.HuntWither.xp += var_0 prodige_skills.prodigelib.float
 scoreboard players operation @p prodige_skills.Hunting.total_event.HuntWither += @p prodige_skills.Hunting.event.HuntWither

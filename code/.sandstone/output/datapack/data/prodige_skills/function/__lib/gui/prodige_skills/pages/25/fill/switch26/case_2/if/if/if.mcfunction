@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2249 set value 'enchanted_golden_apple'
-data modify storage __sandstone:variable anon_cnoL-r-9_2247 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2248 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2259 set value 'enchanted_golden_apple'
+data modify storage __sandstone:variable anon_cnoL-r-9_2257 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2258 set value ' §8• §a§lEQUIP'

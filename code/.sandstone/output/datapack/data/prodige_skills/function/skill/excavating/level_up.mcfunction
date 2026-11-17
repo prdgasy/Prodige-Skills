@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_9158 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_9158 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.excavating.xp -= anon_cnoL-r-9_9158 __sandstone
+scoreboard players operation anon_cnoL-r-9_9163 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_9163 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.excavating.xp -= anon_cnoL-r-9_9163 __sandstone
 scoreboard players operation @p prodige_skills.excavating.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.excavating.goal /= 10 __sandstone
 execute if score @p prodige_skills.excavating.goal matches 5001.. run scoreboard players set @p prodige_skills.excavating.goal 5000
@@ -114,6 +114,6 @@ execute if score @p prodige_skills.excavating.level matches 70 unless entity @p[
 execute if score @p prodige_skills.excavating.level matches 90 unless entity @p[tag=prodige_skills.title.owned.earthshaper] run tag @p add prodige_skills.title.owned.earthshaper
 execute if score @p prodige_skills.excavating.level matches 20 unless entity @p[tag=prodige_skills.title.owned.desert_cartographer] run tag @p add prodige_skills.title.owned.desert_cartographer
 function prodige_skills:skill/excavating/level_up/notification
-scoreboard players operation anon_cnoL-r-9_9160 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_9160 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_9160 __sandstone run function prodige_skills:skill/excavating/level_up
+scoreboard players operation anon_cnoL-r-9_9165 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_9165 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_9165 __sandstone run function prodige_skills:skill/excavating/level_up

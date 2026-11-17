@@ -1,7 +1,7 @@
 scoreboard players set anon_cnoL-r-9_29 __sandstone 0
 function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch
-scoreboard players set anon_cnoL-r-9_6312 __sandstone 0
-scoreboard players set anon_cnoL-r-9_6313 __sandstone 0
+scoreboard players set anon_cnoL-r-9_6317 __sandstone 0
+scoreboard players set anon_cnoL-r-9_6318 __sandstone 0
 function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch2
 function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch3
 function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch4

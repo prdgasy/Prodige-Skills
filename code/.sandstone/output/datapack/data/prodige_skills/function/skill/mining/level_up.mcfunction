@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_9146 __sandstone = @p prodige_skills.mining.goal
-scoreboard players operation anon_cnoL-r-9_9146 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.mining.xp -= anon_cnoL-r-9_9146 __sandstone
+scoreboard players operation anon_cnoL-r-9_9151 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_9151 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.mining.xp -= anon_cnoL-r-9_9151 __sandstone
 scoreboard players operation @p prodige_skills.mining.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.mining.goal /= 10 __sandstone
 execute if score @p prodige_skills.mining.goal matches 5001.. run scoreboard players set @p prodige_skills.mining.goal 5000
@@ -114,6 +114,6 @@ execute if score @p prodige_skills.mining.level matches 70 unless entity @p[tag=
 execute if score @p prodige_skills.mining.level matches 90 unless entity @p[tag=prodige_skills.title.owned.vein_sovereign] run tag @p add prodige_skills.title.owned.vein_sovereign
 execute if score @p prodige_skills.mining.level matches 20 unless entity @p[tag=prodige_skills.title.owned.cave_cartographer] run tag @p add prodige_skills.title.owned.cave_cartographer
 function prodige_skills:skill/mining/level_up/notification
-scoreboard players operation anon_cnoL-r-9_9148 __sandstone = @p prodige_skills.mining.goal
-scoreboard players operation anon_cnoL-r-9_9148 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_9148 __sandstone run function prodige_skills:skill/mining/level_up
+scoreboard players operation anon_cnoL-r-9_9153 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_9153 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_9153 __sandstone run function prodige_skills:skill/mining/level_up

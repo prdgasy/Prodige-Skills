@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2017 set value 'diamond_pickaxe'
-data modify storage __sandstone:variable anon_cnoL-r-9_2015 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2016 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2027 set value 'diamond_pickaxe'
+data modify storage __sandstone:variable anon_cnoL-r-9_2025 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2026 set value ' §8• §a§lEQUIP'

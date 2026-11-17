@@ -15,6 +15,7 @@ import { Booster, BOOSTER_TYPE } from "@src/misc/booster";
 import { Boosters } from "@src/menu/shop/booster";
 import { RewardVault } from "@src/menu/rewards";
 import { Mask } from "../mask";
+import { Roman } from "@lib/roman";
 
 export class Main {
 	static getName() {
@@ -179,13 +180,7 @@ export class Main {
 				g.switch(Progress.getName(skill));
 			};
 
-			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
-				raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
-				raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
-				raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
-				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
-				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
-
+			const renderItems = MCFunction(`menu/main/skill/${skill.resourceId}/render`, () => {
 				const description = Text.wrap(skill.description).map(component);
 				const baseLore = [
 					component(`§9${skill.name} $(level)`),
@@ -214,8 +209,18 @@ export class Main {
 					component('§eClick to view!'),
 				].join(',');
 
+
 				raw(`$execute if score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
 				raw(`$execute unless score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+			}, { onConflict: 'ignore' });
+
+			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
+				raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
+				raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
+				raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
+				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
+				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
+				functionCmd(renderItems, 'with', Data('storage', argsStorage, 'args'));
 			}, { onConflict: 'ignore' });
 
 			p.add({
@@ -224,14 +229,17 @@ export class Main {
 					args.set({});
 					args.select('skill').set(skill.resourceId);
 					args.select('skillName').set(skill.name);
-					args.select('level').set(skill.level);
+          args.select('level').set(skill.level);
+          args.select('roman').set(Roman.get(skill.level));
 					args.select('nextLevel').set(skill.level['+'](1));
+          args.select('nextRoman').set(Roman.get(skill.level['+'](1)));
 
 					const progress = skill.xp["*"](100)["/"](skill.goal);
 					args.select('progress').set(progress.show());
 					args.select('bar').set(new Bar(progress.toScore()).toData());
 					args.select('xp').set(skill.xp.show());
 					args.select('goal').set(skill.goal);
+
 					functionCmd(render, 'with', args);
 				},
 				click: () => {

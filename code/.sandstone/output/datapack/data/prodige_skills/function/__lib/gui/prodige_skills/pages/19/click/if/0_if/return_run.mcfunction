@@ -1,15 +1,15 @@
-scoreboard players operation anon_cnoL-r-9_5859 __sandstone = @p prodige_skills.Hunting.ability.tier
-scoreboard players add anon_cnoL-r-9_5859 __sandstone 1
-scoreboard players operation anon_cnoL-r-9_5860 __sandstone = anon_cnoL-r-9_5859 __sandstone
-scoreboard players operation anon_cnoL-r-9_5860 __sandstone *= 10 __sandstone
-execute store result storage __sandstone:variable anon_cnoL-r-9_1826.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5860 __sandstone
-function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1826
-data modify storage prodige_skills:prodigelib RomanNumbers.out_126 set from storage prodige_skills:prodigelib RomanNumbers.temp
-data modify storage __sandstone:variable anon_cnoL-r-9_1827 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_1828 set value '§8[§c✘§8]'
-data modify storage __sandstone:variable anon_cnoL-r-9_1829 set value '§8[§c✘§8]'
-execute if score @p prodige_skills.player.pts matches 600.. run data modify storage __sandstone:variable anon_cnoL-r-9_1828 set value '§8[§a✔§8]'
-execute if score @p prodige_skills.hunting.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1829 set value '§8[§a✔§8]'
-execute if score @p prodige_skills.player.pts matches 600.. if score @p prodige_skills.hunting.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1827 set value '§8• §a§lUNLOCK!'
+scoreboard players operation anon_cnoL-r-9_5864 __sandstone = @p prodige_skills.Hunting.ability.tier
+scoreboard players add anon_cnoL-r-9_5864 __sandstone 1
+scoreboard players operation anon_cnoL-r-9_5865 __sandstone = anon_cnoL-r-9_5864 __sandstone
+scoreboard players operation anon_cnoL-r-9_5865 __sandstone *= 10 __sandstone
+execute store result storage __sandstone:variable anon_cnoL-r-9_1836.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5865 __sandstone
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1836
+data modify storage prodige_skills:prodigelib RomanNumbers.out_136 set from storage prodige_skills:prodigelib RomanNumbers.temp
+data modify storage __sandstone:variable anon_cnoL-r-9_1837 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_1838 set value '§8[§c✘§8]'
+data modify storage __sandstone:variable anon_cnoL-r-9_1839 set value '§8[§c✘§8]'
+execute if score @p prodige_skills.player.pts matches 600.. run data modify storage __sandstone:variable anon_cnoL-r-9_1838 set value '§8[§a✔§8]'
+execute if score @p prodige_skills.hunting.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1839 set value '§8[§a✔§8]'
+execute if score @p prodige_skills.player.pts matches 600.. if score @p prodige_skills.hunting.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1837 set value '§8• §a§lUNLOCK!'
 # prodige_skills::abilitieshunting::click -> §c🔒 Locked $(macro_arg_2443)(13)
 execute if score anon_cnoL-r-9_23 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/19/click/if/0_if/return_run/if4/if

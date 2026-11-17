@@ -1,12 +1,12 @@
-scoreboard players operation anon_cnoL-r-9_6473 __sandstone = anon_cnoL-r-9_6312 __sandstone
-scoreboard players operation anon_cnoL-r-9_6473 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_2835 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2836 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_2837 set value 'charcoal'
+scoreboard players operation anon_cnoL-r-9_6478 __sandstone = anon_cnoL-r-9_6317 __sandstone
+scoreboard players operation anon_cnoL-r-9_6478 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_2845 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2846 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2847 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.the_golden_farmer] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch28/case_1/if/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.the_golden_farmer] run data modify storage __sandstone:variable anon_cnoL-r-9_2836 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_2838 set value '§eClick to buy!'
-execute if entity @p[tag=prodige_skills.title.owned.the_golden_farmer] run data modify storage __sandstone:variable anon_cnoL-r-9_2838 set value '§bClick to equip or unequip this title!'
+execute if entity @p[tag=prodige_skills.title.equipped.the_golden_farmer] run data modify storage __sandstone:variable anon_cnoL-r-9_2846 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2848 set value '§eClick to buy!'
+execute if entity @p[tag=prodige_skills.title.owned.the_golden_farmer] run data modify storage __sandstone:variable anon_cnoL-r-9_2848 set value '§bClick to equip or unequip this title!'
 # prodige_skills::titles::click -> §6The Golden Farmer$(macro_arg_3638)($(macro_arg_3637))
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch28/case_1/if/if/if4
-scoreboard players add anon_cnoL-r-9_6313 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6318 __sandstone 1

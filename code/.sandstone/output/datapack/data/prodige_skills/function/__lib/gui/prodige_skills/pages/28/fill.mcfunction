@@ -16,8 +16,8 @@ item replace entity @s container.24 with magenta_stained_glass_pane[lore=[],cust
 item replace entity @s container.25 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::rewardvault::fill -> (26)
 item replace entity @s container.26 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
-scoreboard players set anon_cnoL-r-9_6708 __sandstone 0
-scoreboard players set anon_cnoL-r-9_6709 __sandstone 0
+scoreboard players set anon_cnoL-r-9_6713 __sandstone 0
+scoreboard players set anon_cnoL-r-9_6714 __sandstone 0
 execute if score @p prodige_skills.reward.pending.stone_seeker matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if
 execute if score @p prodige_skills.reward.pending.deep_delver matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if2
 execute if score @p prodige_skills.reward.pending.cavern_pathfinder matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if3
@@ -207,22 +207,22 @@ execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_viii__17.520 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if187
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_ix__2022.5 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if188
 execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_x__22.525 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if189
-scoreboard players set anon_cnoL-r-9_7088 __sandstone 0
-execute if score anon_cnoL-r-9_6709 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if190
-data modify storage __sandstone:variable anon_cnoL-r-9_3131 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3132 set value '§ePrevious'
+scoreboard players set anon_cnoL-r-9_7093 __sandstone 0
+execute if score anon_cnoL-r-9_6714 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if190
+data modify storage __sandstone:variable anon_cnoL-r-9_3141 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3142 set value '§ePrevious'
 execute if score @s prodige_skills.menu.rewards.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if191
 # prodige_skills::rewardvault::fill -> $(macro_arg_4626)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4625 set from storage __sandstone:variable anon_cnoL-r-9_3131
-data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4626 set from storage __sandstone:variable anon_cnoL-r-9_3132
+data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4625 set from storage __sandstone:variable anon_cnoL-r-9_3141
+data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4626 set from storage __sandstone:variable anon_cnoL-r-9_3142
 function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/with_macro190 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault
-data modify storage __sandstone:variable anon_cnoL-r-9_3133 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3134 set value '§eNext'
-execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7088 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if192
+data modify storage __sandstone:variable anon_cnoL-r-9_3143 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3144 set value '§eNext'
+execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7093 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if192
 # prodige_skills::rewardvault::fill -> $(macro_arg_4628)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4627 set from storage __sandstone:variable anon_cnoL-r-9_3133
-data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4628 set from storage __sandstone:variable anon_cnoL-r-9_3134
+data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4627 set from storage __sandstone:variable anon_cnoL-r-9_3143
+data modify storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_4628 set from storage __sandstone:variable anon_cnoL-r-9_3144
 function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/with_macro191 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault
-execute if score anon_cnoL-r-9_6708 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if193
+execute if score anon_cnoL-r-9_6713 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if193
 # prodige_skills::rewardvault::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

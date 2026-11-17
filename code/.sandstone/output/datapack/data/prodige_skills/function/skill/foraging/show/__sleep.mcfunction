@@ -1,3 +1,3 @@
 tag @s remove __sandstone.asyncTimer.prodige_skills.skill.foraging.show.__sleep
-execute store result storage __sandstone:variable anon_cnoL-r-9_3162.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9176 __sandstone
-function prodige_skills:skill/foraging/show/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3162
+execute store result storage __sandstone:variable anon_cnoL-r-9_3172.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9181 __sandstone
+function prodige_skills:skill/foraging/show/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3172

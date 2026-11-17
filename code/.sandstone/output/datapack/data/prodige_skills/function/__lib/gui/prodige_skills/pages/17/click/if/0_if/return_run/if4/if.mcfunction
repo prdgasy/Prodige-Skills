@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_5657 __sandstone = @p prodige_skills.Foraging.ability.tier
-scoreboard players add anon_cnoL-r-9_5657 __sandstone 1
-scoreboard players operation anon_cnoL-r-9_5658 __sandstone = anon_cnoL-r-9_5657 __sandstone
-scoreboard players operation anon_cnoL-r-9_5658 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_5662 __sandstone = @p prodige_skills.Foraging.ability.tier
+scoreboard players add anon_cnoL-r-9_5662 __sandstone 1
+scoreboard players operation anon_cnoL-r-9_5663 __sandstone = anon_cnoL-r-9_5662 __sandstone
+scoreboard players operation anon_cnoL-r-9_5663 __sandstone *= 10 __sandstone
 function prodige_skills:__lib/gui/prodige_skills/pages/17/click/if/0_if/return_run/if4/if/if
 scoreboard players set anon_cnoL-r-9_21 __sandstone 1

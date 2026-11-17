@@ -1,4 +1,4 @@
-scoreboard players operation anon_cnoL-r-9_6378 __sandstone = anon_cnoL-r-9_6312 __sandstone
-scoreboard players operation anon_cnoL-r-9_6378 __sandstone /= 18 __sandstone
-execute if score @s prodige_skills.menu.shop.titles.index = anon_cnoL-r-9_6378 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch12/case_2/if/if
-scoreboard players add anon_cnoL-r-9_6312 __sandstone 1
+scoreboard players operation anon_cnoL-r-9_6383 __sandstone = anon_cnoL-r-9_6317 __sandstone
+scoreboard players operation anon_cnoL-r-9_6383 __sandstone /= 18 __sandstone
+execute if score @s prodige_skills.menu.shop.titles.index = anon_cnoL-r-9_6383 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch12/case_2/if/if
+scoreboard players add anon_cnoL-r-9_6317 __sandstone 1

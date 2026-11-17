@@ -1,25 +1,25 @@
 scoreboard players set anon_cnoL-r-9_2 __sandstone 1
-scoreboard players set anon_cnoL-r-9_8714 __sandstone 40
-scoreboard players operation var_1468 prodige_skills.prodigelib.float = anon_cnoL-r-9_8714 __sandstone
-scoreboard players operation anon_cnoL-r-9_8715 __sandstone = var_1468 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8716 __sandstone = @p prodige_skills.misc.booster.Xp.mult
-scoreboard players operation anon_cnoL-r-9_8716 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8715 __sandstone *= anon_cnoL-r-9_8716 __sandstone
-scoreboard players operation anon_cnoL-r-9_8715 __sandstone /= 10 __sandstone
-scoreboard players operation var_1469 prodige_skills.prodigelib.float = anon_cnoL-r-9_8715 __sandstone
-scoreboard players operation anon_cnoL-r-9_8717 __sandstone = var_1469 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8718 __sandstone = @p prodige_skills.Excavating.event.ExcavateSoulSoil
-scoreboard players operation anon_cnoL-r-9_8718 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8717 __sandstone *= anon_cnoL-r-9_8718 __sandstone
-scoreboard players operation anon_cnoL-r-9_8717 __sandstone /= 10 __sandstone
-scoreboard players operation var_1470 prodige_skills.prodigelib.float = anon_cnoL-r-9_8717 __sandstone
+scoreboard players set anon_cnoL-r-9_8719 __sandstone 40
+scoreboard players operation var_1468 prodige_skills.prodigelib.float = anon_cnoL-r-9_8719 __sandstone
+scoreboard players operation anon_cnoL-r-9_8720 __sandstone = var_1468 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8721 __sandstone = @p prodige_skills.misc.booster.Xp.mult
+scoreboard players operation anon_cnoL-r-9_8721 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8720 __sandstone *= anon_cnoL-r-9_8721 __sandstone
+scoreboard players operation anon_cnoL-r-9_8720 __sandstone /= 10 __sandstone
+scoreboard players operation var_1469 prodige_skills.prodigelib.float = anon_cnoL-r-9_8720 __sandstone
+scoreboard players operation anon_cnoL-r-9_8722 __sandstone = var_1469 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8723 __sandstone = @p prodige_skills.Excavating.event.ExcavateSoulSoil
+scoreboard players operation anon_cnoL-r-9_8723 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8722 __sandstone *= anon_cnoL-r-9_8723 __sandstone
+scoreboard players operation anon_cnoL-r-9_8722 __sandstone /= 10 __sandstone
+scoreboard players operation var_1470 prodige_skills.prodigelib.float = anon_cnoL-r-9_8722 __sandstone
 scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1470 prodige_skills.prodigelib.float
-scoreboard players set anon_cnoL-r-9_8719 __sandstone 4
-scoreboard players operation anon_cnoL-r-9_8720 __sandstone = @p prodige_skills.misc.booster.Pts.mult
-scoreboard players operation anon_cnoL-r-9_8720 __sandstone *= @p prodige_skills.Excavating.event.ExcavateSoulSoil
-scoreboard players operation anon_cnoL-r-9_8721 __sandstone = anon_cnoL-r-9_8719 __sandstone
-scoreboard players operation anon_cnoL-r-9_8721 __sandstone *= anon_cnoL-r-9_8720 __sandstone
-scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_8721 __sandstone
+scoreboard players set anon_cnoL-r-9_8724 __sandstone 4
+scoreboard players operation anon_cnoL-r-9_8725 __sandstone = @p prodige_skills.misc.booster.Pts.mult
+scoreboard players operation anon_cnoL-r-9_8725 __sandstone *= @p prodige_skills.Excavating.event.ExcavateSoulSoil
+scoreboard players operation anon_cnoL-r-9_8726 __sandstone = anon_cnoL-r-9_8724 __sandstone
+scoreboard players operation anon_cnoL-r-9_8726 __sandstone *= anon_cnoL-r-9_8725 __sandstone
+scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_8726 __sandstone
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateSoulSoil.pts += anon_cnoL-r-9_1 __sandstone
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateSoulSoil.xp += var_0 prodige_skills.prodigelib.float
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateSoulSoil += @p prodige_skills.Excavating.event.ExcavateSoulSoil

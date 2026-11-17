@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5127 int 1 run scoreboard players get anon_cnoL-r-9_7426 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5127 int 1 run scoreboard players get anon_cnoL-r-9_7431 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5128 int 1 run scoreboard players get @p prodige_skills.reward.pending.upgrade_available_bountiful_harvest_viii__17.520
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5129 int 1 run scoreboard players get @p prodige_skills.reward.pending.upgrade_available_bountiful_harvest_viii__17.520
 return run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro167 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault

@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_2344 __sandstone matches ..-1 run return run function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/if/if19/0_if/return_run
+execute if score anon_cnoL-r-9_2349 __sandstone matches ..-1 run return run function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/if/if19/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''
