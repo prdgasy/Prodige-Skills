@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.earthshaper] run return run function prodige_skills:title/interact/earthshaper/0_if/return_run
+function prodige_skills:title/interact/earthshaper/if

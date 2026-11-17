@@ -1,0 +1,1 @@
+give @p iron_shovel[minecraft:custom_name='§aDune Walker Spade',minecraft:lore=['§a§lCOMMON','§7A balanced spade for deserts, beaches, and riverbeds.','§8Durability: 600'],minecraft:max_damage=600d,minecraft:custom_data={prodige_skills:{gear:'dune_walker_spade'}},enchantment_glint_override=false]

@@ -1,0 +1,1 @@
+execute if entity @p[tag=prodige_skills.title.owned.eternal_harvest] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch26/case_1/if

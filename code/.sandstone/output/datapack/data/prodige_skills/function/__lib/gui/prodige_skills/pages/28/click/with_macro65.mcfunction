@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§6Bedrock Borer §8× §e$(macro_arg_4822)($(macro_arg_4821))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4821)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro65/execute_unless

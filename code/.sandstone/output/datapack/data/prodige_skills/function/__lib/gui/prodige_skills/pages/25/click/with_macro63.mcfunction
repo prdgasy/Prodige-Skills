@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §aField Hand$(macro_arg_3553)($(macro_arg_3552))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3552)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro63/execute_unless

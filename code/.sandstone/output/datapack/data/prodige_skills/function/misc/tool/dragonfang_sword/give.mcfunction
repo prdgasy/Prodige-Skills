@@ -1,0 +1,1 @@
+give @p diamond_sword[minecraft:custom_name='§dDragonfang Sword',minecraft:lore=['§d§lEPIC','§7A finely balanced sword for high-risk hunts.','§8Durability: 2000'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'dragonfang_sword'}},enchantment_glint_override=true]

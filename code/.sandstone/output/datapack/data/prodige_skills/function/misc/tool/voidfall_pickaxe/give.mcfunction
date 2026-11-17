@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§6Voidfall Pickaxe',minecraft:lore=['§6§lLEGENDARY','§7An exceptional pickaxe reserved for master miners.','§8Durability: 5000','§8• The pinnacle of custom mining gear.'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'voidfall_pickaxe'}},enchantment_glint_override=true]

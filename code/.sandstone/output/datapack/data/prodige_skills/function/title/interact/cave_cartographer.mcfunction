@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.cave_cartographer] run return run function prodige_skills:title/interact/cave_cartographer/0_if/return_run
+function prodige_skills:title/interact/cave_cartographer/if

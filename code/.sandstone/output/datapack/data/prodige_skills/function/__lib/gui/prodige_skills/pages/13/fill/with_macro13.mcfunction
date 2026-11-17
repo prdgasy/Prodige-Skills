@@ -1,0 +1,2 @@
+# prodige_skills::achievementsfarming::fill::macro -> $(macro_arg_2046)(25)
+$item replace entity @s container.25 with $(macro_arg_2045)[custom_name={text: "$(macro_arg_2046)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::achievementsmining::click -> §aStone Cutter III(2)
+execute if score anon_cnoL-r-9_15 __sandstone matches 0 unless data entity @s Items[{Slot:2b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if3/if4/0_if/return_run/if/if

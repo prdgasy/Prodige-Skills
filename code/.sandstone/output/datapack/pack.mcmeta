@@ -1,0 +1,14 @@
+{
+  "pack": {
+    "min_format": 121,
+    "max_format": 121,
+    "description": [
+      "A ",
+      {
+        "text": "Sandstone",
+        "color": "gold"
+      },
+      " datapack."
+    ]
+  }
+}

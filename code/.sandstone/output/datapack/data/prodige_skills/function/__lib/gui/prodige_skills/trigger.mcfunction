@@ -1,0 +1,1 @@
+execute as @a at @s run function prodige_skills:__lib/gui/prodige_skills/trigger/execute_as

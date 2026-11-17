@@ -1,0 +1,2 @@
+$execute if score @p $(skill).level matches 100 run tellraw @p [{"text":" §f§lProgress:\n  §8• §aMaximum level reached!\n  §8• §7You have mastered this skill.\n"}]
+$execute unless score @p $(skill).level matches 100 run tellraw @p [{"text":" §f§lProgress:\n"},{"text":"  §8• §7Next: §d$(skillName) $(nextRoman) §7($(nextLevel))\n"},{"text":"  §8• §7Progress: §e$(progress)%\n"},{"text":"  §8> $(bar) §e$(xp)§6/§e$(goal) Xp\n"}]

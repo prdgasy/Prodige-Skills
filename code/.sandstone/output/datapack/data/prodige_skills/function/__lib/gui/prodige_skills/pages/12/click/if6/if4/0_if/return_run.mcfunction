@@ -1,0 +1,2 @@
+# prodige_skills::achievementsforaging::click -> §aJungle Explorer I(5)
+execute if score anon_cnoL-r-9_16 __sandstone matches 0 unless data entity @s Items[{Slot:5b}] run function prodige_skills:__lib/gui/prodige_skills/pages/12/click/if6/if4/0_if/return_run/if/if

@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.keeper_of_the_wild] run return run function prodige_skills:title/interact/keeper_of_the_wild/0_if/return_run/if
+function prodige_skills:title/interact/keeper_of_the_wild/if

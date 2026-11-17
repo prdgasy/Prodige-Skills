@@ -1,0 +1,2 @@
+scoreboard players remove @p prodige_skills.reward.pending.upgrade_available_forest_stride_iii__57.5 1
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

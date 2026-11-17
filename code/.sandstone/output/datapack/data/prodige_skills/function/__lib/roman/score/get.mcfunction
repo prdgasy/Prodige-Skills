@@ -1,0 +1,1 @@
+$data modify storage prodige_skills:prodigelib RomanNumbers.temp set from storage prodige_skills:prodigelib RomanNumbers.numbers.[$(param_0)].

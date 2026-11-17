@@ -1,0 +1,1 @@
+give @p netherite_sword[minecraft:custom_name='§dDreadhunter Blade',minecraft:lore=['§d§lEPIC',"§7A reinforced blade for the realm's most dangerous foes.",'§8Durability: 2400'],minecraft:max_damage=2400d,minecraft:custom_data={prodige_skills:{gear:'dreadhunter_blade'}},enchantment_glint_override=true]

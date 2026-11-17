@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.cave_cartographer] run tag @p add prodige_skills.title.owned.cave_cartographer

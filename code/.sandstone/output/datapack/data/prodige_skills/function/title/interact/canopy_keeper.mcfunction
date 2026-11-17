@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.canopy_keeper] run return run function prodige_skills:title/interact/canopy_keeper/0_if/return_run
+function prodige_skills:title/interact/canopy_keeper/if

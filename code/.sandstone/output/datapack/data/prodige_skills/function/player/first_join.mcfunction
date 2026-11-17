@@ -1,0 +1,1 @@
+execute as @a at @s unless entity @p[tag=prodige_skills.player.joined] run function prodige_skills:player/first_join/execute_as/if

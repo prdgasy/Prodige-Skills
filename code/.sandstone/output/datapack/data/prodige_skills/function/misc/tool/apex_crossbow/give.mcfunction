@@ -1,0 +1,1 @@
+give @p crossbow[minecraft:custom_name='§dApex Crossbow',minecraft:lore=['§d§lEPIC','§7A powerful crossbow for tracking the toughest creatures.','§8Durability: 1600'],minecraft:max_damage=1600d,minecraft:custom_data={prodige_skills:{gear:'apex_crossbow'}},enchantment_glint_override=true]

@@ -1,0 +1,1 @@
+$tellraw @p [{text: "§e[Prodige Skill] \u00A78\u2022 §e\u00A7cDeep Digger \u00A7eis now $(easymacro_param_1)."}]

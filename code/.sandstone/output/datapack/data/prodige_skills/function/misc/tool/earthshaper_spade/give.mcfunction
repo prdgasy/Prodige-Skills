@@ -1,0 +1,1 @@
+give @p netherite_shovel[minecraft:custom_name='§6Earthshaper Spade',minecraft:lore=['§6§lLEGENDARY','§7The ultimate spade, earned by a master of the land.','§8Durability: 5000'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'earthshaper_spade'}},enchantment_glint_override=true]

@@ -1,0 +1,1 @@
+give @p diamond_shovel[minecraft:custom_name='§9Clay Delver',minecraft:lore=['§9§lRARE','§7A sharp shovel for digging clay and softer terrain.','§8Durability: 900'],minecraft:max_damage=900d,minecraft:custom_data={prodige_skills:{gear:'clay_delver'}},enchantment_glint_override=false]

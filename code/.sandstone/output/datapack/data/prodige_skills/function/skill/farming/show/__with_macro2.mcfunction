@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.farming.$(env_0)

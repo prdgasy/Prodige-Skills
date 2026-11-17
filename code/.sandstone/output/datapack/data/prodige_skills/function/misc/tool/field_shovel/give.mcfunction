@@ -1,0 +1,1 @@
+give @p iron_shovel[minecraft:custom_name='§fField Shovel',minecraft:lore=['§a§lCOMMON','§7A sturdy shovel made for long days in the field.','§8Durability: 250','§8• Ideal for dirt, sand, gravel, and snow.'],minecraft:max_damage=250d,minecraft:custom_data={prodige_skills:{gear:'field_shovel'}},enchantment_glint_override=false]

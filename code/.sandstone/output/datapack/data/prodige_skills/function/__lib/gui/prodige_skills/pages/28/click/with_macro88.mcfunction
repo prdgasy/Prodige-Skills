@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§9Beasttracker Blade §8× §e$(macro_arg_4891)($(macro_arg_4890))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4890)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro88/execute_unless

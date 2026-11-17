@@ -1,0 +1,1 @@
+scoreboard players add @p prodige_skills.reward.pending.diamond_seeker 1

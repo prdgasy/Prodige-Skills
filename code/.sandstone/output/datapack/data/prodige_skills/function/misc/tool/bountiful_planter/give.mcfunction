@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§dBountiful Planter',minecraft:lore=['§d§lEPIC','§7A durable hoe for cultivating fields across the realm.','§8Durability: 2000'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'bountiful_planter'}},enchantment_glint_override=true]

@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§6World Harvester §8× §e$(macro_arg_4879)($(macro_arg_4878))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4878)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro84/execute_unless

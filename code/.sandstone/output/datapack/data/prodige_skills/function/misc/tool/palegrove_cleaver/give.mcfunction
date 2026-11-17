@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§dPalegrove Cleaver',minecraft:lore=['§d§lEPIC','§7A durable cleaver for the rarest and oldest forests.','§8Durability: 2400'],minecraft:max_damage=2400d,minecraft:custom_data={prodige_skills:{gear:'palegrove_cleaver'}},enchantment_glint_override=true]

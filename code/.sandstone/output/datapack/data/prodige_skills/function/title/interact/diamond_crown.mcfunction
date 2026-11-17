@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.diamond_crown] run return run function prodige_skills:title/interact/diamond_crown/0_if/return_run/if
+function prodige_skills:title/interact/diamond_crown/if

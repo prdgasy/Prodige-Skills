@@ -1,0 +1,2 @@
+execute if score @p prodige_skills.reward.pending.gravel_prospector matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro97/execute_unless/if
+scoreboard players set anon_cnoL-r-9_32 __sandstone 1

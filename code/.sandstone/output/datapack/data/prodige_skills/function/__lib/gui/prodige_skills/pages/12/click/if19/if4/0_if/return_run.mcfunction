@@ -1,0 +1,2 @@
+# prodige_skills::achievementsforaging::click -> §aPale Forest Forager(0)
+execute if score anon_cnoL-r-9_16 __sandstone matches 0 unless data entity @s Items[{Slot:0b}] run function prodige_skills:__lib/gui/prodige_skills/pages/12/click/if19/if4/0_if/return_run/if/if

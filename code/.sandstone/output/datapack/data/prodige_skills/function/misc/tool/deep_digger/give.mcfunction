@@ -1,0 +1,1 @@
+give @p netherite_shovel[minecraft:custom_name='§6Deep Digger',minecraft:lore=['§6§lLEGENDARY','§7An elite shovel made for the deepest expeditions.','§8Durability: 4000'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'deep_digger'}},enchantment_glint_override=true]

@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.desert_cartographer] run function prodige_skills:__lib/gui/prodige_skills/pages/25/fill/switch47/case_2/if

@@ -1,0 +1,1 @@
+give @p brush[minecraft:custom_name='§dRuin Prospector',minecraft:lore=['§d§lEPIC','§7A specialist brush for carefully exploring buried ruins.','§8Durability: 2400'],minecraft:max_damage=2400d,minecraft:custom_data={prodige_skills:{gear:'ruin_prospector'}},enchantment_glint_override=true]

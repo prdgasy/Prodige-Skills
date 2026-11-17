@@ -1,0 +1,1 @@
+give @p diamond_axe[minecraft:custom_name='§9Verdant Hatchet',minecraft:lore=['§9§lRARE','§7A precision axe favored by experienced foresters.','§8Durability: 1200','§8• Made for gathering wood across every biome.'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'verdant_hatchet'}},enchantment_glint_override=false]

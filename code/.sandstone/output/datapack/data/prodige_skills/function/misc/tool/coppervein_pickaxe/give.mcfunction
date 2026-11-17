@@ -1,0 +1,1 @@
+give @p golden_pickaxe[minecraft:custom_name='§aCoppervein Pickaxe',minecraft:lore=['§a§lCOMMON','§7A quick pickaxe for gathering common ores.','§8Durability: 600'],minecraft:max_damage=600d,minecraft:custom_data={prodige_skills:{gear:'coppervein_pickaxe'}},enchantment_glint_override=false]

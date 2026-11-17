@@ -1,0 +1,1 @@
+give @p iron_axe[minecraft:custom_name='§aBark Stripper',minecraft:lore=['§a§lCOMMON','§7A balanced axe for tending young forests.','§8Durability: 600'],minecraft:max_damage=600d,minecraft:custom_data={prodige_skills:{gear:'bark_stripper'}},enchantment_glint_override=false]

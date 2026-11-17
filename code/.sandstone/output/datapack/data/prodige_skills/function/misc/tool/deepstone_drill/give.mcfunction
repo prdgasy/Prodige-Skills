@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§dDeepstone Drill',minecraft:lore=['§d§lEPIC','§7A reinforced pickaxe built for the deepest mines.','§8Durability: 3000','§8• Designed for long expeditions underground.'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'deepstone_drill'}},enchantment_glint_override=true]

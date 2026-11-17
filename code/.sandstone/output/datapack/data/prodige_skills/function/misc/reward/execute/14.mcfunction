@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.verdant_sovereign] run tag @p add prodige_skills.title.owned.verdant_sovereign

@@ -1,0 +1,1 @@
+give @p iron_sword[minecraft:custom_name='§9Beasttracker Blade',minecraft:lore=['§9§lRARE','§7A balanced blade for a practiced monster hunter.','§8Durability: 900'],minecraft:max_damage=900d,minecraft:custom_data={prodige_skills:{gear:'beasttracker_blade'}},enchantment_glint_override=false]

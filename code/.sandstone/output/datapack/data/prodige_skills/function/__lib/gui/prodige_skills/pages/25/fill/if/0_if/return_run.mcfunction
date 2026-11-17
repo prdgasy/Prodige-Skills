@@ -1,0 +1,2 @@
+# prodige_skills::titles::fill -> §cNo Titles Here(13)
+item replace entity @s container.13 with barrier[custom_name={text: "§cNo Titles Here", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§7No titles match this filter.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

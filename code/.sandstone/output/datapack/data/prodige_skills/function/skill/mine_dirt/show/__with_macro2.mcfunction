@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.task.mine_dirt.$(env_0)

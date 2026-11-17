@@ -1,0 +1,1 @@
+$tellraw @p [{text: "\u00A7c[Prodige Skill] \u00A78\u2022 \u00A7cYou need to be at least \u00A7dLevel $(easymacro_param_1) \u00A7cin \u00A7dFarming to upgrade \u00A7cBountiful Harvest"}]

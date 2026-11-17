@@ -1,0 +1,11 @@
+scoreboard players operation anon_cnoL-r-9_6457 __sandstone = anon_cnoL-r-9_6312 __sandstone
+scoreboard players operation anon_cnoL-r-9_6457 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_2803 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2804 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2805 set value 'charcoal'
+execute if entity @p[tag=prodige_skills.title.owned.grand_agronomist] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch25/case_2/if/if/if
+execute if entity @p[tag=prodige_skills.title.equipped.grand_agronomist] run data modify storage __sandstone:variable anon_cnoL-r-9_2804 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2806 set value '§8You cannot buy this.'
+# prodige_skills::titles::click -> §2Grand Agronomist$(macro_arg_3598)($(macro_arg_3597))
+execute if score anon_cnoL-r-9_29 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch25/case_2/if/if/if3
+scoreboard players add anon_cnoL-r-9_6313 __sandstone 1

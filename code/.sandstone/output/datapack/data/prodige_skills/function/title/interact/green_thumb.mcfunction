@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.green_thumb] run return run function prodige_skills:title/interact/green_thumb/0_if/return_run/if
+function prodige_skills:title/interact/green_thumb/if

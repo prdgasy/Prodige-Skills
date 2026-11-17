@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§9Redstone Extractor §8× §e$(macro_arg_4807)($(macro_arg_4806))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4806)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro60/execute_unless

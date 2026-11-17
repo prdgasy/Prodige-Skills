@@ -1,0 +1,1 @@
+give @p diamond_sword[minecraft:custom_name='§bExpert Sword',minecraft:lore=['§d§lEPIC','§7A finely balanced blade for dangerous expeditions.','§8Durability: 2000','§8• Reliable damage and long-lasting durability.'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'expert_sword'}},enchantment_glint_override=true]

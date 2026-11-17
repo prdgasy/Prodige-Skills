@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§6Ancient Vein Pick',minecraft:lore=['§6§lLEGENDARY','§7A masterwork pickaxe for uncovering ancient riches.','§8Durability: 3000'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'ancient_vein_pick'}},enchantment_glint_override=true]

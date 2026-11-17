@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.apex_predator] run tag @p add prodige_skills.title.owned.apex_predator

@@ -1,0 +1,1 @@
+give @p netherite_shovel[minecraft:custom_name='§6Strata Shaper',minecraft:lore=['§6§lLEGENDARY',"§7A master excavator's shovel for every kind of terrain.",'§8Durability: 3000'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'strata_shaper'}},enchantment_glint_override=true]

@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§6Elderwood Hatchet',minecraft:lore=['§6§lLEGENDARY',"§7A master forester's axe, crafted for endless journeys.",'§8Durability: 3000'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'elderwood_hatchet'}},enchantment_glint_override=true]

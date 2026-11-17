@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§6Worldshaper Pickaxe',minecraft:lore=['§6§lLEGENDARY','§7The ultimate pickaxe, awarded to a fully accomplished miner.','§8Durability: 5000'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'worldshaper_pickaxe'}},enchantment_glint_override=true]

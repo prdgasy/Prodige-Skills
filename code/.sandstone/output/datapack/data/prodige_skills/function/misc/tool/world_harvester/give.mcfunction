@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§6World Harvester',minecraft:lore=['§6§lLEGENDARY','§7An elite hoe for the greatest grower in the realm.','§8Durability: 4000'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'world_harvester'}},enchantment_glint_override=true]

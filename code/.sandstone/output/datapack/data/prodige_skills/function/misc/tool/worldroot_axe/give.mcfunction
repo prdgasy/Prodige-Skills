@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§6Worldroot Axe',minecraft:lore=['§6§lLEGENDARY','§7An elite axe worthy of the guardian of every woodland.','§8Durability: 4000'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'worldroot_axe'}},enchantment_glint_override=true]

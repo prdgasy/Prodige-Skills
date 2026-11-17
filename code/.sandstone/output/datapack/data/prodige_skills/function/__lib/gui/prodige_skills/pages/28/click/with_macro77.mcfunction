@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§aFirst Harvest Hoe §8× §e$(macro_arg_4858)($(macro_arg_4857))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4857)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro77/execute_unless

@@ -1,0 +1,1 @@
+give @p diamond_pickaxe[minecraft:custom_name='§9Deepslate Prospector',minecraft:lore=['§9§lRARE','§7A reliable pickaxe made for long deepslate expeditions.','§8Durability: 900'],minecraft:max_damage=900d,minecraft:custom_data={prodige_skills:{gear:'deepslate_prospector'}},enchantment_glint_override=false]

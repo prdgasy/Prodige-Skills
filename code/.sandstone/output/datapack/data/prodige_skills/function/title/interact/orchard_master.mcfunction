@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.orchard_master] run return run function prodige_skills:title/interact/orchard_master/0_if/return_run/if
+function prodige_skills:title/interact/orchard_master/if

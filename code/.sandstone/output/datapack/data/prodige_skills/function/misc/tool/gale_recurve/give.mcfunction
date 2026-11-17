@@ -1,0 +1,1 @@
+give @p bow[minecraft:custom_name='§9Gale Recurve',minecraft:lore=['§9§lRARE','§7A lightweight bow for hunters who value accuracy.','§8Durability: 700','§8• A dependable ranged weapon for the hunt.'],minecraft:max_damage=700d,minecraft:custom_data={prodige_skills:{gear:'gale_recurve'}},enchantment_glint_override=false]

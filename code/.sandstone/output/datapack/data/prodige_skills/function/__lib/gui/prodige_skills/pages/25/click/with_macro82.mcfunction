@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §eGrain Baron$(macro_arg_3648)($(macro_arg_3647))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3647)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro82/execute_unless

@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §aGreen Thumb$(macro_arg_3628)($(macro_arg_3627))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3627)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro78/execute_unless

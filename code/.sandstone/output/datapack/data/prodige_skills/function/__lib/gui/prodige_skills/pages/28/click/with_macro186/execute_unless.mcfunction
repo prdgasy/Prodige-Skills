@@ -1,0 +1,2 @@
+execute if score @p prodige_skills.reward.pending.upgrade_available_deep_digger_vii__1517.5 matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro186/execute_unless/if
+scoreboard players set anon_cnoL-r-9_32 __sandstone 1

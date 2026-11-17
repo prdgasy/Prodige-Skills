@@ -1,0 +1,2 @@
+# prodige_skills::titles::fill -> §7All Titles §8• §7Owned Titles §8• §aNot Owned Titles(22)
+item replace entity @s container.22 with barrel[custom_name={text: "§7All Titles §8• §7Owned Titles §8• §aNot Owned Titles", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

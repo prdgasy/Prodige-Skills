@@ -1,0 +1,1 @@
+scoreboard players add @p prodige_skills.player.pts 400

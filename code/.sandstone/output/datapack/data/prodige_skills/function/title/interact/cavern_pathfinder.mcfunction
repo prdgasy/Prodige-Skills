@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.cavern_pathfinder] run return run function prodige_skills:title/interact/cavern_pathfinder/0_if/return_run
+function prodige_skills:title/interact/cavern_pathfinder/if

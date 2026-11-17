@@ -1,0 +1,2 @@
+execute store result score var_1546 prodige_skills.prodigelib.float run random value 0..1000
+execute if entity @p[tag=prodige_skills.Farming.ability.toggle] if score var_1546 prodige_skills.prodigelib.float <= @p prodige_skills.Farming.ability.buff run effect give @s minecraft:saturation 1 0 true

@@ -1,0 +1,1 @@
+execute as @a at @s run function prodige_skills:misc/booster/use/execute_as

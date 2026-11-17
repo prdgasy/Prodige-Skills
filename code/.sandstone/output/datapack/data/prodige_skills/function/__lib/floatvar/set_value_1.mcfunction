@@ -1,0 +1,1 @@
+$data modify storage prodige_skills:prodigelib Float.temp set value $(env_0)$(env_1).$(env_2)

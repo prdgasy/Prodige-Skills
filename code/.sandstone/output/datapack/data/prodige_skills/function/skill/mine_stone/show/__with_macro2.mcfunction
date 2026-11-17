@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.task.mine_stone.$(env_0)

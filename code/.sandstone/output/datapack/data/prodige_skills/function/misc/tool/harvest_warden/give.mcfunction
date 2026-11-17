@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§9Harvest Warden',minecraft:lore=['§9§lRARE','§7A reinforced hoe built for a seasoned cultivator.','§8Durability: 1200'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'harvest_warden'}},enchantment_glint_override=false]

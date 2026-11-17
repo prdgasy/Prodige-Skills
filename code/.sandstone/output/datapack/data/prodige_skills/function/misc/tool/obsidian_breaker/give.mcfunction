@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§dObsidian Breaker',minecraft:lore=['§d§lEPIC','§7A heavy-duty pickaxe for the most resilient stone.','§8Durability: 2400'],minecraft:max_damage=2400d,minecraft:custom_data={prodige_skills:{gear:'obsidian_breaker'}},enchantment_glint_override=true]

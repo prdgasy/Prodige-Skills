@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.vein_sovereign] run return run function prodige_skills:title/interact/vein_sovereign/0_if/return_run
+function prodige_skills:title/interact/vein_sovereign/if

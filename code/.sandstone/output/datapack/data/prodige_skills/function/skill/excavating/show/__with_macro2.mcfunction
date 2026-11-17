@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.excavating.$(env_0)

@@ -1,0 +1,1 @@
+give @p diamond_axe[minecraft:custom_name='§9Canopy Hatchet',minecraft:lore=['§9§lRARE','§7A sharp hatchet for exploring dense woodland canopies.','§8Durability: 900'],minecraft:max_damage=900d,minecraft:custom_data={prodige_skills:{gear:'canopy_hatchet'}},enchantment_glint_override=false]

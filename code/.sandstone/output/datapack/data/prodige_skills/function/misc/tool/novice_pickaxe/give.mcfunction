@@ -1,0 +1,1 @@
+give @p iron_pickaxe[minecraft:custom_name='§aNovice Pickaxe',minecraft:lore=['§a§lCOMMON','§7A dependable starter pickaxe for everyday mining.','§8Durability: 250','§8• A balanced tool for stone and common ores.'],minecraft:max_damage=250d,minecraft:custom_data={prodige_skills:{gear:'novice_pickaxe'}},enchantment_glint_override=false]

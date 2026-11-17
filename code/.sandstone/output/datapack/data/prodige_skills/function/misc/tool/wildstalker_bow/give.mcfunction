@@ -1,0 +1,1 @@
+give @p bow[minecraft:custom_name='§9Wildstalker Bow',minecraft:lore=['§9§lRARE','§7A durable bow for hunters venturing beyond the safe paths.','§8Durability: 1200'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'wildstalker_bow'}},enchantment_glint_override=false]

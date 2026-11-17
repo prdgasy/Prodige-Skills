@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.field_hand] run return run function prodige_skills:title/interact/field_hand/0_if/return_run
+function prodige_skills:title/interact/field_hand/if

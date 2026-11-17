@@ -1,0 +1,4 @@
+execute if score @p prodige_skills.hunting.achievement matches 3.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if3/if4/0_if/return_run
+execute if score @p prodige_skills.hunting.achievement matches 2 run return run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if3/if4/1_elseif/return_run
+# prodige_skills::achievementshunting::fill -> §8Locked Step #3(2)
+item replace entity @s container.2 with crying_obsidian[custom_name={text: "§8Locked Step #3", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§7You haven't reached this", italic: false, color: "white"},{text: "§7achievement step yet!", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§c🔒 LOCKED", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

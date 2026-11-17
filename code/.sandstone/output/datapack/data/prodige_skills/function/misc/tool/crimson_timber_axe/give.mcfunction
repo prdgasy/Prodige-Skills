@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§dCrimson Timber Axe',minecraft:lore=['§d§lEPIC','§7A reinforced axe for gathering wood in the Nether.','§8Durability: 2000'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'crimson_timber_axe'}},enchantment_glint_override=true]

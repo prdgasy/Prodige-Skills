@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.harvest_warden] run return run function prodige_skills:title/interact/harvest_warden/0_if/return_run
+function prodige_skills:title/interact/harvest_warden/if

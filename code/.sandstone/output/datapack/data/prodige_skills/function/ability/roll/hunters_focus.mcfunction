@@ -1,0 +1,2 @@
+execute store result score var_1549 prodige_skills.prodigelib.float run random value 0..1000
+execute if entity @p[tag=prodige_skills.Hunting.ability.toggle] if score var_1549 prodige_skills.prodigelib.float <= @p prodige_skills.Hunting.ability.buff run effect give @s minecraft:strength 6 0 true

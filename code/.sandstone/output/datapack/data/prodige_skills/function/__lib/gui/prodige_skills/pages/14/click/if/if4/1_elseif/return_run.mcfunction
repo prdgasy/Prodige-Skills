@@ -1,0 +1,2 @@
+# prodige_skills::achievementshunting::click -> §eZombie Slayer(0)
+execute if score anon_cnoL-r-9_18 __sandstone matches 0 unless data entity @s Items[{Slot:0b}] run function prodige_skills:__lib/gui/prodige_skills/pages/14/click/if/if4/1_elseif/return_run/if/if

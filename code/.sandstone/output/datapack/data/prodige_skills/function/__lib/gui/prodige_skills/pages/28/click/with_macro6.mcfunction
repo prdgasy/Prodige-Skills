@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§cMaster Miner §8× §e$(macro_arg_4645)($(macro_arg_4644))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4644)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro6/execute_unless

@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§9Wildwood Axe',minecraft:lore=['§9§lRARE','§7A strong axe made for seasoned foresters.','§8Durability: 1200'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'wildwood_axe'}},enchantment_glint_override=false]

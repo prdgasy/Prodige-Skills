@@ -1,0 +1,2 @@
+# prodige_skills::achievementshunting::click -> §aRavager Breaker(8)
+execute if score anon_cnoL-r-9_18 __sandstone matches 0 unless data entity @s Items[{Slot:8b}] run function prodige_skills:__lib/gui/prodige_skills/pages/14/click/if9/if4/0_if/return_run/if/if

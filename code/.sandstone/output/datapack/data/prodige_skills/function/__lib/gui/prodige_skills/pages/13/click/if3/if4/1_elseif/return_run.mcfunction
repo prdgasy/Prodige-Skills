@@ -1,0 +1,2 @@
+# prodige_skills::achievementsfarming::click -> §eWheat Planter(2)
+execute if score anon_cnoL-r-9_17 __sandstone matches 0 unless data entity @s Items[{Slot:2b}] run function prodige_skills:__lib/gui/prodige_skills/pages/13/click/if3/if4/1_elseif/return_run/if/if

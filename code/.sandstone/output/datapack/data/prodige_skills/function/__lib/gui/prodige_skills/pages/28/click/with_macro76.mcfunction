@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§6Evergreen Reaper §8× §e$(macro_arg_4855)($(macro_arg_4854))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4854)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro76/execute_unless

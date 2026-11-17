@@ -1,0 +1,1 @@
+execute as @a if score @p prodige_skills.task.timer matches 1.. run scoreboard players remove @p prodige_skills.task.timer 1

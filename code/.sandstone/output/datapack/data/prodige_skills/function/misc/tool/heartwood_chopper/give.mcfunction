@@ -1,0 +1,1 @@
+give @p diamond_axe[minecraft:custom_name='§dHeartwood Chopper',minecraft:lore=['§d§lEPIC','§7A precision axe for harvesting the finest timber.','§8Durability: 1600'],minecraft:max_damage=1600d,minecraft:custom_data={prodige_skills:{gear:'heartwood_chopper'}},enchantment_glint_override=true]

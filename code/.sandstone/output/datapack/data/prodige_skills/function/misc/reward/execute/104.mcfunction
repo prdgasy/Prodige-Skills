@@ -1,0 +1,1 @@
+scoreboard players add @p prodige_skills.reward.pending.deep_digger 1

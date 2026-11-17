@@ -1,0 +1,1 @@
+give @p netherite_sword[minecraft:custom_name='§dWarden Edge',minecraft:lore=['§d§lEPIC','§7A heavy blade forged for the most dangerous foes.','§8Durability: 2600','§8• A treasured weapon for veteran hunters.'],minecraft:max_damage=2600d,minecraft:custom_data={prodige_skills:{gear:'warden_edge'}},enchantment_glint_override=true]

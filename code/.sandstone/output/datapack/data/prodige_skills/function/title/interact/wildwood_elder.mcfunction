@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.wildwood_elder] run return run function prodige_skills:title/interact/wildwood_elder/0_if/return_run
+function prodige_skills:title/interact/wildwood_elder/if

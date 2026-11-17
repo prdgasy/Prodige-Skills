@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§dNether Delver',minecraft:lore=['§d§lEPIC','§7A durable pickaxe suited to the harshest underground trips.','§8Durability: 2000'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'nether_delver'}},enchantment_glint_override=true]

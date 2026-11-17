@@ -1,0 +1,1 @@
+execute as @a run function prodige_skills:misc/task/watch/execute_as

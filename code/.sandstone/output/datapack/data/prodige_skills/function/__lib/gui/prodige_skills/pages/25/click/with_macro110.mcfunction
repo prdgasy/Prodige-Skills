@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §cMonster Stalker$(macro_arg_3788)($(macro_arg_3787))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3787)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro110/execute_unless

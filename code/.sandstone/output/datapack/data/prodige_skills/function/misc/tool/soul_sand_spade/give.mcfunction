@@ -1,0 +1,1 @@
+give @p diamond_shovel[minecraft:custom_name='§dSoul Sand Spade',minecraft:lore=['§d§lEPIC','§7A durable spade suited to the dangerous Nether wastes.','§8Durability: 1600'],minecraft:max_damage=1600d,minecraft:custom_data={prodige_skills:{gear:'soul_sand_spade'}},enchantment_glint_override=true]

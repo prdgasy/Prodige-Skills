@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "prodige_skills:misc/task/timer",
+    "prodige_skills:misc/booster/count_timer"
+  ]
+}

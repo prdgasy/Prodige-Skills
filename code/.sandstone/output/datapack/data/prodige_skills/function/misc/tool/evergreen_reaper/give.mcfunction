@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§6Evergreen Reaper',minecraft:lore=['§6§lLEGENDARY','§7The ultimate axe for a legend of the forests.','§8Durability: 5000'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'evergreen_reaper'}},enchantment_glint_override=true]

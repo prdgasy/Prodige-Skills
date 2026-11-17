@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §6Canopy Keeper$(macro_arg_3433)($(macro_arg_3432))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3432)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro39/execute_unless

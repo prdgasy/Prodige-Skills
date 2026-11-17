@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.forest_guardian] run return run function prodige_skills:title/interact/forest_guardian/0_if/return_run
+function prodige_skills:title/interact/forest_guardian/if

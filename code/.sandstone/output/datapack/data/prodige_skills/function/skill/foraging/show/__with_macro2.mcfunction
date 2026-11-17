@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.foraging.$(env_0)

@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§6Everbloom Hoe',minecraft:lore=['§6§lLEGENDARY','§7A prized tool for farmers with an exceptional harvest.','§8Durability: 3000'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'everbloom_hoe'}},enchantment_glint_override=true]

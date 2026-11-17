@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §8Cave Cartographer$(macro_arg_3353)($(macro_arg_3352))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3352)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro23/execute_unless

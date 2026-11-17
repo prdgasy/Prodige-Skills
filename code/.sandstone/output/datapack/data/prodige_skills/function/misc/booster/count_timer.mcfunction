@@ -1,0 +1,1 @@
+execute as @a at @s run function prodige_skills:misc/booster/count_timer/execute_as

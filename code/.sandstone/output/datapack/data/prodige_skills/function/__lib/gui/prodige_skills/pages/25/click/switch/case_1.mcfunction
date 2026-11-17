@@ -1,0 +1,2 @@
+# prodige_skills::titles::click -> §7All Titles §8• §aOwned Titles §8• §7Not Owned Titles(22)
+execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch/case_1/if/if

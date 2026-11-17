@@ -1,0 +1,1 @@
+give @p netherite_shovel[minecraft:custom_name='§dTerracotta Breaker',minecraft:lore=['§d§lEPIC','§7A heavy-duty shovel for broad excavation projects.','§8Durability: 2000'],minecraft:max_damage=2000d,minecraft:custom_data={prodige_skills:{gear:'terracotta_breaker'}},enchantment_glint_override=true]

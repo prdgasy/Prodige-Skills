@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.deep_core_delver] run return run function prodige_skills:title/interact/deep_core_delver/0_if/return_run
+function prodige_skills:title/interact/deep_core_delver/if

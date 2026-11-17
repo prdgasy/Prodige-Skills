@@ -1,0 +1,27 @@
+scoreboard players set anon_cnoL-r-9_2 __sandstone 1
+scoreboard players set anon_cnoL-r-9_8234 __sandstone 30
+scoreboard players operation var_1288 prodige_skills.prodigelib.float = anon_cnoL-r-9_8234 __sandstone
+scoreboard players operation anon_cnoL-r-9_8235 __sandstone = var_1288 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8236 __sandstone = @p prodige_skills.misc.booster.Xp.mult
+scoreboard players operation anon_cnoL-r-9_8236 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8235 __sandstone *= anon_cnoL-r-9_8236 __sandstone
+scoreboard players operation anon_cnoL-r-9_8235 __sandstone /= 10 __sandstone
+scoreboard players operation var_1289 prodige_skills.prodigelib.float = anon_cnoL-r-9_8235 __sandstone
+scoreboard players operation anon_cnoL-r-9_8237 __sandstone = var_1289 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8238 __sandstone = @p prodige_skills.Hunting.event.HuntSheep
+scoreboard players operation anon_cnoL-r-9_8238 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8237 __sandstone *= anon_cnoL-r-9_8238 __sandstone
+scoreboard players operation anon_cnoL-r-9_8237 __sandstone /= 10 __sandstone
+scoreboard players operation var_1290 prodige_skills.prodigelib.float = anon_cnoL-r-9_8237 __sandstone
+scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1290 prodige_skills.prodigelib.float
+scoreboard players set anon_cnoL-r-9_8239 __sandstone 4
+scoreboard players operation anon_cnoL-r-9_8240 __sandstone = @p prodige_skills.misc.booster.Pts.mult
+scoreboard players operation anon_cnoL-r-9_8240 __sandstone *= @p prodige_skills.Hunting.event.HuntSheep
+scoreboard players operation anon_cnoL-r-9_8241 __sandstone = anon_cnoL-r-9_8239 __sandstone
+scoreboard players operation anon_cnoL-r-9_8241 __sandstone *= anon_cnoL-r-9_8240 __sandstone
+scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_8241 __sandstone
+scoreboard players operation @p prodige_skills.Hunting.total_event.HuntSheep.pts += anon_cnoL-r-9_1 __sandstone
+scoreboard players operation @p prodige_skills.Hunting.total_event.HuntSheep.xp += var_0 prodige_skills.prodigelib.float
+scoreboard players operation @p prodige_skills.Hunting.total_event.HuntSheep += @p prodige_skills.Hunting.event.HuntSheep
+function prodige_skills:skill/hunting/on_event_triggered
+scoreboard players reset @p prodige_skills.Hunting.event.HuntSheep

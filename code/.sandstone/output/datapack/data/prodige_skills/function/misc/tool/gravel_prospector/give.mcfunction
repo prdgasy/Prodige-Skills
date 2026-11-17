@@ -1,0 +1,1 @@
+give @p netherite_shovel[minecraft:custom_name='§9Gravel Prospector',minecraft:lore=['§9§lRARE','§7A reinforced shovel for rugged excavation work.','§8Durability: 1200'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'gravel_prospector'}},enchantment_glint_override=false]

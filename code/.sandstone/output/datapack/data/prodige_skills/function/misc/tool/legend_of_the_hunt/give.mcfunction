@@ -1,0 +1,1 @@
+give @p netherite_sword[minecraft:custom_name='§6Legend of the Hunt',minecraft:lore=['§6§lLEGENDARY','§7The ultimate weapon for a fully accomplished hunter.','§8Durability: 5000'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'legend_of_the_hunt'}},enchantment_glint_override=true]

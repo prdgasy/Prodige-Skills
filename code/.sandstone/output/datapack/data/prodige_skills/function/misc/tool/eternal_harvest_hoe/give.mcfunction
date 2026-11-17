@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§6Eternal Harvest Hoe',minecraft:lore=['§6§lLEGENDARY','§7The ultimate farming tool, earned through complete mastery.','§8Durability: 5000'],minecraft:max_damage=5000d,minecraft:custom_data={prodige_skills:{gear:'eternal_harvest_hoe'}},enchantment_glint_override=true]

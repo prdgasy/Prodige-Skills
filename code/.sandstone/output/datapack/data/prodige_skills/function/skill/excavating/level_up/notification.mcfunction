@@ -1,0 +1,1 @@
+execute if entity @p[tag=prodige_skills.level_up_notif] run function prodige_skills:skill/excavating/level_up/notification/if

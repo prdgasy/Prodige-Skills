@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.the_unerring] run return run function prodige_skills:title/interact/the_unerring/0_if/return_run/if
+function prodige_skills:title/interact/the_unerring/if

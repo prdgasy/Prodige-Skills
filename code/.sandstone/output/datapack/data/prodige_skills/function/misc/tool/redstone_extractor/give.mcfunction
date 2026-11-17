@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§9Redstone Extractor',minecraft:lore=['§9§lRARE','§7A reinforced pickaxe for tracing rich mineral veins.','§8Durability: 1200'],minecraft:max_damage=1200d,minecraft:custom_data={prodige_skills:{gear:'redstone_extractor'}},enchantment_glint_override=false]

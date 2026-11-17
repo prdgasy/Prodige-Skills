@@ -1,0 +1,4 @@
+execute if score @p prodige_skills.foraging.achievement matches 17.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/if17/if4/0_if/return_run
+execute if score @p prodige_skills.foraging.achievement matches 16 run return run function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/if17/if4/1_elseif/return_run
+# prodige_skills::achievementsforaging::fill -> §8Locked Step #17(16)
+item replace entity @s container.16 with crying_obsidian[custom_name={text: "§8Locked Step #17", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§7You haven't reached this", italic: false, color: "white"},{text: "§7achievement step yet!", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§c🔒 LOCKED", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

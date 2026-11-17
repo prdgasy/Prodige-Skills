@@ -1,0 +1,1 @@
+give @p netherite_sword[minecraft:custom_name='§6Wardenbreaker Sword',minecraft:lore=['§6§lLEGENDARY','§7An elite sword for hunters who fear no creature.','§8Durability: 4000'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'wardenbreaker_sword'}},enchantment_glint_override=true]

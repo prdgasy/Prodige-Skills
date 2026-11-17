@@ -1,0 +1,1 @@
+give @p diamond_hoe[minecraft:custom_name='§dGolden Furrow',minecraft:lore=['§d§lEPIC','§7A fine hoe for tending valuable and varied harvests.','§8Durability: 1600'],minecraft:max_damage=1600d,minecraft:custom_data={prodige_skills:{gear:'golden_furrow'}},enchantment_glint_override=true]

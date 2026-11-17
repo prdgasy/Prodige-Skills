@@ -1,0 +1,2 @@
+# prodige_skills::achievementshunting::click -> §eMonument Conqueror(9)
+execute if score anon_cnoL-r-9_18 __sandstone matches 0 unless data entity @s Items[{Slot:9b}] run function prodige_skills:__lib/gui/prodige_skills/pages/14/click/if10/if4/1_elseif/return_run/if/if

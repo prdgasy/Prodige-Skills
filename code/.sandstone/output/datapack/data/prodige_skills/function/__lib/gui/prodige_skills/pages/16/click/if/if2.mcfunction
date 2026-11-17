@@ -1,0 +1,53 @@
+execute if score @p prodige_skills.Mining.ability.tier matches 10 run return run function prodige_skills:__lib/gui/prodige_skills/pages/16/click/if/if2/0_if/return_run
+scoreboard players operation anon_cnoL-r-9_5572 __sandstone = @p prodige_skills.Mining.ability.tier
+scoreboard players add anon_cnoL-r-9_5572 __sandstone 1
+execute store result storage __sandstone:variable anon_cnoL-r-9_1620.param_0 int 1 run scoreboard players get @p prodige_skills.Mining.ability.tier
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1620
+data modify storage prodige_skills:prodigelib RomanNumbers.out_71 set from storage prodige_skills:prodigelib RomanNumbers.temp
+execute store result storage __sandstone:variable anon_cnoL-r-9_1621.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5572 __sandstone
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1621
+data modify storage prodige_skills:prodigelib RomanNumbers.out_72 set from storage prodige_skills:prodigelib RomanNumbers.temp
+scoreboard players operation anon_cnoL-r-9_5573 __sandstone = anon_cnoL-r-9_5572 __sandstone
+scoreboard players operation anon_cnoL-r-9_5573 __sandstone *= 10 __sandstone
+execute store result storage __sandstone:variable anon_cnoL-r-9_1622.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5573 __sandstone
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1622
+data modify storage prodige_skills:prodigelib RomanNumbers.out_73 set from storage prodige_skills:prodigelib RomanNumbers.temp
+data modify storage __sandstone:variable anon_cnoL-r-9_1623 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_1624 set value '§8[§c✘§8]'
+data modify storage __sandstone:variable anon_cnoL-r-9_1625 set value '§8[§c✘§8]'
+execute if score @p prodige_skills.player.pts matches 500.. run data modify storage __sandstone:variable anon_cnoL-r-9_1624 set value '§8[§a✔§8]'
+execute if score @p prodige_skills.mining.level >= anon_cnoL-r-9_5573 __sandstone run data modify storage __sandstone:variable anon_cnoL-r-9_1625 set value '§8[§a✔§8]'
+execute if score @p prodige_skills.player.pts matches 500.. if score @p prodige_skills.mining.level >= anon_cnoL-r-9_5573 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/16/click/if/if2/if3
+data modify storage __sandstone:variable anon_cnoL-r-9_1626 set value '§bActive!'
+execute unless entity @p[tag=prodige_skills.Mining.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1626 set value '§7Inactive!'
+scoreboard players operation anon_cnoL-r-9_5574 __sandstone = @p prodige_skills.Mining.ability.buff
+function prodige_skills:__lib/gui/prodige_skills/pages/16/click/if/if2/if5
+scoreboard players operation anon_cnoL-r-9_5575 __sandstone = anon_cnoL-r-9_5574 __sandstone
+scoreboard players operation anon_cnoL-r-9_5575 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5575 __sandstone
+scoreboard players operation anon_cnoL-r-9_5576 __sandstone = anon_cnoL-r-9_5574 __sandstone
+scoreboard players operation anon_cnoL-r-9_5576 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5576 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1627.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_1627.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_1627.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1627
+data modify storage prodige_skills:prodigelib Float.Mining.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
+scoreboard players set anon_cnoL-r-9_5577 __sandstone 25
+scoreboard players operation var_955 prodige_skills.prodigelib.float = @p prodige_skills.Mining.ability.buff
+scoreboard players operation var_955 prodige_skills.prodigelib.float += anon_cnoL-r-9_5577 __sandstone
+scoreboard players operation anon_cnoL-r-9_5578 __sandstone = var_955 prodige_skills.prodigelib.float
+function prodige_skills:__lib/gui/prodige_skills/pages/16/click/if/if2/if6
+scoreboard players operation anon_cnoL-r-9_5579 __sandstone = anon_cnoL-r-9_5578 __sandstone
+scoreboard players operation anon_cnoL-r-9_5579 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5579 __sandstone
+scoreboard players operation anon_cnoL-r-9_5580 __sandstone = anon_cnoL-r-9_5578 __sandstone
+scoreboard players operation anon_cnoL-r-9_5580 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5580 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1628.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_1628.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_1628.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1628
+data modify storage prodige_skills:prodigelib Float.var_955.out set from storage prodige_skills:prodigelib Float.temp
+# prodige_skills::abilitiesmining::click -> §4§lOre Rush §8[§4§l$(macro_arg_2289)§8] $(macro_arg_2290)(13)
+execute if score anon_cnoL-r-9_20 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/16/click/if/if2/if7/if

@@ -1,0 +1,2 @@
+# prodige_skills::achievementsexcavating::click -> §aClay Collector(3)
+execute if score anon_cnoL-r-9_19 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run function prodige_skills:__lib/gui/prodige_skills/pages/15/click/if4/if4/0_if/return_run/if/if

@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dEarthshaper §8× §e$(macro_arg_4756)($(macro_arg_4755))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4755)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro43/execute_unless

@@ -1,0 +1,1 @@
+give @p bow[minecraft:custom_name='§6Ender Tracker Bow',minecraft:lore=['§6§lLEGENDARY',"§7A master hunter's bow for quarry in every dimension.",'§8Durability: 3000'],minecraft:max_damage=3000d,minecraft:custom_data={prodige_skills:{gear:'ender_tracker_bow'}},enchantment_glint_override=true]

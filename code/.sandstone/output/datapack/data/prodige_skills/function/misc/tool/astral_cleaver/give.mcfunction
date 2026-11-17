@@ -1,0 +1,1 @@
+give @p netherite_axe[minecraft:custom_name='§6Astral Cleaver',minecraft:lore=['§6§lLEGENDARY','§7A legendary axe with an edge worthy of the stars.','§8Durability: 4000','§8• A rare masterpiece for an elite adventurer.'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'astral_cleaver'}},enchantment_glint_override=true]

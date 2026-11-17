@@ -1,0 +1,2 @@
+# prodige_skills::achievementsmining::click -> §aDeep Copper(0)
+execute if score anon_cnoL-r-9_15 __sandstone matches 0 unless data entity @s Items[{Slot:0b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if19/if4/0_if/return_run/if/if

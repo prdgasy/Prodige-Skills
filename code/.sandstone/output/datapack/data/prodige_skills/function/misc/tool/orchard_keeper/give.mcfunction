@@ -1,0 +1,1 @@
+give @p netherite_hoe[minecraft:custom_name='§dOrchard Keeper',minecraft:lore=['§d§lEPIC','§7A masterwork hoe for orchards and distant farms.','§8Durability: 2400'],minecraft:max_damage=2400d,minecraft:custom_data={prodige_skills:{gear:'orchard_keeper'}},enchantment_glint_override=true]

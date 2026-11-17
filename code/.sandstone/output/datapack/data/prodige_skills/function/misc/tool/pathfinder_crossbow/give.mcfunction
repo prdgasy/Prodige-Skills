@@ -1,0 +1,1 @@
+give @p crossbow[minecraft:custom_name='§aPathfinder Crossbow',minecraft:lore=['§a§lCOMMON','§7A dependable crossbow for dangerous trails.','§8Durability: 600'],minecraft:max_damage=600d,minecraft:custom_data={prodige_skills:{gear:'pathfinder_crossbow'}},enchantment_glint_override=false]

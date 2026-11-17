@@ -1,0 +1,1 @@
+give @p stone_shovel[minecraft:custom_name='§aGroundbreaker Shovel',minecraft:lore=['§a§lCOMMON','§7A sturdy shovel for breaking ground and gathering soil.','§8Durability: 300'],minecraft:max_damage=300d,minecraft:custom_data={prodige_skills:{gear:'groundbreaker_shovel'}},enchantment_glint_override=false]

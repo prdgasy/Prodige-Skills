@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§6Ancient Vein Pick §8× §e$(macro_arg_4819)($(macro_arg_4818))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4818)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro64/execute_unless

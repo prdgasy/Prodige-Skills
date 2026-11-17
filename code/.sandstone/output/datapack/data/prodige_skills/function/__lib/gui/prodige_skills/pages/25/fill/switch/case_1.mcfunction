@@ -1,0 +1,2 @@
+# prodige_skills::titles::fill -> §7All Titles §8• §aOwned Titles §8• §7Not Owned Titles(22)
+item replace entity @s container.22 with ender_chest[custom_name={text: "§7All Titles §8• §aOwned Titles §8• §7Not Owned Titles", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

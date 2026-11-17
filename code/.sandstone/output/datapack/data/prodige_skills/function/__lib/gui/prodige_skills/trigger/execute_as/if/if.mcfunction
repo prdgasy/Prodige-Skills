@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ air unless entity @e[type=chest_minecart, tag=prodige_skills.__lib.gui.prodige_skills] run return run function prodige_skills:__lib/gui/prodige_skills/trigger/execute_as/if/if/0_if/return_run
+tellraw @s "No space, or too close to another GUI"

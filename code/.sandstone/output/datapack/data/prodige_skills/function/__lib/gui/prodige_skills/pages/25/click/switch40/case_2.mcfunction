@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.dirt_digger] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch40/case_2/if

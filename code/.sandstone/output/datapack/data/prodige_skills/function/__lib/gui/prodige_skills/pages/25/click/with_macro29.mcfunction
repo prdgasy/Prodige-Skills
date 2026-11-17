@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §bDiamond Crown$(macro_arg_3383)($(macro_arg_3382))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3382)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro29/execute_unless

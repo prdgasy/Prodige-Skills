@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §7Dirt Digger$(macro_arg_3813)($(macro_arg_3812))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3812)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro115/execute_unless

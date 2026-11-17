@@ -1,0 +1,1 @@
+give @p iron_pickaxe[minecraft:custom_name='§aStonewake Pickaxe',minecraft:lore=['§a§lCOMMON','§7A sturdy pickaxe for a miner beginning to explore the depths.','§8Durability: 300'],minecraft:max_damage=300d,minecraft:custom_data={prodige_skills:{gear:'stonewake_pickaxe'}},enchantment_glint_override=false]

@@ -1,0 +1,5 @@
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'common'}}] run function prodige_skills:misc/crate/key_hint/execute_as/if/execute_if
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'rare'}}] run function prodige_skills:misc/crate/key_hint/execute_as/if/execute_if2
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'epic'}}] run function prodige_skills:misc/crate/key_hint/execute_as/if/execute_if3
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'legendary'}}] run function prodige_skills:misc/crate/key_hint/execute_as/if/execute_if4
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'mythic'}}] run function prodige_skills:misc/crate/key_hint/execute_as/if/execute_if5

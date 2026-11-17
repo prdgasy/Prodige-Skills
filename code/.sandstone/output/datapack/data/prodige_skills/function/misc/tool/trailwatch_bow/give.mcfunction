@@ -1,0 +1,1 @@
+give @p bow[minecraft:custom_name='§aTrailwatch Bow',minecraft:lore=['§a§lCOMMON','§7A steady bow for a hunter learning to track their quarry.','§8Durability: 300'],minecraft:max_damage=300d,minecraft:custom_data={prodige_skills:{gear:'trailwatch_bow'}},enchantment_glint_override=false]

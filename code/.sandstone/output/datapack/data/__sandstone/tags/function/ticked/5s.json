@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "prodige_skills:player/first_join",
+    "prodige_skills:on_event/watch",
+    "prodige_skills:misc/task/watch"
+  ]
+}

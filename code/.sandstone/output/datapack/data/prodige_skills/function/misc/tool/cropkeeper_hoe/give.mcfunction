@@ -1,0 +1,1 @@
+give @p diamond_hoe[minecraft:custom_name='§9Cropkeeper Hoe',minecraft:lore=['§9§lRARE','§7A balanced hoe for tending thriving crops.','§8Durability: 900'],minecraft:max_damage=900d,minecraft:custom_data={prodige_skills:{gear:'cropkeeper_hoe'}},enchantment_glint_override=false]

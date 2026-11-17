@@ -1,0 +1,1 @@
+give @p stone_axe[minecraft:custom_name='§aSapling Cutter',minecraft:lore=['§a§lCOMMON','§7A dependable axe for gathering a first harvest of timber.','§8Durability: 300'],minecraft:max_damage=300d,minecraft:custom_data={prodige_skills:{gear:'sapling_cutter'}},enchantment_glint_override=false]

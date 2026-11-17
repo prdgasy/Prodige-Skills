@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §2Timber Baron$(macro_arg_3503)($(macro_arg_3502))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3502)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro53/execute_unless

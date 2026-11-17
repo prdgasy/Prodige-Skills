@@ -1,0 +1,1 @@
+execute as @a at @s run function prodige_skills:misc/crate/key_hint/execute_as

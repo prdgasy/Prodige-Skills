@@ -1,0 +1,1 @@
+give @p diamond_pickaxe[minecraft:custom_name='§dDiamond Seeker',minecraft:lore=['§d§lEPIC','§7A precision pickaxe for miners searching for rare gems.','§8Durability: 1600'],minecraft:max_damage=1600d,minecraft:custom_data={prodige_skills:{gear:'diamond_seeker'}},enchantment_glint_override=true]

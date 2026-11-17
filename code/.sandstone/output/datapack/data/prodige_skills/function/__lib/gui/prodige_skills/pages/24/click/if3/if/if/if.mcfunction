@@ -1,0 +1,5 @@
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if3/if/if/if/0_if/return_run
+scoreboard players remove @p prodige_skills.player.pts 1000
+give @p warped_fungus_on_a_stick[minecraft:custom_name='§bx3 Xp Booster',minecraft:lore=['§73x Xp multiplier','§7Duration: 30 minutes','§eRight-click to activate'],minecraft:item_model='minecraft:experience_bottle',minecraft:custom_data={prodige_skills:{booster:'xp_3'}},minecraft:unbreakable={}]
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2
+tellraw @p "§a[Prodige Skill] §8• §aYou bought §8[§bx3 Xp Booster§8] §afor §61000 Pts§a!"

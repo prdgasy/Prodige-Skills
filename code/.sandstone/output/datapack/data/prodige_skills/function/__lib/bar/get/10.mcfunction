@@ -1,0 +1,1 @@
+$data modify storage prodige_skills:prodigelib bar.temp set from storage prodige_skills:prodigelib bar.barsByLength.10.[$(env_0)].

@@ -1,0 +1,1 @@
+give @p iron_hoe[minecraft:custom_name='§aFieldhand Hoe',minecraft:lore=['§a§lCOMMON','§7A reliable hoe for a growing farm.','§8Durability: 600'],minecraft:max_damage=600d,minecraft:custom_data={prodige_skills:{gear:'fieldhand_hoe'}},enchantment_glint_override=false]

@@ -1,0 +1,1 @@
+give @p netherite_pickaxe[minecraft:custom_name='§6Bedrock Borer',minecraft:lore=['§6§lLEGENDARY',"§7An elite miner's tool forged for a lifetime of expeditions.",'§8Durability: 4000'],minecraft:max_damage=4000d,minecraft:custom_data={prodige_skills:{gear:'bedrock_borer'}},enchantment_glint_override=true]

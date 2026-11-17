@@ -1,0 +1,3 @@
+scoreboard players operation anon_cnoL-r-9_8965 __sandstone = anon_cnoL-r-9_8957 __sandstone
+scoreboard players operation anon_cnoL-r-9_8965 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.farming.xp += anon_cnoL-r-9_8965 __sandstone

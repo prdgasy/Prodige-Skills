@@ -1,0 +1,1 @@
+give @p stone_hoe[minecraft:custom_name='§aFirst Harvest Hoe',minecraft:lore=['§a§lCOMMON','§7A simple hoe for preparing your first productive fields.','§8Durability: 300'],minecraft:max_damage=300d,minecraft:custom_data={prodige_skills:{gear:'first_harvest_hoe'}},enchantment_glint_override=false]

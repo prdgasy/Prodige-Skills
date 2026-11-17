@@ -1,0 +1,1 @@
+execute as @a at @s as @e[type=chest_minecart, tag=prodige_skills.__lib.gui.prodige_skills] if score @p prodige_skills.__lib.gui.prodige_skills.id = @s prodige_skills.__lib.gui.prodige_skills.id run function prodige_skills:__lib/gui/prodige_skills/find_linked_entitys/execute_as/if
