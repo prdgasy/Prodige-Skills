@@ -1,4 +1,3 @@
-
 name: Build and Deploy Minecraft Datapack
 
 on:
@@ -24,13 +23,13 @@ jobs:
         run: npm ci
 
       - name: Build datapack
-        run: sand build
+        run: bun dev:build
 
       - name: Copy datapack
         shell: powershell
         run: |
           $source = "$env:GITHUB_WORKSPACE\.sandstone\output\datapack"
-          $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks"
+          $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks\prodige_skills"
 
           if (!(Test-Path $source)) {
             throw "Datapack output not found: $source"
