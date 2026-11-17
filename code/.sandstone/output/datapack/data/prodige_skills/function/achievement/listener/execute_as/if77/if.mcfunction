@@ -1,4 +1,4 @@
-scoreboard players add @p prodige_skills.reward.pending.800_pts 1
+scoreboard players add @p prodige_skills.reward.pending.1300_pts 1
 scoreboard players add @p prodige_skills.reward.pending.x3_pts_booster 1
 scoreboard players add @p prodige_skills.reward.pending.100-250_random_skill_xp 1
 scoreboard players add @p prodige_skills.excavating.achievement 1

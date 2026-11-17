@@ -210,13 +210,14 @@ export class Main {
 				].join(',');
 
 
-				raw(`$execute if score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
-				raw(`$execute unless score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+
+				raw(`$execute if score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+				raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
 			}, { onConflict: 'ignore' });
 
 			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
 				raw(`data modify storage ${argsStorage} args.rewardLoreSnbt set value ""`);
-				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLoreSnbt`);
+				raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLoreSnbt`);
 				functionCmd(renderItems, 'with', Data('storage', argsStorage, 'args'));
 			}, { onConflict: 'ignore' });
 

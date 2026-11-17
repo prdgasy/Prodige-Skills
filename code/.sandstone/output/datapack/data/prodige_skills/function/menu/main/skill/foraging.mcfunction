@@ -1,3 +1,3 @@
 data modify storage prodige_skills:main_skill_args args.rewardLoreSnbt set value ""
-$execute unless score @p $(skill).level matches 100 run data modify storage prodige_skills:main_skill_args args.rewardLoreSnbt set from storage prodige_skills:reward_display $(skill).$(nextLevel).mainRewardLoreSnbt
+$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage prodige_skills:main_skill_args args.rewardLoreSnbt set from storage prodige_skills:reward_display $(skill).$(nextLevel).mainRewardLoreSnbt
 function prodige_skills:menu/main/skill/foraging/render with storage prodige_skills:main_skill_args args

@@ -1,5 +1,5 @@
 scoreboard players add @p prodige_skills.reward.pending.5000_pts 1
-scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1
+scoreboard players add @p prodige_skills.reward.pending.x4_xp_booster 1
 scoreboard players add @p prodige_skills.reward.pending.250-500_random_skill_xp 1
 scoreboard players add @p prodige_skills.farming.achievement 1
 scoreboard players reset @p prodige_skills.farming.achievement.potato_patch

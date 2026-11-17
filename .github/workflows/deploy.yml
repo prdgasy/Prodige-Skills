@@ -23,10 +23,14 @@ jobs:
           sparse-checkout-cone-mode: true
 
       
+      
       - name: Copy datapack
         id: copy
         shell: powershell
         run: |
+          Add-Type -AssemblyName System.Windows.Forms
+          Add-Type -AssemblyName System.Drawing
+
           $source = "$env:GITHUB_WORKSPACE\code\.sandstone\output\datapack"
           $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks\prodige_skills"
 
@@ -36,42 +40,80 @@ jobs:
 
           New-Item -ItemType Directory -Force -Path $destination | Out-Null
 
-          robocopy $source $destination /MIR /NFL /NDL /NJH /NJS /NP
-          $copyCode = $LASTEXITCODE
+          $form = New-Object System.Windows.Forms.Form
+          $form.Text = "Minecraft - Déploiement"
+          $form.Size = New-Object System.Drawing.Size(380, 155)
+          $form.StartPosition = "CenterScreen"
+          $form.FormBorderStyle = "FixedDialog"
+          $form.MaximizeBox = $false
+          $form.MinimizeBox = $false
+          $form.TopMost = $true
 
-          if ($copyCode -ge 8) {
-            throw "Robocopy failed with exit code $copyCode"
+          $label = New-Object System.Windows.Forms.Label
+          $label.Text = "Déploiement du datapack en cours..."
+          $label.Location = New-Object System.Drawing.Point(18, 18)
+          $label.Size = New-Object System.Drawing.Size(330, 25)
+          $label.Font = New-Object System.Drawing.Font("Segoe UI", 10)
+          $form.Controls.Add($label)
+
+          $progress = New-Object System.Windows.Forms.ProgressBar
+          $progress.Location = New-Object System.Drawing.Point(18, 55)
+          $progress.Size = New-Object System.Drawing.Size(330, 22)
+          $progress.Style = "Marquee"
+          $progress.MarqueeAnimationSpeed = 25
+          $form.Controls.Add($progress)
+
+          $status = New-Object System.Windows.Forms.Label
+          $status.Text = "Synchronisation des fichiers..."
+          $status.Location = New-Object System.Drawing.Point(18, 88)
+          $status.Size = New-Object System.Drawing.Size(330, 22)
+          $form.Controls.Add($status)
+
+          $arguments = "`"$source`" `"$destination`" /MIR /NFL /NDL /NJH /NJS /NP"
+
+          $process = Start-Process -FilePath "robocopy.exe" `
+            -ArgumentList $arguments -PassThru -WindowStyle Hidden
+
+          $timer = New-Object System.Windows.Forms.Timer
+          $timer.Interval = 300
+          $script:finished = $false
+          $script:copyCode = -1
+          $script:closeAt = [DateTime]::MaxValue
+
+          $timer.Add_Tick({
+            if (!$script:finished -and $process.HasExited) {
+              $script:copyCode = $process.ExitCode
+              $script:finished = $true
+              $progress.Style = "Continuous"
+              $progress.MarqueeAnimationSpeed = 0
+
+              if ($script:copyCode -lt 8) {
+                $progress.Value = 100
+                $label.Text = "Déploiement terminé !"
+                $status.Text = "Datapack copié avec succès."
+              } else {
+                $label.Text = "Échec du déploiement !"
+                $status.Text = "Code erreur Robocopy : $script:copyCode"
+                $progress.Value = 0
+              }
+
+              $script:closeAt = [DateTime]::Now.AddSeconds(5)
+            }
+
+            if ($script:finished -and [DateTime]::Now -ge $script:closeAt) {
+              $timer.Stop()
+              $form.Close()
+            }
+          })
+
+          $timer.Start()
+          [System.Windows.Forms.Application]::Run($form)
+          $timer.Dispose()
+          $form.Dispose()
+
+          if ($script:copyCode -ge 8) {
+            throw "Robocopy failed with exit code $script:copyCode"
           }
 
-          Write-Host "Datapack deployed successfully! Robocopy code: $copyCode"
-          exit 0
-
-
-
-      - name: Windows notification
-        if: always()
-        shell: powershell
-        env:
-          COPY_OUTCOME: ${{ steps.copy.outcome }}
-        run: |
-          Add-Type -AssemblyName System.Windows.Forms
-          Add-Type -AssemblyName System.Drawing
-
-          $notify = New-Object System.Windows.Forms.NotifyIcon
-          $notify.Icon = [System.Drawing.SystemIcons]::Information
-          $notify.Visible = $true
-
-          if ($env:COPY_OUTCOME -eq "success") {
-            $notify.BalloonTipTitle = "Minecraft"
-            $notify.BalloonTipText = "Datapack déployé avec succès !"
-            $notify.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Info
-          } else {
-            $notify.BalloonTipTitle = "Minecraft - Erreur"
-            $notify.BalloonTipText = "Le déploiement du datapack a échoué."
-            $notify.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Error
-          }
-
-          $notify.ShowBalloonTip(10000)
-          Start-Sleep -Seconds 10
-          $notify.Dispose()
+          Write-Host "Datapack deployed successfully!"
 
