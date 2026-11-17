@@ -41,8 +41,8 @@ export class Reward {
 					skillData.select(String(level)).set({
 						roman: Roman.get(level),
 						rewardLore: Reward.loreComponents(rewards),
-							mainRewardLore: Reward.loreComponents(rewards, '§e'),
-							rewardNotice: Reward.noticeComponents(rewards),
+						mainRewardLore: Reward.loreComponents(rewards, '§e'),
+						rewardNotice: Reward.noticeComponents(rewards),
 					});
 				}
 			}, { runOnLoad: true, onConflict: 'ignore' });
@@ -52,11 +52,7 @@ export class Reward {
 	public static loreComponents(rewards: Reward[], nameColor = ''): string {
 		const bullet = ' §8• ';
 		return Reward.join(rewards)
-			.map(text => JSON.stringify({
-				text: `${bullet}${nameColor}${text.slice(bullet.length)}`,
-				italic: false,
-				color: 'white',
-			}))
+			.map(text => `{text:${JSON.stringify(`${bullet}${nameColor}${text.slice(bullet.length)}`)},italic:false,color:"white"}`)
 			.join(',');
 	}
 

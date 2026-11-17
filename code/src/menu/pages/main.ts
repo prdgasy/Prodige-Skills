@@ -215,10 +215,7 @@ export class Main {
 			}, { onConflict: 'ignore' });
 
 			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
-				raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
-				raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
 				raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
-				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
 				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
 				functionCmd(renderItems, 'with', Data('storage', argsStorage, 'args'));
 			}, { onConflict: 'ignore' });
