@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'code/.sandstone/output/datapack/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 jobs:
@@ -12,8 +15,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout repository
+      - name: Checkout datapack
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            code/.sandstone/output/datapack
+          sparse-checkout-cone-mode: true
 
       - name: Copy datapack
         shell: powershell
@@ -26,7 +33,8 @@ jobs:
           }
 
           New-Item -ItemType Directory -Force -Path $destination | Out-Null
-          robocopy $source $destination /MIR
+
+          robocopy $source $destination /MIR /NFL /NDL /NJH /NJS /NP
 
           if ($LASTEXITCODE -ge 8) {
             throw "Robocopy failed with exit code $LASTEXITCODE"
