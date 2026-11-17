@@ -10,10 +10,11 @@ import { Action } from './skill/action';
 import { Crate } from './misc/crate';
 import { Achievement } from './skill/achievement';
 import { Title } from './skill/title';
-import { MCFunction, tellraw } from 'sandstone';
+import { MCFunction, say, tellraw } from 'sandstone';
 
 MCFunction('load', () => {
   tellraw("@a", "§eProdige Skills Loaded");
+  say("test");
 }, { runOnLoad: true })
 
 Loader.init();

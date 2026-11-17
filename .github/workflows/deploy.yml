@@ -1,4 +1,5 @@
-name: Build and Deploy Minecraft Datapack
+
+name: Deploy Minecraft Datapack
 
 on:
   push:
@@ -14,21 +15,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build datapack
-        run: bun dev:build
-
       - name: Copy datapack
         shell: powershell
         run: |
-          $source = "$env:GITHUB_WORKSPACE\.sandstone\output\datapack"
+          $source = "$env:GITHUB_WORKSPACE\code\.sandstone\output\datapack"
           $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks\prodige_skills"
 
           if (!(Test-Path $source)) {
