@@ -5,7 +5,7 @@ export default {
 	name: 'prodige_skills',
 	packs: {
 		datapack: {
-			description: ['A ', { text: 'Sandstone', color: 'gold' }, ' datapack.'],
+			description: ['A ', { text: 'fffffff', color: 'gold' }, ' datapack.'],
 			packFormat: 107,
 		} as DatapackConfig,
 		resourcepack: {
@@ -19,13 +19,7 @@ export default {
 	namespace: 'prodige_skills',
 	packUid: 'xTSjehSB',
 	mcmeta: 'latest',
-	scripts: {
-		beforeSave: (local) => {
-			local.outputFolder = path.join(local.folder, '.build')
-		},
-	},
 	saveOptions: {
-
 	},
 
 } as SandstoneConfig

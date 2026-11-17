@@ -7,6 +7,7 @@
 	"scripts": {
 		"dev:watch": "sand watch",
 		"dev:build": "sand build",
+		"export": "bun ./export.ts",
 		"copy": "bun ./copy.ts",
 		"setup": "bun i",
 		"clean": "rm -rf .sandstone/cache.json .build"

@@ -1,13 +1,18 @@
 // @ts-nocheck
 import fs from 'fs-extra'
 import chalk from 'chalk'
-import { execSync } from 'child_process'
+import { execFileSync, execSync } from 'child_process'
 import readline from 'readline'
 import path from 'path'
 import os from 'os'
 
 const OUTPUT_FILE = 'datapack-destination.txt'
 const SOURCE = path.resolve('.build/datapack')
+const EXPORT_DIR = path.resolve('exports')
+
+function isCodespace(): boolean {
+	return process.env.CODESPACES === 'true' || Boolean(process.env.CODESPACE_NAME)
+}
 
 function getDatapackName(): string {
 	try {
@@ -222,19 +227,41 @@ async function syncDirectory(source: string, destination: string): Promise<void>
 	}
 }
 
+async function exportDatapack(datapackName: string): Promise<string> {
+	if (!(await fs.pathExists(SOURCE))) {
+		throw new Error(`Dossier source introuvable : ${SOURCE}`)
+	}
+
+	await fs.ensureDir(EXPORT_DIR)
+	const archive = path.join(EXPORT_DIR, `${path.basename(datapackName) || 'datapack'}.zip`)
+	await fs.remove(archive)
+
+	execFileSync('zip', ['-qr', archive, '.'], {
+		cwd: SOURCE,
+	})
+
+	return archive
+}
 
 async function main() {
 	const datapackName = getDatapackName()
-	const destination = await getDestination(datapackName)
 
+	if (isCodespace()) {
+		execSync('sand build', { stdio: 'inherit' })
+		const archive = await exportDatapack(datapackName)
+		console.log(chalk.green(`\n✓ Datapack exported to ${path.relative(process.cwd(), archive)}.`))
+		console.log(chalk.gray('Download the ZIP from the VS Code Explorer, then extract it into your world\'s datapacks folder.'))
+		return
+	}
+
+	const destination = await getDestination(datapackName)
+	execSync('sand build', { stdio: 'inherit' })
 	const world = path.basename(path.dirname(path.dirname(destination)))
 	const profile = destination.split(`${path.sep}saves${path.sep}`)[0]
 	const instance = path.basename(profile)
 
 	console.log(`${chalk.gray('Instance:')} ${instance}`)
 	console.log(`${chalk.gray('World:')} ${world}`)
-
-	execSync('sand build', { stdio: 'inherit' })
 
 	await syncDirectory(SOURCE, destination)
 

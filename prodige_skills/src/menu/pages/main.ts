@@ -1,11 +1,10 @@
 import { Bar } from "@lib/bar";
-import { Roman } from "@lib/roman";
 import { Text } from "@lib/text";
 import { Button, Gui, GuiMacro as $, Page } from "@prodigelib/gui";
 import { Shop } from "@src/menu/shop";
 import { Reward } from "@src/misc/reward";
 import { Skill } from "@src/skill";
-import { _, comment, DataVariable, tellraw, Variable, Macro as S } from "sandstone";
+import { _, comment, Data, DataVariable, functionCmd, MCFunction, raw, tellraw, Variable, Macro as S } from "sandstone";
 import { Progress } from "@src/menu/skill/progress";
 import { Preferences } from "@src/menu/preferences";
 import { Tasks } from "./tasks";
@@ -167,57 +166,76 @@ export class Main {
 
 	private static skillBts(g: Gui, p: Page) {
 		let slot = 11;
+		const argsStorage = `${Gui.ns}:main_skill_args`;
+		const rewardStorage = `${Gui.ns}:reward_display`;
+		const component = (text: string) =>
+			`{text:${JSON.stringify(text)},italic:false,color:"white"}`;
 
 		for (const skill of Object.values(Skill.skills)) {
 			const s = slot++;
-			const progress = skill.xp["*"](100)["/"](skill.goal);
-			const nLvl = skill.level["+"](1);
-			const lvlRoman = Roman.get(skill.level);
-			const bar = new Bar(progress.toScore()).toData();
 			const openProgress = () => {
 				Progress.index.set(skill.level["/"](18));
 				g.switch(Progress.getName(skill));
 			};
 
-			_.if(skill.level['>='](100), () => {
-				p.emit(new Button(
-					skill.item, s, $`§d${skill.name} ${lvlRoman}`, [
-					$`§9${skill.name} ${skill.level}`,
-					"",
-					...Text.wrap(skill.description),
-					"",
-					"§f§lProgress:",
-					" §8• §aMaximum level reached!",
-					" §8• §7All skill milestones are complete.",
-					"",
-					"§eClick to view!",
-				], openProgress,
-					1,
-					["!attribute_modifiers"],
-				));
-			}).else(() => {
-				const nextRoman = Roman.get(nLvl);
-				Reward.cases(skill, nLvl, rewards => {
-					p.emit(new Button(
-						skill.item, s, $`§d${skill.name} ${lvlRoman}`, [
-						$`§9${skill.name} ${skill.level}`,
-						"",
-						...Text.wrap(skill.description),
-						"",
-						"§f§lProgress:",
-						$` §8• §7Target: §d${skill.name} ${nextRoman}`,
-						$` §8• §7Progress: §e${progress.show()}%`,
-						$` §8> ${bar} §e${skill.xp.show()}§6/§e${skill.goal}`,
-						"",
-						$`§f§l${skill.name} ${nextRoman} Rewards:`,
-						...rewards.map(r => ` §8• §e${r.name}`),
-						"",
-						"§eClick to view!",
-					], openProgress,
-						1,
-						["!attribute_modifiers"],
-					));
-				});
+			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
+				raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
+				raw(`$data modify storage ${argsStorage} args.nextRoman set value ""`);
+				raw(`$data modify storage ${argsStorage} args.rewardLore set value ""`);
+				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
+				raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
+
+				const description = Text.wrap(skill.description).map(component);
+				const baseLore = [
+					component(`§9${skill.name} $(level)`),
+					component(''),
+					...description,
+					component(''),
+				];
+				const maxLore = [
+					...baseLore,
+					component('§f§lProgress:'),
+					component(' §8• §aMaximum level reached!'),
+					component(' §8• §7All skill milestones are complete.'),
+					component(''),
+					component('§eClick to view!'),
+				].join(',');
+				const progressLore = [
+					...baseLore,
+					component('§f§lProgress:'),
+					component(' §8• §7Target: §d$(skillName) $(nextRoman)'),
+					component(' §8• §7Progress: §e$(progress)%'),
+					component(' §8> $(bar) §e$(xp)§6/§e$(goal)'),
+					component(''),
+					component('§f§l$(skillName) $(nextRoman) Rewards:'),
+					'$(rewardLore)',
+					component(''),
+					component('§eClick to view!'),
+				].join(',');
+
+				raw(`$execute if score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+				raw(`$execute unless score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+			}, { onConflict: 'ignore' });
+
+			p.add({
+				fill: () => {
+					const args = Data('storage', argsStorage, 'args');
+					args.set({});
+					args.select('skill').set(skill.resourceId);
+					args.select('skillName').set(skill.name);
+					args.select('level').set(skill.level);
+					args.select('nextLevel').set(skill.level['+'](1));
+
+					const progress = skill.xp["*"](100)["/"](skill.goal);
+					args.select('progress').set(progress.show());
+					args.select('bar').set(new Bar(progress.toScore()).toData());
+					args.select('xp').set(skill.xp.show());
+					args.select('goal').set(skill.goal);
+					functionCmd(render, 'with', args);
+				},
+				click: () => {
+					p.emit(new Button(skill.item, s, undefined, undefined, openProgress, 1, ["!attribute_modifiers"]));
+				},
 			});
 		}
 

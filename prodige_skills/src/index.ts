@@ -21,6 +21,7 @@ Player.init(() => {
 		Booster.getTimer(type).set(0);
 	}
 });
+
 Action.init();
 Task.init();
 Menu.init();

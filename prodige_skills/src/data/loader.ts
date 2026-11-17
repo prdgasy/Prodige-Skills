@@ -246,5 +246,6 @@ export class Loader {
 		// TASKS
 		Task.tasks = Loader.tasks();
 
+		Reward.registerDisplayData(Object.values(Skill.skills));
 	}
 }

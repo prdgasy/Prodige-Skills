@@ -1,5 +1,5 @@
 import { Bar } from "@lib/bar";
-import { macro as $, smartTellraw } from "@prodigelib/easymacro";
+import { macro as $ } from "@prodigelib/easymacro";
 import type { SkillName } from "@src/data/definitions";
 import { Reward } from "@src/misc/reward";
 import { Tool } from "@src/misc/tool";
@@ -8,12 +8,59 @@ import { Achievement } from "@src/skill/achievement";
 import { Action } from '@src/skill/action';
 import { Title } from "@src/skill/title";
 import { Item } from "@src/types";
-import { _, bossbar, Label, MCFunction, Objective, playsound, say, Score, tellraw, title, Macro as S, Variable } from "sandstone";
+import { _, bossbar, Data, defaultNamespace, functionCmd, Label, MCFunction, Objective, playsound, raw, say, Score, tellraw, title, Macro as S, Variable } from "sandstone";
 import { Ability } from "./ability";
 import { Global } from "@src/global";
 import { Roman } from "@lib/roman";
 import { Float } from "@prodigelib/floatVar";
 import type { TitleOptions } from "./title";
+
+const levelUpArgsStorage = `${defaultNamespace.toString()}:level_up_args`;
+const rewardDisplayStorage = `${defaultNamespace.toString()}:reward_display`;
+const textComponent = (text: string) => JSON.stringify({ text });
+
+const levelUpNotificationRenderStart = MCFunction('skill/level_up/notification/start', () => {
+	raw(`$title @s title {"text":"§eSKILL LEVEL UP!","bold":true}`);
+	raw(`$title @s subtitle {"text":"$(skillName) §7$(previousRoman)➜§d§l$(roman)"}`);
+	_.if(Player.sound, () => playsound('entity.player.levelup', 'master', '@p', '~ ~ ~', 1, 0));
+
+	const rewardsMessage = [
+		textComponent(`${Global.encapsuler}\n`),
+		textComponent(' §e§l$(skillUpper) LEVEL UP! §7$(previousRoman)➜§d§l$(roman) §7§o($(level))\n\n'),
+		textComponent(' §f§lRewards: §8(See the Reward Vault)\n'),
+		'$(rewardNotice)',
+	].join(',');
+	raw(`$tellraw @p [${rewardsMessage}]`);
+}, { onConflict: 'ignore' });
+
+const levelUpNotificationRenderProgress = MCFunction('skill/level_up/notification/progress', () => {
+	const maxProgressMessage = textComponent(
+		' §f§lProgress:\n  §8• §aMaximum level reached!\n  §8• §7You have mastered this skill.\n'
+	);
+	raw(`$execute if score @p $(skill).level matches 100 run tellraw @p [${maxProgressMessage}]`);
+
+	const progressMessage = [
+		textComponent(' §f§lProgress:\n'),
+		textComponent('  §8• §7Next: §d$(skillName) $(nextRoman) §7($(nextLevel))\n'),
+		textComponent('  §8• §7Progress: §e$(progress)%\n'),
+		textComponent('  §8> $(bar) §e$(xp)§6/§e$(goal) Xp\n'),
+	].join(',');
+	raw(`$execute unless score @p $(skill).level matches 100 run tellraw @p [${progressMessage}]`);
+}, { onConflict: 'ignore' });
+
+const levelUpNotification = MCFunction('skill/level_up/notification', () => {
+	raw(`$data modify storage ${levelUpArgsStorage} args.roman set from storage ${rewardDisplayStorage} $(skill).$(level).roman`);
+	raw(`$data modify storage ${levelUpArgsStorage} args.previousRoman set from storage ${rewardDisplayStorage} $(skill).$(previousLevel).roman`);
+	raw(`$data modify storage ${levelUpArgsStorage} args.nextRoman set value ""`);
+	raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${levelUpArgsStorage} args.nextRoman set from storage ${rewardDisplayStorage} $(skill).$(nextLevel).roman`);
+	raw(`$data modify storage ${levelUpArgsStorage} args.rewardNotice set from storage ${rewardDisplayStorage} $(skill).$(level).rewardNotice`);
+
+	functionCmd(
+		levelUpNotificationRenderStart,
+		'with',
+		Data('storage', levelUpArgsStorage, 'args'),
+	);
+}, { onConflict: 'ignore' });
 
 export type SkillOptions = {
 	name: string,
@@ -114,7 +161,7 @@ export class Skill {
 			this.level["++"];
 			_.if(this.level['=='](100), () => this.xp.set(0));
 
-			Reward.cases(this, this.level, Reward.enqueueAll);
+			Reward.cases(this, this.level, rewards => Reward.runAll(rewards));
 			for (const title of this.titles) {
 				if (title.obtain === 'level') _.if(this.level['=='](title.requires), () => title.unlock());
 			}
@@ -166,27 +213,23 @@ export class Skill {
 	}
 
 	private levelUpNotif() {
-		_.if(Skill.levelUpNotifState, () => {
-			const roman = Roman.get(this.level);
-			const prevRoman = Roman.get(this.level['-'](1));
-
-			Reward.cases(this, this.level, (rewards: Reward[]) => {
-				title('@s').title([{ text: '§eSKILL LEVEL UP!', bold: true }]);
-				_.with([roman, prevRoman], () => {
-					S.title('@s').subtitle(S`${this.name} §7${prevRoman}➜§d§l${roman}`);
-				});
-
-				_.if(Player.sound, () => playsound('entity.player.levelup', 'master', '@p', '~ ~ ~', 1, 0));
+		const fn = MCFunction(`skill/${this.resourceId}/level_up/notification`, () => {
+			_.if(Skill.levelUpNotifState, () => {
+				const args = Data('storage', levelUpArgsStorage, 'args');
+				args.set({});
+				args.select('skill').set(this.resourceId);
+				args.select('skillName').set(this.name);
+				args.select('skillUpper').set(this.name.toUpperCase());
+				args.select('level').set(this.level);
+				args.select('previousLevel').set(this.level['-'](1));
+				args.select('nextLevel').set(this.level['+'](1));
 
 				const progress = this.xp['*'](100)['/'](this.goal);
-				const bar = new Bar(progress.toScore());
-
-				smartTellraw([
-					Global.encapsuler + '\n',
-					$` §e§l${this.name.toUpperCase()} LEVEL UP! §7${prevRoman}➜§d§l${roman} §7§o(${this.level})\n\n`,
-					` §f§lRewards: §8(See the Reward Vault)\n`,
-					...rewards.map(r => ` §8• ${r.name}\n`)
-				], '@p');
+				args.select('progress').set(progress.show());
+				args.select('bar').set(new Bar(progress.toScore()).toData());
+				args.select('xp').set(this.xp.show());
+				args.select('goal').set(this.goal);
+				functionCmd(levelUpNotification, 'with', args);
 
 				for (const unlockedTitle of this.titles) {
 					if (unlockedTitle.obtain === 'level') {
@@ -196,26 +239,16 @@ export class Skill {
 					}
 				}
 
-				_.if(this.level['=='](100), () => {
-					smartTellraw([
-						' §f§lProgress:\n',
-						'  §8• §aMaximum level reached!\n',
-						'  §8• §7You have mastered this skill.\n'
-					]);
-				}).else(() => {
-					const nextRoman = Roman.get(this.level['+'](1));
-					smartTellraw([
-						$` §f§lProgress:\n`,
-						$`  §8• §7Next: §d${this.name} ${nextRoman} §7(${this.level['+'](1)})\n`,
-						$`  §8• §7Progress: §e${progress.show()}%\n`,
-						$`  §8> ${bar.toData()} §e${this.xp.show()}§6/§e${this.goal} Xp\n`,
-					]);
-				});
+				functionCmd(
+					levelUpNotificationRenderProgress,
+					'with',
+					args,
+				);
+				tellraw('@p', [Global.encapsuler]);
 			});
+		}, { onConflict: 'ignore' });
 
-
-			tellraw('@p', [Global.encapsuler]);
-		});
+		return fn();
 	}
 
 	public firstJoin() {

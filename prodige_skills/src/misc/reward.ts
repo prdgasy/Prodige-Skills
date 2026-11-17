@@ -5,7 +5,7 @@ import { Player } from "@src/player";
 import type { Skill } from "@src/skill";
 import type { Ability } from "@src/skill/ability";
 import type { Item } from "@src/types";
-import { Macro as $, _, execute, Objective, Score, Variable } from "sandstone";
+import { Data, defaultNamespace, functionCmd, Macro as $, _, execute, MCFunction, Objective, Score, Variable } from "sandstone";
 
 
 
@@ -25,6 +25,46 @@ export class Reward {
 	public static legendary: () => Reward[];
 	private static reusableItemRewards = new Map<string, Reward>();
 	private static reusableXpRewards = new Map<string, Reward>();
+	private static rewardFunctions = new WeakMap<Reward, ReturnType<typeof MCFunction>>();
+	private static nextFunctionId = 0;
+	private readonly functionId: number;
+
+	public static registerDisplayData(skills: Skill[]) {
+		const storageId = `${defaultNamespace.toString()}:reward_display`;
+
+		for (const skill of skills) {
+			MCFunction(`menu/reward_display/load/${skill.resourceId}`, () => {
+				const skillData = Data('storage', storageId, skill.resourceId);
+				skillData.set({});
+
+				for (const [level, rewards] of skill.rewards) {
+					skillData.select(String(level)).set({
+						roman: Roman.get(level),
+						rewardLore: Reward.loreComponents(rewards),
+							mainRewardLore: Reward.loreComponents(rewards, '§e'),
+							rewardNotice: Reward.noticeComponents(rewards),
+					});
+				}
+			}, { runOnLoad: true, onConflict: 'ignore' });
+		}
+	}
+
+	public static loreComponents(rewards: Reward[], nameColor = ''): string {
+		const bullet = ' §8• ';
+		return Reward.join(rewards)
+			.map(text => JSON.stringify({
+				text: `${bullet}${nameColor}${text.slice(bullet.length)}`,
+				italic: false,
+				color: 'white',
+			}))
+			.join(',');
+	}
+
+	public static noticeComponents(rewards: Reward[]): string {
+		return Reward.join(rewards)
+			.map(text => JSON.stringify({ text: `${text}\n` }))
+			.join(',');
+	}
 
 	constructor(
 		name: string,
@@ -36,6 +76,7 @@ export class Reward {
 		this.give = give;
 		this.icon = opt.icon ?? 'chest';
 		this.takesPlace = opt.takesPlace ?? false;
+		this.functionId = Reward.nextFunctionId++;
 
 		const objectiveName = 'reward.pending.' + this.resourceId;
 		this.pending = Objective.create(objectiveName)('@p');
@@ -68,6 +109,19 @@ export class Reward {
 
 	public static enqueueAll(rewards: Reward[]) {
 		rewards.forEach(reward => Reward.enqueue(reward));
+	}
+
+	public static runAll(rewards: Reward[]) {
+		for (const reward of rewards) {
+			let fn = Reward.rewardFunctions.get(reward);
+			if (!fn) {
+				fn = MCFunction(`misc/reward/execute/${reward.functionId}`, () => {
+					Reward.enqueue(reward);
+				}, { onConflict: 'ignore' });
+				Reward.rewardFunctions.set(reward, fn);
+			}
+			functionCmd(fn);
+		}
 	}
 
 	public static vaultAll(rewards: Reward[]) {
