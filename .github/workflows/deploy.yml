@@ -23,6 +23,7 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Copy datapack
+        id: copy
         shell: powershell
         run: |
           $source = "$env:GITHUB_WORKSPACE\code\.sandstone\output\datapack"
@@ -39,3 +40,32 @@ jobs:
           if ($LASTEXITCODE -ge 8) {
             throw "Robocopy failed with exit code $LASTEXITCODE"
           }
+
+
+      - name: Windows notification
+        if: always()
+        shell: powershell
+        env:
+          COPY_OUTCOME: ${{ steps.copy.outcome }}
+        run: |
+          Add-Type -AssemblyName System.Windows.Forms
+          Add-Type -AssemblyName System.Drawing
+
+          $notify = New-Object System.Windows.Forms.NotifyIcon
+          $notify.Icon = [System.Drawing.SystemIcons]::Information
+          $notify.Visible = $true
+
+          if ($env:COPY_OUTCOME -eq "success") {
+            $notify.BalloonTipTitle = "Minecraft"
+            $notify.BalloonTipText = "Datapack déployé avec succès !"
+            $notify.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Info
+          } else {
+            $notify.BalloonTipTitle = "Minecraft - Erreur"
+            $notify.BalloonTipText = "Le déploiement du datapack a échoué."
+            $notify.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Error
+          }
+
+          $notify.ShowBalloonTip(10000)
+          Start-Sleep -Seconds 10
+          $notify.Dispose()
+
