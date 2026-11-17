@@ -14,7 +14,7 @@ import { MCFunction, say, tellraw } from 'sandstone';
 
 MCFunction('load', () => {
   tellraw("@a", "§eProdige Skills Loaded");
-  say("test");
+  say("teomjoost");
 }, { runOnLoad: true })
 
 Loader.init();
