@@ -1,0 +1,32 @@
+{
+  "name": "Prodige Skills",
+  "version": "3.0.0",
+  "description": "A pack created with Sandstone",
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "dev:watch": "sand watch",
+    "dev:build": "sand build",
+    "export": "bun export.ts",
+    "setup": "bun i",
+    "clean": "rm -rf .sandstone/cache.json .build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sandstone-cli": "^2.6.9"
+  },
+  "dependencies": {
+    "@prodigelib/cjmap": "github:prdgasy/cjmap",
+    "@prodigelib/easymacro": "github.com:prdgasy/easy-macro",
+    "@prodigelib/floatVar": "github.com:prdgasy/floatVar",
+    "@prodigelib/gui": "github.com:prdgasy/prodigelib-gui",
+    "@prodigelib/uninstaller": "github.com:prdgasy/uninstaller",
+    "sandstone": "~1.2.36"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}

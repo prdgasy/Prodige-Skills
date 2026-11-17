@@ -20,7 +20,7 @@ const rewardDisplayStorage = `${defaultNamespace.toString()}:reward_display`;
 const textComponent = (text: string) => JSON.stringify({ text });
 
 const levelUpNotificationRenderStart = MCFunction('skill/level_up/notification/start', () => {
-	raw(`$title @s title {"text":"§eSKILL LEVEL UP!","bold":true}`);
+	raw(`title @s title {"text":"§eSKILL LEVEL UP!","bold":true}`);
 	raw(`$title @s subtitle {"text":"$(skillName) §7$(previousRoman)➜§d§l$(roman)"}`);
 	_.if(Player.sound, () => playsound('entity.player.levelup', 'master', '@p', '~ ~ ~', 1, 0));
 
@@ -51,7 +51,7 @@ const levelUpNotificationRenderProgress = MCFunction('skill/level_up/notificatio
 const levelUpNotification = MCFunction('skill/level_up/notification', () => {
 	raw(`$data modify storage ${levelUpArgsStorage} args.roman set from storage ${rewardDisplayStorage} $(skill).$(level).roman`);
 	raw(`$data modify storage ${levelUpArgsStorage} args.previousRoman set from storage ${rewardDisplayStorage} $(skill).$(previousLevel).roman`);
-	raw(`$data modify storage ${levelUpArgsStorage} args.nextRoman set value ""`);
+	raw(`data modify storage ${levelUpArgsStorage} args.nextRoman set value ""`);
 	raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${levelUpArgsStorage} args.nextRoman set from storage ${rewardDisplayStorage} $(skill).$(nextLevel).roman`);
 	raw(`$data modify storage ${levelUpArgsStorage} args.rewardNotice set from storage ${rewardDisplayStorage} $(skill).$(level).rewardNotice`);
 
@@ -132,7 +132,7 @@ export class Skill {
 			this.totalXp.add(addedXp);
 			this.ability?.roll();
 
-			_.if(_.and(this.xp['>='](this.goal), this.level['<'](100)), () => {
+			 _.if(_.and(this.xp['>='](this.goal), this.level['<'](100)), () => {
 				this.levelUp();
 			});
 
@@ -186,12 +186,11 @@ export class Skill {
 
 			_.with([key, roman, xp, this.goal, added, pointAdded, progress, round], () => {
 				const id = S`prodige_skills.${this.resourceId}.${key}`;
+        S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §e${xp}§6/§e${this.goal} Xp §8• §7${progress}% §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
 
 				_.if(this.level['>='](100), () => {
-					S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §aMAX LEVEL §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
-				}).else(() => {
-					S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §e${xp}§6/§e${this.goal} Xp §8• §7${progress}% §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
-				});
+					S.bossbar.set(id).name(S`"§d${this.name} ${roman} §8| §aMAX LEVEL §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
+				})
 				_.if(this.level['=='](0), () => S.bossbar.set(id).name(`§aUnlocking ${this.name}...`))
 
 				S.bossbar.set(id).max(this.goal);
@@ -234,7 +233,7 @@ export class Skill {
 				for (const unlockedTitle of this.titles) {
 					if (unlockedTitle.obtain === 'level') {
 						_.if(this.level['=='](unlockedTitle.requires), () => {
-							Player.send(`Title unlocked! ${unlockedTitle.name}\n`, '§a');
+							Player.send(`Title unlocked! ${unlockedTitle.name}\\n`, '§a');
 						});
 					}
 				}

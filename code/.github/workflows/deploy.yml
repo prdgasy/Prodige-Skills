@@ -1,0 +1,44 @@
+
+name: Build and Deploy Minecraft Datapack
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build datapack
+        run: sand build
+
+      - name: Copy datapack
+        shell: powershell
+        run: |
+          $source = "$env:GITHUB_WORKSPACE\.sandstone\output\datapack"
+          $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks"
+
+          if (!(Test-Path $source)) {
+            throw "Datapack output not found: $source"
+          }
+
+          New-Item -ItemType Directory -Force -Path $destination | Out-Null
+          robocopy $source $destination /MIR
+
+          if ($LASTEXITCODE -ge 8) {
+            throw "Robocopy failed with exit code $LASTEXITCODE"
+          }

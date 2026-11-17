@@ -10,6 +10,11 @@ import { Action } from './skill/action';
 import { Crate } from './misc/crate';
 import { Achievement } from './skill/achievement';
 import { Title } from './skill/title';
+import { MCFunction, tellraw } from 'sandstone';
+
+MCFunction('load', () => {
+  tellraw("@a", "§eProdige Skills Loaded");
+}, { runOnLoad: true })
 
 Loader.init();
 Player.init(() => {
@@ -33,3 +38,4 @@ Title.init();
 Global.generateCleanFn();
 
 Uninstaller.generate(Global);
+

@@ -6,15 +6,46 @@ Starter template for creating Minecraft datapacks and resource packs with [Sands
 
 - **Minecraft SNBT supports single-quoted strings** — `'foo'` is valid NBT and parses the same as `"foo"`. Single quotes have been supported in SNBT since 1.13. Don't "fix" generated output that uses single quotes; it's intentional (Sandstone's `JSONTextComponentClass.toString()` emits single-quoted JSON, which is valid NBT).
 
+### Commands must be generated inside an `MCFunction` context
+
+Anything that produces Minecraft commands — `say(...)`, `execute...`, `_.if(...)`, `_.while(...)`, `_.forScore(...)`, `_.switch(...)`, `Objective.create(...)`, `Selector(...)`, etc. — pushes onto the active MCFunction's context stack when it's called. If there's no MCFunction on the stack (i.e. you called the code at the top level of a module, outside any `MCFunction(...)` body or callback), the command has nowhere to go and the build will fail or produce broken output.
+
+**Rule:** any code that may emit commands must only run *inside* an `MCFunction` body, or *inside a JS function/callback that itself only runs from an MCFunction body*. Never call command-producing APIs at the top level of a `.ts` file:
+
+```ts
+// ❌ BAD — `say` runs at module top level, no MCFunction context
+import { say, MCFunction } from 'sandstone'
+say('hi')                     // throws / broken output
+MCFunction('hello', () => {
+  say('hi')                   // fine
+})
+
+// ✅ GOOD — define helper functions that take commands indirectly,
+//    then call the helpers from inside MCFunction bodies.
+import { _, MCFunction, say } from 'sandstone'
+
+const checkReady = () => {
+  _.if(_.entity('@s[tag=ready]')).return()
+  say('not ready')
+}
+
+MCFunction('tick', checkReady) // callback is run inside the MCFunction
+```
+
+The same applies to flow callbacks: `_.if(cond, cb)` is fine because `cb` runs inside the `_.if` body, which is itself created from inside an MCFunction. The point is that the call chain always bottoms out in an `MCFunction(...)` body so the context stack has somewhere to anchor.
+
+Imports of command-producing APIs at the top level are fine — only the *call* has to happen inside an MCFunction.
+
 ### Cache & clean rebuilds
 
-- **Trust the CLI's cache.** If a file in `.build/` isn't rewritten on a rebuild, that's intentional — Sandstone hashes the fully-visited-and-serialized resource data in-memory and compares it against the hash stored in `.sandstone/cache.json`. A stale-looking file means the generator produced the same bytes as the previous run, not that the build skipped it.
-- **To force a clean rebuild, delete `.sandstone/` and `.build/`.** The `.sandstone/cache.json` tracks resource state across builds, so clearing only `.build/` leaves stale cache entries that suppress regeneration.
+- **NEVER delete `.sandstone/`.** Not `.sandstone/output/`, not `.sandstone/cache.json`, not the whole folder. The CLI's incremental build detects source changes via in-memory hashing against `.sandstone/cache.json` and rewrites exactly the files that changed — if you see a stale-looking file after a build, the generator deliberately produced the same bytes. Do NOT clear `.sandstone/` to "force a fresh build"; just re-run `bun dev:build` after editing source. The only legitimate reason to touch `.sandstone/` is when the user explicitly asks for a clean rebuild, and even then the user does it themselves.
+- If the build appears to ignore a change you made to source, first verify the change is syntactically valid (build error? type error?) and that you re-ran `bun dev:build` from the template directory. The cache is not the cause.
+- **To force a clean rebuild, delete the entire `.sandstone/` folder**, not just `.sandstone/output/`. The `.sandstone/cache.json` tracks resource state across builds; clearing only `output/` leaves stale cache entries that suppress regeneration.
 
 ## Commands
 
 ```bash
-bun dev:build    # Build the pack (outputs to `.build/datapack/` and `.build/resourcepack/`)
+bun dev:build    # Build the pack (outputs to `.sandstone/output/`)
 bun dev:build --debug  # Same, but mirror console output to `.sandstone/build-debug.log` (overwritten each run) for targeted inspection
 bun dev:watch    # Watch mode - rebuilds on file changes, run this in a background shell and read from `.sandstone/watch.log` rather than your own background shell log
 ```
@@ -28,9 +59,7 @@ src/
 ├── index.ts              # Entry point - import your files here
 └── *.ts                  # Your datapack code files
 sandstone.config.ts       # Pack configuration (name, namespace, formats)
-.sandstone/               # Generated resource cache
-└── cache.json
-.build/                   # Generated packs (created on build)
+.sandstone/output/        # Generated packs (created on build)
 ├── datapack/             # Generated datapack
 │   ├── pack.mcmeta
 │   └── data/
@@ -52,7 +81,7 @@ sandstone.config.ts       # Pack configuration (name, namespace, formats)
 ```
 
 **Finding generated files:**
-- MCFunctions: `.build/datapack/data/<namespace>/function/<name>.mcfunction`
+- MCFunctions: `.sandstone/output/datapack/data/<namespace>/function/<name>.mcfunction`
 - The namespace is set in `sandstone.config.ts` (defaults to "default")
 - Nested function names like `MCFunction('foo/bar', ...)` create `foo/bar.mcfunction`
 
@@ -390,6 +419,26 @@ ItemPredicate('*').exact('minecraft:hide_tooltip', {})  // ✓ Empty object for 
 
 **Why the wrappers?**
 Minecraft's NBT (Named Binary Tag) format distinguishes between different numeric types (byte, short, int, long, float, double). The wrappers ensure your values have the correct NBT type tag.
+
+**SNBT suffix is byte-visible** — wrappers change the literal that ends up in your commands. Raw `11` serializes as `11d` (double); `NBT.float(11)` serializes as `11f`. Same value, different bytes, different downstream behavior (math reads, predicate matches, comparisons).
+
+```typescript
+DataVariable(11)               // → ... set value 11d   (raw number → double)
+DataVariable(NBT.float(11))    // → ... set value 11f   (explicit float)
+DataVariable(NBT.int(11))      // → ... set value 11    (explicit int, no suffix)
+```
+
+**Float-typed contexts need `NBT.float` explicitly.** The Math block and any float DataPoint read `Nf` only — a raw `Nd` will be parsed and the result depends on MC's coercion rules, which differ by context. Don't rely on "it looks like a float":
+
+```typescript
+// ❌ silent double — math reads as double, downstream ops may misbehave
+const d = funnyMath(DataVariable(11))
+
+// ✓ explicit float — SNBT is `11f`, math sees a float
+const d = funnyMath(DataVariable(NBT.float(11)))
+```
+
+When in doubt, wrap. `NBT.float` and `NBT.int` are zero-cost at build time; raw numbers only differ by being typed differently.
 
 ### Resources
 [docs/features/resources](https://github.com/sandstone-mc/sandstone-documentation/tree/master/docs/features/resources)

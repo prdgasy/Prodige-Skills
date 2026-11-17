@@ -5,6 +5,7 @@ import { Criteria, Item } from "@src/types";
 import { MCFunction, Objective, Score, Variable, _, execute, say, tellraw } from "sandstone";
 import { Float } from "@prodigelib/floatVar";
 import { Booster } from "@src/misc/booster";
+
 export class Action {
 	public parent: Skill;
 	public name: string;
@@ -53,7 +54,6 @@ export class Action {
 				if (achievement.criteria === 'dummy') achievement.progress.add(this.watcher);
 			}
 
-
 			this.parent.onEventTriggered(Action.addedXp, Action.addedPts);
 
 			this.watcher.reset();
@@ -76,6 +76,7 @@ export class Action {
 
 			_.if(_.not(this.eventListened), () => Skill.bossbarCount.reset()
 			)
+
 			this.eventListened.set(0);
 		}
 			, { runEvery: '5s' })
