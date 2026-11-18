@@ -1,4 +1,4 @@
-scoreboard players add @p prodige_skills.reward.pending.1000_pts 1
+scoreboard players add @p prodige_skills.reward.pending.1700_pts 1
 scoreboard players add @p prodige_skills.reward.pending.rare_crate_key 1
 scoreboard players add @p prodige_skills.reward.pending.100-250_random_skill_xp 1
 scoreboard players add @p prodige_skills.foraging.achievement 1
