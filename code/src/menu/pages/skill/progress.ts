@@ -20,15 +20,15 @@ export class Progress {
 		const rewardStorage = `${Gui.ns}:reward_display`;
 		const args = Data('storage', argsStorage, 'args');
 		const levelObjective = String(Progress.renderLevel.objective);
-
+    const levelScore = 'prodige_skills.$(skill).level';
 		const renderLevel = MCFunction('menu/progress/render', () => {
 			raw(`$scoreboard players set #pg_level ${levelObjective} $(level)`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman run data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
 			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).rewardLoreSnbt run data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(level).rewardLoreSnbt`);
-			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level < #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/locked with storage ${argsStorage} args`);
-			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level > #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/reached with storage ${argsStorage} args`);
-			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level = #pg_level ${levelObjective} unless score #pg_level ${levelObjective} matches 100 run function ${Gui.ns}:menu/progress/render/current with storage ${argsStorage} args`);
-			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s $(skill).level = #pg_level ${levelObjective} if score #pg_level ${levelObjective} matches 100 run function ${Gui.ns}:menu/progress/render/max with storage ${argsStorage} args`);
+			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s ${levelScore} < #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/locked with storage ${argsStorage} args`);
+			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s ${levelScore} > #pg_level ${levelObjective} run function ${Gui.ns}:menu/progress/render/reached with storage ${argsStorage} args`);
+			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s ${levelScore} = #pg_level ${levelObjective} unless score #pg_level ${levelObjective} matches 100 run function ${Gui.ns}:menu/progress/render/current with storage ${argsStorage} args`);
+			raw(`$execute if data storage ${rewardStorage} $(skill).$(level).roman if score @s ${levelScore} = #pg_level ${levelObjective} if score #pg_level ${levelObjective} matches 100 run function ${Gui.ns}:menu/progress/render/max with storage ${argsStorage} args`);
 		}, { onConflict: 'ignore' });
 
 		const component = (text: string) =>

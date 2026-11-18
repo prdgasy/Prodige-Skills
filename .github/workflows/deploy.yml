@@ -24,13 +24,11 @@ jobs:
 
       
       
+     
       - name: Copy datapack
         id: copy
         shell: powershell
         run: |
-          Add-Type -AssemblyName System.Windows.Forms
-          Add-Type -AssemblyName System.Drawing
-
           $source = "$env:GITHUB_WORKSPACE\code\.sandstone\output\datapack"
           $destination = "C:\Users\TOSHIBA\AppData\Roaming\ModrinthApp\profiles\Data_Resource Pack Modpack\saves\FRIANDISE\datapacks\prodige_skills"
 
@@ -38,82 +36,157 @@ jobs:
             throw "Datapack output not found: $source"
           }
 
-          New-Item -ItemType Directory -Force -Path $destination | Out-Null
+          $scriptPath = Join-Path $env:RUNNER_TEMP "datapack-progress.ps1"
 
-          $form = New-Object System.Windows.Forms.Form
-          $form.Text = "Minecraft - Déploiement"
-          $form.Size = New-Object System.Drawing.Size(380, 155)
-          $form.StartPosition = "CenterScreen"
-          $form.FormBorderStyle = "FixedDialog"
-          $form.MaximizeBox = $false
-          $form.MinimizeBox = $false
-          $form.TopMost = $true
+          $progressScript = @'
+          param(
+            [string]$Source,
+            [string]$Destination
+          )
 
-          $label = New-Object System.Windows.Forms.Label
-          $label.Text = "Déploiement du datapack en cours..."
-          $label.Location = New-Object System.Drawing.Point(18, 18)
-          $label.Size = New-Object System.Drawing.Size(330, 25)
-          $label.Font = New-Object System.Drawing.Font("Segoe UI", 10)
-          $form.Controls.Add($label)
+          $ErrorActionPreference = "Stop"
 
-          $progress = New-Object System.Windows.Forms.ProgressBar
-          $progress.Location = New-Object System.Drawing.Point(18, 55)
-          $progress.Size = New-Object System.Drawing.Size(330, 22)
-          $progress.Style = "Marquee"
-          $progress.MarqueeAnimationSpeed = 25
-          $form.Controls.Add($progress)
+          function Format-Size([double]$Bytes) {
+            if ($Bytes -ge 1MB) { return "{0:N2} MB" -f ($Bytes / 1MB) }
+            if ($Bytes -ge 1KB) { return "{0:N2} KB" -f ($Bytes / 1KB) }
+            return "{0:N0} B" -f $Bytes
+          }
 
-          $status = New-Object System.Windows.Forms.Label
-          $status.Text = "Synchronisation des fichiers..."
-          $status.Location = New-Object System.Drawing.Point(18, 88)
-          $status.Size = New-Object System.Drawing.Size(330, 22)
-          $form.Controls.Add($status)
+          Clear-Host
+          $Host.UI.RawUI.WindowTitle = "Minecraft | Datapack Deployment"
 
-          $arguments = "`"$source`" `"$destination`" /MIR /NFL /NDL /NJH /NJS /NP"
+          Write-Host ""
+          Write-Host "  MINECRAFT DATAPACK DEPLOYMENT" -ForegroundColor Cyan
+          Write-Host "  ----------------------------------------" -ForegroundColor DarkGray
+          Write-Host ""
+          Write-Host "  Source      : Compiled datapack" -ForegroundColor Gray
+          Write-Host "  Destination : Minecraft - FRIANDISE" -ForegroundColor Gray
+          Write-Host ""
+
+          New-Item -ItemType Directory -Force -Path $Destination | Out-Null
+
+          $files = @(Get-ChildItem -LiteralPath $Source -File -Recurse)
+
+          $toCopy = @(
+            foreach ($file in $files) {
+              $relative = $file.FullName.Substring($Source.TrimEnd('\').Length).TrimStart('\')
+              $target = Join-Path $Destination $relative
+
+              $needsCopy = $true
+
+              if (Test-Path -LiteralPath $target) {
+                $existing = Get-Item -LiteralPath $target
+                $needsCopy = (
+                  $existing.Length -ne $file.Length -or
+                  $existing.LastWriteTimeUtc -ne $file.LastWriteTimeUtc
+                )
+              }
+
+              if ($needsCopy) {
+                [PSCustomObject]@{
+                  Path = $target
+                  Size = [double]$file.Length
+                }
+              }
+            }
+          )
+
+          $totalBytes = ($toCopy | Measure-Object -Property Size -Sum).Sum
+          if (!$totalBytes) { $totalBytes = 0 }
+
+          $totalFiles = $toCopy.Count
+          $log = Join-Path $env:TEMP "datapack-robocopy.log"
+
+          Write-Host "  Files to update : $totalFiles" -ForegroundColor White
+          Write-Host "  Transfer size   : $(Format-Size $totalBytes)" -ForegroundColor White
+          Write-Host ""
+          Write-Host "  Synchronizing..." -ForegroundColor Yellow
+
+          $arguments = "`"$Source`" `"$Destination`" /MIR /MT:8 /R:2 /W:1 /NFL /NDL /NJH /NJS /NP /LOG:`"$log`""
 
           $process = Start-Process -FilePath "robocopy.exe" `
             -ArgumentList $arguments -PassThru -WindowStyle Hidden
 
-          $timer = New-Object System.Windows.Forms.Timer
-          $timer.Interval = 300
-          $script:finished = $false
-          $script:copyCode = -1
-          $script:closeAt = [DateTime]::MaxValue
+          $watch = [System.Diagnostics.Stopwatch]::StartNew()
+          $previousBytes = 0
+          $previousTime = 0
 
-          $timer.Add_Tick({
-            if (!$script:finished -and $process.HasExited) {
-              $script:copyCode = $process.ExitCode
-              $script:finished = $true
-              $progress.Style = "Continuous"
-              $progress.MarqueeAnimationSpeed = 0
+          while (!$process.HasExited) {
+            $copiedBytes = 0
+            $completedFiles = 0
 
-              if ($script:copyCode -lt 8) {
-                $progress.Value = 100
-                $label.Text = "Déploiement terminé !"
-                $status.Text = "Datapack copié avec succès."
-              } else {
-                $label.Text = "Échec du déploiement !"
-                $status.Text = "Code erreur Robocopy : $script:copyCode"
-                $progress.Value = 0
+            foreach ($item in $toCopy) {
+              if (Test-Path -LiteralPath $item.Path) {
+                $length = (Get-Item -LiteralPath $item.Path).Length
+                $copiedBytes += [Math]::Min($length, $item.Size)
+
+                if ($length -ge $item.Size) {
+                  $completedFiles++
+                }
               }
-
-              $script:closeAt = [DateTime]::Now.AddSeconds(5)
             }
 
-            if ($script:finished -and [DateTime]::Now -ge $script:closeAt) {
-              $timer.Stop()
-              $form.Close()
+            $percent = if ($totalBytes -gt 0) {
+              [Math]::Min(99, [int](100 * $copiedBytes / $totalBytes))
+            } else {
+              99
             }
-          })
 
-          $timer.Start()
-          [System.Windows.Forms.Application]::Run($form)
-          $timer.Dispose()
-          $form.Dispose()
+            $elapsed = $watch.Elapsed.TotalSeconds
+            $speed = if ($elapsed -gt $previousTime) {
+              ($copiedBytes - $previousBytes) / ($elapsed - $previousTime)
+            } else { 0 }
 
-          if ($script:copyCode -ge 8) {
-            throw "Robocopy failed with exit code $script:copyCode"
+            $status = "{0}% | {1}/{2} files | {3}/{4}" -f `
+              $percent, $completedFiles, $totalFiles, `
+              (Format-Size $copiedBytes), (Format-Size $totalBytes)
+
+            $operation = "Speed: $(Format-Size $speed)/s"
+
+            Write-Progress `
+              -Activity "Minecraft Datapack Deployment" `
+              -Status $status `
+              -CurrentOperation $operation `
+              -PercentComplete $percent
+
+            $previousBytes = $copiedBytes
+            $previousTime = $elapsed
+
+            Start-Sleep -Milliseconds 400
+            $process.Refresh()
           }
 
-          Write-Host "Datapack deployed successfully!"
+          $process.WaitForExit()
+          $code = $process.ExitCode
+          $watch.Stop()
+
+          Write-Progress -Activity "Minecraft Datapack Deployment" -Completed
+
+          Write-Host ""
+
+          if ($code -ge 8) {
+            Write-Host "  DEPLOYMENT FAILED" -ForegroundColor Red
+            Write-Host "  Robocopy exit code: $code" -ForegroundColor Red
+            Start-Sleep -Seconds 5
+            exit 1
+          }
+
+          Write-Host "  DEPLOYMENT SUCCESSFUL!" -ForegroundColor Green
+          Write-Host "  Files synchronized: $totalFiles" -ForegroundColor White
+          Write-Host "  Duration: $($watch.Elapsed.ToString('mm\:ss'))" -ForegroundColor Gray
+          Write-Host ""
+          Start-Sleep -Seconds 4
+          exit 0
+          '@
+
+          Set-Content -Path $scriptPath -Value $progressScript -Encoding UTF8
+
+          $arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`" -Source `"$source`" -Destination `"$destination`""
+
+          $window = Start-Process -FilePath "powershell.exe" `
+            -ArgumentList $arguments -PassThru -Wait
+
+          if ($window.ExitCode -ne 0) {
+            throw "Datapack deployment failed."
+          }
 
