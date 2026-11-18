@@ -102,12 +102,7 @@ export class Progress {
 						functionCmd(renderLevel, 'with', args);
 					});
 				});
-			},
-			click: () => {
-				for (let slot = 0; slot < 18; slot++) {
-					p.emit(new Button('stone', slot, undefined, undefined, () => { }));
-				}
-			},
+			}
 		});
 
 		// Navigation

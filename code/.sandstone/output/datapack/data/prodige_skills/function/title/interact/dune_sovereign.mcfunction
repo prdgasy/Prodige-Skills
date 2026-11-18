@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.dune_sovereign] run return run function prodige_skills:title/interact/dune_sovereign/0_if/return_run/if
-function prodige_skills:title/interact/dune_sovereign/if

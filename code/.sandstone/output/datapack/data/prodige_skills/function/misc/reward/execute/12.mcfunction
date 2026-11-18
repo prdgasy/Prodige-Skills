@@ -1,1 +1,1 @@
-execute unless entity @p[tag=prodige_skills.title.owned.canopy_keeper] run tag @p add prodige_skills.title.owned.canopy_keeper
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_canopy_keeper] run tag @p add prodige_skills.title.owned.new_title_canopy_keeper

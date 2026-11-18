@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_verdant_sovereign] run return run function prodige_skills:title/interact/new_title_verdant_sovereign/0_if/return_run
+function prodige_skills:title/interact/new_title_verdant_sovereign/if

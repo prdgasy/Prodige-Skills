@@ -1,0 +1,2 @@
+# prodige_skills::tasks::fill::macro -> §cTask Refresh §8• §c$(macro_arg_4052)m(4)
+$item replace entity @s container.4 with anvil[custom_name={text: "§cTask Refresh §8• §c$(macro_arg_4052)m", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§7A fresh set of challenges", italic: false, color: "white"},{text: "§7is on its way.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§7Time until refresh: §c$(macro_arg_4053)m", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

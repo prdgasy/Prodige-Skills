@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §cApex Predator$(macro_arg_3733)($(macro_arg_3732))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3732)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro99/execute_unless

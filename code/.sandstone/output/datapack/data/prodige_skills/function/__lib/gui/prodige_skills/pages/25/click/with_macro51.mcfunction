@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §aHeart of the Forest$(macro_arg_3493)($(macro_arg_3492))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3492)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro51/execute_unless

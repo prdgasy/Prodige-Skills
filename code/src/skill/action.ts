@@ -2,7 +2,7 @@ import { Global } from "@src/global";
 import { Player } from "@src/player";
 import { Skill } from "@src/skill";
 import { Criteria, Item } from "@src/types";
-import { MCFunction, Objective, Score, Variable, _, execute, say, tellraw } from "sandstone";
+import { MCFunction, Objective, Score, Variable, _, execute } from "sandstone";
 import { Float } from "@prodigelib/floatVar";
 import { Booster } from "@src/misc/booster";
 
@@ -23,8 +23,6 @@ export class Action {
 	private criteria: Criteria;
 	private watcher: Score;
 
-	private static eventListened = Variable(0);
-
 	// static score = Objective.create('on_event');
 
 	constructor(parent: Skill, name: string, item: Item, xp: number, pts: number, criteria = "dummy" as Criteria) {
@@ -43,7 +41,6 @@ export class Action {
 
 	private trigger() {
 		const fn = MCFunction(`on_event/trigger/${Global.toResource(this.name)}`, () => {
-			Action.eventListened.set(1);
 			Action.addedXp.set(Float.variable(this.xp)['*'](Booster.getMult('Xp'))["*"](this.watcher));
 			Action.addedPts.set(Variable(this.pts)['*'](Booster.getMult('Pts')["*"](this.watcher)));
 
@@ -74,10 +71,6 @@ export class Action {
 						_.if(event.watcher['>'](0), () => event.trigger())
 			})
 
-			_.if(_.not(this.eventListened), () => Skill.bossbarCount.reset()
-			)
-
-			this.eventListened.set(0);
 		}
 			, { runEvery: '5s' })
 	}

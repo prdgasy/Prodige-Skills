@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3100 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3099 set value '§c'
+# prodige_skills::mythic_rewards::fill -> §e2000 Pts(0)
+item replace entity @s container.0 with chest[custom_name={text: "§e2000 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §712.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

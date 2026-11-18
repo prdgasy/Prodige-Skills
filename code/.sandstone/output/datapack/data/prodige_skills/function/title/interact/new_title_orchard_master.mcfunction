@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_orchard_master] run return run execute as @p at @s run function prodige_skills:title/interact/new_title_orchard_master/if/return_run/execute_as/if
+function prodige_skills:title/interact/new_title_orchard_master/if2

@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::click -> §9Redstone Extractor(10)
+execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:10b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

@@ -4,4 +4,4 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1793 set value '§aEnable
 execute unless entity @p[tag=prodige_skills.Farming.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1793 set value '§cDisabled'
 data modify storage prodigelib:prodigelib tellraw.tellraw_15.easymacro_param_1 set from storage __sandstone:variable anon_cnoL-r-9_1793
 function prodige_skills:__lib/easymacro/tellraw/15 with storage prodigelib:prodigelib tellraw.tellraw_15
-scoreboard players set anon_cnoL-r-9_22 __sandstone 1
+scoreboard players set anon_cnoL-r-9_20 __sandstone 1

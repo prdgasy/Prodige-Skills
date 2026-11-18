@@ -8,15 +8,17 @@ import { Achievement } from "@src/skill/achievement";
 import { Action } from '@src/skill/action';
 import { Title } from "@src/skill/title";
 import { Item } from "@src/types";
-import { _, bossbar, Data, defaultNamespace, functionCmd, Label, MCFunction, Objective, playsound, raw, say, Score, tellraw, title, Macro as S, Variable } from "sandstone";
+import { _, Data, defaultNamespace, functionCmd, Label, MCFunction, NonEmptyString, Objective, playsound, raw, Score, tellraw, Variable } from "sandstone";
 import { Ability } from "./ability";
 import { Global } from "@src/global";
 import { Roman } from "@lib/roman";
 import { Float } from "@prodigelib/floatVar";
 import type { TitleOptions } from "./title";
+import type { EntityLabel } from "sandstone/variables";
 
 const levelUpArgsStorage = `${defaultNamespace.toString()}:level_up_args`;
 const rewardDisplayStorage = `${defaultNamespace.toString()}:reward_display`;
+const skillBossbarStorage = `${defaultNamespace.toString()}:skill_bossbar`;
 const textComponent = (text: string) => JSON.stringify({ text });
 
 const levelUpNotificationRenderStart = MCFunction('skill/level_up/notification/start', () => {
@@ -98,7 +100,8 @@ export class Skill {
 	public totalXp: Float;
 	public totalPts: Score;
 
-	public static bossbarCount = Variable(0);
+	public bossbarCreated: EntityLabel;
+	public bossbarToken: Score;
 
 	constructor(opt: SkillOptions) {
 		this.name = opt.name;
@@ -122,6 +125,8 @@ export class Skill {
 
 		this.totalXp = Float.objective(`${this.resourceId}.totalXp`)('@p');
 		this.totalPts = Objective.create(`${this.resourceId}.totalPts`)('@p');
+		this.bossbarCreated = Label(`skill.bossbar.created.${this.resourceId}` as NonEmptyString)('@s');
+		this.bossbarToken = Objective.create(`${this.resourceId}.bossbar.token`)('@s');
 	}
 
 	public onEventTriggered(addedXp: Float, addedPoint: Score) {
@@ -176,35 +181,54 @@ export class Skill {
 
 	private onEventDisplay(xpAdded: Float, pointAdded: Score) {
 		const show = MCFunction(`skill/${this.resourceId}/show`, () => {
-			Skill.bossbarCount['++'];
-			const key = Variable(Skill.bossbarCount);
+			const args = Data('storage', skillBossbarStorage, 'args');
 			const roman = Roman.get(this.level);
 			const progress = this.xp['*'](100)['/'](this.goal).show();
 			const xp = this.xp.show();
 			const round = this.xp.toScore();
 			const added = xpAdded.show();
+			const id = `${defaultNamespace.toString()}.${this.resourceId}.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3])`;
+			const createBar = MCFunction(`skill/${this.resourceId}/bossbar/create`, () => {
+				raw(`$bossbar add ${id} "§d${this.name}"`);
+			}, { onConflict: 'ignore' });
+			const updateBar = MCFunction(`skill/${this.resourceId}/bossbar/update`, () => {
+				raw(`$bossbar set ${id} name "§d${this.name} $(roman) §8| §e$(xp)§6/§e$(goal) Xp §8• §7$(progress)% §8| §b+$(added) Xp §8• §e+$(points) Pts"`);
+				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.resourceId}.level matches 100.. run bossbar set ${id} name "§d${this.name} $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp §8• §e+$(points) Pts"`);
+				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.resourceId}.level matches 0 run bossbar set ${id} name "§aUnlocking ${this.name}..."`);
+				raw(`$bossbar set ${id} max $(goal)`);
+				raw(`$bossbar set ${id} value $(round)`);
+				raw(`$bossbar set ${id} color yellow`);
+				raw(`$bossbar set ${id} style progress`);
+				raw(`$bossbar set ${id} players @s`);
+				raw(`$bossbar set ${id} visible true`);
+			}, { onConflict: 'ignore' });
+			const hideBar = MCFunction(`skill/${this.resourceId}/bossbar/hide`, () => {
+				raw(`$bossbar set ${id} visible false`);
+			}, { onConflict: 'ignore' });
 
-			_.with([key, roman, xp, this.goal, added, pointAdded, progress, round], () => {
-				const id = S`prodige_skills.${this.resourceId}.${key}`;
-        S.bossbar.add(id, S`"§d${this.name} ${roman} §8| §e${xp}§6/§e${this.goal} Xp §8• §7${progress}% §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
-
-				_.if(this.level['>='](100), () => {
-					S.bossbar.set(id).name(S`"§d${this.name} ${roman} §8| §aMAX LEVEL §8| §b+${added} Xp §8• §e+${pointAdded} Pts"`);
-				})
-				_.if(this.level['=='](0), () => S.bossbar.set(id).name(`§aUnlocking ${this.name}...`))
-
-				S.bossbar.set(id).max(this.goal);
-				S.bossbar.set(id).value(S`${round}`);
-				S.bossbar.set(id).color('yellow');
-				S.bossbar.set(id).style('progress');
-				S.bossbar.set(id).players('@s');
+			_.if(_.not(this.bossbarCreated), () => {
+				args.select('uuid').set(Data('entity', '@s', 'UUID'));
+				functionCmd(createBar, 'with', args);
+				this.bossbarCreated.add();
 			});
 
-			_.await.sleep("5s");
+			args.select('uuid').set(Data('entity', '@s', 'UUID'));
+			args.select('roman').set(roman);
+			args.select('xp').set(xp);
+			args.select('goal').set(this.goal);
+			args.select('progress').set(progress);
+			args.select('added').set(added);
+			args.select('points').set(pointAdded);
+			args.select('round').set(round);
+			functionCmd(updateBar, 'with', args);
 
-			// clean
-			_.with([key], () => {
-				S.bossbar.remove(S`prodige_skills.${this.resourceId}.${key}`);
+			this.bossbarToken['++'];
+			const token = Variable(this.bossbarToken);
+
+			_.await.sleep("5s");
+			_.if(this.bossbarToken['=='](token), () => {
+				args.select('uuid').set(Data('entity', '@s', 'UUID'));
+				functionCmd(hideBar, 'with', args);
 			});
 		}, { asyncContext: true });
 

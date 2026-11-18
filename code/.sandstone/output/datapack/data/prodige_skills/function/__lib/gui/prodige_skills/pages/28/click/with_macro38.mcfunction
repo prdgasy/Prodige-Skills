@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§6Dragon Tracker §8× §e$(macro_arg_4741)($(macro_arg_4740))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4740)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro38/execute_unless

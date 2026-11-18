@@ -1,0 +1,2 @@
+# prodige_skills::mythic_rewards::fill -> §6Eternal Harvest Hoe(6)
+item replace entity @s container.6 with netherite_hoe[custom_name={text: "§6Eternal Harvest Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,2 @@
-# prodige_skills::titles::fill -> §cNo Titles Here(13)
-item replace entity @s container.13 with barrier[custom_name={text: "§cNo Titles Here", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§7There are no titles on", italic: false, color: "white"},{text: "§7this page.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::legendary_rewards::fill -> §e1000 Pts(0)
+item replace entity @s container.0 with chest[custom_name={text: "§e1000 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §712.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

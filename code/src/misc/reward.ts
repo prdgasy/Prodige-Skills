@@ -171,14 +171,13 @@ export class Reward {
 	}
 
 	public static randomXp(min: number, max: number, skills: Skill[]): Reward {
-		const key = `${min}_${max}`;
+		const amount = Math.floor(Math.random() * (max - min + 1)) + min;
+		const key = String(amount);
 		const cached = this.reusableXpRewards.get(key);
 		if (cached) return cached;
 
-		const reward = new Reward(`§3${min}-${max} Random Skill Xp`, () => {
-			const amount = Variable(0);
+		const reward = new Reward(`§3${amount} Random Skill Xp`, () => {
 			const skillIndex = Variable(0);
-			execute.store.result(amount).run.random.value([min, max]);
 			execute.store.result(skillIndex).run.random.value([0, skills.length - 1]);
 			skills.forEach((skill, index) => {
 				_.if(skillIndex['=='](index), () => skill.grantRewardXp(amount));
@@ -193,7 +192,7 @@ export class Reward {
 		const cached = this.reusableItemRewards.get(key);
 		if (cached) return cached;
 
-		const reward = new Reward(name, give, { icon, takesPlace: true });
+		const reward = new Reward(`§bNew Tool: ${name}`, give, { icon, takesPlace: true });
 		this.reusableItemRewards.set(key, reward);
 		return reward;
 	}

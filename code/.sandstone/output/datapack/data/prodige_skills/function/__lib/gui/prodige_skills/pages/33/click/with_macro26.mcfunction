@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §aGreen Thumb §8× §e$(macro_arg_5327)($(macro_arg_5326))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5326)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro26/execute_unless

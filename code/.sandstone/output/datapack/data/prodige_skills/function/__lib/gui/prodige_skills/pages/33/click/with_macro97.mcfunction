@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§aGroundbreaker Shovel §8× §e$(macro_arg_5540)($(macro_arg_5539))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5539)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro97/execute_unless

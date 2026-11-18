@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2525 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_2526 set value '§7Previous'
+# prodige_skills::legendary_rewards::fill -> §3438 Random Skill Xp(1)
+item replace entity @s container.1 with experience_bottle[custom_name={text: "§3438 Random Skill Xp", italic: false, color: "white"},lore=[{text: "§eReward chance: §712.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

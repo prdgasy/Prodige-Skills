@@ -1,2 +1,2 @@
 # prodige_skills::achievementsforaging::click -> §eTimber Finisher(3)
-execute if score anon_cnoL-r-9_16 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run function prodige_skills:__lib/gui/prodige_skills/pages/12/click/if22/if4/1_elseif/return_run/if/if
+execute if score anon_cnoL-r-9_14 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run function prodige_skills:__lib/gui/prodige_skills/pages/12/click/if22/if4/1_elseif/return_run/if/if

@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_crop_keeper] run return run function prodige_skills:title/interact/new_title_crop_keeper/0_if/return_run
+function prodige_skills:title/interact/new_title_crop_keeper/if

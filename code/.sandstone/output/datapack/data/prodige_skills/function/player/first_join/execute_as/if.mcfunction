@@ -1,13 +1,13 @@
 scoreboard players set @p prodige_skills.mining.level 0
-scoreboard players set anon_cnoL-r-9_33 __sandstone 0
-scoreboard players operation @p prodige_skills.mining.xp = anon_cnoL-r-9_33 __sandstone
-scoreboard players set anon_cnoL-r-9_34 __sandstone 0
-scoreboard players operation @p prodige_skills.mining.totalXp = anon_cnoL-r-9_34 __sandstone
+scoreboard players set anon_cnoL-r-9_36 __sandstone 0
+scoreboard players operation @p prodige_skills.mining.xp = anon_cnoL-r-9_36 __sandstone
+scoreboard players set anon_cnoL-r-9_37 __sandstone 0
+scoreboard players operation @p prodige_skills.mining.totalXp = anon_cnoL-r-9_37 __sandstone
 scoreboard players set @p prodige_skills.mining.totalPts 0
 scoreboard players set @p prodige_skills.mining.goal 20
 scoreboard players set @p prodige_skills.Mining.ability.tier 0
-scoreboard players set anon_cnoL-r-9_35 __sandstone 0
-scoreboard players operation @p prodige_skills.Mining.ability.buff = anon_cnoL-r-9_35 __sandstone
+scoreboard players set anon_cnoL-r-9_38 __sandstone 0
+scoreboard players operation @p prodige_skills.Mining.ability.buff = anon_cnoL-r-9_38 __sandstone
 scoreboard players set @p prodige_skills.Mining.ability.price 500
 tag @p add prodige_skills.Mining.ability.toggle
 scoreboard players set @p prodige_skills.mining.achievement 0
@@ -36,15 +36,15 @@ scoreboard players set @p prodige_skills.mining.achievement.nether_prospector 0
 scoreboard players set @p prodige_skills.mining.achievement.nether_gold_rush 0
 scoreboard players set @p prodige_skills.mining.achievement.amethyst_collector 0
 scoreboard players set @p prodige_skills.foraging.level 0
-scoreboard players set anon_cnoL-r-9_36 __sandstone 0
-scoreboard players operation @p prodige_skills.foraging.xp = anon_cnoL-r-9_36 __sandstone
-scoreboard players set anon_cnoL-r-9_37 __sandstone 0
-scoreboard players operation @p prodige_skills.foraging.totalXp = anon_cnoL-r-9_37 __sandstone
+scoreboard players set anon_cnoL-r-9_39 __sandstone 0
+scoreboard players operation @p prodige_skills.foraging.xp = anon_cnoL-r-9_39 __sandstone
+scoreboard players set anon_cnoL-r-9_40 __sandstone 0
+scoreboard players operation @p prodige_skills.foraging.totalXp = anon_cnoL-r-9_40 __sandstone
 scoreboard players set @p prodige_skills.foraging.totalPts 0
 scoreboard players set @p prodige_skills.foraging.goal 10
 scoreboard players set @p prodige_skills.Foraging.ability.tier 0
-scoreboard players set anon_cnoL-r-9_38 __sandstone 0
-scoreboard players operation @p prodige_skills.Foraging.ability.buff = anon_cnoL-r-9_38 __sandstone
+scoreboard players set anon_cnoL-r-9_41 __sandstone 0
+scoreboard players operation @p prodige_skills.Foraging.ability.buff = anon_cnoL-r-9_41 __sandstone
 scoreboard players set @p prodige_skills.Foraging.ability.price 500
 tag @p add prodige_skills.Foraging.ability.toggle
 scoreboard players set @p prodige_skills.foraging.achievement 0
@@ -73,15 +73,15 @@ scoreboard players set @p prodige_skills.foraging.achievement.timber_finisher 0
 scoreboard players set @p prodige_skills.foraging.achievement.mangrove_rooter 0
 scoreboard players set @p prodige_skills.foraging.achievement.cherrywood_collector 0
 scoreboard players set @p prodige_skills.farming.level 0
-scoreboard players set anon_cnoL-r-9_39 __sandstone 0
-scoreboard players operation @p prodige_skills.farming.xp = anon_cnoL-r-9_39 __sandstone
-scoreboard players set anon_cnoL-r-9_40 __sandstone 0
-scoreboard players operation @p prodige_skills.farming.totalXp = anon_cnoL-r-9_40 __sandstone
+scoreboard players set anon_cnoL-r-9_42 __sandstone 0
+scoreboard players operation @p prodige_skills.farming.xp = anon_cnoL-r-9_42 __sandstone
+scoreboard players set anon_cnoL-r-9_43 __sandstone 0
+scoreboard players operation @p prodige_skills.farming.totalXp = anon_cnoL-r-9_43 __sandstone
 scoreboard players set @p prodige_skills.farming.totalPts 0
 scoreboard players set @p prodige_skills.farming.goal 15
 scoreboard players set @p prodige_skills.Farming.ability.tier 0
-scoreboard players set anon_cnoL-r-9_41 __sandstone 0
-scoreboard players operation @p prodige_skills.Farming.ability.buff = anon_cnoL-r-9_41 __sandstone
+scoreboard players set anon_cnoL-r-9_44 __sandstone 0
+scoreboard players operation @p prodige_skills.Farming.ability.buff = anon_cnoL-r-9_44 __sandstone
 scoreboard players set @p prodige_skills.Farming.ability.price 400
 tag @p add prodige_skills.Farming.ability.toggle
 scoreboard players set @p prodige_skills.farming.achievement 0
@@ -96,15 +96,15 @@ scoreboard players set @p prodige_skills.farming.achievement.melon_merchant 0
 scoreboard players set @p prodige_skills.farming.achievement.nether_cultivator 0
 scoreboard players set @p prodige_skills.farming.achievement.berry_picker 0
 scoreboard players set @p prodige_skills.hunting.level 0
-scoreboard players set anon_cnoL-r-9_42 __sandstone 0
-scoreboard players operation @p prodige_skills.hunting.xp = anon_cnoL-r-9_42 __sandstone
-scoreboard players set anon_cnoL-r-9_43 __sandstone 0
-scoreboard players operation @p prodige_skills.hunting.totalXp = anon_cnoL-r-9_43 __sandstone
+scoreboard players set anon_cnoL-r-9_45 __sandstone 0
+scoreboard players operation @p prodige_skills.hunting.xp = anon_cnoL-r-9_45 __sandstone
+scoreboard players set anon_cnoL-r-9_46 __sandstone 0
+scoreboard players operation @p prodige_skills.hunting.totalXp = anon_cnoL-r-9_46 __sandstone
 scoreboard players set @p prodige_skills.hunting.totalPts 0
 scoreboard players set @p prodige_skills.hunting.goal 20
 scoreboard players set @p prodige_skills.Hunting.ability.tier 0
-scoreboard players set anon_cnoL-r-9_44 __sandstone 0
-scoreboard players operation @p prodige_skills.Hunting.ability.buff = anon_cnoL-r-9_44 __sandstone
+scoreboard players set anon_cnoL-r-9_47 __sandstone 0
+scoreboard players operation @p prodige_skills.Hunting.ability.buff = anon_cnoL-r-9_47 __sandstone
 scoreboard players set @p prodige_skills.Hunting.ability.price 600
 tag @p add prodige_skills.Hunting.ability.toggle
 scoreboard players set @p prodige_skills.hunting.achievement 0
@@ -119,15 +119,15 @@ scoreboard players set @p prodige_skills.hunting.achievement.dragon_conqueror 0
 scoreboard players set @p prodige_skills.hunting.achievement.ravager_breaker 0
 scoreboard players set @p prodige_skills.hunting.achievement.monument_conqueror 0
 scoreboard players set @p prodige_skills.excavating.level 0
-scoreboard players set anon_cnoL-r-9_45 __sandstone 0
-scoreboard players operation @p prodige_skills.excavating.xp = anon_cnoL-r-9_45 __sandstone
-scoreboard players set anon_cnoL-r-9_46 __sandstone 0
-scoreboard players operation @p prodige_skills.excavating.totalXp = anon_cnoL-r-9_46 __sandstone
+scoreboard players set anon_cnoL-r-9_48 __sandstone 0
+scoreboard players operation @p prodige_skills.excavating.xp = anon_cnoL-r-9_48 __sandstone
+scoreboard players set anon_cnoL-r-9_49 __sandstone 0
+scoreboard players operation @p prodige_skills.excavating.totalXp = anon_cnoL-r-9_49 __sandstone
 scoreboard players set @p prodige_skills.excavating.totalPts 0
 scoreboard players set @p prodige_skills.excavating.goal 15
 scoreboard players set @p prodige_skills.Excavating.ability.tier 0
-scoreboard players set anon_cnoL-r-9_47 __sandstone 0
-scoreboard players operation @p prodige_skills.Excavating.ability.buff = anon_cnoL-r-9_47 __sandstone
+scoreboard players set anon_cnoL-r-9_50 __sandstone 0
+scoreboard players operation @p prodige_skills.Excavating.ability.buff = anon_cnoL-r-9_50 __sandstone
 scoreboard players set @p prodige_skills.Excavating.ability.price 500
 tag @p add prodige_skills.Excavating.ability.toggle
 scoreboard players set @p prodige_skills.excavating.achievement 0

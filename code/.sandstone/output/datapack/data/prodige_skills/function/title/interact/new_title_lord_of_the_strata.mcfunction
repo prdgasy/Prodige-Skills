@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_lord_of_the_strata] run return run execute as @p at @s run function prodige_skills:title/interact/new_title_lord_of_the_strata/if/return_run/execute_as/if
+function prodige_skills:title/interact/new_title_lord_of_the_strata/if2

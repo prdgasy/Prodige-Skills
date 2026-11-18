@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §dEarthshaper$(macro_arg_3873)($(macro_arg_3872))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3872)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro127/execute_unless

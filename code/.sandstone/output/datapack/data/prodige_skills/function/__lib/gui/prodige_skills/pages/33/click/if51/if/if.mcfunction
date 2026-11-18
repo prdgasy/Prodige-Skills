@@ -1,0 +1,4 @@
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5401 int 1 run scoreboard players get anon_cnoL-r-9_7590 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5402 int 1 run scoreboard players get @p prodige_skills.reward.pending.verdant_hatchet
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5403 int 1 run scoreboard players get @p prodige_skills.reward.pending.verdant_hatchet
+return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro51 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault

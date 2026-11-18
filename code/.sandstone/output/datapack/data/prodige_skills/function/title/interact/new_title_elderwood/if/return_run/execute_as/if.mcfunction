@@ -1,0 +1,3 @@
+execute if score @p prodige_skills.player.pts matches 70000.. run return run function prodige_skills:title/interact/new_title_elderwood/if/return_run/execute_as/if/0_if/return_run
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound entity.enderman.teleport master @p ~ ~ ~ 1 1
+tellraw @p "§c[Prodige Skill] §8• §cYou don't have enough points to buy §8[§dNew Title: §dElderwood§8]!"

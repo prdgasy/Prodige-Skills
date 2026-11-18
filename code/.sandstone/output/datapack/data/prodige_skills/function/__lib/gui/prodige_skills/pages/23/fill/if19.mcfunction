@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §aGroundbreaker Shovel(17)
+item replace entity @s container.17 with stone_shovel[custom_name={text: "§aGroundbreaker Shovel", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

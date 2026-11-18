@@ -1,2 +1,2 @@
 # prodige_skills::achievementsmining::click -> §aEnchanter Assistant I(12)
-execute if score anon_cnoL-r-9_15 __sandstone matches 0 unless data entity @s Items[{Slot:12b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if13/if4/0_if/return_run/if/if
+execute if score anon_cnoL-r-9_13 __sandstone matches 0 unless data entity @s Items[{Slot:12b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if13/if4/0_if/return_run/if/if

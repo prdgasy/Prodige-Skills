@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §dVein Sovereign §8× §e$(macro_arg_5264)($(macro_arg_5263))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5263)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro5/execute_unless

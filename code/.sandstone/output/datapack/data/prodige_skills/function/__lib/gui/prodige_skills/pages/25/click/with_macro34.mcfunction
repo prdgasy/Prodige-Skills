@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §2Forest Guardian$(macro_arg_3408)($(macro_arg_3407))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3407)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro34/execute_unless

@@ -1,26 +1,25 @@
-scoreboard players set anon_cnoL-r-9_2 __sandstone 1
-scoreboard players set anon_cnoL-r-9_7895 __sandstone 40
-scoreboard players operation var_1159 prodige_skills.prodigelib.float = anon_cnoL-r-9_7895 __sandstone
-scoreboard players operation anon_cnoL-r-9_7896 __sandstone = var_1159 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_7897 __sandstone = @p prodige_skills.misc.booster.Xp.mult
-scoreboard players operation anon_cnoL-r-9_7897 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_7896 __sandstone *= anon_cnoL-r-9_7897 __sandstone
-scoreboard players operation anon_cnoL-r-9_7896 __sandstone /= 10 __sandstone
-scoreboard players operation var_1160 prodige_skills.prodigelib.float = anon_cnoL-r-9_7896 __sandstone
-scoreboard players operation anon_cnoL-r-9_7898 __sandstone = var_1160 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_7899 __sandstone = @p prodige_skills.Foraging.event.StrippedMangroveLog
-scoreboard players operation anon_cnoL-r-9_7899 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_7898 __sandstone *= anon_cnoL-r-9_7899 __sandstone
-scoreboard players operation anon_cnoL-r-9_7898 __sandstone /= 10 __sandstone
-scoreboard players operation var_1161 prodige_skills.prodigelib.float = anon_cnoL-r-9_7898 __sandstone
+scoreboard players set anon_cnoL-r-9_8674 __sandstone 40
+scoreboard players operation var_1159 prodige_skills.prodigelib.float = anon_cnoL-r-9_8674 __sandstone
+scoreboard players operation anon_cnoL-r-9_8675 __sandstone = var_1159 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8676 __sandstone = @p prodige_skills.misc.booster.Xp.mult
+scoreboard players operation anon_cnoL-r-9_8676 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8675 __sandstone *= anon_cnoL-r-9_8676 __sandstone
+scoreboard players operation anon_cnoL-r-9_8675 __sandstone /= 10 __sandstone
+scoreboard players operation var_1160 prodige_skills.prodigelib.float = anon_cnoL-r-9_8675 __sandstone
+scoreboard players operation anon_cnoL-r-9_8677 __sandstone = var_1160 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_8678 __sandstone = @p prodige_skills.Foraging.event.StrippedMangroveLog
+scoreboard players operation anon_cnoL-r-9_8678 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_8677 __sandstone *= anon_cnoL-r-9_8678 __sandstone
+scoreboard players operation anon_cnoL-r-9_8677 __sandstone /= 10 __sandstone
+scoreboard players operation var_1161 prodige_skills.prodigelib.float = anon_cnoL-r-9_8677 __sandstone
 scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1161 prodige_skills.prodigelib.float
-scoreboard players set anon_cnoL-r-9_7900 __sandstone 5
-scoreboard players operation anon_cnoL-r-9_7901 __sandstone = @p prodige_skills.misc.booster.Pts.mult
-scoreboard players operation anon_cnoL-r-9_7901 __sandstone *= @p prodige_skills.Foraging.event.StrippedMangroveLog
-scoreboard players operation anon_cnoL-r-9_7902 __sandstone = anon_cnoL-r-9_7900 __sandstone
-scoreboard players operation anon_cnoL-r-9_7902 __sandstone *= anon_cnoL-r-9_7901 __sandstone
-scoreboard players operation anon_cnoL-r-9_1 __sandstone = anon_cnoL-r-9_7902 __sandstone
-scoreboard players operation @p prodige_skills.Foraging.total_event.StrippedMangroveLog.pts += anon_cnoL-r-9_1 __sandstone
+scoreboard players set anon_cnoL-r-9_8679 __sandstone 5
+scoreboard players operation anon_cnoL-r-9_8680 __sandstone = @p prodige_skills.misc.booster.Pts.mult
+scoreboard players operation anon_cnoL-r-9_8680 __sandstone *= @p prodige_skills.Foraging.event.StrippedMangroveLog
+scoreboard players operation anon_cnoL-r-9_8681 __sandstone = anon_cnoL-r-9_8679 __sandstone
+scoreboard players operation anon_cnoL-r-9_8681 __sandstone *= anon_cnoL-r-9_8680 __sandstone
+scoreboard players operation anon_cnoL-r-9_0 __sandstone = anon_cnoL-r-9_8681 __sandstone
+scoreboard players operation @p prodige_skills.Foraging.total_event.StrippedMangroveLog.pts += anon_cnoL-r-9_0 __sandstone
 scoreboard players operation @p prodige_skills.Foraging.total_event.StrippedMangroveLog.xp += var_0 prodige_skills.prodigelib.float
 scoreboard players operation @p prodige_skills.Foraging.total_event.StrippedMangroveLog += @p prodige_skills.Foraging.event.StrippedMangroveLog
 scoreboard players operation @p prodige_skills.foraging.achievement.master_forester_i += @p prodige_skills.Foraging.event.StrippedMangroveLog

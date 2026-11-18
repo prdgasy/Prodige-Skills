@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::fill -> §9Beasttracker Blade(15)
+item replace entity @s container.15 with iron_sword[custom_name={text: "§9Beasttracker Blade", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

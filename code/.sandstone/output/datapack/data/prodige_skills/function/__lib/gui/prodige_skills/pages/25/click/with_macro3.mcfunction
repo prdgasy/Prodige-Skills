@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §6Stone Seeker$(macro_arg_3253)($(macro_arg_3252))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3252)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro3/execute_unless

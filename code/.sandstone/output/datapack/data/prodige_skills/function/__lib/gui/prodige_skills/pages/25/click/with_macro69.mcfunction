@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §6Harvest Warden$(macro_arg_3583)($(macro_arg_3582))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3582)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro69/execute_unless

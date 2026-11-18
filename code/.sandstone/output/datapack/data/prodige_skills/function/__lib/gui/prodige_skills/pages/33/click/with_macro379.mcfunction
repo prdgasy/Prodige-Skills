@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§ex2 Pts Booster §8× §e$(macro_arg_6386)($(macro_arg_6385))
+$execute unless data entity @s Items[{Slot:$(macro_arg_6385)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro379/execute_unless

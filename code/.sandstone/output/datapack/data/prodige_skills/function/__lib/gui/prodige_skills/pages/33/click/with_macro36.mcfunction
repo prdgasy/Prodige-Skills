@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §4The Unerring §8× §e$(macro_arg_5357)($(macro_arg_5356))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5356)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro36/execute_unless

@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.apex_predator] run return run function prodige_skills:title/interact/apex_predator/0_if/return_run
-function prodige_skills:title/interact/apex_predator/if

@@ -1,3 +1,0 @@
-scoreboard players set @s prodige_skills.menu.actions.index 0
-function prodige_skills:__lib/gui/prodige_skills/switch/actionshunting
-scoreboard players set anon_cnoL-r-9_8 __sandstone 1

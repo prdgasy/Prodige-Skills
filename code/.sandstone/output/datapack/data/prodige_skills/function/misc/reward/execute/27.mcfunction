@@ -1,1 +1,1 @@
-execute unless entity @p[tag=prodige_skills.title.owned.grain_baron] run tag @p add prodige_skills.title.owned.grain_baron
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_grain_baron] run tag @p add prodige_skills.title.owned.new_title_grain_baron

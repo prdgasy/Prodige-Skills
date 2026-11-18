@@ -1,6 +1,6 @@
 function prodige_skills:misc/reward/execute/143
-function prodige_skills:misc/reward/execute/124
-function prodige_skills:misc/reward/execute/145
+function prodige_skills:misc/reward/execute/109
+function prodige_skills:misc/reward/execute/234
 function prodige_skills:misc/reward/execute/70
-function prodige_skills:misc/reward/execute/160
+function prodige_skills:misc/reward/execute/253
 return run function prodige_skills:misc/reward/execute/12

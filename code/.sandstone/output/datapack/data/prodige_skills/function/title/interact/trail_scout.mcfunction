@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.trail_scout] run return run function prodige_skills:title/interact/trail_scout/0_if/return_run
-function prodige_skills:title/interact/trail_scout/if

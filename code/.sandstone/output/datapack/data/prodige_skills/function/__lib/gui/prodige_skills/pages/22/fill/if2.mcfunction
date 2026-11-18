@@ -1,0 +1,2 @@
+# prodige_skills::common_rewards::fill -> §e100 Pts(0)
+item replace entity @s container.0 with chest[custom_name={text: "§e100 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §717.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

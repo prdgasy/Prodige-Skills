@@ -1,2 +1,2 @@
 # prodige_skills::achievementsfarming::click -> §eGolden Fields(1)
-execute if score anon_cnoL-r-9_17 __sandstone matches 0 unless data entity @s Items[{Slot:1b}] run function prodige_skills:__lib/gui/prodige_skills/pages/13/click/if2/if4/1_elseif/return_run/if/if
+execute if score anon_cnoL-r-9_15 __sandstone matches 0 unless data entity @s Items[{Slot:1b}] run function prodige_skills:__lib/gui/prodige_skills/pages/13/click/if2/if4/1_elseif/return_run/if/if

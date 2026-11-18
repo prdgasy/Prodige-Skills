@@ -1,1 +1,0 @@
-execute if entity @p[tag=prodige_skills.title.owned.wild_stalker] run function prodige_skills:__lib/gui/prodige_skills/pages/25/fill/switch32/case_1/if

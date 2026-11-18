@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.bloomkeeper] run return run function prodige_skills:title/interact/bloomkeeper/0_if/return_run/if
-function prodige_skills:title/interact/bloomkeeper/if

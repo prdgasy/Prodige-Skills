@@ -1,28 +1,47 @@
-scoreboard players set anon_cnoL-r-9_30 __sandstone 0
-data modify storage __sandstone:variable anon_cnoL-r-9_3107 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3108 set value '§a§l[ON]'
-execute unless entity @p[tag=prodige_skills.player.sound] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if
-# prodige_skills::preferences::click -> $(macro_arg_3960)Sound Effects(11)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:11b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if2/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3109 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3110 set value '§a§l[ON]'
-execute unless entity @p[tag=prodige_skills.player.on_event_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if3
-# prodige_skills::preferences::click -> $(macro_arg_3962)Action Notifications(12)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:12b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if4/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3111 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3112 set value '§a§l[ON]'
-execute unless entity @p[tag=prodige_skills.player.achievement_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if5
-# prodige_skills::preferences::click -> $(macro_arg_3964)Achievement Notifications(13)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if6/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3113 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3114 set value '§a§l[ON]'
-execute unless entity @p[tag=prodige_skills.level_up_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if7
-# prodige_skills::preferences::click -> $(macro_arg_3966)Level-up Notifications(14)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:14b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if8/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3115 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3116 set value '§a§l[ON]'
-execute unless entity @p[tag=prodige_skills.player.task_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if9
-# prodige_skills::preferences::click -> $(macro_arg_3968)Tasks Notification(15)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:15b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if10/if
-# prodige_skills::preferences::click -> §cBack(18)
-execute if score anon_cnoL-r-9_30 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if11/if
+scoreboard players set anon_cnoL-r-9_28 __sandstone 0
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run scoreboard players set @s prodige_skills.menu.shop.crates.mythic.index 0
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if2
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if3
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if4
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if5
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if6
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if7
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if8
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if9
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if10
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if11
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if12
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if13
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if14
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if15
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if16
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if17
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if18
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if19
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if20
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if21
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if22
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if23
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if24
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if25
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if26
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if27
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if28
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if29
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if30
+data modify storage __sandstone:variable anon_cnoL-r-9_1989 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1990 set value '§ePrevious'
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if31
+# prodige_skills::mythic_rewards::click -> $(macro_arg_2561)(25)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if32/if
+data modify storage __sandstone:variable anon_cnoL-r-9_1991 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1992 set value '§eNext'
+execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if33
+# prodige_skills::mythic_rewards::click -> $(macro_arg_2563)(26)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if34/if
+# prodige_skills::mythic_rewards::click -> §cBack(18)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if35/if
+# prodige_skills::mythic_rewards::click -> §e§c§lMythic Crate Key §8• §610000 Pts(19)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:19b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if36/if
+# prodige_skills::mythic_rewards::click -> §eOpen §c§lMythic Crate(20)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:20b}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if37/if

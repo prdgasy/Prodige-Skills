@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §2Keeper of the Wild$(macro_arg_3763)($(macro_arg_3762))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3762)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro105/execute_unless

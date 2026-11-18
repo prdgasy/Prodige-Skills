@@ -1,0 +1,2 @@
+# prodige_skills::titles::fill::macro -> $(macro_arg_3278)(25)
+$item replace entity @s container.25 with $(macro_arg_3277)[custom_name={text: "$(macro_arg_3278)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

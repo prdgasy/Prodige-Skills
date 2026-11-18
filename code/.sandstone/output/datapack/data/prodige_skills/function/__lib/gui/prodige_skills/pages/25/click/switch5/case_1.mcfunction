@@ -1,1 +1,0 @@
-execute if entity @p[tag=prodige_skills.title.owned.deep_core_delver] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/switch5/case_1/if

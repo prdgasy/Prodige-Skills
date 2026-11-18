@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.dragon_tracker] run return run function prodige_skills:title/interact/dragon_tracker/0_if/return_run/if
-function prodige_skills:title/interact/dragon_tracker/if

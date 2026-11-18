@@ -2,7 +2,6 @@ import { Buyable } from "@src/misc/buyable";
 import { Item } from "@src/types";
 import { Global } from "@src/global";
 import { Player } from "@src/player";
-import { Text } from "@lib/text";
 import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Variable } from "sandstone";
 import { Reward } from "./reward";
 import { macro as T, smartTellraw } from "@prodigelib/easymacro";
@@ -50,7 +49,10 @@ export class Crate {
 				give('@p', 'carrot_on_a_stick', {
 					'minecraft:item_model': 'minecraft:tripwire_hook',
 					'minecraft:custom_name': `${this.name} Crate Key`,
-					'minecraft:lore': [`§9Prodige Skills`, ...this.getMenuDescription()],
+					'minecraft:lore': [
+						'§9Prodige Skills',
+						this.description
+					],
 					'minecraft:custom_data': keyData,
 					'minecraft:max_stack_size': 64,
 					'!max_damage': {},
@@ -59,33 +61,6 @@ export class Crate {
 			}
 		);
 	}
-
-	public getItemDescription(): string[] {
-		let totalWeight = 0;
-		for (const weight of this.rewards.values()) totalWeight += weight;
-
-		return [
-			'§e§l┃ Possible Rewards',
-			...Array.from(this.rewards, ([reward, weight]) => {
-				const chance = Math.round((weight / totalWeight) * 1000) / 10;
-				return `§e┃ §7${reward.name} §8• §7${chance}%`;
-			})
-		];
-	}
-
-	public getMenuDescription(): string[] {
-		return [
-			'',
-			'§e§l┃ Description',
-			...Text.wrap(this.description, '§e┃ §7'),
-			'',
-			...this.getItemDescription(),
-			'',
-			'§eClick while holding its key to open!'
-		];
-	}
-
-
 
 	private pick(n: number) {
 		const fn = MCFunction(`misc/crate/roll/${Global.toResource(this.name)}`, () => {

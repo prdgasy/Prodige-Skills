@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_1959 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1960 set value '§7Next'
+# prodige_skills::rare_rewards::click -> §aNovice Pickaxe(6)
+execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:6b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

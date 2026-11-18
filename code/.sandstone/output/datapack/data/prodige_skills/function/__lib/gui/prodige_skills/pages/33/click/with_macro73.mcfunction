@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dPalegrove Cleaver §8× §e$(macro_arg_5468)($(macro_arg_5467))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5467)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro73/execute_unless

@@ -1,6 +1,2 @@
-scoreboard players operation anon_cnoL-r-9_6725 __sandstone = anon_cnoL-r-9_6714 __sandstone
-scoreboard players operation anon_cnoL-r-9_6725 __sandstone /= 18 __sandstone
-scoreboard players operation anon_cnoL-r-9_6726 __sandstone = anon_cnoL-r-9_6714 __sandstone
-scoreboard players operation anon_cnoL-r-9_6726 __sandstone %= 18 __sandstone
-execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_6725 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/28/fill/if6/if
-scoreboard players add anon_cnoL-r-9_6714 __sandstone 1
+data modify storage __sandstone:variable anon_cnoL-r-9_1995 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1996 set value '§7Next'

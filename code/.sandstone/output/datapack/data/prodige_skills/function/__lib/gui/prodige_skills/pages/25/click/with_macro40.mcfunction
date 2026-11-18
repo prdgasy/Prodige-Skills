@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §2Wildwood Elder$(macro_arg_3438)($(macro_arg_3437))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3437)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro40/execute_unless

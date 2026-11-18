@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3104 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3103 set value '§c'
+# prodige_skills::mythic_rewards::fill -> §bNew Tool: §bx4 Xp Booster(2)
+item replace entity @s container.2 with experience_bottle[custom_name={text: "§bNew Tool: §bx4 Xp Booster", italic: false, color: "white"},lore=[{text: "§eReward chance: §76.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §aBark Stripper(12)
+item replace entity @s container.12 with iron_axe[custom_name={text: "§aBark Stripper", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

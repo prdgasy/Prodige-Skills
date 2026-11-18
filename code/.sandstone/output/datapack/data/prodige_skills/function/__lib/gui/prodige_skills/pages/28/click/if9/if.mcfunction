@@ -1,3 +1,2 @@
-# prodige_skills::rewardvault::click -> §6§l§6Ore Oracle §8× §e$(macro_arg_4654)($(macro_arg_4653))
-execute if score anon_cnoL-r-9_32 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/if9/if/if
-scoreboard players set anon_cnoL-r-9_7096 __sandstone 1
+execute unless score @s prodige_skills.menu.shop.items.index matches 3 run scoreboard players add @s prodige_skills.menu.shop.items.index 1
+scoreboard players set anon_cnoL-r-9_30 __sandstone 1

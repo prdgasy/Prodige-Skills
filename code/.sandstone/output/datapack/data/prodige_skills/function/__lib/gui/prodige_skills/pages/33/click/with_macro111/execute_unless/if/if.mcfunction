@@ -1,0 +1,4 @@
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro111/execute_unless/if/if/0_if/return_run
+scoreboard players remove @p prodige_skills.reward.pending.mythic_crate_key 1
+give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§c§lMythic Crate Key',minecraft:lore=['§9Prodige Skills','The rarest cache, offering top-tier skill XP, boosters, keys, points, and mastery-level gear.'],minecraft:custom_data={prodige_skills:{crate_key:'mythic'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

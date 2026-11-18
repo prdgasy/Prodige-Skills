@@ -1,4 +1,3 @@
-import { Global } from "@src/global";
 import { Player } from "@src/player";
 import { Item } from "@src/types";
 import { _, execute, Label, MCFunction, NonEmptyString, team } from "sandstone";
@@ -27,7 +26,7 @@ export class Title extends Buyable {
 	constructor(skill: Skill, options: TitleOptions) {
 		const obtain = options.level !== undefined ? 'level' : 'price';
 		const requires = options.level ?? options.price;
-		super(options.name, options.description, options.icon, obtain === 'price' ? requires : 0, () => this.unlock(), false);
+		super(`§dNew Title: ${options.name}`, options.description, options.icon, obtain === 'price' ? requires : 0, () => this.unlock(), false);
 		this.skill = skill;
 		this.obtain = obtain;
 		this.requires = requires;

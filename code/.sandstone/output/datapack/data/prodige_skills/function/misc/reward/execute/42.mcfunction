@@ -1,1 +1,1 @@
-execute unless entity @p[tag=prodige_skills.title.owned.earthshaper] run tag @p add prodige_skills.title.owned.earthshaper
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_earthshaper] run tag @p add prodige_skills.title.owned.new_title_earthshaper

@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::fill -> §dDeepstone Drill(6)
+item replace entity @s container.6 with netherite_pickaxe[custom_name={text: "§dDeepstone Drill", italic: false, color: "white"},lore=[{text: "§eReward chance: §77.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::mythic_rewards::click -> §6Deep Digger(9)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:9b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

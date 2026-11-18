@@ -1,0 +1,2 @@
+# prodige_skills::mythic_rewards::fill -> §6Legend of the Hunt(8)
+item replace entity @s container.8 with netherite_sword[custom_name={text: "§6Legend of the Hunt", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

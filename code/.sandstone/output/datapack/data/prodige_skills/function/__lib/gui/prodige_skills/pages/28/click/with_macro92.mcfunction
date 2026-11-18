@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dDreadhunter Blade §8× §e$(macro_arg_4903)($(macro_arg_4902))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4902)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro92/execute_unless

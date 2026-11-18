@@ -1,0 +1,1 @@
+$bossbar add prodige_skills.foraging.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3]) "§dForaging"

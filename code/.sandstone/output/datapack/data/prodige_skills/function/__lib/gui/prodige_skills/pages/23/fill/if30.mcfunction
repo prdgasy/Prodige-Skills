@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §9Gravel Prospector(10)
+item replace entity @s container.10 with netherite_shovel[custom_name={text: "§9Gravel Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

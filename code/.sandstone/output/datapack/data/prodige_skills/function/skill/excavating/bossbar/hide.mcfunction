@@ -1,0 +1,1 @@
+$bossbar set prodige_skills.excavating.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3]) visible false

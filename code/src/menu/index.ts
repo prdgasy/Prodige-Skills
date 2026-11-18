@@ -37,6 +37,7 @@ export class Menu {
 			} else {
 				const normalP = p as SkillPage;
 				const name = normalP.getName();
+				if (name === Crates.getName()) Crates.registerDetails(Menu);
 				const toRegister = normalP.init(Menu, Menu.createPage(name));
 
 				Menu.registerPage(toRegister);

@@ -1,2 +1,0 @@
-execute if score @p prodige_skills.reward.pending.400-900_random_skill_xp matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro119/execute_unless/if
-scoreboard players set anon_cnoL-r-9_32 __sandstone 1

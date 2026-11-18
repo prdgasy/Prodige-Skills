@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::click -> §aTrailwatch Bow(15)
+execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:15b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

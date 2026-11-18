@@ -1,0 +1,2 @@
+# prodige_skills::mythic_rewards::fill -> §6World Harvester(5)
+item replace entity @s container.5 with netherite_hoe[custom_name={text: "§6World Harvester", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

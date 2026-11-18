@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9189 __sandstone matches ..-1 run return run function prodige_skills:skill/foraging/show/if2/0_if/return_run
+execute if score anon_cnoL-r-9_12899 __sandstone matches ..-1 run return run function prodige_skills:skill/foraging/show/if2/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

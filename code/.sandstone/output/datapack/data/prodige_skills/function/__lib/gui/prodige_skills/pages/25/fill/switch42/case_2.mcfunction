@@ -1,1 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.clay_delver] run function prodige_skills:__lib/gui/prodige_skills/pages/25/fill/switch42/case_2/if

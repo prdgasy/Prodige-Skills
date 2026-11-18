@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §6Lord of the Strata$(macro_arg_3913)($(macro_arg_3912))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3912)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro135/execute_unless

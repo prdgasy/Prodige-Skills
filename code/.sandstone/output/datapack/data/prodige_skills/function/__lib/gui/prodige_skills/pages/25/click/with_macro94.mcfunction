@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §6Beast Hunter$(macro_arg_3708)($(macro_arg_3707))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3707)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro94/execute_unless

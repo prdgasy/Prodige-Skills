@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§9Clay Delver §8× §e$(macro_arg_4750)($(macro_arg_4749))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4749)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro41/execute_unless

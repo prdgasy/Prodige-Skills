@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§368 Random Skill Xp §8× §e$(macro_arg_5708)($(macro_arg_5707))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5707)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro153/execute_unless

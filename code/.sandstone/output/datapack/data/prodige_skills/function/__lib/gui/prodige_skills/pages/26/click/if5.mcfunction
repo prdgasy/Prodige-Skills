@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3112 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3111 set value '§c'
+# prodige_skills::mythic_rewards::click -> §bNew Tool: §ex4 Pts Booster(3)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

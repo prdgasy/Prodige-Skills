@@ -1,2 +1,2 @@
 # prodige_skills::achievementsexcavating::click -> §eSoul Sand Prospector(5)
-execute if score anon_cnoL-r-9_19 __sandstone matches 0 unless data entity @s Items[{Slot:5b}] run function prodige_skills:__lib/gui/prodige_skills/pages/15/click/if6/if4/1_elseif/return_run/if/if
+execute if score anon_cnoL-r-9_17 __sandstone matches 0 unless data entity @s Items[{Slot:5b}] run function prodige_skills:__lib/gui/prodige_skills/pages/15/click/if6/if4/1_elseif/return_run/if/if

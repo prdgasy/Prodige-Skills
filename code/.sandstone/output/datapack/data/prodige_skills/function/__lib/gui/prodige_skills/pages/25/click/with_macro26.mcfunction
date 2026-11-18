@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §6Ore Oracle$(macro_arg_3368)($(macro_arg_3367))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3367)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro26/execute_unless

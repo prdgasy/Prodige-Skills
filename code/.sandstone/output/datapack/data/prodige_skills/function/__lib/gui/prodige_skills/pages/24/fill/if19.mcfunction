@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::fill -> §9Clay Delver(17)
+item replace entity @s container.17 with diamond_shovel[custom_name={text: "§9Clay Delver", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

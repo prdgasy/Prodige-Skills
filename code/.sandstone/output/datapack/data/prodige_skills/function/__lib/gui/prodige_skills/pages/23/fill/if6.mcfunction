@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_1955 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1956 set value '§7Next'
+# prodige_skills::rare_rewards::fill -> §a§lCommon Crate Key(4)
+item replace entity @s container.4 with carrot_on_a_stick[custom_name={text: "§a§lCommon Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::fill -> §6Astral Cleaver(7)
+item replace entity @s container.7 with netherite_axe[custom_name={text: "§6Astral Cleaver", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

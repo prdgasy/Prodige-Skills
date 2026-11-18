@@ -1,0 +1,2 @@
+execute unless score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run scoreboard players remove @s prodige_skills.menu.shop.crates.mythic.index 1
+scoreboard players set anon_cnoL-r-9_28 __sandstone 1

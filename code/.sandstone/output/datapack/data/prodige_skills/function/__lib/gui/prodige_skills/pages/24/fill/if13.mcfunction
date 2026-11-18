@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::fill -> §9Canopy Hatchet(11)
+item replace entity @s container.11 with diamond_axe[custom_name={text: "§9Canopy Hatchet", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

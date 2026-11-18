@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §eCavern Pathfinder$(macro_arg_3278)($(macro_arg_3277))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3277)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro8/execute_unless

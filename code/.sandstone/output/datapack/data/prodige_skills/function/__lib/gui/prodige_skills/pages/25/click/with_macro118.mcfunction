@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §eSand Strider$(macro_arg_3828)($(macro_arg_3827))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3827)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro118/execute_unless

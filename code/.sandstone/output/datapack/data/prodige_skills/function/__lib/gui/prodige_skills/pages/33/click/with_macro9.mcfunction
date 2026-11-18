@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §6Ore Oracle §8× §e$(macro_arg_5276)($(macro_arg_5275))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5275)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro9/execute_unless

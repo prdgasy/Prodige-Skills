@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §2Grand Agronomist$(macro_arg_3628)($(macro_arg_3627))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3627)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro70/execute_unless

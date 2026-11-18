@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::click -> §aDune Walker Spade(0)
+execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:0b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §eDune Sovereign$(macro_arg_3943)($(macro_arg_3942))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3942)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro141/execute_unless

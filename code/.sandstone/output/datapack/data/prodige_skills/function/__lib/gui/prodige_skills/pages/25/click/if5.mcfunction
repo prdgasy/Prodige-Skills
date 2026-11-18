@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3095 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3096 set value '§7Next'
+# prodige_skills::legendary_rewards::click -> §bNew Tool: §ex4 Pts Booster(3)
+execute if score anon_cnoL-r-9_27 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run scoreboard players set anon_cnoL-r-9_27 __sandstone 1

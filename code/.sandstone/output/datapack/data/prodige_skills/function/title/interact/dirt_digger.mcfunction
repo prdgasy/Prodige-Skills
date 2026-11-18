@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.dirt_digger] run return run function prodige_skills:title/interact/dirt_digger/0_if/return_run
-function prodige_skills:title/interact/dirt_digger/if

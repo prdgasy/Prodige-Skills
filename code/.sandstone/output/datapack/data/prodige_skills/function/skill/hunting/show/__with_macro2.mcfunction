@@ -1,1 +1,0 @@
-$bossbar remove prodige_skills.hunting.$(env_0)

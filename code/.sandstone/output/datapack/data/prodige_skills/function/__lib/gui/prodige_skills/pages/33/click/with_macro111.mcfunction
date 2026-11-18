@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§c§lMythic Crate Key §8× §e$(macro_arg_5582)($(macro_arg_5581))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5581)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro111/execute_unless

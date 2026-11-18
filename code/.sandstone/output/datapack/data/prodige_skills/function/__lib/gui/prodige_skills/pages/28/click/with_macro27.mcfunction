@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§6The Golden Farmer §8× §e$(macro_arg_4708)($(macro_arg_4707))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4707)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro27/execute_unless

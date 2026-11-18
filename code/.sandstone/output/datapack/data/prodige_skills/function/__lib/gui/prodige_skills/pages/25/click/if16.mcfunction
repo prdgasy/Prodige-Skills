@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::click -> §dBountiful Planter(14)
+execute if score anon_cnoL-r-9_27 __sandstone matches 0 unless data entity @s Items[{Slot:14b}] run scoreboard players set anon_cnoL-r-9_27 __sandstone 1

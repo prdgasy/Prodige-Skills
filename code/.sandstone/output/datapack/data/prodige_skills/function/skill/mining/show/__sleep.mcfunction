@@ -1,3 +1,2 @@
 tag @s remove __sandstone.asyncTimer.prodige_skills.skill.mining.show.__sleep
-execute store result storage __sandstone:variable anon_cnoL-r-9_3166.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9166 __sandstone
-function prodige_skills:skill/mining/show/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3166
+execute if score @s prodige_skills.mining.bossbar.token = anon_cnoL-r-9_12891 __sandstone run function prodige_skills:skill/mining/show/if5

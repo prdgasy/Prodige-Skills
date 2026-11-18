@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dBountiful Planter §8× §e$(macro_arg_5495)($(macro_arg_5494))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5494)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro82/execute_unless

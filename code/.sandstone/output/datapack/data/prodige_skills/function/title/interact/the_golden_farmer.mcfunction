@@ -1,2 +1,0 @@
-execute unless entity @p[tag=prodige_skills.title.owned.the_golden_farmer] run return run function prodige_skills:title/interact/the_golden_farmer/0_if/return_run/if
-function prodige_skills:title/interact/the_golden_farmer/if

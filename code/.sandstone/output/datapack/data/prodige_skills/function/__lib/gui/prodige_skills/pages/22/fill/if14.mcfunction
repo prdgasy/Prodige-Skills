@@ -1,0 +1,2 @@
+# prodige_skills::common_rewards::fill -> §aFieldhand Hoe(12)
+item replace entity @s container.12 with iron_hoe[custom_name={text: "§aFieldhand Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::mythic_rewards::fill -> §6Strata Shaper(0)
+item replace entity @s container.0 with netherite_shovel[custom_name={text: "§6Strata Shaper", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

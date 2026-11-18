@@ -1,0 +1,2 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_stone_seeker] run return run function prodige_skills:title/interact/new_title_stone_seeker/0_if/return_run
+function prodige_skills:title/interact/new_title_stone_seeker/if

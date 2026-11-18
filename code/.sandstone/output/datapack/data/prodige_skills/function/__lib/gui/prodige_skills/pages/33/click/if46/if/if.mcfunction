@@ -1,0 +1,4 @@
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5386 int 1 run scoreboard players get anon_cnoL-r-9_7580 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5387 int 1 run scoreboard players get @p prodige_skills.reward.pending.new_title_desert_cartographer
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5388 int 1 run scoreboard players get @p prodige_skills.reward.pending.new_title_desert_cartographer
+return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro46 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault

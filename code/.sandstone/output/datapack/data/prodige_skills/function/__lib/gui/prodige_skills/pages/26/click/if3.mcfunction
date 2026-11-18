@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3110 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3109 set value '§c'
+# prodige_skills::mythic_rewards::click -> §31405 Random Skill Xp(1)
+execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:1b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

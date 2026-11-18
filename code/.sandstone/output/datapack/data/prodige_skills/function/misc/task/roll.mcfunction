@@ -18,34 +18,34 @@ tag @p remove prodige_skills.misc.task.4.done
 scoreboard players reset @p prodige_skills.task.progress.mine_sand
 tag @p remove prodige_skills.misc.task.5.progress
 tag @p remove prodige_skills.misc.task.5.done
-execute store result score anon_cnoL-r-9_8905 __sandstone run random value 0..5
-execute store result storage __sandstone:variable anon_cnoL-r-9_3149.env_0 int 1 run scoreboard players get anon_cnoL-r-9_8905 __sandstone
-function prodige_skills:misc/task/roll/__with_macro with storage __sandstone:variable anon_cnoL-r-9_3149
-scoreboard players operation anon_cnoL-r-9_8906 __sandstone = anon_cnoL-r-9_8905 __sandstone
-execute store result score anon_cnoL-r-9_8907 __sandstone run random value 0..5
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if2
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if3
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if4
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if5
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if6
-execute if score anon_cnoL-r-9_8907 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if7
-execute store result storage __sandstone:variable anon_cnoL-r-9_3150.env_0 int 1 run scoreboard players get anon_cnoL-r-9_8907 __sandstone
-function prodige_skills:misc/task/roll/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3150
-scoreboard players operation anon_cnoL-r-9_8908 __sandstone = anon_cnoL-r-9_8907 __sandstone
-execute store result score anon_cnoL-r-9_8909 __sandstone run random value 0..5
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if8
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if9
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if10
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if11
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if12
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if13
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if14
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if15
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if16
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if17
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8906 __sandstone run function prodige_skills:misc/task/roll/if18
-execute if score anon_cnoL-r-9_8909 __sandstone = anon_cnoL-r-9_8908 __sandstone run function prodige_skills:misc/task/roll/if19
-execute store result storage __sandstone:variable anon_cnoL-r-9_3151.env_0 int 1 run scoreboard players get anon_cnoL-r-9_8909 __sandstone
-function prodige_skills:misc/task/roll/__with_macro3 with storage __sandstone:variable anon_cnoL-r-9_3151
-scoreboard players operation anon_cnoL-r-9_8910 __sandstone = anon_cnoL-r-9_8909 __sandstone
+execute store result score anon_cnoL-r-9_9684 __sandstone run random value 0..5
+execute store result storage __sandstone:variable anon_cnoL-r-9_3189.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9684 __sandstone
+function prodige_skills:misc/task/roll/__with_macro with storage __sandstone:variable anon_cnoL-r-9_3189
+scoreboard players operation anon_cnoL-r-9_9685 __sandstone = anon_cnoL-r-9_9684 __sandstone
+execute store result score anon_cnoL-r-9_9686 __sandstone run random value 0..5
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if2
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if3
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if4
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if5
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if6
+execute if score anon_cnoL-r-9_9686 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if7
+execute store result storage __sandstone:variable anon_cnoL-r-9_3190.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9686 __sandstone
+function prodige_skills:misc/task/roll/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3190
+scoreboard players operation anon_cnoL-r-9_9687 __sandstone = anon_cnoL-r-9_9686 __sandstone
+execute store result score anon_cnoL-r-9_9688 __sandstone run random value 0..5
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if8
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if9
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if10
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if11
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if12
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if13
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if14
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if15
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if16
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if17
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9685 __sandstone run function prodige_skills:misc/task/roll/if18
+execute if score anon_cnoL-r-9_9688 __sandstone = anon_cnoL-r-9_9687 __sandstone run function prodige_skills:misc/task/roll/if19
+execute store result storage __sandstone:variable anon_cnoL-r-9_3191.env_0 int 1 run scoreboard players get anon_cnoL-r-9_9688 __sandstone
+function prodige_skills:misc/task/roll/__with_macro3 with storage __sandstone:variable anon_cnoL-r-9_3191
+scoreboard players operation anon_cnoL-r-9_9689 __sandstone = anon_cnoL-r-9_9688 __sandstone
 scoreboard players set @p prodige_skills.task.timer 60

@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §6The Golden Farmer$(macro_arg_3673)($(macro_arg_3672))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3672)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro79/execute_unless

@@ -1,0 +1,2 @@
+execute if score @p prodige_skills.reward.pending.new_title_the_unerring matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro36/execute_unless/if
+scoreboard players set anon_cnoL-r-9_35 __sandstone 1

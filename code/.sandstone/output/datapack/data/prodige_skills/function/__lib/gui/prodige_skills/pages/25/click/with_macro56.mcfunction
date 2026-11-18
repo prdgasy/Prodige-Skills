@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §aBloomkeeper$(macro_arg_3518)($(macro_arg_3517))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3517)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro56/execute_unless

@@ -1,2 +1,2 @@
-# prodige_skills::boosters::fill::macro -> §aShop §8• $(macro_arg_6)(19)
-$item replace entity @s container.19 with emerald[custom_name={text: "§aShop §8• $(macro_arg_6)", italic: false, color: "white"},lore=[{text: "§a§l┃ Skill Shop", italic: false, color: "white"},{text: "§a┃ §7Browse items, boosters, crates, and titles.", italic: false, color: "white"},{text: "§a┃ §7Spend your points on useful rewards.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§8• §7Your balance: §6$(macro_arg_7) Pts", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::epic_rewards::fill::macro -> $(macro_arg_2541)(25)
+$item replace entity @s container.25 with $(macro_arg_2540)[custom_name={text: "$(macro_arg_2541)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

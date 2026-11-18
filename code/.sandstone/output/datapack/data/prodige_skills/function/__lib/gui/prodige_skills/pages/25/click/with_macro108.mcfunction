@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §4The Unerring$(macro_arg_3778)($(macro_arg_3777))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3777)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro108/execute_unless

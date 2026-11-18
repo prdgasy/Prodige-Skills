@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::fill -> §dDiamond Seeker(9)
+item replace entity @s container.9 with diamond_pickaxe[custom_name={text: "§dDiamond Seeker", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §6Desert Cartographer$(macro_arg_3963)($(macro_arg_3962))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3962)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro137/execute_unless

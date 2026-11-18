@@ -1,0 +1,3 @@
+execute unless items entity @p weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'mythic'}}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if37/if/execute_unless
+execute if items entity @p weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data~{prodige_skills:{crate_key:'mythic'}}] run function prodige_skills:__lib/gui/prodige_skills/pages/26/click/if37/if/execute_if
+scoreboard players set anon_cnoL-r-9_28 __sandstone 1

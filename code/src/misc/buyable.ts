@@ -1,7 +1,7 @@
 import { Reward } from "@src/misc/reward";
 import { Player } from "@src/player";
 import type { Item } from "@src/types";
-import { _ } from "sandstone";
+import { _, execute } from "sandstone";
 
 export class Buyable extends Reward {
 	public description: string;
@@ -23,10 +23,8 @@ export class Buyable extends Reward {
 			Player.send(`You bought §8[${this.name}§8] §afor §6${this.price} Pts§a!`, '§a');
 		};
 
-		_.if(Player.pts['<'](this.price), () => {
-			Player.throw(`You don't have enough points to buy §8[${this.name}§8]!`);
-		})
-			.else(() => {
+		execute.as('@p').at('@s').run(() => {
+			_.if(Player.pts['>='](this.price), () => {
 				if (this.takesPlace) {
 					_.if(Player.isInvFull(), () => {
 						Player.throw("Your inventory is full!");
@@ -34,6 +32,9 @@ export class Buyable extends Reward {
 				} else {
 					purchase();
 				}
+			}).else(() => {
+				Player.throw(`You don't have enough points to buy §8[${this.name}§8]!`);
 			});
+		});
 	}
 }

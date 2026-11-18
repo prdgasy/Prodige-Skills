@@ -1,0 +1,2 @@
+# prodige_skills::common_rewards::fill -> §aCoppervein Pickaxe(8)
+item replace entity @s container.8 with golden_pickaxe[custom_name={text: "§aCoppervein Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

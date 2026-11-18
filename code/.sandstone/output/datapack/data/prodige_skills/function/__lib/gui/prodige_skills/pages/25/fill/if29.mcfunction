@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::fill -> §dRuin Prospector(9)
+item replace entity @s container.9 with brush[custom_name={text: "§dRuin Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

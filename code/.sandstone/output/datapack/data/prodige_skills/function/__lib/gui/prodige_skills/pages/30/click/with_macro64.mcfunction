@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §eCrop Keeper$(macro_arg_3598)($(macro_arg_3597))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3597)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro64/execute_unless

@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §9§lRare Crate Key(5)
+item replace entity @s container.5 with carrot_on_a_stick[custom_name={text: "§9§lRare Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §73.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

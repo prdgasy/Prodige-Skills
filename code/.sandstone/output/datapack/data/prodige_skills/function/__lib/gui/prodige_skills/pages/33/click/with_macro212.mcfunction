@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dUpgrade available: §c§lOre Rush §8[§c§lVIII§8] • 17.5%»§c20% §8× §e$(macro_arg_5885)($(macro_arg_5884))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5884)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro212/execute_unless

@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§cMonster Stalker §8× §e$(macro_arg_4738)($(macro_arg_4737))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4737)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/28/click/with_macro37/execute_unless

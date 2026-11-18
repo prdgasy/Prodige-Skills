@@ -1,2 +1,2 @@
 # prodige_skills::achievementsmining::click -> §eElectrician I(11)
-execute if score anon_cnoL-r-9_15 __sandstone matches 0 unless data entity @s Items[{Slot:11b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if12/if4/1_elseif/return_run/if/if
+execute if score anon_cnoL-r-9_13 __sandstone matches 0 unless data entity @s Items[{Slot:11b}] run function prodige_skills:__lib/gui/prodige_skills/pages/11/click/if12/if4/1_elseif/return_run/if/if

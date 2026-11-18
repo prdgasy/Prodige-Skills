@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §5Verdant Legend$(macro_arg_3468)($(macro_arg_3467))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3467)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro46/execute_unless

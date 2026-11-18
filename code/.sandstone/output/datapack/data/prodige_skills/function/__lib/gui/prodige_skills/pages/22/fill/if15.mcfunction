@@ -1,0 +1,2 @@
+# prodige_skills::common_rewards::fill -> §aTrailwatch Bow(13)
+item replace entity @s container.13 with bow[custom_name={text: "§aTrailwatch Bow", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

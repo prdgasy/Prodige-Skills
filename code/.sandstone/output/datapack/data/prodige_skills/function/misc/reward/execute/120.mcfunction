@@ -1,1 +1,1 @@
-scoreboard players add @p prodige_skills.reward.pending.x3_xp_booster 1
+scoreboard players add @p prodige_skills.reward.pending.new_tool_x3_xp_booster 1

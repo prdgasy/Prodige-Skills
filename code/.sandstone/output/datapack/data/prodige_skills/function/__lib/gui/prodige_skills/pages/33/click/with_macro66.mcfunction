@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§6Worldshaper Pickaxe §8× §e$(macro_arg_5447)($(macro_arg_5446))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5446)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro66/execute_unless

@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::fill -> §5§lEpic Crate Key(4)
+item replace entity @s container.4 with carrot_on_a_stick[custom_name={text: "§5§lEpic Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §76.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

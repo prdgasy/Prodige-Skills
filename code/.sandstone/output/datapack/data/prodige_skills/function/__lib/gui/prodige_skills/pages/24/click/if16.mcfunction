@@ -1,0 +1,2 @@
+# prodige_skills::epic_rewards::click -> §9Harvest Warden(14)
+execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:14b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

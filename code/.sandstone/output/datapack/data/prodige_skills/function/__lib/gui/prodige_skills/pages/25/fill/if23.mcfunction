@@ -1,0 +1,2 @@
+# prodige_skills::legendary_rewards::fill -> §dPalegrove Cleaver(3)
+item replace entity @s container.3 with netherite_axe[custom_name={text: "§dPalegrove Cleaver", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

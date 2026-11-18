@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §9Redstone Extractor(2)
+item replace entity @s container.2 with netherite_pickaxe[custom_name={text: "§9Redstone Extractor", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

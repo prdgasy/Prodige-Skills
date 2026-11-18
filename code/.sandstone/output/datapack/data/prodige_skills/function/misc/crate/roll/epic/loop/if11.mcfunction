@@ -1,3 +1,3 @@
 scoreboard players add @p prodige_skills.reward.pending.redstone_extractor 1
 tellraw @a [{text: " \u00A78\u2022 §9Redstone Extractor"}]
-scoreboard players set anon_cnoL-r-9_9095 __sandstone 1
+scoreboard players set anon_cnoL-r-9_12809 __sandstone 1

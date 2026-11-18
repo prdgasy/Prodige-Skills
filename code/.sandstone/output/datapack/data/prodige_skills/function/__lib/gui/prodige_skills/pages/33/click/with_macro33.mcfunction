@@ -1,0 +1,2 @@
+# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §cApex Predator §8× §e$(macro_arg_5348)($(macro_arg_5347))
+$execute unless data entity @s Items[{Slot:$(macro_arg_5347)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro33/execute_unless

@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §7Trail Scout$(macro_arg_3688)($(macro_arg_3687))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3687)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/25/click/with_macro90/execute_unless

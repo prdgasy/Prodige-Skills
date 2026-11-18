@@ -1,0 +1,2 @@
+# prodige_skills::rare_rewards::fill -> §9Deepslate Prospector(1)
+item replace entity @s container.1 with diamond_pickaxe[custom_name={text: "§9Deepslate Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §dVerdant Sovereign$(macro_arg_3498)($(macro_arg_3497))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3497)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro44/execute_unless
