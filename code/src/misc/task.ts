@@ -80,7 +80,7 @@ export class Task {
 	}
 
 	private finished() {
-		Reward.enqueueAll(this.rewards);
+		Reward.vaultOrGiveAll(this.rewards);
 		Player.task(this.id, 'done').add();
 		Player.task(this.id, 'progress').remove();
 		Player.playSound('levelup', 2);

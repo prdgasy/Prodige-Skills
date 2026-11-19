@@ -10,7 +10,7 @@ import type { Criteria } from '@src/types';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Task } from '@src/misc/task';
-import { Booster } from '@src/misc/booster';
+import { Booster, BoosterType } from '@src/misc/booster';
 
 export class Loader {
 	// ------------------------------------------------------------------------
@@ -123,42 +123,58 @@ export class Loader {
 		}
 	}
 
-	private static setDefaultRewards() {
-		const COMMON_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
-		const RARE_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
-		const EPIC_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
-		const LEGENDARY_POINTS = [6000, 7500, 9000, 12000].map(points => Reward.point(points));
-		const skills = Object.values(Skill.skills);
-		const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
-			const booster = Booster.get(multiplier, type);
-			return Reward.itemReward(
-				booster.name,
-				type === 'Xp' ? 'experience_bottle' : 'gold_ingot',
-				() => booster.giveItem()
-			);
-		};
+	
+private static setDefaultRewards() {
+    const COMMON_POINTS = [100, 200, 300, 400, 500].map(points => Reward.point(points));
+    const RARE_POINTS = [800, 1000, 1300, 1700].map(points => Reward.point(points));
+    const EPIC_POINTS = [3000, 3600, 4000, 5000].map(points => Reward.point(points));
+    const LEGENDARY_POINTS = [6000, 7500, 9000, 12000].map(points => Reward.point(points));
 
-		Reward.common = () => [
-			...Reward.choose(COMMON_POINTS),
-			...Reward.choose([boosterReward(2, 'Xp'), boosterReward(2, 'Pts'), Crate.get('§a§lCommon').key]),
-			Reward.randomXp(40, 100, skills)
-		];
-		Reward.rare = () => [
-			...Reward.choose(RARE_POINTS),
-			...Reward.choose([boosterReward(3, 'Xp'), boosterReward(3, 'Pts'), Crate.get('§9§lRare').key]),
-			Reward.randomXp(100, 250, skills)
-		];
-		Reward.epic = () => [
-			...Reward.choose(EPIC_POINTS),
-			...Reward.choose([boosterReward(4, 'Xp'), boosterReward(4, 'Pts'), Crate.get('§5§lEpic').key]),
-			Reward.randomXp(250, 500, skills)
-		];
-		Reward.legendary = () => [
-			...Reward.choose(LEGENDARY_POINTS),
-			...Reward.choose([boosterReward(4, 'Xp'), boosterReward(4, 'Pts'), Crate.get('§6§lLegendary').key]),
-			Reward.randomXp(1000, 2000, skills)
-		];
-	}
+    const skills = Object.values(Skill.skills);
+
+    const booster = (type: BoosterType, multiplier: number, duration: number) =>
+        Booster.get(type, multiplier, 0, duration);
+
+    Reward.common = () => [
+        ...Reward.choose(COMMON_POINTS),
+        ...Reward.choose([
+            booster('Xp', 2, 15),
+            booster('Pts', 2, 15),
+            Crate.get('§a§lCommon').key
+        ]),
+        Reward.randomXp(40, 100, skills)
+    ];
+
+    Reward.rare = () => [
+        ...Reward.choose(RARE_POINTS),
+        ...Reward.choose([
+            booster('Xp', 3, 15),
+            booster('Pts', 3, 15),
+            Crate.get('§9§lRare').key
+        ]),
+        Reward.randomXp(100, 250, skills)
+    ];
+
+    Reward.epic = () => [
+        ...Reward.choose(EPIC_POINTS),
+        ...Reward.choose([
+            booster('Xp', 4, 15),
+            booster('Pts', 4, 15),
+            Crate.get('§5§lEpic').key
+        ]),
+        Reward.randomXp(250, 500, skills)
+    ];
+
+    Reward.legendary = () => [
+        ...Reward.choose(LEGENDARY_POINTS),
+        ...Reward.choose([
+            booster('Xp', 4, 15),
+            booster('Pts', 4, 15),
+            Crate.get('§6§lLegendary').key
+        ]),
+        Reward.randomXp(1000, 2000, skills)
+    ];
+}
 
 	// ------------------------------------------------------------------------
 	// FACTORIES (build instances from the definitions above)

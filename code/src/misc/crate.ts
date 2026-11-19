@@ -82,7 +82,7 @@ export class Crate {
 				for (const [reward, weight] of this.rewards) {
 					acc += weight;
 					_.if(_.and(_.not(done), roll['<'](acc)), () => {
-						Reward.enqueue(reward);
+						Reward.vaultOrGive(reward);
 						smartTellraw([T` §8• ${reward.name}`]);
 						done.set(1);
 					});

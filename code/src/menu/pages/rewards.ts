@@ -17,7 +17,7 @@ export class RewardVault {
 	}
 
 	public static init(g: Gui, p: Page) {
-		const rewards = [...Reward.registry.values()];
+		const rewards = [...Reward.toVaultRegistry.values()];
 
 		p.add(() => Mask.bottom(p, "magenta_stained_glass_pane"));
 
@@ -70,9 +70,9 @@ export class RewardVault {
 			$`§6§l${reward.name} §8× §e${reward.pending}`,
 			[
 				'',
-				`§6§l┃ ${reward.takesPlace ? 'Item Reward' : 'Reward'}`,
+				`§6§l┃ ${reward.toVault ? 'Item Reward' : 'Reward'}`,
 				...Text.wrap(
-					reward.takesPlace ? 'This item is waiting safely in your vault.' : 'This reward is waiting safely in your vault.',
+					reward.toVault ? 'This item is waiting safely in your vault.' : 'This reward is waiting safely in your vault.',
 					'§6┃ §7'
 				),
 				'',

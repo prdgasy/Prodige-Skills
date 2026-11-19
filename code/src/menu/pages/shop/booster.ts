@@ -46,7 +46,7 @@ export class Boosters {
 			booster.description,
 			booster.item,
 			booster.price,
-			() => booster.giveItem()
+			() => booster.give()
 		);
 		const color = type === 'Xp' ? '§b' : '§e';
 

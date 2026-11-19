@@ -164,7 +164,7 @@ type CrateRewardContext = {
 
 const boosterReward = (multiplier: number, type: 'Xp' | 'Pts') => {
 	const booster = Booster.get(multiplier, type);
-	return Reward.itemReward(booster.name, type === 'Xp' ? 'experience_bottle' : 'gold_ingot', () => booster.giveItem());
+	return Reward.itemReward(booster.name, type === 'Xp' ? 'experience_bottle' : 'gold_ingot', () => booster.give());
 };
 
 export const crateDefs = {

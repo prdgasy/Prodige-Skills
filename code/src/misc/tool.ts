@@ -43,7 +43,7 @@ export class Tool extends Buyable {
 		this.name = opt.name;
 		this.icon = opt.item;
 		this.icon = opt.item;
-		this.takesPlace = true;
+		this.toVault = true;
 		this.price = opt.price;
 		this.description = opt.description;
 		this.characteristics = opt.characteristics;
@@ -75,7 +75,7 @@ export class Tool extends Buyable {
 	}
 
 	public static get(t: ToolName): Reward {
-		const tool = Reward.registry.get(Global.toResource(t));
+		const tool = Reward.toVaultRegistry.get(Global.toResource(t));
 
 		if (!tool) {
 			throw Error(`"${t}" is not registered into "Reward.registry".`);

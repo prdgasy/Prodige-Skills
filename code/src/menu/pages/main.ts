@@ -1,10 +1,10 @@
 import { Bar } from "@lib/bar";
 import { Text } from "@lib/text";
-import { Button, Gui, GuiMacro as $, Page } from "@prodigelib/gui";
+import { Button, Gui, GuiMacro as $, Page, Macroable, MacroArgument, MacroTemplate } from "@prodigelib/gui";
 import { Shop } from "@src/menu/shop";
 import { Reward } from "@src/misc/reward";
 import { Skill } from "@src/skill";
-import { _, comment, Data, DataVariable, functionCmd, MCFunction, raw, tellraw, Variable, Macro as S } from "sandstone";
+import { _, comment, Data, DataVariable, functionCmd, MCFunction, raw, tellraw, Variable, Macro as S, Objective, NBT } from "sandstone";
 import { Progress } from "@src/menu/skill/progress";
 import { Preferences } from "@src/menu/preferences";
 import { Tasks } from "./tasks";
@@ -16,6 +16,7 @@ import { Boosters } from "@src/menu/shop/booster";
 import { RewardVault } from "@src/menu/rewards";
 import { Mask } from "../mask";
 import { Roman } from "@lib/roman";
+import { ItemSlotSource } from "sandstone/commands";
 
 export class Main {
 	static getName() {
@@ -30,17 +31,16 @@ export class Main {
 			this.rewardVault(g, p);
 			this.shop(g, p);
 			this.infoAndPreferences(g, p);
-
+      this.skillBts(g, p);
 		});
     
-    this.skillBts(g, p);
 
 		return p;
 	}
 
 	private static rewardVault(g: Gui, p: Page) {
 		const pending = Variable(0);
-		for (const reward of Reward.registry.values()) {
+		for (const reward of Reward.toVaultRegistry.values()) {
 			_.if(reward.pending['>'](0), () => pending['+='](reward.pending));
 		}
 
@@ -83,7 +83,7 @@ export class Main {
 		const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
 		for (const type of BOOSTER_TYPE) {
 			const color = Booster.getColor(type);
-			const multiplier = Booster.getMult(type);
+			const multiplier = Booster.getMultiplier(type);
 			const timer = Booster.getTimer(type);
 			const status = DataVariable(`§7No ${type} Booster active`);
 			_.if(timer['>'](0), () => {
@@ -167,19 +167,9 @@ export class Main {
 	}
 
 	private static skillBts(g: Gui, p: Page) {
-		let slot = 11;
-		const argsStorage = `${Gui.ns}:main_skill_args`;
-		const rewardStorage = `${Gui.ns}:reward_display`;
-		const component = (text: string) =>
-			`{text:${JSON.stringify(text)},italic:false,color:"white"}`;
-
+    let slot = 11;
+    
 		for (const skill of Object.values(Skill.skills)) {
-			const s = slot++;
-			const openProgress = () => {
-				Progress.index.set(skill.level["/"](18));
-				g.switch(Progress.getName(skill));
-			};
-
 			const renderItems = MCFunction(`menu/main/skill/${skill.resourceId}/render`, () => {
 				const description = Text.wrap(skill.description).map(component);
 				const baseLore = [
@@ -209,16 +199,26 @@ export class Main {
 					component('§eClick to view!'),
 				].join(',');
 
+        const name = component(`§d$(skillName) $(roman)`);
+        const level = Objective.get('prodige_skills.$(skill.level');
+        S.execute.if.score('@p', level, 'matches', 100).run.item.replace.entity('@s', `container.${s}` as ItemSlotSource).with(skill.item, {
+          custom_name: name,
+          lore: [maxLore],
+          '!attribute_modifiers': undefined,
+          custom_data: { prodige_skills: NBT.byte(1) }
+        }, 1);
 
-
-				raw(`$execute if score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
-				raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+        S.execute.unless.score('@p', level, 'matches', 100).run.item.replace.entity('@s', `container.${s}` as ItemSlotSource).with(skill.item, {
+          custom_name: name,
+          lore: [progressLore],
+          '!attribute_modifiers': undefined,
+          custom_data: { prodige_skills: NBT.byte(1) }
+        }, 1);
 			}, { onConflict: 'ignore' });
 
-			const render = MCFunction(`menu/main/skill/${skill.resourceId}`, () => {
-				raw(`data modify storage ${argsStorage} args.rewardLoreSnbt set value ""`);
-				raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLoreSnbt`);
-				functionCmd(renderItems, 'with', Data('storage', argsStorage, 'args'));
+			const getRewards = MCFunction(`menu/main/skill/${skill.resourceId}/get_rewards`, () => {
+        S.data.modify.storage(argsStorage, 'args.rewardLoreSnbt').set.from.storage(rewardStorage, '$(skill).$(nextLevel).mainRewardLoreSnbt')        
+				raw(`$data modify storage ${argsStorage} args.rewardLoreSnbt set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLoreSnbt`);
 			}, { onConflict: 'ignore' });
 
 			p.add({
@@ -237,13 +237,46 @@ export class Main {
 					args.select('bar').set(new Bar(progress.toScore()).toData());
 					args.select('xp').set(skill.xp.show());
 					args.select('goal').set(skill.goal);
-
-					functionCmd(render, 'with', args);
+          functionCmd(getRewards, 'with', args);
+          functionCmd(renderItems, 'with', args);
 				},
 				click: () => {
 					p.emit(new Button(skill.item, s, undefined, undefined, openProgress, 1, ["!attribute_modifiers"]));
 				},
-			});
+      });
+      
+      const bullet = ' §8• ';
+      const progress = skill.xp["*"](100)["/"](skill.goal);
+      const nextRoman = Roman.get(skill.level['+'](1));
+      const baseLore: (string | MacroTemplate)[] = [
+        $`§9${skill.name} ${skill.level}`,
+        '',
+        ...Text.wrap(skill.description),
+        ''
+      ];
+
+      const progressLore: (string | MacroTemplate)[] = [
+        ...baseLore,
+        '§f§lProgress:',
+        $`${bullet}§7Target: ${Roman.get(skill.level['+'](1))}`,
+        $`${bullet}§7Progress: §e${progress}`,
+        $` §8> ${new Bar(progress.toScore()).toData()} §e${skill.xp.show()}§6/§e${skill.goal}`,
+        '',
+        $`§f§l${skill.name} ${nextRoman} Rewards:`,
+        
+        
+      ];
+
+
+      p.emit(new Button(
+        skill.item, slot++, `§d${skill.name} ${Roman.get(skill.level)}`,
+        [
+
+        ],() => {
+				Progress.index.set(skill.level["/"](18));
+				g.switch(Progress.getName(skill));
+			}
+      ))
 		}
 
 	}

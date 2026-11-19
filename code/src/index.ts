@@ -23,7 +23,7 @@ Player.init(() => {
 	Task.firstJoin();
 	Skill.levelUpNotifState.add();
 	for (const type of ['Xp', 'Pts'] as const) {
-		Booster.getMult(type).set(1);
+		Booster.getMultiplier(type).set(1);
 		Booster.getTimer(type).set(0);
 	}
 });

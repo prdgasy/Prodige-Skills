@@ -3,7 +3,8 @@ import { Item } from "@src/types";
 import { _, execute, Label, MCFunction, NonEmptyString, team } from "sandstone";
 import { EntityLabel } from "sandstone/variables";
 import type { Skill } from "./index";
-import { Buyable } from "@src/misc/buyable";
+import { Reward } from "@src/misc/reward";
+import { Global } from "@src/global";
 
 export type TitleOptions = {
 	name: string;
@@ -14,7 +15,7 @@ export type TitleOptions = {
 		| { price: number; level?: never }
 	);
 
-export class Title extends Buyable {
+export class Title extends Reward {
 	public static allTitles: Title[] = [];
 	public skill: Skill;
 	public obtain: 'level' | 'price';
@@ -23,28 +24,38 @@ export class Title extends Buyable {
 	public equipped: EntityLabel;
 	public team: string;
 
-	constructor(skill: Skill, options: TitleOptions) {
-		const obtain = options.level !== undefined ? 'level' : 'price';
-		const requires = options.level ?? options.price;
-		super(`§dNew Title: ${options.name}`, options.description, options.icon, obtain === 'price' ? requires : 0, () => this.unlock(), false);
+	constructor(skill: Skill, opt: TitleOptions) {
+		const obtain = opt.level !== undefined ? 'level' : 'price';
+    const requires = opt.level ?? opt.price;
+    const name = `§dNew Title: ${opt.name}`;
+    const owned = Label(`title.owned.${Global.toResource(name)}` as NonEmptyString)('@p');
+    
+    super(name, () => Title.unlock(obtain, owned, opt.price), {
+      icon: opt.icon, category: 'unique', description: 'A title is a nganganga', price: opt.price
+    });
+
 		this.skill = skill;
 		this.obtain = obtain;
 		this.requires = requires;
 
-		this.owned = Label(`title.owned.${this.resourceId}` as NonEmptyString)('@p');
-		this.equipped = Label(`title.equipped.${this.resourceId}` as NonEmptyString)('@p');
-		this.team = 'titel_' + this.resourceId;
+    this.owned = owned;
+		this.equipped = Label(`title.equipped.${this.id}` as NonEmptyString)('@p');
+		this.team = 'titel_' + this.id;
 		Title.allTitles.push(this);
 	}
 
-	public unlock() {
-		_.if(_.not(this.owned), () => {
-			this.owned.add();
-		});
+  private static unlock(obtain: 'level' | 'price', owned: EntityLabel, price?: number) {
+    if (obtain === 'price') {
+      _.if(owned, () => {
+        Player.send(`§dYou already have the title §8[${this.name}§8], so you got §e${price! / 2} Pts §dinstead`);
+        Player.pts.add(price! / 2);
+      })
+        .else(() => owned.add());
+    } else owned.add();
 	}
 
 	public buyOrToggle() {
-		const fn = MCFunction(`title/interact/${this.resourceId}`, () => {
+		const fn = MCFunction(`title/interact/${this.id}`, () => {
 			_.if(_.not(this.owned), () => {
 				if (this.obtain === 'level')
 					Player.throw(`Reach level §d${this.requires} in §d${this.skill.name} to unlock this title.`);
@@ -71,10 +82,7 @@ export class Title extends Buyable {
 		MCFunction('title/setup_teams', () => {
 			for (const title of Title.allTitles) {
 				team.add(title.team);
-				team.modify(title.team, 'prefix', `§8[${title.name}§8] >> §r`);
-				execute.as('@a').at('@s').run(() => {
-					_.if(title.equipped, () => team.join(title.team, '@s'));
-				});
+				team.modify(title.team, 'prefix', `§8[${title.name}§8] > §r`);
 			}
 		}, { runOnLoad: true });
 	}
