@@ -1,1 +1,1 @@
-$bossbar add prodige_skills.mining.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3]) "§dMining"
+$bossbar add prodige_skills:mining_$(barId) "§dMining"

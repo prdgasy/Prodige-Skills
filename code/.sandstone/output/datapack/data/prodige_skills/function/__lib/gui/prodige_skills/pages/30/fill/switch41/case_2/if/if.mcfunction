@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6275 __sandstone = anon_cnoL-r-9_6034 __sandstone
-scoreboard players operation anon_cnoL-r-9_6275 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6276 __sandstone = anon_cnoL-r-9_6035 __sandstone
+scoreboard players operation anon_cnoL-r-9_6276 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_2477 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_2478 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_2479 set value 'charcoal'
@@ -8,9 +8,9 @@ execute if entity @p[tag=prodige_skills.title.equipped.new_title_sand_strider] r
 data modify storage __sandstone:variable anon_cnoL-r-9_2480 set value '§8You cannot buy this.'
 # prodige_skills::titles::fill -> §dNew Title: §eSand Strider$(macro_arg_3169)($(macro_arg_3168))
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3167 set from storage __sandstone:variable anon_cnoL-r-9_2479
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3168 int 1 run scoreboard players get anon_cnoL-r-9_6275 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3168 int 1 run scoreboard players get anon_cnoL-r-9_6276 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3169 set from storage __sandstone:variable anon_cnoL-r-9_2478
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3170 set from storage __sandstone:variable anon_cnoL-r-9_2477
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3171 set from storage __sandstone:variable anon_cnoL-r-9_2480
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro120 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6035 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6036 __sandstone 1

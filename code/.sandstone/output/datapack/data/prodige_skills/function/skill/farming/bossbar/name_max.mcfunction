@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:farming_$(barId) name "§dFarming $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp$(boostXp) §8• §e+$(points) Pts$(boostPts)"

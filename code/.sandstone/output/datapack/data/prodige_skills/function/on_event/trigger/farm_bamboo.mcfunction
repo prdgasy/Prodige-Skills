@@ -1,26 +1,57 @@
-scoreboard players set anon_cnoL-r-9_8894 __sandstone 10
-scoreboard players operation var_1243 prodige_skills.prodigelib.float = anon_cnoL-r-9_8894 __sandstone
-scoreboard players operation anon_cnoL-r-9_8895 __sandstone = var_1243 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8896 __sandstone = @p prodige_skills.misc.booster.Xp.multiplier
-scoreboard players operation anon_cnoL-r-9_8896 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8895 __sandstone *= anon_cnoL-r-9_8896 __sandstone
-scoreboard players operation anon_cnoL-r-9_8895 __sandstone /= 10 __sandstone
-scoreboard players operation var_1244 prodige_skills.prodigelib.float = anon_cnoL-r-9_8895 __sandstone
-scoreboard players operation anon_cnoL-r-9_8897 __sandstone = var_1244 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_8898 __sandstone = @p prodige_skills.Farming.event.FarmBamboo
-scoreboard players operation anon_cnoL-r-9_8898 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_8897 __sandstone *= anon_cnoL-r-9_8898 __sandstone
-scoreboard players operation anon_cnoL-r-9_8897 __sandstone /= 10 __sandstone
-scoreboard players operation var_1245 prodige_skills.prodigelib.float = anon_cnoL-r-9_8897 __sandstone
-scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1245 prodige_skills.prodigelib.float
-scoreboard players set anon_cnoL-r-9_8899 __sandstone 2
-scoreboard players operation anon_cnoL-r-9_8900 __sandstone = @p prodige_skills.misc.booster.Pts.multiplier
-scoreboard players operation anon_cnoL-r-9_8900 __sandstone *= @p prodige_skills.Farming.event.FarmBamboo
-scoreboard players operation anon_cnoL-r-9_8901 __sandstone = anon_cnoL-r-9_8899 __sandstone
-scoreboard players operation anon_cnoL-r-9_8901 __sandstone *= anon_cnoL-r-9_8900 __sandstone
-scoreboard players operation anon_cnoL-r-9_0 __sandstone = anon_cnoL-r-9_8901 __sandstone
+scoreboard players set anon_cnoL-r-9_9375 __sandstone 10
+scoreboard players operation var_1243 prodige_skills.prodigelib.float = anon_cnoL-r-9_9375 __sandstone
+scoreboard players operation anon_cnoL-r-9_9376 __sandstone = var_1243 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_9377 __sandstone = @p prodige_skills.Farming.event.FarmBamboo
+scoreboard players operation anon_cnoL-r-9_9377 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_9376 __sandstone *= anon_cnoL-r-9_9377 __sandstone
+scoreboard players operation anon_cnoL-r-9_9376 __sandstone /= 10 __sandstone
+scoreboard players operation var_1244 prodige_skills.prodigelib.float = anon_cnoL-r-9_9376 __sandstone
+scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1244 prodige_skills.prodigelib.float
+scoreboard players set anon_cnoL-r-9_9378 __sandstone 2
+scoreboard players operation anon_cnoL-r-9_9379 __sandstone = anon_cnoL-r-9_9378 __sandstone
+scoreboard players operation anon_cnoL-r-9_9379 __sandstone *= @p prodige_skills.Farming.event.FarmBamboo
+scoreboard players operation anon_cnoL-r-9_0 __sandstone = anon_cnoL-r-9_9379 __sandstone
 scoreboard players operation @p prodige_skills.Farming.total_event.FarmBamboo.pts += anon_cnoL-r-9_0 __sandstone
 scoreboard players operation @p prodige_skills.Farming.total_event.FarmBamboo.xp += var_0 prodige_skills.prodigelib.float
 scoreboard players operation @p prodige_skills.Farming.total_event.FarmBamboo += @p prodige_skills.Farming.event.FarmBamboo
-function prodige_skills:skill/farming/on_event_triggered
+scoreboard players set anon_cnoL-r-9_9380 __sandstone 1
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_9380 __sandstone = @p prodige_skills.misc.booster.Xp.multiplier
+scoreboard players operation anon_cnoL-r-9_9381 __sandstone = var_0 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_9382 __sandstone = anon_cnoL-r-9_9380 __sandstone
+scoreboard players operation anon_cnoL-r-9_9382 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_9381 __sandstone *= anon_cnoL-r-9_9382 __sandstone
+scoreboard players operation anon_cnoL-r-9_9381 __sandstone /= 10 __sandstone
+scoreboard players operation var_1245 prodige_skills.prodigelib.float = anon_cnoL-r-9_9381 __sandstone
+scoreboard players set anon_cnoL-r-9_9383 __sandstone 1
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_9383 __sandstone = @p prodige_skills.misc.booster.Pts.multiplier
+scoreboard players operation anon_cnoL-r-9_9384 __sandstone = anon_cnoL-r-9_0 __sandstone
+scoreboard players operation anon_cnoL-r-9_9384 __sandstone *= anon_cnoL-r-9_9383 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 run scoreboard players operation @p prodige_skills.farming.xp += var_1245 prodige_skills.prodigelib.float
+scoreboard players operation @p prodige_skills.player.pts += anon_cnoL-r-9_9384 __sandstone
+scoreboard players operation @p prodige_skills.farming.totalPts += anon_cnoL-r-9_9384 __sandstone
+scoreboard players operation @p prodige_skills.farming.totalXp += var_1245 prodige_skills.prodigelib.float
+function prodige_skills:ability/roll/bountiful_harvest
+scoreboard players operation anon_cnoL-r-9_9385 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_9385 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_9385 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players operation anon_cnoL-r-9_9386 __sandstone = var_1245 prodige_skills.prodigelib.float
+function prodige_skills:on_event/trigger/farm_bamboo/if5
+scoreboard players operation anon_cnoL-r-9_9387 __sandstone = anon_cnoL-r-9_9386 __sandstone
+scoreboard players operation anon_cnoL-r-9_9387 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_9387 __sandstone
+scoreboard players operation anon_cnoL-r-9_9388 __sandstone = anon_cnoL-r-9_9386 __sandstone
+scoreboard players operation anon_cnoL-r-9_9388 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_9388 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_3269.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_3269.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_3269.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3269
+data modify storage prodige_skills:prodigelib Float.var_1245.out set from storage prodige_skills:prodigelib Float.temp
+data modify storage prodige_skills:skill_bossbar args.added set from storage prodige_skills:prodigelib Float.var_1245.out
+execute store result storage prodige_skills:skill_bossbar args.points int 1 run scoreboard players get anon_cnoL-r-9_9384 __sandstone
+data modify storage prodige_skills:skill_bossbar args.boostXp set value ''
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:on_event/trigger/farm_bamboo/if6
+data modify storage prodige_skills:skill_bossbar args.boostPts set value ''
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:on_event/trigger/farm_bamboo/if7
+function prodige_skills:skill/farming/bossbar/show
 scoreboard players reset @p prodige_skills.Farming.event.FarmBamboo

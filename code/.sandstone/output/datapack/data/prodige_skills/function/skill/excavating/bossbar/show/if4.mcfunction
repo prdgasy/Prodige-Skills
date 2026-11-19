@@ -1,0 +1,2 @@
+execute if score @p prodige_skills.excavating.level matches 100.. run return run function prodige_skills:skill/excavating/bossbar/name_max with storage prodige_skills:skill_bossbar args
+return run function prodige_skills:skill/excavating/bossbar/name_default with storage prodige_skills:skill_bossbar args

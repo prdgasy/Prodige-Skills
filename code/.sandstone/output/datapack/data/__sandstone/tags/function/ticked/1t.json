@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "prodige_skills:skill/bossbar/tick",
     "prodige_skills:misc/booster/use",
     "prodige_skills:misc/crate/key_hint",
     "prodige_skills:__lib/gui/prodige_skills/trigger",

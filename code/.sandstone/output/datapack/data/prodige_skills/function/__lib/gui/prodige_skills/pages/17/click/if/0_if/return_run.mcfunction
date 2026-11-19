@@ -1,8 +1,8 @@
-scoreboard players operation anon_cnoL-r-9_5663 __sandstone = @p prodige_skills.Foraging.ability.tier
-scoreboard players add anon_cnoL-r-9_5663 __sandstone 1
-scoreboard players operation anon_cnoL-r-9_5664 __sandstone = anon_cnoL-r-9_5663 __sandstone
-scoreboard players operation anon_cnoL-r-9_5664 __sandstone *= 10 __sandstone
-execute store result storage __sandstone:variable anon_cnoL-r-9_1690.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5664 __sandstone
+scoreboard players operation anon_cnoL-r-9_5664 __sandstone = @p prodige_skills.Foraging.ability.tier
+scoreboard players add anon_cnoL-r-9_5664 __sandstone 1
+scoreboard players operation anon_cnoL-r-9_5665 __sandstone = anon_cnoL-r-9_5664 __sandstone
+scoreboard players operation anon_cnoL-r-9_5665 __sandstone *= 10 __sandstone
+execute store result storage __sandstone:variable anon_cnoL-r-9_1690.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5665 __sandstone
 function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1690
 data modify storage prodige_skills:prodigelib RomanNumbers.out_96 set from storage prodige_skills:prodigelib RomanNumbers.temp
 data modify storage __sandstone:variable anon_cnoL-r-9_1691 set value ''

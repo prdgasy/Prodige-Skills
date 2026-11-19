@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6039 __sandstone = anon_cnoL-r-9_6034 __sandstone
-scoreboard players operation anon_cnoL-r-9_6039 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6040 __sandstone = anon_cnoL-r-9_6035 __sandstone
+scoreboard players operation anon_cnoL-r-9_6040 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_2005 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_2006 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_2007 set value 'charcoal'
@@ -8,9 +8,9 @@ execute if entity @p[tag=prodige_skills.title.equipped.new_title_stone_seeker] r
 data modify storage __sandstone:variable anon_cnoL-r-9_2008 set value '§8You cannot buy this.'
 # prodige_skills::titles::fill -> §dNew Title: §6Stone Seeker$(macro_arg_2579)($(macro_arg_2578))
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2577 set from storage __sandstone:variable anon_cnoL-r-9_2007
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2578 int 1 run scoreboard players get anon_cnoL-r-9_6039 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2578 int 1 run scoreboard players get anon_cnoL-r-9_6040 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2579 set from storage __sandstone:variable anon_cnoL-r-9_2006
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2580 set from storage __sandstone:variable anon_cnoL-r-9_2005
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2581 set from storage __sandstone:variable anon_cnoL-r-9_2008
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6035 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6036 __sandstone 1

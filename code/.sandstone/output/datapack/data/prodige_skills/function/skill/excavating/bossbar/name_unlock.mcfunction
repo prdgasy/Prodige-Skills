@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:excavating_$(barId) name "§aUnlocking Excavating..."

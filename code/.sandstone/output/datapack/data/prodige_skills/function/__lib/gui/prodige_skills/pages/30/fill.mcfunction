@@ -19,8 +19,8 @@ item replace entity @s container.26 with cyan_stained_glass_pane[lore=[],custom_
 # prodige_skills::titles::fill -> §d§lTitles(20)
 item replace entity @s container.20 with name_tag[custom_name={text: "§d§lTitles", italic: false, color: "white"},lore=[{text: "§d§l┃ Make Your Mark", italic: false, color: "white"},{text: "§d┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§d┃ §7or purchase them here.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch
-scoreboard players set anon_cnoL-r-9_6034 __sandstone 0
 scoreboard players set anon_cnoL-r-9_6035 __sandstone 0
+scoreboard players set anon_cnoL-r-9_6036 __sandstone 0
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch2
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch3
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch4

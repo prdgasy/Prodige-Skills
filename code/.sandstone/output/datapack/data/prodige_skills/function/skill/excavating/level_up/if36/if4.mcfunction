@@ -1,6 +1,6 @@
 execute if score @p prodige_skills.hunting.level matches ..99 run function prodige_skills:skill/excavating/level_up/if36/if4/if
-scoreboard players set anon_cnoL-r-9_16639 __sandstone 490
-scoreboard players operation @p prodige_skills.hunting.totalXp += anon_cnoL-r-9_16639 __sandstone
-scoreboard players operation anon_cnoL-r-9_16640 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_16640 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_16640 __sandstone if score @p prodige_skills.hunting.level matches ..99 run function prodige_skills:skill/hunting/level_up
+scoreboard players set anon_cnoL-r-9_17708 __sandstone 470
+scoreboard players operation @p prodige_skills.hunting.totalXp += anon_cnoL-r-9_17708 __sandstone
+scoreboard players operation anon_cnoL-r-9_17709 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_17709 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.hunting.level matches ..99 if score @p prodige_skills.hunting.goal matches 1.. if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_17709 __sandstone run function prodige_skills:skill/hunting/level_up

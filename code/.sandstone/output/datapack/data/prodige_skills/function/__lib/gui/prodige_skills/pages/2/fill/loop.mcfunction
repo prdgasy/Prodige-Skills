@@ -1,9 +1,9 @@
-scoreboard players operation anon_cnoL-r-9_217 __sandstone = @s prodige_skills.progress_page_index
-scoreboard players operation anon_cnoL-r-9_217 __sandstone *= 18 __sandstone
-scoreboard players operation anon_cnoL-r-9_218 __sandstone = anon_cnoL-r-9_217 __sandstone
-scoreboard players operation anon_cnoL-r-9_218 __sandstone += loop_iterator_1_cnoL-r-9 __sandstone
+scoreboard players operation anon_cnoL-r-9_218 __sandstone = @s prodige_skills.progress_page_index
+scoreboard players operation anon_cnoL-r-9_218 __sandstone *= 18 __sandstone
 scoreboard players operation anon_cnoL-r-9_219 __sandstone = anon_cnoL-r-9_218 __sandstone
-scoreboard players add anon_cnoL-r-9_219 __sandstone 1
-execute if score anon_cnoL-r-9_219 __sandstone matches ..100 run function prodige_skills:__lib/gui/prodige_skills/pages/2/fill/loop/if
+scoreboard players operation anon_cnoL-r-9_219 __sandstone += loop_iterator_1_cnoL-r-9 __sandstone
+scoreboard players operation anon_cnoL-r-9_220 __sandstone = anon_cnoL-r-9_219 __sandstone
+scoreboard players add anon_cnoL-r-9_220 __sandstone 1
+execute if score anon_cnoL-r-9_220 __sandstone matches ..100 run function prodige_skills:__lib/gui/prodige_skills/pages/2/fill/loop/if
 scoreboard players add loop_iterator_1_cnoL-r-9 __sandstone 1
 execute if score loop_iterator_1_cnoL-r-9 __sandstone matches ..17 run function prodige_skills:__lib/gui/prodige_skills/pages/2/fill/loop

@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6195 __sandstone = anon_cnoL-r-9_6034 __sandstone
-scoreboard players operation anon_cnoL-r-9_6195 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6196 __sandstone = anon_cnoL-r-9_6035 __sandstone
+scoreboard players operation anon_cnoL-r-9_6196 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_2317 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_2318 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_2319 set value 'charcoal'
@@ -9,9 +9,9 @@ data modify storage __sandstone:variable anon_cnoL-r-9_2320 set value '§eClick 
 execute if entity @p[tag=prodige_skills.title.owned.new_title_the_golden_farmer] run data modify storage __sandstone:variable anon_cnoL-r-9_2320 set value '§bClick to equip or unequip this title!'
 # prodige_skills::titles::fill -> §dNew Title: §6The Golden Farmer$(macro_arg_2969)($(macro_arg_2968))
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2967 set from storage __sandstone:variable anon_cnoL-r-9_2319
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2968 int 1 run scoreboard players get anon_cnoL-r-9_6195 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2968 int 1 run scoreboard players get anon_cnoL-r-9_6196 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2969 set from storage __sandstone:variable anon_cnoL-r-9_2318
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2970 set from storage __sandstone:variable anon_cnoL-r-9_2317
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2971 set from storage __sandstone:variable anon_cnoL-r-9_2320
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro80 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6035 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6036 __sandstone 1

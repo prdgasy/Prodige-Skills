@@ -1,0 +1,2 @@
+scoreboard players remove @p prodige_skills.misc.booster.Pts.timer 1
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 0 run function prodige_skills:misc/booster/count_timer/execute_as/if2/if

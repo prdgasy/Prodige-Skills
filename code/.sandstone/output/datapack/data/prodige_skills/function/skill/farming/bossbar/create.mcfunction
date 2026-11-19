@@ -1,1 +1,1 @@
-$bossbar add prodige_skills.farming.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3]) "§dFarming"
+$bossbar add prodige_skills:farming_$(barId) "§dFarming"

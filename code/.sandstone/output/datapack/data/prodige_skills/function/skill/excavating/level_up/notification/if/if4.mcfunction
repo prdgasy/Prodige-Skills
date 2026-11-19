@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_17889 __sandstone matches ..-1 run return run function prodige_skills:skill/excavating/level_up/notification/if/if4/0_if/return_run
+execute if score anon_cnoL-r-9_19018 __sandstone matches ..-1 run return run function prodige_skills:skill/excavating/level_up/notification/if/if4/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

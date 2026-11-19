@@ -3,8 +3,8 @@
   "values": [
     "prodige_skills:__init__",
     "prodige_skills:__lib/roman/set_data",
-    "prodige_skills:load",
     "__sandstone:ticked/start/cnol-r-9",
+    "prodige_skills:load",
     "prodige_skills:__lib/cjmap/prodige_skills/load",
     "prodige_skills:__lib/gui/prodige_skills/load",
     "prodige_skills:title/setup_teams",

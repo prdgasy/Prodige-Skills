@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6047 __sandstone = anon_cnoL-r-9_6034 __sandstone
-scoreboard players operation anon_cnoL-r-9_6047 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6048 __sandstone = anon_cnoL-r-9_6035 __sandstone
+scoreboard players operation anon_cnoL-r-9_6048 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_2021 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_2022 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_2023 set value 'charcoal'
@@ -8,9 +8,9 @@ execute if entity @p[tag=prodige_skills.title.equipped.new_title_deep_delver] ru
 data modify storage __sandstone:variable anon_cnoL-r-9_2024 set value '§8You cannot buy this.'
 # prodige_skills::titles::fill -> §dNew Title: §bDeep Delver$(macro_arg_2599)($(macro_arg_2598))
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2597 set from storage __sandstone:variable anon_cnoL-r-9_2023
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2598 int 1 run scoreboard players get anon_cnoL-r-9_6047 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2598 int 1 run scoreboard players get anon_cnoL-r-9_6048 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2599 set from storage __sandstone:variable anon_cnoL-r-9_2022
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2600 set from storage __sandstone:variable anon_cnoL-r-9_2021
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2601 set from storage __sandstone:variable anon_cnoL-r-9_2024
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro6 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6035 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6036 __sandstone 1

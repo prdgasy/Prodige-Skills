@@ -1,0 +1,2 @@
+execute if score @p prodige_skills.excavating.level matches 0 run return run function prodige_skills:skill/excavating/bossbar/name_unlock with storage prodige_skills:skill_bossbar args
+function prodige_skills:skill/excavating/bossbar/show/if3/if2

@@ -1,0 +1,1 @@
+execute if data storage prodige_skills:skill_bossbar queue[0] run function prodige_skills:skill/bossbar/purge/if

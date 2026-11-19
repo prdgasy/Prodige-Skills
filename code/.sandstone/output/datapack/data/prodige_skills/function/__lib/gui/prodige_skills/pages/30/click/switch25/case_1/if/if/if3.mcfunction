@@ -1,5 +1,5 @@
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3631 set from storage __sandstone:variable anon_cnoL-r-9_2851
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3632 int 1 run scoreboard players get anon_cnoL-r-9_6463 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3632 int 1 run scoreboard players get anon_cnoL-r-9_6464 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3633 set from storage __sandstone:variable anon_cnoL-r-9_2850
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3634 set from storage __sandstone:variable anon_cnoL-r-9_2849
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3635 set from storage __sandstone:variable anon_cnoL-r-9_2852

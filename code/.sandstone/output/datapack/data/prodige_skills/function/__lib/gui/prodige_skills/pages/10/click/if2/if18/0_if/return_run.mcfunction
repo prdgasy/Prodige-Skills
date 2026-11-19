@@ -1,2 +1,2 @@
-scoreboard players operation anon_cnoL-r-9_3792 __sandstone *= -1 __sandstone
+scoreboard players operation anon_cnoL-r-9_3793 __sandstone *= -1 __sandstone
 data modify storage prodige_skills:prodigelib Float.sign set value '-'

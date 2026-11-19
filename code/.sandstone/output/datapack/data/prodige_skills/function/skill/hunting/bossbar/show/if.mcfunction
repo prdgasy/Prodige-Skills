@@ -1,0 +1,2 @@
+execute if score anon_cnoL-r-9_18810 __sandstone matches ..-1 run return run function prodige_skills:skill/hunting/bossbar/show/if/0_if/return_run
+data modify storage prodige_skills:prodigelib Float.sign set value ''

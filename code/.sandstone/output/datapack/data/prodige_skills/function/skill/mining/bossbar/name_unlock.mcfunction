@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:mining_$(barId) name "§aUnlocking Mining..."

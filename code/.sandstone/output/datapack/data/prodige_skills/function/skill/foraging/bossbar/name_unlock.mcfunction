@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:foraging_$(barId) name "§aUnlocking Foraging..."

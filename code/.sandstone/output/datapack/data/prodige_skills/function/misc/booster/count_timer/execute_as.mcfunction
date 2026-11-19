@@ -1,2 +1,2 @@
-execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run scoreboard players remove @p prodige_skills.misc.booster.Xp.timer 1
-execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run scoreboard players remove @p prodige_skills.misc.booster.Pts.timer 1
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:misc/booster/count_timer/execute_as/if
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:misc/booster/count_timer/execute_as/if2

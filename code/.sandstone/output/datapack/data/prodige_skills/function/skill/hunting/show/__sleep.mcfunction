@@ -1,2 +1,0 @@
-tag @s remove __sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep
-execute if score @s prodige_skills.hunting.bossbar.token = anon_cnoL-r-9_17951 __sandstone run function prodige_skills:skill/hunting/show/if5

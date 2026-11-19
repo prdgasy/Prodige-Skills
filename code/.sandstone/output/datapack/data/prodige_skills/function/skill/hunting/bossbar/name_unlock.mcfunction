@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:hunting_$(barId) name "§aUnlocking Hunting..."

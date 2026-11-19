@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6601 __sandstone = anon_cnoL-r-9_6320 __sandstone
-scoreboard players operation anon_cnoL-r-9_6601 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6602 __sandstone = anon_cnoL-r-9_6321 __sandstone
+scoreboard players operation anon_cnoL-r-9_6602 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_3125 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_3126 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_3127 set value 'charcoal'
@@ -9,4 +9,4 @@ data modify storage __sandstone:variable anon_cnoL-r-9_3128 set value '§eClick 
 execute if entity @p[tag=prodige_skills.title.owned.new_title_dune_sovereign] run data modify storage __sandstone:variable anon_cnoL-r-9_3128 set value '§bClick to equip or unequip this title!'
 # prodige_skills::titles::click -> §dNew Title: §eDune Sovereign$(macro_arg_3978)($(macro_arg_3977))
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch48/case_1/if/if/if4
-scoreboard players add anon_cnoL-r-9_6321 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6322 __sandstone 1

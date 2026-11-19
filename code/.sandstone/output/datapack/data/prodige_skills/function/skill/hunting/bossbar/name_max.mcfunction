@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:hunting_$(barId) name "§dHunting $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp$(boostXp) §8• §e+$(points) Pts$(boostPts)"

@@ -3,6 +3,8 @@ scoreboard objectives add prodige_skills.player.pts dummy
 scoreboard objectives add prodige_skills.player.inventory.slots dummy
 scoreboard objectives add prodige_skills.boost.used minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add prodige_skills.crate.key.used minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add prodige_skills.bossbar.id dummy
+scoreboard objectives add prodige_skills.bossbar.tick dummy
 scoreboard objectives add prodige_skills.prodigelib.float dummy
 scoreboard objectives add prodige_skills.task.timer dummy
 scoreboard objectives add prodige_skills.menu.shop.items.index dummy
@@ -22,7 +24,6 @@ scoreboard objectives add prodige_skills.Mining.ability.buff dummy
 scoreboard objectives add prodige_skills.Mining.ability.price dummy
 scoreboard objectives add prodige_skills.mining.totalXp dummy
 scoreboard objectives add prodige_skills.mining.totalPts dummy
-scoreboard objectives add prodige_skills.mining.bossbar.token dummy
 scoreboard objectives add prodige_skills.foraging.level dummy
 scoreboard objectives add prodige_skills.foraging.xp dummy
 scoreboard objectives add prodige_skills.foraging.goal dummy
@@ -32,7 +33,6 @@ scoreboard objectives add prodige_skills.Foraging.ability.buff dummy
 scoreboard objectives add prodige_skills.Foraging.ability.price dummy
 scoreboard objectives add prodige_skills.foraging.totalXp dummy
 scoreboard objectives add prodige_skills.foraging.totalPts dummy
-scoreboard objectives add prodige_skills.foraging.bossbar.token dummy
 scoreboard objectives add prodige_skills.farming.level dummy
 scoreboard objectives add prodige_skills.farming.xp dummy
 scoreboard objectives add prodige_skills.farming.goal dummy
@@ -42,7 +42,6 @@ scoreboard objectives add prodige_skills.Farming.ability.buff dummy
 scoreboard objectives add prodige_skills.Farming.ability.price dummy
 scoreboard objectives add prodige_skills.farming.totalXp dummy
 scoreboard objectives add prodige_skills.farming.totalPts dummy
-scoreboard objectives add prodige_skills.farming.bossbar.token dummy
 scoreboard objectives add prodige_skills.hunting.level dummy
 scoreboard objectives add prodige_skills.hunting.xp dummy
 scoreboard objectives add prodige_skills.hunting.goal dummy
@@ -52,7 +51,6 @@ scoreboard objectives add prodige_skills.Hunting.ability.buff dummy
 scoreboard objectives add prodige_skills.Hunting.ability.price dummy
 scoreboard objectives add prodige_skills.hunting.totalXp dummy
 scoreboard objectives add prodige_skills.hunting.totalPts dummy
-scoreboard objectives add prodige_skills.hunting.bossbar.token dummy
 scoreboard objectives add prodige_skills.excavating.level dummy
 scoreboard objectives add prodige_skills.excavating.xp dummy
 scoreboard objectives add prodige_skills.excavating.goal dummy
@@ -62,7 +60,6 @@ scoreboard objectives add prodige_skills.Excavating.ability.buff dummy
 scoreboard objectives add prodige_skills.Excavating.ability.price dummy
 scoreboard objectives add prodige_skills.excavating.totalXp dummy
 scoreboard objectives add prodige_skills.excavating.totalPts dummy
-scoreboard objectives add prodige_skills.excavating.bossbar.token dummy
 scoreboard objectives add prodige_skills.reward.pending.novice_pickaxe dummy
 scoreboard objectives add prodige_skills.reward.pending.expert_sword dummy
 scoreboard objectives add prodige_skills.reward.pending.field_shovel dummy
@@ -944,11 +941,6 @@ scoreboard objectives add prodige_skills.__lib.gui.prodige_skills.id dummy
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_stone.show.__sleep dummy
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_dirt.show.__sleep dummy
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_sand.show.__sleep dummy
-scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mining.show.__sleep dummy
-scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.foraging.show.__sleep dummy
-scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.farming.show.__sleep dummy
-scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep dummy
-scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.excavating.show.__sleep dummy
 scoreboard players set prodige_skills load.status 1
 scoreboard players set anon_cnoL-r-9_1 __sandstone 0
 scoreboard players set anon_cnoL-r-9_2 __sandstone 0

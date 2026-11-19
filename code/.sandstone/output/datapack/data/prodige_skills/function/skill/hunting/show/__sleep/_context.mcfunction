@@ -1,2 +1,0 @@
-execute store result score #current __sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep run time query gametime
-execute as @e[tag=__sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep] if score @s __sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep = #current __sandstone.asyncTimer.prodige_skills.skill.hunting.show.__sleep at @s run function prodige_skills:skill/hunting/show/__sleep

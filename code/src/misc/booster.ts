@@ -1,5 +1,5 @@
 import { Player } from "@src/player";
-import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Score } from "sandstone";
+import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Score, Variable } from "sandstone";
 import { Item } from "@src/types";
 import { Reward } from "./reward";
 
@@ -28,7 +28,7 @@ export class Booster extends Reward {
     const description = `${multiplier}x ${type} Booster · ${duration} minutes`;
     const icon: Item = type === 'Xp' ? 'experience_bottle' : 'gold_ingot';
 
-    super(name, () => Booster.giveBooster(type, icon, duration, multiplier), {
+    super(name, () => Booster.giveBooster(name, type, icon, duration, multiplier), {
       icon, category: 'vault', price: PRICES[multiplier], description
     });
 
@@ -50,10 +50,10 @@ export class Booster extends Reward {
     return booster;
   }
 
-  private static giveBooster(type: BoosterType, icon: Item, duration: number, multiplier: number) {
+  private static giveBooster(name: string, type: BoosterType, icon: Item, duration: number, multiplier: number) {
     const customData = { prodige_skills: { booster: `${type.toLowerCase()}_${multiplier}` } };
     return give('@p', 'warped_fungus_on_a_stick', {
-      'minecraft:custom_name': this.name,
+      'minecraft:custom_name': name,
       'minecraft:lore': [
         '§9Prodige Skills',
         '',
@@ -73,7 +73,13 @@ export class Booster extends Reward {
       execute.as('@a').at('@s').run(() => {
         for (const type of BOOSTER_TYPE) {
           const t = Booster.getTimer(type);
-          _.if(t['>'](0), () => t['--']);
+          _.if(t['>'](0), () => {
+            t['--'];
+            _.if(t['=='](0), () => {
+              Booster.getMultiplier(type).set(1);
+              Player.send(`Your ${type} Booster has expired.`, '§c');
+            });
+          });
         }
       });
     }, { runEvery: '60s' });
@@ -103,6 +109,13 @@ export class Booster extends Reward {
 
   public static getMultiplier(type: BoosterType): Score {
     return Objective.create(`misc.booster.${type}.multiplier`)('@p');
+  }
+
+  /** Multiplicateur effectif : x1 si aucun booster de ce type n'est actif. */
+  public static effectiveMultiplier(type: BoosterType): Score {
+    const mult = Variable(1);
+    _.if(Booster.getTimer(type)['>'](0), () => mult.set(Booster.getMultiplier(type)));
+    return mult;
   }
 
   public static getColor(type: BoosterType): string {

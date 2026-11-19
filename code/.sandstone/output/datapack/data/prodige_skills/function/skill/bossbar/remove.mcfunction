@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills:$(skill)_$(barId)

@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:farming_$(barId) name "§aUnlocking Farming..."

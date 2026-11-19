@@ -1,0 +1,1 @@
+$data modify storage prodige_skills:skill_bossbar args.boostXp set value " §8[§bx$(mult)§8]"

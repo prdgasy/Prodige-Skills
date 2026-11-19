@@ -1,0 +1,1 @@
+$bossbar set prodige_skills:mining_$(barId) name "§dMining $(roman) §8| §e$(xp)§6/§e$(goal) Xp §8• §7$(progress)% §8| §b+$(added) Xp$(boostXp) §8• §e+$(points) Pts$(boostPts)"

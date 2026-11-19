@@ -1,0 +1,2 @@
+execute store result storage prodige_skills:skill_bossbar args.mult int 1 run scoreboard players get @p prodige_skills.misc.booster.Pts.multiplier
+return run function prodige_skills:skill/bossbar/boost_tag/pts with storage prodige_skills:skill_bossbar args

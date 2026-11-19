@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_6081 __sandstone = anon_cnoL-r-9_6034 __sandstone
-scoreboard players operation anon_cnoL-r-9_6081 __sandstone %= 18 __sandstone
+scoreboard players operation anon_cnoL-r-9_6082 __sandstone = anon_cnoL-r-9_6035 __sandstone
+scoreboard players operation anon_cnoL-r-9_6082 __sandstone %= 18 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_2089 set value '§cNOT OWNED'
 data modify storage __sandstone:variable anon_cnoL-r-9_2090 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_2091 set value 'charcoal'
@@ -8,9 +8,9 @@ execute if entity @p[tag=prodige_skills.title.equipped.new_title_cave_cartograph
 data modify storage __sandstone:variable anon_cnoL-r-9_2092 set value '§8You cannot buy this.'
 # prodige_skills::titles::fill -> §dNew Title: §8Cave Cartographer$(macro_arg_2684)($(macro_arg_2683))
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2682 set from storage __sandstone:variable anon_cnoL-r-9_2091
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2683 int 1 run scoreboard players get anon_cnoL-r-9_6081 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2683 int 1 run scoreboard players get anon_cnoL-r-9_6082 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2684 set from storage __sandstone:variable anon_cnoL-r-9_2090
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2685 set from storage __sandstone:variable anon_cnoL-r-9_2089
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2686 set from storage __sandstone:variable anon_cnoL-r-9_2092
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro23 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6035 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6036 __sandstone 1
