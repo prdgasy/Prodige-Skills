@@ -1,2 +1,2 @@
 # prodige_skills::epic_rewards::fill -> §9§lRare Crate Key(4)
-item replace entity @s container.4 with carrot_on_a_stick[custom_name={text: "§9§lRare Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.4 with tripwire_hook[custom_name={text: "§9§lRare Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

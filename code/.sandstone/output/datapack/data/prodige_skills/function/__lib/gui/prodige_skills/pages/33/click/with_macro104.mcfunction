@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§6Strata Shaper §8× §e$(macro_arg_5561)($(macro_arg_5560))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5560)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro104/execute_unless

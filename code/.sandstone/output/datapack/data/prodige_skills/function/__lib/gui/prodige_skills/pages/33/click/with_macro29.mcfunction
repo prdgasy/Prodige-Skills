@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §aOrchard Master §8× §e$(macro_arg_5336)($(macro_arg_5335))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5335)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro29/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Evergreen Reaper §8× §e$(macro_arg_4397)($(macro_arg_4396))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4396)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro29/execute_unless

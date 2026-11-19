@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§6Ancient Vein Pick §8× §e$(macro_arg_5441)($(macro_arg_5440))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5440)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro64/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§c§lMythic Crate Key §8× §e$(macro_arg_4502)($(macro_arg_4501))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4501)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro64/execute_unless

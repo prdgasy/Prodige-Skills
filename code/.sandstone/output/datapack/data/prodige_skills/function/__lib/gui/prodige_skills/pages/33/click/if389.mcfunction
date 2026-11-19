@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click -> §cYour Vault Is Empty(13)
-execute if score anon_cnoL-r-9_35 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if389/if/if

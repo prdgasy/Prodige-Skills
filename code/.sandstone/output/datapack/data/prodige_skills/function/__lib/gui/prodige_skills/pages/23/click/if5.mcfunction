@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::click -> §bNew Tool: §ex3 Pts Booster(3)
+# prodige_skills::rare_rewards::click -> §ex3 Pts Booster(3)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::fill::macro -> $(macro_arg_5250)(26)
-$item replace entity @s container.26 with $(macro_arg_5249)[custom_name={text: "$(macro_arg_5250)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

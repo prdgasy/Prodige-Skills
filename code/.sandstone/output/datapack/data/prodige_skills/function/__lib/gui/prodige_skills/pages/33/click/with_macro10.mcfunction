@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §bDiamond Crown §8× §e$(macro_arg_5279)($(macro_arg_5278))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5278)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro10/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§aStonewake Pickaxe §8× §e$(macro_arg_4340)($(macro_arg_4339))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4339)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro10/execute_unless

@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §eCrop Keeper §8× §e$(macro_arg_5315)($(macro_arg_5314))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5314)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro22/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§9Canopy Hatchet §8× §e$(macro_arg_4376)($(macro_arg_4375))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4375)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro22/execute_unless

@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §2Keeper of the Wild §8× §e$(macro_arg_5354)($(macro_arg_5353))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5353)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro35/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dBountiful Planter §8× §e$(macro_arg_4415)($(macro_arg_4414))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4414)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro35/execute_unless

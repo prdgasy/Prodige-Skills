@@ -11,32 +11,32 @@ import { Data, defaultNamespace, functionCmd, Macro as $, _, execute, MCFunction
 
 
 export class Reward {
-  public static toVaultReg = new Map<string, Required<Pick<Reward, 'icon' | 'pending'>>>();
+  public static toVaultReg = new Map<string, Reward>();
   public static uniqueReg = new Map<string, Reward>();
 
   public name: string;
   public description?: string;
-	public id: string;
-	public give: () => void;
+  public id: string;
+  public give: () => void;
   public icon?: Item;
   public category?: 'vault' | 'unique';
   public price?: number;
-	public pending?: Score;
+  public pending?: Score;
 
-	public static common: () => Reward[];
-	public static rare: () => Reward[];
-	public static epic: () => Reward[];
-	public static legendary: () => Reward[];
+  public static common: () => Reward[];
+  public static rare: () => Reward[];
+  public static epic: () => Reward[];
+  public static legendary: () => Reward[];
 
-	constructor(
+  constructor(
     name: string,
     give: () => void = () => { },
     opt: { icon?: Item; category?: 'vault' | 'unique', price?: number, description?: string } = {}
-    
+
   ) {
     this.name = name;
     this.description = opt.description;
-		this.id = Global.toResource(this.name);
+    this.id = Global.toResource(this.name);
     this.give = give;
     this.icon = opt.icon;
     this.category = opt.category;
@@ -44,110 +44,110 @@ export class Reward {
     else if (this.category === 'unique') this.registerUniqueReward();
 
     this.price = opt.price;
-	}
+  }
 
   private registerVaultReward() {
     this.pending = Objective.create(`reward.pending.${this.id}`)('@p');
     if (!this.icon) throw new Error(`A vault reward must have an Icon: ${this.name}`);
-    Reward.toVaultReg.set(this.id, this as Required<Pick<Reward, 'icon' | 'pending'>>);
+    Reward.toVaultReg.set(this.id, this);
   }
 
-  private registerUniqueReward() { 
+  private registerUniqueReward() {
     Reward.uniqueReg.set(this.id, this);
   }
 
-	public static choose(rewards: Reward[], n = 1) {
-		if (n > rewards.length) throw Error('Number of element choosed is greater than the array\'s length');
-		const choosed: Reward[] = [];
-		const pool = [...rewards];
-		for (let i = 0; i < n; i++) {
-			const index = Math.floor(Math.random() * pool.length);
-			choosed.push(pool.splice(index, 1)[0]);
-		}
-		return choosed;
-	}
+  public static choose(rewards: Reward[], n = 1) {
+    if (n > rewards.length) throw Error('Number of element choosed is greater than the array\'s length');
+    const choosed: Reward[] = [];
+    const pool = [...rewards];
+    for (let i = 0; i < n; i++) {
+      const index = Math.floor(Math.random() * pool.length);
+      choosed.push(pool.splice(index, 1)[0]);
+    }
+    return choosed;
+  }
 
-	/** Assemble multiple rewards into a string[] */
-	public static join(rewards: Reward[]): string[] {
-		return rewards.map(r => ` §8• ${r.name}`);
-	}
+  /** Assemble multiple rewards into a string[] */
+  public static join(rewards: Reward[]): string[] {
+    return rewards.map(r => ` §8• ${r.name}`);
+  }
 
-	public static vaultOrGive(reward: Reward) {
-		if (reward.category === 'vault')
-			return reward.pending!.add(1);
+  public static vaultOrGive(reward: Reward) {
+    if (reward.category === 'vault')
+      return reward.pending!.add(1);
 
-		reward.give();
-	}
+    reward.give();
+  }
 
-	public static vaultOrGiveAll(rewards: Reward[]) {
-		rewards.forEach(reward => Reward.vaultOrGive(reward));
-	}
+  public static vaultOrGiveAll(rewards: Reward[]) {
+    rewards.forEach(reward => Reward.vaultOrGive(reward));
+  }
 
   public claim() {
-    const runGive = () => { 
+    const runGive = () => {
       this.give();
       Player.playSound('success', 2);
     }
 
     if (this.category === 'vault') {
-      const removeFromVault = () => { 
+      const removeFromVault = () => {
         this.pending!['--'];
         runGive();
       }
       Reward.tryGive(removeFromVault);
     } else runGive();
-	}
+  }
 
-	public static tryGive(callback: () => void) {
-		return _.if(Player.isInvFull(), () => {
-			Player.throw("You don't have enough space in your inventory!");
-		}).else(() => callback());
-	}
+  public static tryGive(callback: () => void) {
+    return _.if(Player.isInvFull(), () => {
+      Player.throw("You don't have enough space in your inventory!");
+    }).else(() => callback());
+  }
 
-	public static ability(ability: Ability, tier: number): Reward {
-		return new Reward(
-			`§dUpgrade available: §c§l${ability.name} §8[§c§l${Roman.get(tier)}§8] • ${(tier - 1) * 2.5}%»§c${tier * 2.5}%`
-		);
-	}
+  public static ability(ability: Ability, tier: number): Reward {
+    return new Reward(
+      `§dUpgrade available: §c§l${ability.name} §8[§c§l${Roman.get(tier)}§8] • ${(tier - 1) * 2.5}%»§c${tier * 2.5}%`
+    );
+  }
 
-	public static point(p: number): Reward {
-    return new Reward(`§e${p} Pts`, () => Player.pts.add(p), { icon: 'gold_ingot'});
-	}
+  public static point(p: number): Reward {
+    return new Reward(`§e${p} Pts`, () => Player.pts.add(p), { icon: 'gold_ingot' });
+  }
 
-	public static randomXp(min: number, max: number, skills: Skill[]): Reward {
-		const amount = Math.floor(Math.random() * (max - min + 1)) + min;
-	
+  public static randomXp(min: number, max: number, skills: Skill[]): Reward {
+    const amount = Math.floor(Math.random() * (max - min + 1)) + min;
+
     return new Reward(`§3${amount} Xp in a random Skill`, () => {
-			const skillIndex = Variable(0);
-			execute.store.result(skillIndex).run.random.value([0, skills.length - 1]);
-			skills.forEach((skill, index) => {
-				_.if(skillIndex['=='](index), () => skill.grantRewardXp(amount));
-			});
-		}, { icon: 'experience_bottle' });;
-	}
+      const skillIndex = Variable(0);
+      execute.store.result(skillIndex).run.random.value([0, skills.length - 1]);
+      skills.forEach((skill, index) => {
+        _.if(skillIndex['=='](index), () => skill.grantRewardXp(amount));
+      });
+    }, { icon: 'experience_bottle' });;
+  }
 
   public buy() {
     if (!this.price) throw new Error(`Missing the parameter *price* when using the buy function on ${this.name}`);
 
-		const purchase = () => {
-			Player.pts['-='](this.price!);
-			this.give();
-			Player.playSound('entity.arrow.hit_player', 2);
-			Player.send(`You bought §8[${this.name}§8] §afor §e${this.price} Pts§a!`, '§a');
-		};
+    const purchase = () => {
+      Player.pts['-='](this.price!);
+      this.give();
+      Player.playSound('entity.arrow.hit_player', 2);
+      Player.send(`You bought §8[${this.name}§8] §afor §e${this.price} Pts§a!`, '§a');
+    };
 
-		execute.as('@p').at('@s').run(() => {
-			_.if(Player.pts['>='](this.price!), () => {
-				if (this.category === 'vault') { // if takes place
-					_.if(Player.isInvFull(), () => {
-						Player.throw("Your inventory is full!");
-					}).else(purchase);
-				} else {
-					purchase();
-				}
-			}).else(() => {
-				Player.throw(`You don't have enough points to buy §8[${this.name}§8]!`);
-			});
-		});
-	}
+    execute.as('@p').at('@s').run(() => {
+      _.if(Player.pts['>='](this.price!), () => {
+        if (this.category === 'vault') { // if takes place
+          _.if(Player.isInvFull(), () => {
+            Player.throw("Your inventory is full!");
+          }).else(purchase);
+        } else {
+          purchase();
+        }
+      }).else(() => {
+        Player.throw(`You don't have enough points to buy §8[${this.name}§8]!`);
+      });
+    });
+  }
 }

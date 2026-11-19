@@ -1,3 +1,9 @@
-function prodige_skills:misc/reward/execute/132
-function prodige_skills:misc/reward/execute/120
-return run function prodige_skills:misc/reward/execute/296
+scoreboard players add @p prodige_skills.player.pts 1700
+scoreboard players add @p prodige_skills.reward.pending.rare_crate_key 1
+scoreboard players set anon_cnoL-r-9_15057 __sandstone 0
+execute store result score anon_cnoL-r-9_15057 __sandstone run random value 0..4
+execute if score anon_cnoL-r-9_15057 __sandstone matches 0 run function prodige_skills:skill/hunting/level_up/if38/if
+execute if score anon_cnoL-r-9_15057 __sandstone matches 1 run function prodige_skills:skill/hunting/level_up/if38/if2
+execute if score anon_cnoL-r-9_15057 __sandstone matches 2 run function prodige_skills:skill/hunting/level_up/if38/if3
+execute if score anon_cnoL-r-9_15057 __sandstone matches 3 run function prodige_skills:skill/hunting/level_up/if38/if4
+execute if score anon_cnoL-r-9_15057 __sandstone matches 4 run function prodige_skills:skill/hunting/level_up/if38/if5

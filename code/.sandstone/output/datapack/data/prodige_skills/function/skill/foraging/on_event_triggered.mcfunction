@@ -3,7 +3,7 @@ scoreboard players operation @p prodige_skills.player.pts += anon_cnoL-r-9_0 __s
 scoreboard players operation @p prodige_skills.foraging.totalPts += anon_cnoL-r-9_0 __sandstone
 scoreboard players operation @p prodige_skills.foraging.totalXp += var_0 prodige_skills.prodigelib.float
 function prodige_skills:ability/roll/forest_stride
-scoreboard players operation anon_cnoL-r-9_12747 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_12747 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_12747 __sandstone if score @p prodige_skills.foraging.level matches ..99 run function prodige_skills:skill/foraging/level_up
+scoreboard players operation anon_cnoL-r-9_17702 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_17702 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_17702 __sandstone if score @p prodige_skills.foraging.level matches ..99 run function prodige_skills:skill/foraging/level_up
 function prodige_skills:skill/foraging/show

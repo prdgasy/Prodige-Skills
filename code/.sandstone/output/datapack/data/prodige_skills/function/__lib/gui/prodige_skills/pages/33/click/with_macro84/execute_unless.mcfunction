@@ -1,2 +1,0 @@
-execute if score @p prodige_skills.reward.pending.everbloom_hoe matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro84/execute_unless/if
-scoreboard players set anon_cnoL-r-9_35 __sandstone 1

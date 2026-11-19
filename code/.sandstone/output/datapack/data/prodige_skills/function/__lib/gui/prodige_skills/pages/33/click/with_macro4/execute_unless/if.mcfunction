@@ -1,3 +1,4 @@
-scoreboard players remove @p prodige_skills.reward.pending.new_title_deep_core_delver 1
-execute unless entity @p[tag=prodige_skills.title.owned.new_title_deep_core_delver] run tag @p add prodige_skills.title.owned.new_title_deep_core_delver
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro4/execute_unless/if/0_if/return_run
+scoreboard players remove @p prodige_skills.reward.pending.verdant_hatchet 1
+function prodige_skills:misc/tool/verdant_hatchet/give
 execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_12865 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_12865 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.foraging.xp -= anon_cnoL-r-9_12865 __sandstone
+scoreboard players operation anon_cnoL-r-9_11289 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_11289 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.foraging.xp -= anon_cnoL-r-9_11289 __sandstone
 scoreboard players operation @p prodige_skills.foraging.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.foraging.goal /= 10 __sandstone
 execute if score @p prodige_skills.foraging.goal matches 5001.. run scoreboard players set @p prodige_skills.foraging.goal 5000
@@ -106,14 +106,17 @@ execute if score @p prodige_skills.foraging.level matches 96 run function prodig
 execute if score @p prodige_skills.foraging.level matches 97 run function prodige_skills:skill/foraging/level_up/if100
 execute if score @p prodige_skills.foraging.level matches 98 run function prodige_skills:skill/foraging/level_up/if101
 execute if score @p prodige_skills.foraging.level matches 99 run function prodige_skills:skill/foraging/level_up/if102
-execute if score @p prodige_skills.foraging.level matches 100 run function prodige_skills:skill/foraging/level_up/if103
-execute if score @p prodige_skills.foraging.level matches 10 unless entity @p[tag=prodige_skills.title.owned.new_title_sapling] run tag @p add prodige_skills.title.owned.new_title_sapling
-execute if score @p prodige_skills.foraging.level matches 30 unless entity @p[tag=prodige_skills.title.owned.new_title_forest_guardian] run tag @p add prodige_skills.title.owned.new_title_forest_guardian
-execute if score @p prodige_skills.foraging.level matches 50 unless entity @p[tag=prodige_skills.title.owned.new_title_canopy_keeper] run tag @p add prodige_skills.title.owned.new_title_canopy_keeper
-execute if score @p prodige_skills.foraging.level matches 70 unless entity @p[tag=prodige_skills.title.owned.new_title_wildwood_elder] run tag @p add prodige_skills.title.owned.new_title_wildwood_elder
-execute if score @p prodige_skills.foraging.level matches 90 unless entity @p[tag=prodige_skills.title.owned.new_title_verdant_sovereign] run tag @p add prodige_skills.title.owned.new_title_verdant_sovereign
-execute if score @p prodige_skills.foraging.level matches 40 unless entity @p[tag=prodige_skills.title.owned.new_title_timber_baron] run tag @p add prodige_skills.title.owned.new_title_timber_baron
+execute if score @p prodige_skills.foraging.level matches 10 run tag @p add prodige_skills.title.owned.new_title_sapling
+execute if score @p prodige_skills.foraging.level matches 30 run tag @p add prodige_skills.title.owned.new_title_forest_guardian
+execute if score @p prodige_skills.foraging.level matches 50 run tag @p add prodige_skills.title.owned.new_title_canopy_keeper
+execute if score @p prodige_skills.foraging.level matches 70 run tag @p add prodige_skills.title.owned.new_title_wildwood_elder
+execute if score @p prodige_skills.foraging.level matches 90 run tag @p add prodige_skills.title.owned.new_title_verdant_sovereign
+execute if score @p prodige_skills.foraging.level matches 25000 run tag @p add prodige_skills.title.owned.new_title_verdant_legend
+execute if score @p prodige_skills.foraging.level matches 50000 run tag @p add prodige_skills.title.owned.new_title_heart_of_the_forest
+execute if score @p prodige_skills.foraging.level matches 40 run tag @p add prodige_skills.title.owned.new_title_timber_baron
+execute if score @p prodige_skills.foraging.level matches 30000 run tag @p add prodige_skills.title.owned.new_title_bloomkeeper
+execute if score @p prodige_skills.foraging.level matches 70000 run tag @p add prodige_skills.title.owned.new_title_elderwood
 function prodige_skills:skill/foraging/level_up/notification
-scoreboard players operation anon_cnoL-r-9_12867 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_12867 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_12867 __sandstone run function prodige_skills:skill/foraging/level_up
+scoreboard players operation anon_cnoL-r-9_12891 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_12891 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_12891 __sandstone run function prodige_skills:skill/foraging/level_up

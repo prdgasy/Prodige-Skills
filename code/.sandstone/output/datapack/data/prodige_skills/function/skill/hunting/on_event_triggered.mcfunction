@@ -3,7 +3,7 @@ scoreboard players operation @p prodige_skills.player.pts += anon_cnoL-r-9_0 __s
 scoreboard players operation @p prodige_skills.hunting.totalPts += anon_cnoL-r-9_0 __sandstone
 scoreboard players operation @p prodige_skills.hunting.totalXp += var_0 prodige_skills.prodigelib.float
 function prodige_skills:ability/roll/hunters_focus
-scoreboard players operation anon_cnoL-r-9_12749 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_12749 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_12749 __sandstone if score @p prodige_skills.hunting.level matches ..99 run function prodige_skills:skill/hunting/level_up
+scoreboard players operation anon_cnoL-r-9_17704 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_17704 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_17704 __sandstone if score @p prodige_skills.hunting.level matches ..99 run function prodige_skills:skill/hunting/level_up
 function prodige_skills:skill/hunting/show

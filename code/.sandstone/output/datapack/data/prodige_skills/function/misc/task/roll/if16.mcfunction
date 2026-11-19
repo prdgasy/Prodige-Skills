@@ -1,2 +1,2 @@
-scoreboard players add anon_cnoL-r-9_9688 __sandstone 1
-execute if score anon_cnoL-r-9_9688 __sandstone matches 6.. run scoreboard players set anon_cnoL-r-9_9688 __sandstone 0
+scoreboard players add anon_cnoL-r-9_9684 __sandstone 1
+execute if score anon_cnoL-r-9_9684 __sandstone matches 6.. run scoreboard players set anon_cnoL-r-9_9684 __sandstone 0

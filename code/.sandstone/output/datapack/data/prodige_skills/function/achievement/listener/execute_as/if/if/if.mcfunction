@@ -1,2 +1,6 @@
-execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound entity.player.levelup master @p ~ ~ ~ 1 2
-tellraw @s [{text: "§7*--*--*--*--*--* §6§lProdige Skills §7*--*--*--*--*--*\n\n"}, {text: " §d§lACHIEVEMENT COMPLETE! §7(Mining)\n\n"}, {text: " §a§lStone Cutter I §e100§6/§e100\n"}, {text: " §7Break 100 stone blocks to"}, {text: " §7get started."}, {text: "\n\n"}, {text: " §a§lRewards:\n"}, {text: "  §8• §e200 Pts\n"}, {text: "  §8• §bNew Tool: §ex2 Pts Booster\n"}, {text: "  §8• §369 Random Skill Xp\n"}, {text: "\n §8All rewards are waiting in your Reward Vault.\n"}, {text: "\n §b§lUP NEXT\n"}, {text: " §2§lStone Cutter II §e0§6/§e1000\n"}, {text: " §7Mine 1 000 stone blocks"}, {text: " §7like a real miner."}, {text: "\n"}, {text: "§7*--*--*--*--*--* §6§lProdige Skills §7*--*--*--*--*--*"}]
+execute if score @p prodige_skills.mining.level matches ..99 run function prodige_skills:achievement/listener/execute_as/if/if/if/if
+scoreboard players set anon_cnoL-r-9_7008 __sandstone 630
+scoreboard players operation @p prodige_skills.mining.totalXp += anon_cnoL-r-9_7008 __sandstone
+scoreboard players operation anon_cnoL-r-9_7009 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_7009 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_7009 __sandstone if score @p prodige_skills.mining.level matches ..99 run function prodige_skills:skill/mining/level_up

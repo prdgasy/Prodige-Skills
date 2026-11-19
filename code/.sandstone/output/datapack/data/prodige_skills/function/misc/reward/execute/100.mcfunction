@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.soul_sand_spade 1

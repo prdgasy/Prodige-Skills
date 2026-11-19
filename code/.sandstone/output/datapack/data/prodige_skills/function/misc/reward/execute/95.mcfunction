@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.legend_of_the_hunt 1

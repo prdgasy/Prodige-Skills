@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.legendary_crate_key 1

@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §aSapling §8× §e$(macro_arg_5282)($(macro_arg_5281))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5281)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro11/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§aCoppervein Pickaxe §8× §e$(macro_arg_4343)($(macro_arg_4342))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4342)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro11/execute_unless

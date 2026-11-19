@@ -83,7 +83,7 @@ export class Progress {
 				const xpText = skill.xp.show();
 
 				args.set({});
-				args.select('skill').set(skill.resourceId);
+				args.select('skill').set(skill.id);
 				args.select('skillName').set(skill.name);
 				args.select('progress').set(progressText);
 				args.select('bar').set(bar);

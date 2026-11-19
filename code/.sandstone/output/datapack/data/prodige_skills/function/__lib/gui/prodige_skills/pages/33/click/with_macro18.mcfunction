@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §2Timber Baron §8× §e$(macro_arg_5303)($(macro_arg_5302))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5302)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro18/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Bedrock Borer §8× §e$(macro_arg_4364)($(macro_arg_4363))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4363)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro18/execute_unless

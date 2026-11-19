@@ -1,0 +1,2 @@
+execute if entity @p[tag=prodige_skills.title.owned.new_title_diamond_crown] run return run function prodige_skills:title/interact/new_title_diamond_crown/if/return_run/execute_as/if/0_if/return_run/if/0_if/return_run
+tag @p add prodige_skills.title.owned.new_title_diamond_crown

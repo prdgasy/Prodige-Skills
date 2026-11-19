@@ -1,2 +1,4 @@
-execute store result score @p prodige_skills.player.inventory.slots if slots entity @p inventory.*
-function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro66/execute_unless/if/if
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro66/execute_unless/if/0_if/return_run
+scoreboard players remove @p prodige_skills.reward.pending.x2_pts_booster 1
+give @p warped_fungus_on_a_stick[minecraft:custom_name='Booster',minecraft:lore=['§9Prodige Skills','','§72x Pts multiplier','§7Duration: 15 minutes','','§eClick to activate!'],minecraft:item_model='gold_ingot',minecraft:custom_data={prodige_skills:{booster:'pts_2'}},minecraft:unbreakable={}]
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

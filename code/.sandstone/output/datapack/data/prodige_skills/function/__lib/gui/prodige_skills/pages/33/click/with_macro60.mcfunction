@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§9Redstone Extractor §8× §e$(macro_arg_5429)($(macro_arg_5428))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5428)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro60/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§a§lCommon Crate Key §8× §e$(macro_arg_4490)($(macro_arg_4489))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4489)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro60/execute_unless

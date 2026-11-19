@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §aHeart of the Forest §8× §e$(macro_arg_5300)($(macro_arg_5299))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5299)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro17/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Ancient Vein Pick §8× §e$(macro_arg_4361)($(macro_arg_4360))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4360)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro17/execute_unless

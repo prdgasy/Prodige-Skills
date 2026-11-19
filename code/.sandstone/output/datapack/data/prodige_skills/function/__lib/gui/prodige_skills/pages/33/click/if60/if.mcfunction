@@ -1,3 +1,3 @@
-# prodige_skills::rewardvault::click -> §6§l§9Redstone Extractor §8× §e$(macro_arg_5429)($(macro_arg_5428))
+# prodige_skills::vault::click -> §6§l§a§lCommon Crate Key §8× §e$(macro_arg_4490)($(macro_arg_4489))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if60/if/if
-scoreboard players set anon_cnoL-r-9_7487 __sandstone 1
+scoreboard players set anon_cnoL-r-9_6861 __sandstone 1

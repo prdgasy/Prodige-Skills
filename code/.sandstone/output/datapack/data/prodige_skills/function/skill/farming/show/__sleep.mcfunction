@@ -1,2 +1,2 @@
 tag @s remove __sandstone.asyncTimer.prodige_skills.skill.farming.show.__sleep
-execute if score @s prodige_skills.farming.bossbar.token = anon_cnoL-r-9_12921 __sandstone run function prodige_skills:skill/farming/show/if5
+execute if score @s prodige_skills.farming.bossbar.token = anon_cnoL-r-9_17936 __sandstone run function prodige_skills:skill/farming/show/if5

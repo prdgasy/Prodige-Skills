@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.apex_crossbow 1

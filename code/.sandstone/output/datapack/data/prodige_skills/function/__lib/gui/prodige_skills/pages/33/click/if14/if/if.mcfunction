@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5290 int 1 run scoreboard players get anon_cnoL-r-9_7516 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5291 int 1 run scoreboard players get @p prodige_skills.reward.pending.new_title_wildwood_elder
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5292 int 1 run scoreboard players get @p prodige_skills.reward.pending.new_title_wildwood_elder
-return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro14 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4351 int 1 run scoreboard players get anon_cnoL-r-9_6890 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4352 int 1 run scoreboard players get @p prodige_skills.reward.pending.diamond_seeker
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4353 int 1 run scoreboard players get @p prodige_skills.reward.pending.diamond_seeker
+return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro14 with storage prodige_skills:prodigelib gui.prodige_skills.vault

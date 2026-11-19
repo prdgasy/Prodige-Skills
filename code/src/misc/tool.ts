@@ -1,5 +1,4 @@
 import type { ToolName } from "@src/data/definitions";
-import { Buyable } from "@src/misc/buyable";
 import type { Skill } from "@src/skill";
 import { DataPointClass, give, MCFunction, Macro as $ } from "sandstone";
 import type { Item } from "../types";
@@ -8,79 +7,72 @@ import { Global } from "@src/global";
 import { MacroLiteral } from "sandstone/core";
 
 export type ToolOptions = {
-	name: string;
-	item: Item;
-	price: number;
-	description: string;
-	rarity: ToolRarity;
-	durability: number;
-	characteristics?: string[];
-	type?: Skill;
-	onUse?: () => void;
-	onBreak?: () => void;
-	onHold?: () => void;
+  name: string;
+  icon: Item;
+  price: number;
+  description: string;
+  rarity: ToolRarity;
+  durability: number;
+  characteristics?: string[];
+  type?: Skill;
+  onUse?: () => void;
+  onBreak?: () => void;
+  onHold?: () => void;
 };
 
 type ToolRarity = "§a§lCOMMON" | "§9§lRARE" | "§d§lEPIC" | "§6§lLEGENDARY";
 
-export class Tool extends Buyable {
-	public static tools: Record<ToolName, Tool>;
-	public name: string;
-	public icon: Item;
-	public price: number;
-	public description: string;
-	public rarity: ToolRarity;
-	public durability: number;
+export class Tool extends Reward {
+  public static tools: Record<ToolName, Tool>;
+  public rarity: ToolRarity;
+  public durability: number;
 
-	public characteristics?: string[];
-	public type?: Skill;
-	public onUse?: () => void;
-	public onBreak?: () => void;
-	public onHold?: () => void;
+  public characteristics?: string[];
+  public type?: Skill;
+  public onUse?: () => void;
+  public onBreak?: () => void;
+  public onHold?: () => void;
 
-	constructor(opt: ToolOptions) {
-		super(opt.name, opt.description, opt.item, opt.price, Tool.getFromOpt(opt));
-		this.name = opt.name;
-		this.icon = opt.item;
-		this.icon = opt.item;
-		this.toVault = true;
-		this.price = opt.price;
-		this.description = opt.description;
-		this.characteristics = opt.characteristics;
-		this.rarity = opt.rarity;
-		this.durability = opt.durability;
-		this.type = opt.type;
-		this.onUse = opt.onUse;
-		this.onBreak = opt.onBreak;
-		this.onHold = opt.onHold;
-	}
+  constructor(opt: ToolOptions) {
+    super(opt.name, Tool.getFromOpt(opt), {
+      description: opt.description, icon: opt.icon, price: opt.price, category: 'vault'
+    });
 
-	public static getFromOpt(opt: ToolOptions) {
-		const fn = MCFunction(`misc/tool/${Global.toResource(opt.name)}/give`, () => {
-			give('@p', opt.item, {
-				'minecraft:custom_name': opt.name,
-				'minecraft:lore': [
-					opt.rarity,
-					`§7${opt.description}`,
-					`§8Durability: ${opt.durability}`,
-					...(opt.characteristics ?? []).map(characteristic => `§8• ${characteristic.replace(/^§7/, '')}`)
-				],
-				'minecraft:max_damage': opt.durability,
-				'minecraft:custom_data': { prodige_skills: { gear: Global.toResource(opt.name) } },
-				'enchantment_glint_override': opt.rarity === '§d§lEPIC' || opt.rarity === '§6§lLEGENDARY'
-			});
-		}, { onConflict: 'ignore' });
+    this.characteristics = opt.characteristics;
+    this.rarity = opt.rarity;
+    this.durability = opt.durability;
+    this.type = opt.type;
+    this.onUse = opt.onUse;
+    this.onBreak = opt.onBreak;
+    this.onHold = opt.onHold;
+  }
 
-		return () => fn();
-	}
+  public static getFromOpt(opt: ToolOptions) {
+    const fn = MCFunction(`misc/tool/${Global.toResource(opt.name)}/give`, () => {
+      give('@p', opt.icon, {
+        'minecraft:custom_name': opt.name,
+        'minecraft:lore': [
+          opt.rarity,
+          `§7${opt.description}`,
+          `§8Durability: ${opt.durability}`,
+          ...(opt.characteristics ?? []).map(characteristic => `§8• ${characteristic.replace(/^§7/, '')}`)
+        ],
+        'minecraft:max_damage': opt.durability,
+        'minecraft:custom_data': { prodige_skills: { gear: Global.toResource(opt.name) } },
+        'enchantment_glint_override': opt.rarity === '§d§lEPIC' || opt.rarity === '§6§lLEGENDARY'
+      });
+    }, { onConflict: 'ignore' });
 
-	public static get(t: ToolName): Reward {
-		const tool = Reward.toVaultRegistry.get(Global.toResource(t));
+    return () => fn();
+  }
 
-		if (!tool) {
-			throw Error(`"${t}" is not registered into "Reward.registry".`);
-		}
+  public static get(t: ToolName): Reward {
+    const tool = Reward.toVaultReg.get(Global.toResource(t));
 
-		return tool;
-	}
+    if (!tool) {
+      throw Error(`"${t}" is not registered into "Reward.registry".`);
+    }
+
+    return tool;
+  }
 }

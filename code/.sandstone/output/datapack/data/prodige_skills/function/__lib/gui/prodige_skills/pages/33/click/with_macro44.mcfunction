@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §eDune Walker §8× §e$(macro_arg_5381)($(macro_arg_5380))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5380)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro44/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dApex Crossbow §8× §e$(macro_arg_4442)($(macro_arg_4441))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4441)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro44/execute_unless

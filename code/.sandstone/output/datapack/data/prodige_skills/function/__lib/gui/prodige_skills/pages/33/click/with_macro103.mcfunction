@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dRuin Prospector §8× §e$(macro_arg_5558)($(macro_arg_5557))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5557)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro103/execute_unless

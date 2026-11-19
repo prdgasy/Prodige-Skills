@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.dune_walker_spade 1

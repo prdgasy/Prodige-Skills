@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1

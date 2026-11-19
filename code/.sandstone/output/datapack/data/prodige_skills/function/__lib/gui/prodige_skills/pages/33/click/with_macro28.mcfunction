@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §eGrain Baron §8× §e$(macro_arg_5333)($(macro_arg_5332))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5332)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro28/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Worldroot Axe §8× §e$(macro_arg_4394)($(macro_arg_4393))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4393)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro28/execute_unless

@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_12871 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_12871 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.hunting.xp -= anon_cnoL-r-9_12871 __sandstone
+scoreboard players operation anon_cnoL-r-9_14495 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_14495 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.hunting.xp -= anon_cnoL-r-9_14495 __sandstone
 scoreboard players operation @p prodige_skills.hunting.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.hunting.goal /= 10 __sandstone
 execute if score @p prodige_skills.hunting.goal matches 5001.. run scoreboard players set @p prodige_skills.hunting.goal 5000
@@ -106,14 +106,16 @@ execute if score @p prodige_skills.hunting.level matches 96 run function prodige
 execute if score @p prodige_skills.hunting.level matches 97 run function prodige_skills:skill/hunting/level_up/if100
 execute if score @p prodige_skills.hunting.level matches 98 run function prodige_skills:skill/hunting/level_up/if101
 execute if score @p prodige_skills.hunting.level matches 99 run function prodige_skills:skill/hunting/level_up/if102
-execute if score @p prodige_skills.hunting.level matches 100 run function prodige_skills:skill/hunting/level_up/if103
-execute if score @p prodige_skills.hunting.level matches 10 unless entity @p[tag=prodige_skills.title.owned.new_title_trail_scout] run tag @p add prodige_skills.title.owned.new_title_trail_scout
-execute if score @p prodige_skills.hunting.level matches 30 unless entity @p[tag=prodige_skills.title.owned.new_title_wild_stalker] run tag @p add prodige_skills.title.owned.new_title_wild_stalker
-execute if score @p prodige_skills.hunting.level matches 50 unless entity @p[tag=prodige_skills.title.owned.new_title_beast_hunter] run tag @p add prodige_skills.title.owned.new_title_beast_hunter
-execute if score @p prodige_skills.hunting.level matches 70 unless entity @p[tag=prodige_skills.title.owned.new_title_apex_predator] run tag @p add prodige_skills.title.owned.new_title_apex_predator
-execute if score @p prodige_skills.hunting.level matches 90 unless entity @p[tag=prodige_skills.title.owned.new_title_legend_of_the_hunt] run tag @p add prodige_skills.title.owned.new_title_legend_of_the_hunt
-execute if score @p prodige_skills.hunting.level matches 20 unless entity @p[tag=prodige_skills.title.owned.new_title_monster_stalker] run tag @p add prodige_skills.title.owned.new_title_monster_stalker
+execute if score @p prodige_skills.hunting.level matches 10 run tag @p add prodige_skills.title.owned.new_title_trail_scout
+execute if score @p prodige_skills.hunting.level matches 30 run tag @p add prodige_skills.title.owned.new_title_wild_stalker
+execute if score @p prodige_skills.hunting.level matches 50 run tag @p add prodige_skills.title.owned.new_title_beast_hunter
+execute if score @p prodige_skills.hunting.level matches 70 run tag @p add prodige_skills.title.owned.new_title_apex_predator
+execute if score @p prodige_skills.hunting.level matches 90 run tag @p add prodige_skills.title.owned.new_title_legend_of_the_hunt
+execute if score @p prodige_skills.hunting.level matches 15000 run tag @p add prodige_skills.title.owned.new_title_keeper_of_the_wild
+execute if score @p prodige_skills.hunting.level matches 50000 run tag @p add prodige_skills.title.owned.new_title_the_unerring
+execute if score @p prodige_skills.hunting.level matches 20 run tag @p add prodige_skills.title.owned.new_title_monster_stalker
+execute if score @p prodige_skills.hunting.level matches 40000 run tag @p add prodige_skills.title.owned.new_title_dragon_tracker
 function prodige_skills:skill/hunting/level_up/notification
-scoreboard players operation anon_cnoL-r-9_12873 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_12873 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.hunting.level matches ..99 if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_12873 __sandstone run function prodige_skills:skill/hunting/level_up
+scoreboard players operation anon_cnoL-r-9_16097 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_16097 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.hunting.level matches ..99 if score @p prodige_skills.hunting.xp >= anon_cnoL-r-9_16097 __sandstone run function prodige_skills:skill/hunting/level_up

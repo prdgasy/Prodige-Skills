@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §2Forest Guardian §8× §e$(macro_arg_5285)($(macro_arg_5284))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5284)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro12/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§9Deepslate Prospector §8× §e$(macro_arg_4346)($(macro_arg_4345))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4345)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro12/execute_unless

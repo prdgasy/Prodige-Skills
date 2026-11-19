@@ -82,7 +82,7 @@ export class Skill {
 	static levelUpNotifState = Label('level_up_notif')('@p');
 
 	public name: string;
-	public resourceId: string;
+	public id: string;
 	public description: string;
 	public item: Item;
 	public level: Score;
@@ -105,17 +105,17 @@ export class Skill {
 
 	constructor(opt: SkillOptions) {
 		this.name = opt.name;
-		this.resourceId = Global.toResource(this.name);
+		this.id = Global.toResource(this.name);
 		this.description = opt.description ?? "§7No description for this skill yet.";
 		this.item = opt.item ?? "anvil";
-		this.level = Objective.create(`${this.resourceId}.level`)('@p');
-		this.xp = Float.objective(`${this.resourceId}.xp`)('@p');
-		this.goal = Objective.create(`${this.resourceId}.goal`)('@p');
+		this.level = Objective.create(`${this.id}.level`)('@p');
+		this.xp = Float.objective(`${this.id}.xp`)('@p');
+		this.goal = Objective.create(`${this.id}.goal`)('@p');
 		this.starting = opt.starting ?? 40;
 
 		this.achievements = opt.achievements ?? [];
 
-		this.achievementId = Objective.create(`${this.resourceId}.achievement`)(`@p`);
+		this.achievementId = Objective.create(`${this.id}.achievement`)(`@p`);
 		this.titles = (opt.titles ?? []).map(title => new Title(this, title));
 
 		this.rewards = opt.rewards ?? new Map<number, Reward[]>();
@@ -123,14 +123,14 @@ export class Skill {
 		this.customItems = opt.customItems ?? [];
 		this.onEvents = opt.onEvents ?? [];
 
-		this.totalXp = Float.objective(`${this.resourceId}.totalXp`)('@p');
-		this.totalPts = Objective.create(`${this.resourceId}.totalPts`)('@p');
-		this.bossbarCreated = Label(`skill.bossbar.created.${this.resourceId}` as NonEmptyString)('@s');
-		this.bossbarToken = Objective.create(`${this.resourceId}.bossbar.token`)('@s');
+		this.totalXp = Float.objective(`${this.id}.totalXp`)('@p');
+		this.totalPts = Objective.create(`${this.id}.totalPts`)('@p');
+		this.bossbarCreated = Label(`skill.bossbar.created.${this.id}` as NonEmptyString)('@s');
+		this.bossbarToken = Objective.create(`${this.id}.bossbar.token`)('@s');
 	}
 
 	public onEventTriggered(addedXp: Float, addedPoint: Score) {
-		const fn = MCFunction(`skill/${this.resourceId}/on_event_triggered`, () => {
+		const fn = MCFunction(`skill/${this.id}/on_event_triggered`, () => {
 			_.if(this.level['<'](100), () => this.xp.add(addedXp));
 			Player.pts.add(addedPoint);
 			this.totalPts.add(addedPoint);
@@ -155,7 +155,7 @@ export class Skill {
 	}
 
 	private levelUp() {
-		const fn = MCFunction(`skill/${this.resourceId}/level_up`, () => {
+		const fn = MCFunction(`skill/${this.id}/level_up`, () => {
 			this.xp["-="](this.goal);
 
 			this.goal["*="](13)["/="](10);
@@ -166,9 +166,14 @@ export class Skill {
 			this.level["++"];
 			_.if(this.level['=='](100), () => this.xp.set(0));
 
-			Reward.cases(this, this.level, rewards => Reward.runAll(rewards));
+      for (let i = 0; i < 100; i++) { 
+        _.if(this.level['=='](i), () => { 
+          Reward.vaultOrGiveAll(this.rewards.get(i)!);
+        })
+      }
+            
 			for (const title of this.titles) {
-				if (title.obtain === 'level') _.if(this.level['=='](title.requires), () => title.unlock());
+				_.if(this.level['=='](title.requires), () => title.owned.add());
 			}
 
 			this.levelUpNotif();
@@ -180,21 +185,21 @@ export class Skill {
 
 
 	private onEventDisplay(xpAdded: Float, pointAdded: Score) {
-		const show = MCFunction(`skill/${this.resourceId}/show`, () => {
+		const show = MCFunction(`skill/${this.id}/show`, () => {
 			const args = Data('storage', skillBossbarStorage, 'args');
 			const roman = Roman.get(this.level);
 			const progress = this.xp['*'](100)['/'](this.goal).show();
 			const xp = this.xp.show();
 			const round = this.xp.toScore();
 			const added = xpAdded.show();
-			const id = `${defaultNamespace.toString()}.${this.resourceId}.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3])`;
-			const createBar = MCFunction(`skill/${this.resourceId}/bossbar/create`, () => {
+			const id = `${defaultNamespace.toString()}.${this.id}.$(uuid[0])_$(uuid[1])_$(uuid[2])_$(uuid[3])`;
+			const createBar = MCFunction(`skill/${this.id}/bossbar/create`, () => {
 				raw(`$bossbar add ${id} "§d${this.name}"`);
 			}, { onConflict: 'ignore' });
-			const updateBar = MCFunction(`skill/${this.resourceId}/bossbar/update`, () => {
+			const updateBar = MCFunction(`skill/${this.id}/bossbar/update`, () => {
 				raw(`$bossbar set ${id} name "§d${this.name} $(roman) §8| §e$(xp)§6/§e$(goal) Xp §8• §7$(progress)% §8| §b+$(added) Xp §8• §e+$(points) Pts"`);
-				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.resourceId}.level matches 100.. run bossbar set ${id} name "§d${this.name} $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp §8• §e+$(points) Pts"`);
-				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.resourceId}.level matches 0 run bossbar set ${id} name "§aUnlocking ${this.name}..."`);
+				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.id}.level matches 100.. run bossbar set ${id} name "§d${this.name} $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp §8• §e+$(points) Pts"`);
+				raw(`$execute if score @s ${defaultNamespace.toString()}.${this.id}.level matches 0 run bossbar set ${id} name "§aUnlocking ${this.name}..."`);
 				raw(`$bossbar set ${id} max $(goal)`);
 				raw(`$bossbar set ${id} value $(round)`);
 				raw(`$bossbar set ${id} color yellow`);
@@ -202,7 +207,7 @@ export class Skill {
 				raw(`$bossbar set ${id} players @s`);
 				raw(`$bossbar set ${id} visible true`);
 			}, { onConflict: 'ignore' });
-			const hideBar = MCFunction(`skill/${this.resourceId}/bossbar/hide`, () => {
+			const hideBar = MCFunction(`skill/${this.id}/bossbar/hide`, () => {
 				raw(`$bossbar set ${id} visible false`);
 			}, { onConflict: 'ignore' });
 
@@ -236,11 +241,11 @@ export class Skill {
 	}
 
 	private levelUpNotif() {
-		const fn = MCFunction(`skill/${this.resourceId}/level_up/notification`, () => {
+		const fn = MCFunction(`skill/${this.id}/level_up/notification`, () => {
 			_.if(Skill.levelUpNotifState, () => {
 				const args = Data('storage', levelUpArgsStorage, 'args');
 				args.set({});
-				args.select('skill').set(this.resourceId);
+				args.select('skill').set(this.id);
 				args.select('skillName').set(this.name);
 				args.select('skillUpper').set(this.name.toUpperCase());
 				args.select('level').set(this.level);

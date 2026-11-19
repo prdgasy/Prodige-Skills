@@ -31,4 +31,4 @@ data modify storage prodige_skills:prodigelib map.prodige_skills.boosters set va
 data modify storage prodige_skills:prodigelib map.prodige_skills.titles set value 30d
 data modify storage prodige_skills:prodigelib map.prodige_skills.preferences set value 31d
 data modify storage prodige_skills:prodigelib map.prodige_skills.tasks set value 32d
-data modify storage prodige_skills:prodigelib map.prodige_skills.rewardvault set value 33d
+data modify storage prodige_skills:prodigelib map.prodige_skills.vault set value 33d

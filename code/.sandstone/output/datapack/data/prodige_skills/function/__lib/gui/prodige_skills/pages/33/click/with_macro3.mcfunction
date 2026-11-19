@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §eCavern Pathfinder §8× §e$(macro_arg_5258)($(macro_arg_5257))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5257)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro3/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§fField Shovel §8× §e$(macro_arg_4319)($(macro_arg_4318))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4318)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro3/execute_unless

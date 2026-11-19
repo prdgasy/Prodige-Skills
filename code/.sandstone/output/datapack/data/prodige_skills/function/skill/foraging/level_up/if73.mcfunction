@@ -1,6 +1,11 @@
-function prodige_skills:misc/reward/execute/139
-function prodige_skills:misc/reward/execute/124
-function prodige_skills:misc/reward/execute/243
-function prodige_skills:misc/reward/execute/72
-function prodige_skills:misc/reward/execute/255
-return run function prodige_skills:misc/reward/execute/13
+scoreboard players add @p prodige_skills.player.pts 3600
+scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1
+scoreboard players set anon_cnoL-r-9_12411 __sandstone 0
+execute store result score anon_cnoL-r-9_12411 __sandstone run random value 0..4
+execute if score anon_cnoL-r-9_12411 __sandstone matches 0 run function prodige_skills:skill/foraging/level_up/if73/if
+execute if score anon_cnoL-r-9_12411 __sandstone matches 1 run function prodige_skills:skill/foraging/level_up/if73/if2
+execute if score anon_cnoL-r-9_12411 __sandstone matches 2 run function prodige_skills:skill/foraging/level_up/if73/if3
+execute if score anon_cnoL-r-9_12411 __sandstone matches 3 run function prodige_skills:skill/foraging/level_up/if73/if4
+execute if score anon_cnoL-r-9_12411 __sandstone matches 4 run function prodige_skills:skill/foraging/level_up/if73/if5
+scoreboard players add @p prodige_skills.reward.pending.palegrove_cleaver 1
+tag @p add prodige_skills.title.owned.new_title_wildwood_elder

@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §8Cave Cartographer §8× §e$(macro_arg_5273)($(macro_arg_5272))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5272)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro8/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Astral Cleaver §8× §e$(macro_arg_4334)($(macro_arg_4333))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4333)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro8/execute_unless

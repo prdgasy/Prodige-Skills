@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.dragonfang_sword 1

@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §4Deep Core Delver §8× §e$(macro_arg_5261)($(macro_arg_5260))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5260)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro4/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§9Verdant Hatchet §8× §e$(macro_arg_4322)($(macro_arg_4321))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4321)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro4/execute_unless

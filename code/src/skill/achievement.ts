@@ -8,80 +8,80 @@ import { Criteria, Item } from "@src/types";
 import { _, execute, MCFunction, Objective, Score } from "sandstone";
 
 export class Achievement {
-	public parent: Skill;
-	public name: string;
-	public resourceId: string;
-	public description: string;
-	public item: Item;
-	public goal: number;
-	public criteria: Criteria;
-	public progress: Score;
-	public rewards: Reward[];
+  public parent: Skill;
+  public name: string;
+  public resourceId: string;
+  public description: string;
+  public item: Item;
+  public goal: number;
+  public criteria: Criteria;
+  public progress: Score;
+  public rewards: Reward[];
 
-	constructor(parent: Skill, name: string, item: Item, goal: number, criteria: Criteria, description: string, step: number) {
-		this.parent = parent;
-		this.name = name;
-		this.resourceId = Global.toResource(name);
-		this.item = item;
-		this.goal = goal;
-		this.criteria = criteria;
-		this.description = description;
-		this.progress = Objective.create(`${this.parent.resourceId}.achievement.${this.resourceId}`, criteria)('@p');
+  constructor(parent: Skill, name: string, item: Item, goal: number, criteria: Criteria, description: string, step: number) {
+    this.parent = parent;
+    this.name = name;
+    this.resourceId = Global.toResource(name);
+    this.item = item;
+    this.goal = goal;
+    this.criteria = criteria;
+    this.description = description;
+    this.progress = Objective.create(`${this.parent.id}.achievement.${this.resourceId}`, criteria)('@p');
 
-		if (step > 0 && step % 10 == 9) this.rewards = Reward.legendary();
-		else if (step > 0 && step % 5 == 4) this.rewards = Reward.epic();
-		else if (step > 0 && step % 3 == 2) this.rewards = Reward.rare();
-		else this.rewards = Reward.common();
-	}
+    if (step > 0 && step % 10 == 9) this.rewards = Reward.legendary();
+    else if (step > 0 && step % 5 == 4) this.rewards = Reward.epic();
+    else if (step > 0 && step % 3 == 2) this.rewards = Reward.rare();
+    else this.rewards = Reward.common();
+  }
 
-	public static init() {
-		this.actionListener();
-	}
+  public static init() {
+    this.actionListener();
+  }
 
-	private static actionListener() {
-		return MCFunction('achievement/listener', () => {
-			execute.as('@a').at('@s').run(() => {
-				for (const skill of Object.values(Skill.skills)) {
-					skill.achievements.forEach((achievement, index) => {
-						_.if(skill.achievementId['=='](index), () => {
-							_.if(achievement.progress['>='](achievement.goal), () => {
-								this.complete(skill, achievement, index);
-							});
-						});
-					});
-				}
-			});
-		}, { runEvery: '10s' });
-	}
+  private static actionListener() {
+    return MCFunction('achievement/listener', () => {
+      execute.as('@a').at('@s').run(() => {
+        for (const skill of Object.values(Skill.skills)) {
+          skill.achievements.forEach((achievement, index) => {
+            _.if(skill.achievementId['=='](index), () => {
+              _.if(achievement.progress['>='](achievement.goal), () => {
+                this.complete(skill, achievement, index);
+              });
+            });
+          });
+        }
+      });
+    }, { runEvery: '10s' });
+  }
 
-	private static complete(skill: Skill, achievement: Achievement, index: number) {
-		Reward.vaultAll(achievement.rewards);
-		skill.achievementId['++'];
+  private static complete(skill: Skill, achievement: Achievement, index: number) {
+    Reward.vaultOrGiveAll(achievement.rewards);
+    skill.achievementId['++'];
 
-		const next = skill.achievements[index + 1];
-		next?.progress.reset();
+    const next = skill.achievements[index + 1];
+    next?.progress.reset();
 
-		_.if(Player.achievementNotif, () => {
-			Player.playSound('levelup', 2);
-			smartTellraw([
-				`${Global.encapsuler}\n\n`,
-				` §d§lACHIEVEMENT COMPLETE! §7(${skill.name})\n\n`,
-				` §a§l${achievement.name} §e${achievement.goal}§6/§e${achievement.goal}\n`,
-				...Text.wrap(achievement.description, ' §7'),
-				'\n\n',
-				' §a§lRewards:\n',
-				...achievement.rewards.map(reward => `  §8• ${reward.name}\n`),
-				'\n §8All rewards are waiting in your Reward Vault.\n',
-				...(next ? [
-					'\n §b§lUP NEXT\n',
-					` §2§l${next.name} §e0§6/§e${next.goal}\n`,
-					...Text.wrap(next.description, ' §7'), '\n'
-				] : [
-					'\n §6§lALL MILESTONES COMPLETE!\n',
-					' §eYou have mastered every achievement for this skill!\n\n',
-				]),
-				`${Global.encapsuler}`,
-			], '@s');
-		});
-	}
+    _.if(Player.achievementNotif, () => {
+      Player.playSound('levelup', 2);
+      smartTellraw([
+        `${Global.encapsuler}\n\n`,
+        ` §d§lACHIEVEMENT COMPLETE! §7(${skill.name})\n\n`,
+        ` §a§l${achievement.name} §e${achievement.goal}§6/§e${achievement.goal}\n`,
+        ...Text.wrap(achievement.description, ' §7'),
+        '\n\n',
+        ' §a§lRewards:\n',
+        ...achievement.rewards.map(reward => `  §8• ${reward.name}\n`),
+        '\n §8All rewards are waiting in your Reward Vault.\n',
+        ...(next ? [
+          '\n §b§lUP NEXT\n',
+          ` §2§l${next.name} §e0§6/§e${next.goal}\n`,
+          ...Text.wrap(next.description, ' §7'), '\n'
+        ] : [
+          '\n §6§lALL MILESTONES COMPLETE!\n',
+          ' §eYou have mastered every achievement for this skill!\n\n',
+        ]),
+        `${Global.encapsuler}`,
+      ], '@s');
+    });
+  }
 }

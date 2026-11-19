@@ -1,3 +1,4 @@
-scoreboard players remove @p prodige_skills.reward.pending.new_title_dune_sovereign 1
-execute unless entity @p[tag=prodige_skills.title.owned.new_title_dune_sovereign] run tag @p add prodige_skills.title.owned.new_title_dune_sovereign
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro47/execute_unless/if/0_if/return_run
+scoreboard players remove @p prodige_skills.reward.pending.ender_tracker_bow 1
+function prodige_skills:misc/tool/ender_tracker_bow/give
 execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

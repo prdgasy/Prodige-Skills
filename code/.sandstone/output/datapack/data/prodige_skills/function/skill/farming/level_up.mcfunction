@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_12868 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_12868 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_12868 __sandstone
+scoreboard players operation anon_cnoL-r-9_12892 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_12892 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_12892 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal /= 10 __sandstone
 execute if score @p prodige_skills.farming.goal matches 5001.. run scoreboard players set @p prodige_skills.farming.goal 5000
@@ -106,14 +106,16 @@ execute if score @p prodige_skills.farming.level matches 96 run function prodige
 execute if score @p prodige_skills.farming.level matches 97 run function prodige_skills:skill/farming/level_up/if100
 execute if score @p prodige_skills.farming.level matches 98 run function prodige_skills:skill/farming/level_up/if101
 execute if score @p prodige_skills.farming.level matches 99 run function prodige_skills:skill/farming/level_up/if102
-execute if score @p prodige_skills.farming.level matches 100 run function prodige_skills:skill/farming/level_up/if103
-execute if score @p prodige_skills.farming.level matches 10 unless entity @p[tag=prodige_skills.title.owned.new_title_field_hand] run tag @p add prodige_skills.title.owned.new_title_field_hand
-execute if score @p prodige_skills.farming.level matches 30 unless entity @p[tag=prodige_skills.title.owned.new_title_crop_keeper] run tag @p add prodige_skills.title.owned.new_title_crop_keeper
-execute if score @p prodige_skills.farming.level matches 50 unless entity @p[tag=prodige_skills.title.owned.new_title_harvest_warden] run tag @p add prodige_skills.title.owned.new_title_harvest_warden
-execute if score @p prodige_skills.farming.level matches 70 unless entity @p[tag=prodige_skills.title.owned.new_title_grand_agronomist] run tag @p add prodige_skills.title.owned.new_title_grand_agronomist
-execute if score @p prodige_skills.farming.level matches 90 unless entity @p[tag=prodige_skills.title.owned.new_title_eternal_harvest] run tag @p add prodige_skills.title.owned.new_title_eternal_harvest
-execute if score @p prodige_skills.farming.level matches 20 unless entity @p[tag=prodige_skills.title.owned.new_title_grain_baron] run tag @p add prodige_skills.title.owned.new_title_grain_baron
+execute if score @p prodige_skills.farming.level matches 10 run tag @p add prodige_skills.title.owned.new_title_field_hand
+execute if score @p prodige_skills.farming.level matches 30 run tag @p add prodige_skills.title.owned.new_title_crop_keeper
+execute if score @p prodige_skills.farming.level matches 50 run tag @p add prodige_skills.title.owned.new_title_harvest_warden
+execute if score @p prodige_skills.farming.level matches 70 run tag @p add prodige_skills.title.owned.new_title_grand_agronomist
+execute if score @p prodige_skills.farming.level matches 90 run tag @p add prodige_skills.title.owned.new_title_eternal_harvest
+execute if score @p prodige_skills.farming.level matches 15000 run tag @p add prodige_skills.title.owned.new_title_green_thumb
+execute if score @p prodige_skills.farming.level matches 50000 run tag @p add prodige_skills.title.owned.new_title_the_golden_farmer
+execute if score @p prodige_skills.farming.level matches 20 run tag @p add prodige_skills.title.owned.new_title_grain_baron
+execute if score @p prodige_skills.farming.level matches 30000 run tag @p add prodige_skills.title.owned.new_title_orchard_master
 function prodige_skills:skill/farming/level_up/notification
-scoreboard players operation anon_cnoL-r-9_12870 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_12870 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_12870 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players operation anon_cnoL-r-9_14494 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_14494 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_14494 __sandstone run function prodige_skills:skill/farming/level_up

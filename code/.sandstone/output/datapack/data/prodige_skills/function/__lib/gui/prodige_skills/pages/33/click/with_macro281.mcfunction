@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dUpgrade available: §c§lBountiful Harvest §8[§c§lIII§8] • 5%»§c7.5% §8× §e$(macro_arg_6092)($(macro_arg_6091))
-$execute unless data entity @s Items[{Slot:$(macro_arg_6091)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro281/execute_unless

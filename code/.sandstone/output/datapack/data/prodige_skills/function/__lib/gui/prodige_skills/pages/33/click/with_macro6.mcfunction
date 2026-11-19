@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §cMaster Miner §8× §e$(macro_arg_5267)($(macro_arg_5266))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5266)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro6/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dDeepstone Drill §8× §e$(macro_arg_4328)($(macro_arg_4327))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4327)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro6/execute_unless

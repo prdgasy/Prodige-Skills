@@ -1,2 +1,3 @@
-execute if score @p prodige_skills.reward.pending.new_title_green_thumb matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro26/execute_unless/if
+execute store result score @p prodige_skills.player.inventory.slots if slots entity @p inventory.*
+function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro26/execute_unless/if
 scoreboard players set anon_cnoL-r-9_35 __sandstone 1

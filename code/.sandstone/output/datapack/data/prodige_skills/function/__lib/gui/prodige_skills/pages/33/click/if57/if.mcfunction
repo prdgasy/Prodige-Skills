@@ -1,3 +1,3 @@
-# prodige_skills::rewardvault::click -> §6§l§aStonewake Pickaxe §8× §e$(macro_arg_5420)($(macro_arg_5419))
+# prodige_skills::vault::click -> §6§l§6Strata Shaper §8× §e$(macro_arg_4481)($(macro_arg_4480))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if57/if/if
-scoreboard players set anon_cnoL-r-9_7487 __sandstone 1
+scoreboard players set anon_cnoL-r-9_6861 __sandstone 1

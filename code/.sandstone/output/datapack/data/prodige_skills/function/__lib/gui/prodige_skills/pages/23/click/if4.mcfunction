@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::click -> §bNew Tool: §bx2 Xp Booster(2)
+# prodige_skills::rare_rewards::click -> §bx2 Xp Booster(2)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:2b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

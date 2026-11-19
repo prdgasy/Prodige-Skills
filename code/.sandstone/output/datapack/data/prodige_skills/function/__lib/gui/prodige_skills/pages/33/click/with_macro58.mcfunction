@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§aCoppervein Pickaxe §8× §e$(macro_arg_5423)($(macro_arg_5422))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5422)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro58/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Deep Digger §8× §e$(macro_arg_4484)($(macro_arg_4483))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4483)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro58/execute_unless

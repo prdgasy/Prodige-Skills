@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.crimson_timber_axe 1

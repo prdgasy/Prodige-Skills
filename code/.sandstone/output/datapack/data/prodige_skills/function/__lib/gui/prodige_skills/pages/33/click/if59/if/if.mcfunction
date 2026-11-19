@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5425 int 1 run scoreboard players get anon_cnoL-r-9_7606 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5426 int 1 run scoreboard players get @p prodige_skills.reward.pending.deepslate_prospector
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.rewardvault.macro_arg_5427 int 1 run scoreboard players get @p prodige_skills.reward.pending.deepslate_prospector
-return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro59 with storage prodige_skills:prodigelib gui.prodige_skills.rewardvault
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4486 int 1 run scoreboard players get anon_cnoL-r-9_6980 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4487 int 1 run scoreboard players get @p prodige_skills.reward.pending.earthshaper_spade
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4488 int 1 run scoreboard players get @p prodige_skills.reward.pending.earthshaper_spade
+return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro59 with storage prodige_skills:prodigelib gui.prodige_skills.vault

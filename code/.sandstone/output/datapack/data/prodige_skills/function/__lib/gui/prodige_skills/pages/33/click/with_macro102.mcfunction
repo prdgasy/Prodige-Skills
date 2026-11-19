@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dTerracotta Breaker §8× §e$(macro_arg_5555)($(macro_arg_5554))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5554)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro102/execute_unless

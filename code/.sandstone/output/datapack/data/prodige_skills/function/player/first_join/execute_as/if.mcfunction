@@ -160,9 +160,9 @@ scoreboard players reset @p prodige_skills.task.progress.mine_sand
 tag @p remove prodige_skills.misc.task.5.progress
 tag @p remove prodige_skills.misc.task.5.done
 tag @p add prodige_skills.level_up_notif
-scoreboard players set @p prodige_skills.misc.booster.Xp.mult 1
+scoreboard players set @p prodige_skills.misc.booster.Xp.multiplier 1
 scoreboard players set @p prodige_skills.misc.booster.Xp.timer 0
-scoreboard players set @p prodige_skills.misc.booster.Pts.mult 1
+scoreboard players set @p prodige_skills.misc.booster.Pts.multiplier 1
 scoreboard players set @p prodige_skills.misc.booster.Pts.timer 0
 tag @p add prodige_skills.player.task_notif
 tag @p add prodige_skills.player.on_event_notif

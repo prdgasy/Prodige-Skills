@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§9Wildwood Axe §8× §e$(macro_arg_5459)($(macro_arg_5458))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5458)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro70/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§ex4 Pts Booster §8× §e$(macro_arg_4520)($(macro_arg_4519))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4519)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro70/execute_unless

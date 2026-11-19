@@ -1,5 +1,5 @@
 execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if6/if/execute_as/if/0_if/return_run/if/0_if/return_run
 scoreboard players remove @p prodige_skills.player.pts 1500
 give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§5§lEpic Crate Key',minecraft:lore=['§9Prodige Skills','An epic cache with substantial points, random skill XP, powerful boosters, keys, and advanced gear.'],minecraft:custom_data={prodige_skills:{crate_key:'epic'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]
-execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2
-tellraw @p "§a[Prodige Skill] §8• §aYou bought §8[§5§lEpic Crate Key§8] §afor §61500 Pts§a!"
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound entity.arrow.hit_player master @p ~ ~ ~ 1 2
+tellraw @p "§a[Prodige Skill] §8• §aYou bought §8[§5§lEpic Crate Key§8] §afor §e1500 Pts§a!"

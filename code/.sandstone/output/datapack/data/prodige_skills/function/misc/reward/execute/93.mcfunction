@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.ender_tracker_bow 1

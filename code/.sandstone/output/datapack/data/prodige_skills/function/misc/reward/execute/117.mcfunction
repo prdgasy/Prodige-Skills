@@ -1,1 +1,0 @@
-scoreboard players add @p prodige_skills.reward.pending.new_tool_x3_pts_booster 1

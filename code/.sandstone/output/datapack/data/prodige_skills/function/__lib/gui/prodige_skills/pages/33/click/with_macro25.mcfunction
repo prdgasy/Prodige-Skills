@@ -1,2 +1,2 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dNew Title: §dEternal Harvest §8× §e$(macro_arg_5324)($(macro_arg_5323))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5323)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro25/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dCrimson Timber Axe §8× §e$(macro_arg_4385)($(macro_arg_4384))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4384)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro25/execute_unless

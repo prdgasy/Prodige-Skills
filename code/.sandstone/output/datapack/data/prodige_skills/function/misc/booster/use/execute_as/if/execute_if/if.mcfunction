@@ -1,3 +1,3 @@
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run return run function prodige_skills:misc/booster/use/execute_as/if/execute_if/if/0_if/return_run
-clear @s minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{prodige_skills:{booster:'xp_2'}}] 1
+clear @s experience_bottle[minecraft:custom_data~{prodige_skills:{booster:'xp_2'}}] 1
 function prodige_skills:misc/booster/use/execute_as/if/execute_if/if/if

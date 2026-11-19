@@ -1,2 +1,2 @@
-# prodige_skills::mythic_rewards::fill -> §bNew Tool: §ex4 Pts Booster(3)
-item replace entity @s container.3 with gold_ingot[custom_name={text: "§bNew Tool: §ex4 Pts Booster", italic: false, color: "white"},lore=[{text: "§eReward chance: §76.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::mythic_rewards::fill -> §ex4 Pts Booster(3)
+item replace entity @s container.3 with gold_ingot[custom_name={text: "§ex4 Pts Booster", italic: false, color: "white"},lore=[{text: "§eReward chance: §76.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

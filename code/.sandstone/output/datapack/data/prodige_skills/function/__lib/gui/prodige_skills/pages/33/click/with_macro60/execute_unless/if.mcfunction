@@ -1,2 +1,4 @@
-execute store result score @p prodige_skills.player.inventory.slots if slots entity @p inventory.*
-function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro60/execute_unless/if/if
+execute if score @p prodige_skills.player.inventory.slots matches 36.. run return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro60/execute_unless/if/0_if/return_run
+scoreboard players remove @p prodige_skills.reward.pending.common_crate_key 1
+give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§a§lCommon Crate Key',minecraft:lore=['§9Prodige Skills','A starter cache with useful points, skill XP, boosters, keys, and skill-specific starter tools.'],minecraft:custom_data={prodige_skills:{crate_key:'common'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]
+execute if entity @p[tag=prodige_skills.player.sound] at @p run playsound block.note_block.pling master @p ~ ~ ~ 1 2

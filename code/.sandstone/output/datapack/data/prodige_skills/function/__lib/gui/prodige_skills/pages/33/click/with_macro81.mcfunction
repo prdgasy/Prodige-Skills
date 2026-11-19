@@ -1,2 +1,0 @@
-# prodige_skills::rewardvault::click::macro -> §6§l§dGolden Furrow §8× §e$(macro_arg_5492)($(macro_arg_5491))
-$execute unless data entity @s Items[{Slot:$(macro_arg_5491)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro81/execute_unless

@@ -260,8 +260,6 @@ private static setDefaultRewards() {
 		Loader.loadDataFromCSV(path.join(__dirname, 'csv'));
 
 		// TASKS
-		Task.tasks = Loader.tasks();
-
-		Reward.registerDisplayData(Object.values(Skill.skills));
-	}
+    Task.tasks = Loader.tasks();
+  }
 }
