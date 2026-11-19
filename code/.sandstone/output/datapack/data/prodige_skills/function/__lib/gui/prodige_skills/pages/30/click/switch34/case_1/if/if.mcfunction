@@ -1,11 +1,11 @@
-scoreboard players operation anon_cnoL-r-9_6518 __sandstone = anon_cnoL-r-9_6321 __sandstone
-scoreboard players operation anon_cnoL-r-9_6518 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_2957 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2958 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_2959 set value 'charcoal'
+scoreboard players operation anon_cnoL-r-9_6513 __sandstone = anon_cnoL-r-9_6316 __sandstone
+scoreboard players operation anon_cnoL-r-9_6513 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_2947 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2948 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2949 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.new_title_apex_predator] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch34/case_1/if/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.new_title_apex_predator] run data modify storage __sandstone:variable anon_cnoL-r-9_2958 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_2960 set value '§8You cannot buy this.'
+execute if entity @p[tag=prodige_skills.title.equipped.new_title_apex_predator] run data modify storage __sandstone:variable anon_cnoL-r-9_2948 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2950 set value '§8You cannot buy this.'
 # prodige_skills::titles::click -> §dNew Title: §cApex Predator$(macro_arg_3768)($(macro_arg_3767))
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch34/case_1/if/if/if3
-scoreboard players add anon_cnoL-r-9_6322 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6317 __sandstone 1

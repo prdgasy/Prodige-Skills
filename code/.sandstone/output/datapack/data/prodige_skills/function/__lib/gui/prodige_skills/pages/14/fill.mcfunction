@@ -26,44 +26,44 @@ execute if score @s prodige_skills.menu.achievements.index matches 0 run functio
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if8
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if9
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if10
-scoreboard players operation anon_cnoL-r-9_5163 __sandstone = @p prodige_skills.hunting.xp
-scoreboard players set anon_cnoL-r-9_5164 __sandstone 1000
-scoreboard players operation anon_cnoL-r-9_5163 __sandstone *= anon_cnoL-r-9_5164 __sandstone
-scoreboard players operation anon_cnoL-r-9_5163 __sandstone /= 10 __sandstone
-scoreboard players operation var_913 prodige_skills.prodigelib.float = anon_cnoL-r-9_5163 __sandstone
-scoreboard players operation anon_cnoL-r-9_5165 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_5165 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_5166 __sandstone = var_913 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_5166 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_5166 __sandstone /= anon_cnoL-r-9_5165 __sandstone
-scoreboard players operation var_914 prodige_skills.prodigelib.float = anon_cnoL-r-9_5166 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_1460 set value '§f§lProgress:'
-data modify storage __sandstone:variable anon_cnoL-r-9_1461 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_1462 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_1463 set value ''
+scoreboard players operation anon_cnoL-r-9_5158 __sandstone = @p prodige_skills.hunting.xp
+scoreboard players set anon_cnoL-r-9_5159 __sandstone 1000
+scoreboard players operation anon_cnoL-r-9_5158 __sandstone *= anon_cnoL-r-9_5159 __sandstone
+scoreboard players operation anon_cnoL-r-9_5158 __sandstone /= 10 __sandstone
+scoreboard players operation var_913 prodige_skills.prodigelib.float = anon_cnoL-r-9_5158 __sandstone
+scoreboard players operation anon_cnoL-r-9_5160 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_5160 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_5161 __sandstone = var_913 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_5161 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_5161 __sandstone /= anon_cnoL-r-9_5160 __sandstone
+scoreboard players operation var_914 prodige_skills.prodigelib.float = anon_cnoL-r-9_5161 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1450 set value '§f§lProgress:'
+data modify storage __sandstone:variable anon_cnoL-r-9_1451 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_1452 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_1453 set value ''
 function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if11
-execute store result storage __sandstone:variable anon_cnoL-r-9_1471.param_0 int 1 run scoreboard players get @p prodige_skills.hunting.level
-function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1471
-data modify storage prodige_skills:prodigelib RomanNumbers.out_63 set from storage prodige_skills:prodigelib RomanNumbers.temp
-scoreboard players operation anon_cnoL-r-9_5183 __sandstone = @p prodige_skills.hunting.totalXp
+execute store result storage __sandstone:variable anon_cnoL-r-9_1461.param_0 int 1 run scoreboard players get @p prodige_skills.hunting.level
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1461
+data modify storage prodige_skills:prodigelib RomanNumbers.out_53 set from storage prodige_skills:prodigelib RomanNumbers.temp
+scoreboard players operation anon_cnoL-r-9_5178 __sandstone = @p prodige_skills.hunting.totalXp
 function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if16
-scoreboard players operation anon_cnoL-r-9_5184 __sandstone = anon_cnoL-r-9_5183 __sandstone
-scoreboard players operation anon_cnoL-r-9_5184 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5184 __sandstone
-scoreboard players operation anon_cnoL-r-9_5185 __sandstone = anon_cnoL-r-9_5183 __sandstone
-scoreboard players operation anon_cnoL-r-9_5185 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5185 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_1472.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_1472.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_1472.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1472
+scoreboard players operation anon_cnoL-r-9_5179 __sandstone = anon_cnoL-r-9_5178 __sandstone
+scoreboard players operation anon_cnoL-r-9_5179 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5179 __sandstone
+scoreboard players operation anon_cnoL-r-9_5180 __sandstone = anon_cnoL-r-9_5178 __sandstone
+scoreboard players operation anon_cnoL-r-9_5180 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5180 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1462.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_1462.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_1462.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1462
 data modify storage prodige_skills:prodigelib Float.hunting.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::achievementshunting::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2120 set from storage __sandstone:variable anon_cnoL-r-9_1460
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2121 set from storage prodige_skills:prodigelib RomanNumbers.out_63
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2122 set from storage __sandstone:variable anon_cnoL-r-9_1461
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2123 set from storage __sandstone:variable anon_cnoL-r-9_1462
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2124 set from storage __sandstone:variable anon_cnoL-r-9_1463
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2120 set from storage __sandstone:variable anon_cnoL-r-9_1450
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2121 set from storage prodige_skills:prodigelib RomanNumbers.out_53
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2122 set from storage __sandstone:variable anon_cnoL-r-9_1451
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2123 set from storage __sandstone:variable anon_cnoL-r-9_1452
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2124 set from storage __sandstone:variable anon_cnoL-r-9_1453
 function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/with_macro11 with storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting
 # prodige_skills::achievementshunting::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Hunting.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
@@ -77,17 +77,17 @@ item replace entity @s container.24 with diamond[custom_name={text: "§dAchievem
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::achievementshunting::fill -> §dHunting(20)
 item replace entity @s container.20 with bow[custom_name={text: "§dHunting", italic: false, color: "white"},lore=[{text: "§7Track and hunt creatures across", italic: false, color: "white"},{text: "§7the Overworld and beyond.", italic: false, color: "white"}],!attribute_modifiers,custom_data={prodige_skills: 1b}] 1
-data modify storage __sandstone:variable anon_cnoL-r-9_1473 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1474 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_1463 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1464 set value '§ePrevious'
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if17
 # prodige_skills::achievementshunting::fill -> $(macro_arg_2128)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2127 set from storage __sandstone:variable anon_cnoL-r-9_1473
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2128 set from storage __sandstone:variable anon_cnoL-r-9_1474
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2127 set from storage __sandstone:variable anon_cnoL-r-9_1463
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2128 set from storage __sandstone:variable anon_cnoL-r-9_1464
 function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/with_macro13 with storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting
-data modify storage __sandstone:variable anon_cnoL-r-9_1475 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1476 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_1465 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1466 set value '§eNext'
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/if18
 # prodige_skills::achievementshunting::fill -> $(macro_arg_2130)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2129 set from storage __sandstone:variable anon_cnoL-r-9_1475
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2130 set from storage __sandstone:variable anon_cnoL-r-9_1476
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2129 set from storage __sandstone:variable anon_cnoL-r-9_1465
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting.macro_arg_2130 set from storage __sandstone:variable anon_cnoL-r-9_1466
 function prodige_skills:__lib/gui/prodige_skills/pages/14/fill/with_macro14 with storage prodige_skills:prodigelib gui.prodige_skills.achievementshunting

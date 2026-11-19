@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2927 set value 'leather'
-data modify storage __sandstone:variable anon_cnoL-r-9_2925 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2926 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2917 set value 'leather'
+data modify storage __sandstone:variable anon_cnoL-r-9_2915 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2916 set value ' §8• §a§lEQUIP'

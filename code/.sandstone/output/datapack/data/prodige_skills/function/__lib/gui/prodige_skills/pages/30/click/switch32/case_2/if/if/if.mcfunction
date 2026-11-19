@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2939 set value 'rabbit_hide'
-data modify storage __sandstone:variable anon_cnoL-r-9_2937 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2938 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2929 set value 'rabbit_hide'
+data modify storage __sandstone:variable anon_cnoL-r-9_2927 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2928 set value ' §8• §a§lEQUIP'

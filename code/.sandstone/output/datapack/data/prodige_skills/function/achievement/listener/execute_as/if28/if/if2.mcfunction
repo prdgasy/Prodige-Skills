@@ -1,6 +1,6 @@
 execute if score @p prodige_skills.foraging.level matches ..99 run function prodige_skills:achievement/listener/execute_as/if28/if/if2/if
-scoreboard players set anon_cnoL-r-9_7444 __sandstone 860
-scoreboard players operation @p prodige_skills.foraging.totalXp += anon_cnoL-r-9_7444 __sandstone
-scoreboard players operation anon_cnoL-r-9_7445 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_7445 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.goal matches 1.. if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_7445 __sandstone run function prodige_skills:skill/foraging/level_up
+scoreboard players set anon_cnoL-r-9_7439 __sandstone 600
+scoreboard players operation @p prodige_skills.foraging.totalXp += anon_cnoL-r-9_7439 __sandstone
+scoreboard players operation anon_cnoL-r-9_7440 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_7440 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.goal matches 1.. if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_7440 __sandstone run function prodige_skills:skill/foraging/level_up

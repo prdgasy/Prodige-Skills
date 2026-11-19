@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9358 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/farm_cocoa/if5/0_if/return_run
+execute if score anon_cnoL-r-9_9353 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/farm_cocoa/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

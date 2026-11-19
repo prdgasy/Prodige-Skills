@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3079 set value 'netherite_shovel'
-data modify storage __sandstone:variable anon_cnoL-r-9_3077 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_3078 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3069 set value 'netherite_shovel'
+data modify storage __sandstone:variable anon_cnoL-r-9_3067 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3068 set value ' §8• §a§lEQUIP'

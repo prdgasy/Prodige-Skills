@@ -1,6 +1,6 @@
 execute if score @p prodige_skills.mining.level matches ..99 run function prodige_skills:skill/excavating/level_up/if89/if/if
-scoreboard players set anon_cnoL-r-9_18547 __sandstone 440
-scoreboard players operation @p prodige_skills.mining.totalXp += anon_cnoL-r-9_18547 __sandstone
-scoreboard players operation anon_cnoL-r-9_18548 __sandstone = @p prodige_skills.mining.goal
-scoreboard players operation anon_cnoL-r-9_18548 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.goal matches 1.. if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_18548 __sandstone run function prodige_skills:skill/mining/level_up
+scoreboard players set anon_cnoL-r-9_18542 __sandstone 890
+scoreboard players operation @p prodige_skills.mining.totalXp += anon_cnoL-r-9_18542 __sandstone
+scoreboard players operation anon_cnoL-r-9_18543 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_18543 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.goal matches 1.. if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_18543 __sandstone run function prodige_skills:skill/mining/level_up

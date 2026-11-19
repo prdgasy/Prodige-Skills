@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_10548 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/excavate_dead_bush/if5/0_if/return_run
+execute if score anon_cnoL-r-9_10543 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/excavate_dead_bush/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

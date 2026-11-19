@@ -34,19 +34,19 @@ execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run f
 execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/if16
 execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/if17
 execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/if18
-data modify storage __sandstone:variable anon_cnoL-r-9_1953 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1954 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_1943 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1944 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/if19
 # prodige_skills::common_rewards::fill -> $(macro_arg_2525)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2524 set from storage __sandstone:variable anon_cnoL-r-9_1953
-data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2525 set from storage __sandstone:variable anon_cnoL-r-9_1954
+data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2524 set from storage __sandstone:variable anon_cnoL-r-9_1943
+data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2525 set from storage __sandstone:variable anon_cnoL-r-9_1944
 function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.common_rewards
-data modify storage __sandstone:variable anon_cnoL-r-9_1955 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1956 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_1945 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1946 set value '§eNext'
 execute if score @s prodige_skills.menu.shop.crates.common.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/if20
 # prodige_skills::common_rewards::fill -> $(macro_arg_2527)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2526 set from storage __sandstone:variable anon_cnoL-r-9_1955
-data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2527 set from storage __sandstone:variable anon_cnoL-r-9_1956
+data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2526 set from storage __sandstone:variable anon_cnoL-r-9_1945
+data modify storage prodige_skills:prodigelib gui.prodige_skills.common_rewards.macro_arg_2527 set from storage __sandstone:variable anon_cnoL-r-9_1946
 function prodige_skills:__lib/gui/prodige_skills/pages/22/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.common_rewards
 # prodige_skills::common_rewards::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

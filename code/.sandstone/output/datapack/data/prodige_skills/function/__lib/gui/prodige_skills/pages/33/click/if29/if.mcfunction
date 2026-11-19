@@ -1,3 +1,3 @@
 # prodige_skills::vault::click -> §6§l§6Evergreen Reaper §8× §e$(macro_arg_4397)($(macro_arg_4396))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if29/if/if
-scoreboard players set anon_cnoL-r-9_6862 __sandstone 1
+scoreboard players set anon_cnoL-r-9_6857 __sandstone 1

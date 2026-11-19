@@ -1,5 +1,5 @@
-scoreboard players operation anon_cnoL-r-9_140 __sandstone = @p prodige_skills.hunting.level
-scoreboard players operation anon_cnoL-r-9_140 __sandstone /= 18 __sandstone
-scoreboard players operation @s prodige_skills.progress_page_index = anon_cnoL-r-9_140 __sandstone
+scoreboard players operation anon_cnoL-r-9_135 __sandstone = @p prodige_skills.hunting.level
+scoreboard players operation anon_cnoL-r-9_135 __sandstone /= 18 __sandstone
+scoreboard players operation @s prodige_skills.progress_page_index = anon_cnoL-r-9_135 __sandstone
 function prodige_skills:__lib/gui/prodige_skills/switch/progresshunting
 scoreboard players set anon_cnoL-r-9_2 __sandstone 1

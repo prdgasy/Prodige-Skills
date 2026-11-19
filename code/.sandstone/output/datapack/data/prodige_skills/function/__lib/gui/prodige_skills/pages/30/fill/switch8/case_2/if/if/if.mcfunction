@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2083 set value 'netherite_pickaxe'
-data modify storage __sandstone:variable anon_cnoL-r-9_2081 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2082 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2073 set value 'netherite_pickaxe'
+data modify storage __sandstone:variable anon_cnoL-r-9_2071 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2072 set value ' §8• §a§lEQUIP'

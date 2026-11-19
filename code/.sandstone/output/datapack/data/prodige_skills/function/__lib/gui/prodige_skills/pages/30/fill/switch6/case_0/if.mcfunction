@@ -1,16 +1,16 @@
-scoreboard players operation anon_cnoL-r-9_6062 __sandstone = anon_cnoL-r-9_6035 __sandstone
-scoreboard players operation anon_cnoL-r-9_6062 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_2049 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2050 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_2051 set value 'charcoal'
+scoreboard players operation anon_cnoL-r-9_6057 __sandstone = anon_cnoL-r-9_6030 __sandstone
+scoreboard players operation anon_cnoL-r-9_6057 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_2039 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2040 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2041 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.new_title_vein_sovereign] run function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch6/case_0/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.new_title_vein_sovereign] run data modify storage __sandstone:variable anon_cnoL-r-9_2050 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_2052 set value '§8You cannot buy this.'
+execute if entity @p[tag=prodige_skills.title.equipped.new_title_vein_sovereign] run data modify storage __sandstone:variable anon_cnoL-r-9_2040 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2042 set value '§8You cannot buy this.'
 # prodige_skills::titles::fill -> §dNew Title: §dVein Sovereign$(macro_arg_2634)($(macro_arg_2633))
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2632 set from storage __sandstone:variable anon_cnoL-r-9_2051
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2633 int 1 run scoreboard players get anon_cnoL-r-9_6062 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2634 set from storage __sandstone:variable anon_cnoL-r-9_2050
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2635 set from storage __sandstone:variable anon_cnoL-r-9_2049
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2636 set from storage __sandstone:variable anon_cnoL-r-9_2052
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2632 set from storage __sandstone:variable anon_cnoL-r-9_2041
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2633 int 1 run scoreboard players get anon_cnoL-r-9_6057 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2634 set from storage __sandstone:variable anon_cnoL-r-9_2040
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2635 set from storage __sandstone:variable anon_cnoL-r-9_2039
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2636 set from storage __sandstone:variable anon_cnoL-r-9_2042
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro13 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6036 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6031 __sandstone 1

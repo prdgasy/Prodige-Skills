@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3119 set value 'map'
-data modify storage __sandstone:variable anon_cnoL-r-9_3117 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_3118 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3109 set value 'map'
+data modify storage __sandstone:variable anon_cnoL-r-9_3107 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3108 set value ' §8• §a§lEQUIP'

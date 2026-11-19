@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_12358 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_12358 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.foraging.xp -= anon_cnoL-r-9_12358 __sandstone
+scoreboard players operation anon_cnoL-r-9_12353 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_12353 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.foraging.xp -= anon_cnoL-r-9_12353 __sandstone
 scoreboard players operation @p prodige_skills.foraging.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.foraging.goal /= 10 __sandstone
 execute if score @p prodige_skills.foraging.goal matches 5001.. run scoreboard players set @p prodige_skills.foraging.goal 5000
@@ -117,6 +117,6 @@ execute if score @p prodige_skills.foraging.level matches 40 run tag @p add prod
 execute if score @p prodige_skills.foraging.level matches 30000 run tag @p add prodige_skills.title.owned.new_title_bloomkeeper
 execute if score @p prodige_skills.foraging.level matches 70000 run tag @p add prodige_skills.title.owned.new_title_elderwood
 function prodige_skills:skill/foraging/level_up/notification
-scoreboard players operation anon_cnoL-r-9_13960 __sandstone = @p prodige_skills.foraging.goal
-scoreboard players operation anon_cnoL-r-9_13960 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.goal matches 1.. if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_13960 __sandstone run function prodige_skills:skill/foraging/level_up
+scoreboard players operation anon_cnoL-r-9_13955 __sandstone = @p prodige_skills.foraging.goal
+scoreboard players operation anon_cnoL-r-9_13955 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.foraging.level matches ..99 if score @p prodige_skills.foraging.goal matches 1.. if score @p prodige_skills.foraging.xp >= anon_cnoL-r-9_13955 __sandstone run function prodige_skills:skill/foraging/level_up

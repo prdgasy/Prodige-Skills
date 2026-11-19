@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2151 set value 'jungle_log'
-data modify storage __sandstone:variable anon_cnoL-r-9_2149 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2150 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2141 set value 'jungle_log'
+data modify storage __sandstone:variable anon_cnoL-r-9_2139 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2140 set value ' §8• §a§lEQUIP'

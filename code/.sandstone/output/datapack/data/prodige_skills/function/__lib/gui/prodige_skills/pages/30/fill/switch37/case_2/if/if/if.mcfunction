@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2431 set value 'spyglass'
-data modify storage __sandstone:variable anon_cnoL-r-9_2429 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2430 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2421 set value 'spyglass'
+data modify storage __sandstone:variable anon_cnoL-r-9_2419 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2420 set value ' §8• §a§lEQUIP'

@@ -46,19 +46,19 @@ execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run f
 execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/if28
 execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/if29
 execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/if30
-data modify storage __sandstone:variable anon_cnoL-r-9_1985 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1986 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_1975 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1976 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/if31
 # prodige_skills::mythic_rewards::fill -> $(macro_arg_2557)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2556 set from storage __sandstone:variable anon_cnoL-r-9_1985
-data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2557 set from storage __sandstone:variable anon_cnoL-r-9_1986
+data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2556 set from storage __sandstone:variable anon_cnoL-r-9_1975
+data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2557 set from storage __sandstone:variable anon_cnoL-r-9_1976
 function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards
-data modify storage __sandstone:variable anon_cnoL-r-9_1987 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1988 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_1977 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1978 set value '§eNext'
 execute if score @s prodige_skills.menu.shop.crates.mythic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/if32
 # prodige_skills::mythic_rewards::fill -> $(macro_arg_2559)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2558 set from storage __sandstone:variable anon_cnoL-r-9_1987
-data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2559 set from storage __sandstone:variable anon_cnoL-r-9_1988
+data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2558 set from storage __sandstone:variable anon_cnoL-r-9_1977
+data modify storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards.macro_arg_2559 set from storage __sandstone:variable anon_cnoL-r-9_1978
 function prodige_skills:__lib/gui/prodige_skills/pages/26/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.mythic_rewards
 # prodige_skills::mythic_rewards::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

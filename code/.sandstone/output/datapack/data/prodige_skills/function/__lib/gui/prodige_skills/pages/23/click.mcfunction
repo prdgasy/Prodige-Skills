@@ -29,13 +29,13 @@ execute if score @s prodige_skills.menu.shop.crates.rare.index matches 1 run fun
 execute if score @s prodige_skills.menu.shop.crates.rare.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if28
 execute if score @s prodige_skills.menu.shop.crates.rare.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if29
 execute if score @s prodige_skills.menu.shop.crates.rare.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if30
-data modify storage __sandstone:variable anon_cnoL-r-9_1965 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1966 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_1955 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1956 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.crates.rare.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if31
 # prodige_skills::rare_rewards::click -> $(macro_arg_2537)(25)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if32/if
-data modify storage __sandstone:variable anon_cnoL-r-9_1967 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1968 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_1957 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1958 set value '§eNext'
 execute if score @s prodige_skills.menu.shop.crates.rare.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if33
 # prodige_skills::rare_rewards::click -> $(macro_arg_2539)(26)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if34/if

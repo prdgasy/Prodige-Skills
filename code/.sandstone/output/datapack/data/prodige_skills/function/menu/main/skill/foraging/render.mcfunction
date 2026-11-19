@@ -1,2 +1,0 @@
-data modify storage prodige_skills:main_skill_args args.rewardLoreSnbt set value ""
-$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage prodige_skills:main_skill_args args.rewardLoreSnbt set from storage prodige_skills:reward_display $(skill).$(nextLevel).mainRewardLoreSnbt
