@@ -29,7 +29,7 @@ export class Main {
       this.tasks(g, p);
       this.rewardVault(g, p);
       this.shop(g, p);
-      this.infoAndPreferences(g, p);
+      this.preferences(g, p);
 
     });
 
@@ -64,22 +64,19 @@ export class Main {
     ));
   }
 
-  private static infoAndPreferences(g: Gui, p: Page) {
-    const totalXp = Float.variable();
-    for (const skill of Object.values(Skill.skills)) {
-      totalXp['+='](skill.totalXp);
-    }
-    const infoButton = new Button('amethyst_shard', 4, '§bInfo & Preferences',
+  private static preferences(g: Gui, p: Page) {
+    p.emit(new Button('amethyst_shard', 4, '§bPreferences',
       [
-        '§e§l┃ Player Stats',
-        $`§e┃ §7Total Skill Xp: §b${totalXp.show()}`,
-        $`§e┃ §7Available Points: §6${Player.pts}`,
+        '§b§l┃ Preferences',
+        '§b┃ Edit your preferences and you playing ect...',
         '',
         '§eClick to edit your preferences!'
       ], () => g.switch(Preferences.getName())
-    );
-    p.emit(infoButton);
+    ));
+  }
 
+  private static shop(g: Gui, p: Page) {
+    // Get current boosters
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
     for (const type of BOOSTER_TYPE) {
       const color = Booster.getColor(type);
@@ -94,30 +91,15 @@ export class Main {
       boosterStatuses.push(status);
     }
 
-    p.emit(new Button(
-      'experience_bottle',
-      19,
-      '§bBoosters & Shop',
-      [
-        '§b§l┃ Active Boosters',
-        ...boosterStatuses.map(status => $`§b┃ §8• ${status}`),
-        '',
-        '§7Open the booster shop to browse or buy boosters.',
-        '',
-        '§eClick to open the Booster Shop!'
-      ],
-      () => g.switch(Boosters.getName())
-    ));
-    return infoButton;
-  }
-
-  private static shop(g: Gui, p: Page) {
     return p.emit(
-      new Button('emerald', 21, $`§aShop §8• ${Player.pts}`,
+      new Button('emerald', 21, $`§aShop §8• §e${Player.pts}Pts`,
         [
           '§a§l┃ Skill Shop',
           '§a┃ §7Browse items, boosters, crates, and titles.',
           '§a┃ §7Spend your points on useful rewards.',
+          '',
+          '§a§l┃ Active Boosters',
+          ...boosterStatuses.map(status => $`§a┃ §8• ${status}`),
           '',
           $`§8• §7Your balance: §6${Player.pts} Pts`,
           '',

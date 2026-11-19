@@ -1,5 +1,5 @@
 import { Player } from "@src/player";
-import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Score, Variable } from "sandstone";
+import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, say, Score, Variable } from "sandstone";
 import { Item } from "@src/types";
 import { Reward } from "./reward";
 
@@ -33,7 +33,7 @@ export class Booster extends Reward {
     });
 
     const customData = { prodige_skills: { booster: `${type.toLowerCase()}_${multiplier}` } };
-    this.predicate = ItemPredicate(icon).match('minecraft:custom_data', customData);
+    this.predicate = ItemPredicate('warped_fungus_on_a_stick').match('minecraft:custom_data', customData);
     this.multiplier = multiplier;
     this.type = type;
     this.duration = duration;
@@ -64,7 +64,6 @@ export class Booster extends Reward {
       ],
       'minecraft:item_model': icon,
       'minecraft:custom_data': customData,
-      'minecraft:unbreakable': {}
     });
   }
 
@@ -88,6 +87,7 @@ export class Booster extends Reward {
       execute.as('@a').at('@s').run(() => {
         for (const booster of Booster.boosters) {
           _.if(Booster.used['>'](0), () => {
+            say('used');
             execute.if.items.entity('@s', 'weapon.mainhand', booster.predicate).run(() => {
               _.if(Booster.getTimer(booster.type)['>'](0), () => {
                 Player.throw(`You already have an active ${booster.type} Booster!`);

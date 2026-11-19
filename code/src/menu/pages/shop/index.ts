@@ -10,12 +10,15 @@ import { Player } from "@src/player";
 import { Mask } from "../../mask";
 
 export class Shop {
+  public static mask(p: Page) {
+    p.add(() => Mask.layered(p, "purple_stained_glass_pane", "magenta_stained_glass_pane"));
+  }
   public static getName() {
     return this.name;
   }
 
   public static init(g: Gui, p: Page) {
-    p.add(() => Mask.layered(p, "cyan_stained_glass_pane", "light_blue_stained_glass_pane"));
+    Shop.mask(p);
     p.add(
       this.header(),
       this.items(g),
@@ -24,7 +27,7 @@ export class Shop {
       this.titles(g)
     );
 
-    p.add(Menu.back(g, Main), this.balance(), this.guide());
+    p.add(Menu.back(g, Main), this.balance());
     return p;
   }
 
@@ -38,12 +41,12 @@ export class Shop {
         ...Text.wrap("Spend skill points on useful gear, temporary XP or point boosts, crate keys with weighted rewards, and collectible titles.", "§a┃ §7"),
         "",
         "§a§l┃ Shop Categories",
-        "§a┃ §7Tools & Gear: browse custom equipment, rarity, and special details.",
-        "§a┃ §7Boosters: multiply skill XP or points for a limited time.",
-        "§a┃ §7Crates: use matching keys for several random rewards.",
-        "§a┃ §7Titles: unlock milestones or purchase a new look.",
+        "§a┃ §8• §9Tools & Gear",
+        "§a┃ §8• §bBoosters",
+        "§a┃ §8• §5Crates",
+        "§a┃ §8• §dTitles",
         "",
-        "§eClick a category below to explore its offers."
+        "§8Click a category below to explore its offers!"
       ]
     );
   }
@@ -52,12 +55,12 @@ export class Shop {
     return new Button(
       "diamond_pickaxe",
       10,
-      "§a§lTools & Gear",
+      "§9Tools & Gear",
       [
-        '§a§l┃ Equipment',
-        ...Text.wrap('Browse tools and gear to support your journey.', '§a┃ §7'),
+        '§9§l┃ Equipment',
+        ...Text.wrap('Browse tools and gear to support your journey.', '§9┃ §7'),
         '',
-        '§eClick to view the available gear.'
+        '§eClick to view tools & gears!'
       ],
       () => {
         Items.index.set(0);
@@ -70,12 +73,12 @@ export class Shop {
     return new Button(
       "experience_bottle",
       12,
-      "§a§lBoosters",
+      "§bBoosters",
       [
-        '§a§l┃ Accelerate Progress',
-        ...Text.wrap('Temporarily multiply XP or points from skill actions.', '§a┃ §7'),
+        '§b§l┃ Accelerate Progress',
+        ...Text.wrap('Temporarily multiply XP or points from skill actions.', '§b┃ §7'),
         '',
-        '§eClick to view the boosters.'
+        '§eClick to view the boosters!'
       ],
       () => g.switch(Boosters.getName())
     );
@@ -85,12 +88,12 @@ export class Shop {
     return new Button(
       "ender_chest",
       14,
-      "§a§lCrates",
+      "§5Crates",
       [
-        '§a§l┃ Rewards & Surprises',
-        ...Text.wrap('Buy matching keys for several rolls of points, skill XP, boosters, and gear.', '§a┃ §7'),
+        '§5§l┃ Rewards & Surprises',
+        ...Text.wrap('Buy matching keys for several rolls of points, skill XP, boosters, and gear.', '§5┃ §7'),
         '',
-        '§eClick to browse the crates.'
+        '§eClick to browse the crates!'
       ],
       () => g.switch(Crates.getName())
     );
@@ -114,28 +117,15 @@ export class Shop {
     );
   }
 
-  private static guide() {
-    return new Button(
-      "knowledge_book",
-      23,
-      "§e§lShop Guide",
-      [
-        "§e§l┃ How to Shop",
-        "§e┃ §7Browse a category to see prices and details.",
-        "§e┃ §7Your balance is shown below.",
-        "§e┃ §7Purchases are confirmed when clicked.",
-      ]
-    );
-  }
 
   public static balance() {
-    return new Button('emerald', 19, $`§aShop §8• ${Player.pts}`,
+    return new Button('emerald', 19, $`§aShop §8• §e${Player.pts} Pts`,
       [
         '§a§l┃ Skill Shop',
         '§a┃ §7Browse items, boosters, crates, and titles.',
         '§a┃ §7Spend your points on useful rewards.',
         '',
-        $`§8• §7Your balance: §6${Player.pts} Pts`,
+        $`§8• §7Your balance: §e${Player.pts} Pts`,
       ]
     );
   }

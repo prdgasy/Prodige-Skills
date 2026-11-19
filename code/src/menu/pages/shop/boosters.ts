@@ -11,7 +11,7 @@ export class Boosters {
   }
 
   public static init(g: Gui, p: Page) {
-    p.add(() => Mask.bottom(p, "cyan_stained_glass_pane"));
+    Shop.mask(p);
     p.add(this.boosters());
     for (let i = 1; i <= 3; i++) {
       const multiplier = i + 1;
@@ -28,7 +28,7 @@ export class Boosters {
   private static boosters() {
     return new Button(
       "experience_bottle",
-      12,
+      21,
       "§b§lBoosters",
       [
         '§b§l┃ Accelerate Progress',

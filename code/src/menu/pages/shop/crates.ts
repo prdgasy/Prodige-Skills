@@ -13,7 +13,7 @@ export class Crates {
   }
 
   public static init(g: Gui, p: Page) {
-    p.add(() => Mask.bottom(p, "cyan_stained_glass_pane"));
+    Shop.mask(p);
     p.add(this.howItWorks());
 
     const crates = Object.values(Crate.crates);

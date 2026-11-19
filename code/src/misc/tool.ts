@@ -25,7 +25,7 @@ type ToolRarity = "§a§lCOMMON" | "§9§lRARE" | "§d§lEPIC" | "§6§lLEGENDAR
 export class Tool extends Reward {
   public static tools: Record<ToolName, Tool>;
   public rarity: ToolRarity;
-  public durability: number;
+  public price: number;
 
   public characteristics?: string[];
   public type?: Skill;
@@ -33,11 +33,16 @@ export class Tool extends Reward {
   public onBreak?: () => void;
   public onHold?: () => void;
 
+  public durability: number;
+  public damage: number;
+  public otherstats: number;
+
   constructor(opt: ToolOptions) {
     super(opt.name, Tool.getFromOpt(opt), {
       description: opt.description, icon: opt.icon, price: opt.price, category: 'vault'
     });
 
+    this.price = opt.price;
     this.characteristics = opt.characteristics;
     this.rarity = opt.rarity;
     this.durability = opt.durability;
