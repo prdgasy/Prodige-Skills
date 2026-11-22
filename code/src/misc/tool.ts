@@ -1,5 +1,5 @@
 import type { Skill } from "@src/skill";
-import { give, MCFunction } from "sandstone";
+import { give, MCFunction, NBT, NBTAnyValue, NBTInt } from "sandstone";
 import type { Item } from "../types";
 import { Reward } from "./reward";
 import { Global } from "@src/global";
@@ -84,11 +84,12 @@ export class Tool extends Reward {
       }
 
       const statLore: string[] = ['§d§l┃ Stats'];
-      const components: [ComponentType, number][] = [];
+      const components: [ComponentType, NBTInt][] = [];
       for (const [k, v] of Object.entries(opt.stats)) {
         statLore.push(`§d┃ §8• §f${k}: ${Tool.stars(v.stars)}`);
         if (v.component && v.value) {
-          components.push([v.component, v.value]);
+
+          components.push([v.component, NBT.int(v.value)]);
         }
       }
 

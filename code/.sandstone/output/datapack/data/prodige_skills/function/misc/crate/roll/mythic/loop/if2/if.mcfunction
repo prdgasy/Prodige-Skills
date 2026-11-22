@@ -1,5 +1,5 @@
 execute if score @p prodige_skills.mining.level matches ..99 run function prodige_skills:misc/crate/roll/mythic/loop/if2/if/if
-scoreboard players set anon_cnoL-r-9_18921 __sandstone 8890
+scoreboard players set anon_cnoL-r-9_18921 __sandstone 12970
 scoreboard players operation @p prodige_skills.mining.totalXp += anon_cnoL-r-9_18921 __sandstone
 scoreboard players operation anon_cnoL-r-9_18922 __sandstone = @p prodige_skills.mining.goal
 scoreboard players operation anon_cnoL-r-9_18922 __sandstone *= 10 __sandstone
