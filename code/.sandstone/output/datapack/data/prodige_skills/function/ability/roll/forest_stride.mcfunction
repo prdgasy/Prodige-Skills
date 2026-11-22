@@ -1,2 +1,2 @@
-execute store result score var_1540 prodige_skills.prodigelib.float run random value 0..1000
-execute if entity @p[tag=prodige_skills.Foraging.ability.toggle] if score var_1540 prodige_skills.prodigelib.float <= @p prodige_skills.Foraging.ability.buff run effect give @s minecraft:speed 8 0 true
+execute store result score var_1538 prodige_skills.prodigelib.float run random value 0..1000
+execute if entity @p[tag=prodige_skills.Foraging.ability.toggle] if score var_1538 prodige_skills.prodigelib.float <= @p prodige_skills.Foraging.ability.buff run effect give @s minecraft:speed 8 0 true

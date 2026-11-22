@@ -1,2 +1,2 @@
-# prodige_skills::progresshunting::fill::macro -> $(macro_arg_108)(26)
-$item replace entity @s container.26 with $(macro_arg_107)[custom_name={text: "$(macro_arg_108)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::progresshunting::fill::macro -> $(macro_arg_104)(26)
+$item replace entity @s container.26 with $(macro_arg_103)[custom_name={text: "$(macro_arg_104)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

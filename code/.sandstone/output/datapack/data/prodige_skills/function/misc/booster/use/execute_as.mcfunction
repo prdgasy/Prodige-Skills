@@ -1,7 +1,7 @@
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand experience_bottle[minecraft:custom_data~{prodige_skills:{booster:'xp_2'}}] run function prodige_skills:misc/booster/use/execute_as/if/execute_if/if
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand gold_ingot[minecraft:custom_data~{prodige_skills:{booster:'pts_2'}}] run function prodige_skills:misc/booster/use/execute_as/if2/execute_if/if
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand gold_ingot[minecraft:custom_data~{prodige_skills:{booster:'pts_3'}}] run function prodige_skills:misc/booster/use/execute_as/if3/execute_if/if
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand experience_bottle[minecraft:custom_data~{prodige_skills:{booster:'xp_3'}}] run function prodige_skills:misc/booster/use/execute_as/if4/execute_if/if
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand experience_bottle[minecraft:custom_data~{prodige_skills:{booster:'xp_4'}}] run function prodige_skills:misc/booster/use/execute_as/if5/execute_if/if
-execute if score @p prodige_skills.boost.used matches 1.. if items entity @s weapon.mainhand gold_ingot[minecraft:custom_data~{prodige_skills:{booster:'pts_4'}}] run function prodige_skills:misc/booster/use/execute_as/if6/execute_if/if
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if2
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if3
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if4
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if5
+execute if score @p prodige_skills.boost.used matches 1.. run function prodige_skills:misc/booster/use/execute_as/if6
 scoreboard players reset @p prodige_skills.boost.used

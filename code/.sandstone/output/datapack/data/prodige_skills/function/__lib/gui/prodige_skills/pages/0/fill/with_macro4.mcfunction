@@ -1,2 +1,0 @@
-# prodige_skills::main::fill::macro -> §bInfo & Preferences(4)
-$item replace entity @s container.4 with amethyst_shard[custom_name={text: "§bInfo & Preferences", italic: false, color: "white"},lore=[{text: "§e§l┃ Player Stats", italic: false, color: "white"},{text: "§e┃ §7Total Skill Xp: §b$(macro_arg_17)", italic: false, color: "white"},{text: "§e┃ §7Available Points: §6$(macro_arg_18)", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to edit your preferences!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

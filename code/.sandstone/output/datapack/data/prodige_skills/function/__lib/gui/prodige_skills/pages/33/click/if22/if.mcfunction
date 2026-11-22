@@ -1,3 +1,3 @@
-# prodige_skills::vault::click -> §6§l§9Canopy Hatchet §8× §e$(macro_arg_4376)($(macro_arg_4375))
+# prodige_skills::vault::click -> §6§l§9Canopy Hatchet §8× §e$(macro_arg_4372)($(macro_arg_4371))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if22/if/if
-scoreboard players set anon_cnoL-r-9_6857 __sandstone 1
+scoreboard players set anon_cnoL-r-9_6851 __sandstone 1

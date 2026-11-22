@@ -1,2 +1,3 @@
-execute if score anon_cnoL-r-9_54 __sandstone matches ..-1 run return run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if78/0_if/return_run
-data modify storage prodige_skills:prodigelib Float.sign set value ''
+execute store result storage __sandstone:variable anon_cnoL-r-9_3.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.multiplier
+execute store result storage __sandstone:variable anon_cnoL-r-9_3.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.timer
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_3

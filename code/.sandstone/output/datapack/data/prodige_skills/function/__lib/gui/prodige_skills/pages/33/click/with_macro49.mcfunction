@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6Legend of the Hunt §8× §e$(macro_arg_4457)($(macro_arg_4456))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4456)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro49/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Legend of the Hunt §8× §e$(macro_arg_4453)($(macro_arg_4452))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4452)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro49/execute_unless

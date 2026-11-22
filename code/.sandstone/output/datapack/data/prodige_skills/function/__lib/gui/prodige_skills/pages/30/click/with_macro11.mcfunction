@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §4Deep Core Delver$(macro_arg_3333)($(macro_arg_3332))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3332)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro11/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §4Deep Core Delver$(macro_arg_3329)($(macro_arg_3328))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3328)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro11/execute_unless

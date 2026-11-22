@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6Ender Tracker Bow §8× §e$(macro_arg_4451)($(macro_arg_4450))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4450)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro47/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Ender Tracker Bow §8× §e$(macro_arg_4447)($(macro_arg_4446))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4446)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro47/execute_unless

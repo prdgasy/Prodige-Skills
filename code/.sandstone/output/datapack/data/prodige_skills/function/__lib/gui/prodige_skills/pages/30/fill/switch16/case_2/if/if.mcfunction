@@ -1,16 +1,16 @@
-scoreboard players operation anon_cnoL-r-9_6121 __sandstone = anon_cnoL-r-9_6030 __sandstone
-scoreboard players operation anon_cnoL-r-9_6121 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_2167 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2168 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_2169 set value 'charcoal'
+scoreboard players operation anon_cnoL-r-9_6115 __sandstone = anon_cnoL-r-9_6024 __sandstone
+scoreboard players operation anon_cnoL-r-9_6115 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_2165 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2166 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2167 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.new_title_verdant_sovereign] run function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch16/case_2/if/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.new_title_verdant_sovereign] run data modify storage __sandstone:variable anon_cnoL-r-9_2168 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_2170 set value '§8You cannot buy this.'
-# prodige_skills::titles::fill -> §dNew Title: §dVerdant Sovereign$(macro_arg_2794)($(macro_arg_2793))
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2792 set from storage __sandstone:variable anon_cnoL-r-9_2169
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2793 int 1 run scoreboard players get anon_cnoL-r-9_6121 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2794 set from storage __sandstone:variable anon_cnoL-r-9_2168
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2795 set from storage __sandstone:variable anon_cnoL-r-9_2167
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2796 set from storage __sandstone:variable anon_cnoL-r-9_2170
+execute if entity @p[tag=prodige_skills.title.equipped.new_title_verdant_sovereign] run data modify storage __sandstone:variable anon_cnoL-r-9_2166 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2168 set value '§8You cannot buy this.'
+# prodige_skills::titles::fill -> §dNew Title: §dVerdant Sovereign$(macro_arg_2790)($(macro_arg_2789))
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2788 set from storage __sandstone:variable anon_cnoL-r-9_2167
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2789 int 1 run scoreboard players get anon_cnoL-r-9_6115 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2790 set from storage __sandstone:variable anon_cnoL-r-9_2166
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2791 set from storage __sandstone:variable anon_cnoL-r-9_2165
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_2792 set from storage __sandstone:variable anon_cnoL-r-9_2168
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/with_macro45 with storage prodige_skills:prodigelib gui.prodige_skills.titles
-scoreboard players add anon_cnoL-r-9_6031 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6025 __sandstone 1

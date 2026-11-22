@@ -977,8 +977,8 @@ scoreboard players set anon_cnoL-r-9_32 __sandstone 0
 scoreboard players set anon_cnoL-r-9_33 __sandstone 0
 scoreboard players set anon_cnoL-r-9_34 __sandstone 0
 scoreboard players set anon_cnoL-r-9_35 __sandstone 0
-scoreboard players set -1 __sandstone -1
 scoreboard players set 10 __sandstone 10
+scoreboard players set -1 __sandstone -1
 scoreboard players set 15 __sandstone 15
 scoreboard players set 100 __sandstone 100
 scoreboard players set 18 __sandstone 18

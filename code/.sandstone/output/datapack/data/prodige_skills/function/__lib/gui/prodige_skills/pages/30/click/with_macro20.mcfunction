@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §5Bedrock Baron$(macro_arg_3378)($(macro_arg_3377))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3377)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro20/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §5Bedrock Baron$(macro_arg_3374)($(macro_arg_3373))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3373)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro20/execute_unless

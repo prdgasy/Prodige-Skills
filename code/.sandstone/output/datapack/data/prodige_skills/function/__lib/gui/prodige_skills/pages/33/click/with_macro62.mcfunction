@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§5§lEpic Crate Key §8× §e$(macro_arg_4496)($(macro_arg_4495))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4495)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro62/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§5§lEpic Crate Key §8× §e$(macro_arg_4492)($(macro_arg_4491))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4491)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro62/execute_unless

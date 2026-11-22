@@ -1,15 +1,15 @@
-scoreboard players operation anon_cnoL-r-9_5981 __sandstone = @p prodige_skills.Excavating.ability.buff
+scoreboard players operation anon_cnoL-r-9_5975 __sandstone = @p prodige_skills.Excavating.ability.buff
 function prodige_skills:__lib/gui/prodige_skills/pages/20/click/if3/0_if/return_run/if
-scoreboard players operation anon_cnoL-r-9_5982 __sandstone = anon_cnoL-r-9_5981 __sandstone
-scoreboard players operation anon_cnoL-r-9_5982 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5982 __sandstone
-scoreboard players operation anon_cnoL-r-9_5983 __sandstone = anon_cnoL-r-9_5981 __sandstone
-scoreboard players operation anon_cnoL-r-9_5983 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5983 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_1911.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_1911.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_1911.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1911
+scoreboard players operation anon_cnoL-r-9_5976 __sandstone = anon_cnoL-r-9_5975 __sandstone
+scoreboard players operation anon_cnoL-r-9_5976 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5976 __sandstone
+scoreboard players operation anon_cnoL-r-9_5977 __sandstone = anon_cnoL-r-9_5975 __sandstone
+scoreboard players operation anon_cnoL-r-9_5977 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5977 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1909.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_1909.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_1909.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1909
 data modify storage prodige_skills:prodigelib Float.Excavating.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesexcavating::click -> Deep Digger §8[§c§lX§8](13)
 execute if score anon_cnoL-r-9_22 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/20/click/if3/0_if/return_run/if2/if

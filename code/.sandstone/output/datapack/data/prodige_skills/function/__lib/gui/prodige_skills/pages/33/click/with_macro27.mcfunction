@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6Elderwood Hatchet §8× §e$(macro_arg_4391)($(macro_arg_4390))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4390)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro27/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Elderwood Hatchet §8× §e$(macro_arg_4387)($(macro_arg_4386))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4386)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro27/execute_unless

@@ -1,4 +1,4 @@
-# prodige_skills::tasks::fill -> §cTask Refresh §8• §c$(macro_arg_4052)m(4)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4052 int 1 run scoreboard players get @p prodige_skills.task.timer
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4053 int 1 run scoreboard players get @p prodige_skills.task.timer
+# prodige_skills::tasks::fill -> §cTask Refresh §8• §c$(macro_arg_4048)m(4)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4048 int 1 run scoreboard players get @p prodige_skills.task.timer
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4049 int 1 run scoreboard players get @p prodige_skills.task.timer
 return run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/with_macro13 with storage prodige_skills:prodigelib gui.prodige_skills.tasks

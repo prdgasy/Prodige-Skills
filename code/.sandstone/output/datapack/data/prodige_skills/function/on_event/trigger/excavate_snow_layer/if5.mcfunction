@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_10711 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/excavate_snow_layer/if5/0_if/return_run
+execute if score anon_cnoL-r-9_10705 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/excavate_snow_layer/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

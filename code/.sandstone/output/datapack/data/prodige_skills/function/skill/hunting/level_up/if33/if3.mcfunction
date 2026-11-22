@@ -1,6 +1,6 @@
 execute if score @p prodige_skills.farming.level matches ..99 run function prodige_skills:skill/hunting/level_up/if33/if3/if
-scoreboard players set anon_cnoL-r-9_16049 __sandstone 4520
-scoreboard players operation @p prodige_skills.farming.totalXp += anon_cnoL-r-9_16049 __sandstone
-scoreboard players operation anon_cnoL-r-9_16050 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_16050 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_16050 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players set anon_cnoL-r-9_16043 __sandstone 2530
+scoreboard players operation @p prodige_skills.farming.totalXp += anon_cnoL-r-9_16043 __sandstone
+scoreboard players operation anon_cnoL-r-9_16044 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_16044 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_16044 __sandstone run function prodige_skills:skill/farming/level_up

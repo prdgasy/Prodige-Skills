@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§aStonewake Pickaxe §8× §e$(macro_arg_4340)($(macro_arg_4339))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4339)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro10/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§aStonewake Pickaxe §8× §e$(macro_arg_4336)($(macro_arg_4335))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4335)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro10/execute_unless

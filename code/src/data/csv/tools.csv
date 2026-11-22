@@ -1,0 +1,60 @@
+name,icon,price,rarity,damage,durability,speed,skill,level,crates,story
+§aNovice Pickaxe,iron_pickaxe,1500,COMMON,2,250,3,,,Common:10;Rare:10,Plain iron forged in haste. Fine for learning but quick to wear out.
+§bExpert Sword,diamond_sword,12000,EPIC,4,2000,4,,,Epic:8,Honed by a veteran smith. Hits hard and stays quick through long fights.
+§fField Shovel,iron_shovel,1800,COMMON,2,250,3,,,Common:8,A farmhand's tool. Gentle on the soil but not built to last.
+§9Verdant Hatchet,diamond_axe,7500,RARE,4,1200,2,,,Rare:8,Heavy head cuts deep but swings slowly. Its sturdy handle outlasts most.
+§9Gale Recurve,bow,8000,RARE,3,700,2,,,Rare:8,Slender limbs make it accurate but slow to draw and fairly delicate.
+§dDeepstone Drill,netherite_pickaxe,26000,EPIC,3,3000,4,,,Epic:12;Mythic:5,Reinforced to bore through the deepest rock. Tough and quick but light on damage.
+§dWarden Edge,netherite_sword,32000,EPIC,5,2600,4,,,Epic:6;Legendary:8,Forged from a fallen warden's core. Devastating and fast with solid endurance.
+§6Astral Cleaver,netherite_axe,60000,LEGENDARY,5,4000,3,,,Legendary:8;Mythic:10,Star-metal blade of crushing force. Nearly unbreakable though it swings at a moderate pace.
+§6Voidfall Pickaxe,netherite_pickaxe,75000,LEGENDARY,4,5000,5,,,Legendary:8;Mythic:10,Pulled from the void itself. Strong and blazing fast and almost endless.
+§aStonewake Pickaxe,iron_pickaxe,500,COMMON,3,300,3,Mining,10,,Cheap iron for a young miner. Handy early on but wears out fast.
+§aCoppervein Pickaxe,golden_pickaxe,1500,COMMON,3,600,3,Mining,20,,Gilded edge cuts copper veins cleanly. Sturdier than before but still modest.
+§9Deepslate Prospector,diamond_pickaxe,3000,RARE,3,900,3,Mining,30,,Tempered in deepslate dust for steady work. Dependable but only mildly durable.
+§9Redstone Extractor,netherite_pickaxe,5000,RARE,3,1200,3,Mining,40,,Redstone-laced head tracks rich veins. Balanced strength with respectable endurance.
+§dDiamond Seeker,diamond_pickaxe,8000,EPIC,4,1600,3,Mining,50,,Diamond tip bites harder into stone. Good power with lasting edges.
+§dNether Delver,netherite_pickaxe,12000,EPIC,4,2000,3,Mining,60,,Hardened by Nether fire to resist wear. Strong blows and long life.
+§dObsidian Breaker,netherite_pickaxe,18000,EPIC,4,2400,3,Mining,70,,Obsidian-forged for the toughest stone. Heavy hits that rarely dull.
+§6Ancient Vein Pick,netherite_pickaxe,25000,LEGENDARY,4,3000,3,Mining,80,,Old masterwork that has outlived its makers. Reliable strength and endurance.
+§6Bedrock Borer,netherite_pickaxe,35000,LEGENDARY,4,4000,3,Mining,90,,Built to chew through bedrock. Nearly impossible to wear down.
+§6Worldshaper Pickaxe,netherite_pickaxe,50000,LEGENDARY,5,5000,3,Mining,100,,Reshapes mountains with every swing. Peak power and unmatched durability.
+§aSapling Cutter,stone_axe,500,COMMON,5,300,2,Foraging,10,,Stone head chops hard but slowly. Chips and dulls quickly.
+§aBark Stripper,iron_axe,1500,COMMON,5,600,2,Foraging,20,,Iron edge strips bark cleanly. Heavy swings and moderate wear.
+§9Canopy Hatchet,diamond_axe,3000,RARE,5,900,2,Foraging,30,,Diamond edge splits thick branches. Slow heavy swings with modest durability.
+§9Wildwood Axe,netherite_axe,5000,RARE,5,1200,2,Foraging,40,,Netherite spine for wild timber. Heavy slow strikes and decent endurance.
+§dHeartwood Chopper,diamond_axe,8000,EPIC,5,1600,2,Foraging,50,,Precision cut through the hardest heartwood. Strong but slow and steady.
+§dCrimson Timber Axe,netherite_axe,12000,EPIC,5,2000,2,Foraging,60,,Tempered in crimson fungi to cleave Nether stems. Hard hitting and durable.
+§dPalegrove Cleaver,netherite_axe,18000,EPIC,5,2400,2,Foraging,70,,Wide blade for ancient pale trunks. Slow to swing yet very durable.
+§6Elderwood Hatchet,netherite_axe,25000,LEGENDARY,5,3000,2,Foraging,80,,A forester's lifelong companion. Crushing blows and tough enough for decades.
+§6Worldroot Axe,netherite_axe,35000,LEGENDARY,5,4000,2,Foraging,90,,Grown from the roots of the world. Immense force that never fades.
+§6Evergreen Reaper,netherite_axe,50000,LEGENDARY,5,5000,2,Foraging,100,,Evergreen steel that reaps whole groves. Maximum force and endless endurance.
+§aFirst Harvest Hoe,stone_hoe,500,COMMON,1,300,5,Farming,10,,Simple stone hoe. Light and fast but weak and short lived.
+§aFieldhand Hoe,iron_hoe,1500,COMMON,1,600,5,Farming,20,,Iron blade made for daily work. Quick to swing and reasonably sturdy.
+§9Cropkeeper Hoe,diamond_hoe,3000,RARE,1,900,5,Farming,30,,Balanced for tending crops all day. Swift swings but gentle damage.
+§9Harvest Warden,netherite_hoe,5000,RARE,1,1200,5,Farming,40,,Reinforced to guard the harvest. Rapid swings and solid durability.
+§dGolden Furrow,diamond_hoe,8000,EPIC,2,1600,5,Farming,50,,Golden edge turns soil swiftly. Light hits and lasting reliability.
+§dBountiful Planter,netherite_hoe,12000,EPIC,2,2000,5,Farming,60,,Made to plant entire fields. Very fast and built to last.
+§dOrchard Keeper,netherite_hoe,18000,EPIC,2,2400,5,Farming,70,,Trimmed countless orchards. Nimble swings and long lasting craftsmanship.
+§6Everbloom Hoe,netherite_hoe,25000,LEGENDARY,2,3000,5,Farming,80,,Blooms again after every harvest. Fast swings and remarkable endurance.
+§6World Harvester,netherite_hoe,35000,LEGENDARY,2,4000,5,Farming,90,,Reaps whole fields in moments. Blinding speed and almost unbreakable.
+§6Eternal Harvest Hoe,netherite_hoe,50000,LEGENDARY,3,5000,5,Farming,100,,Said to harvest endlessly. Top speed and the strongest hoe ever made.
+§aTrailwatch Bow,bow,500,COMMON,3,300,2,Hunting,10,,Plain wood bow for tracking trails. Accurate but slow and fragile.
+§aPathfinder Crossbow,crossbow,1500,COMMON,3,600,2,Hunting,20,,Mechanical trigger for steady aim. Slow to reload and moderately sturdy.
+§9Beasttracker Blade,iron_sword,3000,RARE,4,900,4,Hunting,30,,Light iron blade for close hunts. Quick and sharp with modest durability.
+§9Wildstalker Bow,bow,5000,RARE,3,1200,2,Hunting,40,,Seasoned yew limbs endure long treks. Steady aim but slow draw.
+§dApex Crossbow,crossbow,8000,EPIC,4,1600,2,Hunting,50,,Winched for deadly force. Heavy bolts slow reload and good durability.
+§dDragonfang Sword,diamond_sword,12000,EPIC,5,2000,4,Hunting,60,,Carved from dragon fang for lethal sharpness. Fast strikes and strong endurance.
+§dDreadhunter Blade,netherite_sword,18000,EPIC,5,2400,4,Hunting,70,,Dread-forged against the realm's nightmares. Swift lethal and very durable.
+§6Ender Tracker Bow,bow,25000,LEGENDARY,4,3000,2,Hunting,80,,Tuned to hit foes across dimensions. Powerful and tough but slow to draw.
+§6Wardenbreaker Sword,netherite_sword,35000,LEGENDARY,5,4000,4,Hunting,90,,Made to defy wardens. Crushing damage and nearly unbreakable steel.
+§6Legend of the Hunt,netherite_sword,50000,LEGENDARY,5,5000,4,Hunting,100,,Whispered about in every camp. Perfect balance of power speed and endurance.
+§aGroundbreaker Shovel,stone_shovel,500,COMMON,3,300,3,Excavating,10,,Stone blade for a first dig. Decent bite but dulls quickly.
+§aDune Walker Spade,iron_shovel,1500,COMMON,3,600,3,Excavating,20,,Light spade for sand and gravel. Even pace and fair endurance.
+§9Clay Delver,diamond_shovel,3000,RARE,3,900,3,Excavating,30,,Smooth diamond edge scoops clay cleanly. Average speed and modest durability.
+§9Gravel Prospector,netherite_shovel,5000,RARE,3,1200,3,Excavating,40,,Reinforced against gravel and rock. Steady rhythm and solid wear resistance.
+§dSoul Sand Spade,diamond_shovel,8000,EPIC,4,1600,3,Excavating,50,,Draws strength from soul sand. Hits harder with reliable durability.
+§dTerracotta Breaker,netherite_shovel,12000,EPIC,4,2000,3,Excavating,60,,Heavy head for breaking broad ground. Strong and long lasting.
+§dRuin Prospector,brush,18000,EPIC,2,2400,3,Excavating,70,,Delicate brush for buried ruins. Gentle touch but surprisingly durable.
+§6Strata Shaper,netherite_shovel,25000,LEGENDARY,4,3000,3,Excavating,80,,Cuts every layer of earth evenly. Strong and tough with steady speed.
+§6Deep Digger,netherite_shovel,35000,LEGENDARY,4,4000,3,Excavating,90,,Dug the deepest shafts ever recorded. Strong and nearly unbreakable.
+§6Earthshaper Spade,netherite_shovel,50000,LEGENDARY,5,5000,3,Excavating,100,,Moves earth like water. Immense power and endless durability.

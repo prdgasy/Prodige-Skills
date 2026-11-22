@@ -53,55 +53,55 @@ item replace entity @s container.25 with gray_stained_glass_pane[lore=[],custom_
 # prodige_skills::abilitiesexcavating::fill -> (26)
 item replace entity @s container.26 with gray_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/if
-data modify storage __sandstone:variable anon_cnoL-r-9_1885 set value '§a§lOn'
-execute unless entity @p[tag=prodige_skills.Excavating.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1885 set value '§c§lOff'
-# prodige_skills::abilitiesexcavating::fill -> §d§lAbility Perks §8• [$(macro_arg_2489)§8](4)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2489 set from storage __sandstone:variable anon_cnoL-r-9_1885
+data modify storage __sandstone:variable anon_cnoL-r-9_1883 set value '§a§lOn'
+execute unless entity @p[tag=prodige_skills.Excavating.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1883 set value '§c§lOff'
+# prodige_skills::abilitiesexcavating::fill -> §d§lAbility Perks §8• [$(macro_arg_2485)§8](4)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2485 set from storage __sandstone:variable anon_cnoL-r-9_1883
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro4 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating
-scoreboard players operation anon_cnoL-r-9_5942 __sandstone = @p prodige_skills.excavating.xp
-scoreboard players set anon_cnoL-r-9_5943 __sandstone 1000
-scoreboard players operation anon_cnoL-r-9_5942 __sandstone *= anon_cnoL-r-9_5943 __sandstone
-scoreboard players operation anon_cnoL-r-9_5942 __sandstone /= 10 __sandstone
-scoreboard players operation var_984 prodige_skills.prodigelib.float = anon_cnoL-r-9_5942 __sandstone
-scoreboard players operation anon_cnoL-r-9_5944 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_5944 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_5945 __sandstone = var_984 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_5945 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_5945 __sandstone /= anon_cnoL-r-9_5944 __sandstone
-scoreboard players operation var_985 prodige_skills.prodigelib.float = anon_cnoL-r-9_5945 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_1886 set value '§f§lProgress:'
+scoreboard players operation anon_cnoL-r-9_5936 __sandstone = @p prodige_skills.excavating.xp
+scoreboard players set anon_cnoL-r-9_5937 __sandstone 1000
+scoreboard players operation anon_cnoL-r-9_5936 __sandstone *= anon_cnoL-r-9_5937 __sandstone
+scoreboard players operation anon_cnoL-r-9_5936 __sandstone /= 10 __sandstone
+scoreboard players operation var_982 prodige_skills.prodigelib.float = anon_cnoL-r-9_5936 __sandstone
+scoreboard players operation anon_cnoL-r-9_5938 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_5938 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_5939 __sandstone = var_982 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_5939 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_5939 __sandstone /= anon_cnoL-r-9_5938 __sandstone
+scoreboard players operation var_983 prodige_skills.prodigelib.float = anon_cnoL-r-9_5939 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1884 set value '§f§lProgress:'
+data modify storage __sandstone:variable anon_cnoL-r-9_1885 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_1886 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_1887 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_1888 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_1889 set value ''
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/if5
-execute store result storage __sandstone:variable anon_cnoL-r-9_1897.param_0 int 1 run scoreboard players get @p prodige_skills.excavating.level
-function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1897
+execute store result storage __sandstone:variable anon_cnoL-r-9_1895.param_0 int 1 run scoreboard players get @p prodige_skills.excavating.level
+function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1895
 data modify storage prodige_skills:prodigelib RomanNumbers.out_145 set from storage prodige_skills:prodigelib RomanNumbers.temp
-scoreboard players operation anon_cnoL-r-9_5962 __sandstone = @p prodige_skills.excavating.totalXp
+scoreboard players operation anon_cnoL-r-9_5956 __sandstone = @p prodige_skills.excavating.totalXp
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/if10
-scoreboard players operation anon_cnoL-r-9_5963 __sandstone = anon_cnoL-r-9_5962 __sandstone
-scoreboard players operation anon_cnoL-r-9_5963 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5963 __sandstone
-scoreboard players operation anon_cnoL-r-9_5964 __sandstone = anon_cnoL-r-9_5962 __sandstone
-scoreboard players operation anon_cnoL-r-9_5964 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5964 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_1898.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_1898.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_1898.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1898
+scoreboard players operation anon_cnoL-r-9_5957 __sandstone = anon_cnoL-r-9_5956 __sandstone
+scoreboard players operation anon_cnoL-r-9_5957 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_5957 __sandstone
+scoreboard players operation anon_cnoL-r-9_5958 __sandstone = anon_cnoL-r-9_5956 __sandstone
+scoreboard players operation anon_cnoL-r-9_5958 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_5958 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_1896.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_1896.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_1896.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1896
 data modify storage prodige_skills:prodigelib Float.excavating.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesexcavating::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2490 set from storage __sandstone:variable anon_cnoL-r-9_1886
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2491 set from storage prodige_skills:prodigelib RomanNumbers.out_145
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2492 set from storage __sandstone:variable anon_cnoL-r-9_1887
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2493 set from storage __sandstone:variable anon_cnoL-r-9_1888
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2494 set from storage __sandstone:variable anon_cnoL-r-9_1889
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2486 set from storage __sandstone:variable anon_cnoL-r-9_1884
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2487 set from storage prodige_skills:prodigelib RomanNumbers.out_145
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2488 set from storage __sandstone:variable anon_cnoL-r-9_1885
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2489 set from storage __sandstone:variable anon_cnoL-r-9_1886
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2490 set from storage __sandstone:variable anon_cnoL-r-9_1887
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro5 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating
 # prodige_skills::abilitiesexcavating::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Excavating.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::abilitiesexcavating::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2495 set from storage prodige_skills:prodigelib Float.excavating.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2496 int 1 run scoreboard players get @p prodige_skills.excavating.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2491 set from storage prodige_skills:prodigelib Float.excavating.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2492 int 1 run scoreboard players get @p prodige_skills.excavating.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro6 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating
 # prodige_skills::abilitiesexcavating::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Excavating.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

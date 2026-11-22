@@ -1,2 +1,2 @@
-execute store result storage __sandstone:variable anon_cnoL-r-9_3477.env_0 int 1 run scoreboard players get @s prodige_skills.title.filter
-return run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch31/dispatch with storage __sandstone:variable anon_cnoL-r-9_3477
+execute store result storage __sandstone:variable anon_cnoL-r-9_3475.env_0 int 1 run scoreboard players get @s prodige_skills.title.filter
+return run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch31/dispatch with storage __sandstone:variable anon_cnoL-r-9_3475

@@ -1,23 +1,59 @@
+# prodige_skills::boosters::fill -> (0)
+item replace entity @s container.0 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (1)
+item replace entity @s container.1 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (2)
+item replace entity @s container.2 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (3)
+item replace entity @s container.3 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (4)
+item replace entity @s container.4 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (5)
+item replace entity @s container.5 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (6)
+item replace entity @s container.6 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (7)
+item replace entity @s container.7 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (8)
+item replace entity @s container.8 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (9)
+item replace entity @s container.9 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (10)
+item replace entity @s container.10 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (11)
+item replace entity @s container.11 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (12)
+item replace entity @s container.12 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (13)
+item replace entity @s container.13 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (14)
+item replace entity @s container.14 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (15)
+item replace entity @s container.15 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (16)
+item replace entity @s container.16 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> (17)
+item replace entity @s container.17 with purple_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (18)
-item replace entity @s container.18 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.18 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (19)
-item replace entity @s container.19 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.19 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (20)
-item replace entity @s container.20 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.20 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (21)
-item replace entity @s container.21 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.21 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (22)
-item replace entity @s container.22 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.22 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (23)
-item replace entity @s container.23 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.23 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (24)
-item replace entity @s container.24 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.24 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (25)
-item replace entity @s container.25 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.25 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> (26)
-item replace entity @s container.26 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::boosters::fill -> §b§lBoosters(12)
-item replace entity @s container.12 with experience_bottle[custom_name={text: "§b§lBoosters", italic: false, color: "white"},lore=[{text: "§b§l┃ Accelerate Progress", italic: false, color: "white"},{text: "§b┃ §7Temporarily multiply XP or points", italic: false, color: "white"},{text: "§b┃ §7from skill actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view the boosters.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.26 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::boosters::fill -> §b§lBoosters(21)
+item replace entity @s container.21 with experience_bottle[custom_name={text: "§b§lBoosters", italic: false, color: "white"},lore=[{text: "§b§l┃ Accelerate Progress", italic: false, color: "white"},{text: "§b┃ §7Temporarily multiply XP or points", italic: false, color: "white"},{text: "§b┃ §7from skill actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view the boosters.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> §b§l2x Xp Booster(10)
 item replace entity @s container.10 with experience_bottle[custom_name={text: "§b§l2x Xp Booster", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§b§l┃ Xp Boost", italic: false, color: "white"},{text: "§e┃ §7Earn 2 times more skill", italic: false, color: "white"},{text: "§e┃ §7XP from your actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§8• §7Duration: §d15 minutes", italic: false, color: "white"},{text: "§8• §7Price: §6500 Points", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to purchase!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> §e§l2x Pts Booster(14)
@@ -32,7 +68,7 @@ item replace entity @s container.12 with experience_bottle[custom_name={text: "�
 item replace entity @s container.16 with gold_ingot[custom_name={text: "§e§l4x Pts Booster", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§e§l┃ Pts Boost", italic: false, color: "white"},{text: "§e┃ §7Earn 4 times more skill", italic: false, color: "white"},{text: "§e┃ §7points from your actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§8• §7Duration: §d15 minutes", italic: false, color: "white"},{text: "§8• §7Price: §62000 Points", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to purchase!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> §6§lHow Boosters Work(22)
 item replace entity @s container.22 with knowledge_book[custom_name={text: "§6§lHow Boosters Work", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§e§l┃ Activate a Booster", italic: false, color: "white"},{text: "§e┃ §7Purchase a booster to receive", italic: false, color: "white"},{text: "§e┃ §7its activation item.", italic: false, color: "white"},{text: "§e┃ §7Hold the item and right-click", italic: false, color: "white"},{text: "§e┃ §7to use it.", italic: false, color: "white"},{text: "§e┃ §7The multiplier activates for the", italic: false, color: "white"},{text: "§e┃ §7duration shown on the item.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§7Only one booster of each type can be active at a time.", italic: false, color: "white"},{text: "§7XP and Point boosters can be active together.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eUse your boosters wisely!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::boosters::fill -> §aShop §8• $(macro_arg_6)(19)
+# prodige_skills::boosters::fill -> §aShop §8• §e$(macro_arg_6) Pts(19)
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_6 int 1 run scoreboard players get @p prodige_skills.player.pts
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_7 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/29/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.boosters

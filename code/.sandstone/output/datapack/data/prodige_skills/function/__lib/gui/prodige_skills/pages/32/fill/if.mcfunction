@@ -1,5 +1,5 @@
 execute unless entity @p[tag=prodige_skills.player.gotFirstTask] run return run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/0_if/return_run
-scoreboard players set anon_cnoL-r-9_6602 __sandstone 11
+scoreboard players set anon_cnoL-r-9_6596 __sandstone 11
 execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if
 execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check2 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if2
 execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check3 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if3

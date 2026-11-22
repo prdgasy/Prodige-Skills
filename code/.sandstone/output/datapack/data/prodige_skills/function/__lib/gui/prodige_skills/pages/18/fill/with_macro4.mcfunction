@@ -1,2 +1,2 @@
-# prodige_skills::abilitiesfarming::fill::macro -> §d§lAbility Perks §8• [$(macro_arg_2381)§8](4)
-$item replace entity @s container.4 with lever[custom_name={text: "§d§lAbility Perks §8• [$(macro_arg_2381)§8]", italic: false, color: "white"},lore=[{text: "§7Toggle your ability perks and buffs.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to toggle!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::abilitiesfarming::fill::macro -> §d§lAbility Perks §8• [$(macro_arg_2377)§8](4)
+$item replace entity @s container.4 with lever[custom_name={text: "§d§lAbility Perks §8• [$(macro_arg_2377)§8]", italic: false, color: "white"},lore=[{text: "§7Toggle your ability perks and buffs.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to toggle!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §aGreen Thumb$(macro_arg_3658)($(macro_arg_3657))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3657)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro76/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §aGreen Thumb$(macro_arg_3654)($(macro_arg_3653))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3653)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro76/execute_unless

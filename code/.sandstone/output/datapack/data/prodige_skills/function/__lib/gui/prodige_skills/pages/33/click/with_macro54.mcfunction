@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dSoul Sand Spade §8× §e$(macro_arg_4472)($(macro_arg_4471))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4471)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro54/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dSoul Sand Spade §8× §e$(macro_arg_4468)($(macro_arg_4467))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4467)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro54/execute_unless

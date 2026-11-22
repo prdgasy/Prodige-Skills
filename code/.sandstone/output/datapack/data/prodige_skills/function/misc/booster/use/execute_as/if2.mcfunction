@@ -1,0 +1,2 @@
+say used
+execute if items entity @s weapon.mainhand warped_fungus_on_a_stick[minecraft:custom_data~{prodige_skills:{booster:'pts_2'}}] run function prodige_skills:misc/booster/use/execute_as/if2/execute_if/if

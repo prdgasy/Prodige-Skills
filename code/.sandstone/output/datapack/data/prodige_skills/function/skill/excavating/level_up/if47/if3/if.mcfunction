@@ -1,2 +1,2 @@
-scoreboard players set anon_cnoL-r-9_17875 __sandstone 420
-scoreboard players operation @p prodige_skills.farming.xp += anon_cnoL-r-9_17875 __sandstone
+scoreboard players set anon_cnoL-r-9_17869 __sandstone 620
+scoreboard players operation @p prodige_skills.farming.xp += anon_cnoL-r-9_17869 __sandstone

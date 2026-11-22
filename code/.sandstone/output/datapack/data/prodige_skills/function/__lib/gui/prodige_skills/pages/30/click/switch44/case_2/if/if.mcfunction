@@ -1,11 +1,11 @@
-scoreboard players operation anon_cnoL-r-9_6575 __sandstone = anon_cnoL-r-9_6316 __sandstone
-scoreboard players operation anon_cnoL-r-9_6575 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_3071 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_3072 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_3073 set value 'charcoal'
+scoreboard players operation anon_cnoL-r-9_6569 __sandstone = anon_cnoL-r-9_6310 __sandstone
+scoreboard players operation anon_cnoL-r-9_6569 __sandstone %= 18 __sandstone
+data modify storage __sandstone:variable anon_cnoL-r-9_3069 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3070 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_3071 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.new_title_earthshaper] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch44/case_2/if/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.new_title_earthshaper] run data modify storage __sandstone:variable anon_cnoL-r-9_3072 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_3074 set value '§8You cannot buy this.'
-# prodige_skills::titles::click -> §dNew Title: §dEarthshaper$(macro_arg_3923)($(macro_arg_3922))
+execute if entity @p[tag=prodige_skills.title.equipped.new_title_earthshaper] run data modify storage __sandstone:variable anon_cnoL-r-9_3070 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3072 set value '§8You cannot buy this.'
+# prodige_skills::titles::click -> §dNew Title: §dEarthshaper$(macro_arg_3919)($(macro_arg_3918))
 execute if score anon_cnoL-r-9_32 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch44/case_2/if/if/if3
-scoreboard players add anon_cnoL-r-9_6317 __sandstone 1
+scoreboard players add anon_cnoL-r-9_6311 __sandstone 1

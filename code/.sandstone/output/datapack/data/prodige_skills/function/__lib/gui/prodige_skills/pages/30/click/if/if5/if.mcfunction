@@ -1,2 +1,2 @@
-execute unless score @s prodige_skills.menu.shop.titles.index = anon_cnoL-r-9_6601 __sandstone run scoreboard players add @s prodige_skills.menu.shop.titles.index 1
+execute unless score @s prodige_skills.menu.shop.titles.index = anon_cnoL-r-9_6595 __sandstone run scoreboard players add @s prodige_skills.menu.shop.titles.index 1
 scoreboard players set anon_cnoL-r-9_32 __sandstone 1

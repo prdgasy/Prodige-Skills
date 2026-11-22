@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dObsidian Breaker §8× §e$(macro_arg_4358)($(macro_arg_4357))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4357)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro16/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dObsidian Breaker §8× §e$(macro_arg_4354)($(macro_arg_4353))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4353)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro16/execute_unless

@@ -1,3 +1,3 @@
-execute store result storage __sandstone:variable anon_cnoL-r-9_4.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.multiplier
-execute store result storage __sandstone:variable anon_cnoL-r-9_4.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.timer
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_4
+execute store result storage __sandstone:variable anon_cnoL-r-9_5.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Pts.multiplier
+execute store result storage __sandstone:variable anon_cnoL-r-9_5.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Pts.timer
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/__with_macro3 with storage __sandstone:variable anon_cnoL-r-9_5

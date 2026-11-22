@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §2Wildwood Elder$(macro_arg_3488)($(macro_arg_3487))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3487)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro42/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §2Wildwood Elder$(macro_arg_3484)($(macro_arg_3483))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3483)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro42/execute_unless

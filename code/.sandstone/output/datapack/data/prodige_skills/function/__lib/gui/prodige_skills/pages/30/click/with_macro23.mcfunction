@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §8Cave Cartographer$(macro_arg_3393)($(macro_arg_3392))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3392)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro23/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §8Cave Cartographer$(macro_arg_3389)($(macro_arg_3388))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3388)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro23/execute_unless

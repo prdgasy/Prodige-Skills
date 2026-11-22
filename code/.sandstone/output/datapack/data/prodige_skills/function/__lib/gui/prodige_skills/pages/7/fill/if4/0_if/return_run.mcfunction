@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_432 set value '§f§lProgress:'
-data modify storage __sandstone:variable anon_cnoL-r-9_433 set value ' §8• §aMaximum level reached.'
+data modify storage __sandstone:variable anon_cnoL-r-9_430 set value '§f§lProgress:'
+data modify storage __sandstone:variable anon_cnoL-r-9_431 set value ' §8• §aMaximum level reached.'
