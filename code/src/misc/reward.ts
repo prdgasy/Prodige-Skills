@@ -170,26 +170,25 @@ export class Reward {
     }
   }
 
-  private static noticeComponents(rewards: Reward[]): string {
-    return `[${Reward.join(rewards)
+  public static loreComponents(rewards: Reward[]): string {
+    const bullet = ' §8• ';
+
+    return Reward.join(rewards)
+      .map(text => JSON.stringify({
+        text: `${bullet}${text.slice(bullet.length)}`,
+        italic: false,
+        color: 'white',
+      }))
+      .join(',');
+  }
+
+  public static noticeComponents(rewards: Reward[]): string {
+    return Reward.join(rewards)
       .map(text => JSON.stringify({
         text: `${text}\n`,
         italic: false,
         color: 'white',
       }))
-      .join(',')}]`;
-  }
-  private static loreComponents(rewards: Reward[]): string {
-    const bullet = ' §8• ';
-
-    const components = Reward.join(rewards).map(text =>
-      JSON.stringify({
-        text: `${bullet}${text.slice(bullet.length)}`,
-        italic: false,
-        color: 'white',
-      })
-    );
-
-    return `[${components.join(',')}]`;
+      .join(',');
   }
 }
