@@ -165,8 +165,8 @@ export class Main {
         raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
         raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
         raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
-        raw(`$execute unless score @p prodige_skills:$(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
-        raw(`$execute unless score @p prodige_skills:$(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).rewardLore`);
+        raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
+        raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).rewardLore`);
       });
 
       const render = MCFunction(`menu/main/skill/${skill.id}/render`, () => {
