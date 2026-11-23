@@ -165,8 +165,8 @@ export class Main {
         raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
         raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
         raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
-        raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
-        raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).rewardLore`);
+        raw(`$execute unless score @p prodige_skills:$(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
+        raw(`$execute unless score @p prodige_skills:$(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).rewardLore`);
       });
 
       const render = MCFunction(`menu/main/skill/${skill.id}/render`, () => {
@@ -198,9 +198,8 @@ export class Main {
           component('§eClick to view!'),
         ].join(',');
 
-
-        raw(`$execute if score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
-        raw(`$execute unless score @p $(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+        raw(`$execute if score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${maxLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
+        raw(`$execute unless score @p prodige_skills.$(skill).level matches 100 run item replace entity @s container.${s} with ${skill.item}[custom_name=${component(`§d$(skillName) $(roman)`)},lore=[${progressLore}],!attribute_modifiers,custom_data={${Gui.ns}:1b}] 1`);
       }, { onConflict: 'ignore' });
 
       p.add({
@@ -217,7 +216,6 @@ export class Main {
           args.select('bar').set(new Bar(progress.toScore()).toData());
           args.select('xp').set(skill.xp.show());
           args.select('goal').set(skill.goal);
-          comment("==================== GENERATED");
 
           functionCmd(set_data, 'with', args);
           functionCmd(render, 'with', args);
