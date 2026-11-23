@@ -213,7 +213,8 @@ data modify storage prodige_skills:prodigelib Float.mining.xp.out set from stora
 data modify storage prodige_skills:main_skill_args args.xp set from storage prodige_skills:prodigelib Float.mining.xp.out
 execute store result storage prodige_skills:main_skill_args args.goal int 1 run scoreboard players get @p prodige_skills.mining.goal
 # ==================== GENERATED
-function prodige_skills:menu/main/skill/mining with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/mining/set_data with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/mining/render with storage prodige_skills:main_skill_args args
 data modify storage prodige_skills:main_skill_args args set value {}
 data modify storage prodige_skills:main_skill_args args.skill set value 'foraging'
 data modify storage prodige_skills:main_skill_args args.skillName set value 'Foraging'
@@ -274,7 +275,8 @@ data modify storage prodige_skills:prodigelib Float.foraging.xp.out set from sto
 data modify storage prodige_skills:main_skill_args args.xp set from storage prodige_skills:prodigelib Float.foraging.xp.out
 execute store result storage prodige_skills:main_skill_args args.goal int 1 run scoreboard players get @p prodige_skills.foraging.goal
 # ==================== GENERATED
-function prodige_skills:menu/main/skill/foraging with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/foraging/set_data with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/foraging/render with storage prodige_skills:main_skill_args args
 data modify storage prodige_skills:main_skill_args args set value {}
 data modify storage prodige_skills:main_skill_args args.skill set value 'farming'
 data modify storage prodige_skills:main_skill_args args.skillName set value 'Farming'
@@ -335,7 +337,8 @@ data modify storage prodige_skills:prodigelib Float.farming.xp.out set from stor
 data modify storage prodige_skills:main_skill_args args.xp set from storage prodige_skills:prodigelib Float.farming.xp.out
 execute store result storage prodige_skills:main_skill_args args.goal int 1 run scoreboard players get @p prodige_skills.farming.goal
 # ==================== GENERATED
-function prodige_skills:menu/main/skill/farming with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/farming/set_data with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/farming/render with storage prodige_skills:main_skill_args args
 data modify storage prodige_skills:main_skill_args args set value {}
 data modify storage prodige_skills:main_skill_args args.skill set value 'hunting'
 data modify storage prodige_skills:main_skill_args args.skillName set value 'Hunting'
@@ -396,7 +399,8 @@ data modify storage prodige_skills:prodigelib Float.hunting.xp.out set from stor
 data modify storage prodige_skills:main_skill_args args.xp set from storage prodige_skills:prodigelib Float.hunting.xp.out
 execute store result storage prodige_skills:main_skill_args args.goal int 1 run scoreboard players get @p prodige_skills.hunting.goal
 # ==================== GENERATED
-function prodige_skills:menu/main/skill/hunting with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/hunting/set_data with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/hunting/render with storage prodige_skills:main_skill_args args
 data modify storage prodige_skills:main_skill_args args set value {}
 data modify storage prodige_skills:main_skill_args args.skill set value 'excavating'
 data modify storage prodige_skills:main_skill_args args.skillName set value 'Excavating'
@@ -457,4 +461,5 @@ data modify storage prodige_skills:prodigelib Float.excavating.xp.out set from s
 data modify storage prodige_skills:main_skill_args args.xp set from storage prodige_skills:prodigelib Float.excavating.xp.out
 execute store result storage prodige_skills:main_skill_args args.goal int 1 run scoreboard players get @p prodige_skills.excavating.goal
 # ==================== GENERATED
-function prodige_skills:menu/main/skill/excavating with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/excavating/set_data with storage prodige_skills:main_skill_args args
+function prodige_skills:menu/main/skill/excavating/render with storage prodige_skills:main_skill_args args

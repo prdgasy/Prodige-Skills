@@ -162,13 +162,15 @@ export class Main {
         g.switch(Progress.getName(skill));
       };
 
-      const render = MCFunction(`menu/main/skill/${skill.id}`, () => {
+      const set_data = MCFunction(`menu/main/skill/${skill.id}/set_data`, () => {
         raw(`$data modify storage ${argsStorage} args.roman set from storage ${rewardStorage} $(skill).$(level).roman`);
         raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
         raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
         raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
         raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
+      });
 
+      const render = MCFunction(`menu/main/skill/${skill.id}/render`, () => {
         const description = Text.wrap(skill.description).map(component);
         const baseLore = [
           component(`§9${skill.name} $(level)`),
@@ -218,6 +220,7 @@ export class Main {
           args.select('goal').set(skill.goal);
           comment("==================== GENERATED");
 
+          functionCmd(set_data, 'with', args);
           functionCmd(render, 'with', args);
         },
         click: () => {
