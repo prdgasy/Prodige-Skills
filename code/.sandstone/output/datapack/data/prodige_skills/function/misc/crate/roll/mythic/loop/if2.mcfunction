@@ -5,5 +5,5 @@ execute if score anon_cnoL-r-9_18919 __sandstone matches 1 run function prodige_
 execute if score anon_cnoL-r-9_18919 __sandstone matches 2 run function prodige_skills:misc/crate/roll/mythic/loop/if2/if3
 execute if score anon_cnoL-r-9_18919 __sandstone matches 3 run function prodige_skills:misc/crate/roll/mythic/loop/if2/if4
 execute if score anon_cnoL-r-9_18919 __sandstone matches 4 run function prodige_skills:misc/crate/roll/mythic/loop/if2/if5
-tellraw @a [{text: " \u00A78\u2022 §3823 Xp in a random Skill"}]
+tellraw @a [{text: " \u00A78\u2022 §31072 Xp in a random Skill"}]
 scoreboard players set anon_cnoL-r-9_18918 __sandstone 1

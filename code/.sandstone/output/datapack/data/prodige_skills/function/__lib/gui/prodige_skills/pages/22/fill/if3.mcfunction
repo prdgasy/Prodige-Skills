@@ -1,2 +1,2 @@
-# prodige_skills::common_rewards::fill -> §392 Xp in a random Skill(1)
-item replace entity @s container.1 with experience_bottle[custom_name={text: "§392 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eReward chance: §717.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::common_rewards::fill -> §347 Xp in a random Skill(1)
+item replace entity @s container.1 with experience_bottle[custom_name={text: "§347 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eReward chance: §717.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
