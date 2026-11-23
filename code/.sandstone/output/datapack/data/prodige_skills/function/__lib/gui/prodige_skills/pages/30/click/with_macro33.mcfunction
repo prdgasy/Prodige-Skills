@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §aSapling$(macro_arg_3439)($(macro_arg_3438))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3438)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro33/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §aSapling$(macro_arg_3465)($(macro_arg_3464))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3464)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro33/execute_unless

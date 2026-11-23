@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §dEarthshaper$(macro_arg_3919)($(macro_arg_3918))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3918)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro129/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §dEarthshaper$(macro_arg_3945)($(macro_arg_3944))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3944)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro129/execute_unless

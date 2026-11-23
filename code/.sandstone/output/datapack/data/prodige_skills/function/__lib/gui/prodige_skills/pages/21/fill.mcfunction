@@ -64,7 +64,13 @@ item replace entity @s container.14 with ender_chest[custom_name={text: "§5Crat
 item replace entity @s container.16 with name_tag[custom_name={text: "§a§lTitles", italic: false, color: "white"},lore=[{text: "§a§l┃ Make Your Mark", italic: false, color: "white"},{text: "§a┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§a┃ §7or purchase them here.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to browse the titles.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::shop::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::shop::fill -> §aShop §8• §e$(macro_arg_0) Pts(19)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_0 int 1 run scoreboard players get @p prodige_skills.player.pts
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_1 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage __sandstone:variable anon_cnoL-r-9_1941 set value '§7No Xp Booster active'
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/fill/if
+data modify storage __sandstone:variable anon_cnoL-r-9_1943 set value '§7No Pts Booster active'
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/fill/if2
+# prodige_skills::shop::fill -> §aShop §8• §e$(macro_arg_2510) Pts(21)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2510 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2511 set from storage __sandstone:variable anon_cnoL-r-9_1941
+data modify storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2512 set from storage __sandstone:variable anon_cnoL-r-9_1943
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2513 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/21/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.shop

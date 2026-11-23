@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §2Forest Guardian$(macro_arg_3444)($(macro_arg_3443))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3443)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro34/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §2Forest Guardian$(macro_arg_3470)($(macro_arg_3469))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3469)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro34/execute_unless

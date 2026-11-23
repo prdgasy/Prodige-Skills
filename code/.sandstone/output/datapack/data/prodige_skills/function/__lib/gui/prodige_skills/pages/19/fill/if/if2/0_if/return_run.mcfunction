@@ -12,6 +12,6 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1800.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1800
 data modify storage prodige_skills:prodigelib Float.Hunting.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitieshunting::fill -> Hunter's Focus §8[§c§lX§8](13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2417 set from storage __sandstone:variable anon_cnoL-r-9_1799
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2418 set from storage prodige_skills:prodigelib Float.Hunting.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2407 set from storage __sandstone:variable anon_cnoL-r-9_1799
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2408 set from storage prodige_skills:prodigelib Float.Hunting.ability.buff.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/19/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting

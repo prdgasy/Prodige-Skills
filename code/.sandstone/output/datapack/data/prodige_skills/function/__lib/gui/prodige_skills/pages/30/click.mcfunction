@@ -50,5 +50,9 @@ function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch46
 function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch47
 function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch48
 function prodige_skills:__lib/gui/prodige_skills/pages/30/click/if
+data modify storage __sandstone:variable anon_cnoL-r-9_3161 set value '§7No Xp Booster active'
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/if7
+data modify storage __sandstone:variable anon_cnoL-r-9_3163 set value '§7No Pts Booster active'
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/if8
 # prodige_skills::titles::click -> §cBack(18)
-execute if score anon_cnoL-r-9_32 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/if7/if
+execute if score anon_cnoL-r-9_32 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/if9/if

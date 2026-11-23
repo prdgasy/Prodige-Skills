@@ -33,11 +33,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_411.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_411.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_411
 data modify storage prodige_skills:prodigelib Float.var_210.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Stripped Crimson Hyphae §8| §b10 Xp §8• §e8 Pts(0)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_488 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedCrimsonHyphae
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_489 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedCrimsonHyphae.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_490 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedCrimsonHyphae.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_491 set from storage prodige_skills:prodigelib Float.var_210.out
+# prodige_skills::actionsforaging::fill -> §6Stripped Crimson Hyphae §8| §310 Xp §8• §e8 Pts(0)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_478 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedCrimsonHyphae
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_479 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedCrimsonHyphae.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_480 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedCrimsonHyphae.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_481 set from storage prodige_skills:prodigelib Float.var_210.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro37 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1239 __sandstone = @p prodige_skills.Foraging.total_event.WarpedHyphae.xp
 scoreboard players set anon_cnoL-r-9_1240 __sandstone 1000
@@ -74,11 +74,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_413.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_413.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_413
 data modify storage prodige_skills:prodigelib Float.var_212.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Warped Hyphae §8| §b10 Xp §8• §e8 Pts(1)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_492 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.WarpedHyphae
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_493 set from storage prodige_skills:prodigelib Float.Foraging.total_event.WarpedHyphae.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_494 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.WarpedHyphae.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_495 set from storage prodige_skills:prodigelib Float.var_212.out
+# prodige_skills::actionsforaging::fill -> §6Warped Hyphae §8| §310 Xp §8• §e8 Pts(1)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_482 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.WarpedHyphae
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_483 set from storage prodige_skills:prodigelib Float.Foraging.total_event.WarpedHyphae.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_484 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.WarpedHyphae.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_485 set from storage prodige_skills:prodigelib Float.var_212.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro38 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1248 __sandstone = @p prodige_skills.Foraging.total_event.StrippedWarpedStem.xp
 scoreboard players set anon_cnoL-r-9_1249 __sandstone 1000
@@ -115,11 +115,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_415.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_415.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_415
 data modify storage prodige_skills:prodigelib Float.var_214.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Stripped Warped Stem §8| §b10 Xp §8• §e8 Pts(2)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_496 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedStem
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_497 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedWarpedStem.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_498 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedStem.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_499 set from storage prodige_skills:prodigelib Float.var_214.out
+# prodige_skills::actionsforaging::fill -> §6Stripped Warped Stem §8| §310 Xp §8• §e8 Pts(2)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_486 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedStem
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_487 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedWarpedStem.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_488 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedStem.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_489 set from storage prodige_skills:prodigelib Float.var_214.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro39 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1257 __sandstone = @p prodige_skills.Foraging.total_event.StrippedWarpedHyphae.xp
 scoreboard players set anon_cnoL-r-9_1258 __sandstone 1000
@@ -156,11 +156,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_417.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_417.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_417
 data modify storage prodige_skills:prodigelib Float.var_216.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Stripped Warped Hyphae §8| §b10 Xp §8• §e8 Pts(3)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_500 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedHyphae
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_501 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedWarpedHyphae.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_502 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedHyphae.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_503 set from storage prodige_skills:prodigelib Float.var_216.out
+# prodige_skills::actionsforaging::fill -> §6Stripped Warped Hyphae §8| §310 Xp §8• §e8 Pts(3)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_490 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedHyphae
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_491 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedWarpedHyphae.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_492 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedWarpedHyphae.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_493 set from storage prodige_skills:prodigelib Float.var_216.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro40 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1266 __sandstone = @p prodige_skills.Foraging.total_event.PaleOakLog.xp
 scoreboard players set anon_cnoL-r-9_1267 __sandstone 1000
@@ -197,11 +197,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_419.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_419.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_419
 data modify storage prodige_skills:prodigelib Float.var_218.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Pale Oak Log §8| §b5 Xp §8• §e6 Pts(4)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_504 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakLog
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_505 set from storage prodige_skills:prodigelib Float.Foraging.total_event.PaleOakLog.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_506 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakLog.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_507 set from storage prodige_skills:prodigelib Float.var_218.out
+# prodige_skills::actionsforaging::fill -> §6Pale Oak Log §8| §35 Xp §8• §e6 Pts(4)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_494 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakLog
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_495 set from storage prodige_skills:prodigelib Float.Foraging.total_event.PaleOakLog.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_496 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakLog.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_497 set from storage prodige_skills:prodigelib Float.var_218.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro41 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1275 __sandstone = @p prodige_skills.Foraging.total_event.PaleOakWood.xp
 scoreboard players set anon_cnoL-r-9_1276 __sandstone 1000
@@ -238,11 +238,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_421.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_421.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_421
 data modify storage prodige_skills:prodigelib Float.var_220.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Pale Oak Wood §8| §b5 Xp §8• §e6 Pts(5)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_508 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakWood
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_509 set from storage prodige_skills:prodigelib Float.Foraging.total_event.PaleOakWood.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_510 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakWood.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_511 set from storage prodige_skills:prodigelib Float.var_220.out
+# prodige_skills::actionsforaging::fill -> §6Pale Oak Wood §8| §35 Xp §8• §e6 Pts(5)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_498 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakWood
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_499 set from storage prodige_skills:prodigelib Float.Foraging.total_event.PaleOakWood.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_500 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.PaleOakWood.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_501 set from storage prodige_skills:prodigelib Float.var_220.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro42 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1284 __sandstone = @p prodige_skills.Foraging.total_event.StrippedPaleOakLog.xp
 scoreboard players set anon_cnoL-r-9_1285 __sandstone 1000
@@ -279,11 +279,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_423.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_423.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_423
 data modify storage prodige_skills:prodigelib Float.var_222.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Stripped Pale Oak Log §8| §b5 Xp §8• §e6 Pts(6)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_512 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakLog
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_513 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedPaleOakLog.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_514 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakLog.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_515 set from storage prodige_skills:prodigelib Float.var_222.out
+# prodige_skills::actionsforaging::fill -> §6Stripped Pale Oak Log §8| §35 Xp §8• §e6 Pts(6)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_502 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakLog
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_503 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedPaleOakLog.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_504 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakLog.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_505 set from storage prodige_skills:prodigelib Float.var_222.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro43 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1293 __sandstone = @p prodige_skills.Foraging.total_event.StrippedPaleOakWood.xp
 scoreboard players set anon_cnoL-r-9_1294 __sandstone 1000
@@ -320,11 +320,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_425.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_425.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_425
 data modify storage prodige_skills:prodigelib Float.var_224.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Stripped Pale Oak Wood §8| §b5 Xp §8• §e6 Pts(7)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_516 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakWood
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_517 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedPaleOakWood.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_518 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakWood.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_519 set from storage prodige_skills:prodigelib Float.var_224.out
+# prodige_skills::actionsforaging::fill -> §6Stripped Pale Oak Wood §8| §35 Xp §8• §e6 Pts(7)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_506 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakWood
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_507 set from storage prodige_skills:prodigelib Float.Foraging.total_event.StrippedPaleOakWood.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_508 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.StrippedPaleOakWood.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_509 set from storage prodige_skills:prodigelib Float.var_224.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro44 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1302 __sandstone = @p prodige_skills.Foraging.total_event.BambooBlock.xp
 scoreboard players set anon_cnoL-r-9_1303 __sandstone 1000
@@ -361,11 +361,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_427.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_427.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_427
 data modify storage prodige_skills:prodigelib Float.var_226.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Bamboo Block §8| §b5 Xp §8• §e5 Pts(8)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_520 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.BambooBlock
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_521 set from storage prodige_skills:prodigelib Float.Foraging.total_event.BambooBlock.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_522 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.BambooBlock.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_523 set from storage prodige_skills:prodigelib Float.var_226.out
+# prodige_skills::actionsforaging::fill -> §6Bamboo Block §8| §35 Xp §8• §e5 Pts(8)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_510 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.BambooBlock
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_511 set from storage prodige_skills:prodigelib Float.Foraging.total_event.BambooBlock.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_512 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.BambooBlock.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_513 set from storage prodige_skills:prodigelib Float.var_226.out
 function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro45 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging
 scoreboard players operation anon_cnoL-r-9_1311 __sandstone = @p prodige_skills.Foraging.total_event.MangroveRoots.xp
 scoreboard players set anon_cnoL-r-9_1312 __sandstone 1000
@@ -402,9 +402,9 @@ data modify storage __sandstone:variable anon_cnoL-r-9_429.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_429.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_429
 data modify storage prodige_skills:prodigelib Float.var_228.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsforaging::fill -> §6Mangrove Roots §8| §b2 Xp §8• §e3 Pts(9)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_524 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.MangroveRoots
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_525 set from storage prodige_skills:prodigelib Float.Foraging.total_event.MangroveRoots.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_526 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.MangroveRoots.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_527 set from storage prodige_skills:prodigelib Float.var_228.out
+# prodige_skills::actionsforaging::fill -> §6Mangrove Roots §8| §32 Xp §8• §e3 Pts(9)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_514 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.MangroveRoots
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_515 set from storage prodige_skills:prodigelib Float.Foraging.total_event.MangroveRoots.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_516 int 1 run scoreboard players get @p prodige_skills.Foraging.total_event.MangroveRoots.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging.macro_arg_517 set from storage prodige_skills:prodigelib Float.var_228.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/7/fill/with_macro46 with storage prodige_skills:prodigelib gui.prodige_skills.actionsforaging

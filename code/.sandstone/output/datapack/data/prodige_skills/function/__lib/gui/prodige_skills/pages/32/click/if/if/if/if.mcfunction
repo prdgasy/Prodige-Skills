@@ -1,3 +1,3 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4055 int 1 run scoreboard players get anon_cnoL-r-9_6651 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4056 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_stone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4085 int 1 run scoreboard players get anon_cnoL-r-9_6651 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4086 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_stone
 return run function prodige_skills:__lib/gui/prodige_skills/pages/32/click/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.tasks

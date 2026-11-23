@@ -55,8 +55,8 @@ item replace entity @s container.26 with gray_stained_glass_pane[lore=[],custom_
 function prodige_skills:__lib/gui/prodige_skills/pages/17/fill/if
 data modify storage __sandstone:variable anon_cnoL-r-9_1664 set value '§a§lOn'
 execute unless entity @p[tag=prodige_skills.Foraging.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1664 set value '§c§lOff'
-# prodige_skills::abilitiesforaging::fill -> §d§lAbility Perks §8• [$(macro_arg_2323)§8](4)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2323 set from storage __sandstone:variable anon_cnoL-r-9_1664
+# prodige_skills::abilitiesforaging::fill -> §d§lAbility Perks §8• [$(macro_arg_2313)§8](4)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2313 set from storage __sandstone:variable anon_cnoL-r-9_1664
 function prodige_skills:__lib/gui/prodige_skills/pages/17/fill/with_macro4 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging
 scoreboard players operation anon_cnoL-r-9_5630 __sandstone = @p prodige_skills.foraging.xp
 scoreboard players set anon_cnoL-r-9_5631 __sandstone 1000
@@ -91,17 +91,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1677.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1677
 data modify storage prodige_skills:prodigelib Float.foraging.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesforaging::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2324 set from storage __sandstone:variable anon_cnoL-r-9_1665
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2325 set from storage prodige_skills:prodigelib RomanNumbers.out_85
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2326 set from storage __sandstone:variable anon_cnoL-r-9_1666
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2327 set from storage __sandstone:variable anon_cnoL-r-9_1667
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2328 set from storage __sandstone:variable anon_cnoL-r-9_1668
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2314 set from storage __sandstone:variable anon_cnoL-r-9_1665
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2315 set from storage prodige_skills:prodigelib RomanNumbers.out_85
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2316 set from storage __sandstone:variable anon_cnoL-r-9_1666
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2317 set from storage __sandstone:variable anon_cnoL-r-9_1667
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2318 set from storage __sandstone:variable anon_cnoL-r-9_1668
 function prodige_skills:__lib/gui/prodige_skills/pages/17/fill/with_macro5 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging
 # prodige_skills::abilitiesforaging::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Foraging.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::abilitiesforaging::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2329 set from storage prodige_skills:prodigelib Float.foraging.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2330 int 1 run scoreboard players get @p prodige_skills.foraging.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2319 set from storage prodige_skills:prodigelib Float.foraging.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2320 int 1 run scoreboard players get @p prodige_skills.foraging.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/17/fill/with_macro6 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging
 # prodige_skills::abilitiesforaging::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Foraging.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

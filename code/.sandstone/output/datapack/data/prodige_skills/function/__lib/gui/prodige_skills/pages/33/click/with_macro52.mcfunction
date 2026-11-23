@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§9Clay Delver §8× §e$(macro_arg_4462)($(macro_arg_4461))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4461)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro52/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§9Clay Delver §8× §e$(macro_arg_4492)($(macro_arg_4491))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4491)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro52/execute_unless

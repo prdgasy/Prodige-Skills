@@ -15,8 +15,8 @@ scoreboard players operation anon_cnoL-r-9_6657 __sandstone = anon_cnoL-r-9_6656
 scoreboard players operation anon_cnoL-r-9_6657 __sandstone /= 100 __sandstone
 execute if score anon_cnoL-r-9_6657 __sandstone matches ..-1 run scoreboard players set anon_cnoL-r-9_6657 __sandstone 0
 execute if score anon_cnoL-r-9_6657 __sandstone matches 11.. run scoreboard players set anon_cnoL-r-9_6657 __sandstone 10
-execute store result storage __sandstone:variable anon_cnoL-r-9_3157.env_0 int 1 run scoreboard players get anon_cnoL-r-9_6657 __sandstone
-function prodige_skills:__lib/bar/get/10 with storage __sandstone:variable anon_cnoL-r-9_3157
+execute store result storage __sandstone:variable anon_cnoL-r-9_3197.env_0 int 1 run scoreboard players get anon_cnoL-r-9_6657 __sandstone
+function prodige_skills:__lib/bar/get/10 with storage __sandstone:variable anon_cnoL-r-9_3197
 data modify storage prodige_skills:prodigelib bar.out_212 set from storage prodige_skills:prodigelib bar.temp
 scoreboard players operation anon_cnoL-r-9_6658 __sandstone = var_995 prodige_skills.prodigelib.float
 function prodige_skills:__lib/gui/prodige_skills/pages/32/click/if2/if/0_if/return_run/if3
@@ -26,10 +26,10 @@ execute store result storage prodige_skills:prodigelib Float.unit int 1 run scor
 scoreboard players operation anon_cnoL-r-9_6660 __sandstone = anon_cnoL-r-9_6658 __sandstone
 scoreboard players operation anon_cnoL-r-9_6660 __sandstone %= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_6660 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_3158.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_3158.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_3158.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3158
+data modify storage __sandstone:variable anon_cnoL-r-9_3198.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_3198.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_3198.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3198
 data modify storage prodige_skills:prodigelib Float.var_995.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::tasks::click -> §9Mine stone §8• §e$(macro_arg_4051)§6/§e100($(macro_arg_4050))
+# prodige_skills::tasks::click -> §9Mine stone §8• §e$(macro_arg_4081)§6/§e100($(macro_arg_4080))
 execute if score anon_cnoL-r-9_34 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/32/click/if2/if/0_if/return_run/if4

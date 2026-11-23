@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3055 set value 'diamond_shovel'
-data modify storage __sandstone:variable anon_cnoL-r-9_3053 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_3054 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3091 set value 'diamond_shovel'
+data modify storage __sandstone:variable anon_cnoL-r-9_3089 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3090 set value ' §8• §a§lEQUIP'

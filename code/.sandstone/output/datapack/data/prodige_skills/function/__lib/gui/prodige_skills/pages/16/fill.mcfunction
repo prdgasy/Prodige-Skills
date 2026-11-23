@@ -55,8 +55,8 @@ item replace entity @s container.26 with gray_stained_glass_pane[lore=[],custom_
 function prodige_skills:__lib/gui/prodige_skills/pages/16/fill/if
 data modify storage __sandstone:variable anon_cnoL-r-9_1591 set value '§a§lOn'
 execute unless entity @p[tag=prodige_skills.Mining.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1591 set value '§c§lOff'
-# prodige_skills::abilitiesmining::fill -> §d§lAbility Perks §8• [$(macro_arg_2269)§8](4)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2269 set from storage __sandstone:variable anon_cnoL-r-9_1591
+# prodige_skills::abilitiesmining::fill -> §d§lAbility Perks §8• [$(macro_arg_2259)§8](4)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2259 set from storage __sandstone:variable anon_cnoL-r-9_1591
 function prodige_skills:__lib/gui/prodige_skills/pages/16/fill/with_macro4 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining
 scoreboard players operation anon_cnoL-r-9_5528 __sandstone = @p prodige_skills.mining.xp
 scoreboard players set anon_cnoL-r-9_5529 __sandstone 1000
@@ -91,17 +91,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1604.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1604
 data modify storage prodige_skills:prodigelib Float.mining.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesmining::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2270 set from storage __sandstone:variable anon_cnoL-r-9_1592
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2271 set from storage prodige_skills:prodigelib RomanNumbers.out_65
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2272 set from storage __sandstone:variable anon_cnoL-r-9_1593
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2273 set from storage __sandstone:variable anon_cnoL-r-9_1594
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2274 set from storage __sandstone:variable anon_cnoL-r-9_1595
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2260 set from storage __sandstone:variable anon_cnoL-r-9_1592
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2261 set from storage prodige_skills:prodigelib RomanNumbers.out_65
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2262 set from storage __sandstone:variable anon_cnoL-r-9_1593
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2263 set from storage __sandstone:variable anon_cnoL-r-9_1594
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2264 set from storage __sandstone:variable anon_cnoL-r-9_1595
 function prodige_skills:__lib/gui/prodige_skills/pages/16/fill/with_macro5 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining
 # prodige_skills::abilitiesmining::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Mining.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::abilitiesmining::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2275 set from storage prodige_skills:prodigelib Float.mining.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2276 int 1 run scoreboard players get @p prodige_skills.mining.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2265 set from storage prodige_skills:prodigelib Float.mining.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2266 int 1 run scoreboard players get @p prodige_skills.mining.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/16/fill/with_macro6 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining
 # prodige_skills::abilitiesmining::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Mining.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

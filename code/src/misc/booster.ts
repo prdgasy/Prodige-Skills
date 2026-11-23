@@ -24,7 +24,7 @@ export class Booster extends Reward {
   private predicate: ReturnType<typeof ItemPredicate>;
 
   constructor(type: BoosterType, multiplier: number, duration: number) {
-    const name = `§${type === 'Xp' ? 'b' : 'e'}x${multiplier} ${type} Booster`;
+    const name = `§${type === 'Xp' ? 'b' : '6'}x${multiplier} ${type} Booster`;
     const description = `${multiplier}x ${type} Booster · ${duration} minutes`;
     const icon: Item = type === 'Xp' ? 'experience_bottle' : 'gold_ingot';
 

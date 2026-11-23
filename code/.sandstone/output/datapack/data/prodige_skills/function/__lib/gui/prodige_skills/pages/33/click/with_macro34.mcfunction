@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dGolden Furrow §8× §e$(macro_arg_4408)($(macro_arg_4407))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4407)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro34/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dGolden Furrow §8× §e$(macro_arg_4438)($(macro_arg_4437))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4437)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro34/execute_unless

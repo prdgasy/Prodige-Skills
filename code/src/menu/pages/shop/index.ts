@@ -8,6 +8,8 @@ import { Menu } from "@src/menu";
 import { Main } from "@src/menu/main";
 import { Player } from "@src/player";
 import { Mask } from "../../mask";
+import { _, DataVariable, Macro as S } from "sandstone";
+import { Booster, BOOSTER_TYPE } from "@src/misc/booster";
 
 export class Shop {
   public static mask(p: Page) {
@@ -27,7 +29,7 @@ export class Shop {
       this.titles(g)
     );
 
-    p.add(Menu.back(g, Main), this.balance());
+    p.add(Menu.back(g, Main), () => this.balance(p));
     return p;
   }
 
@@ -118,15 +120,36 @@ export class Shop {
   }
 
 
-  public static balance() {
-    return new Button('emerald', 19, $`§aShop §8• §e${Player.pts} Pts`,
-      [
-        '§a§l┃ Skill Shop',
-        '§a┃ §7Browse items, boosters, crates, and titles.',
-        '§a┃ §7Spend your points on useful rewards.',
-        '',
-        $`§8• §7Your balance: §e${Player.pts} Pts`,
-      ]
+  public static balance(p: Page) {
+    const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
+    for (const type of BOOSTER_TYPE) {
+      const color = Booster.getColor(type);
+      const multiplier = Booster.getMultiplier(type);
+      const timer = Booster.getTimer(type);
+      const status = DataVariable(`§7No ${type} Booster active`);
+      _.if(timer['>'](0), () => {
+        _.with([multiplier, timer], () =>
+          S.data.modify(status).set.value(S`${color}x${multiplier} ${type} Booster §8• §c${timer}m`)
+        );
+      });
+      boosterStatuses.push(status);
+    }
+
+    return p.emit(
+      new Button('emerald', 21, $`§aShop §8• §e${Player.pts} Pts`,
+        [
+          '§a§l┃ Skill Shop',
+          '§a┃ §7Browse items, boosters, crates, and titles.',
+          '§a┃ §7Spend your points on useful rewards.',
+          '',
+          '§f§lActive Boosters:',
+          ...boosterStatuses.map(status => $`§8• ${status}`),
+          '',
+          $`§8• §7Your balance: §e${Player.pts} Pts`,
+
+        ]
+      )
     );
+
   }
 }

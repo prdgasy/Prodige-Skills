@@ -1,2 +1,2 @@
-# prodige_skills::achievementsforaging::fill::macro -> $(macro_arg_1918)(25)
-$item replace entity @s container.25 with $(macro_arg_1917)[custom_name={text: "$(macro_arg_1918)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::achievementsforaging::fill::macro -> $(macro_arg_1908)(25)
+$item replace entity @s container.25 with $(macro_arg_1907)[custom_name={text: "$(macro_arg_1908)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

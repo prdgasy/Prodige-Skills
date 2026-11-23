@@ -29,15 +29,15 @@ execute if score @s prodige_skills.menu.shop.crates.epic.index matches 1 run fun
 execute if score @s prodige_skills.menu.shop.crates.epic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if28
 execute if score @s prodige_skills.menu.shop.crates.epic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if29
 execute if score @s prodige_skills.menu.shop.crates.epic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if30
-data modify storage __sandstone:variable anon_cnoL-r-9_1961 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1962 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_1969 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1970 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.crates.epic.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if31
-# prodige_skills::epic_rewards::click -> $(macro_arg_2541)(25)
+# prodige_skills::epic_rewards::click -> $(macro_arg_2539)(25)
 execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if32/if
-data modify storage __sandstone:variable anon_cnoL-r-9_1963 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1964 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_1971 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1972 set value '§eNext'
 execute if score @s prodige_skills.menu.shop.crates.epic.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if33
-# prodige_skills::epic_rewards::click -> $(macro_arg_2543)(26)
+# prodige_skills::epic_rewards::click -> $(macro_arg_2541)(26)
 execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if34/if
 # prodige_skills::epic_rewards::click -> §cBack(18)
 execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/24/click/if35/if

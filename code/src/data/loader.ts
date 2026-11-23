@@ -103,7 +103,7 @@ export class Loader {
         icon: row.icon as Item,
         price: parseInt(row.price, 10),
         rarity,
-        characteristics: row.story ? [row.story] : undefined,
+        description: row.story,
         stats: Loader.toolStats(row),
       });
 

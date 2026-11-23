@@ -1,3 +1,3 @@
-# prodige_skills::vault::click -> §6§l§dObsidian Breaker §8× §e$(macro_arg_4354)($(macro_arg_4353))
+# prodige_skills::vault::click -> §6§l§dObsidian Breaker §8× §e$(macro_arg_4384)($(macro_arg_4383))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if16/if/if
 scoreboard players set anon_cnoL-r-9_6851 __sandstone 1

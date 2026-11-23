@@ -1,2 +1,2 @@
-# prodige_skills::progressforaging::fill::macro -> $(macro_arg_60)(26)
-$item replace entity @s container.26 with $(macro_arg_59)[custom_name={text: "$(macro_arg_60)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::progressforaging::fill::macro -> $(macro_arg_50)(26)
+$item replace entity @s container.26 with $(macro_arg_49)[custom_name={text: "$(macro_arg_50)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

@@ -49,5 +49,5 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1918.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_1918.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1918
 data modify storage prodige_skills:prodigelib Float.var_985.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::abilitiesexcavating::click -> §4§lDeep Digger §8[§4§l$(macro_arg_2501)§8] $(macro_arg_2502)(13)
+# prodige_skills::abilitiesexcavating::click -> §4§lDeep Digger §8[§4§l$(macro_arg_2491)§8] $(macro_arg_2492)(13)
 execute if score anon_cnoL-r-9_22 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/20/click/if/if9/if

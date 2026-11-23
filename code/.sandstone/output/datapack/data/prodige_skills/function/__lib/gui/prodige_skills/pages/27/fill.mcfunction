@@ -74,9 +74,15 @@ item replace entity @s container.14 with tripwire_hook[custom_name={text: "§e§
 item replace entity @s container.6 with dragon_egg[custom_name={text: "§c§lMythic Crate", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§e§l┃ Crate Rewards", italic: false, color: "white"},{text: "§e┃ §7The rarest cache, offering top-tier", italic: false, color: "white"},{text: "§e┃ §7skill XP, boosters, keys, points,", italic: false, color: "white"},{text: "§e┃ §7and mastery-level gear.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view the rewards.", italic: false, color: "white"}],enchantment_glint_override=1,custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crates::fill -> §e§c§lMythic Crate Key §8• §610000 Pts(15)
 item replace entity @s container.15 with tripwire_hook[custom_name={text: "§e§c§lMythic Crate Key §8• §610000 Pts", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§e§l┃ Matching Crate Key", italic: false, color: "white"},{text: "§e┃ §7This key opens: §l§c§lMythic Crate§7.", italic: false, color: "white"},{text: "§e┃", italic: false, color: "white"},{text: "§e┃ §7Price: §610000 Pts", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to buy!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::crates::fill -> §aShop §8• §e$(macro_arg_2) Pts(19)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2 int 1 run scoreboard players get @p prodige_skills.player.pts
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_3 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage __sandstone:variable anon_cnoL-r-9_1989 set value '§7No Xp Booster active'
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if
+data modify storage __sandstone:variable anon_cnoL-r-9_1991 set value '§7No Pts Booster active'
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if2
+# prodige_skills::crates::fill -> §aShop §8• §e$(macro_arg_2558) Pts(21)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2558 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2559 set from storage __sandstone:variable anon_cnoL-r-9_1989
+data modify storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2560 set from storage __sandstone:variable anon_cnoL-r-9_1991
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2561 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.crates
 # prodige_skills::crates::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

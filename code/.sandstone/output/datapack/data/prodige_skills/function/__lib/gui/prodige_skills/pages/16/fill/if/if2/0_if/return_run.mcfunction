@@ -12,6 +12,6 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1581.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1581
 data modify storage prodige_skills:prodigelib Float.Mining.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesmining::fill -> Ore Rush §8[§c§lX§8](13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2255 set from storage __sandstone:variable anon_cnoL-r-9_1580
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2256 set from storage prodige_skills:prodigelib Float.Mining.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2245 set from storage __sandstone:variable anon_cnoL-r-9_1580
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining.macro_arg_2246 set from storage prodige_skills:prodigelib Float.Mining.ability.buff.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/16/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesmining

@@ -12,6 +12,6 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1873.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1873
 data modify storage prodige_skills:prodigelib Float.Excavating.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesexcavating::fill -> Deep Digger §8[§c§lX§8](13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2471 set from storage __sandstone:variable anon_cnoL-r-9_1872
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2472 set from storage prodige_skills:prodigelib Float.Excavating.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2461 set from storage __sandstone:variable anon_cnoL-r-9_1872
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2462 set from storage prodige_skills:prodigelib Float.Excavating.ability.buff.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating

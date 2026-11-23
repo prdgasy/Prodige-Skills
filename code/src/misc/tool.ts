@@ -19,7 +19,7 @@ export type ToolOptions = {
   rarity: ToolRarity;
 
   /** The tool's mini story (explains its stats). One entry = one bullet, wrapped automatically. */
-  characteristics?: string[];
+  description?: string;
 
   stats: StatType;
 
@@ -37,7 +37,6 @@ export class Tool extends Reward {
   public rarity: ToolRarity;
   public price: number;
 
-  public characteristics?: string[];
   public type?: Skill;
   public onUse?: () => void;
   public onBreak?: () => void;
@@ -48,13 +47,12 @@ export class Tool extends Reward {
   constructor(opt: ToolOptions) {
     super(opt.name, Tool.getFromOpt(opt), {
       // the story doubles as the vault description
-      description: (opt.characteristics ?? []).join(' '),
+      description: opt.description,
       icon: opt.icon, price: opt.price, category: 'vault'
     });
 
     this.stats = opt.stats;
     this.price = opt.price;
-    this.characteristics = opt.characteristics;
     this.rarity = opt.rarity;
     this.type = opt.type;
     this.onUse = opt.onUse;
@@ -72,17 +70,6 @@ export class Tool extends Reward {
 
   public static getFromOpt(opt: ToolOptions) {
     const fn = MCFunction(`misc/tool/${Global.toResource(opt.name)}/give`, () => {
-      // Characteristics: first wrapped line gets the bullet, the next ones are indented
-      const characteristics: string[] = [];
-      if (opt.characteristics?.length) {
-        characteristics.push("", "§d§l┃ Description");
-        for (const c of opt.characteristics) {
-          Text.wrap(c, '§7').forEach((line, i) =>
-            characteristics.push(`§d┃ ${i === 0 ? '§8• ' : '  '}${line}`)
-          );
-        }
-      }
-
       const statLore: string[] = ['§d§l┃ Stats'];
       const components: [ComponentType, NBTInt][] = [];
       for (const [k, v] of Object.entries(opt.stats)) {
@@ -97,10 +84,11 @@ export class Tool extends Reward {
         'minecraft:custom_name': opt.name,
         'minecraft:lore': [
           '§9Prodige Skills',
-          ...characteristics,
+          '',
+          ...Text.wrap(opt.description!, '§7'),
           '',
           ...statLore,
-
+          '',
           opt.rarity
         ],
         ...Object.fromEntries(components),

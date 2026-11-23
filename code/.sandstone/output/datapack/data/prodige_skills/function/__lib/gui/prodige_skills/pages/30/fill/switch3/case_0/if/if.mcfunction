@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2003 set value 'deepslate'
-data modify storage __sandstone:variable anon_cnoL-r-9_2001 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2002 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2035 set value 'deepslate'
+data modify storage __sandstone:variable anon_cnoL-r-9_2033 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2034 set value ' §8• §a§lEQUIP'

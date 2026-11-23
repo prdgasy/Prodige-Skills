@@ -61,10 +61,10 @@ execute if entity @p[tag=prodige_skills.misc.task.4.done] run scoreboard players
 execute if entity @p[tag=prodige_skills.misc.task.5.done] run scoreboard players add anon_cnoL-r-9_52 __sandstone 1
 data modify storage __sandstone:variable anon_cnoL-r-9_0 set value '§aReady to roll'
 execute if score @p prodige_skills.task.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if7
-# prodige_skills::main::fill -> §6Tasks §8• §e$(macro_arg_10)§6/§e3(23)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_10 int 1 run scoreboard players get anon_cnoL-r-9_52 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_11 int 1 run scoreboard players get anon_cnoL-r-9_52 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_12 set from storage __sandstone:variable anon_cnoL-r-9_0
+# prodige_skills::main::fill -> §6Tasks §8• §e$(macro_arg_0)§6/§e3(23)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_0 int 1 run scoreboard players get anon_cnoL-r-9_52 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_1 int 1 run scoreboard players get anon_cnoL-r-9_52 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_2 set from storage __sandstone:variable anon_cnoL-r-9_0
 function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.main
 scoreboard players set anon_cnoL-r-9_53 __sandstone 0
 execute if score @p prodige_skills.reward.pending.novice_pickaxe matches 1.. run scoreboard players operation anon_cnoL-r-9_53 __sandstone += @p prodige_skills.reward.pending.novice_pickaxe
@@ -137,22 +137,22 @@ execute if score @p prodige_skills.reward.pending.x3_pts_booster matches 1.. run
 execute if score @p prodige_skills.reward.pending.x3_xp_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_53 __sandstone += @p prodige_skills.reward.pending.x3_xp_booster
 execute if score @p prodige_skills.reward.pending.x4_xp_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_53 __sandstone += @p prodige_skills.reward.pending.x4_xp_booster
 execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_53 __sandstone += @p prodige_skills.reward.pending.x4_pts_booster
-# prodige_skills::main::fill -> §dReward Vault §8• §e$(macro_arg_13)(22)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_13 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_14 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
+# prodige_skills::main::fill -> §dReward Vault §8• §e$(macro_arg_3)(22)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_3 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_4 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
 function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.main
 data modify storage __sandstone:variable anon_cnoL-r-9_2 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if78
 data modify storage __sandstone:variable anon_cnoL-r-9_4 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if79
-# prodige_skills::main::fill -> §aShop §8• §e$(macro_arg_15)Pts(21)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_15 int 1 run scoreboard players get @p prodige_skills.player.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_16 set from storage __sandstone:variable anon_cnoL-r-9_2
-data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_17 set from storage __sandstone:variable anon_cnoL-r-9_4
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_18 int 1 run scoreboard players get @p prodige_skills.player.pts
+# prodige_skills::main::fill -> §aShop §8• §e$(macro_arg_5) Pts(21)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_5 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_6 set from storage __sandstone:variable anon_cnoL-r-9_2
+data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_7 set from storage __sandstone:variable anon_cnoL-r-9_4
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_8 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.main
 # prodige_skills::main::fill -> §bPreferences(4)
-item replace entity @s container.4 with amethyst_shard[custom_name={text: "§bPreferences", italic: false, color: "white"},lore=[{text: "§b§l┃ Preferences", italic: false, color: "white"},{text: "§b┃ Edit your preferences and you playing ect...", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to edit your preferences!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.4 with amethyst_shard[custom_name={text: "§bPreferences", italic: false, color: "white"},lore=[{text: "§b§l┃ Preferences", italic: false, color: "white"},{text: "§b┃ §7Edit your preferences and your playing.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to edit your preferences!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 data modify storage prodige_skills:main_skill_args args set value {}
 data modify storage prodige_skills:main_skill_args args.skill set value 'mining'
 data modify storage prodige_skills:main_skill_args args.skillName set value 'Mining'

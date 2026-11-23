@@ -73,17 +73,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1284.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1284
 data modify storage prodige_skills:prodigelib Float.foraging.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::achievementsforaging::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1910 set from storage __sandstone:variable anon_cnoL-r-9_1272
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1911 set from storage prodige_skills:prodigelib RomanNumbers.out_45
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1912 set from storage __sandstone:variable anon_cnoL-r-9_1273
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1913 set from storage __sandstone:variable anon_cnoL-r-9_1274
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1914 set from storage __sandstone:variable anon_cnoL-r-9_1275
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1900 set from storage __sandstone:variable anon_cnoL-r-9_1272
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1901 set from storage prodige_skills:prodigelib RomanNumbers.out_45
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1902 set from storage __sandstone:variable anon_cnoL-r-9_1273
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1903 set from storage __sandstone:variable anon_cnoL-r-9_1274
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1904 set from storage __sandstone:variable anon_cnoL-r-9_1275
 function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/with_macro25 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging
 # prodige_skills::achievementsforaging::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Foraging.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::achievementsforaging::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1915 set from storage prodige_skills:prodigelib Float.foraging.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1916 int 1 run scoreboard players get @p prodige_skills.foraging.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1905 set from storage prodige_skills:prodigelib Float.foraging.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1906 int 1 run scoreboard players get @p prodige_skills.foraging.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/with_macro26 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging
 # prodige_skills::achievementsforaging::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Foraging.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
@@ -94,14 +94,14 @@ item replace entity @s container.20 with oak_sapling[custom_name={text: "§dFora
 data modify storage __sandstone:variable anon_cnoL-r-9_1285 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_1286 set value '§ePrevious'
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/if31
-# prodige_skills::achievementsforaging::fill -> $(macro_arg_1918)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1917 set from storage __sandstone:variable anon_cnoL-r-9_1285
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1918 set from storage __sandstone:variable anon_cnoL-r-9_1286
+# prodige_skills::achievementsforaging::fill -> $(macro_arg_1908)(25)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1907 set from storage __sandstone:variable anon_cnoL-r-9_1285
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1908 set from storage __sandstone:variable anon_cnoL-r-9_1286
 function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/with_macro27 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging
 data modify storage __sandstone:variable anon_cnoL-r-9_1287 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_1288 set value '§eNext'
 execute if score @s prodige_skills.menu.achievements.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/if32
-# prodige_skills::achievementsforaging::fill -> $(macro_arg_1920)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1919 set from storage __sandstone:variable anon_cnoL-r-9_1287
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1920 set from storage __sandstone:variable anon_cnoL-r-9_1288
+# prodige_skills::achievementsforaging::fill -> $(macro_arg_1910)(26)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1909 set from storage __sandstone:variable anon_cnoL-r-9_1287
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging.macro_arg_1910 set from storage __sandstone:variable anon_cnoL-r-9_1288
 function prodige_skills:__lib/gui/prodige_skills/pages/12/fill/with_macro28 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsforaging

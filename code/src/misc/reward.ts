@@ -1,5 +1,4 @@
 import { Roman } from "@lib/roman";
-import type { ToolName } from "@src/data/definitions";
 import { Global } from "@src/global";
 import { Player } from "@src/player";
 import type { Skill } from "@src/skill";

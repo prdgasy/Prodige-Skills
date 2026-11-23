@@ -1,3 +1,3 @@
-# prodige_skills::vault::click -> §6§l§c§lMythic Crate Key §8× §e$(macro_arg_4498)($(macro_arg_4497))
+# prodige_skills::vault::click -> §6§l§c§lMythic Crate Key §8× §e$(macro_arg_4528)($(macro_arg_4527))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if64/if/if
 scoreboard players set anon_cnoL-r-9_6851 __sandstone 1

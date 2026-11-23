@@ -49,17 +49,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1882.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_1882.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1882
 data modify storage prodige_skills:prodigelib Float.var_981.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::abilitiesexcavating::fill -> §4§lDeep Digger §8[§4§l$(macro_arg_2474)§8] $(macro_arg_2475)(13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2473 set from storage __sandstone:variable anon_cnoL-r-9_1872
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2474 set from storage prodige_skills:prodigelib RomanNumbers.out_141
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2475 set from storage __sandstone:variable anon_cnoL-r-9_1877
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2476 set from storage prodige_skills:prodigelib RomanNumbers.out_141
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2477 set from storage prodige_skills:prodigelib RomanNumbers.out_142
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2478 set from storage prodige_skills:prodigelib Float.Excavating.ability.buff.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2479 set from storage prodige_skills:prodigelib Float.var_981.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2480 set from storage __sandstone:variable anon_cnoL-r-9_1879
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2481 set from storage prodige_skills:prodigelib RomanNumbers.out_143
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2482 int 1 run scoreboard players get anon_cnoL-r-9_5928 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2483 set from storage __sandstone:variable anon_cnoL-r-9_1878
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2484 int 1 run scoreboard players get @p prodige_skills.Excavating.ability.price
+# prodige_skills::abilitiesexcavating::fill -> §4§lDeep Digger §8[§4§l$(macro_arg_2464)§8] $(macro_arg_2465)(13)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2463 set from storage __sandstone:variable anon_cnoL-r-9_1872
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2464 set from storage prodige_skills:prodigelib RomanNumbers.out_141
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2465 set from storage __sandstone:variable anon_cnoL-r-9_1877
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2466 set from storage prodige_skills:prodigelib RomanNumbers.out_141
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2467 set from storage prodige_skills:prodigelib RomanNumbers.out_142
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2468 set from storage prodige_skills:prodigelib Float.Excavating.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2469 set from storage prodige_skills:prodigelib Float.var_981.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2470 set from storage __sandstone:variable anon_cnoL-r-9_1879
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2471 set from storage prodige_skills:prodigelib RomanNumbers.out_143
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2472 int 1 run scoreboard players get anon_cnoL-r-9_5928 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2473 set from storage __sandstone:variable anon_cnoL-r-9_1878
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2474 int 1 run scoreboard players get @p prodige_skills.Excavating.ability.price
 return run function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating

@@ -33,11 +33,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_957.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_957.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_957
 data modify storage prodige_skills:prodigelib Float.var_666.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Short Grass §8| §b0.5 Xp §8• §e1 Pts(0)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1442 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateShortGrass
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1443 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateShortGrass.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1444 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateShortGrass.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1445 set from storage prodige_skills:prodigelib Float.var_666.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Short Grass §8| §30.5 Xp §8• §e1 Pts(0)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1432 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateShortGrass
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1433 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateShortGrass.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1434 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateShortGrass.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1435 set from storage prodige_skills:prodigelib Float.var_666.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro19 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3375 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateFern.xp
 scoreboard players set anon_cnoL-r-9_3376 __sandstone 1000
@@ -74,11 +74,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_959.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_959.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_959
 data modify storage prodige_skills:prodigelib Float.var_668.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Fern §8| §b0.5 Xp §8• §e1 Pts(1)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1446 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateFern
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1447 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateFern.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1448 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateFern.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1449 set from storage prodige_skills:prodigelib Float.var_668.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Fern §8| §30.5 Xp §8• §e1 Pts(1)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1436 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateFern
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1437 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateFern.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1438 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateFern.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1439 set from storage prodige_skills:prodigelib Float.var_668.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro20 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3384 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateDeadBush.xp
 scoreboard players set anon_cnoL-r-9_3385 __sandstone 1000
@@ -115,11 +115,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_961.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_961.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_961
 data modify storage prodige_skills:prodigelib Float.var_670.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Dead Bush §8| §b1 Xp §8• §e1 Pts(2)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1450 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateDeadBush
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1451 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateDeadBush.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1452 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateDeadBush.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1453 set from storage prodige_skills:prodigelib Float.var_670.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Dead Bush §8| §31 Xp §8• §e1 Pts(2)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1440 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateDeadBush
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1441 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateDeadBush.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1442 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateDeadBush.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1443 set from storage prodige_skills:prodigelib Float.var_670.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro21 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3393 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateSuspiciousSand.xp
 scoreboard players set anon_cnoL-r-9_3394 __sandstone 1000
@@ -156,11 +156,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_963.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_963.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_963
 data modify storage prodige_skills:prodigelib Float.var_672.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Suspicious Sand §8| §b5 Xp §8• §e5 Pts(3)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1454 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousSand
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1455 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSuspiciousSand.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1456 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousSand.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1457 set from storage prodige_skills:prodigelib Float.var_672.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Suspicious Sand §8| §35 Xp §8• §e5 Pts(3)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1444 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousSand
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1445 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSuspiciousSand.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1446 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousSand.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1447 set from storage prodige_skills:prodigelib Float.var_672.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro22 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3402 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateSuspiciousGravel.xp
 scoreboard players set anon_cnoL-r-9_3403 __sandstone 1000
@@ -197,11 +197,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_965.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_965.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_965
 data modify storage prodige_skills:prodigelib Float.var_674.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Suspicious Gravel §8| §b5 Xp §8• §e5 Pts(4)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1458 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousGravel
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1459 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSuspiciousGravel.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1460 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousGravel.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1461 set from storage prodige_skills:prodigelib Float.var_674.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Suspicious Gravel §8| §35 Xp §8• §e5 Pts(4)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1448 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousGravel
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1449 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSuspiciousGravel.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1450 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSuspiciousGravel.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1451 set from storage prodige_skills:prodigelib Float.var_674.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro23 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3411 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateWhiteTerracotta.xp
 scoreboard players set anon_cnoL-r-9_3412 __sandstone 1000
@@ -238,11 +238,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_967.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_967.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_967
 data modify storage prodige_skills:prodigelib Float.var_676.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate White Terracotta §8| §b3 Xp §8• §e3 Pts(5)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1462 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteTerracotta
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1463 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateWhiteTerracotta.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1464 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteTerracotta.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1465 set from storage prodige_skills:prodigelib Float.var_676.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate White Terracotta §8| §33 Xp §8• §e3 Pts(5)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1452 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteTerracotta
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1453 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateWhiteTerracotta.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1454 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteTerracotta.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1455 set from storage prodige_skills:prodigelib Float.var_676.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro24 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3420 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateRedTerracotta.xp
 scoreboard players set anon_cnoL-r-9_3421 __sandstone 1000
@@ -279,11 +279,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_969.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_969.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_969
 data modify storage prodige_skills:prodigelib Float.var_678.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Red Terracotta §8| §b3 Xp §8• §e3 Pts(6)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1466 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedTerracotta
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1467 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateRedTerracotta.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1468 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedTerracotta.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1469 set from storage prodige_skills:prodigelib Float.var_678.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Red Terracotta §8| §33 Xp §8• §e3 Pts(6)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1456 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedTerracotta
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1457 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateRedTerracotta.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1458 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedTerracotta.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1459 set from storage prodige_skills:prodigelib Float.var_678.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro25 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3429 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateYellowTerracotta.xp
 scoreboard players set anon_cnoL-r-9_3430 __sandstone 1000
@@ -320,11 +320,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_971.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_971.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_971
 data modify storage prodige_skills:prodigelib Float.var_680.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Yellow Terracotta §8| §b3 Xp §8• §e3 Pts(7)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1470 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateYellowTerracotta
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1471 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateYellowTerracotta.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1472 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateYellowTerracotta.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1473 set from storage prodige_skills:prodigelib Float.var_680.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Yellow Terracotta §8| §33 Xp §8• §e3 Pts(7)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1460 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateYellowTerracotta
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1461 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateYellowTerracotta.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1462 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateYellowTerracotta.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1463 set from storage prodige_skills:prodigelib Float.var_680.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro26 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3438 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateOrangeTerracotta.xp
 scoreboard players set anon_cnoL-r-9_3439 __sandstone 1000
@@ -361,11 +361,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_973.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_973.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_973
 data modify storage prodige_skills:prodigelib Float.var_682.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Orange Terracotta §8| §b3 Xp §8• §e3 Pts(8)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1474 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateOrangeTerracotta
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1475 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateOrangeTerracotta.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1476 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateOrangeTerracotta.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1477 set from storage prodige_skills:prodigelib Float.var_682.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Orange Terracotta §8| §33 Xp §8• §e3 Pts(8)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1464 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateOrangeTerracotta
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1465 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateOrangeTerracotta.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1466 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateOrangeTerracotta.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1467 set from storage prodige_skills:prodigelib Float.var_682.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro27 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3447 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateBrownTerracotta.xp
 scoreboard players set anon_cnoL-r-9_3448 __sandstone 1000
@@ -402,11 +402,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_975.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_975.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_975
 data modify storage prodige_skills:prodigelib Float.var_684.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Brown Terracotta §8| §b3 Xp §8• §e3 Pts(9)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1478 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateBrownTerracotta
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1479 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateBrownTerracotta.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1480 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateBrownTerracotta.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1481 set from storage prodige_skills:prodigelib Float.var_684.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Brown Terracotta §8| §33 Xp §8• §e3 Pts(9)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1468 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateBrownTerracotta
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1469 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateBrownTerracotta.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1470 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateBrownTerracotta.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1471 set from storage prodige_skills:prodigelib Float.var_684.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro28 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3456 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateWhiteConcretePowder.xp
 scoreboard players set anon_cnoL-r-9_3457 __sandstone 1000
@@ -443,11 +443,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_977.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_977.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_977
 data modify storage prodige_skills:prodigelib Float.var_686.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate White Concrete Powder §8| §b2 Xp §8• §e2 Pts(10)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1482 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteConcretePowder
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1483 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateWhiteConcretePowder.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1484 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteConcretePowder.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1485 set from storage prodige_skills:prodigelib Float.var_686.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate White Concrete Powder §8| §32 Xp §8• §e2 Pts(10)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1472 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteConcretePowder
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1473 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateWhiteConcretePowder.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1474 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateWhiteConcretePowder.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1475 set from storage prodige_skills:prodigelib Float.var_686.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro29 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3465 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateSandstone.xp
 scoreboard players set anon_cnoL-r-9_3466 __sandstone 1000
@@ -484,11 +484,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_979.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_979.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_979
 data modify storage prodige_skills:prodigelib Float.var_688.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Sandstone §8| §b2 Xp §8• §e2 Pts(11)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1486 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1487 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSandstone.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1488 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSandstone.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1489 set from storage prodige_skills:prodigelib Float.var_688.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Sandstone §8| §32 Xp §8• §e2 Pts(11)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1476 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1477 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSandstone.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1478 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSandstone.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1479 set from storage prodige_skills:prodigelib Float.var_688.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro30 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3474 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateRedSandstone.xp
 scoreboard players set anon_cnoL-r-9_3475 __sandstone 1000
@@ -525,11 +525,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_981.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_981.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_981
 data modify storage prodige_skills:prodigelib Float.var_690.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Red Sandstone §8| §b2 Xp §8• §e2 Pts(12)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1490 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedSandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1491 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateRedSandstone.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1492 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedSandstone.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1493 set from storage prodige_skills:prodigelib Float.var_690.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Red Sandstone §8| §32 Xp §8• §e2 Pts(12)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1480 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedSandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1481 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateRedSandstone.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1482 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateRedSandstone.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1483 set from storage prodige_skills:prodigelib Float.var_690.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro31 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3483 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateGravellySand.xp
 scoreboard players set anon_cnoL-r-9_3484 __sandstone 1000
@@ -566,11 +566,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_983.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_983.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_983
 data modify storage prodige_skills:prodigelib Float.var_692.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Gravelly Sand §8| §b1 Xp §8• §e1 Pts(13)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1494 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateGravellySand
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1495 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateGravellySand.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1496 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateGravellySand.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1497 set from storage prodige_skills:prodigelib Float.var_692.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Gravelly Sand §8| §31 Xp §8• §e1 Pts(13)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1484 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateGravellySand
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1485 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateGravellySand.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1486 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateGravellySand.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1487 set from storage prodige_skills:prodigelib Float.var_692.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro32 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3492 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateSnowLayer.xp
 scoreboard players set anon_cnoL-r-9_3493 __sandstone 1000
@@ -607,11 +607,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_985.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_985.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_985
 data modify storage prodige_skills:prodigelib Float.var_694.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Snow Layer §8| §b1 Xp §8• §e1 Pts(14)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1498 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSnowLayer
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1499 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSnowLayer.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1500 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSnowLayer.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1501 set from storage prodige_skills:prodigelib Float.var_694.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Snow Layer §8| §31 Xp §8• §e1 Pts(14)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1488 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSnowLayer
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1489 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateSnowLayer.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1490 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateSnowLayer.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1491 set from storage prodige_skills:prodigelib Float.var_694.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro33 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3501 __sandstone = @p prodige_skills.Excavating.total_event.ExcavatePackedMud.xp
 scoreboard players set anon_cnoL-r-9_3502 __sandstone 1000
@@ -648,11 +648,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_987.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_987.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_987
 data modify storage prodige_skills:prodigelib Float.var_696.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Packed Mud §8| §b3 Xp §8• §e3 Pts(15)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1502 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavatePackedMud
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1503 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavatePackedMud.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1504 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavatePackedMud.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1505 set from storage prodige_skills:prodigelib Float.var_696.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Packed Mud §8| §33 Xp §8• §e3 Pts(15)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1492 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavatePackedMud
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1493 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavatePackedMud.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1494 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavatePackedMud.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1495 set from storage prodige_skills:prodigelib Float.var_696.out
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro34 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating
 scoreboard players operation anon_cnoL-r-9_3510 __sandstone = @p prodige_skills.Excavating.total_event.ExcavateClayBlock.xp
 scoreboard players set anon_cnoL-r-9_3511 __sandstone 1000
@@ -689,9 +689,9 @@ data modify storage __sandstone:variable anon_cnoL-r-9_989.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_989.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_989
 data modify storage prodige_skills:prodigelib Float.var_698.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsexcavating::fill -> §6Excavate Clay Block §8| §b3 Xp §8• §e3 Pts(16)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1506 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateClayBlock
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1507 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateClayBlock.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1508 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateClayBlock.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1509 set from storage prodige_skills:prodigelib Float.var_698.out
+# prodige_skills::actionsexcavating::fill -> §6Excavate Clay Block §8| §33 Xp §8• §e3 Pts(16)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1496 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateClayBlock
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1497 set from storage prodige_skills:prodigelib Float.Excavating.total_event.ExcavateClayBlock.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1498 int 1 run scoreboard players get @p prodige_skills.Excavating.total_event.ExcavateClayBlock.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating.macro_arg_1499 set from storage prodige_skills:prodigelib Float.var_698.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/with_macro35 with storage prodige_skills:prodigelib gui.prodige_skills.actionsexcavating

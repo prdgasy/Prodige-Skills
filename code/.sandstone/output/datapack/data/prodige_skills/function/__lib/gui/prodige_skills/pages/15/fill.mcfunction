@@ -59,17 +59,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1534.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1534
 data modify storage prodige_skills:prodigelib Float.excavating.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::achievementsexcavating::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2198 set from storage __sandstone:variable anon_cnoL-r-9_1522
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2199 set from storage prodige_skills:prodigelib RomanNumbers.out_57
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2200 set from storage __sandstone:variable anon_cnoL-r-9_1523
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2201 set from storage __sandstone:variable anon_cnoL-r-9_1524
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2202 set from storage __sandstone:variable anon_cnoL-r-9_1525
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2188 set from storage __sandstone:variable anon_cnoL-r-9_1522
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2189 set from storage prodige_skills:prodigelib RomanNumbers.out_57
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2190 set from storage __sandstone:variable anon_cnoL-r-9_1523
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2191 set from storage __sandstone:variable anon_cnoL-r-9_1524
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2192 set from storage __sandstone:variable anon_cnoL-r-9_1525
 function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/with_macro11 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating
 # prodige_skills::achievementsexcavating::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Excavating.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::achievementsexcavating::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2203 set from storage prodige_skills:prodigelib Float.excavating.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2204 int 1 run scoreboard players get @p prodige_skills.excavating.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2193 set from storage prodige_skills:prodigelib Float.excavating.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2194 int 1 run scoreboard players get @p prodige_skills.excavating.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/with_macro12 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating
 # prodige_skills::achievementsexcavating::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Excavating.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
@@ -80,14 +80,14 @@ item replace entity @s container.20 with iron_shovel[custom_name={text: "§dExca
 data modify storage __sandstone:variable anon_cnoL-r-9_1535 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_1536 set value '§ePrevious'
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/if17
-# prodige_skills::achievementsexcavating::fill -> $(macro_arg_2206)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2205 set from storage __sandstone:variable anon_cnoL-r-9_1535
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2206 set from storage __sandstone:variable anon_cnoL-r-9_1536
+# prodige_skills::achievementsexcavating::fill -> $(macro_arg_2196)(25)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2195 set from storage __sandstone:variable anon_cnoL-r-9_1535
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2196 set from storage __sandstone:variable anon_cnoL-r-9_1536
 function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/with_macro13 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating
 data modify storage __sandstone:variable anon_cnoL-r-9_1537 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_1538 set value '§eNext'
 execute if score @s prodige_skills.menu.achievements.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/if18
-# prodige_skills::achievementsexcavating::fill -> $(macro_arg_2208)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2207 set from storage __sandstone:variable anon_cnoL-r-9_1537
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2208 set from storage __sandstone:variable anon_cnoL-r-9_1538
+# prodige_skills::achievementsexcavating::fill -> $(macro_arg_2198)(26)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2197 set from storage __sandstone:variable anon_cnoL-r-9_1537
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating.macro_arg_2198 set from storage __sandstone:variable anon_cnoL-r-9_1538
 function prodige_skills:__lib/gui/prodige_skills/pages/15/fill/with_macro14 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsexcavating

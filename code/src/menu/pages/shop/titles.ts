@@ -70,7 +70,7 @@ export class Titles {
     });
 
 
-    p.add(Shop.balance(), Menu.back(g, Shop));
+    p.add(() => Shop.balance(p), Menu.back(g, Shop));
     return p;
   }
 

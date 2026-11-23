@@ -9,3 +9,7 @@ execute if score anon_cnoL-r-9_23 __sandstone matches 0 unless data entity @s It
 execute if score anon_cnoL-r-9_23 __sandstone matches 0 unless data entity @s Items[{Slot:16b}] run function prodige_skills:__lib/gui/prodige_skills/pages/21/click/if4/if
 # prodige_skills::shop::click -> §cBack(18)
 execute if score anon_cnoL-r-9_23 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/21/click/if5/if
+data modify storage __sandstone:variable anon_cnoL-r-9_1945 set value '§7No Xp Booster active'
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/click/if6
+data modify storage __sandstone:variable anon_cnoL-r-9_1947 set value '§7No Pts Booster active'
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/click/if7

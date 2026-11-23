@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dHeartwood Chopper §8× §e$(macro_arg_4378)($(macro_arg_4377))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4377)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro24/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dHeartwood Chopper §8× §e$(macro_arg_4408)($(macro_arg_4407))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4407)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro24/execute_unless

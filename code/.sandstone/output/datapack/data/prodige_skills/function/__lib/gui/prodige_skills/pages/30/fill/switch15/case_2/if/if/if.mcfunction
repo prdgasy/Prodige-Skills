@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2155 set value 'dark_oak_log'
-data modify storage __sandstone:variable anon_cnoL-r-9_2153 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2154 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2187 set value 'dark_oak_log'
+data modify storage __sandstone:variable anon_cnoL-r-9_2185 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2186 set value ' §8• §a§lEQUIP'

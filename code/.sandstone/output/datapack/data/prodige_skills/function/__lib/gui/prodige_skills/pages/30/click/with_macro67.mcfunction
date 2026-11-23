@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Harvest Warden$(macro_arg_3609)($(macro_arg_3608))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3608)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro67/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §6Harvest Warden$(macro_arg_3635)($(macro_arg_3634))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3634)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro67/execute_unless

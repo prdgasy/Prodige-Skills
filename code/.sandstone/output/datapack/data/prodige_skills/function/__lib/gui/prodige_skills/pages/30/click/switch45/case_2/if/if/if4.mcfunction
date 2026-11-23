@@ -1,6 +1,6 @@
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3932 set from storage __sandstone:variable anon_cnoL-r-9_3083
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3933 int 1 run scoreboard players get anon_cnoL-r-9_6575 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3934 set from storage __sandstone:variable anon_cnoL-r-9_3082
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3935 set from storage __sandstone:variable anon_cnoL-r-9_3081
-data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3936 set from storage __sandstone:variable anon_cnoL-r-9_3084
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3958 set from storage __sandstone:variable anon_cnoL-r-9_3119
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3959 int 1 run scoreboard players get anon_cnoL-r-9_6575 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3960 set from storage __sandstone:variable anon_cnoL-r-9_3118
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3961 set from storage __sandstone:variable anon_cnoL-r-9_3117
+data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3962 set from storage __sandstone:variable anon_cnoL-r-9_3120
 return run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro132 with storage prodige_skills:prodigelib gui.prodige_skills.titles

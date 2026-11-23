@@ -12,6 +12,6 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1727.env_2 set from stora
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1727
 data modify storage prodige_skills:prodigelib Float.Farming.ability.buff.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::abilitiesfarming::fill -> Bountiful Harvest §8[§c§lX§8](13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesfarming.macro_arg_2363 set from storage __sandstone:variable anon_cnoL-r-9_1726
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesfarming.macro_arg_2364 set from storage prodige_skills:prodigelib Float.Farming.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesfarming.macro_arg_2353 set from storage __sandstone:variable anon_cnoL-r-9_1726
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesfarming.macro_arg_2354 set from storage prodige_skills:prodigelib Float.Farming.ability.buff.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/18/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesfarming

@@ -1,6 +1,6 @@
-# prodige_skills::vault::fill -> §6§l§9Canopy Hatchet §8× §e$(macro_arg_4158)($(macro_arg_4157))
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4157 int 1 run scoreboard players get anon_cnoL-r-9_6751 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4158 int 1 run scoreboard players get @p prodige_skills.reward.pending.canopy_hatchet
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4159 int 1 run scoreboard players get @p prodige_skills.reward.pending.canopy_hatchet
+# prodige_skills::vault::fill -> §6§l§9Canopy Hatchet §8× §e$(macro_arg_4188)($(macro_arg_4187))
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4187 int 1 run scoreboard players get anon_cnoL-r-9_6751 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4188 int 1 run scoreboard players get @p prodige_skills.reward.pending.canopy_hatchet
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4189 int 1 run scoreboard players get @p prodige_skills.reward.pending.canopy_hatchet
 function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/with_macro22 with storage prodige_skills:prodigelib gui.prodige_skills.vault
 scoreboard players set anon_cnoL-r-9_6706 __sandstone 1

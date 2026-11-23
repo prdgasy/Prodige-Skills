@@ -11,5 +11,5 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1681 set value '§8[§c�
 execute if score @p prodige_skills.player.pts matches 500.. run data modify storage __sandstone:variable anon_cnoL-r-9_1680 set value '§8[§a✔§8]'
 execute if score @p prodige_skills.foraging.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1681 set value '§8[§a✔§8]'
 execute if score @p prodige_skills.player.pts matches 500.. if score @p prodige_skills.foraging.level matches 10.. run data modify storage __sandstone:variable anon_cnoL-r-9_1679 set value '§8• §a§lUNLOCK!'
-# prodige_skills::abilitiesforaging::click -> §c🔒 Locked $(macro_arg_2331)(13)
+# prodige_skills::abilitiesforaging::click -> §c🔒 Locked $(macro_arg_2321)(13)
 execute if score anon_cnoL-r-9_19 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run function prodige_skills:__lib/gui/prodige_skills/pages/17/click/if/0_if/return_run/if4/if

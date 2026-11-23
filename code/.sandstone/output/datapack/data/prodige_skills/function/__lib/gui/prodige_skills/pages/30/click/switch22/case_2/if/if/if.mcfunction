@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2807 set value 'wheat'
-data modify storage __sandstone:variable anon_cnoL-r-9_2805 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2806 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2843 set value 'wheat'
+data modify storage __sandstone:variable anon_cnoL-r-9_2841 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2842 set value ' §8• §a§lEQUIP'

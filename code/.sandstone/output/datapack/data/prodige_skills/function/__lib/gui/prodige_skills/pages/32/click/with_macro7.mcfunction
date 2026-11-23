@@ -1,2 +1,2 @@
-# prodige_skills::tasks::click::macro -> §9Mine stone §8• §e$(macro_arg_4072)§6/§e100($(macro_arg_4071))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4071)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/32/click/with_macro7/execute_unless
+# prodige_skills::tasks::click::macro -> §9Mine stone §8• §e$(macro_arg_4102)§6/§e100($(macro_arg_4101))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4101)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/32/click/with_macro7/execute_unless

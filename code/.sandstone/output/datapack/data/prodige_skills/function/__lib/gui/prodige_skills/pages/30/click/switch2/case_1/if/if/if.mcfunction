@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2563 set value 'stone_pickaxe'
-data modify storage __sandstone:variable anon_cnoL-r-9_2561 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2562 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2599 set value 'stone_pickaxe'
+data modify storage __sandstone:variable anon_cnoL-r-9_2597 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2598 set value ' §8• §a§lEQUIP'

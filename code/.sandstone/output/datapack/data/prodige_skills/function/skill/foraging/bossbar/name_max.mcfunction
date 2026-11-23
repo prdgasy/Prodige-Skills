@@ -1,1 +1,1 @@
-$bossbar set prodige_skills:foraging_$(barId) name "§dForaging $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp$(boostXp) §8• §e+$(points) Pts$(boostPts)"
+$bossbar set prodige_skills:foraging_$(barId) name "§dForaging $(roman) §8| §aMAX LEVEL §8| §3+$(added) Xp$(boostXp) §8• §e+$(points) Pts$(boostPts)"

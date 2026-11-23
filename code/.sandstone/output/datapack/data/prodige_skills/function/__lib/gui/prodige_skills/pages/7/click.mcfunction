@@ -49,10 +49,10 @@ execute if score anon_cnoL-r-9_9 __sandstone matches 0 unless data entity @s Ite
 data modify storage __sandstone:variable anon_cnoL-r-9_552 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_553 set value '§ePrevious'
 execute if score @s prodige_skills.menu.actions.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/7/click/if16
-# prodige_skills::actionsforaging::click -> $(macro_arg_731)(25)
+# prodige_skills::actionsforaging::click -> $(macro_arg_721)(25)
 execute if score anon_cnoL-r-9_9 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/7/click/if17/if
 data modify storage __sandstone:variable anon_cnoL-r-9_554 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_555 set value '§eNext'
 execute if score @s prodige_skills.menu.actions.index matches 2 run function prodige_skills:__lib/gui/prodige_skills/pages/7/click/if18
-# prodige_skills::actionsforaging::click -> $(macro_arg_733)(26)
+# prodige_skills::actionsforaging::click -> $(macro_arg_723)(26)
 execute if score anon_cnoL-r-9_9 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/7/click/if19/if

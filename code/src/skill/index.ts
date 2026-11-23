@@ -261,11 +261,11 @@ export class Skill {
     }, { onConflict: 'ignore' });
 
     const nameDefault = MCFunction(`skill/${this.id}/bossbar/name_default`, () => {
-      raw(`$bossbar set ${ref} name "§d${this.name} $(roman) §8| §e$(xp)§6/§e$(goal) Xp §8• §7$(progress)% §8| §b+$(added) Xp${boosts}"`);
+      raw(`$bossbar set ${ref} name "§d${this.name} $(roman) §8| §e$(xp)§6/§e$(goal) Xp §8• §7$(progress)% §8| §3+$(added) Xp${boosts}"`);
     }, { onConflict: 'ignore' });
 
     const nameMax = MCFunction(`skill/${this.id}/bossbar/name_max`, () => {
-      raw(`$bossbar set ${ref} name "§d${this.name} $(roman) §8| §aMAX LEVEL §8| §b+$(added) Xp${boosts}"`);
+      raw(`$bossbar set ${ref} name "§d${this.name} $(roman) §8| §aMAX LEVEL §8| §3+$(added) Xp${boosts}"`);
     }, { onConflict: 'ignore' });
 
     const nameUnlock = MCFunction(`skill/${this.id}/bossbar/name_unlock`, () => {

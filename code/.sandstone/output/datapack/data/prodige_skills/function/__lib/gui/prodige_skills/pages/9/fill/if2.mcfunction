@@ -33,11 +33,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_723.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_723.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_723
 data modify storage prodige_skills:prodigelib Float.var_462.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Creeper §8| §b5 Xp §8• §e6 Pts(0)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1020 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCreeper
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1021 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntCreeper.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1022 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCreeper.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1023 set from storage prodige_skills:prodigelib Float.var_462.out
+# prodige_skills::actionshunting::fill -> §6Hunt Creeper §8| §35 Xp §8• §e6 Pts(0)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1010 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCreeper
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1011 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntCreeper.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1012 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCreeper.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1013 set from storage prodige_skills:prodigelib Float.var_462.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro19 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2429 __sandstone = @p prodige_skills.Hunting.total_event.HuntSpider.xp
 scoreboard players set anon_cnoL-r-9_2430 __sandstone 1000
@@ -74,11 +74,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_725.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_725.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_725
 data modify storage prodige_skills:prodigelib Float.var_464.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Spider §8| §b4 Xp §8• §e5 Pts(1)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1024 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSpider
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1025 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntSpider.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1026 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSpider.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1027 set from storage prodige_skills:prodigelib Float.var_464.out
+# prodige_skills::actionshunting::fill -> §6Hunt Spider §8| §34 Xp §8• §e5 Pts(1)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1014 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSpider
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1015 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntSpider.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1016 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSpider.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1017 set from storage prodige_skills:prodigelib Float.var_464.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro20 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2438 __sandstone = @p prodige_skills.Hunting.total_event.HuntCaveSpider.xp
 scoreboard players set anon_cnoL-r-9_2439 __sandstone 1000
@@ -115,11 +115,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_727.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_727.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_727
 data modify storage prodige_skills:prodigelib Float.var_466.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Cave Spider §8| §b6 Xp §8• §e7 Pts(2)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1028 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCaveSpider
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1029 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntCaveSpider.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1030 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCaveSpider.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1031 set from storage prodige_skills:prodigelib Float.var_466.out
+# prodige_skills::actionshunting::fill -> §6Hunt Cave Spider §8| §36 Xp §8• §e7 Pts(2)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1018 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCaveSpider
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1019 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntCaveSpider.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1020 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntCaveSpider.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1021 set from storage prodige_skills:prodigelib Float.var_466.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro21 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2447 __sandstone = @p prodige_skills.Hunting.total_event.HuntDrowned.xp
 scoreboard players set anon_cnoL-r-9_2448 __sandstone 1000
@@ -156,11 +156,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_729.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_729.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_729
 data modify storage prodige_skills:prodigelib Float.var_468.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Drowned §8| §b6 Xp §8• §e7 Pts(3)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1032 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntDrowned
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1033 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntDrowned.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1034 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntDrowned.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1035 set from storage prodige_skills:prodigelib Float.var_468.out
+# prodige_skills::actionshunting::fill -> §6Hunt Drowned §8| §36 Xp §8• §e7 Pts(3)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1022 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntDrowned
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1023 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntDrowned.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1024 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntDrowned.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1025 set from storage prodige_skills:prodigelib Float.var_468.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro22 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2456 __sandstone = @p prodige_skills.Hunting.total_event.HuntHusk.xp
 scoreboard players set anon_cnoL-r-9_2457 __sandstone 1000
@@ -197,11 +197,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_731.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_731.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_731
 data modify storage prodige_skills:prodigelib Float.var_470.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Husk §8| §b5 Xp §8• §e6 Pts(4)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1036 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntHusk
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1037 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntHusk.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1038 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntHusk.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1039 set from storage prodige_skills:prodigelib Float.var_470.out
+# prodige_skills::actionshunting::fill -> §6Hunt Husk §8| §35 Xp §8• §e6 Pts(4)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1026 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntHusk
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1027 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntHusk.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1028 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntHusk.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1029 set from storage prodige_skills:prodigelib Float.var_470.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro23 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2465 __sandstone = @p prodige_skills.Hunting.total_event.HuntStray.xp
 scoreboard players set anon_cnoL-r-9_2466 __sandstone 1000
@@ -238,11 +238,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_733.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_733.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_733
 data modify storage prodige_skills:prodigelib Float.var_472.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Stray §8| §b5 Xp §8• §e6 Pts(5)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1040 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntStray
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1041 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntStray.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1042 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntStray.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1043 set from storage prodige_skills:prodigelib Float.var_472.out
+# prodige_skills::actionshunting::fill -> §6Hunt Stray §8| §35 Xp §8• §e6 Pts(5)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1030 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntStray
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1031 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntStray.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1032 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntStray.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1033 set from storage prodige_skills:prodigelib Float.var_472.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro24 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2474 __sandstone = @p prodige_skills.Hunting.total_event.HuntWitch.xp
 scoreboard players set anon_cnoL-r-9_2475 __sandstone 1000
@@ -279,11 +279,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_735.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_735.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_735
 data modify storage prodige_skills:prodigelib Float.var_474.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Witch §8| §b8 Xp §8• §e9 Pts(6)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1044 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitch
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1045 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntWitch.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1046 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitch.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1047 set from storage prodige_skills:prodigelib Float.var_474.out
+# prodige_skills::actionshunting::fill -> §6Hunt Witch §8| §38 Xp §8• §e9 Pts(6)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1034 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitch
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1035 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntWitch.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1036 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitch.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1037 set from storage prodige_skills:prodigelib Float.var_474.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro25 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2483 __sandstone = @p prodige_skills.Hunting.total_event.HuntSlime.xp
 scoreboard players set anon_cnoL-r-9_2484 __sandstone 1000
@@ -320,11 +320,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_737.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_737.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_737
 data modify storage prodige_skills:prodigelib Float.var_476.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Slime §8| §b5 Xp §8• §e6 Pts(7)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1048 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSlime
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1049 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntSlime.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1050 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSlime.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1051 set from storage prodige_skills:prodigelib Float.var_476.out
+# prodige_skills::actionshunting::fill -> §6Hunt Slime §8| §35 Xp §8• §e6 Pts(7)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1038 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSlime
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1039 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntSlime.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1040 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntSlime.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1041 set from storage prodige_skills:prodigelib Float.var_476.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro26 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2492 __sandstone = @p prodige_skills.Hunting.total_event.HuntPillager.xp
 scoreboard players set anon_cnoL-r-9_2493 __sandstone 1000
@@ -361,11 +361,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_739.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_739.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_739
 data modify storage prodige_skills:prodigelib Float.var_478.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Pillager §8| §b8 Xp §8• §e9 Pts(8)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1052 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPillager
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1053 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntPillager.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1054 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPillager.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1055 set from storage prodige_skills:prodigelib Float.var_478.out
+# prodige_skills::actionshunting::fill -> §6Hunt Pillager §8| §38 Xp §8• §e9 Pts(8)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1042 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPillager
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1043 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntPillager.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1044 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPillager.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1045 set from storage prodige_skills:prodigelib Float.var_478.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro27 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2501 __sandstone = @p prodige_skills.Hunting.total_event.HuntVindicator.xp
 scoreboard players set anon_cnoL-r-9_2502 __sandstone 1000
@@ -402,11 +402,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_741.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_741.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_741
 data modify storage prodige_skills:prodigelib Float.var_480.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Vindicator §8| §b10 Xp §8• §e12 Pts(9)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1056 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVindicator
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1057 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntVindicator.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1058 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVindicator.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1059 set from storage prodige_skills:prodigelib Float.var_480.out
+# prodige_skills::actionshunting::fill -> §6Hunt Vindicator §8| §310 Xp §8• §e12 Pts(9)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1046 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVindicator
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1047 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntVindicator.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1048 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVindicator.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1049 set from storage prodige_skills:prodigelib Float.var_480.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro28 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2510 __sandstone = @p prodige_skills.Hunting.total_event.HuntEvoker.xp
 scoreboard players set anon_cnoL-r-9_2511 __sandstone 1000
@@ -443,11 +443,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_743.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_743.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_743
 data modify storage prodige_skills:prodigelib Float.var_482.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Evoker §8| §b15 Xp §8• §e20 Pts(10)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1060 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntEvoker
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1061 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntEvoker.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1062 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntEvoker.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1063 set from storage prodige_skills:prodigelib Float.var_482.out
+# prodige_skills::actionshunting::fill -> §6Hunt Evoker §8| §315 Xp §8• §e20 Pts(10)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1050 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntEvoker
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1051 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntEvoker.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1052 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntEvoker.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1053 set from storage prodige_skills:prodigelib Float.var_482.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro29 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2519 __sandstone = @p prodige_skills.Hunting.total_event.HuntVex.xp
 scoreboard players set anon_cnoL-r-9_2520 __sandstone 1000
@@ -484,11 +484,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_745.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_745.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_745
 data modify storage prodige_skills:prodigelib Float.var_484.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Vex §8| §b8 Xp §8• §e10 Pts(11)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1064 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVex
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1065 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntVex.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1066 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVex.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1067 set from storage prodige_skills:prodigelib Float.var_484.out
+# prodige_skills::actionshunting::fill -> §6Hunt Vex §8| §38 Xp §8• §e10 Pts(11)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1054 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVex
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1055 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntVex.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1056 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntVex.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1057 set from storage prodige_skills:prodigelib Float.var_484.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro30 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2528 __sandstone = @p prodige_skills.Hunting.total_event.HuntGuardian.xp
 scoreboard players set anon_cnoL-r-9_2529 __sandstone 1000
@@ -525,11 +525,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_747.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_747.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_747
 data modify storage prodige_skills:prodigelib Float.var_486.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Guardian §8| §b8 Xp §8• §e10 Pts(12)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1068 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGuardian
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1069 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntGuardian.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1070 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGuardian.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1071 set from storage prodige_skills:prodigelib Float.var_486.out
+# prodige_skills::actionshunting::fill -> §6Hunt Guardian §8| §38 Xp §8• §e10 Pts(12)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1058 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGuardian
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1059 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntGuardian.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1060 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGuardian.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1061 set from storage prodige_skills:prodigelib Float.var_486.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro31 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2537 __sandstone = @p prodige_skills.Hunting.total_event.HuntElderGuardian.xp
 scoreboard players set anon_cnoL-r-9_2538 __sandstone 1000
@@ -566,11 +566,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_749.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_749.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_749
 data modify storage prodige_skills:prodigelib Float.var_488.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Elder Guardian §8| §b20 Xp §8• §e25 Pts(13)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1072 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntElderGuardian
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1073 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntElderGuardian.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1074 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntElderGuardian.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1075 set from storage prodige_skills:prodigelib Float.var_488.out
+# prodige_skills::actionshunting::fill -> §6Hunt Elder Guardian §8| §320 Xp §8• §e25 Pts(13)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1062 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntElderGuardian
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1063 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntElderGuardian.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1064 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntElderGuardian.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1065 set from storage prodige_skills:prodigelib Float.var_488.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro32 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2546 __sandstone = @p prodige_skills.Hunting.total_event.HuntBlaze.xp
 scoreboard players set anon_cnoL-r-9_2547 __sandstone 1000
@@ -607,11 +607,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_751.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_751.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_751
 data modify storage prodige_skills:prodigelib Float.var_490.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Blaze §8| §b8 Xp §8• §e10 Pts(14)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1076 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntBlaze
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1077 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntBlaze.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1078 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntBlaze.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1079 set from storage prodige_skills:prodigelib Float.var_490.out
+# prodige_skills::actionshunting::fill -> §6Hunt Blaze §8| §38 Xp §8• §e10 Pts(14)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1066 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntBlaze
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1067 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntBlaze.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1068 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntBlaze.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1069 set from storage prodige_skills:prodigelib Float.var_490.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro33 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2555 __sandstone = @p prodige_skills.Hunting.total_event.HuntGhast.xp
 scoreboard players set anon_cnoL-r-9_2556 __sandstone 1000
@@ -648,11 +648,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_753.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_753.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_753
 data modify storage prodige_skills:prodigelib Float.var_492.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Ghast §8| §b12 Xp §8• §e15 Pts(15)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1080 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGhast
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1081 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntGhast.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1082 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGhast.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1083 set from storage prodige_skills:prodigelib Float.var_492.out
+# prodige_skills::actionshunting::fill -> §6Hunt Ghast §8| §312 Xp §8• §e15 Pts(15)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1070 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGhast
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1071 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntGhast.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1072 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntGhast.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1073 set from storage prodige_skills:prodigelib Float.var_492.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro34 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2564 __sandstone = @p prodige_skills.Hunting.total_event.HuntWitherSkeleton.xp
 scoreboard players set anon_cnoL-r-9_2565 __sandstone 1000
@@ -689,11 +689,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_755.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_755.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_755
 data modify storage prodige_skills:prodigelib Float.var_494.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Wither Skeleton §8| §b12 Xp §8• §e15 Pts(16)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1084 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitherSkeleton
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1085 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntWitherSkeleton.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1086 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitherSkeleton.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1087 set from storage prodige_skills:prodigelib Float.var_494.out
+# prodige_skills::actionshunting::fill -> §6Hunt Wither Skeleton §8| §312 Xp §8• §e15 Pts(16)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1074 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitherSkeleton
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1075 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntWitherSkeleton.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1076 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntWitherSkeleton.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1077 set from storage prodige_skills:prodigelib Float.var_494.out
 function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro35 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting
 scoreboard players operation anon_cnoL-r-9_2573 __sandstone = @p prodige_skills.Hunting.total_event.HuntPiglinBrute.xp
 scoreboard players set anon_cnoL-r-9_2574 __sandstone 1000
@@ -730,9 +730,9 @@ data modify storage __sandstone:variable anon_cnoL-r-9_757.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_757.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_757
 data modify storage prodige_skills:prodigelib Float.var_496.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionshunting::fill -> §6Hunt Piglin Brute §8| §b12 Xp §8• §e15 Pts(17)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1088 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPiglinBrute
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1089 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntPiglinBrute.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1090 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPiglinBrute.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1091 set from storage prodige_skills:prodigelib Float.var_496.out
+# prodige_skills::actionshunting::fill -> §6Hunt Piglin Brute §8| §312 Xp §8• §e15 Pts(17)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1078 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPiglinBrute
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1079 set from storage prodige_skills:prodigelib Float.Hunting.total_event.HuntPiglinBrute.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1080 int 1 run scoreboard players get @p prodige_skills.Hunting.total_event.HuntPiglinBrute.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionshunting.macro_arg_1081 set from storage prodige_skills:prodigelib Float.var_496.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/9/fill/with_macro36 with storage prodige_skills:prodigelib gui.prodige_skills.actionshunting

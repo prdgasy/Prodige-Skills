@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §eDune Sovereign$(macro_arg_3979)($(macro_arg_3978))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3978)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro141/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §eDune Sovereign$(macro_arg_4005)($(macro_arg_4004))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4004)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro141/execute_unless

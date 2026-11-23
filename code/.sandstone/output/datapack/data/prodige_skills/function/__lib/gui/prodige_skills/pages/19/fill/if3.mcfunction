@@ -49,17 +49,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1809.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_1809.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1809
 data modify storage prodige_skills:prodigelib Float.var_973.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::abilitieshunting::fill -> §4§lHunter's Focus §8[§4§l$(macro_arg_2420)§8] $(macro_arg_2421)(13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2419 set from storage __sandstone:variable anon_cnoL-r-9_1799
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2420 set from storage prodige_skills:prodigelib RomanNumbers.out_121
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2421 set from storage __sandstone:variable anon_cnoL-r-9_1804
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2422 set from storage prodige_skills:prodigelib RomanNumbers.out_121
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2423 set from storage prodige_skills:prodigelib RomanNumbers.out_122
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2424 set from storage prodige_skills:prodigelib Float.Hunting.ability.buff.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2425 set from storage prodige_skills:prodigelib Float.var_973.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2426 set from storage __sandstone:variable anon_cnoL-r-9_1806
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2427 set from storage prodige_skills:prodigelib RomanNumbers.out_123
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2428 int 1 run scoreboard players get anon_cnoL-r-9_5826 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2429 set from storage __sandstone:variable anon_cnoL-r-9_1805
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2430 int 1 run scoreboard players get @p prodige_skills.Hunting.ability.price
+# prodige_skills::abilitieshunting::fill -> §4§lHunter's Focus §8[§4§l$(macro_arg_2410)§8] $(macro_arg_2411)(13)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2409 set from storage __sandstone:variable anon_cnoL-r-9_1799
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2410 set from storage prodige_skills:prodigelib RomanNumbers.out_121
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2411 set from storage __sandstone:variable anon_cnoL-r-9_1804
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2412 set from storage prodige_skills:prodigelib RomanNumbers.out_121
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2413 set from storage prodige_skills:prodigelib RomanNumbers.out_122
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2414 set from storage prodige_skills:prodigelib Float.Hunting.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2415 set from storage prodige_skills:prodigelib Float.var_973.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2416 set from storage __sandstone:variable anon_cnoL-r-9_1806
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2417 set from storage prodige_skills:prodigelib RomanNumbers.out_123
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2418 int 1 run scoreboard players get anon_cnoL-r-9_5826 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2419 set from storage __sandstone:variable anon_cnoL-r-9_1805
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting.macro_arg_2420 int 1 run scoreboard players get @p prodige_skills.Hunting.ability.price
 return run function prodige_skills:__lib/gui/prodige_skills/pages/19/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.abilitieshunting

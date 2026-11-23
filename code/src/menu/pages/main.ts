@@ -52,8 +52,8 @@ export class Main {
         '§d§l┃ Your Unclaimed Rewards',
         '§d┃ §7Achievement, crate and skill rewards wait here.',
         '§d┃ §7Claim each reward whenever you are ready.',
-        '§d┃',
-        $`§d┃ §8• §7Rewards waiting: §e${pending}`,
+        '',
+        $`§8• §7Rewards waiting: §e${pending}`,
         '',
         '§eClick to view your rewards!'
       ],
@@ -68,7 +68,7 @@ export class Main {
     p.emit(new Button('amethyst_shard', 4, '§bPreferences',
       [
         '§b§l┃ Preferences',
-        '§b┃ Edit your preferences and you playing ect...',
+        '§b┃ §7Edit your preferences and your playing.',
         '',
         '§eClick to edit your preferences!'
       ], () => g.switch(Preferences.getName())
@@ -92,16 +92,16 @@ export class Main {
     }
 
     return p.emit(
-      new Button('emerald', 21, $`§aShop §8• §e${Player.pts}Pts`,
+      new Button('emerald', 21, $`§aShop §8• §e${Player.pts} Pts`,
         [
           '§a§l┃ Skill Shop',
           '§a┃ §7Browse items, boosters, crates, and titles.',
           '§a┃ §7Spend your points on useful rewards.',
           '',
-          '§a§l┃ Active Boosters',
-          ...boosterStatuses.map(status => $`§a┃ §8• ${status}`),
+          '§f§lActive Boosters:',
+          ...boosterStatuses.map(status => $`§8• ${status}`),
           '',
-          $`§8• §7Your balance: §6${Player.pts} Pts`,
+          $`§8• §7Your balance: §e${Player.pts} Pts`,
           '',
           '§eClick to explore the shop!'
         ], () => {

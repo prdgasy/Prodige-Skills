@@ -33,11 +33,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_213.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_213.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_213
 data modify storage prodige_skills:prodigelib Float.var_42.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Stone §8| §b1 Xp §8• §e2 Pts(0)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_138 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Stone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_139 set from storage prodige_skills:prodigelib Float.Mining.total_event.Stone.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_140 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Stone.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_141 set from storage prodige_skills:prodigelib Float.var_42.out
+# prodige_skills::actionsmining::fill -> §6Stone §8| §31 Xp §8• §e2 Pts(0)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_128 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Stone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_129 set from storage prodige_skills:prodigelib Float.Mining.total_event.Stone.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_130 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Stone.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_131 set from storage prodige_skills:prodigelib Float.var_42.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_455 __sandstone = @p prodige_skills.Mining.total_event.Deepslate.xp
 scoreboard players set anon_cnoL-r-9_456 __sandstone 1000
@@ -74,11 +74,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_215.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_215.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_215
 data modify storage prodige_skills:prodigelib Float.var_44.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate §8| §b2 Xp §8• §e3 Pts(1)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_142 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Deepslate
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_143 set from storage prodige_skills:prodigelib Float.Mining.total_event.Deepslate.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_144 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Deepslate.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_145 set from storage prodige_skills:prodigelib Float.var_44.out
+# prodige_skills::actionsmining::fill -> §6Deepslate §8| §32 Xp §8• §e3 Pts(1)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_132 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Deepslate
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_133 set from storage prodige_skills:prodigelib Float.Mining.total_event.Deepslate.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_134 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.Deepslate.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_135 set from storage prodige_skills:prodigelib Float.var_44.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_464 __sandstone = @p prodige_skills.Mining.total_event.CoalOre.xp
 scoreboard players set anon_cnoL-r-9_465 __sandstone 1000
@@ -115,11 +115,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_217.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_217.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_217
 data modify storage prodige_skills:prodigelib Float.var_46.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Coal Ore §8| §b5 Xp §8• §e5 Pts(2)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_146 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CoalOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_147 set from storage prodige_skills:prodigelib Float.Mining.total_event.CoalOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_148 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CoalOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_149 set from storage prodige_skills:prodigelib Float.var_46.out
+# prodige_skills::actionsmining::fill -> §6Coal Ore §8| §35 Xp §8• §e5 Pts(2)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_136 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CoalOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_137 set from storage prodige_skills:prodigelib Float.Mining.total_event.CoalOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_138 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CoalOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_139 set from storage prodige_skills:prodigelib Float.var_46.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_473 __sandstone = @p prodige_skills.Mining.total_event.CopperOre.xp
 scoreboard players set anon_cnoL-r-9_474 __sandstone 1000
@@ -156,11 +156,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_219.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_219.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_219
 data modify storage prodige_skills:prodigelib Float.var_48.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Copper Ore §8| §b6 Xp §8• §e6 Pts(3)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_150 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CopperOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_151 set from storage prodige_skills:prodigelib Float.Mining.total_event.CopperOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_152 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CopperOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_153 set from storage prodige_skills:prodigelib Float.var_48.out
+# prodige_skills::actionsmining::fill -> §6Copper Ore §8| §36 Xp §8• §e6 Pts(3)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_140 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CopperOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_141 set from storage prodige_skills:prodigelib Float.Mining.total_event.CopperOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_142 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.CopperOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_143 set from storage prodige_skills:prodigelib Float.var_48.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro4 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_482 __sandstone = @p prodige_skills.Mining.total_event.IronOre.xp
 scoreboard players set anon_cnoL-r-9_483 __sandstone 1000
@@ -197,11 +197,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_221.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_221.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_221
 data modify storage prodige_skills:prodigelib Float.var_50.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Iron Ore §8| §b10 Xp §8• §e10 Pts(4)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_154 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.IronOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_155 set from storage prodige_skills:prodigelib Float.Mining.total_event.IronOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_156 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.IronOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_157 set from storage prodige_skills:prodigelib Float.var_50.out
+# prodige_skills::actionsmining::fill -> §6Iron Ore §8| §310 Xp §8• §e10 Pts(4)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_144 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.IronOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_145 set from storage prodige_skills:prodigelib Float.Mining.total_event.IronOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_146 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.IronOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_147 set from storage prodige_skills:prodigelib Float.var_50.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro5 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_491 __sandstone = @p prodige_skills.Mining.total_event.GoldOre.xp
 scoreboard players set anon_cnoL-r-9_492 __sandstone 1000
@@ -238,11 +238,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_223.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_223.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_223
 data modify storage prodige_skills:prodigelib Float.var_52.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Gold Ore §8| §b15 Xp §8• §e15 Pts(5)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_158 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.GoldOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_159 set from storage prodige_skills:prodigelib Float.Mining.total_event.GoldOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_160 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.GoldOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_161 set from storage prodige_skills:prodigelib Float.var_52.out
+# prodige_skills::actionsmining::fill -> §6Gold Ore §8| §315 Xp §8• §e15 Pts(5)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_148 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.GoldOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_149 set from storage prodige_skills:prodigelib Float.Mining.total_event.GoldOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_150 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.GoldOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_151 set from storage prodige_skills:prodigelib Float.var_52.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro6 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_500 __sandstone = @p prodige_skills.Mining.total_event.RedstoneOre.xp
 scoreboard players set anon_cnoL-r-9_501 __sandstone 1000
@@ -279,11 +279,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_225.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_225.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_225
 data modify storage prodige_skills:prodigelib Float.var_54.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Redstone Ore §8| §b12 Xp §8• §e10 Pts(6)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_162 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.RedstoneOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_163 set from storage prodige_skills:prodigelib Float.Mining.total_event.RedstoneOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_164 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.RedstoneOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_165 set from storage prodige_skills:prodigelib Float.var_54.out
+# prodige_skills::actionsmining::fill -> §6Redstone Ore §8| §312 Xp §8• §e10 Pts(6)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_152 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.RedstoneOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_153 set from storage prodige_skills:prodigelib Float.Mining.total_event.RedstoneOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_154 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.RedstoneOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_155 set from storage prodige_skills:prodigelib Float.var_54.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro7 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_509 __sandstone = @p prodige_skills.Mining.total_event.LapisOre.xp
 scoreboard players set anon_cnoL-r-9_510 __sandstone 1000
@@ -320,11 +320,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_227.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_227.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_227
 data modify storage prodige_skills:prodigelib Float.var_56.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Lapis Ore §8| §b12 Xp §8• §e10 Pts(7)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_166 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.LapisOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_167 set from storage prodige_skills:prodigelib Float.Mining.total_event.LapisOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_168 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.LapisOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_169 set from storage prodige_skills:prodigelib Float.var_56.out
+# prodige_skills::actionsmining::fill -> §6Lapis Ore §8| §312 Xp §8• §e10 Pts(7)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_156 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.LapisOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_157 set from storage prodige_skills:prodigelib Float.Mining.total_event.LapisOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_158 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.LapisOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_159 set from storage prodige_skills:prodigelib Float.var_56.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro8 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_518 __sandstone = @p prodige_skills.Mining.total_event.DiamondOre.xp
 scoreboard players set anon_cnoL-r-9_519 __sandstone 1000
@@ -361,11 +361,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_229.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_229.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_229
 data modify storage prodige_skills:prodigelib Float.var_58.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Diamond Ore §8| §b50 Xp §8• §e40 Pts(8)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_170 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DiamondOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_171 set from storage prodige_skills:prodigelib Float.Mining.total_event.DiamondOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_172 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DiamondOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_173 set from storage prodige_skills:prodigelib Float.var_58.out
+# prodige_skills::actionsmining::fill -> §6Diamond Ore §8| §350 Xp §8• §e40 Pts(8)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_160 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DiamondOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_161 set from storage prodige_skills:prodigelib Float.Mining.total_event.DiamondOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_162 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DiamondOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_163 set from storage prodige_skills:prodigelib Float.var_58.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro9 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_527 __sandstone = @p prodige_skills.Mining.total_event.AncientDebris.xp
 scoreboard players set anon_cnoL-r-9_528 __sandstone 1000
@@ -402,11 +402,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_231.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_231.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_231
 data modify storage prodige_skills:prodigelib Float.var_60.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Ancient Debris §8| §b150 Xp §8• §e100 Pts(9)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_174 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.AncientDebris
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_175 set from storage prodige_skills:prodigelib Float.Mining.total_event.AncientDebris.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_176 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.AncientDebris.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_177 set from storage prodige_skills:prodigelib Float.var_60.out
+# prodige_skills::actionsmining::fill -> §6Ancient Debris §8| §3150 Xp §8• §e100 Pts(9)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_164 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.AncientDebris
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_165 set from storage prodige_skills:prodigelib Float.Mining.total_event.AncientDebris.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_166 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.AncientDebris.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_167 set from storage prodige_skills:prodigelib Float.var_60.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro10 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_536 __sandstone = @p prodige_skills.Mining.total_event.DeepslateCoalOre.xp
 scoreboard players set anon_cnoL-r-9_537 __sandstone 1000
@@ -443,11 +443,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_233.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_233.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_233
 data modify storage prodige_skills:prodigelib Float.var_62.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Coal Ore §8| §b6 Xp §8• §e6 Pts(10)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_178 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCoalOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_179 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateCoalOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_180 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCoalOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_181 set from storage prodige_skills:prodigelib Float.var_62.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Coal Ore §8| §36 Xp §8• §e6 Pts(10)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_168 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCoalOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_169 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateCoalOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_170 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCoalOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_171 set from storage prodige_skills:prodigelib Float.var_62.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro11 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_545 __sandstone = @p prodige_skills.Mining.total_event.DeepslateCopperOre.xp
 scoreboard players set anon_cnoL-r-9_546 __sandstone 1000
@@ -484,11 +484,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_235.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_235.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_235
 data modify storage prodige_skills:prodigelib Float.var_64.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Copper Ore §8| §b7 Xp §8• §e7 Pts(11)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_182 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCopperOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_183 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateCopperOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_184 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCopperOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_185 set from storage prodige_skills:prodigelib Float.var_64.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Copper Ore §8| §37 Xp §8• §e7 Pts(11)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_172 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCopperOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_173 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateCopperOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_174 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateCopperOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_175 set from storage prodige_skills:prodigelib Float.var_64.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro12 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_554 __sandstone = @p prodige_skills.Mining.total_event.DeepslateIronOre.xp
 scoreboard players set anon_cnoL-r-9_555 __sandstone 1000
@@ -525,11 +525,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_237.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_237.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_237
 data modify storage prodige_skills:prodigelib Float.var_66.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Iron Ore §8| §b11 Xp §8• §e11 Pts(12)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_186 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateIronOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_187 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateIronOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_188 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateIronOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_189 set from storage prodige_skills:prodigelib Float.var_66.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Iron Ore §8| §311 Xp §8• §e11 Pts(12)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_176 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateIronOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_177 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateIronOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_178 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateIronOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_179 set from storage prodige_skills:prodigelib Float.var_66.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro13 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_563 __sandstone = @p prodige_skills.Mining.total_event.DeepslateGoldOre.xp
 scoreboard players set anon_cnoL-r-9_564 __sandstone 1000
@@ -566,11 +566,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_239.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_239.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_239
 data modify storage prodige_skills:prodigelib Float.var_68.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Gold Ore §8| §b16 Xp §8• §e16 Pts(13)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_190 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateGoldOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_191 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateGoldOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_192 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateGoldOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_193 set from storage prodige_skills:prodigelib Float.var_68.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Gold Ore §8| §316 Xp §8• §e16 Pts(13)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_180 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateGoldOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_181 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateGoldOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_182 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateGoldOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_183 set from storage prodige_skills:prodigelib Float.var_68.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro14 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_572 __sandstone = @p prodige_skills.Mining.total_event.DeepslateRedstoneOre.xp
 scoreboard players set anon_cnoL-r-9_573 __sandstone 1000
@@ -607,11 +607,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_241.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_241.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_241
 data modify storage prodige_skills:prodigelib Float.var_70.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Redstone Ore §8| §b14 Xp §8• §e12 Pts(14)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_194 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateRedstoneOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_195 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateRedstoneOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_196 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateRedstoneOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_197 set from storage prodige_skills:prodigelib Float.var_70.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Redstone Ore §8| §314 Xp §8• §e12 Pts(14)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_184 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateRedstoneOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_185 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateRedstoneOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_186 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateRedstoneOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_187 set from storage prodige_skills:prodigelib Float.var_70.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro15 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_581 __sandstone = @p prodige_skills.Mining.total_event.DeepslateLapisOre.xp
 scoreboard players set anon_cnoL-r-9_582 __sandstone 1000
@@ -648,11 +648,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_243.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_243.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_243
 data modify storage prodige_skills:prodigelib Float.var_72.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Lapis Ore §8| §b14 Xp §8• §e12 Pts(15)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_198 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateLapisOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_199 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateLapisOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_200 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateLapisOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_201 set from storage prodige_skills:prodigelib Float.var_72.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Lapis Ore §8| §314 Xp §8• §e12 Pts(15)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_188 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateLapisOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_189 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateLapisOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_190 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateLapisOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_191 set from storage prodige_skills:prodigelib Float.var_72.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro16 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_590 __sandstone = @p prodige_skills.Mining.total_event.DeepslateDiamondOre.xp
 scoreboard players set anon_cnoL-r-9_591 __sandstone 1000
@@ -689,11 +689,11 @@ data modify storage __sandstone:variable anon_cnoL-r-9_245.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_245.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_245
 data modify storage prodige_skills:prodigelib Float.var_74.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Diamond Ore §8| §b55 Xp §8• §e45 Pts(16)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_202 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateDiamondOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_203 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateDiamondOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_204 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateDiamondOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_205 set from storage prodige_skills:prodigelib Float.var_74.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Diamond Ore §8| §355 Xp §8• §e45 Pts(16)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_192 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateDiamondOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_193 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateDiamondOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_194 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateDiamondOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_195 set from storage prodige_skills:prodigelib Float.var_74.out
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro17 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 scoreboard players operation anon_cnoL-r-9_599 __sandstone = @p prodige_skills.Mining.total_event.DeepslateEmeraldOre.xp
 scoreboard players set anon_cnoL-r-9_600 __sandstone 1000
@@ -730,9 +730,9 @@ data modify storage __sandstone:variable anon_cnoL-r-9_247.env_1 set from storag
 data modify storage __sandstone:variable anon_cnoL-r-9_247.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_247
 data modify storage prodige_skills:prodigelib Float.var_76.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::actionsmining::fill -> §6Deepslate Emerald Ore §8| §b60 Xp §8• §e50 Pts(17)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_206 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateEmeraldOre
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_207 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateEmeraldOre.xp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_208 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateEmeraldOre.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_209 set from storage prodige_skills:prodigelib Float.var_76.out
+# prodige_skills::actionsmining::fill -> §6Deepslate Emerald Ore §8| §360 Xp §8• §e50 Pts(17)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_196 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateEmeraldOre
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_197 set from storage prodige_skills:prodigelib Float.Mining.total_event.DeepslateEmeraldOre.xp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_198 int 1 run scoreboard players get @p prodige_skills.Mining.total_event.DeepslateEmeraldOre.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_199 set from storage prodige_skills:prodigelib Float.var_76.out
 return run function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro18 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining

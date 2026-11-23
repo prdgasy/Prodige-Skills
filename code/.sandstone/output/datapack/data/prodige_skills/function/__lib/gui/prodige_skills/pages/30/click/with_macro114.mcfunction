@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Dragon Tracker$(macro_arg_3844)($(macro_arg_3843))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3843)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro114/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §6Dragon Tracker$(macro_arg_3870)($(macro_arg_3869))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3869)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro114/execute_unless

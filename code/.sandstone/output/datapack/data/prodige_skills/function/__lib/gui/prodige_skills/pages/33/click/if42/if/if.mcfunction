@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4431 int 1 run scoreboard players get anon_cnoL-r-9_6936 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4432 int 1 run scoreboard players get @p prodige_skills.reward.pending.beasttracker_blade
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4433 int 1 run scoreboard players get @p prodige_skills.reward.pending.beasttracker_blade
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4461 int 1 run scoreboard players get anon_cnoL-r-9_6936 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4462 int 1 run scoreboard players get @p prodige_skills.reward.pending.beasttracker_blade
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4463 int 1 run scoreboard players get @p prodige_skills.reward.pending.beasttracker_blade
 return run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro42 with storage prodige_skills:prodigelib gui.prodige_skills.vault

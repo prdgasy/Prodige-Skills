@@ -48,7 +48,7 @@ export class Items {
       )
     );
 
-    p.add(Shop.balance(), Menu.back(g, Shop));
+    p.add(() => Shop.balance(p), Menu.back(g, Shop));
 
     return p;
   }
@@ -72,20 +72,6 @@ export class Items {
   }
 
   private static displayItem(tool: Tool, slot: number) {
-    const characteristics: string[] = [];
-
-    if (tool.characteristics?.length) {
-      characteristics.push("", "§d§l┃ Special Characteristics");
-
-      for (const characteristic of tool.characteristics) {
-        Text.wrap(characteristic, '§7').forEach((line, i) => {
-          characteristics.push(
-            `§d┃ ${i === 0 ? '§8• ' : '  '}${line}`
-          );
-        });
-      }
-    }
-
     const statLore: string[] = ['§d§l┃ Stats'];
 
     for (const [name, stat] of Object.entries(tool.stats)) {
@@ -101,8 +87,7 @@ export class Items {
       [
         "§9Prodige Skills",
         "",
-        ...Text.wrap(tool.description ?? '', '§7'),
-        ...characteristics,
+        ...Text.wrap(tool.description!, '§7'),
         "",
         ...statLore,
         "",
@@ -112,7 +97,7 @@ export class Items {
         "",
         "§eClick to buy!",
       ],
-      () => tool.buy()
+      () => tool.buy(), 1, ['!attribute_modifiers', 'enchantment_glint_override=true']
     );
   }
 }

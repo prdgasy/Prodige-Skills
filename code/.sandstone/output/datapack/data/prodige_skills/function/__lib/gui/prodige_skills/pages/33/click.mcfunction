@@ -73,15 +73,15 @@ execute if score @p prodige_skills.reward.pending.x4_xp_booster matches 1.. run 
 execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if70
 scoreboard players set anon_cnoL-r-9_6993 __sandstone 0
 execute if score anon_cnoL-r-9_6852 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if71
-data modify storage __sandstone:variable anon_cnoL-r-9_3173 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3174 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_3213 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3214 set value '§ePrevious'
 execute if score @s prodige_skills.menu.rewards.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if72
-# prodige_skills::vault::click -> $(macro_arg_4519)(25)
+# prodige_skills::vault::click -> $(macro_arg_4549)(25)
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if73/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3175 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3176 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_3215 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3216 set value '§eNext'
 execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_6993 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if74
-# prodige_skills::vault::click -> $(macro_arg_4521)(26)
+# prodige_skills::vault::click -> $(macro_arg_4551)(26)
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if75/if
 execute if score anon_cnoL-r-9_6851 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if76
 # prodige_skills::vault::click -> §cBack(18)

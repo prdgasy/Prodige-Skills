@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dDeepstone Drill §8× §e$(macro_arg_4324)($(macro_arg_4323))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4323)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro6/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dDeepstone Drill §8× §e$(macro_arg_4354)($(macro_arg_4353))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4353)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro6/execute_unless

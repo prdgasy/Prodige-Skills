@@ -28,10 +28,10 @@ execute store result storage prodige_skills:prodigelib Float.unit int 1 run scor
 scoreboard players operation anon_cnoL-r-9_18988 __sandstone = anon_cnoL-r-9_18986 __sandstone
 scoreboard players operation anon_cnoL-r-9_18988 __sandstone %= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_18988 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_3391.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_3391.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_3391.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3391
+data modify storage __sandstone:variable anon_cnoL-r-9_3431.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_3431.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_3431.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3431
 data modify storage prodige_skills:prodigelib Float.var_1560.out set from storage prodige_skills:prodigelib Float.temp
 data modify storage prodige_skills:level_up_args args.progress set from storage prodige_skills:prodigelib Float.var_1560.out
 scoreboard players operation anon_cnoL-r-9_18989 __sandstone = var_1560 prodige_skills.prodigelib.float
@@ -42,8 +42,8 @@ scoreboard players operation anon_cnoL-r-9_18991 __sandstone = anon_cnoL-r-9_189
 scoreboard players operation anon_cnoL-r-9_18991 __sandstone /= 100 __sandstone
 execute if score anon_cnoL-r-9_18991 __sandstone matches ..-1 run scoreboard players set anon_cnoL-r-9_18991 __sandstone 0
 execute if score anon_cnoL-r-9_18991 __sandstone matches 16.. run scoreboard players set anon_cnoL-r-9_18991 __sandstone 15
-execute store result storage __sandstone:variable anon_cnoL-r-9_3392.env_0 int 1 run scoreboard players get anon_cnoL-r-9_18991 __sandstone
-function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_cnoL-r-9_3392
+execute store result storage __sandstone:variable anon_cnoL-r-9_3432.env_0 int 1 run scoreboard players get anon_cnoL-r-9_18991 __sandstone
+function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_cnoL-r-9_3432
 data modify storage prodige_skills:prodigelib bar.out_221 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:level_up_args args.bar set from storage prodige_skills:prodigelib bar.out_221
 scoreboard players operation anon_cnoL-r-9_18992 __sandstone = @p prodige_skills.hunting.xp
@@ -54,10 +54,10 @@ execute store result storage prodige_skills:prodigelib Float.unit int 1 run scor
 scoreboard players operation anon_cnoL-r-9_18994 __sandstone = anon_cnoL-r-9_18992 __sandstone
 scoreboard players operation anon_cnoL-r-9_18994 __sandstone %= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_18994 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_3393.env_0 set from storage prodige_skills:prodigelib Float.sign
-data modify storage __sandstone:variable anon_cnoL-r-9_3393.env_1 set from storage prodige_skills:prodigelib Float.unit
-data modify storage __sandstone:variable anon_cnoL-r-9_3393.env_2 set from storage prodige_skills:prodigelib Float.d0
-function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3393
+data modify storage __sandstone:variable anon_cnoL-r-9_3433.env_0 set from storage prodige_skills:prodigelib Float.sign
+data modify storage __sandstone:variable anon_cnoL-r-9_3433.env_1 set from storage prodige_skills:prodigelib Float.unit
+data modify storage __sandstone:variable anon_cnoL-r-9_3433.env_2 set from storage prodige_skills:prodigelib Float.d0
+function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3433
 data modify storage prodige_skills:prodigelib Float.hunting.xp.out set from storage prodige_skills:prodigelib Float.temp
 data modify storage prodige_skills:level_up_args args.xp set from storage prodige_skills:prodigelib Float.hunting.xp.out
 execute store result storage prodige_skills:level_up_args args.goal int 1 run scoreboard players get @p prodige_skills.hunting.goal

@@ -49,17 +49,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1663.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_1663.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_1663
 data modify storage prodige_skills:prodigelib Float.var_957.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::abilitiesforaging::fill -> §4§lForest Stride §8[§4§l$(macro_arg_2312)§8] $(macro_arg_2313)(13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2311 set from storage __sandstone:variable anon_cnoL-r-9_1653
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2312 set from storage prodige_skills:prodigelib RomanNumbers.out_81
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2313 set from storage __sandstone:variable anon_cnoL-r-9_1658
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2314 set from storage prodige_skills:prodigelib RomanNumbers.out_81
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2315 set from storage prodige_skills:prodigelib RomanNumbers.out_82
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2316 set from storage prodige_skills:prodigelib Float.Foraging.ability.buff.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2317 set from storage prodige_skills:prodigelib Float.var_957.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2318 set from storage __sandstone:variable anon_cnoL-r-9_1660
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2319 set from storage prodige_skills:prodigelib RomanNumbers.out_83
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2320 int 1 run scoreboard players get anon_cnoL-r-9_5622 __sandstone
-data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2321 set from storage __sandstone:variable anon_cnoL-r-9_1659
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2322 int 1 run scoreboard players get @p prodige_skills.Foraging.ability.price
+# prodige_skills::abilitiesforaging::fill -> §4§lForest Stride §8[§4§l$(macro_arg_2302)§8] $(macro_arg_2303)(13)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2301 set from storage __sandstone:variable anon_cnoL-r-9_1653
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2302 set from storage prodige_skills:prodigelib RomanNumbers.out_81
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2303 set from storage __sandstone:variable anon_cnoL-r-9_1658
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2304 set from storage prodige_skills:prodigelib RomanNumbers.out_81
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2305 set from storage prodige_skills:prodigelib RomanNumbers.out_82
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2306 set from storage prodige_skills:prodigelib Float.Foraging.ability.buff.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2307 set from storage prodige_skills:prodigelib Float.var_957.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2308 set from storage __sandstone:variable anon_cnoL-r-9_1660
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2309 set from storage prodige_skills:prodigelib RomanNumbers.out_83
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2310 int 1 run scoreboard players get anon_cnoL-r-9_5622 __sandstone
+data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2311 set from storage __sandstone:variable anon_cnoL-r-9_1659
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging.macro_arg_2312 int 1 run scoreboard players get @p prodige_skills.Foraging.ability.price
 return run function prodige_skills:__lib/gui/prodige_skills/pages/17/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesforaging

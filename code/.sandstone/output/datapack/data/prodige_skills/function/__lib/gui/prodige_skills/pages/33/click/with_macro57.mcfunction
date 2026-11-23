@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6Strata Shaper §8× §e$(macro_arg_4477)($(macro_arg_4476))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4476)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro57/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Strata Shaper §8× §e$(macro_arg_4507)($(macro_arg_4506))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4506)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro57/execute_unless

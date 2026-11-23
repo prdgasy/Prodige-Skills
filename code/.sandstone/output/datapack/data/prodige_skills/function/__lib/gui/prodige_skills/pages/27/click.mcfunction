@@ -19,5 +19,9 @@ execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s It
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:6b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if9/if
 # prodige_skills::crates::click -> §e§c§lMythic Crate Key §8• §610000 Pts(15)
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:15b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if10/if
+data modify storage __sandstone:variable anon_cnoL-r-9_1993 set value '§7No Xp Booster active'
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if11
+data modify storage __sandstone:variable anon_cnoL-r-9_1995 set value '§7No Pts Booster active'
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if12
 # prodige_skills::crates::click -> §cBack(18)
-execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if11/if
+execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if13/if

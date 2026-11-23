@@ -1,5 +1,5 @@
 # prodige_skills::achievementsmining::fill -> §eNether Miner II(17)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1723 set from storage prodige_skills:prodigelib Float.var_790.out
-data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1724 set from storage prodige_skills:prodigelib bar.out_47
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1725 int 1 run scoreboard players get @p prodige_skills.mining.achievement.nether_miner_ii
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1713 set from storage prodige_skills:prodigelib Float.var_790.out
+data modify storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1714 set from storage prodige_skills:prodigelib bar.out_47
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining.macro_arg_1715 int 1 run scoreboard players get @p prodige_skills.mining.achievement.nether_miner_ii
 return run function prodige_skills:__lib/gui/prodige_skills/pages/11/fill/with_macro18 with storage prodige_skills:prodigelib gui.prodige_skills.achievementsmining

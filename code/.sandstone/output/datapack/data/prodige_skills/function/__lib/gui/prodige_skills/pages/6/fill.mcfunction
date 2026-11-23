@@ -51,17 +51,17 @@ data modify storage __sandstone:variable anon_cnoL-r-9_270.env_2 set from storag
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_270
 data modify storage prodige_skills:prodigelib Float.mining.totalXp.out set from storage prodige_skills:prodigelib Float.temp
 # prodige_skills::actionsmining::fill -> §aProgress(21)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_230 set from storage __sandstone:variable anon_cnoL-r-9_258
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_231 set from storage prodige_skills:prodigelib RomanNumbers.out_21
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_232 set from storage __sandstone:variable anon_cnoL-r-9_259
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_233 set from storage __sandstone:variable anon_cnoL-r-9_260
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_234 set from storage __sandstone:variable anon_cnoL-r-9_261
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_220 set from storage __sandstone:variable anon_cnoL-r-9_258
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_221 set from storage prodige_skills:prodigelib RomanNumbers.out_21
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_222 set from storage __sandstone:variable anon_cnoL-r-9_259
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_223 set from storage __sandstone:variable anon_cnoL-r-9_260
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_224 set from storage __sandstone:variable anon_cnoL-r-9_261
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro24 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 # prodige_skills::actionsmining::fill -> §bAbility(22)
 item replace entity @s container.22 with ender_eye[custom_name={text: "§bAbility", italic: false, color: "white"},lore=[{text: "§b§l┃ Skill Ability", italic: false, color: "white"},{text: "§b┃ §7Discover the unique passive ability", italic: false, color: "white"},{text: "§b┃ §7for Mining.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Tier Progression", italic: false, color: "white"},{text: "§b┃ §8• §7Unlock the ability at skill level §e10§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Upgrade it every §e10 skill levels§7.", italic: false, color: "white"},{text: "§b┃ §8• §7Reach up to §cTier X §7at level §e100§7.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§b§l┃ Perks", italic: false, color: "white"},{text: "§b┃ §7Review the current effect and next tier bonus.", italic: false, color: "white"},{text: "§b┃ §7Check level and point requirements to upgrade.", italic: false, color: "white"},{text: "§b┃ §7Toggle the ability perk on or off on its page.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::actionsmining::fill -> §6Actions(23)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_235 set from storage prodige_skills:prodigelib Float.mining.totalXp.out
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_236 int 1 run scoreboard players get @p prodige_skills.mining.totalPts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_225 set from storage prodige_skills:prodigelib Float.mining.totalXp.out
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_226 int 1 run scoreboard players get @p prodige_skills.mining.totalPts
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro25 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 # prodige_skills::actionsmining::fill -> §dAchievements(24)
 item replace entity @s container.24 with diamond[custom_name={text: "§dAchievements", italic: false, color: "white"},lore=[{text: "§d§l┃ Milestones", italic: false, color: "white"},{text: "§d┃ §7Track milestones earned while mastering", italic: false, color: "white"},{text: "§d┃ §7Mining.", italic: false, color: "white"},{text: "§d┃ §7See each requirement and its current status.", italic: false, color: "white"},{text: "§d┃ §7Locked milestones become available in order.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
@@ -72,14 +72,14 @@ item replace entity @s container.20 with diamond_pickaxe[custom_name={text: "§d
 data modify storage __sandstone:variable anon_cnoL-r-9_271 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_272 set value '§ePrevious'
 execute if score @s prodige_skills.menu.actions.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/if9
-# prodige_skills::actionsmining::fill -> $(macro_arg_238)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_237 set from storage __sandstone:variable anon_cnoL-r-9_271
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_238 set from storage __sandstone:variable anon_cnoL-r-9_272
+# prodige_skills::actionsmining::fill -> $(macro_arg_228)(25)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_227 set from storage __sandstone:variable anon_cnoL-r-9_271
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_228 set from storage __sandstone:variable anon_cnoL-r-9_272
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro26 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining
 data modify storage __sandstone:variable anon_cnoL-r-9_273 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_274 set value '§eNext'
 execute if score @s prodige_skills.menu.actions.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/if10
-# prodige_skills::actionsmining::fill -> $(macro_arg_240)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_239 set from storage __sandstone:variable anon_cnoL-r-9_273
-data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_240 set from storage __sandstone:variable anon_cnoL-r-9_274
+# prodige_skills::actionsmining::fill -> $(macro_arg_230)(26)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_229 set from storage __sandstone:variable anon_cnoL-r-9_273
+data modify storage prodige_skills:prodigelib gui.prodige_skills.actionsmining.macro_arg_230 set from storage __sandstone:variable anon_cnoL-r-9_274
 function prodige_skills:__lib/gui/prodige_skills/pages/6/fill/with_macro27 with storage prodige_skills:prodigelib gui.prodige_skills.actionsmining

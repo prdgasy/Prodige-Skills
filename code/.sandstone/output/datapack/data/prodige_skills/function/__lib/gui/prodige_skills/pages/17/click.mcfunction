@@ -2,7 +2,7 @@ scoreboard players set anon_cnoL-r-9_19 __sandstone 0
 function prodige_skills:__lib/gui/prodige_skills/pages/17/click/if
 data modify storage __sandstone:variable anon_cnoL-r-9_1707 set value '§a§lOn'
 execute unless entity @p[tag=prodige_skills.Foraging.ability.toggle] run data modify storage __sandstone:variable anon_cnoL-r-9_1707 set value '§c§lOff'
-# prodige_skills::abilitiesforaging::click -> §d§lAbility Perks §8• [$(macro_arg_2350)§8](4)
+# prodige_skills::abilitiesforaging::click -> §d§lAbility Perks §8• [$(macro_arg_2340)§8](4)
 execute if score anon_cnoL-r-9_19 __sandstone matches 0 unless data entity @s Items[{Slot:4b}] run function prodige_skills:__lib/gui/prodige_skills/pages/17/click/if5/if
 scoreboard players operation anon_cnoL-r-9_5695 __sandstone = @p prodige_skills.foraging.xp
 scoreboard players set anon_cnoL-r-9_5696 __sandstone 1000

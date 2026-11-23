@@ -1,3 +1,3 @@
-# prodige_skills::vault::click -> §6§l§9Verdant Hatchet §8× §e$(macro_arg_4318)($(macro_arg_4317))
+# prodige_skills::vault::click -> §6§l§9Verdant Hatchet §8× §e$(macro_arg_4348)($(macro_arg_4347))
 execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if4/if/if
 scoreboard players set anon_cnoL-r-9_6851 __sandstone 1

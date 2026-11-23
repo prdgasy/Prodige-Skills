@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§aTrailwatch Bow §8× §e$(macro_arg_4426)($(macro_arg_4425))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4425)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro40/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§aTrailwatch Bow §8× §e$(macro_arg_4456)($(macro_arg_4455))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4455)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro40/execute_unless

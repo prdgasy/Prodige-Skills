@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2975 set value 'compass'
-data modify storage __sandstone:variable anon_cnoL-r-9_2973 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2974 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3011 set value 'compass'
+data modify storage __sandstone:variable anon_cnoL-r-9_3009 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3010 set value ' §8• §a§lEQUIP'
