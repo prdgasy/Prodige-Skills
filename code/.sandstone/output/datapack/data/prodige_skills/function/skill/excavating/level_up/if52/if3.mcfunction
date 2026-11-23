@@ -1,5 +1,5 @@
 execute if score @p prodige_skills.farming.level matches ..99 run function prodige_skills:skill/excavating/level_up/if52/if3/if
-scoreboard players set anon_cnoL-r-9_17950 __sandstone 540
+scoreboard players set anon_cnoL-r-9_17950 __sandstone 400
 scoreboard players operation @p prodige_skills.farming.totalXp += anon_cnoL-r-9_17950 __sandstone
 scoreboard players operation anon_cnoL-r-9_17951 __sandstone = @p prodige_skills.farming.goal
 scoreboard players operation anon_cnoL-r-9_17951 __sandstone *= 10 __sandstone

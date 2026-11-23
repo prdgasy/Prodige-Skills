@@ -1,4 +1,4 @@
-scoreboard players add @p prodige_skills.player.pts 5000
+scoreboard players add @p prodige_skills.player.pts 4000
 scoreboard players add @p prodige_skills.reward.pending.x4_pts_booster 1
 scoreboard players set anon_cnoL-r-9_7348 __sandstone 0
 execute store result score anon_cnoL-r-9_7348 __sandstone run random value 0..4

@@ -11,6 +11,7 @@ import { Crate } from './misc/crate';
 import { Achievement } from './skill/achievement';
 import { Title } from './skill/title';
 import { MCFunction, say, tellraw } from 'sandstone';
+import { Reward } from './misc/reward';
 
 MCFunction('load', () => {
   tellraw("@a", "§eProdige Skills Loaded");
@@ -19,13 +20,13 @@ MCFunction('load', () => {
 
 Loader.init();
 Player.init(() => {
-	for (const skill of Object.values(Skill.skills)) skill.firstJoin();
-	Task.firstJoin();
-	Skill.levelUpNotifState.add();
-	for (const type of ['Xp', 'Pts'] as const) {
-		Booster.getMultiplier(type).set(1);
-		Booster.getTimer(type).set(0);
-	}
+  for (const skill of Object.values(Skill.skills)) skill.firstJoin();
+  Task.firstJoin();
+  Skill.levelUpNotifState.add();
+  for (const type of ['Xp', 'Pts'] as const) {
+    Booster.getMultiplier(type).set(1);
+    Booster.getTimer(type).set(0);
+  }
 });
 
 Action.init();
@@ -35,6 +36,7 @@ Booster.init();
 Crate.init();
 Achievement.init();
 Title.init();
+Reward.init(Object.values(Skill.skills));
 
 Global.generateCleanFn();
 

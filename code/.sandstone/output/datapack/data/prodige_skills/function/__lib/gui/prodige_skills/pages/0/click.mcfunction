@@ -83,7 +83,6 @@ execute if score @p prodige_skills.reward.pending.x4_xp_booster matches 1.. run 
 execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_125 __sandstone += @p prodige_skills.reward.pending.x4_pts_booster
 # prodige_skills::main::click -> §dReward Vault §8• §e$(macro_arg_12)(22)
 execute if score anon_cnoL-r-9_2 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run function prodige_skills:__lib/gui/prodige_skills/pages/0/click/if79/if
-# BOOSTERS
 data modify storage __sandstone:variable anon_cnoL-r-9_23 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/click/if80
 data modify storage __sandstone:variable anon_cnoL-r-9_25 set value '§7No Pts Booster active'

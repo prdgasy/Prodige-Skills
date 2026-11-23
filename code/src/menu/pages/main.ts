@@ -76,8 +76,6 @@ export class Main {
   }
 
   private static shop(g: Gui, p: Page) {
-    // Get current boosters
-    comment("BOOSTERS");
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
     for (const type of BOOSTER_TYPE) {
       const color = Booster.getColor(type);
@@ -168,7 +166,7 @@ export class Main {
         raw(`data modify storage ${argsStorage} args.nextRoman set value ""`);
         raw(`data modify storage ${argsStorage} args.rewardLore set value ""`);
         raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.nextRoman set from storage ${rewardStorage} $(skill).$(nextLevel).roman`);
-        raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).mainRewardLore`);
+        raw(`$execute unless score @p $(skill).level matches 100 run data modify storage ${argsStorage} args.rewardLore set from storage ${rewardStorage} $(skill).$(nextLevel).rewardLore`);
       });
 
       const render = MCFunction(`menu/main/skill/${skill.id}/render`, () => {

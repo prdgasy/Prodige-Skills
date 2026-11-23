@@ -14,10 +14,13 @@ export class Bar {
 	private static storage = Data('storage', `${this.ns}:prodigelib`, 'bar');
 	private static barsByLength = Bar.storage.select('barsByLength');
 
+  private static cache = new Set<string>();
 	private id = Bar.nextId++;
 	private out = Bar.storage.select(`out_${this.id}`);
 
 	private ratio: Score;
+
+
 
 	constructor(ratio: Score);
 	constructor(a: Score, b: Score);
@@ -28,13 +31,15 @@ export class Bar {
 
 	}
 
-	private init(length: number, unlockedMotif: string, lockedMotif: string, unlockedColor: string, lockedColor: string) {
+  private init(id: string, length: number, unlockedMotif: string, lockedMotif: string, unlockedColor: string, lockedColor: string) {
+    Bar.cache.add(id);
+    
 		MCFunction(`__lib/bar/progress/set_length_${length}`, () => {
 			const arr: string[] = [];
 			for (let i = 0; i <= length; i++) {
 				arr.push(`${unlockedColor}${unlockedMotif.repeat(i)}${lockedColor}${lockedMotif.repeat(length - i)}§r`);
 			}
-			Bar.barsByLength.select(String(length)).set(arr);
+      Bar.barsByLength.select(String(length)).set(arr);
 		}, { runOnLoad: true, onConflict: 'ignore' });
 	}
 
@@ -43,9 +48,10 @@ export class Bar {
 		const unlockedMotif = options?.unlockedMotif ?? "-";
 		const lockedMotif = options?.lockedMotif ?? "-";
 		const unlockedColor = options?.unlockedColor ?? "§a";
-		const lockedColor = options?.lockedColor ?? "§f";
-
-		this.init(length, unlockedMotif, lockedMotif, unlockedColor, lockedColor);
+    const lockedColor = options?.lockedColor ?? "§f";
+    
+    const id = length + unlockedMotif + lockedMotif + unlockedColor + lockedColor;
+    if (!(id in Bar.cache)) this.init(id, length, unlockedMotif, lockedMotif, unlockedColor, lockedColor);
 
 		const index = this.ratio["*"](length)["/"](100);
 		_.if(index['<'](0), () => index.set(0));

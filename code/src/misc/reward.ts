@@ -149,4 +149,47 @@ export class Reward {
       });
     });
   }
+
+  public static init(skills: Skill[]) {
+    // registerDisplayData
+    const storageId = `${defaultNamespace.toString()}:reward_display`;
+
+    for (const skill of skills) {
+      MCFunction(`menu/reward_display/load/${skill.id}`, () => {
+        const skillData = Data('storage', storageId, skill.id);
+        skillData.set({});
+
+        for (const [level, rewards] of skill.rewards) {
+          skillData.select(String(level)).set({
+            roman: Roman.get(level),
+            rewardLore: Reward.loreComponents(rewards),
+            rewardNotice: Reward.noticeComponents(rewards),
+          });
+        }
+      }, { runOnLoad: true });
+    }
+  }
+
+  private static noticeComponents(rewards: Reward[]): string {
+    return `[${Reward.join(rewards)
+      .map(text => JSON.stringify({
+        text: `${text}\n`,
+        italic: false,
+        color: 'white',
+      }))
+      .join(',')}]`;
+  }
+  private static loreComponents(rewards: Reward[]): string {
+    const bullet = ' §8• ';
+
+    const components = Reward.join(rewards).map(text =>
+      JSON.stringify({
+        text: `${bullet}${text.slice(bullet.length)}`,
+        italic: false,
+        color: 'white',
+      })
+    );
+
+    return `[${components.join(',')}]`;
+  }
 }
