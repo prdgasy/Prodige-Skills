@@ -78,7 +78,7 @@ data modify storage __sandstone:variable anon_cnoL-r-9_1989 set value '§7No Xp 
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if
 data modify storage __sandstone:variable anon_cnoL-r-9_1991 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if2
-# prodige_skills::crates::fill -> §aShop §8• §e$(macro_arg_2558) Pts(21)
+# prodige_skills::crates::fill -> §aShop §8• §e$(macro_arg_2558) Pts(19)
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2558 int 1 run scoreboard players get @p prodige_skills.player.pts
 data modify storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2559 set from storage __sandstone:variable anon_cnoL-r-9_1989
 data modify storage prodige_skills:prodigelib gui.prodige_skills.crates.macro_arg_2560 set from storage __sandstone:variable anon_cnoL-r-9_1991

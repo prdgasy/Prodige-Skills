@@ -105,7 +105,7 @@ export class Shop {
     return new Button(
       "name_tag",
       16,
-      "§a§lTitles",
+      "§aTitles",
       [
         '§a§l┃ Make Your Mark',
         ...Text.wrap('Unlock titles through skill milestones or purchase them here.', '§a┃ §7'),
@@ -122,6 +122,7 @@ export class Shop {
 
   public static balance(p: Page) {
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
+
     for (const type of BOOSTER_TYPE) {
       const color = Booster.getColor(type);
       const multiplier = Booster.getMultiplier(type);
@@ -129,14 +130,14 @@ export class Shop {
       const status = DataVariable(`§7No ${type} Booster active`);
       _.if(timer['>'](0), () => {
         _.with([multiplier, timer], () =>
-          S.data.modify(status).set.value(S`${color}x${multiplier} ${type} Booster §8• §c${timer}m`)
+          S.data.modify(status).set.value(S`"${color}x${multiplier} ${type} Booster §8• §c${timer}m"`)
         );
       });
       boosterStatuses.push(status);
     }
 
     return p.emit(
-      new Button('emerald', 21, $`§aShop §8• §e${Player.pts} Pts`,
+      new Button('emerald', 19, $`§aShop §8• §e${Player.pts} Pts`,
         [
           '§a§l┃ Skill Shop',
           '§a┃ §7Browse items, boosters, crates, and titles.',

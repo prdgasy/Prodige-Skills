@@ -77,6 +77,7 @@ export class Main {
 
   private static shop(g: Gui, p: Page) {
     // Get current boosters
+    comment("BOOSTERS");
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
     for (const type of BOOSTER_TYPE) {
       const color = Booster.getColor(type);
@@ -85,7 +86,7 @@ export class Main {
       const status = DataVariable(`§7No ${type} Booster active`);
       _.if(timer['>'](0), () => {
         _.with([multiplier, timer], () =>
-          S.data.modify(status).set.value(S`${color}x${multiplier} ${type} Booster §8• §c${timer}m`)
+          S.data.modify(status).set.value(S`"${color}x${multiplier} ${type} Booster §8• §c${timer}m"`)
         );
       });
       boosterStatuses.push(status);

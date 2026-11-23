@@ -1,2 +1,2 @@
-# prodige_skills::epic_rewards::click -> §3307 Xp in a random Skill(1)
+# prodige_skills::epic_rewards::click -> §3274 Xp in a random Skill(1)
 execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:1b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

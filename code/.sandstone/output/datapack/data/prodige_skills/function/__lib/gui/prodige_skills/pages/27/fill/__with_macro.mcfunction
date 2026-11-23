@@ -1,1 +1,1 @@
-$data modify storage __sandstone:variable anon_cnoL-r-9_1989 set value §bx$(env_0) Xp Booster §8• §c$(env_1)m
+$data modify storage __sandstone:variable anon_cnoL-r-9_1989 set value "§bx$(env_0) Xp Booster §8• §c$(env_1)m"

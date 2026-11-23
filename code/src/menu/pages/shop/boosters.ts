@@ -29,7 +29,7 @@ export class Boosters {
     return new Button(
       "experience_bottle",
       20,
-      "§b§lBoosters",
+      "§bBoosters",
       [
         '§b§l┃ Accelerate Progress',
         ...Text.wrap('Temporarily multiply XP or points from skill actions.', '§b┃ §7'),
@@ -44,7 +44,7 @@ export class Boosters {
       slot,
       `${color}§l${multiplier}x ${type} Booster`,
       [
-        `§${color}§l┃ ${type} Boost`,
+        `${color}§l┃ ${type} Boost`,
         ...Text.wrap(
           type === 'Xp'
             ? `Earn ${multiplier} times more skill XP from your actions.`

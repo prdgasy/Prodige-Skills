@@ -78,10 +78,10 @@ export class Titles {
     return new Button(
       "name_tag",
       20,
-      "§d§lTitles",
+      "§aTitles",
       [
-        '§d§l┃ Make Your Mark',
-        ...Text.wrap('Unlock titles through skill milestones or purchase them here.', '§d┃ §7')
+        '§a§l┃ Make Your Mark',
+        ...Text.wrap('Unlock titles through skill milestones or purchase them here.', '§a┃ §7')
       ]
     );
   }

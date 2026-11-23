@@ -60,15 +60,15 @@ item replace entity @s container.10 with diamond_pickaxe[custom_name={text: "§9
 item replace entity @s container.12 with experience_bottle[custom_name={text: "§bBoosters", italic: false, color: "white"},lore=[{text: "§b§l┃ Accelerate Progress", italic: false, color: "white"},{text: "§b┃ §7Temporarily multiply XP or points", italic: false, color: "white"},{text: "§b┃ §7from skill actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to view the boosters!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::shop::fill -> §5Crates(14)
 item replace entity @s container.14 with ender_chest[custom_name={text: "§5Crates", italic: false, color: "white"},lore=[{text: "§5§l┃ Rewards & Surprises", italic: false, color: "white"},{text: "§5┃ §7Buy matching keys for several", italic: false, color: "white"},{text: "§5┃ §7rolls of points, skill XP,", italic: false, color: "white"},{text: "§5┃ §7boosters, and gear.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to browse the crates!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::shop::fill -> §a§lTitles(16)
-item replace entity @s container.16 with name_tag[custom_name={text: "§a§lTitles", italic: false, color: "white"},lore=[{text: "§a§l┃ Make Your Mark", italic: false, color: "white"},{text: "§a┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§a┃ §7or purchase them here.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to browse the titles.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::shop::fill -> §aTitles(16)
+item replace entity @s container.16 with name_tag[custom_name={text: "§aTitles", italic: false, color: "white"},lore=[{text: "§a§l┃ Make Your Mark", italic: false, color: "white"},{text: "§a┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§a┃ §7or purchase them here.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to browse the titles.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::shop::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
 data modify storage __sandstone:variable anon_cnoL-r-9_1941 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/fill/if
 data modify storage __sandstone:variable anon_cnoL-r-9_1943 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/21/fill/if2
-# prodige_skills::shop::fill -> §aShop §8• §e$(macro_arg_2510) Pts(21)
+# prodige_skills::shop::fill -> §aShop §8• §e$(macro_arg_2510) Pts(19)
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2510 int 1 run scoreboard players get @p prodige_skills.player.pts
 data modify storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2511 set from storage __sandstone:variable anon_cnoL-r-9_1941
 data modify storage prodige_skills:prodigelib gui.prodige_skills.shop.macro_arg_2512 set from storage __sandstone:variable anon_cnoL-r-9_1943

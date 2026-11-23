@@ -141,6 +141,7 @@ execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_3 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_4 int 1 run scoreboard players get anon_cnoL-r-9_53 __sandstone
 function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.main
+# BOOSTERS
 data modify storage __sandstone:variable anon_cnoL-r-9_2 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if78
 data modify storage __sandstone:variable anon_cnoL-r-9_4 set value '§7No Pts Booster active'

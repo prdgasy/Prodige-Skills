@@ -52,8 +52,8 @@ item replace entity @s container.24 with magenta_stained_glass_pane[lore=[],cust
 item replace entity @s container.25 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::titles::fill -> (26)
 item replace entity @s container.26 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::titles::fill -> §d§lTitles(20)
-item replace entity @s container.20 with name_tag[custom_name={text: "§d§lTitles", italic: false, color: "white"},lore=[{text: "§d§l┃ Make Your Mark", italic: false, color: "white"},{text: "§d┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§d┃ §7or purchase them here.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::titles::fill -> §aTitles(20)
+item replace entity @s container.20 with name_tag[custom_name={text: "§aTitles", italic: false, color: "white"},lore=[{text: "§a§l┃ Make Your Mark", italic: false, color: "white"},{text: "§a┃ §7Unlock titles through skill milestones", italic: false, color: "white"},{text: "§a┃ §7or purchase them here.", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/switch
 scoreboard players set anon_cnoL-r-9_6024 __sandstone 0
 scoreboard players set anon_cnoL-r-9_6025 __sandstone 0
@@ -109,7 +109,7 @@ data modify storage __sandstone:variable anon_cnoL-r-9_2589 set value '§7No Xp 
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/if5
 data modify storage __sandstone:variable anon_cnoL-r-9_2591 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/30/fill/if6
-# prodige_skills::titles::fill -> §aShop §8• §e$(macro_arg_3299) Pts(21)
+# prodige_skills::titles::fill -> §aShop §8• §e$(macro_arg_3299) Pts(19)
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3299 int 1 run scoreboard players get @p prodige_skills.player.pts
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3300 set from storage __sandstone:variable anon_cnoL-r-9_2589
 data modify storage prodige_skills:prodigelib gui.prodige_skills.titles.macro_arg_3301 set from storage __sandstone:variable anon_cnoL-r-9_2591
