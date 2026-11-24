@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §aOrchard Master$(macro_arg_3730)($(macro_arg_3729))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3729)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro86/execute_unless

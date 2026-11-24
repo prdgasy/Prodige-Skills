@@ -1,2 +1,0 @@
-# prodige_skills::vault::click::macro -> §6§l§aDune Walker Spade §8× §e$(macro_arg_4489)($(macro_arg_4488))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4488)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro51/execute_unless

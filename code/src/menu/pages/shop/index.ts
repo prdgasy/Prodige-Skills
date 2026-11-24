@@ -120,7 +120,7 @@ export class Shop {
   }
 
 
-  public static balance(p: Page) {
+  public static   balance(p: Page) {
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
 
     for (const type of BOOSTER_TYPE) {

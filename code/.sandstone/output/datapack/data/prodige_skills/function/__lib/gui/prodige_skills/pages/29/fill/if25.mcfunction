@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §6Everbloom Hoe(6)
+item replace entity @s container.6 with netherite_hoe[custom_name={text: "§6Everbloom Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

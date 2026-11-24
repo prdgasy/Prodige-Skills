@@ -1,2 +1,2 @@
-# prodige_skills::legendary_rewards::fill -> §6Ancient Vein Pick(2)
-item replace entity @s container.2 with netherite_pickaxe[custom_name={text: "§6Ancient Vein Pick", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §9Canopy Hatchet(3)
+item replace entity @s container.3 with diamond_axe[custom_name={text: "§9Canopy Hatchet", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

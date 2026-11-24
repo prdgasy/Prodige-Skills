@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §9Verdant Hatchet(7)
-item replace entity @s container.7 with diamond_axe[custom_name={text: "§9Verdant Hatchet", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §aCoppervein Pickaxe(8)
+item replace entity @s container.8 with golden_pickaxe[custom_name={text: "§aCoppervein Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_8815 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_birch_log/if5/0_if/return_run
+execute if score anon_cnoL-r-9_8905 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_birch_log/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

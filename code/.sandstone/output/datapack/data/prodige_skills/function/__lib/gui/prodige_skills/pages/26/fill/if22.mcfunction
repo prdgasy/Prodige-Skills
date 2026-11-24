@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::fill -> §6Worldshaper Pickaxe(2)
-item replace entity @s container.2 with netherite_pickaxe[custom_name={text: "§6Worldshaper Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

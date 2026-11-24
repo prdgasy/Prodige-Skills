@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §dTerracotta Breaker(10)
+item replace entity @s container.10 with netherite_shovel[custom_name={text: "§dTerracotta Breaker", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

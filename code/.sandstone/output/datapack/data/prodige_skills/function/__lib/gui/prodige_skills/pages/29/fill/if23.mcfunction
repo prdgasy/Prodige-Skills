@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §6Elderwood Hatchet(4)
+item replace entity @s container.4 with netherite_axe[custom_name={text: "§6Elderwood Hatchet", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

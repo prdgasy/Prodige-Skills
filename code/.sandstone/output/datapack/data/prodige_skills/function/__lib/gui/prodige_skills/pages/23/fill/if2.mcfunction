@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §e250 Pts(0)
-item replace entity @s container.0 with gold_ingot[custom_name={text: "§e250 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §712.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §348 Xp in a random Skill(1)
+item replace entity @s container.1 with experience_bottle[custom_name={text: "§348 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

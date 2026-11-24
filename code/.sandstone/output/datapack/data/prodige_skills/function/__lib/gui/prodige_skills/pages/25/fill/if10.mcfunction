@@ -1,2 +1,2 @@
-# prodige_skills::legendary_rewards::fill -> §6Voidfall Pickaxe(8)
-item replace entity @s container.8 with netherite_pickaxe[custom_name={text: "§6Voidfall Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §aStonewake Pickaxe(9)
+item replace entity @s container.9 with iron_pickaxe[custom_name={text: "§aStonewake Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

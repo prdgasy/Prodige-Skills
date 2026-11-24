@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::click -> §bx4 Xp Booster(2)
-execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:2b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

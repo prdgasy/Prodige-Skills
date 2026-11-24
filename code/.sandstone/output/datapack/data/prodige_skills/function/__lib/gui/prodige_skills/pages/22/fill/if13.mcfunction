@@ -1,2 +1,0 @@
-# prodige_skills::common_rewards::fill -> §aFirst Harvest Hoe(11)
-item replace entity @s container.11 with stone_hoe[custom_name={text: "§aFirst Harvest Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

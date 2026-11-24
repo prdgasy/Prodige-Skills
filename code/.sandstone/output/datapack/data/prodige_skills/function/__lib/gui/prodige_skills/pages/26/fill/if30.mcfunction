@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::fill -> §6Earthshaper Spade(10)
-item replace entity @s container.10 with netherite_shovel[custom_name={text: "§6Earthshaper Spade", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

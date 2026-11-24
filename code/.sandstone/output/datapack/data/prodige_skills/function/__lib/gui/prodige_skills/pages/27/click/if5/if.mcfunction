@@ -1,2 +1,2 @@
-function prodige_skills:__lib/gui/prodige_skills/switch/epic_rewards
+execute unless score @s prodige_skills.menu.shop.crates.index matches 0 run scoreboard players remove @s prodige_skills.menu.shop.crates.index 1
 scoreboard players set anon_cnoL-r-9_29 __sandstone 1

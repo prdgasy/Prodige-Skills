@@ -1,2 +1,2 @@
-execute store result score anon_cnoL-r-9_36 __sandstone run data get storage prodige_skills:skill_bossbar queue[0].expire
-execute if score #tick prodige_skills.bossbar.tick >= anon_cnoL-r-9_36 __sandstone run function prodige_skills:skill/bossbar/purge/if/if
+execute store result score anon_cnoL-r-9_41 __sandstone run data get storage prodige_skills:skill_bossbar queue[0].expire
+execute if score #tick prodige_skills.bossbar.tick >= anon_cnoL-r-9_41 __sandstone run function prodige_skills:skill/bossbar/purge/if/if

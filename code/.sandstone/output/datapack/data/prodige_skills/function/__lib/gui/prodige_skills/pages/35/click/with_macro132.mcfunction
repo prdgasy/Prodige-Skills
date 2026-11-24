@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §eDune Walker$(macro_arg_3960)($(macro_arg_3959))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3959)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro132/execute_unless

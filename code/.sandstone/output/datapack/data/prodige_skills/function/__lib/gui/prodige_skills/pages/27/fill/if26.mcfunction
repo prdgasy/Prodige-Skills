@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §dApex Crossbow(7)
+item replace entity @s container.7 with crossbow[custom_name={text: "§dApex Crossbow", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

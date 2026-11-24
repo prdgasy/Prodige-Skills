@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §aPathfinder Crossbow(16)
-item replace entity @s container.16 with crossbow[custom_name={text: "§aPathfinder Crossbow", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+data modify storage __sandstone:variable anon_cnoL-r-9_1949 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1950 set value '§7Previous'

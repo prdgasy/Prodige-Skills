@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §cMaster Miner$(macro_arg_3380)($(macro_arg_3379))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3379)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro16/execute_unless

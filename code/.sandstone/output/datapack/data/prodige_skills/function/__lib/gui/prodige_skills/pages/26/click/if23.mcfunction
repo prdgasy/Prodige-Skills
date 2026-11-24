@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::click -> §6Worldroot Axe(3)
-execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

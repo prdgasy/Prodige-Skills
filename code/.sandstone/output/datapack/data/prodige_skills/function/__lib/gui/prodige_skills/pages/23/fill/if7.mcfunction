@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §9§lRare Crate Key(5)
-item replace entity @s container.5 with tripwire_hook[custom_name={text: "§9§lRare Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §73.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §fField Shovel(6)
+item replace entity @s container.6 with iron_shovel[custom_name={text: "§fField Shovel", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

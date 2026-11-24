@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::fill::macro -> $(macro_arg_2551)(25)
-$item replace entity @s container.25 with $(macro_arg_2550)[custom_name={text: "$(macro_arg_2551)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

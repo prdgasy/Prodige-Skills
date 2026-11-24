@@ -1,2 +1,2 @@
-# prodige_skills::preferences::fill::macro -> $(macro_arg_4016)Sound Effects(11)
-$item replace entity @s container.11 with note_block[custom_name={text: "$(macro_arg_4016)Sound Effects", italic: false, color: "white"},lore=[{text: "§7§7Enable or disable global Sound", italic: false, color: "white"},{text: "§7for Prodige Skill.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§fStatus §8• $(macro_arg_4017)", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to toggle!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill::macro -> $(macro_arg_2551)(25)
+$item replace entity @s container.25 with $(macro_arg_2550)[custom_name={text: "$(macro_arg_2551)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

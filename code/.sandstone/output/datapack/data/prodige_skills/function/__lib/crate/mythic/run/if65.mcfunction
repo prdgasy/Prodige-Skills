@@ -1,0 +1,2 @@
+tellraw @p "§6✦ §eYou won: §r§6x4 Pts Booster"
+give @p warped_fungus_on_a_stick[minecraft:custom_name='§6x4 Pts Booster',minecraft:lore=['§9Prodige Skills','','§74x Pts multiplier','§7Duration: 15 minutes','','§eClick to activate!'],minecraft:item_model='gold_ingot',minecraft:custom_data={prodige_skills:{booster:'pts_4'}}]

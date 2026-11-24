@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §e500 Pts(0)
-item replace entity @s container.0 with gold_ingot[custom_name={text: "§e500 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §712.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

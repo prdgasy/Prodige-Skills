@@ -1,2 +1,0 @@
-# prodige_skills::common_rewards::fill -> §6x2 Pts Booster(3)
-item replace entity @s container.3 with gold_ingot[custom_name={text: "§6x2 Pts Booster", italic: false, color: "white"},lore=[{text: "§eReward chance: §78.6%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::click -> §dCrimson Timber Axe(4)
-execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:4b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

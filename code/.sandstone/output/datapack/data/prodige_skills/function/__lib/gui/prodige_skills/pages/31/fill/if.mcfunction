@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3166 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3165 set value '§c'
+# prodige_skills::crate_mythic_rewards::fill -> §e2000 Pts(0)
+item replace entity @s container.0 with gold_ingot[custom_name={text: "§e2000 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §dVein Sovereign$(macro_arg_3370)($(macro_arg_3369))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3369)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro14/execute_unless

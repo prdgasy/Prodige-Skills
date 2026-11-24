@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §aGroundbreaker Shovel(17)
-item replace entity @s container.17 with stone_shovel[custom_name={text: "§aGroundbreaker Shovel", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+data modify storage __sandstone:variable anon_cnoL-r-9_1951 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1952 set value '§7Next'

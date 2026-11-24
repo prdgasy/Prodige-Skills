@@ -1,2 +1,2 @@
-# prodige_skills::rare_rewards::fill -> §aStonewake Pickaxe(9)
-item replace entity @s container.9 with iron_pickaxe[custom_name={text: "§aStonewake Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §aBark Stripper(10)
+item replace entity @s container.10 with iron_axe[custom_name={text: "§aBark Stripper", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

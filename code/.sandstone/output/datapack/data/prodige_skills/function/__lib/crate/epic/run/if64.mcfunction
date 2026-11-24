@@ -1,0 +1,2 @@
+tellraw @p "§6✦ §eYou won: §r§bx3 Xp Booster"
+give @p warped_fungus_on_a_stick[minecraft:custom_name='§bx3 Xp Booster',minecraft:lore=['§9Prodige Skills','','§73x Xp multiplier','§7Duration: 15 minutes','','§eClick to activate!'],minecraft:item_model='experience_bottle',minecraft:custom_data={prodige_skills:{booster:'xp_3'}}]

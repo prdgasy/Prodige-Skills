@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::click -> §dApex Crossbow(7)
-execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:7b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

@@ -1,0 +1,1 @@
+execute unless entity @p[tag=prodige_skills.title.owned.new_title_wild_stalker] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/switch32/case_2/if

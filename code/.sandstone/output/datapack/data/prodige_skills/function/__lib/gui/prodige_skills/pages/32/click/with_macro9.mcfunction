@@ -1,2 +1,0 @@
-# prodige_skills::tasks::click::macro -> §9Mine dirt §8• §e$(macro_arg_4109)§6/§e1000($(macro_arg_4108))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4108)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/32/click/with_macro9/execute_unless

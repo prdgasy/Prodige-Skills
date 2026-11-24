@@ -1,8 +1,3 @@
-execute unless entity @p[tag=prodige_skills.player.gotFirstTask] run return run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/0_if/return_run
-scoreboard players set anon_cnoL-r-9_6596 __sandstone 11
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check2 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if2
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check3 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if3
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check4 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if4
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check5 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if5
-execute if function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/or_check6 run function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/if/if6
+execute store result storage __sandstone:variable anon_cnoL-r-9_1990.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.multiplier
+execute store result storage __sandstone:variable anon_cnoL-r-9_1990.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.timer
+function prodige_skills:__lib/gui/prodige_skills/pages/32/fill/__with_macro with storage __sandstone:variable anon_cnoL-r-9_1990

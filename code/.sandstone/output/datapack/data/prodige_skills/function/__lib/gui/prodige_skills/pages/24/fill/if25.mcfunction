@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §dGolden Furrow(5)
-item replace entity @s container.5 with diamond_hoe[custom_name={text: "§dGolden Furrow", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

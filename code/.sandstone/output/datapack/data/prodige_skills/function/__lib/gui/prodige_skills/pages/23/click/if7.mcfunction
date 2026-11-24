@@ -1,2 +1,0 @@
-# prodige_skills::rare_rewards::click -> §9§lRare Crate Key(5)
-execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:5b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

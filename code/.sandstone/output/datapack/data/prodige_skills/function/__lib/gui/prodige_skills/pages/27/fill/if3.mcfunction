@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §bx3 Xp Booster(2)
+item replace entity @s container.2 with experience_bottle[custom_name={text: "§bx3 Xp Booster", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §9Cropkeeper Hoe(13)
-item replace entity @s container.13 with diamond_hoe[custom_name={text: "§9Cropkeeper Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

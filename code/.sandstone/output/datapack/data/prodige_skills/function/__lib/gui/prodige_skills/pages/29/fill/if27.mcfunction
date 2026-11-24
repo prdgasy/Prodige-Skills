@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §6Ender Tracker Bow(8)
+item replace entity @s container.8 with bow[custom_name={text: "§6Ender Tracker Bow", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

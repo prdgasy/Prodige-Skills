@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §dGolden Furrow(13)
+item replace entity @s container.13 with diamond_hoe[custom_name={text: "§dGolden Furrow", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_13950 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_13950 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_13950 __sandstone
+scoreboard players operation anon_cnoL-r-9_14034 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_14034 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.farming.xp -= anon_cnoL-r-9_14034 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.farming.goal /= 10 __sandstone
 execute if score @p prodige_skills.farming.goal matches 5001.. run scoreboard players set @p prodige_skills.farming.goal 5000
@@ -116,6 +116,6 @@ execute if score @p prodige_skills.farming.level matches 50000 run tag @p add pr
 execute if score @p prodige_skills.farming.level matches 20 run tag @p add prodige_skills.title.owned.new_title_grain_baron
 execute if score @p prodige_skills.farming.level matches 30000 run tag @p add prodige_skills.title.owned.new_title_orchard_master
 function prodige_skills:skill/farming/level_up/notification
-scoreboard players operation anon_cnoL-r-9_15552 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_15552 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_15552 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players operation anon_cnoL-r-9_15636 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_15636 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_15636 __sandstone run function prodige_skills:skill/farming/level_up

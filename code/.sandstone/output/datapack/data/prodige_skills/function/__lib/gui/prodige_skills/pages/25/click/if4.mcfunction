@@ -1,2 +1,2 @@
-# prodige_skills::legendary_rewards::click -> §bx4 Xp Booster(2)
-execute if score anon_cnoL-r-9_27 __sandstone matches 0 unless data entity @s Items[{Slot:2b}] run scoreboard players set anon_cnoL-r-9_27 __sandstone 1
+data modify storage __sandstone:variable anon_cnoL-r-9_1961 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1962 set value '§7Previous'

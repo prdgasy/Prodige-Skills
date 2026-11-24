@@ -1,3 +1,2 @@
-# prodige_skills::vault::click -> §6§l§6Voidfall Pickaxe §8× §e$(macro_arg_4363)($(macro_arg_4362))
-execute if score anon_cnoL-r-9_35 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/if9/if/if
-scoreboard players set anon_cnoL-r-9_6851 __sandstone 1
+execute unless score @s prodige_skills.menu.shop.items.index matches 3 run scoreboard players add @s prodige_skills.menu.shop.items.index 1
+scoreboard players set anon_cnoL-r-9_35 __sandstone 1

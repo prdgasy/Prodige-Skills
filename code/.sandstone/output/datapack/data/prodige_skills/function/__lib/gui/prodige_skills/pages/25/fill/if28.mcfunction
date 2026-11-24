@@ -1,2 +1,2 @@
-# prodige_skills::legendary_rewards::fill -> §6Ender Tracker Bow(8)
-item replace entity @s container.8 with bow[custom_name={text: "§6Ender Tracker Bow", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §9Clay Delver(9)
+item replace entity @s container.9 with diamond_shovel[custom_name={text: "§9Clay Delver", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

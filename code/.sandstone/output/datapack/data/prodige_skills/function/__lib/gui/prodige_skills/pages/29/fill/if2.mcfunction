@@ -1,3 +1,2 @@
-execute store result storage __sandstone:variable anon_cnoL-r-9_2016.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Pts.multiplier
-execute store result storage __sandstone:variable anon_cnoL-r-9_2016.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Pts.timer
-function prodige_skills:__lib/gui/prodige_skills/pages/29/fill/__with_macro2 with storage __sandstone:variable anon_cnoL-r-9_2016
+# prodige_skills::crate_legendary_rewards::fill -> §3863 Xp in a random Skill(1)
+item replace entity @s container.1 with experience_bottle[custom_name={text: "§3863 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

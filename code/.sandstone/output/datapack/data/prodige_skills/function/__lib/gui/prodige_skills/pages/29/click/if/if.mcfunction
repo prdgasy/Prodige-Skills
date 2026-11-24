@@ -1,2 +1,2 @@
-execute as @p at @s run function prodige_skills:__lib/gui/prodige_skills/pages/29/click/if/if/execute_as/if
+function prodige_skills:__lib/gui/prodige_skills/switch/crates
 scoreboard players set anon_cnoL-r-9_31 __sandstone 1

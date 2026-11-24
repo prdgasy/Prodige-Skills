@@ -1,2 +1,0 @@
-# prodige_skills::mythic_rewards::click -> §dDreadhunter Blade(15)
-execute if score anon_cnoL-r-9_28 __sandstone matches 0 unless data entity @s Items[{Slot:15b}] run scoreboard players set anon_cnoL-r-9_28 __sandstone 1

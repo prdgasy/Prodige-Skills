@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §9Harvest Warden(14)
-item replace entity @s container.14 with netherite_hoe[custom_name={text: "§9Harvest Warden", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

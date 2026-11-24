@@ -1,26 +1,26 @@
 $data modify storage __sandstone:variable anon_cnoL-r-9_991 set value  §8• §7Target: §dExcavating $(env_0)
-scoreboard players operation anon_cnoL-r-9_3533 __sandstone = var_700 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_3538 __sandstone = var_700 prodige_skills.prodigelib.float
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/if3/if5
-scoreboard players operation anon_cnoL-r-9_3534 __sandstone = anon_cnoL-r-9_3533 __sandstone
-scoreboard players operation anon_cnoL-r-9_3534 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_3534 __sandstone
-scoreboard players operation anon_cnoL-r-9_3535 __sandstone = anon_cnoL-r-9_3533 __sandstone
-scoreboard players operation anon_cnoL-r-9_3535 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_3535 __sandstone
+scoreboard players operation anon_cnoL-r-9_3539 __sandstone = anon_cnoL-r-9_3538 __sandstone
+scoreboard players operation anon_cnoL-r-9_3539 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_3539 __sandstone
+scoreboard players operation anon_cnoL-r-9_3540 __sandstone = anon_cnoL-r-9_3538 __sandstone
+scoreboard players operation anon_cnoL-r-9_3540 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_3540 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_999.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_999.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_999.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_999
 data modify storage prodige_skills:prodigelib Float.var_700.out set from storage prodige_skills:prodigelib Float.temp
 $data modify storage __sandstone:variable anon_cnoL-r-9_992 set value  §8• §7Progress: §e$(env_1)%
-scoreboard players operation anon_cnoL-r-9_3536 __sandstone = @p prodige_skills.excavating.xp
+scoreboard players operation anon_cnoL-r-9_3541 __sandstone = @p prodige_skills.excavating.xp
 function prodige_skills:__lib/gui/prodige_skills/pages/10/fill/if3/if6
-scoreboard players operation anon_cnoL-r-9_3537 __sandstone = anon_cnoL-r-9_3536 __sandstone
-scoreboard players operation anon_cnoL-r-9_3537 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_3537 __sandstone
-scoreboard players operation anon_cnoL-r-9_3538 __sandstone = anon_cnoL-r-9_3536 __sandstone
-scoreboard players operation anon_cnoL-r-9_3538 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_3538 __sandstone
+scoreboard players operation anon_cnoL-r-9_3542 __sandstone = anon_cnoL-r-9_3541 __sandstone
+scoreboard players operation anon_cnoL-r-9_3542 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_3542 __sandstone
+scoreboard players operation anon_cnoL-r-9_3543 __sandstone = anon_cnoL-r-9_3541 __sandstone
+scoreboard players operation anon_cnoL-r-9_3543 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_3543 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_1000.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_1000.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_1000.env_2 set from storage prodige_skills:prodigelib Float.d0

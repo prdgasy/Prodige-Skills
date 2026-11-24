@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §bExpert Sword(7)
-item replace entity @s container.7 with diamond_sword[custom_name={text: "§bExpert Sword", italic: false, color: "white"},lore=[{text: "§eReward chance: §75%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

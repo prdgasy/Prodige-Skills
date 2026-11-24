@@ -21,7 +21,8 @@ export class Crate {
   public item: Item;
   public roll: number;
   public key: Reward;
-  public rewards: Map<Reward, number>;
+  public rewards: Map<Reward, { weight: number, chance: number }>;
+  private totalRewardWeight!: number;
   private keyPredicate: ReturnType<typeof ItemPredicate>;
   public static crates: Record<CrateName, Crate>;
   public static storage = Global.storage.select("crate");
@@ -30,10 +31,9 @@ export class Crate {
   public constructor(opt: CrateOption) {
     this.name = opt.name;
     this.roll = opt.roll;
-    this.rewards = opt.rewards;
+    this.rewards = this.setRewards(opt.rewards);
     this.description = opt.description;
     this.item = opt.item;
-
     const keyId = Global.toResource(this.name);
     const keyData = { prodige_skills: { crate_key: keyId } };
     this.keyPredicate = ItemPredicate('minecraft:carrot_on_a_stick')
@@ -58,25 +58,40 @@ export class Crate {
     );
   }
 
+  private setRewards(raw: Map<Reward, number>): Map<Reward, { weight: number, chance: number }> {
+    const rewards = new Map<Reward, { weight: number, chance: number }>();
+
+    this.totalRewardWeight = 0;
+    for (const w of raw.values()) {
+      this.totalRewardWeight += w;
+    }
+
+    for (const [r, w] of raw) {
+      const c = Math.round((w / this.totalRewardWeight) * 1000) / 10;
+      rewards.set(r, { chance: c, weight: w });
+    }
+
+    return rewards;
+  }
+
   private pick(n: number) {
     const fn = MCFunction(`misc/crate/roll/${Global.toResource(this.name)}`, () => {
       smartTellraw([
         Global.encapsuler + '\n',
         ` §e§lCRATE OPENED!\n\n`,
-        ` §7You opened a §8[${this.name} Crate§8] §7and rolled ${n} times!\n\n`,
+        ` §7You opened a §8[${this.name} Crate§8]§7!\n\n`,
         ' §f§lRewards:'
       ]);
 
-      let total = 0;
-      this.rewards.forEach(w => total += w);
+
       _.for([0, n - 1], 'iterate', () => {
         const roll = Variable();
-        execute.store.result(roll).run.random.value([0, total - 1]);
+        execute.store.result(roll).run.random.value([0, this.totalRewardWeight - 1]);
         const done = Variable(0);
 
         let acc = 0;
-        for (const [reward, weight] of this.rewards) {
-          acc += weight;
+        for (const [reward, values] of this.rewards) {
+          acc += values.weight;
           _.if(_.and(_.not(done), roll['<'](acc)), () => {
             Reward.vaultOrGive(reward);
             smartTellraw([T` §8• ${reward.name}`]);

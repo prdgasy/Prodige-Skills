@@ -1,0 +1,2 @@
+# prodige_skills::crate_mythic_rewards::fill -> §6Ancient Vein Pick(10)
+item replace entity @s container.10 with netherite_pickaxe[custom_name={text: "§6Ancient Vein Pick", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

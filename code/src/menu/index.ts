@@ -19,7 +19,7 @@ import { Score, DataVariable, _, say } from 'sandstone';
 
 export class Menu {
   public static init() {
-    const Menu = new Gui('§e§lProdige Skills', 'menu');
+    const M = new Gui('§e§lProdige Skills', 'menu');
 
     const pages: (SkillPage | SubSkillPage)[] = [
       Main, Progress, Actions, Achievements, Abilities, Shop, Crates, Items, Boosters, Titles, Preferences, Tasks, Vault
@@ -30,17 +30,17 @@ export class Menu {
       if (p.getName.length > 0) {
         for (const skill of Object.values(Skill.skills)) {
           const name = p.getName(skill);
-          const toRegister = p.init(Menu, Menu.createPage(name), skill);
+          const toRegister = p.init(M, M.createPage(name), skill);
 
-          Menu.registerPage(toRegister);
+          M.registerPage(toRegister);
         }
       } else {
         const normalP = p as SkillPage;
         const name = normalP.getName();
-        if (name === Crates.getName()) Crates.registerDetails(Menu);
-        const toRegister = normalP.init(Menu, Menu.createPage(name));
+        if (name === Crates.getName()) Crates.registerDetails(M);
+        const toRegister = normalP.init(M, M.createPage(name));
 
-        Menu.registerPage(toRegister);
+        M.registerPage(toRegister);
       }
     }
   }

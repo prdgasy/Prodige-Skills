@@ -1,0 +1,6 @@
+# prodige_skills::vault::fill -> §6§l§a§lCommon Crate Key §8× §e$(macro_arg_4302)($(macro_arg_4301))
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4301 int 1 run scoreboard players get anon_cnoL-r-9_6917 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4302 int 1 run scoreboard players get @p prodige_skills.reward.pending.common_crate_key
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4303 int 1 run scoreboard players get @p prodige_skills.reward.pending.common_crate_key
+function prodige_skills:__lib/gui/prodige_skills/pages/38/fill/with_macro60 with storage prodige_skills:prodigelib gui.prodige_skills.vault
+scoreboard players set anon_cnoL-r-9_6796 __sandstone 1

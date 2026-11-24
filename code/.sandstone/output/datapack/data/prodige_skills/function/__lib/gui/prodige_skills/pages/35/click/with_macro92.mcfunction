@@ -1,0 +1,2 @@
+# prodige_skills::titles::click::macro -> §dNew Title: §aWild Stalker$(macro_arg_3760)($(macro_arg_3759))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3759)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro92/execute_unless

@@ -1,2 +1,0 @@
-# prodige_skills::rare_rewards::click -> §9Deepslate Prospector(1)
-execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:1b}] run scoreboard players set anon_cnoL-r-9_25 __sandstone 1

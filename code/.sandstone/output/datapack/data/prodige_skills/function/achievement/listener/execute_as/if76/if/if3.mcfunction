@@ -1,6 +1,6 @@
 execute if score @p prodige_skills.farming.level matches ..99 run function prodige_skills:achievement/listener/execute_as/if76/if/if3/if
-scoreboard players set anon_cnoL-r-9_8204 __sandstone 700
-scoreboard players operation @p prodige_skills.farming.totalXp += anon_cnoL-r-9_8204 __sandstone
-scoreboard players operation anon_cnoL-r-9_8205 __sandstone = @p prodige_skills.farming.goal
-scoreboard players operation anon_cnoL-r-9_8205 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_8205 __sandstone run function prodige_skills:skill/farming/level_up
+scoreboard players set anon_cnoL-r-9_8294 __sandstone 460
+scoreboard players operation @p prodige_skills.farming.totalXp += anon_cnoL-r-9_8294 __sandstone
+scoreboard players operation anon_cnoL-r-9_8295 __sandstone = @p prodige_skills.farming.goal
+scoreboard players operation anon_cnoL-r-9_8295 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.farming.level matches ..99 if score @p prodige_skills.farming.goal matches 1.. if score @p prodige_skills.farming.xp >= anon_cnoL-r-9_8295 __sandstone run function prodige_skills:skill/farming/level_up

@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3168 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3167 set value '§c'
+# prodige_skills::crate_mythic_rewards::fill -> §31098 Xp in a random Skill(1)
+item replace entity @s container.1 with experience_bottle[custom_name={text: "§31098 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

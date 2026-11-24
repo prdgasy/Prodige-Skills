@@ -1,0 +1,2 @@
+tellraw @p "§6✦ §eYou won: §r§a§lCommon Crate Key"
+give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§a§lCommon Crate Key',minecraft:lore=['§9Prodige Skills','A starter cache with useful points, skill XP, boosters, keys, and skill-specific starter tools.'],minecraft:custom_data={prodige_skills:{crate_key:'common'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]

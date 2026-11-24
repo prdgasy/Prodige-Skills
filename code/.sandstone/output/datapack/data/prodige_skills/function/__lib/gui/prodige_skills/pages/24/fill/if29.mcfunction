@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::fill -> §dSoul Sand Spade(9)
-item replace entity @s container.9 with diamond_shovel[custom_name={text: "§dSoul Sand Spade", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

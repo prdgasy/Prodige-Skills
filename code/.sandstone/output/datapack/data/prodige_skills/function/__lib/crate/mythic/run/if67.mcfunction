@@ -1,0 +1,2 @@
+tellraw @p "§6✦ §eYou won: §r§c§lMythic Crate Key"
+give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§c§lMythic Crate Key',minecraft:lore=['§9Prodige Skills','The rarest cache, offering top-tier skill XP, boosters, keys, points, and mastery-level gear.'],minecraft:custom_data={prodige_skills:{crate_key:'mythic'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]

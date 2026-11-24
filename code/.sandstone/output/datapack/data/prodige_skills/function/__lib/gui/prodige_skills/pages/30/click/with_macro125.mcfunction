@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §bDeep Digger$(macro_arg_3925)($(macro_arg_3924))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3924)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro125/execute_unless

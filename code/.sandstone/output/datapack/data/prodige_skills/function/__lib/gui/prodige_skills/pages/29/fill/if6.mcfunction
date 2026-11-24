@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §6§lLegendary Crate Key(5)
+item replace entity @s container.5 with tripwire_hook[custom_name={text: "§6§lLegendary Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,3 @@
-function prodige_skills:misc/task/roll
+scoreboard players set @s prodige_skills.menu.shop.crates.index 0
+function prodige_skills:__lib/gui/prodige_skills/switch/crate_mythic_rewards
 scoreboard players set anon_cnoL-r-9_34 __sandstone 1

@@ -1,2 +1,0 @@
-execute unless score @s prodige_skills.menu.shop.crates.common.index matches 0 run scoreboard players add @s prodige_skills.menu.shop.crates.common.index 1
-scoreboard players set anon_cnoL-r-9_24 __sandstone 1

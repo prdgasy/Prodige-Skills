@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9053 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/crimson_hyphae/if5/0_if/return_run
+execute if score anon_cnoL-r-9_9143 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/crimson_hyphae/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

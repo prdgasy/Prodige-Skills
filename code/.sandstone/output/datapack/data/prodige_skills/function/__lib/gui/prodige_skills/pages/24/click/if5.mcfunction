@@ -1,2 +1,0 @@
-# prodige_skills::epic_rewards::click -> §6x3 Pts Booster(3)
-execute if score anon_cnoL-r-9_26 __sandstone matches 0 unless data entity @s Items[{Slot:3b}] run scoreboard players set anon_cnoL-r-9_26 __sandstone 1

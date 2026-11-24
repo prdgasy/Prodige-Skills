@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9165 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_pale_oak_log/if5/0_if/return_run
+execute if score anon_cnoL-r-9_9255 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_pale_oak_log/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

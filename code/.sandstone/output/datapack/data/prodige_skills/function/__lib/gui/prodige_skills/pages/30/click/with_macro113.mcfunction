@@ -1,2 +1,0 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Dragon Tracker$(macro_arg_3865)($(macro_arg_3864))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3864)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/with_macro113/execute_unless

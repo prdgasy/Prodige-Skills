@@ -1,1 +1,0 @@
-execute if entity @p[tag=prodige_skills.title.owned.new_title_dragon_tracker] run function prodige_skills:__lib/gui/prodige_skills/pages/30/click/switch39/case_1/if

@@ -1,3 +1,2 @@
-execute store result storage __sandstone:variable anon_cnoL-r-9_2014.env_0 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.multiplier
-execute store result storage __sandstone:variable anon_cnoL-r-9_2014.env_1 int 1 run scoreboard players get @p prodige_skills.misc.booster.Xp.timer
-function prodige_skills:__lib/gui/prodige_skills/pages/29/fill/__with_macro with storage __sandstone:variable anon_cnoL-r-9_2014
+# prodige_skills::crate_legendary_rewards::fill -> §e1000 Pts(0)
+item replace entity @s container.0 with gold_ingot[custom_name={text: "§e1000 Pts", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

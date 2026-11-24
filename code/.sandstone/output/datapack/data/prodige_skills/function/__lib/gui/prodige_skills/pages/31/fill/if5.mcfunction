@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3174 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3173 set value '§c'
+# prodige_skills::crate_mythic_rewards::fill -> §6§lLegendary Crate Key(4)
+item replace entity @s container.4 with tripwire_hook[custom_name={text: "§6§lLegendary Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

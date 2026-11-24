@@ -1,2 +1,0 @@
-# prodige_skills::vault::click::macro -> §6§l§a§lCommon Crate Key §8× §e$(macro_arg_4516)($(macro_arg_4515))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4515)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro60/execute_unless

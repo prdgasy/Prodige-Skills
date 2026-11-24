@@ -1,2 +1,0 @@
-# prodige_skills::rare_rewards::fill -> §aDune Walker Spade(0)
-item replace entity @s container.0 with iron_shovel[custom_name={text: "§aDune Walker Spade", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

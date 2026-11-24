@@ -1,2 +1,0 @@
-# prodige_skills::common_rewards::fill -> §aNovice Pickaxe(5)
-item replace entity @s container.5 with iron_pickaxe[custom_name={text: "§aNovice Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §77.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

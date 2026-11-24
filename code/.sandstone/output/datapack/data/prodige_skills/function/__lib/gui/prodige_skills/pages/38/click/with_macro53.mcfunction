@@ -1,0 +1,2 @@
+# prodige_skills::vault::click::macro -> §6§l§9Gravel Prospector §8× §e$(macro_arg_4495)($(macro_arg_4494))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4494)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro53/execute_unless

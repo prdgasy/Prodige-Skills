@@ -1,0 +1,2 @@
+# prodige_skills::titles::click -> §cNo Titles Here(13)
+execute if score anon_cnoL-r-9_37 __sandstone matches 0 unless data entity @s Items[{Slot:13b}] run scoreboard players set anon_cnoL-r-9_37 __sandstone 1

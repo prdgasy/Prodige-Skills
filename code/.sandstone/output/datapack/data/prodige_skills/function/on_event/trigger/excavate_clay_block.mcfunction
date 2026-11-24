@@ -1,54 +1,54 @@
-scoreboard players set anon_cnoL-r-9_10722 __sandstone 30
-scoreboard players operation var_1532 prodige_skills.prodigelib.float = anon_cnoL-r-9_10722 __sandstone
-scoreboard players operation anon_cnoL-r-9_10723 __sandstone = var_1532 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_10724 __sandstone = @p prodige_skills.Excavating.event.ExcavateClayBlock
-scoreboard players operation anon_cnoL-r-9_10724 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_10723 __sandstone *= anon_cnoL-r-9_10724 __sandstone
-scoreboard players operation anon_cnoL-r-9_10723 __sandstone /= 10 __sandstone
-scoreboard players operation var_1533 prodige_skills.prodigelib.float = anon_cnoL-r-9_10723 __sandstone
+scoreboard players set anon_cnoL-r-9_10812 __sandstone 30
+scoreboard players operation var_1532 prodige_skills.prodigelib.float = anon_cnoL-r-9_10812 __sandstone
+scoreboard players operation anon_cnoL-r-9_10813 __sandstone = var_1532 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_10814 __sandstone = @p prodige_skills.Excavating.event.ExcavateClayBlock
+scoreboard players operation anon_cnoL-r-9_10814 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_10813 __sandstone *= anon_cnoL-r-9_10814 __sandstone
+scoreboard players operation anon_cnoL-r-9_10813 __sandstone /= 10 __sandstone
+scoreboard players operation var_1533 prodige_skills.prodigelib.float = anon_cnoL-r-9_10813 __sandstone
 scoreboard players operation var_0 prodige_skills.prodigelib.float = var_1533 prodige_skills.prodigelib.float
-scoreboard players set anon_cnoL-r-9_10725 __sandstone 3
-scoreboard players operation anon_cnoL-r-9_10726 __sandstone = anon_cnoL-r-9_10725 __sandstone
-scoreboard players operation anon_cnoL-r-9_10726 __sandstone *= @p prodige_skills.Excavating.event.ExcavateClayBlock
-scoreboard players operation anon_cnoL-r-9_0 __sandstone = anon_cnoL-r-9_10726 __sandstone
+scoreboard players set anon_cnoL-r-9_10815 __sandstone 3
+scoreboard players operation anon_cnoL-r-9_10816 __sandstone = anon_cnoL-r-9_10815 __sandstone
+scoreboard players operation anon_cnoL-r-9_10816 __sandstone *= @p prodige_skills.Excavating.event.ExcavateClayBlock
+scoreboard players operation anon_cnoL-r-9_0 __sandstone = anon_cnoL-r-9_10816 __sandstone
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateClayBlock.pts += anon_cnoL-r-9_0 __sandstone
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateClayBlock.xp += var_0 prodige_skills.prodigelib.float
 scoreboard players operation @p prodige_skills.Excavating.total_event.ExcavateClayBlock += @p prodige_skills.Excavating.event.ExcavateClayBlock
-scoreboard players set anon_cnoL-r-9_10727 __sandstone 1
-execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_10727 __sandstone = @p prodige_skills.misc.booster.Xp.multiplier
-scoreboard players operation anon_cnoL-r-9_10728 __sandstone = var_0 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_10729 __sandstone = anon_cnoL-r-9_10727 __sandstone
-scoreboard players operation anon_cnoL-r-9_10729 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_10728 __sandstone *= anon_cnoL-r-9_10729 __sandstone
-scoreboard players operation anon_cnoL-r-9_10728 __sandstone /= 10 __sandstone
-scoreboard players operation var_1534 prodige_skills.prodigelib.float = anon_cnoL-r-9_10728 __sandstone
-scoreboard players set anon_cnoL-r-9_10730 __sandstone 1
-execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_10730 __sandstone = @p prodige_skills.misc.booster.Pts.multiplier
-scoreboard players operation anon_cnoL-r-9_10731 __sandstone = anon_cnoL-r-9_0 __sandstone
-scoreboard players operation anon_cnoL-r-9_10731 __sandstone *= anon_cnoL-r-9_10730 __sandstone
+scoreboard players set anon_cnoL-r-9_10817 __sandstone 1
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_10817 __sandstone = @p prodige_skills.misc.booster.Xp.multiplier
+scoreboard players operation anon_cnoL-r-9_10818 __sandstone = var_0 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_10819 __sandstone = anon_cnoL-r-9_10817 __sandstone
+scoreboard players operation anon_cnoL-r-9_10819 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_10818 __sandstone *= anon_cnoL-r-9_10819 __sandstone
+scoreboard players operation anon_cnoL-r-9_10818 __sandstone /= 10 __sandstone
+scoreboard players operation var_1534 prodige_skills.prodigelib.float = anon_cnoL-r-9_10818 __sandstone
+scoreboard players set anon_cnoL-r-9_10820 __sandstone 1
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run scoreboard players operation anon_cnoL-r-9_10820 __sandstone = @p prodige_skills.misc.booster.Pts.multiplier
+scoreboard players operation anon_cnoL-r-9_10821 __sandstone = anon_cnoL-r-9_0 __sandstone
+scoreboard players operation anon_cnoL-r-9_10821 __sandstone *= anon_cnoL-r-9_10820 __sandstone
 execute if score @p prodige_skills.excavating.level matches ..99 run scoreboard players operation @p prodige_skills.excavating.xp += var_1534 prodige_skills.prodigelib.float
-scoreboard players operation @p prodige_skills.player.pts += anon_cnoL-r-9_10731 __sandstone
-scoreboard players operation @p prodige_skills.excavating.totalPts += anon_cnoL-r-9_10731 __sandstone
+scoreboard players operation @p prodige_skills.player.pts += anon_cnoL-r-9_10821 __sandstone
+scoreboard players operation @p prodige_skills.excavating.totalPts += anon_cnoL-r-9_10821 __sandstone
 scoreboard players operation @p prodige_skills.excavating.totalXp += var_1534 prodige_skills.prodigelib.float
 function prodige_skills:ability/roll/deep_digger
-scoreboard players operation anon_cnoL-r-9_10732 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_10732 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.goal matches 1.. if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_10732 __sandstone run function prodige_skills:skill/excavating/level_up
-scoreboard players operation anon_cnoL-r-9_10733 __sandstone = var_1534 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_10822 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_10822 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.goal matches 1.. if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_10822 __sandstone run function prodige_skills:skill/excavating/level_up
+scoreboard players operation anon_cnoL-r-9_10823 __sandstone = var_1534 prodige_skills.prodigelib.float
 function prodige_skills:on_event/trigger/excavate_clay_block/if5
-scoreboard players operation anon_cnoL-r-9_10734 __sandstone = anon_cnoL-r-9_10733 __sandstone
-scoreboard players operation anon_cnoL-r-9_10734 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_10734 __sandstone
-scoreboard players operation anon_cnoL-r-9_10735 __sandstone = anon_cnoL-r-9_10733 __sandstone
-scoreboard players operation anon_cnoL-r-9_10735 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_10735 __sandstone
+scoreboard players operation anon_cnoL-r-9_10824 __sandstone = anon_cnoL-r-9_10823 __sandstone
+scoreboard players operation anon_cnoL-r-9_10824 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_10824 __sandstone
+scoreboard players operation anon_cnoL-r-9_10825 __sandstone = anon_cnoL-r-9_10823 __sandstone
+scoreboard players operation anon_cnoL-r-9_10825 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_10825 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_3394.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_3394.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_3394.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3394
 data modify storage prodige_skills:prodigelib Float.var_1534.out set from storage prodige_skills:prodigelib Float.temp
 data modify storage prodige_skills:skill_bossbar args.added set from storage prodige_skills:prodigelib Float.var_1534.out
-execute store result storage prodige_skills:skill_bossbar args.points int 1 run scoreboard players get anon_cnoL-r-9_10731 __sandstone
+execute store result storage prodige_skills:skill_bossbar args.points int 1 run scoreboard players get anon_cnoL-r-9_10821 __sandstone
 data modify storage prodige_skills:skill_bossbar args.boostXp set value ''
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:on_event/trigger/excavate_clay_block/if6
 data modify storage prodige_skills:skill_bossbar args.boostPts set value ''

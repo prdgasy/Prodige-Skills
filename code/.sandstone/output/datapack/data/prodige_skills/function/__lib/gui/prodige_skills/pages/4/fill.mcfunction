@@ -16,49 +16,49 @@ item replace entity @s container.24 with gray_stained_glass_pane[lore=[],custom_
 item replace entity @s container.25 with gray_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::progresshunting::fill -> (26)
 item replace entity @s container.26 with gray_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
-scoreboard players operation anon_cnoL-r-9_320 __sandstone = @p prodige_skills.hunting.xp
-scoreboard players set anon_cnoL-r-9_321 __sandstone 1000
-scoreboard players operation anon_cnoL-r-9_320 __sandstone *= anon_cnoL-r-9_321 __sandstone
-scoreboard players operation anon_cnoL-r-9_320 __sandstone /= 10 __sandstone
-scoreboard players operation var_29 prodige_skills.prodigelib.float = anon_cnoL-r-9_320 __sandstone
-scoreboard players operation anon_cnoL-r-9_322 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_322 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_323 __sandstone = var_29 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_323 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_323 __sandstone /= anon_cnoL-r-9_322 __sandstone
-scoreboard players operation var_30 prodige_skills.prodigelib.float = anon_cnoL-r-9_323 __sandstone
-scoreboard players operation anon_cnoL-r-9_324 __sandstone = var_30 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_324 __sandstone /= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_325 __sandstone = anon_cnoL-r-9_324 __sandstone
-scoreboard players operation anon_cnoL-r-9_325 __sandstone *= 15 __sandstone
-scoreboard players operation anon_cnoL-r-9_326 __sandstone = anon_cnoL-r-9_325 __sandstone
-scoreboard players operation anon_cnoL-r-9_326 __sandstone /= 100 __sandstone
-execute if score anon_cnoL-r-9_326 __sandstone matches ..-1 run scoreboard players set anon_cnoL-r-9_326 __sandstone 0
-execute if score anon_cnoL-r-9_326 __sandstone matches 16.. run scoreboard players set anon_cnoL-r-9_326 __sandstone 15
-execute store result storage __sandstone:variable anon_cnoL-r-9_138.env_0 int 1 run scoreboard players get anon_cnoL-r-9_326 __sandstone
+scoreboard players operation anon_cnoL-r-9_325 __sandstone = @p prodige_skills.hunting.xp
+scoreboard players set anon_cnoL-r-9_326 __sandstone 1000
+scoreboard players operation anon_cnoL-r-9_325 __sandstone *= anon_cnoL-r-9_326 __sandstone
+scoreboard players operation anon_cnoL-r-9_325 __sandstone /= 10 __sandstone
+scoreboard players operation var_29 prodige_skills.prodigelib.float = anon_cnoL-r-9_325 __sandstone
+scoreboard players operation anon_cnoL-r-9_327 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_327 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_328 __sandstone = var_29 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_328 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_328 __sandstone /= anon_cnoL-r-9_327 __sandstone
+scoreboard players operation var_30 prodige_skills.prodigelib.float = anon_cnoL-r-9_328 __sandstone
+scoreboard players operation anon_cnoL-r-9_329 __sandstone = var_30 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_329 __sandstone /= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_330 __sandstone = anon_cnoL-r-9_329 __sandstone
+scoreboard players operation anon_cnoL-r-9_330 __sandstone *= 15 __sandstone
+scoreboard players operation anon_cnoL-r-9_331 __sandstone = anon_cnoL-r-9_330 __sandstone
+scoreboard players operation anon_cnoL-r-9_331 __sandstone /= 100 __sandstone
+execute if score anon_cnoL-r-9_331 __sandstone matches ..-1 run scoreboard players set anon_cnoL-r-9_331 __sandstone 0
+execute if score anon_cnoL-r-9_331 __sandstone matches 16.. run scoreboard players set anon_cnoL-r-9_331 __sandstone 15
+execute store result storage __sandstone:variable anon_cnoL-r-9_138.env_0 int 1 run scoreboard players get anon_cnoL-r-9_331 __sandstone
 function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_cnoL-r-9_138
 data modify storage prodige_skills:prodigelib bar.out_14 set from storage prodige_skills:prodigelib bar.temp
-scoreboard players operation anon_cnoL-r-9_327 __sandstone = var_30 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_332 __sandstone = var_30 prodige_skills.prodigelib.float
 function prodige_skills:__lib/gui/prodige_skills/pages/4/fill/if3
-scoreboard players operation anon_cnoL-r-9_328 __sandstone = anon_cnoL-r-9_327 __sandstone
-scoreboard players operation anon_cnoL-r-9_328 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_328 __sandstone
-scoreboard players operation anon_cnoL-r-9_329 __sandstone = anon_cnoL-r-9_327 __sandstone
-scoreboard players operation anon_cnoL-r-9_329 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_329 __sandstone
+scoreboard players operation anon_cnoL-r-9_333 __sandstone = anon_cnoL-r-9_332 __sandstone
+scoreboard players operation anon_cnoL-r-9_333 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_333 __sandstone
+scoreboard players operation anon_cnoL-r-9_334 __sandstone = anon_cnoL-r-9_332 __sandstone
+scoreboard players operation anon_cnoL-r-9_334 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_334 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_139.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_139.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_139.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_139
 data modify storage prodige_skills:prodigelib Float.var_30.out set from storage prodige_skills:prodigelib Float.temp
-scoreboard players operation anon_cnoL-r-9_330 __sandstone = @p prodige_skills.hunting.xp
+scoreboard players operation anon_cnoL-r-9_335 __sandstone = @p prodige_skills.hunting.xp
 function prodige_skills:__lib/gui/prodige_skills/pages/4/fill/if4
-scoreboard players operation anon_cnoL-r-9_331 __sandstone = anon_cnoL-r-9_330 __sandstone
-scoreboard players operation anon_cnoL-r-9_331 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_331 __sandstone
-scoreboard players operation anon_cnoL-r-9_332 __sandstone = anon_cnoL-r-9_330 __sandstone
-scoreboard players operation anon_cnoL-r-9_332 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_332 __sandstone
+scoreboard players operation anon_cnoL-r-9_336 __sandstone = anon_cnoL-r-9_335 __sandstone
+scoreboard players operation anon_cnoL-r-9_336 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_336 __sandstone
+scoreboard players operation anon_cnoL-r-9_337 __sandstone = anon_cnoL-r-9_335 __sandstone
+scoreboard players operation anon_cnoL-r-9_337 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_337 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_140.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_140.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_140.env_2 set from storage prodige_skills:prodigelib Float.d0
@@ -73,17 +73,17 @@ data modify storage prodige_skills:progress_args args.xp set from storage prodig
 execute store result storage prodige_skills:progress_args args.goal int 1 run scoreboard players get @p prodige_skills.hunting.goal
 scoreboard players set loop_iterator_3_cnoL-r-9 __sandstone 0
 execute if score loop_iterator_3_cnoL-r-9 __sandstone matches ..17 run function prodige_skills:__lib/gui/prodige_skills/pages/4/fill/loop
-scoreboard players operation anon_cnoL-r-9_337 __sandstone = @p prodige_skills.hunting.xp
-scoreboard players set anon_cnoL-r-9_338 __sandstone 1000
-scoreboard players operation anon_cnoL-r-9_337 __sandstone *= anon_cnoL-r-9_338 __sandstone
-scoreboard players operation anon_cnoL-r-9_337 __sandstone /= 10 __sandstone
-scoreboard players operation var_31 prodige_skills.prodigelib.float = anon_cnoL-r-9_337 __sandstone
-scoreboard players operation anon_cnoL-r-9_339 __sandstone = @p prodige_skills.hunting.goal
-scoreboard players operation anon_cnoL-r-9_339 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_340 __sandstone = var_31 prodige_skills.prodigelib.float
-scoreboard players operation anon_cnoL-r-9_340 __sandstone *= 10 __sandstone
-scoreboard players operation anon_cnoL-r-9_340 __sandstone /= anon_cnoL-r-9_339 __sandstone
-scoreboard players operation var_32 prodige_skills.prodigelib.float = anon_cnoL-r-9_340 __sandstone
+scoreboard players operation anon_cnoL-r-9_342 __sandstone = @p prodige_skills.hunting.xp
+scoreboard players set anon_cnoL-r-9_343 __sandstone 1000
+scoreboard players operation anon_cnoL-r-9_342 __sandstone *= anon_cnoL-r-9_343 __sandstone
+scoreboard players operation anon_cnoL-r-9_342 __sandstone /= 10 __sandstone
+scoreboard players operation var_31 prodige_skills.prodigelib.float = anon_cnoL-r-9_342 __sandstone
+scoreboard players operation anon_cnoL-r-9_344 __sandstone = @p prodige_skills.hunting.goal
+scoreboard players operation anon_cnoL-r-9_344 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_345 __sandstone = var_31 prodige_skills.prodigelib.float
+scoreboard players operation anon_cnoL-r-9_345 __sandstone *= 10 __sandstone
+scoreboard players operation anon_cnoL-r-9_345 __sandstone /= anon_cnoL-r-9_344 __sandstone
+scoreboard players operation var_32 prodige_skills.prodigelib.float = anon_cnoL-r-9_345 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_141 set value '§f§lProgress:'
 data modify storage __sandstone:variable anon_cnoL-r-9_142 set value ''
 data modify storage __sandstone:variable anon_cnoL-r-9_143 set value ''
@@ -92,14 +92,14 @@ function prodige_skills:__lib/gui/prodige_skills/pages/4/fill/if5
 execute store result storage __sandstone:variable anon_cnoL-r-9_152.param_0 int 1 run scoreboard players get @p prodige_skills.hunting.level
 function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_152
 data modify storage prodige_skills:prodigelib RomanNumbers.out_13 set from storage prodige_skills:prodigelib RomanNumbers.temp
-scoreboard players operation anon_cnoL-r-9_357 __sandstone = @p prodige_skills.hunting.totalXp
+scoreboard players operation anon_cnoL-r-9_362 __sandstone = @p prodige_skills.hunting.totalXp
 function prodige_skills:__lib/gui/prodige_skills/pages/4/fill/if10
-scoreboard players operation anon_cnoL-r-9_358 __sandstone = anon_cnoL-r-9_357 __sandstone
-scoreboard players operation anon_cnoL-r-9_358 __sandstone /= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_358 __sandstone
-scoreboard players operation anon_cnoL-r-9_359 __sandstone = anon_cnoL-r-9_357 __sandstone
-scoreboard players operation anon_cnoL-r-9_359 __sandstone %= 10 __sandstone
-execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_359 __sandstone
+scoreboard players operation anon_cnoL-r-9_363 __sandstone = anon_cnoL-r-9_362 __sandstone
+scoreboard players operation anon_cnoL-r-9_363 __sandstone /= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_363 __sandstone
+scoreboard players operation anon_cnoL-r-9_364 __sandstone = anon_cnoL-r-9_362 __sandstone
+scoreboard players operation anon_cnoL-r-9_364 __sandstone %= 10 __sandstone
+execute store result storage prodige_skills:prodigelib Float.d0 int 1 run scoreboard players get anon_cnoL-r-9_364 __sandstone
 data modify storage __sandstone:variable anon_cnoL-r-9_153.env_0 set from storage prodige_skills:prodigelib Float.sign
 data modify storage __sandstone:variable anon_cnoL-r-9_153.env_1 set from storage prodige_skills:prodigelib Float.unit
 data modify storage __sandstone:variable anon_cnoL-r-9_153.env_2 set from storage prodige_skills:prodigelib Float.d0

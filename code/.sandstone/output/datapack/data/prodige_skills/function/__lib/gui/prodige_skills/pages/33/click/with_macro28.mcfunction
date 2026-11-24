@@ -1,2 +1,0 @@
-# prodige_skills::vault::click::macro -> §6§l§6Worldroot Axe §8× §e$(macro_arg_4420)($(macro_arg_4419))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4419)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/33/click/with_macro28/execute_unless

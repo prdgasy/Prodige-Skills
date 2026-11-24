@@ -1,2 +1,2 @@
-# prodige_skills::legendary_rewards::fill -> §6Strata Shaper(10)
-item replace entity @s container.10 with netherite_shovel[custom_name={text: "§6Strata Shaper", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+data modify storage __sandstone:variable anon_cnoL-r-9_1957 set value 'arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_1958 set value '§7Previous'

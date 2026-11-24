@@ -1,0 +1,2 @@
+function prodige_skills:title/interact/new_title_keeper_of_the_wild
+scoreboard players set anon_cnoL-r-9_37 __sandstone 1

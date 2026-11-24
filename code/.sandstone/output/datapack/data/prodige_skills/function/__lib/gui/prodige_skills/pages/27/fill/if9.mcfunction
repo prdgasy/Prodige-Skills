@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §dWarden Edge(8)
+item replace entity @s container.8 with netherite_sword[custom_name={text: "§dWarden Edge", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

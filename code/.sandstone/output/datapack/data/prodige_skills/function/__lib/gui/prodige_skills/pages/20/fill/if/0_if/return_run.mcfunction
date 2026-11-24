@@ -1,8 +1,8 @@
-scoreboard players operation anon_cnoL-r-9_5922 __sandstone = @p prodige_skills.Excavating.ability.tier
-scoreboard players add anon_cnoL-r-9_5922 __sandstone 1
-scoreboard players operation anon_cnoL-r-9_5923 __sandstone = anon_cnoL-r-9_5922 __sandstone
-scoreboard players operation anon_cnoL-r-9_5923 __sandstone *= 10 __sandstone
-execute store result storage __sandstone:variable anon_cnoL-r-9_1868.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5923 __sandstone
+scoreboard players operation anon_cnoL-r-9_5927 __sandstone = @p prodige_skills.Excavating.ability.tier
+scoreboard players add anon_cnoL-r-9_5927 __sandstone 1
+scoreboard players operation anon_cnoL-r-9_5928 __sandstone = anon_cnoL-r-9_5927 __sandstone
+scoreboard players operation anon_cnoL-r-9_5928 __sandstone *= 10 __sandstone
+execute store result storage __sandstone:variable anon_cnoL-r-9_1868.param_0 int 1 run scoreboard players get anon_cnoL-r-9_5928 __sandstone
 function prodige_skills:__lib/roman/score/get with storage __sandstone:variable anon_cnoL-r-9_1868
 data modify storage prodige_skills:prodigelib RomanNumbers.out_140 set from storage prodige_skills:prodigelib RomanNumbers.temp
 data modify storage __sandstone:variable anon_cnoL-r-9_1869 set value ''
@@ -15,6 +15,6 @@ execute if score @p prodige_skills.player.pts matches 500.. if score @p prodige_
 data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2456 set from storage __sandstone:variable anon_cnoL-r-9_1869
 data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2457 set from storage __sandstone:variable anon_cnoL-r-9_1871
 data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2458 set from storage prodige_skills:prodigelib RomanNumbers.out_140
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2459 int 1 run scoreboard players get anon_cnoL-r-9_5923 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2459 int 1 run scoreboard players get anon_cnoL-r-9_5928 __sandstone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating.macro_arg_2460 set from storage __sandstone:variable anon_cnoL-r-9_1870
 return run function prodige_skills:__lib/gui/prodige_skills/pages/20/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.abilitiesexcavating

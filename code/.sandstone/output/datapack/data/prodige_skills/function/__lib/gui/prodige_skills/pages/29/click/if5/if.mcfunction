@@ -1,2 +1,2 @@
-execute as @p at @s run function prodige_skills:__lib/gui/prodige_skills/pages/29/click/if5/if/execute_as/if
+execute unless score @s prodige_skills.menu.shop.crates.index matches 0 run scoreboard players remove @s prodige_skills.menu.shop.crates.index 1
 scoreboard players set anon_cnoL-r-9_31 __sandstone 1

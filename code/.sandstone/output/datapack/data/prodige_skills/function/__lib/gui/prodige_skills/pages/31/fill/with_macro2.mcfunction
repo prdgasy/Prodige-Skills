@@ -1,2 +1,2 @@
-# prodige_skills::preferences::fill::macro -> $(macro_arg_4018)Action Notifications(12)
-$item replace entity @s container.12 with book[custom_name={text: "$(macro_arg_4018)Action Notifications", italic: false, color: "white"},lore=[{text: "§7§7Show a progression bar when", italic: false, color: "white"},{text: "§7you do a skill actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§fStatus §8• $(macro_arg_4019)", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to toggle!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill::macro -> $(macro_arg_2553)(26)
+$item replace entity @s container.26 with $(macro_arg_2552)[custom_name={text: "$(macro_arg_2553)", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

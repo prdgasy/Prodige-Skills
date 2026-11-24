@@ -1,0 +1,1 @@
+execute if entity @p[tag=prodige_skills.title.owned.new_title_dune_sovereign] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/switch48/case_1/if

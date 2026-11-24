@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §dHeartwood Chopper(3)
+item replace entity @s container.3 with diamond_axe[custom_name={text: "§dHeartwood Chopper", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
