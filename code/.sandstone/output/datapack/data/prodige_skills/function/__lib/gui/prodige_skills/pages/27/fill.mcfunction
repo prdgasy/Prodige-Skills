@@ -1,21 +1,21 @@
 # prodige_skills::crate_epic_rewards::fill -> (18)
-item replace entity @s container.18 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.18 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (19)
-item replace entity @s container.19 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.19 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (20)
-item replace entity @s container.20 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.20 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (21)
-item replace entity @s container.21 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.21 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (22)
-item replace entity @s container.22 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.22 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (23)
-item replace entity @s container.23 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.23 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (24)
-item replace entity @s container.24 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.24 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (25)
-item replace entity @s container.25 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.25 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> (26)
-item replace entity @s container.26 with cyan_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.26 with magenta_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 execute if score @s prodige_skills.menu.shop.crates.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if
 execute if score @s prodige_skills.menu.shop.crates.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if2
 execute if score @s prodige_skills.menu.shop.crates.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if3
@@ -47,10 +47,10 @@ execute if score @s prodige_skills.menu.shop.crates.index matches 1 run function
 execute if score @s prodige_skills.menu.shop.crates.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if29
 # prodige_skills::crate_epic_rewards::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::crate_epic_rewards::fill -> §e§5§lEpic Crate Key §8• §61500 Pts(23)
-item replace entity @s container.23 with tripwire_hook[custom_name={text: "§e§5§lEpic Crate Key §8• §61500 Pts", italic: false, color: "white"},lore=[{text: "", italic: false, color: "white"},{text: "§e§l┃ Matching Crate Key", italic: false, color: "white"},{text: "§e┃ §7This key opens: §l§5§lEpic Crate§7.", italic: false, color: "white"},{text: "§e┃", italic: false, color: "white"},{text: "§e┃ §7Price: §61500 Pts", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to buy!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_epic_rewards::fill -> §5§lEpic Crate Key §8• §61500 Pts(23)
+item replace entity @s container.23 with tripwire_hook[custom_name={text: "§5§lEpic Crate Key §8• §61500 Pts", italic: false, color: "white"},lore=[{text: "§e§l┃ Matching Crate Key", italic: false, color: "white"},{text: "§e┃ §7This key opens: §l§5§lEpic Crate§7.", italic: false, color: "white"},{text: "§e┃ §7Price: §61500 Pts", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to buy!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_rewards::fill -> §eOpen §5§lEpic Crate(22)
-item replace entity @s container.22 with ender_chest[custom_name={text: "§eOpen §5§lEpic Crate", italic: false, color: "white"},lore=[{text: "§eClick to open!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.22 with barrel[custom_name={text: "§eOpen §5§lEpic Crate", italic: false, color: "white"},lore=[{text: "§eClick to open!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 data modify storage __sandstone:variable anon_cnoL-r-9_1965 set value 'spectral_arrow'
 data modify storage __sandstone:variable anon_cnoL-r-9_1966 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.crates.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/27/fill/if30

@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §dObsidian Breaker(9)
-item replace entity @s container.9 with netherite_pickaxe[custom_name={text: "§dObsidian Breaker", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.9 with netherite_pickaxe[custom_name={text: "§dObsidian Breaker", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

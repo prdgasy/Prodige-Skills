@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §6Bedrock Borer(1)
-item replace entity @s container.1 with netherite_pickaxe[custom_name={text: "§6Bedrock Borer", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.1 with netherite_pickaxe[custom_name={text: "§6Bedrock Borer", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

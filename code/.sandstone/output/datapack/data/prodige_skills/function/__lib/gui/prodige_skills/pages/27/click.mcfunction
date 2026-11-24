@@ -1,7 +1,7 @@
 scoreboard players set anon_cnoL-r-9_29 __sandstone 0
 # prodige_skills::crate_epic_rewards::click -> §cBack(18)
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if/if
-# prodige_skills::crate_epic_rewards::click -> §e§5§lEpic Crate Key §8• §61500 Pts(23)
+# prodige_skills::crate_epic_rewards::click -> §5§lEpic Crate Key §8• §61500 Pts(23)
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:23b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if2/if
 # prodige_skills::crate_epic_rewards::click -> §eOpen §5§lEpic Crate(22)
 execute if score anon_cnoL-r-9_29 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run function prodige_skills:__lib/gui/prodige_skills/pages/27/click/if3/if

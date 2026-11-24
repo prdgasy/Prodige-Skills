@@ -23,7 +23,7 @@ type CrateRewardContext = {
 export const crateDefs = {
   '§a§lCommon': {
     description: 'A starter cache with useful points, skill XP, boosters, keys, and skill-specific starter tools.',
-    item: 'chest',
+    item: 'bundle',
     keyPrice: 250,
     rewards: context => new Map<Reward, number>([
       [Reward.point(100), 25],
@@ -40,7 +40,7 @@ export const crateDefs = {
 
   '§9§lRare': {
     description: 'A well-stocked cache with better XP, stronger boosters, keys, and more skill-specific gear.',
-    item: 'barrel',
+    item: 'chest',
     keyPrice: 750,
     rewards: context => new Map<Reward, number>([
       [Reward.point(250), 20],
@@ -60,7 +60,7 @@ export const crateDefs = {
 
   '§5§lEpic': {
     description: 'An epic cache with substantial points, random skill XP, powerful boosters, keys, and advanced gear.',
-    item: 'ender_chest',
+    item: 'barrel',
     keyPrice: 1500,
     rewards: context => new Map<Reward, number>([
       [Reward.point(500), 20],

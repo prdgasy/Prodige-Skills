@@ -34,4 +34,4 @@ item replace entity @s container.25 with red_stained_glass_pane[custom_name={tex
 item replace entity @s container.8 with light_gray_stained_glass_pane[custom_name={text: " ", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_mythic_open::fill ->  (26)
 item replace entity @s container.26 with green_stained_glass_pane[custom_name={text: " ", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1
-function prodige_skills:__lib/crate/mythic/reel
+function prodige_skills:misc/crate/mythic/reel

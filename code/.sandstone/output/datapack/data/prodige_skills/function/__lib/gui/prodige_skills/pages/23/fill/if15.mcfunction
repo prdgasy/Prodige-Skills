@@ -1,2 +1,2 @@
 # prodige_skills::crate_common_rewards::fill -> §aPathfinder Crossbow(14)
-item replace entity @s container.14 with crossbow[custom_name={text: "§aPathfinder Crossbow", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.14 with crossbow[custom_name={text: "§aPathfinder Crossbow", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,0 +1,17 @@
+execute if score @s prodige_skills.menu.shop.crates.center matches 0 run function prodige_skills:misc/crate/common/reel/if
+execute if score @s prodige_skills.menu.shop.crates.center matches 1 run function prodige_skills:misc/crate/common/reel/if2
+execute if score @s prodige_skills.menu.shop.crates.center matches 2 run function prodige_skills:misc/crate/common/reel/if3
+execute if score @s prodige_skills.menu.shop.crates.center matches 3 run function prodige_skills:misc/crate/common/reel/if4
+execute if score @s prodige_skills.menu.shop.crates.center matches 4 run function prodige_skills:misc/crate/common/reel/if5
+execute if score @s prodige_skills.menu.shop.crates.center matches 5 run function prodige_skills:misc/crate/common/reel/if6
+execute if score @s prodige_skills.menu.shop.crates.center matches 6 run function prodige_skills:misc/crate/common/reel/if7
+execute if score @s prodige_skills.menu.shop.crates.center matches 7 run function prodige_skills:misc/crate/common/reel/if8
+execute if score @s prodige_skills.menu.shop.crates.center matches 8 run function prodige_skills:misc/crate/common/reel/if9
+execute if score @s prodige_skills.menu.shop.crates.center matches 9 run function prodige_skills:misc/crate/common/reel/if10
+execute if score @s prodige_skills.menu.shop.crates.center matches 10 run function prodige_skills:misc/crate/common/reel/if11
+execute if score @s prodige_skills.menu.shop.crates.center matches 11 run function prodige_skills:misc/crate/common/reel/if12
+execute if score @s prodige_skills.menu.shop.crates.center matches 12 run function prodige_skills:misc/crate/common/reel/if13
+execute if score @s prodige_skills.menu.shop.crates.center matches 13 run function prodige_skills:misc/crate/common/reel/if14
+execute if score @s prodige_skills.menu.shop.crates.center matches 14 run function prodige_skills:misc/crate/common/reel/if15
+execute if score @s prodige_skills.menu.shop.crates.center matches 15 run function prodige_skills:misc/crate/common/reel/if16
+execute if score @s prodige_skills.menu.shop.crates.center matches 16 run function prodige_skills:misc/crate/common/reel/if17

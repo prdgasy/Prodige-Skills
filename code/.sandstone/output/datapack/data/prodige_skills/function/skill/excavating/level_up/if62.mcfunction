@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.player.pts 400
-scoreboard players add @p prodige_skills.reward.pending.x2_xp_booster 1
+scoreboard players add @p prodige_skills.player.pts 100
+scoreboard players add @p prodige_skills.reward.pending.x2_pts_booster 1
 scoreboard players set anon_cnoL-r-9_18186 __sandstone 0
 execute store result score anon_cnoL-r-9_18186 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_18186 __sandstone matches 0 run function prodige_skills:skill/excavating/level_up/if62/if

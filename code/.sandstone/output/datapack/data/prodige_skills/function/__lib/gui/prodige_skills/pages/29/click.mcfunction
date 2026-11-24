@@ -1,7 +1,7 @@
 scoreboard players set anon_cnoL-r-9_31 __sandstone 0
 # prodige_skills::crate_legendary_rewards::click -> §cBack(18)
 execute if score anon_cnoL-r-9_31 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/29/click/if/if
-# prodige_skills::crate_legendary_rewards::click -> §e§6§lLegendary Crate Key §8• §65000 Pts(23)
+# prodige_skills::crate_legendary_rewards::click -> §6§lLegendary Crate Key §8• §65000 Pts(23)
 execute if score anon_cnoL-r-9_31 __sandstone matches 0 unless data entity @s Items[{Slot:23b}] run function prodige_skills:__lib/gui/prodige_skills/pages/29/click/if2/if
 # prodige_skills::crate_legendary_rewards::click -> §eOpen §6§lLegendary Crate(22)
 execute if score anon_cnoL-r-9_31 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run function prodige_skills:__lib/gui/prodige_skills/pages/29/click/if3/if

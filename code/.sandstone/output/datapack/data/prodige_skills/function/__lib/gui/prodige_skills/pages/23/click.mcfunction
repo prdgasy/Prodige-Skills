@@ -1,7 +1,7 @@
 scoreboard players set anon_cnoL-r-9_25 __sandstone 0
 # prodige_skills::crate_common_rewards::click -> §cBack(18)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if/if
-# prodige_skills::crate_common_rewards::click -> §e§a§lCommon Crate Key §8• §6250 Pts(23)
+# prodige_skills::crate_common_rewards::click -> §a§lCommon Crate Key §8• §6250 Pts(23)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:23b}] run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if2/if
 # prodige_skills::crate_common_rewards::click -> §eOpen §a§lCommon Crate(22)
 execute if score anon_cnoL-r-9_25 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run function prodige_skills:__lib/gui/prodige_skills/pages/23/click/if3/if

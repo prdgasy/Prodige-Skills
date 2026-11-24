@@ -1,2 +1,2 @@
 # prodige_skills::crate_epic_rewards::fill -> §dBountiful Planter(6)
-item replace entity @s container.6 with netherite_hoe[custom_name={text: "§dBountiful Planter", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.6 with netherite_hoe[custom_name={text: "§dBountiful Planter", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -7,6 +7,8 @@ import { Item } from "@src/types";
 import { _, execute, MCFunction, Objective, playsound, rel, tellraw, Variable } from "sandstone";
 import { Shop } from ".";
 import { Mask } from "../../mask";
+import { Global } from "@src/global";
+import type { Reward } from "@src/misc/reward";
 
 // ───────────────────────── Animation settings ─────────────────────────
 const COLORS = [
@@ -25,8 +27,8 @@ const wait = (ticks: number) => _.await.sleep(`${ticks}t`);
 
 const pane = (color: string) => `${color}_stained_glass_pane` as Item;
 const col = (i: number) => COLORS[((i % 16) + 16) % 16];
-const slug = (s: string) =>
-  s.replace(/§./g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+
+type CrateRewardEntry = [Reward, { weight: number; chance: number }];
 
 export class Crates {
   private static rewardPageIndex = Objective.create('menu.shop.crates.index')('@s');
@@ -39,7 +41,7 @@ export class Crates {
   }
 
   private static pageName(crate: Crate, kind: 'rewards' | 'open') {
-    return `crate_${slug(crate.name)}_${kind}`;
+    return `crate_${Global.toResource(crate.name)}_${kind}`;
   }
 
   // ───────────────────────── Main crates page ─────────────────────────
@@ -87,7 +89,7 @@ export class Crates {
       const p = g.createPage(Crates.pageName(crate, 'rewards'));
 
       // `fill`-only objects: nothing is generated in the click function.
-      p.add({ fill: () => Mask.bottom(p, "cyan_stained_glass_pane") });
+      p.add({ fill: () => Mask.bottom(p, "magenta_stained_glass_pane") });
       p.add({
         fill: () => {
           for (const [i, [reward, values]] of [...crate.rewards].entries()) {
@@ -104,7 +106,7 @@ export class Crates {
       });
 
       p.add(
-        Menu.back(g, Crates), // was Shop: go back to the crates list
+        Menu.back(g, Crates),
         Crates.keyButton(crate, 23),
         Crates.openButton(crate, 22, play),
       );
@@ -133,7 +135,7 @@ export class Crates {
     if (n === 0) return () => { tellraw('@p', '§cThis crate is empty.'); };
 
     const { winner, center } = Crates;
-    const base = `__lib/crate/${slug(crate.name)}`;
+    const base = `__lib/crate/${Global.toResource(crate.name)}`;
     const page = g.createPage(Crates.pageName(crate, 'open'));
     const K = (n - (FRAMES % n)) % n; // (K + FRAMES) % n === 0
 
@@ -157,7 +159,7 @@ export class Crates {
               [`§eChance: §7${values.chance}%`],
               undefined,
               1,
-              j === 4 ? ['enchantment_glint_override=1'] : [],
+              j === 4 ? ['enchantment_glint_override=true'] : [],
             ));
           }
         });
@@ -208,7 +210,7 @@ export class Crates {
     const total = weights.reduce((a, b) => a + b, 0);
 
     const roll = Variable(0);
-    execute.store.result(roll).run.random.value(`0..${total - 1}`);
+    execute.store.result(roll).run.random.value([0, total - 1]);
 
     Crates.winner.set(0);
     let acc = 0;
@@ -251,7 +253,7 @@ export class Crates {
         g.switch(Crates.pageName(crate, 'rewards'));
       },
       1,
-      ['enchantment_glint_override=1'],
+      ['enchantment_glint_override=true'],
     );
   }
 
@@ -259,12 +261,10 @@ export class Crates {
     return new Button(
       'tripwire_hook',
       slot,
-      `§e${crate.name} Crate Key §8• §6${crate.key.price} Pts`,
+      `${crate.name} Crate Key §8• §6${crate.key.price} Pts`,
       [
-        '',
         '§e§l┃ Matching Crate Key',
         `§e┃ §7This key opens: §l${crate.name} Crate§7.`,
-        '§e┃',
         `§e┃ §7Price: §6${crate.key.price} Pts`,
         '',
         '§eClick to buy!',

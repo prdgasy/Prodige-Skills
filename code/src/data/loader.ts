@@ -285,12 +285,15 @@ export class Loader {
     }
 
     for (const [name, opt] of Object.entries(crateDefs)) {
-      Crate.get(name as CrateName).rewards = opt.rewards({
+      const raw = opt.rewards({
         keys,
         randomSkillXp: (min: number, max: number) => Reward.randomXp(min, max, skills),
         skillTools: Loader.skillToolTiers,
         tools: Loader.crateTools[Loader.plain(name)] ?? [],
       });
+      const crate = Crate.get(name as CrateName);
+      crate.totalRewardWeight = Crate.getTotalWeight(raw);
+      crate.rewards = Crate.getRewards(raw, crate.totalRewardWeight);
     }
   }
 

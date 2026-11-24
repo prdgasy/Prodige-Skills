@@ -19,7 +19,7 @@ import { Score, DataVariable, _, say } from 'sandstone';
 
 export class Menu {
   public static init() {
-    const M = new Gui('§e§lProdige Skills', 'menu');
+    const M = new Gui('§6§lProdige Skills', 'menu');
 
     const pages: (SkillPage | SubSkillPage)[] = [
       Main, Progress, Actions, Achievements, Abilities, Shop, Crates, Items, Boosters, Titles, Preferences, Tasks, Vault

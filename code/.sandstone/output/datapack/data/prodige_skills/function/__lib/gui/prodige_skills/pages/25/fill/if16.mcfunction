@@ -1,2 +1,2 @@
 # prodige_skills::crate_rare_rewards::fill -> §aTrailwatch Bow(15)
-item replace entity @s container.15 with bow[custom_name={text: "§aTrailwatch Bow", italic: false, color: "white"},lore=[{text: "§eReward chance: §7undefined%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.15 with bow[custom_name={text: "§aTrailwatch Bow", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
