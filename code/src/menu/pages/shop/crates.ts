@@ -104,9 +104,12 @@ export class Crates {
           }
         },
       });
-
+      p.add(() => Shop.balance(p));
       p.add(
         Menu.back(g, Crates),
+
+        Crates.crates(),
+
         Crates.keyButton(crate, 23),
         Crates.openButton(crate, 22, play),
       );
@@ -223,7 +226,7 @@ export class Crates {
   private static award(entries: [Crate['rewards'] extends Map<infer R, any> ? R : never, any][], winner: typeof Crates.winner) {
     entries.forEach(([reward], k) => {
       _.if(winner['=='](k), () => {
-        tellraw('@p', `§6✦ §eYou won: §r${reward.name}`);
+        Player.send(`You won: ${reward.name}§e!`, '§e');
         reward.give();
       });
     });
@@ -253,7 +256,7 @@ export class Crates {
         g.switch(Crates.pageName(crate, 'rewards'));
       },
       1,
-      ['enchantment_glint_override=true'],
+      ['enchantment_glint_override=true', '!bundle_content'],
     );
   }
 
