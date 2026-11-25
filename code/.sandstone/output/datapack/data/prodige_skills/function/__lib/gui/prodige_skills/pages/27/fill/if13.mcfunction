@@ -1,2 +1,2 @@
 # prodige_skills::crate_epic_rewards::fill -> §9Wildwood Axe(12)
-item replace entity @s container.12 with netherite_axe[custom_name={text: "§9Wildwood Axe", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.12 with netherite_axe[custom_name={text: "§9Wildwood Axe", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

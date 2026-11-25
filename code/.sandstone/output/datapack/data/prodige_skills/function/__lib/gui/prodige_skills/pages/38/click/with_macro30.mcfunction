@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§aFirst Harvest Hoe §8× §e$(macro_arg_4426)($(macro_arg_4425))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4425)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro30/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§aFirst Harvest Hoe §8× §e$(macro_arg_4706)($(macro_arg_4705))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4705)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro30/execute_unless

@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §6Voidfall Pickaxe(7)
-item replace entity @s container.7 with netherite_pickaxe[custom_name={text: "§6Voidfall Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §76.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.7 with netherite_pickaxe[custom_name={text: "§6Voidfall Pickaxe", italic: false, color: "white"},lore=[{text: "§eReward chance: §76%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

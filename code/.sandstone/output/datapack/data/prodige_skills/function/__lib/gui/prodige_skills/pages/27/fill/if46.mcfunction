@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §f4 Netherite Scrap(9)
+item replace entity @s container.9 with netherite_scrap[custom_name={text: "§f4 Netherite Scrap", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

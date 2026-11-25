@@ -1,11 +1,11 @@
 scoreboard players operation anon_cnoL-r-9_6551 __sandstone = anon_cnoL-r-9_6400 __sandstone
 scoreboard players operation anon_cnoL-r-9_6551 __sandstone %= 18 __sandstone
-data modify storage __sandstone:variable anon_cnoL-r-9_2889 set value '§cNOT OWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2890 set value ''
-data modify storage __sandstone:variable anon_cnoL-r-9_2891 set value 'charcoal'
+data modify storage __sandstone:variable anon_cnoL-r-9_2929 set value '§cNOT OWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2930 set value ''
+data modify storage __sandstone:variable anon_cnoL-r-9_2931 set value 'charcoal'
 execute if entity @p[tag=prodige_skills.title.owned.new_title_eternal_harvest] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/switch26/case_2/if/if/if
-execute if entity @p[tag=prodige_skills.title.equipped.new_title_eternal_harvest] run data modify storage __sandstone:variable anon_cnoL-r-9_2890 set value ' §8• §b§lUNEQUIP'
-data modify storage __sandstone:variable anon_cnoL-r-9_2892 set value '§8You cannot buy this.'
-# prodige_skills::titles::click -> §dNew Title: §dEternal Harvest$(macro_arg_3675)($(macro_arg_3674))
+execute if entity @p[tag=prodige_skills.title.equipped.new_title_eternal_harvest] run data modify storage __sandstone:variable anon_cnoL-r-9_2930 set value ' §8• §b§lUNEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2932 set value '§8You cannot buy this.'
+# prodige_skills::titles::click -> §dNew Title: §dEternal Harvest$(macro_arg_3715)($(macro_arg_3714))
 execute if score anon_cnoL-r-9_37 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/switch26/case_2/if/if/if3
 scoreboard players add anon_cnoL-r-9_6401 __sandstone 1

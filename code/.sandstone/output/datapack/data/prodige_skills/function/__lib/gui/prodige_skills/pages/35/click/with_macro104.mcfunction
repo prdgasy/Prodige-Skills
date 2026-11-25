@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §2Keeper of the Wild$(macro_arg_3820)($(macro_arg_3819))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3819)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro104/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §2Keeper of the Wild$(macro_arg_3860)($(macro_arg_3859))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3859)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro104/execute_unless

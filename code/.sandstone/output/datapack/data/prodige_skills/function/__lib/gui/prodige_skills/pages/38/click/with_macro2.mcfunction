@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§bExpert Sword §8× §e$(macro_arg_4342)($(macro_arg_4341))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4341)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro2/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§bExpert Sword §8× §e$(macro_arg_4622)($(macro_arg_4621))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4621)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro2/execute_unless

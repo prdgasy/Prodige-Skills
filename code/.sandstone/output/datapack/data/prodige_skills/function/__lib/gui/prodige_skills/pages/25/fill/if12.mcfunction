@@ -1,2 +1,2 @@
 # prodige_skills::crate_rare_rewards::fill -> §aSapling Cutter(11)
-item replace entity @s container.11 with stone_axe[custom_name={text: "§aSapling Cutter", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.11 with stone_axe[custom_name={text: "§aSapling Cutter", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

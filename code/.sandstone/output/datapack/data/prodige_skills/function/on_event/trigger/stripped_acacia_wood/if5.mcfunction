@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9003 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_acacia_wood/if5/0_if/return_run
+execute if score anon_cnoL-r-9_9323 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/stripped_acacia_wood/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

@@ -68,15 +68,15 @@ item replace entity @s container.12 with experience_bottle[custom_name={text: "�
 item replace entity @s container.16 with gold_ingot[custom_name={text: "§6§l4x Pts Booster", italic: false, color: "white"},lore=[{text: "§6§l┃ Pts Boost", italic: false, color: "white"},{text: "§6┃ §7Earn 4 times more skill", italic: false, color: "white"},{text: "§6┃ §7points from your actions.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§8• §7Duration: §d15 minutes", italic: false, color: "white"},{text: "§8• §7Price: §62000 Points", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§eClick to purchase!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::boosters::fill -> §6§lHow Boosters Work(22)
 item replace entity @s container.22 with knowledge_book[custom_name={text: "§6§lHow Boosters Work", italic: false, color: "white"},lore=[{text: "§6§l┃ Activate a Booster", italic: false, color: "white"},{text: "§6┃ §7Purchase a booster to receive", italic: false, color: "white"},{text: "§6┃ §7its activation item.", italic: false, color: "white"},{text: "§6┃ §7Hold the item and right-click", italic: false, color: "white"},{text: "§6┃ §7to use it.", italic: false, color: "white"},{text: "§6┃ §7The multiplier activates for the", italic: false, color: "white"},{text: "§6┃ §7duration shown on the item.", italic: false, color: "white"},{text: "", italic: false, color: "white"},{text: "§8Use your boosters wisely!", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
-data modify storage __sandstone:variable anon_cnoL-r-9_2013 set value '§7No Xp Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2053 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/34/fill/if
-data modify storage __sandstone:variable anon_cnoL-r-9_2015 set value '§7No Pts Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2055 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/34/fill/if2
-# prodige_skills::boosters::fill -> §aShop §8• §e$(macro_arg_2582) Pts(19)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2582 int 1 run scoreboard players get @p prodige_skills.player.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2583 set from storage __sandstone:variable anon_cnoL-r-9_2013
-data modify storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2584 set from storage __sandstone:variable anon_cnoL-r-9_2015
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2585 int 1 run scoreboard players get @p prodige_skills.player.pts
+# prodige_skills::boosters::fill -> §aShop §8• §e$(macro_arg_2622) Pts(19)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2622 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2623 set from storage __sandstone:variable anon_cnoL-r-9_2053
+data modify storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2624 set from storage __sandstone:variable anon_cnoL-r-9_2055
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.boosters.macro_arg_2625 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/34/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.boosters
 # prodige_skills::boosters::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§dBountiful Planter §8× §e$(macro_arg_4441)($(macro_arg_4440))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4440)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro35/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§dBountiful Planter §8× §e$(macro_arg_4721)($(macro_arg_4720))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4720)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro35/execute_unless

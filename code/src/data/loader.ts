@@ -52,7 +52,7 @@ export class Loader {
     setCrateRewards(tools, resources);
     setSkillRewards(tools);
 
-    loadSkillData(csvDir);
+    loadSkillData(csvDir, resources.byTier.legendary);
     Task.tasks = createTasks();
   }
 }

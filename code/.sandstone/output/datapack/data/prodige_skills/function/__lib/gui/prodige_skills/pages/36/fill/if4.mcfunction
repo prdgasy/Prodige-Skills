@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3172 set value '§c§l[OFF]'
-data modify storage __sandstone:variable anon_cnoL-r-9_3171 set value '§c'
+data modify storage __sandstone:variable anon_cnoL-r-9_3212 set value '§c§l[OFF]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3211 set value '§c'

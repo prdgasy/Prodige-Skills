@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_1949 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1950 set value '§7Previous'
+# prodige_skills::crate_common_rewards::fill -> §f16 Cooked Beef(17)
+item replace entity @s container.17 with cooked_beef[custom_name={text: "§f16 Cooked Beef", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

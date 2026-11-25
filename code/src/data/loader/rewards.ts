@@ -25,7 +25,12 @@ const CRATE_RESOURCE_TIER: Record<string, ResourceTier> = {
   Legendary: 'legendary',
   Mythic: 'legendary',
 };
-
+const RESOURCE_MULTIPLIERS: Record<ResourceTier, number> = {
+  common: 1,
+  rare: 2,
+  epic: 4,
+  legendary: 8,
+};
 // Retire les codes couleur d'un nom de coffre.
 function plain(value: string): string {
   return value.replace(/§./g, '');
@@ -52,41 +57,43 @@ export function loadResourceRewards(filePath: string): ResourceRewardData {
     byTier: { common: [], rare: [], epic: [], legendary: [] },
     weights: new Map(),
   };
+
   const usedIds = new Set<string>();
 
   for (const row of readCSV(filePath)) {
-    const category = requiredField(row, 'category', filePath).toLowerCase() as ResourceTier;
-    if (!Object.hasOwn(data.byTier, category)) {
-      throw new Error(`${filePath}: unknown category "${category}".`);
-    }
-
     const name = requiredField(row, 'name', filePath);
     const item = requiredField(row, 'item', filePath) as Item;
-    const count = Number(row.count);
-    const weight = Number(row.weight);
+    const count = Number(requiredField(row, 'count', filePath));
+    const weight = Number(requiredField(row, 'weight', filePath));
 
     if (!Number.isInteger(count) || count <= 0) {
       throw new Error(`${filePath}: "${name}" has an invalid count (${row.count}).`);
     }
+
     if (!Number.isFinite(weight) || weight <= 0) {
       throw new Error(`${filePath}: "${name}" has an invalid weight (${row.weight}).`);
     }
 
-    const rewardId = Global.toResource(`§f${count} ${name}`);
-    if (usedIds.has(rewardId) || Reward.toVaultReg.has(rewardId)) {
-      throw new Error(`${filePath}: duplicate reward ID for "${count} ${name}".`);
-    }
-    usedIds.add(rewardId);
+    for (const tier of RESOURCE_TIERS) {
+      const tierCount = count * RESOURCE_MULTIPLIERS[tier];
+      const rewardId = Global.toResource(`§f${tierCount} ${name}`);
 
-    const reward = createResourceReward(name, item, count);
-    data.byTier[category].push(reward);
-    data.weights.set(reward, weight);
+      if (usedIds.has(rewardId) || Reward.toVaultReg.has(rewardId)) {
+        throw new Error(`${filePath}: duplicate reward ID for "${tierCount} ${name}".`);
+      }
+
+      usedIds.add(rewardId);
+
+      const reward = createResourceReward(name, item, tierCount);
+
+      data.byTier[tier].push(reward);
+      data.weights.set(reward, weight);
+    }
   }
 
-  // Chaque palier doit avoir au moins une récompense pour Reward.choose().
   for (const tier of RESOURCE_TIERS) {
-    if (data.byTier[tier].length === 0) {
-      throw new Error(`${filePath}: no resource rewards defined for the "${tier}" tier.`);
+    if (data.byTier[tier].length < 2) {
+      throw new Error(`${filePath}: at least two resource rewards are required for the "${tier}" tier.`);
     }
   }
 

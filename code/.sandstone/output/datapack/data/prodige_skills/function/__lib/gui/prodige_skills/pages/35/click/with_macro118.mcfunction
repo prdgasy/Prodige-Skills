@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §eSand Strider$(macro_arg_3890)($(macro_arg_3889))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3889)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro118/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §eSand Strider$(macro_arg_3930)($(macro_arg_3929))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3929)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro118/execute_unless

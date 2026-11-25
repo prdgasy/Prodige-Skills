@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6x2 Pts Booster §8× §e$(macro_arg_4534)($(macro_arg_4533))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4533)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro66/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§f32 Cooked Beef §8× §e$(macro_arg_4814)($(macro_arg_4813))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4813)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro66/execute_unless

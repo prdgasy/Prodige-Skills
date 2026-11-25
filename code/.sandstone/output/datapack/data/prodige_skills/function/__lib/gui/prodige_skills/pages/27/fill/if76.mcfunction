@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §f64 Cooked Porkchop(3)
+item replace entity @s container.3 with cooked_porkchop[custom_name={text: "§f64 Cooked Porkchop", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,4 @@
-tellraw @p "§7[Prodige Skill] §8• §7Your Reward Vault is empty."
-scoreboard players set anon_cnoL-r-9_40 __sandstone 1
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4843 int 1 run scoreboard players get anon_cnoL-r-9_7254 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4844 int 1 run scoreboard players get @p prodige_skills.reward.pending.96_bread
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4845 int 1 run scoreboard players get @p prodige_skills.reward.pending.96_bread
+return run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro76 with storage prodige_skills:prodigelib gui.prodige_skills.vault

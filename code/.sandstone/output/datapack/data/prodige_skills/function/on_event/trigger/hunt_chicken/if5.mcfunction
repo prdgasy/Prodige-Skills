@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9689 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/hunt_chicken/if5/0_if/return_run
+execute if score anon_cnoL-r-9_10009 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/hunt_chicken/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

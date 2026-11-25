@@ -1,0 +1,2 @@
+# prodige_skills::crate_mythic_rewards::fill -> §f128 Coal(2)
+item replace entity @s container.2 with coal[custom_name={text: "§f128 Coal", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

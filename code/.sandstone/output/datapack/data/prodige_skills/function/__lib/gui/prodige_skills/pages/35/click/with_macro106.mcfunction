@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §4The Unerring$(macro_arg_3830)($(macro_arg_3829))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3829)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro106/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §4The Unerring$(macro_arg_3870)($(macro_arg_3869))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3869)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro106/execute_unless

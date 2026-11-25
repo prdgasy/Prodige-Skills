@@ -5,6 +5,7 @@ import { Skill } from '@src/skill';
 import type { Criteria, Item } from '@src/types';
 import * as path from 'path';
 import { readCSV, requiredField } from './csv';
+import { Reward } from '@src/misc/reward';
 
 // Récupère une compétence et signale les noms inconnus dans les CSV.
 function getSkill(name: string, filePath: string): Skill {
@@ -43,7 +44,7 @@ function loadEvents(dirPath: string): void {
 }
 
 // Charge les achievements et conserve leur ordre dans chaque compétence.
-function loadAchievements(dirPath: string): void {
+function loadAchievements(dirPath: string, legendaryResources: Reward[]): void {
   const filePath = path.join(dirPath, 'achievements.csv');
   const nextStepBySkill = new Map<string, number>();
 
@@ -68,12 +69,13 @@ function loadAchievements(dirPath: string): void {
       requiredField(row, 'criteria', filePath) as Criteria,
       requiredField(row, 'description', filePath),
       step,
+      legendaryResources,
     ));
   }
 }
 
 // Charge tous les CSV liés aux compétences.
-export function loadSkillData(dirPath: string): void {
+export function loadSkillData(dirPath: string, legendaryResources: Reward[]): void {
   loadEvents(dirPath);
-  loadAchievements(dirPath);
+  loadAchievements(dirPath, legendaryResources);
 }

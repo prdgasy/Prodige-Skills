@@ -1,0 +1,2 @@
+# prodige_skills::crate_rare_rewards::fill -> §f8 Golden Carrots(16)
+item replace entity @s container.16 with golden_carrot[custom_name={text: "§f8 Golden Carrots", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

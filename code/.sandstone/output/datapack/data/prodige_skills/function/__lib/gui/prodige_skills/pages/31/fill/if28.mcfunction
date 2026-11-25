@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §6Deep Digger(9)
-item replace entity @s container.9 with netherite_shovel[custom_name={text: "§6Deep Digger", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.9 with netherite_shovel[custom_name={text: "§6Deep Digger", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

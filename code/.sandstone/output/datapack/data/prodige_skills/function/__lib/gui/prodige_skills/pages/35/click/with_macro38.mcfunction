@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Canopy Keeper$(macro_arg_3490)($(macro_arg_3489))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3489)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro38/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §6Canopy Keeper$(macro_arg_3530)($(macro_arg_3529))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3529)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro38/execute_unless

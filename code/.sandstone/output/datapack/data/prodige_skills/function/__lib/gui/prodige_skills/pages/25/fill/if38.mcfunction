@@ -1,0 +1,2 @@
+# prodige_skills::crate_rare_rewards::fill -> §f32 Redstone(1)
+item replace entity @s container.1 with redstone[custom_name={text: "§f32 Redstone", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

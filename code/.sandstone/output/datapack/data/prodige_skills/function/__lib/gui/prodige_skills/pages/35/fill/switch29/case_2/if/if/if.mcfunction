@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2355 set value 'hay_block'
-data modify storage __sandstone:variable anon_cnoL-r-9_2353 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2354 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2395 set value 'hay_block'
+data modify storage __sandstone:variable anon_cnoL-r-9_2393 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2394 set value ' §8• §a§lEQUIP'

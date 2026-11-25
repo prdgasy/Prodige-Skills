@@ -1,0 +1,2 @@
+tellraw @p "§e[Prodige Skill] §8• §eYou won: §5§lEpic Crate Key§e!"
+give @p carrot_on_a_stick[minecraft:item_model='minecraft:tripwire_hook',minecraft:custom_name='§5§lEpic Crate Key',minecraft:lore=['§9Prodige Skills','An epic cache with substantial points, random skill XP, powerful boosters, keys, and advanced gear.'],minecraft:custom_data={prodige_skills:{crate_key:'epic'}},minecraft:max_stack_size=64d,!max_damage,enchantment_glint_override=true]

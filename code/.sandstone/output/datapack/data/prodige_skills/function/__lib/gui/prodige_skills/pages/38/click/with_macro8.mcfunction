@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§6Astral Cleaver §8× §e$(macro_arg_4360)($(macro_arg_4359))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4359)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro8/execute_unless
+# prodige_skills::vault::click::macro -> §6§l§6Astral Cleaver §8× §e$(macro_arg_4640)($(macro_arg_4639))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4639)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro8/execute_unless

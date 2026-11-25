@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2579 set value 'red_sand'
-data modify storage __sandstone:variable anon_cnoL-r-9_2577 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2578 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2619 set value 'red_sand'
+data modify storage __sandstone:variable anon_cnoL-r-9_2617 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2618 set value ' §8• §a§lEQUIP'

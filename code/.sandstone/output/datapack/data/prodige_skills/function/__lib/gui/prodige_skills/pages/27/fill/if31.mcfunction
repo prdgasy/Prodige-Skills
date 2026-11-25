@@ -1,2 +1,2 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_1967 set value 'arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1968 set value '§7Next'
+# prodige_skills::crate_epic_rewards::fill -> §f8 Oak Logs(12)
+item replace entity @s container.12 with oak_log[custom_name={text: "§f8 Oak Logs", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

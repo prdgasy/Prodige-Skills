@@ -1,0 +1,2 @@
+# prodige_skills::vault::click::macro -> §6§l§f4 Iron Ingot §8× §e$(macro_arg_4859)($(macro_arg_4858))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4858)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro81/execute_unless

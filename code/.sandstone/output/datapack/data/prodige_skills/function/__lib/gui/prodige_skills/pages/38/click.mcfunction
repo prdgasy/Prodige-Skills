@@ -1,6 +1,6 @@
 scoreboard players set anon_cnoL-r-9_40 __sandstone 0
-scoreboard players set anon_cnoL-r-9_6941 __sandstone 0
-scoreboard players set anon_cnoL-r-9_6942 __sandstone 0
+scoreboard players set anon_cnoL-r-9_7101 __sandstone 0
+scoreboard players set anon_cnoL-r-9_7102 __sandstone 0
 execute if score @p prodige_skills.reward.pending.novice_pickaxe matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if
 execute if score @p prodige_skills.reward.pending.expert_sword matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if2
 execute if score @p prodige_skills.reward.pending.field_shovel matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if3
@@ -65,24 +65,104 @@ execute if score @p prodige_skills.reward.pending.rare_crate_key matches 1.. run
 execute if score @p prodige_skills.reward.pending.epic_crate_key matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if62
 execute if score @p prodige_skills.reward.pending.legendary_crate_key matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if63
 execute if score @p prodige_skills.reward.pending.mythic_crate_key matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if64
-execute if score @p prodige_skills.reward.pending.x2_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if65
-execute if score @p prodige_skills.reward.pending.x2_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if66
-execute if score @p prodige_skills.reward.pending.x3_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if67
-execute if score @p prodige_skills.reward.pending.x3_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if68
-execute if score @p prodige_skills.reward.pending.x4_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if69
-execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if70
-scoreboard players set anon_cnoL-r-9_7083 __sandstone 0
-execute if score anon_cnoL-r-9_6942 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if71
-data modify storage __sandstone:variable anon_cnoL-r-9_3213 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3214 set value '§ePrevious'
-execute if score @s prodige_skills.menu.rewards.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if72
-# prodige_skills::vault::click -> $(macro_arg_4549)(25)
-execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if73/if
-data modify storage __sandstone:variable anon_cnoL-r-9_3215 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_3216 set value '§eNext'
-execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7083 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if74
-# prodige_skills::vault::click -> $(macro_arg_4551)(26)
-execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if75/if
-execute if score anon_cnoL-r-9_6941 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if76
+execute if score @p prodige_skills.reward.pending.16_cooked_beef matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if65
+execute if score @p prodige_skills.reward.pending.32_cooked_beef matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if66
+execute if score @p prodige_skills.reward.pending.64_cooked_beef matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if67
+execute if score @p prodige_skills.reward.pending.128_cooked_beef matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if68
+execute if score @p prodige_skills.reward.pending.8_oak_logs matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if69
+execute if score @p prodige_skills.reward.pending.16_oak_logs matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if70
+execute if score @p prodige_skills.reward.pending.32_oak_logs matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if71
+execute if score @p prodige_skills.reward.pending.64_oak_logs matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if72
+execute if score @p prodige_skills.reward.pending.12_bread matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if73
+execute if score @p prodige_skills.reward.pending.24_bread matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if74
+execute if score @p prodige_skills.reward.pending.48_bread matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if75
+execute if score @p prodige_skills.reward.pending.96_bread matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if76
+execute if score @p prodige_skills.reward.pending.16_coal matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if77
+execute if score @p prodige_skills.reward.pending.32_coal matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if78
+execute if score @p prodige_skills.reward.pending.64_coal matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if79
+execute if score @p prodige_skills.reward.pending.128_coal matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if80
+execute if score @p prodige_skills.reward.pending.4_iron_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if81
+execute if score @p prodige_skills.reward.pending.8_iron_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if82
+execute if score @p prodige_skills.reward.pending.16_iron_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if83
+execute if score @p prodige_skills.reward.pending.32_iron_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if84
+execute if score @p prodige_skills.reward.pending.8_golden_carrots matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if85
+execute if score @p prodige_skills.reward.pending.16_golden_carrots matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if86
+execute if score @p prodige_skills.reward.pending.32_golden_carrots matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if87
+execute if score @p prodige_skills.reward.pending.64_golden_carrots matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if88
+execute if score @p prodige_skills.reward.pending.16_cooked_porkchop matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if89
+execute if score @p prodige_skills.reward.pending.32_cooked_porkchop matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if90
+execute if score @p prodige_skills.reward.pending.64_cooked_porkchop matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if91
+execute if score @p prodige_skills.reward.pending.128_cooked_porkchop matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if92
+execute if score @p prodige_skills.reward.pending.8_gold_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if93
+execute if score @p prodige_skills.reward.pending.16_gold_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if94
+execute if score @p prodige_skills.reward.pending.32_gold_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if95
+execute if score @p prodige_skills.reward.pending.64_gold_ingot matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if96
+execute if score @p prodige_skills.reward.pending.32_redstone matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if97
+execute if score @p prodige_skills.reward.pending.64_redstone matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if98
+execute if score @p prodige_skills.reward.pending.128_redstone matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if99
+execute if score @p prodige_skills.reward.pending.256_redstone matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if100
+execute if score @p prodige_skills.reward.pending.24_lapis_lazuli matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if101
+execute if score @p prodige_skills.reward.pending.48_lapis_lazuli matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if102
+execute if score @p prodige_skills.reward.pending.96_lapis_lazuli matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if103
+execute if score @p prodige_skills.reward.pending.192_lapis_lazuli matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if104
+execute if score @p prodige_skills.reward.pending.3_diamond matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if105
+execute if score @p prodige_skills.reward.pending.6_diamond matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if106
+execute if score @p prodige_skills.reward.pending.12_diamond matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if107
+execute if score @p prodige_skills.reward.pending.24_diamond matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if108
+execute if score @p prodige_skills.reward.pending.8_emerald matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if109
+execute if score @p prodige_skills.reward.pending.16_emerald matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if110
+execute if score @p prodige_skills.reward.pending.32_emerald matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if111
+execute if score @p prodige_skills.reward.pending.64_emerald matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if112
+execute if score @p prodige_skills.reward.pending.2_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if113
+execute if score @p prodige_skills.reward.pending.4_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if114
+execute if score @p prodige_skills.reward.pending.8_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if115
+execute if score @p prodige_skills.reward.pending.16_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if116
+execute if score @p prodige_skills.reward.pending.12_blaze_rod matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if117
+execute if score @p prodige_skills.reward.pending.24_blaze_rod matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if118
+execute if score @p prodige_skills.reward.pending.48_blaze_rod matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if119
+execute if score @p prodige_skills.reward.pending.96_blaze_rod matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if120
+execute if score @p prodige_skills.reward.pending.16_obsidian matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if121
+execute if score @p prodige_skills.reward.pending.32_obsidian matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if122
+execute if score @p prodige_skills.reward.pending.64_obsidian matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if123
+execute if score @p prodige_skills.reward.pending.128_obsidian matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if124
+execute if score @p prodige_skills.reward.pending.1_enchanted_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if125
+execute if score @p prodige_skills.reward.pending.2_enchanted_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if126
+execute if score @p prodige_skills.reward.pending.4_enchanted_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if127
+execute if score @p prodige_skills.reward.pending.8_enchanted_golden_apple matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if128
+execute if score @p prodige_skills.reward.pending.4_netherite_scrap matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if129
+execute if score @p prodige_skills.reward.pending.8_netherite_scrap matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if130
+execute if score @p prodige_skills.reward.pending.16_netherite_scrap matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if131
+execute if score @p prodige_skills.reward.pending.32_netherite_scrap matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if132
+execute if score @p prodige_skills.reward.pending.2_diamond_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if133
+execute if score @p prodige_skills.reward.pending.4_diamond_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if134
+execute if score @p prodige_skills.reward.pending.8_diamond_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if135
+execute if score @p prodige_skills.reward.pending.16_diamond_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if136
+execute if score @p prodige_skills.reward.pending.4_emerald_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if137
+execute if score @p prodige_skills.reward.pending.8_emerald_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if138
+execute if score @p prodige_skills.reward.pending.16_emerald_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if139
+execute if score @p prodige_skills.reward.pending.32_emerald_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if140
+execute if score @p prodige_skills.reward.pending.8_gold_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if141
+execute if score @p prodige_skills.reward.pending.16_gold_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if142
+execute if score @p prodige_skills.reward.pending.32_gold_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if143
+execute if score @p prodige_skills.reward.pending.64_gold_block matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if144
+execute if score @p prodige_skills.reward.pending.x2_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if145
+execute if score @p prodige_skills.reward.pending.x2_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if146
+execute if score @p prodige_skills.reward.pending.x3_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if147
+execute if score @p prodige_skills.reward.pending.x3_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if148
+execute if score @p prodige_skills.reward.pending.x4_xp_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if149
+execute if score @p prodige_skills.reward.pending.x4_pts_booster matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if150
+scoreboard players set anon_cnoL-r-9_7403 __sandstone 0
+execute if score anon_cnoL-r-9_7102 __sandstone matches 19.. run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if151
+data modify storage __sandstone:variable anon_cnoL-r-9_3253 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3254 set value '§ePrevious'
+execute if score @s prodige_skills.menu.rewards.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if152
+# prodige_skills::vault::click -> $(macro_arg_5069)(25)
+execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:25b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if153/if
+data modify storage __sandstone:variable anon_cnoL-r-9_3255 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_3256 set value '§eNext'
+execute if score @s prodige_skills.menu.rewards.index = anon_cnoL-r-9_7403 __sandstone run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if154
+# prodige_skills::vault::click -> $(macro_arg_5071)(26)
+execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:26b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if155/if
+execute if score anon_cnoL-r-9_7101 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if156
 # prodige_skills::vault::click -> §cBack(18)
-execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if77/if
+execute if score anon_cnoL-r-9_40 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if157/if

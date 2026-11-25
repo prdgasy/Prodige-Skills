@@ -58,29 +58,29 @@ execute if score @s prodige_skills.menu.shop.items.index matches 0 run function 
 execute if score @s prodige_skills.menu.shop.items.index matches 1 run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if2
 execute if score @s prodige_skills.menu.shop.items.index matches 2 run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if3
 execute if score @s prodige_skills.menu.shop.items.index matches 3 run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if4
-data modify storage __sandstone:variable anon_cnoL-r-9_1997 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_1998 set value '§ePrevious'
+data modify storage __sandstone:variable anon_cnoL-r-9_2037 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_2038 set value '§ePrevious'
 execute if score @s prodige_skills.menu.shop.items.index matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if5
-# prodige_skills::items::fill -> $(macro_arg_2567)(25)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2566 set from storage __sandstone:variable anon_cnoL-r-9_1997
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2567 set from storage __sandstone:variable anon_cnoL-r-9_1998
+# prodige_skills::items::fill -> $(macro_arg_2607)(25)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2606 set from storage __sandstone:variable anon_cnoL-r-9_2037
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2607 set from storage __sandstone:variable anon_cnoL-r-9_2038
 function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.items
-data modify storage __sandstone:variable anon_cnoL-r-9_1999 set value 'spectral_arrow'
-data modify storage __sandstone:variable anon_cnoL-r-9_2000 set value '§eNext'
+data modify storage __sandstone:variable anon_cnoL-r-9_2039 set value 'spectral_arrow'
+data modify storage __sandstone:variable anon_cnoL-r-9_2040 set value '§eNext'
 execute if score @s prodige_skills.menu.shop.items.index matches 3 run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if6
-# prodige_skills::items::fill -> $(macro_arg_2569)(26)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2568 set from storage __sandstone:variable anon_cnoL-r-9_1999
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2569 set from storage __sandstone:variable anon_cnoL-r-9_2000
+# prodige_skills::items::fill -> $(macro_arg_2609)(26)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2608 set from storage __sandstone:variable anon_cnoL-r-9_2039
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2609 set from storage __sandstone:variable anon_cnoL-r-9_2040
 function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.items
-data modify storage __sandstone:variable anon_cnoL-r-9_2001 set value '§7No Xp Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2041 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if7
-data modify storage __sandstone:variable anon_cnoL-r-9_2003 set value '§7No Pts Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2043 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/if8
-# prodige_skills::items::fill -> §aShop §8• §e$(macro_arg_2570) Pts(19)
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2570 int 1 run scoreboard players get @p prodige_skills.player.pts
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2571 set from storage __sandstone:variable anon_cnoL-r-9_2001
-data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2572 set from storage __sandstone:variable anon_cnoL-r-9_2003
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2573 int 1 run scoreboard players get @p prodige_skills.player.pts
+# prodige_skills::items::fill -> §aShop §8• §e$(macro_arg_2610) Pts(19)
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2610 int 1 run scoreboard players get @p prodige_skills.player.pts
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2611 set from storage __sandstone:variable anon_cnoL-r-9_2041
+data modify storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2612 set from storage __sandstone:variable anon_cnoL-r-9_2043
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.items.macro_arg_2613 int 1 run scoreboard players get @p prodige_skills.player.pts
 function prodige_skills:__lib/gui/prodige_skills/pages/33/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.items
 # prodige_skills::items::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

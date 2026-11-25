@@ -1,0 +1,2 @@
+# prodige_skills::crate_common_rewards::fill -> §f8 Gold Block(0)
+item replace entity @s container.0 with gold_block[custom_name={text: "§f8 Gold Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

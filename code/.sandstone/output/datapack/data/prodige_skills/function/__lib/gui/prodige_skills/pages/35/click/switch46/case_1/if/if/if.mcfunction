@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_3127 set value 'suspicious_sand'
-data modify storage __sandstone:variable anon_cnoL-r-9_3125 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_3126 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_3167 set value 'suspicious_sand'
+data modify storage __sandstone:variable anon_cnoL-r-9_3165 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_3166 set value ' §8• §a§lEQUIP'

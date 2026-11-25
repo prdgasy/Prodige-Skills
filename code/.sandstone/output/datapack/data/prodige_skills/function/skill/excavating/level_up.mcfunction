@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_17240 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_17240 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.excavating.xp -= anon_cnoL-r-9_17240 __sandstone
+scoreboard players operation anon_cnoL-r-9_17624 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_17624 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.excavating.xp -= anon_cnoL-r-9_17624 __sandstone
 scoreboard players operation @p prodige_skills.excavating.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.excavating.goal /= 10 __sandstone
 execute if score @p prodige_skills.excavating.goal matches 5001.. run scoreboard players set @p prodige_skills.excavating.goal 5000
@@ -106,6 +106,7 @@ execute if score @p prodige_skills.excavating.level matches 96 run function prod
 execute if score @p prodige_skills.excavating.level matches 97 run function prodige_skills:skill/excavating/level_up/if100
 execute if score @p prodige_skills.excavating.level matches 98 run function prodige_skills:skill/excavating/level_up/if101
 execute if score @p prodige_skills.excavating.level matches 99 run function prodige_skills:skill/excavating/level_up/if102
+execute if score @p prodige_skills.excavating.level matches 100 run function prodige_skills:skill/excavating/level_up/if103
 execute if score @p prodige_skills.excavating.level matches 10 run tag @p add prodige_skills.title.owned.new_title_dirt_digger
 execute if score @p prodige_skills.excavating.level matches 30 run tag @p add prodige_skills.title.owned.new_title_sand_strider
 execute if score @p prodige_skills.excavating.level matches 50 run tag @p add prodige_skills.title.owned.new_title_clay_delver
@@ -116,6 +117,6 @@ execute if score @p prodige_skills.excavating.level matches 50000 run tag @p add
 execute if score @p prodige_skills.excavating.level matches 20 run tag @p add prodige_skills.title.owned.new_title_desert_cartographer
 execute if score @p prodige_skills.excavating.level matches 30000 run tag @p add prodige_skills.title.owned.new_title_dune_sovereign
 function prodige_skills:skill/excavating/level_up/notification
-scoreboard players operation anon_cnoL-r-9_18842 __sandstone = @p prodige_skills.excavating.goal
-scoreboard players operation anon_cnoL-r-9_18842 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.goal matches 1.. if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_18842 __sandstone run function prodige_skills:skill/excavating/level_up
+scoreboard players operation anon_cnoL-r-9_19242 __sandstone = @p prodige_skills.excavating.goal
+scoreboard players operation anon_cnoL-r-9_19242 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.excavating.level matches ..99 if score @p prodige_skills.excavating.goal matches 1.. if score @p prodige_skills.excavating.xp >= anon_cnoL-r-9_19242 __sandstone run function prodige_skills:skill/excavating/level_up

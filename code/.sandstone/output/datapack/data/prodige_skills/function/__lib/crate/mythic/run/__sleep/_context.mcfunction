@@ -1,0 +1,2 @@
+execute store result score #current __sandstone.asyncTimer.prodige_skills.__lib.crate.mythic.run.__sleep run time query gametime
+execute as @e[tag=__sandstone.asyncTimer.prodige_skills.__lib.crate.mythic.run.__sleep] if score @s __sandstone.asyncTimer.prodige_skills.__lib.crate.mythic.run.__sleep = #current __sandstone.asyncTimer.prodige_skills.__lib.crate.mythic.run.__sleep at @s run function prodige_skills:__lib/crate/mythic/run/__sleep

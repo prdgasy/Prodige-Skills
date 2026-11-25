@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §cMonster Stalker$(macro_arg_3850)($(macro_arg_3849))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3849)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro110/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §cMonster Stalker$(macro_arg_3890)($(macro_arg_3889))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3889)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro110/execute_unless

@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §f12 Blaze Rod(6)
+item replace entity @s container.6 with blaze_rod[custom_name={text: "§f12 Blaze Rod", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

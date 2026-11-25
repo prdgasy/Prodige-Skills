@@ -1,6 +1,6 @@
-scoreboard players operation anon_cnoL-r-9_10828 __sandstone = @p prodige_skills.mining.goal
-scoreboard players operation anon_cnoL-r-9_10828 __sandstone *= 10 __sandstone
-scoreboard players operation @p prodige_skills.mining.xp -= anon_cnoL-r-9_10828 __sandstone
+scoreboard players operation anon_cnoL-r-9_11148 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_11148 __sandstone *= 10 __sandstone
+scoreboard players operation @p prodige_skills.mining.xp -= anon_cnoL-r-9_11148 __sandstone
 scoreboard players operation @p prodige_skills.mining.goal *= 13 __sandstone
 scoreboard players operation @p prodige_skills.mining.goal /= 10 __sandstone
 execute if score @p prodige_skills.mining.goal matches 5001.. run scoreboard players set @p prodige_skills.mining.goal 5000
@@ -106,6 +106,7 @@ execute if score @p prodige_skills.mining.level matches 96 run function prodige_
 execute if score @p prodige_skills.mining.level matches 97 run function prodige_skills:skill/mining/level_up/if100
 execute if score @p prodige_skills.mining.level matches 98 run function prodige_skills:skill/mining/level_up/if101
 execute if score @p prodige_skills.mining.level matches 99 run function prodige_skills:skill/mining/level_up/if102
+execute if score @p prodige_skills.mining.level matches 100 run function prodige_skills:skill/mining/level_up/if103
 execute if score @p prodige_skills.mining.level matches 10 run tag @p add prodige_skills.title.owned.new_title_stone_seeker
 execute if score @p prodige_skills.mining.level matches 30 run tag @p add prodige_skills.title.owned.new_title_deep_delver
 execute if score @p prodige_skills.mining.level matches 50 run tag @p add prodige_skills.title.owned.new_title_cavern_pathfinder
@@ -117,6 +118,6 @@ execute if score @p prodige_skills.mining.level matches 20 run tag @p add prodig
 execute if score @p prodige_skills.mining.level matches 35000 run tag @p add prodige_skills.title.owned.new_title_ore_oracle
 execute if score @p prodige_skills.mining.level matches 75000 run tag @p add prodige_skills.title.owned.new_title_diamond_crown
 function prodige_skills:skill/mining/level_up/notification
-scoreboard players operation anon_cnoL-r-9_12430 __sandstone = @p prodige_skills.mining.goal
-scoreboard players operation anon_cnoL-r-9_12430 __sandstone *= 10 __sandstone
-execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.goal matches 1.. if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_12430 __sandstone run function prodige_skills:skill/mining/level_up
+scoreboard players operation anon_cnoL-r-9_12766 __sandstone = @p prodige_skills.mining.goal
+scoreboard players operation anon_cnoL-r-9_12766 __sandstone *= 10 __sandstone
+execute if score @p prodige_skills.mining.level matches ..99 if score @p prodige_skills.mining.goal matches 1.. if score @p prodige_skills.mining.xp >= anon_cnoL-r-9_12766 __sandstone run function prodige_skills:skill/mining/level_up

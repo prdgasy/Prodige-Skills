@@ -1,0 +1,2 @@
+# prodige_skills::vault::click::macro -> §6§l§f32 Obsidian §8× §e$(macro_arg_4982)($(macro_arg_4981))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4981)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro122/execute_unless

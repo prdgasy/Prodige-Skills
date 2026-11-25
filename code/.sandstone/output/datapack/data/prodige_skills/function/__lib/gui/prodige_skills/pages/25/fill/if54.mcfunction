@@ -1,0 +1,2 @@
+# prodige_skills::crate_rare_rewards::fill -> §f8 Iron Ingot(17)
+item replace entity @s container.17 with iron_ingot[custom_name={text: "§f8 Iron Ingot", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

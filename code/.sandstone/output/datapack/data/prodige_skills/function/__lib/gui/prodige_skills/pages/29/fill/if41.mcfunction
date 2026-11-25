@@ -1,0 +1,2 @@
+# prodige_skills::crate_legendary_rewards::fill -> §f8 Emerald(4)
+item replace entity @s container.4 with emerald[custom_name={text: "§f8 Emerald", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

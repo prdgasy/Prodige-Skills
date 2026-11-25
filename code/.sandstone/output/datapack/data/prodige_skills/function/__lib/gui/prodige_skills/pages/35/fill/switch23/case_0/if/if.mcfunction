@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2275 set value 'carrot'
-data modify storage __sandstone:variable anon_cnoL-r-9_2273 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2274 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2315 set value 'carrot'
+data modify storage __sandstone:variable anon_cnoL-r-9_2313 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2314 set value ' §8• §a§lEQUIP'

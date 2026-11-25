@@ -1,0 +1,2 @@
+# prodige_skills::crate_mythic_rewards::fill -> §f2 Diamond Block(10)
+item replace entity @s container.10 with diamond_block[custom_name={text: "§f2 Diamond Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

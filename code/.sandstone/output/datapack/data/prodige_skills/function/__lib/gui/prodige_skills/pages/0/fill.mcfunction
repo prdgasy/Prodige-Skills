@@ -131,6 +131,86 @@ execute if score @p prodige_skills.reward.pending.rare_crate_key matches 1.. run
 execute if score @p prodige_skills.reward.pending.epic_crate_key matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.epic_crate_key
 execute if score @p prodige_skills.reward.pending.legendary_crate_key matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.legendary_crate_key
 execute if score @p prodige_skills.reward.pending.mythic_crate_key matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.mythic_crate_key
+execute if score @p prodige_skills.reward.pending.16_cooked_beef matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_cooked_beef
+execute if score @p prodige_skills.reward.pending.32_cooked_beef matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_cooked_beef
+execute if score @p prodige_skills.reward.pending.64_cooked_beef matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_cooked_beef
+execute if score @p prodige_skills.reward.pending.128_cooked_beef matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.128_cooked_beef
+execute if score @p prodige_skills.reward.pending.8_oak_logs matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_oak_logs
+execute if score @p prodige_skills.reward.pending.16_oak_logs matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_oak_logs
+execute if score @p prodige_skills.reward.pending.32_oak_logs matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_oak_logs
+execute if score @p prodige_skills.reward.pending.64_oak_logs matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_oak_logs
+execute if score @p prodige_skills.reward.pending.12_bread matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.12_bread
+execute if score @p prodige_skills.reward.pending.24_bread matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.24_bread
+execute if score @p prodige_skills.reward.pending.48_bread matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.48_bread
+execute if score @p prodige_skills.reward.pending.96_bread matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.96_bread
+execute if score @p prodige_skills.reward.pending.16_coal matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_coal
+execute if score @p prodige_skills.reward.pending.32_coal matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_coal
+execute if score @p prodige_skills.reward.pending.64_coal matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_coal
+execute if score @p prodige_skills.reward.pending.128_coal matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.128_coal
+execute if score @p prodige_skills.reward.pending.4_iron_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_iron_ingot
+execute if score @p prodige_skills.reward.pending.8_iron_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_iron_ingot
+execute if score @p prodige_skills.reward.pending.16_iron_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_iron_ingot
+execute if score @p prodige_skills.reward.pending.32_iron_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_iron_ingot
+execute if score @p prodige_skills.reward.pending.8_golden_carrots matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_golden_carrots
+execute if score @p prodige_skills.reward.pending.16_golden_carrots matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_golden_carrots
+execute if score @p prodige_skills.reward.pending.32_golden_carrots matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_golden_carrots
+execute if score @p prodige_skills.reward.pending.64_golden_carrots matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_golden_carrots
+execute if score @p prodige_skills.reward.pending.16_cooked_porkchop matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_cooked_porkchop
+execute if score @p prodige_skills.reward.pending.32_cooked_porkchop matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_cooked_porkchop
+execute if score @p prodige_skills.reward.pending.64_cooked_porkchop matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_cooked_porkchop
+execute if score @p prodige_skills.reward.pending.128_cooked_porkchop matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.128_cooked_porkchop
+execute if score @p prodige_skills.reward.pending.8_gold_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_gold_ingot
+execute if score @p prodige_skills.reward.pending.16_gold_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_gold_ingot
+execute if score @p prodige_skills.reward.pending.32_gold_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_gold_ingot
+execute if score @p prodige_skills.reward.pending.64_gold_ingot matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_gold_ingot
+execute if score @p prodige_skills.reward.pending.32_redstone matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_redstone
+execute if score @p prodige_skills.reward.pending.64_redstone matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_redstone
+execute if score @p prodige_skills.reward.pending.128_redstone matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.128_redstone
+execute if score @p prodige_skills.reward.pending.256_redstone matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.256_redstone
+execute if score @p prodige_skills.reward.pending.24_lapis_lazuli matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.24_lapis_lazuli
+execute if score @p prodige_skills.reward.pending.48_lapis_lazuli matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.48_lapis_lazuli
+execute if score @p prodige_skills.reward.pending.96_lapis_lazuli matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.96_lapis_lazuli
+execute if score @p prodige_skills.reward.pending.192_lapis_lazuli matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.192_lapis_lazuli
+execute if score @p prodige_skills.reward.pending.3_diamond matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.3_diamond
+execute if score @p prodige_skills.reward.pending.6_diamond matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.6_diamond
+execute if score @p prodige_skills.reward.pending.12_diamond matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.12_diamond
+execute if score @p prodige_skills.reward.pending.24_diamond matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.24_diamond
+execute if score @p prodige_skills.reward.pending.8_emerald matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_emerald
+execute if score @p prodige_skills.reward.pending.16_emerald matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_emerald
+execute if score @p prodige_skills.reward.pending.32_emerald matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_emerald
+execute if score @p prodige_skills.reward.pending.64_emerald matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_emerald
+execute if score @p prodige_skills.reward.pending.2_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.2_golden_apple
+execute if score @p prodige_skills.reward.pending.4_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_golden_apple
+execute if score @p prodige_skills.reward.pending.8_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_golden_apple
+execute if score @p prodige_skills.reward.pending.16_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_golden_apple
+execute if score @p prodige_skills.reward.pending.12_blaze_rod matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.12_blaze_rod
+execute if score @p prodige_skills.reward.pending.24_blaze_rod matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.24_blaze_rod
+execute if score @p prodige_skills.reward.pending.48_blaze_rod matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.48_blaze_rod
+execute if score @p prodige_skills.reward.pending.96_blaze_rod matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.96_blaze_rod
+execute if score @p prodige_skills.reward.pending.16_obsidian matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_obsidian
+execute if score @p prodige_skills.reward.pending.32_obsidian matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_obsidian
+execute if score @p prodige_skills.reward.pending.64_obsidian matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_obsidian
+execute if score @p prodige_skills.reward.pending.128_obsidian matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.128_obsidian
+execute if score @p prodige_skills.reward.pending.1_enchanted_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.1_enchanted_golden_apple
+execute if score @p prodige_skills.reward.pending.2_enchanted_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.2_enchanted_golden_apple
+execute if score @p prodige_skills.reward.pending.4_enchanted_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_enchanted_golden_apple
+execute if score @p prodige_skills.reward.pending.8_enchanted_golden_apple matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_enchanted_golden_apple
+execute if score @p prodige_skills.reward.pending.4_netherite_scrap matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_netherite_scrap
+execute if score @p prodige_skills.reward.pending.8_netherite_scrap matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_netherite_scrap
+execute if score @p prodige_skills.reward.pending.16_netherite_scrap matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_netherite_scrap
+execute if score @p prodige_skills.reward.pending.32_netherite_scrap matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_netherite_scrap
+execute if score @p prodige_skills.reward.pending.2_diamond_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.2_diamond_block
+execute if score @p prodige_skills.reward.pending.4_diamond_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_diamond_block
+execute if score @p prodige_skills.reward.pending.8_diamond_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_diamond_block
+execute if score @p prodige_skills.reward.pending.16_diamond_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_diamond_block
+execute if score @p prodige_skills.reward.pending.4_emerald_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.4_emerald_block
+execute if score @p prodige_skills.reward.pending.8_emerald_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_emerald_block
+execute if score @p prodige_skills.reward.pending.16_emerald_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_emerald_block
+execute if score @p prodige_skills.reward.pending.32_emerald_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_emerald_block
+execute if score @p prodige_skills.reward.pending.8_gold_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.8_gold_block
+execute if score @p prodige_skills.reward.pending.16_gold_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.16_gold_block
+execute if score @p prodige_skills.reward.pending.32_gold_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.32_gold_block
+execute if score @p prodige_skills.reward.pending.64_gold_block matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.64_gold_block
 execute if score @p prodige_skills.reward.pending.x2_xp_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.x2_xp_booster
 execute if score @p prodige_skills.reward.pending.x2_pts_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.x2_pts_booster
 execute if score @p prodige_skills.reward.pending.x3_pts_booster matches 1.. run scoreboard players operation anon_cnoL-r-9_58 __sandstone += @p prodige_skills.reward.pending.x3_pts_booster
@@ -142,9 +222,9 @@ execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.m
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_4 int 1 run scoreboard players get anon_cnoL-r-9_58 __sandstone
 function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.main
 data modify storage __sandstone:variable anon_cnoL-r-9_2 set value '§7No Xp Booster active'
-execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if78
+execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if158
 data modify storage __sandstone:variable anon_cnoL-r-9_4 set value '§7No Pts Booster active'
-execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if79
+execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if159
 # prodige_skills::main::fill -> §aShop §8• §e$(macro_arg_5) Pts(21)
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_5 int 1 run scoreboard players get @p prodige_skills.player.pts
 data modify storage prodige_skills:prodigelib gui.prodige_skills.main.macro_arg_6 set from storage __sandstone:variable anon_cnoL-r-9_2
@@ -172,7 +252,7 @@ scoreboard players operation anon_cnoL-r-9_63 __sandstone *= 10 __sandstone
 scoreboard players operation anon_cnoL-r-9_63 __sandstone /= anon_cnoL-r-9_62 __sandstone
 scoreboard players operation var_2 prodige_skills.prodigelib.float = anon_cnoL-r-9_63 __sandstone
 scoreboard players operation anon_cnoL-r-9_64 __sandstone = var_2 prodige_skills.prodigelib.float
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if80
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if160
 scoreboard players operation anon_cnoL-r-9_65 __sandstone = anon_cnoL-r-9_64 __sandstone
 scoreboard players operation anon_cnoL-r-9_65 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_65 __sandstone
@@ -198,7 +278,7 @@ function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_
 data modify storage prodige_skills:prodigelib bar.out_0 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:main_skill_args args.bar set from storage prodige_skills:prodigelib bar.out_0
 scoreboard players operation anon_cnoL-r-9_70 __sandstone = @p prodige_skills.mining.xp
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if83
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if163
 scoreboard players operation anon_cnoL-r-9_71 __sandstone = anon_cnoL-r-9_70 __sandstone
 scoreboard players operation anon_cnoL-r-9_71 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_71 __sandstone
@@ -233,7 +313,7 @@ scoreboard players operation anon_cnoL-r-9_77 __sandstone *= 10 __sandstone
 scoreboard players operation anon_cnoL-r-9_77 __sandstone /= anon_cnoL-r-9_76 __sandstone
 scoreboard players operation var_4 prodige_skills.prodigelib.float = anon_cnoL-r-9_77 __sandstone
 scoreboard players operation anon_cnoL-r-9_78 __sandstone = var_4 prodige_skills.prodigelib.float
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if84
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if164
 scoreboard players operation anon_cnoL-r-9_79 __sandstone = anon_cnoL-r-9_78 __sandstone
 scoreboard players operation anon_cnoL-r-9_79 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_79 __sandstone
@@ -259,7 +339,7 @@ function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_
 data modify storage prodige_skills:prodigelib bar.out_1 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:main_skill_args args.bar set from storage prodige_skills:prodigelib bar.out_1
 scoreboard players operation anon_cnoL-r-9_84 __sandstone = @p prodige_skills.foraging.xp
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if87
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if167
 scoreboard players operation anon_cnoL-r-9_85 __sandstone = anon_cnoL-r-9_84 __sandstone
 scoreboard players operation anon_cnoL-r-9_85 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_85 __sandstone
@@ -294,7 +374,7 @@ scoreboard players operation anon_cnoL-r-9_91 __sandstone *= 10 __sandstone
 scoreboard players operation anon_cnoL-r-9_91 __sandstone /= anon_cnoL-r-9_90 __sandstone
 scoreboard players operation var_6 prodige_skills.prodigelib.float = anon_cnoL-r-9_91 __sandstone
 scoreboard players operation anon_cnoL-r-9_92 __sandstone = var_6 prodige_skills.prodigelib.float
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if88
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if168
 scoreboard players operation anon_cnoL-r-9_93 __sandstone = anon_cnoL-r-9_92 __sandstone
 scoreboard players operation anon_cnoL-r-9_93 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_93 __sandstone
@@ -320,7 +400,7 @@ function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_
 data modify storage prodige_skills:prodigelib bar.out_2 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:main_skill_args args.bar set from storage prodige_skills:prodigelib bar.out_2
 scoreboard players operation anon_cnoL-r-9_98 __sandstone = @p prodige_skills.farming.xp
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if91
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if171
 scoreboard players operation anon_cnoL-r-9_99 __sandstone = anon_cnoL-r-9_98 __sandstone
 scoreboard players operation anon_cnoL-r-9_99 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_99 __sandstone
@@ -355,7 +435,7 @@ scoreboard players operation anon_cnoL-r-9_105 __sandstone *= 10 __sandstone
 scoreboard players operation anon_cnoL-r-9_105 __sandstone /= anon_cnoL-r-9_104 __sandstone
 scoreboard players operation var_8 prodige_skills.prodigelib.float = anon_cnoL-r-9_105 __sandstone
 scoreboard players operation anon_cnoL-r-9_106 __sandstone = var_8 prodige_skills.prodigelib.float
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if92
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if172
 scoreboard players operation anon_cnoL-r-9_107 __sandstone = anon_cnoL-r-9_106 __sandstone
 scoreboard players operation anon_cnoL-r-9_107 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_107 __sandstone
@@ -381,7 +461,7 @@ function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_
 data modify storage prodige_skills:prodigelib bar.out_3 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:main_skill_args args.bar set from storage prodige_skills:prodigelib bar.out_3
 scoreboard players operation anon_cnoL-r-9_112 __sandstone = @p prodige_skills.hunting.xp
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if95
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if175
 scoreboard players operation anon_cnoL-r-9_113 __sandstone = anon_cnoL-r-9_112 __sandstone
 scoreboard players operation anon_cnoL-r-9_113 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_113 __sandstone
@@ -416,7 +496,7 @@ scoreboard players operation anon_cnoL-r-9_119 __sandstone *= 10 __sandstone
 scoreboard players operation anon_cnoL-r-9_119 __sandstone /= anon_cnoL-r-9_118 __sandstone
 scoreboard players operation var_10 prodige_skills.prodigelib.float = anon_cnoL-r-9_119 __sandstone
 scoreboard players operation anon_cnoL-r-9_120 __sandstone = var_10 prodige_skills.prodigelib.float
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if96
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if176
 scoreboard players operation anon_cnoL-r-9_121 __sandstone = anon_cnoL-r-9_120 __sandstone
 scoreboard players operation anon_cnoL-r-9_121 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_121 __sandstone
@@ -442,7 +522,7 @@ function prodige_skills:__lib/bar/get/15 with storage __sandstone:variable anon_
 data modify storage prodige_skills:prodigelib bar.out_4 set from storage prodige_skills:prodigelib bar.temp
 data modify storage prodige_skills:main_skill_args args.bar set from storage prodige_skills:prodigelib bar.out_4
 scoreboard players operation anon_cnoL-r-9_126 __sandstone = @p prodige_skills.excavating.xp
-function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if99
+function prodige_skills:__lib/gui/prodige_skills/pages/0/fill/if179
 scoreboard players operation anon_cnoL-r-9_127 __sandstone = anon_cnoL-r-9_126 __sandstone
 scoreboard players operation anon_cnoL-r-9_127 __sandstone /= 10 __sandstone
 execute store result storage prodige_skills:prodigelib Float.unit int 1 run scoreboard players get anon_cnoL-r-9_127 __sandstone

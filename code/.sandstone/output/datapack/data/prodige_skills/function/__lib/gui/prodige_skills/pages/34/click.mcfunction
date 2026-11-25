@@ -13,9 +13,9 @@ execute if score anon_cnoL-r-9_36 __sandstone matches 0 unless data entity @s It
 execute if score anon_cnoL-r-9_36 __sandstone matches 0 unless data entity @s Items[{Slot:16b}] run function prodige_skills:__lib/gui/prodige_skills/pages/34/click/if6/if
 # prodige_skills::boosters::click -> §6§lHow Boosters Work(22)
 execute if score anon_cnoL-r-9_36 __sandstone matches 0 unless data entity @s Items[{Slot:22b}] run scoreboard players set anon_cnoL-r-9_36 __sandstone 1
-data modify storage __sandstone:variable anon_cnoL-r-9_2017 set value '§7No Xp Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2057 set value '§7No Xp Booster active'
 execute if score @p prodige_skills.misc.booster.Xp.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/34/click/if8
-data modify storage __sandstone:variable anon_cnoL-r-9_2019 set value '§7No Pts Booster active'
+data modify storage __sandstone:variable anon_cnoL-r-9_2059 set value '§7No Pts Booster active'
 execute if score @p prodige_skills.misc.booster.Pts.timer matches 1.. run function prodige_skills:__lib/gui/prodige_skills/pages/34/click/if9
 # prodige_skills::boosters::click -> §cBack(18)
 execute if score anon_cnoL-r-9_36 __sandstone matches 0 unless data entity @s Items[{Slot:18b}] run function prodige_skills:__lib/gui/prodige_skills/pages/34/click/if10/if

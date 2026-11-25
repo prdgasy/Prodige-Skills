@@ -52,40 +52,40 @@ item replace entity @s container.24 with black_stained_glass_pane[lore=[],custom
 item replace entity @s container.25 with black_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::preferences::fill -> (26)
 item replace entity @s container.26 with black_stained_glass_pane[lore=[],custom_data={prodige_skills: 1b}] 1
-data modify storage __sandstone:variable anon_cnoL-r-9_3165 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3166 set value '§a§l[ON]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3205 set value '§a'
+data modify storage __sandstone:variable anon_cnoL-r-9_3206 set value '§a§l[ON]'
 execute unless entity @p[tag=prodige_skills.player.sound] run function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/if
-# prodige_skills::preferences::fill -> $(macro_arg_4016)Sound Effects(11)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4016 set from storage __sandstone:variable anon_cnoL-r-9_3165
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4017 set from storage __sandstone:variable anon_cnoL-r-9_3166
+# prodige_skills::preferences::fill -> $(macro_arg_4056)Sound Effects(11)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4056 set from storage __sandstone:variable anon_cnoL-r-9_3205
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4057 set from storage __sandstone:variable anon_cnoL-r-9_3206
 function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.preferences
-data modify storage __sandstone:variable anon_cnoL-r-9_3167 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3168 set value '§a§l[ON]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3207 set value '§a'
+data modify storage __sandstone:variable anon_cnoL-r-9_3208 set value '§a§l[ON]'
 execute unless entity @p[tag=prodige_skills.player.on_event_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/if2
-# prodige_skills::preferences::fill -> $(macro_arg_4018)Action Notifications(12)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4018 set from storage __sandstone:variable anon_cnoL-r-9_3167
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4019 set from storage __sandstone:variable anon_cnoL-r-9_3168
+# prodige_skills::preferences::fill -> $(macro_arg_4058)Action Notifications(12)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4058 set from storage __sandstone:variable anon_cnoL-r-9_3207
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4059 set from storage __sandstone:variable anon_cnoL-r-9_3208
 function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/with_macro2 with storage prodige_skills:prodigelib gui.prodige_skills.preferences
-data modify storage __sandstone:variable anon_cnoL-r-9_3169 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3170 set value '§a§l[ON]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3209 set value '§a'
+data modify storage __sandstone:variable anon_cnoL-r-9_3210 set value '§a§l[ON]'
 execute unless entity @p[tag=prodige_skills.player.achievement_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/if3
-# prodige_skills::preferences::fill -> $(macro_arg_4020)Achievement Notifications(13)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4020 set from storage __sandstone:variable anon_cnoL-r-9_3169
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4021 set from storage __sandstone:variable anon_cnoL-r-9_3170
+# prodige_skills::preferences::fill -> $(macro_arg_4060)Achievement Notifications(13)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4060 set from storage __sandstone:variable anon_cnoL-r-9_3209
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4061 set from storage __sandstone:variable anon_cnoL-r-9_3210
 function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/with_macro3 with storage prodige_skills:prodigelib gui.prodige_skills.preferences
-data modify storage __sandstone:variable anon_cnoL-r-9_3171 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3172 set value '§a§l[ON]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3211 set value '§a'
+data modify storage __sandstone:variable anon_cnoL-r-9_3212 set value '§a§l[ON]'
 execute unless entity @p[tag=prodige_skills.level_up_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/if4
-# prodige_skills::preferences::fill -> $(macro_arg_4022)Level-up Notifications(14)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4022 set from storage __sandstone:variable anon_cnoL-r-9_3171
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4023 set from storage __sandstone:variable anon_cnoL-r-9_3172
+# prodige_skills::preferences::fill -> $(macro_arg_4062)Level-up Notifications(14)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4062 set from storage __sandstone:variable anon_cnoL-r-9_3211
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4063 set from storage __sandstone:variable anon_cnoL-r-9_3212
 function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/with_macro4 with storage prodige_skills:prodigelib gui.prodige_skills.preferences
-data modify storage __sandstone:variable anon_cnoL-r-9_3173 set value '§a'
-data modify storage __sandstone:variable anon_cnoL-r-9_3174 set value '§a§l[ON]'
+data modify storage __sandstone:variable anon_cnoL-r-9_3213 set value '§a'
+data modify storage __sandstone:variable anon_cnoL-r-9_3214 set value '§a§l[ON]'
 execute unless entity @p[tag=prodige_skills.player.task_notif] run function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/if5
-# prodige_skills::preferences::fill -> $(macro_arg_4024)Tasks Notification(15)
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4024 set from storage __sandstone:variable anon_cnoL-r-9_3173
-data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4025 set from storage __sandstone:variable anon_cnoL-r-9_3174
+# prodige_skills::preferences::fill -> $(macro_arg_4064)Tasks Notification(15)
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4064 set from storage __sandstone:variable anon_cnoL-r-9_3213
+data modify storage prodige_skills:prodigelib gui.prodige_skills.preferences.macro_arg_4065 set from storage __sandstone:variable anon_cnoL-r-9_3214
 function prodige_skills:__lib/gui/prodige_skills/pages/36/fill/with_macro5 with storage prodige_skills:prodigelib gui.prodige_skills.preferences
 # prodige_skills::preferences::fill -> §cBack(18)
 item replace entity @s container.18 with arrow[custom_name={text: "§cBack", italic: false, color: "white"},lore=[],custom_data={prodige_skills: 1b}] 1

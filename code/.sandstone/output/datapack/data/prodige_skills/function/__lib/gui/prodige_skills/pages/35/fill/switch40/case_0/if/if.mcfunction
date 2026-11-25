@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2479 set value 'wooden_shovel'
-data modify storage __sandstone:variable anon_cnoL-r-9_2477 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2478 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2519 set value 'wooden_shovel'
+data modify storage __sandstone:variable anon_cnoL-r-9_2517 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2518 set value ' §8• §a§lEQUIP'

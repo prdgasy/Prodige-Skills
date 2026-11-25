@@ -1,0 +1,2 @@
+tellraw @p "§e[Prodige Skill] §8• §eYou won: §bx4 Xp Booster§e!"
+give @p warped_fungus_on_a_stick[minecraft:custom_name='§bx4 Xp Booster',minecraft:lore=['§9Prodige Skills','','§74x Xp multiplier','§7Duration: 15 minutes','','§eClick to activate!'],minecraft:item_model='experience_bottle',minecraft:custom_data={prodige_skills:{booster:'xp_4'}}]

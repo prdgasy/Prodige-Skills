@@ -1,2 +1,2 @@
-# prodige_skills::tasks::click::macro -> §9Mine dirt §8• §e1000§6/§e1000 §8• §a§lCLAIM!($(macro_arg_4092))
-$execute unless data entity @s Items[{Slot:$(macro_arg_4092)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/37/click/with_macro4/execute_unless
+# prodige_skills::tasks::click::macro -> §9Mine dirt §8• §e1000§6/§e1000 §8• §a§lCLAIM!($(macro_arg_4132))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4132)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/37/click/with_macro4/execute_unless

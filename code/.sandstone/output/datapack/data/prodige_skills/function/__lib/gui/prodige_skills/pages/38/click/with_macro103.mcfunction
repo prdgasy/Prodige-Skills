@@ -1,0 +1,2 @@
+# prodige_skills::vault::click::macro -> §6§l§f96 Lapis Lazuli §8× §e$(macro_arg_4925)($(macro_arg_4924))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4924)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro103/execute_unless

@@ -1,2 +1,2 @@
-execute if score anon_cnoL-r-9_9479 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/plant_wheat_seeds/if5/0_if/return_run
+execute if score anon_cnoL-r-9_9799 __sandstone matches ..-1 run return run function prodige_skills:on_event/trigger/plant_wheat_seeds/if5/0_if/return_run
 data modify storage prodige_skills:prodigelib Float.sign set value ''

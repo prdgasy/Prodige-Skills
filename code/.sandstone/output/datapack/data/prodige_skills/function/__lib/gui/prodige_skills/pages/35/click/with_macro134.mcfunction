@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Lord of the Strata$(macro_arg_3970)($(macro_arg_3969))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3969)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro134/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §6Lord of the Strata$(macro_arg_4010)($(macro_arg_4009))
+$execute unless data entity @s Items[{Slot:$(macro_arg_4009)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro134/execute_unless

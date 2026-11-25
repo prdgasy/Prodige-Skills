@@ -16,9 +16,18 @@ export class Achievement {
   public goal: number;
   public criteria: Criteria;
   public progress: Score;
-  public rewards: Reward[];
+  public rewards: Reward[] = [];
 
-  constructor(parent: Skill, name: string, item: Item, goal: number, criteria: Criteria, description: string, step: number) {
+  constructor(
+    parent: Skill,
+    name: string,
+    item: Item,
+    goal: number,
+    criteria: Criteria,
+    description: string,
+    step: number,
+    legendaryResources: Reward[],
+  ) {
     this.parent = parent;
     this.name = name;
     this.resourceId = Global.toResource(name);
@@ -28,10 +37,12 @@ export class Achievement {
     this.description = description;
     this.progress = Objective.create(`${this.parent.id}.achievement.${this.resourceId}`, criteria)('@p');
 
-    if (step > 0 && step % 10 == 9) this.rewards = Reward.legendary();
-    else if (step > 0 && step % 5 == 4) this.rewards = Reward.epic();
-    else if (step > 0 && step % 3 == 2) this.rewards = Reward.rare();
-    else this.rewards = Reward.common();
+    this.rewards.push(...Reward.choose(legendaryResources, 2));
+
+    if (step > 0 && step % 10 == 9) this.rewards.push(...Reward.legendary());
+    else if (step > 0 && step % 5 == 4) this.rewards.push(...Reward.epic());
+    else if (step > 0 && step % 3 == 2) this.rewards.push(...Reward.rare());
+    else this.rewards.push(...Reward.common());
   }
 
   public static init() {

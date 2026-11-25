@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §dRuin Prospector(17)
-item replace entity @s container.17 with brush[custom_name={text: "§dRuin Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.17 with brush[custom_name={text: "§dRuin Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

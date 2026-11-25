@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §f16 Emerald Block(15)
+item replace entity @s container.15 with emerald_block[custom_name={text: "§f16 Emerald Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

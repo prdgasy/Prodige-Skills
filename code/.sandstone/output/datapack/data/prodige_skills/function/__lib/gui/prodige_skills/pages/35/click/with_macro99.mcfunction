@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §cApex Predator$(macro_arg_3795)($(macro_arg_3794))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3794)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro99/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §cApex Predator$(macro_arg_3835)($(macro_arg_3834))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3834)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro99/execute_unless

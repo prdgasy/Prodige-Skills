@@ -1,0 +1,2 @@
+# prodige_skills::crate_epic_rewards::fill -> §f24 Lapis Lazuli(2)
+item replace entity @s container.2 with lapis_lazuli[custom_name={text: "§f24 Lapis Lazuli", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

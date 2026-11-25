@@ -1,0 +1,2 @@
+# prodige_skills::crate_mythic_rewards::fill -> §f16 Golden Apple(11)
+item replace entity @s container.11 with golden_apple[custom_name={text: "§f16 Golden Apple", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2403 set value 'bow'
-data modify storage __sandstone:variable anon_cnoL-r-9_2401 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2402 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2443 set value 'bow'
+data modify storage __sandstone:variable anon_cnoL-r-9_2441 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2442 set value ' §8• §a§lEQUIP'

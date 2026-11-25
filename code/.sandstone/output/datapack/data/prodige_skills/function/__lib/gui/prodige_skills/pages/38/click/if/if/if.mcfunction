@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4338 int 1 run scoreboard players get anon_cnoL-r-9_6944 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4339 int 1 run scoreboard players get @p prodige_skills.reward.pending.novice_pickaxe
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4340 int 1 run scoreboard players get @p prodige_skills.reward.pending.novice_pickaxe
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4618 int 1 run scoreboard players get anon_cnoL-r-9_7104 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4619 int 1 run scoreboard players get @p prodige_skills.reward.pending.novice_pickaxe
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4620 int 1 run scoreboard players get @p prodige_skills.reward.pending.novice_pickaxe
 return run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro with storage prodige_skills:prodigelib gui.prodige_skills.vault

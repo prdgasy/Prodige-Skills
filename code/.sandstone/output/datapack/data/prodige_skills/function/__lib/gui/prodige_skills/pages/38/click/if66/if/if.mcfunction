@@ -1,4 +1,4 @@
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4533 int 1 run scoreboard players get anon_cnoL-r-9_7074 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4534 int 1 run scoreboard players get @p prodige_skills.reward.pending.x2_pts_booster
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4535 int 1 run scoreboard players get @p prodige_skills.reward.pending.x2_pts_booster
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4813 int 1 run scoreboard players get anon_cnoL-r-9_7234 __sandstone
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4814 int 1 run scoreboard players get @p prodige_skills.reward.pending.32_cooked_beef
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4815 int 1 run scoreboard players get @p prodige_skills.reward.pending.32_cooked_beef
 return run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro66 with storage prodige_skills:prodigelib gui.prodige_skills.vault

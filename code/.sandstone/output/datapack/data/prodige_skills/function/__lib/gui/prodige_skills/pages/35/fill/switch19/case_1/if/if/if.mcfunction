@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2231 set value 'spruce_log'
-data modify storage __sandstone:variable anon_cnoL-r-9_2229 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2230 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2271 set value 'spruce_log'
+data modify storage __sandstone:variable anon_cnoL-r-9_2269 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2270 set value ' §8• §a§lEQUIP'

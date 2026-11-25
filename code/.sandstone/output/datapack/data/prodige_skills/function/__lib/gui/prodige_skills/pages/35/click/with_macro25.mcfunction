@@ -1,2 +1,2 @@
-# prodige_skills::titles::click::macro -> §dNew Title: §6Ore Oracle$(macro_arg_3425)($(macro_arg_3424))
-$execute unless data entity @s Items[{Slot:$(macro_arg_3424)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro25/execute_unless
+# prodige_skills::titles::click::macro -> §dNew Title: §6Ore Oracle$(macro_arg_3465)($(macro_arg_3464))
+$execute unless data entity @s Items[{Slot:$(macro_arg_3464)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/35/click/with_macro25/execute_unless

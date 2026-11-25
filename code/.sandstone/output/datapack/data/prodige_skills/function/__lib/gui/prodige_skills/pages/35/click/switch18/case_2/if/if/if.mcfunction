@@ -1,3 +1,3 @@
-data modify storage __sandstone:variable anon_cnoL-r-9_2795 set value 'mangrove_propagule'
-data modify storage __sandstone:variable anon_cnoL-r-9_2793 set value '§a§lOWNED'
-data modify storage __sandstone:variable anon_cnoL-r-9_2794 set value ' §8• §a§lEQUIP'
+data modify storage __sandstone:variable anon_cnoL-r-9_2835 set value 'mangrove_propagule'
+data modify storage __sandstone:variable anon_cnoL-r-9_2833 set value '§a§lOWNED'
+data modify storage __sandstone:variable anon_cnoL-r-9_2834 set value ' §8• §a§lEQUIP'
