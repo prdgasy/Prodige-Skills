@@ -1,2 +1,2 @@
-# prodige_skills::crate_legendary_rewards::fill -> §f256 Redstone(7)
-item replace entity @s container.7 with redstone[custom_name={text: "§f256 Redstone", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_legendary_rewards::fill -> §b256 Redstone(7)
+item replace entity @s container.7 with redstone[custom_name={text: "§b256 Redstone", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

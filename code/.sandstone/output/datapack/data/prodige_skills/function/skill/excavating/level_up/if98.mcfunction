@@ -1,4 +1,4 @@
-scoreboard players add @p prodige_skills.player.pts 1000
+scoreboard players add @p prodige_skills.player.pts 800
 scoreboard players add @p prodige_skills.reward.pending.16_oak_logs 1
 scoreboard players add @p prodige_skills.reward.pending.x3_xp_booster 1
 scoreboard players set anon_cnoL-r-9_19146 __sandstone 0

@@ -1,2 +1,2 @@
 # prodige_skills::crate_common_rewards::fill -> §a§lCommon Crate Key(4)
-item replace entity @s container.4 with tripwire_hook[custom_name={text: "§a§lCommon Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §75.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.4 with tripwire_hook[custom_name={text: "§a§lCommon Crate Key", italic: false, color: "white"},lore=[{text: "§eReward chance: §75.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

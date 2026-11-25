@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§f16 Netherite Scrap §8× §e$(macro_arg_5009)($(macro_arg_5008))
+# prodige_skills::vault::click::macro -> §6§l§b16 Netherite Scrap §8× §e$(macro_arg_5009)($(macro_arg_5008))
 $execute unless data entity @s Items[{Slot:$(macro_arg_5008)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro131/execute_unless

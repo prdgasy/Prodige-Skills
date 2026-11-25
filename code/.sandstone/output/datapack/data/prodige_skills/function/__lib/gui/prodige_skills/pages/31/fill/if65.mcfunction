@@ -1,2 +1,2 @@
-# prodige_skills::crate_mythic_rewards::fill -> §f2 Enchanted Golden Apple(10)
-item replace entity @s container.10 with enchanted_golden_apple[custom_name={text: "§f2 Enchanted Golden Apple", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill -> §b2 Enchanted Golden Apple(10)
+item replace entity @s container.10 with enchanted_golden_apple[custom_name={text: "§b2 Enchanted Golden Apple", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

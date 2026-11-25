@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f1 Enchanted Golden Apple(14)
-item replace entity @s container.14 with enchanted_golden_apple[custom_name={text: "§f1 Enchanted Golden Apple", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b1 Enchanted Golden Apple(14)
+item replace entity @s container.14 with enchanted_golden_apple[custom_name={text: "§b1 Enchanted Golden Apple", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

@@ -1,2 +1,2 @@
-# prodige_skills::crate_legendary_rewards::fill -> §f96 Bread(1)
-item replace entity @s container.1 with bread[custom_name={text: "§f96 Bread", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_legendary_rewards::fill -> §b96 Bread(1)
+item replace entity @s container.1 with bread[custom_name={text: "§b96 Bread", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.6%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

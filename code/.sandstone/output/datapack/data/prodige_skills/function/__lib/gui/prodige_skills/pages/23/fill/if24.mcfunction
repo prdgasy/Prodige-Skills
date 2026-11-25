@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f16 Cooked Porkchop(5)
-item replace entity @s container.5 with cooked_porkchop[custom_name={text: "§f16 Cooked Porkchop", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b16 Cooked Porkchop(5)
+item replace entity @s container.5 with cooked_porkchop[custom_name={text: "§b16 Cooked Porkchop", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

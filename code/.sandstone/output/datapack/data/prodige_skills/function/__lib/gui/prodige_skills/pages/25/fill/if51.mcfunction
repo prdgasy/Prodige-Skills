@@ -1,2 +1,2 @@
-# prodige_skills::crate_rare_rewards::fill -> §f16 Oak Logs(14)
-item replace entity @s container.14 with oak_log[custom_name={text: "§f16 Oak Logs", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §b16 Oak Logs(14)
+item replace entity @s container.14 with oak_log[custom_name={text: "§b16 Oak Logs", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

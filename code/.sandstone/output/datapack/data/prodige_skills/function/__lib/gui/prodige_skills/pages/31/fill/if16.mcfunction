@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §dDreadhunter Blade(15)
-item replace entity @s container.15 with netherite_sword[custom_name={text: "§dDreadhunter Blade", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.15 with netherite_sword[custom_name={text: "§dDreadhunter Blade", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

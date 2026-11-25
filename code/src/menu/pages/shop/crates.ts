@@ -256,7 +256,7 @@ export class Crates {
         g.switch(Crates.pageName(crate, 'rewards'));
       },
       1,
-      ['enchantment_glint_override=true', '!bundle_content'],
+      ['enchantment_glint_override=true', '!bundle_contents'],
     );
   }
 

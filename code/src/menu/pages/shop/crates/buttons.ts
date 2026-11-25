@@ -42,7 +42,7 @@ export class CrateButtons {
       ],
       onClick,
       1,
-      ['enchantment_glint_override=true', '!bundle_content'],
+      ['enchantment_glint_override=true', '!bundle_contents'],
     );
   }
 

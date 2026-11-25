@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.player.pts 9000
-scoreboard players add @p prodige_skills.reward.pending.32_netherite_scrap 1
+scoreboard players add @p prodige_skills.player.pts 7500
+scoreboard players add @p prodige_skills.reward.pending.64_oak_logs 1
 scoreboard players add @p prodige_skills.reward.pending.x4_pts_booster 1
 scoreboard players set anon_cnoL-r-9_16807 __sandstone 0
 execute store result score anon_cnoL-r-9_16807 __sandstone run random value 0..4

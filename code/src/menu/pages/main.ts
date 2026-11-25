@@ -98,9 +98,9 @@ export class Main {
           '§a┃ §7Spend your points on useful rewards.',
           '',
           '§f§lActive Boosters:',
-          ...boosterStatuses.map(status => $`§8• ${status}`),
+          ...boosterStatuses.map(status => $` §8• ${status}`),
           '',
-          $`§8• §7Your balance: §e${Player.pts} Pts`,
+          $` §8• §7Your balance: §e${Player.pts} Pts`,
           '',
           '§eClick to explore the shop!'
         ], () => {

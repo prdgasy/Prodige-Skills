@@ -1,4 +1,4 @@
-# prodige_skills::vault::fill -> §6§l§f32 Emerald §8× §e$(macro_arg_4495)($(macro_arg_4494))
+# prodige_skills::vault::fill -> §6§l§b32 Emerald §8× §e$(macro_arg_4495)($(macro_arg_4494))
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4494 int 1 run scoreboard players get anon_cnoL-r-9_7019 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4495 int 1 run scoreboard players get @p prodige_skills.reward.pending.32_emerald
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4496 int 1 run scoreboard players get @p prodige_skills.reward.pending.32_emerald

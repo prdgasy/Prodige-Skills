@@ -1,3 +1,3 @@
-# prodige_skills::vault::click -> §6§l§f2 Enchanted Golden Apple §8× §e$(macro_arg_4994)($(macro_arg_4993))
+# prodige_skills::vault::click -> §6§l§b2 Enchanted Golden Apple §8× §e$(macro_arg_4994)($(macro_arg_4993))
 execute if score anon_cnoL-r-9_40 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/if126/if/if
 scoreboard players set anon_cnoL-r-9_7101 __sandstone 1

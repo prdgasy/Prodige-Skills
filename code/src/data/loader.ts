@@ -50,8 +50,7 @@ export class Loader {
     const resources = loadResourceRewards(path.join(csvDir, 'resources.csv'));
     setDefaultRewards(resources);
     setCrateRewards(tools, resources);
-    setSkillRewards(tools);
-
+    setSkillRewards(tools, resources);
     loadSkillData(csvDir, resources.byTier.legendary);
     Task.tasks = createTasks();
   }

@@ -1,2 +1,2 @@
-tellraw @p "§e[Prodige Skill] §8• §eYou won: §f32 Emerald§e!"
+tellraw @p "§e[Prodige Skill] §8• §eYou won: §b32 Emerald§e!"
 give @p emerald 32

@@ -1,7 +1,7 @@
-scoreboard players add @p prodige_skills.reward.pending.32_emerald_block 1
-scoreboard players add @p prodige_skills.reward.pending.32_netherite_scrap 1
-scoreboard players add @p prodige_skills.player.pts 4000
-scoreboard players add @p prodige_skills.reward.pending.96_lapis_lazuli 1
+scoreboard players add @p prodige_skills.reward.pending.96_bread 1
+scoreboard players add @p prodige_skills.reward.pending.192_lapis_lazuli 1
+scoreboard players add @p prodige_skills.player.pts 5000
+scoreboard players add @p prodige_skills.reward.pending.8_diamond_block 1
 scoreboard players add @p prodige_skills.reward.pending.x4_xp_booster 1
 scoreboard players set anon_cnoL-r-9_7854 __sandstone 0
 execute store result score anon_cnoL-r-9_7854 __sandstone run random value 0..4

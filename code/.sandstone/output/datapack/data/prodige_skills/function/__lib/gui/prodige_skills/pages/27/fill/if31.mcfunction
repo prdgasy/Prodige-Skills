@@ -1,2 +1,2 @@
-# prodige_skills::crate_epic_rewards::fill -> §f8 Oak Logs(12)
-item replace entity @s container.12 with oak_log[custom_name={text: "§f8 Oak Logs", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_epic_rewards::fill -> §b8 Oak Logs(12)
+item replace entity @s container.12 with oak_log[custom_name={text: "§b8 Oak Logs", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

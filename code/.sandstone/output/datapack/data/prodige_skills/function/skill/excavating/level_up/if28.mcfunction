@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.player.pts 12000
-scoreboard players add @p prodige_skills.reward.pending.256_redstone 1
+scoreboard players add @p prodige_skills.player.pts 7500
+scoreboard players add @p prodige_skills.reward.pending.64_emerald 1
 scoreboard players add @p prodige_skills.reward.pending.legendary_crate_key 1
 scoreboard players set anon_cnoL-r-9_18026 __sandstone 0
 execute store result score anon_cnoL-r-9_18026 __sandstone run random value 0..4

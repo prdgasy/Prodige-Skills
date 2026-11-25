@@ -1,2 +1,2 @@
 # prodige_skills::crate_common_rewards::fill -> §aFieldhand Hoe(12)
-item replace entity @s container.12 with iron_hoe[custom_name={text: "§aFieldhand Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.12 with iron_hoe[custom_name={text: "§aFieldhand Hoe", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.6%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

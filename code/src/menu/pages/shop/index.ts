@@ -120,7 +120,7 @@ export class Shop {
   }
 
 
-  public static   balance(p: Page) {
+  public static balance(p: Page) {
     const boosterStatuses: ReturnType<typeof DataVariable>[] = [];
 
     for (const type of BOOSTER_TYPE) {
@@ -144,9 +144,9 @@ export class Shop {
           '§a┃ §7Spend your points on useful rewards.',
           '',
           '§f§lActive Boosters:',
-          ...boosterStatuses.map(status => $`§8• ${status}`),
+          ...boosterStatuses.map(status => $` §8• ${status}`),
           '',
-          $`§8• §7Your balance: §e${Player.pts} Pts`,
+          $` §8• §7Your balance: §e${Player.pts} Pts`,
 
         ]
       )

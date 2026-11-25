@@ -1,4 +1,4 @@
-# prodige_skills::vault::fill -> §6§l§f64 Redstone §8× §e$(macro_arg_4456)($(macro_arg_4455))
+# prodige_skills::vault::fill -> §6§l§b64 Redstone §8× §e$(macro_arg_4456)($(macro_arg_4455))
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4455 int 1 run scoreboard players get anon_cnoL-r-9_6993 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4456 int 1 run scoreboard players get @p prodige_skills.reward.pending.64_redstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4457 int 1 run scoreboard players get @p prodige_skills.reward.pending.64_redstone

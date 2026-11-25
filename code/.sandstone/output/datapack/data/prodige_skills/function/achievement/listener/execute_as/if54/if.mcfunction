@@ -1,7 +1,7 @@
-scoreboard players add @p prodige_skills.reward.pending.32_emerald_block 1
-scoreboard players add @p prodige_skills.reward.pending.8_enchanted_golden_apple 1
-scoreboard players add @p prodige_skills.player.pts 1700
-scoreboard players add @p prodige_skills.reward.pending.8_netherite_scrap 1
+scoreboard players add @p prodige_skills.reward.pending.64_emerald 1
+scoreboard players add @p prodige_skills.reward.pending.24_diamond 1
+scoreboard players add @p prodige_skills.player.pts 1300
+scoreboard players add @p prodige_skills.reward.pending.16_golden_carrots 1
 scoreboard players add @p prodige_skills.reward.pending.rare_crate_key 1
 scoreboard players set anon_cnoL-r-9_8254 __sandstone 0
 execute store result score anon_cnoL-r-9_8254 __sandstone run random value 0..4

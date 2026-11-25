@@ -1,7 +1,7 @@
-scoreboard players add @p prodige_skills.reward.pending.128_obsidian 1
-scoreboard players add @p prodige_skills.reward.pending.128_cooked_beef 1
-scoreboard players add @p prodige_skills.player.pts 3600
-scoreboard players add @p prodige_skills.reward.pending.64_obsidian 1
+scoreboard players add @p prodige_skills.reward.pending.256_redstone 1
+scoreboard players add @p prodige_skills.reward.pending.64_emerald 1
+scoreboard players add @p prodige_skills.player.pts 4000
+scoreboard players add @p prodige_skills.reward.pending.128_redstone 1
 scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1
 scoreboard players set anon_cnoL-r-9_8398 __sandstone 0
 execute store result score anon_cnoL-r-9_8398 __sandstone run random value 0..4

@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§f64 Cooked Beef §8× §e$(macro_arg_4817)($(macro_arg_4816))
+# prodige_skills::vault::click::macro -> §6§l§b64 Cooked Beef §8× §e$(macro_arg_4817)($(macro_arg_4816))
 $execute unless data entity @s Items[{Slot:$(macro_arg_4816)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro67/execute_unless

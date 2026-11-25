@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§f4 Golden Apple §8× §e$(macro_arg_4958)($(macro_arg_4957))
+# prodige_skills::vault::click::macro -> §6§l§b4 Golden Apple §8× §e$(macro_arg_4958)($(macro_arg_4957))
 $execute unless data entity @s Items[{Slot:$(macro_arg_4957)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro114/execute_unless

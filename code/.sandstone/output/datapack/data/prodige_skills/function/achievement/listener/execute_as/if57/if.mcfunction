@@ -1,6 +1,6 @@
-scoreboard players add @p prodige_skills.reward.pending.8_enchanted_golden_apple 1
-scoreboard players add @p prodige_skills.reward.pending.64_oak_logs 1
-scoreboard players add @p prodige_skills.player.pts 800
+scoreboard players add @p prodige_skills.reward.pending.96_bread 1
+scoreboard players add @p prodige_skills.reward.pending.16_diamond_block 1
+scoreboard players add @p prodige_skills.player.pts 1000
 scoreboard players add @p prodige_skills.reward.pending.64_redstone 1
 scoreboard players add @p prodige_skills.reward.pending.x3_xp_booster 1
 scoreboard players set anon_cnoL-r-9_8302 __sandstone 0

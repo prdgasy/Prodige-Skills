@@ -1,2 +1,2 @@
-# prodige_skills::crate_rare_rewards::fill -> §f8 Emerald Block(13)
-item replace entity @s container.13 with emerald_block[custom_name={text: "§f8 Emerald Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §b8 Emerald Block(13)
+item replace entity @s container.13 with emerald_block[custom_name={text: "§b8 Emerald Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

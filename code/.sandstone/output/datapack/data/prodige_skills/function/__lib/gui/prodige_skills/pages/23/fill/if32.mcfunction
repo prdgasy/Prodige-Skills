@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f16 Obsidian(13)
-item replace entity @s container.13 with obsidian[custom_name={text: "§f16 Obsidian", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b16 Obsidian(13)
+item replace entity @s container.13 with obsidian[custom_name={text: "§b16 Obsidian", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

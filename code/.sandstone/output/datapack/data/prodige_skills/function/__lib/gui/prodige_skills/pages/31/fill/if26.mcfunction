@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §6Wardenbreaker Sword(7)
-item replace entity @s container.7 with netherite_sword[custom_name={text: "§6Wardenbreaker Sword", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.7 with netherite_sword[custom_name={text: "§6Wardenbreaker Sword", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

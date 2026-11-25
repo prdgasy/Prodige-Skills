@@ -1,4 +1,4 @@
-scoreboard players add @p prodige_skills.player.pts 400
+scoreboard players add @p prodige_skills.player.pts 500
 scoreboard players add @p prodige_skills.reward.pending.4_iron_ingot 1
 scoreboard players add @p prodige_skills.reward.pending.common_crate_key 1
 scoreboard players set anon_cnoL-r-9_13265 __sandstone 0

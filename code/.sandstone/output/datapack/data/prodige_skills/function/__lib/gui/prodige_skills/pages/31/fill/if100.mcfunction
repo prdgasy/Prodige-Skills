@@ -1,2 +1,2 @@
-# prodige_skills::crate_mythic_rewards::fill -> §f24 Diamond(9)
-item replace entity @s container.9 with diamond[custom_name={text: "§f24 Diamond", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill -> §b24 Diamond(9)
+item replace entity @s container.9 with diamond[custom_name={text: "§b24 Diamond", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

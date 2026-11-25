@@ -1,2 +1,2 @@
-# prodige_skills::crate_rare_rewards::fill -> §f16 Gold Block(14)
-item replace entity @s container.14 with gold_block[custom_name={text: "§f16 Gold Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_rare_rewards::fill -> §b16 Gold Block(14)
+item replace entity @s container.14 with gold_block[custom_name={text: "§b16 Gold Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

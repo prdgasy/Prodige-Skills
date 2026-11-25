@@ -1,2 +1,2 @@
-# prodige_skills::crate_legendary_rewards::fill -> §f6 Diamond(5)
-item replace entity @s container.5 with diamond[custom_name={text: "§f6 Diamond", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_legendary_rewards::fill -> §b6 Diamond(5)
+item replace entity @s container.5 with diamond[custom_name={text: "§b6 Diamond", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

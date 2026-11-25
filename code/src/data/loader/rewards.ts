@@ -41,7 +41,7 @@ function createResourceReward(name: string, item: Item, count: number): Reward {
   const displayName = `${count} ${name}`;
 
   return new Reward(
-    `§f${displayName}`,
+    `§b${displayName}`,
     () => give('@p', item, count),
     {
       icon: item,
@@ -214,11 +214,36 @@ export function setCrateRewards(tools: ToolData, resources: ResourceRewardData):
     crate.rewards = Crate.getRewards(raw, totalWeight);
   }
 }
+// Sélectionne une ressource selon son poids.
+function chooseWeightedResource(tier: ResourceTier, resources: ResourceRewardData): Reward {
+  const pool = resources.byTier[tier];
+  const totalWeight = pool.reduce((total, reward) => {
+    const weight = resources.weights.get(reward);
+    if (weight === undefined || !Number.isFinite(weight) || weight <= 0) {
+      throw new Error(`Invalid weight for resource reward "${reward.name}".`);
+    }
+    return total + weight;
+  }, 0);
+
+  let random = Math.random() * totalWeight;
+
+  for (const reward of pool) {
+    random -= resources.weights.get(reward)!;
+    if (random < 0) return reward;
+  }
+
+  return pool[pool.length - 1];
+}
 
 // Prépare les récompenses de chaque niveau de compétence.
-export function setSkillRewards(tools: ToolData): void {
+export function setSkillRewards(tools: ToolData, resources: ResourceRewardData): void {
   for (const skill of Object.values(Skill.skills)) {
     for (let level = 0; level <= 100; level++) {
+      const tier: ResourceTier =
+        level > 0 && level % 25 === 0 ? 'legendary'
+          : level > 0 && level % 10 === 0 ? 'epic'
+            : level > 0 && level % 5 === 0 ? 'rare'
+              : 'common';
       const rewards = level > 0 && level % 25 === 0
         ? Reward.legendary()
         : level > 0 && level % 10 === 0
@@ -226,6 +251,14 @@ export function setSkillRewards(tools: ToolData): void {
           : level > 0 && level % 5 === 0
             ? Reward.rare()
             : Reward.common();
+
+      const resourceIndex = rewards.findIndex(reward =>
+        resources.byTier[tier].includes(reward)
+      );
+
+      if (resourceIndex !== -1) {
+        rewards[resourceIndex] = chooseWeightedResource(tier, resources);
+      }
 
       skill.rewards.set(level, rewards);
     }

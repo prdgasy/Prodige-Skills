@@ -1,6 +1,6 @@
-scoreboard players add @p prodige_skills.reward.pending.64_golden_carrots 1
-scoreboard players add @p prodige_skills.reward.pending.32_iron_ingot 1
-scoreboard players add @p prodige_skills.player.pts 7500
+scoreboard players add @p prodige_skills.reward.pending.16_diamond_block 1
+scoreboard players add @p prodige_skills.reward.pending.32_emerald_block 1
+scoreboard players add @p prodige_skills.player.pts 12000
 scoreboard players add @p prodige_skills.reward.pending.128_cooked_porkchop 1
 scoreboard players add @p prodige_skills.reward.pending.x4_pts_booster 1
 scoreboard players set anon_cnoL-r-9_8638 __sandstone 0

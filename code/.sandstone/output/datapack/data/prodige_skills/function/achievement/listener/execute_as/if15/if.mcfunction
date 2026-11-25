@@ -1,8 +1,8 @@
-scoreboard players add @p prodige_skills.reward.pending.96_blaze_rod 1
-scoreboard players add @p prodige_skills.reward.pending.192_lapis_lazuli 1
-scoreboard players add @p prodige_skills.player.pts 5000
-scoreboard players add @p prodige_skills.reward.pending.12_diamond 1
-scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1
+scoreboard players add @p prodige_skills.reward.pending.128_cooked_porkchop 1
+scoreboard players add @p prodige_skills.reward.pending.24_diamond 1
+scoreboard players add @p prodige_skills.player.pts 3600
+scoreboard players add @p prodige_skills.reward.pending.32_oak_logs 1
+scoreboard players add @p prodige_skills.reward.pending.x4_xp_booster 1
 scoreboard players set anon_cnoL-r-9_7630 __sandstone 0
 execute store result score anon_cnoL-r-9_7630 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_7630 __sandstone matches 0 run function prodige_skills:achievement/listener/execute_as/if15/if/if

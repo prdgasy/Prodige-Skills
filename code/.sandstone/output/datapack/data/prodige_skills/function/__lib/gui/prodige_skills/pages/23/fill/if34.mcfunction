@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f4 Netherite Scrap(15)
-item replace entity @s container.15 with netherite_scrap[custom_name={text: "§f4 Netherite Scrap", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b4 Netherite Scrap(15)
+item replace entity @s container.15 with netherite_scrap[custom_name={text: "§b4 Netherite Scrap", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

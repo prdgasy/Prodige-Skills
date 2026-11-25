@@ -1,2 +1,2 @@
 # prodige_skills::crate_common_rewards::fill -> §fField Shovel(6)
-item replace entity @s container.6 with iron_shovel[custom_name={text: "§fField Shovel", italic: false, color: "white"},lore=[{text: "§eReward chance: §75.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.6 with iron_shovel[custom_name={text: "§fField Shovel", italic: false, color: "white"},lore=[{text: "§eReward chance: §75.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

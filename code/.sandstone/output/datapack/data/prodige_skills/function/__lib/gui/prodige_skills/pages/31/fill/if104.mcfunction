@@ -1,2 +1,2 @@
-# prodige_skills::crate_mythic_rewards::fill -> §f128 Obsidian(13)
-item replace entity @s container.13 with obsidian[custom_name={text: "§f128 Obsidian", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill -> §b128 Obsidian(13)
+item replace entity @s container.13 with obsidian[custom_name={text: "§b128 Obsidian", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.3%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

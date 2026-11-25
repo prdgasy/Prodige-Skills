@@ -1,2 +1,2 @@
-# prodige_skills::crate_mythic_rewards::fill -> §f24 Bread(15)
-item replace entity @s container.15 with bread[custom_name={text: "§f24 Bread", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill -> §b24 Bread(15)
+item replace entity @s container.15 with bread[custom_name={text: "§b24 Bread", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.6%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

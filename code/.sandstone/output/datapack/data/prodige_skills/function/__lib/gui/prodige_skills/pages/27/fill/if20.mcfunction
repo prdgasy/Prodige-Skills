@@ -1,2 +1,2 @@
 # prodige_skills::crate_epic_rewards::fill -> §dDiamond Seeker(1)
-item replace entity @s container.1 with diamond_pickaxe[custom_name={text: "§dDiamond Seeker", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.1 with diamond_pickaxe[custom_name={text: "§dDiamond Seeker", italic: false, color: "white"},lore=[{text: "§eReward chance: §72%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

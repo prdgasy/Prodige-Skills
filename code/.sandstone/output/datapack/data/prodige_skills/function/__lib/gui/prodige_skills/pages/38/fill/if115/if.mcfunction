@@ -1,4 +1,4 @@
-# prodige_skills::vault::fill -> §6§l§f8 Golden Apple §8× §e$(macro_arg_4507)($(macro_arg_4506))
+# prodige_skills::vault::fill -> §6§l§b8 Golden Apple §8× §e$(macro_arg_4507)($(macro_arg_4506))
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4506 int 1 run scoreboard players get anon_cnoL-r-9_7027 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4507 int 1 run scoreboard players get @p prodige_skills.reward.pending.8_golden_apple
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.vault.macro_arg_4508 int 1 run scoreboard players get @p prodige_skills.reward.pending.8_golden_apple

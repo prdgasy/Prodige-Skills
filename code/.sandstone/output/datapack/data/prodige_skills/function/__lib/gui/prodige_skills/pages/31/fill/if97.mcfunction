@@ -1,2 +1,2 @@
-# prodige_skills::crate_mythic_rewards::fill -> §f64 Gold Ingot(6)
-item replace entity @s container.6 with gold_ingot[custom_name={text: "§f64 Gold Ingot", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_mythic_rewards::fill -> §b64 Gold Ingot(6)
+item replace entity @s container.6 with gold_ingot[custom_name={text: "§b64 Gold Ingot", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

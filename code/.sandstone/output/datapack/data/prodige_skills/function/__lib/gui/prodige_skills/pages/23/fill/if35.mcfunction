@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f2 Diamond Block(16)
-item replace entity @s container.16 with diamond_block[custom_name={text: "§f2 Diamond Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b2 Diamond Block(16)
+item replace entity @s container.16 with diamond_block[custom_name={text: "§b2 Diamond Block", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

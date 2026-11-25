@@ -1,2 +1,2 @@
-# prodige_skills::crate_legendary_rewards::fill -> §f128 Cooked Beef(17)
-item replace entity @s container.17 with cooked_beef[custom_name={text: "§f128 Cooked Beef", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_legendary_rewards::fill -> §b128 Cooked Beef(17)
+item replace entity @s container.17 with cooked_beef[custom_name={text: "§b128 Cooked Beef", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

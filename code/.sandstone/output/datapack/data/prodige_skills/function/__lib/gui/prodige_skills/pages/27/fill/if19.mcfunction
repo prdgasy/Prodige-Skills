@@ -1,2 +1,2 @@
 # prodige_skills::crate_epic_rewards::fill -> §9Gravel Prospector(0)
-item replace entity @s container.0 with netherite_shovel[custom_name={text: "§9Gravel Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.0 with netherite_shovel[custom_name={text: "§9Gravel Prospector", italic: false, color: "white"},lore=[{text: "§eReward chance: §71%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

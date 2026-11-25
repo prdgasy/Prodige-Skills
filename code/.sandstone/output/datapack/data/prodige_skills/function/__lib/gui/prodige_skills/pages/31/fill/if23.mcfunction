@@ -1,2 +1,2 @@
 # prodige_skills::crate_mythic_rewards::fill -> §6Evergreen Reaper(4)
-item replace entity @s container.4 with netherite_axe[custom_name={text: "§6Evergreen Reaper", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.4 with netherite_axe[custom_name={text: "§6Evergreen Reaper", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

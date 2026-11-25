@@ -1,2 +1,2 @@
-# prodige_skills::vault::click::macro -> §6§l§f16 Gold Block §8× §e$(macro_arg_5042)($(macro_arg_5041))
+# prodige_skills::vault::click::macro -> §6§l§b16 Gold Block §8× §e$(macro_arg_5042)($(macro_arg_5041))
 $execute unless data entity @s Items[{Slot:$(macro_arg_5041)b}] run function prodige_skills:__lib/gui/prodige_skills/pages/38/click/with_macro142/execute_unless

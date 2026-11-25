@@ -1,2 +1,2 @@
 # prodige_skills::crate_legendary_rewards::fill -> §dOrchard Keeper(5)
-item replace entity @s container.5 with netherite_hoe[custom_name={text: "§dOrchard Keeper", italic: false, color: "white"},lore=[{text: "§eReward chance: §72.4%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+item replace entity @s container.5 with netherite_hoe[custom_name={text: "§dOrchard Keeper", italic: false, color: "white"},lore=[{text: "§eReward chance: §71.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1

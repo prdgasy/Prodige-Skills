@@ -1,2 +1,2 @@
-# prodige_skills::crate_common_rewards::fill -> §f24 Lapis Lazuli(8)
-item replace entity @s container.8 with lapis_lazuli[custom_name={text: "§f24 Lapis Lazuli", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_rewards::fill -> §b24 Lapis Lazuli(8)
+item replace entity @s container.8 with lapis_lazuli[custom_name={text: "§b24 Lapis Lazuli", italic: false, color: "white"},lore=[{text: "§eReward chance: §70.5%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
