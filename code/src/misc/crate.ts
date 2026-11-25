@@ -3,7 +3,6 @@ import { Global } from "@src/global";
 import { Player } from "@src/player";
 import { _, clear, execute, give, ItemPredicate, MCFunction, Objective, Variable } from "sandstone";
 import { Reward } from "./reward";
-import { macro as T, smartTellraw } from "@prodigelib/easymacro";
 import type { CrateName } from "@src/data/definitions";
 
 export type CrateOption = {
@@ -55,6 +54,17 @@ export class Crate {
       giveFn,
       { category: 'vault', icon: 'tripwire_hook', price: opt.keyPrice, description: this.description }
     );
+  }
+
+  /**
+   * Consumes one matching key from the executing player (@s).
+   * Must be called from a function running as the player, not as the GUI minecart.
+   * Returns the number of keys removed (0 or 1).
+   */
+  public consumeKey() {
+    const removed = Variable(0);
+    execute.store.result(removed).run.clear('@s', this.keyPredicate, 1);
+    return removed;
   }
 
   public static getTotalWeight(raw: Map<Reward, number>): number {

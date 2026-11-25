@@ -215,7 +215,7 @@ export class Skill {
       this.level['++'];
       _.if(this.level['=='](100), () => this.xp.set(0));
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i <= 100; i++) {
         const rewards = this.rewards.get(i);
         if (!rewards?.length) continue;
         _.if(this.level['=='](i), () => Reward.vaultOrGiveAll(rewards));

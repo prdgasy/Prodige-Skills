@@ -1,0 +1,22 @@
+
+category,name,item,count,weight
+common,Cooked Beef,cooked_beef,16,10
+common,Oak Logs,oak_log,8,10
+common,Bread,bread,12,10
+common,Coal,coal,16,10
+common,Iron Ingot,iron_ingot,4,10
+rare,Golden Carrots,golden_carrot,8,10
+rare,Cooked Porkchop,cooked_porkchop,16,10
+rare,Gold Ingot,gold_ingot,8,10
+rare,Redstone,redstone,32,10
+rare,Lapis Lazuli,lapis_lazuli,24,10
+epic,Diamond,diamond,3,10
+epic,Emerald,emerald,8,10
+epic,Golden Apple,golden_apple,2,10
+epic,Blaze Rod,blaze_rod,12,10
+epic,Obsidian,obsidian,16,10
+legendary,Enchanted Golden Apple,enchanted_golden_apple,1,10
+legendary,Netherite Scrap,netherite_scrap,4,10
+legendary,Diamond Block,diamond_block,2,10
+legendary,Emerald Block,emerald_block,4,10
+legendary,Gold Block,gold_block,8,10
