@@ -2,8 +2,8 @@
 item replace entity @s container.9 with gold_block[custom_name={text: "§b32 Gold Block", italic: false, color: "white"},lore=[{text: "§eChance: §70.2%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_open::fill -> §e500 Pts(10)
 item replace entity @s container.10 with gold_ingot[custom_name={text: "§e500 Pts", italic: false, color: "white"},lore=[{text: "§eChance: §79.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
-# prodige_skills::crate_epic_open::fill -> §3206 Xp in a random Skill(11)
-item replace entity @s container.11 with experience_bottle[custom_name={text: "§3206 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eChance: §79.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_epic_open::fill -> §3293 Xp in a random Skill(11)
+item replace entity @s container.11 with experience_bottle[custom_name={text: "§3293 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eChance: §79.8%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_open::fill -> §bx3 Xp Booster(12)
 item replace entity @s container.12 with experience_bottle[custom_name={text: "§bx3 Xp Booster", italic: false, color: "white"},lore=[{text: "§eChance: §74.9%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_epic_open::fill -> §6x3 Pts Booster(13)

@@ -123,8 +123,8 @@ export function setDefaultRewards(resources: ResourceRewardData): void {
     ...Reward.choose(rarePoints),
     ...Reward.choose(resources.byTier.rare),
     ...Reward.choose([
-      Booster.get('Xp', 3, 15),
-      Booster.get('Pts', 3, 15),
+      Booster.get('Xp', 3, 30),
+      Booster.get('Pts', 3, 30),
       Crate.get('§9§lRare').key,
     ]),
     Reward.randomXp(100, 250, skills),
@@ -134,8 +134,8 @@ export function setDefaultRewards(resources: ResourceRewardData): void {
     ...Reward.choose(epicPoints),
     ...Reward.choose(resources.byTier.epic),
     ...Reward.choose([
-      Booster.get('Xp', 4, 15),
-      Booster.get('Pts', 4, 15),
+      Booster.get('Xp', 4, 60),
+      Booster.get('Pts', 4, 60),
       Crate.get('§5§lEpic').key,
     ]),
     Reward.randomXp(250, 500, skills),
@@ -145,8 +145,8 @@ export function setDefaultRewards(resources: ResourceRewardData): void {
     ...Reward.choose(legendaryPoints),
     ...Reward.choose(resources.byTier.legendary),
     ...Reward.choose([
-      Booster.get('Xp', 4, 15),
-      Booster.get('Pts', 4, 15),
+      Booster.get('Xp', 4, 120),
+      Booster.get('Pts', 4, 120),
       Crate.get('§6§lLegendary').key,
     ]),
     Reward.randomXp(1000, 2000, skills),

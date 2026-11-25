@@ -1,6 +1,6 @@
-scoreboard players add @p prodige_skills.player.pts 100
-scoreboard players add @p prodige_skills.reward.pending.8_oak_logs 1
-scoreboard players add @p prodige_skills.reward.pending.x2_pts_booster 1
+scoreboard players add @p prodige_skills.player.pts 300
+scoreboard players add @p prodige_skills.reward.pending.8_gold_ingot 1
+scoreboard players add @p prodige_skills.reward.pending.x2_xp_booster 1
 scoreboard players set anon_cnoL-r-9_17079 __sandstone 0
 execute store result score anon_cnoL-r-9_17079 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_17079 __sandstone matches 0 run function prodige_skills:skill/hunting/level_up/if70/if

@@ -1,3 +1,3 @@
 execute if entity @p[tag=prodige_skills.misc.task.5.progress] run return run function prodige_skills:__lib/gui/prodige_skills/pages/37/click/if7/if/0_if/return_run
-# prodige_skills::tasks::click -> §9Mine sand §8• §e10000§6/§e10000 §8• §a§lCLAIM!($(macro_arg_4160))
+# prodige_skills::tasks::click -> §9Mine Ancient Debris §8• §e5§6/§e5 §8• §a§lCLAIM!($(macro_arg_4160))
 execute if score anon_cnoL-r-9_39 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/37/click/if/if6/if2

@@ -1,4 +1,4 @@
-tellraw @p "§e[Prodige Skill] §8• §eYou won: §3755 Xp in a random Skill§e!"
+tellraw @p "§e[Prodige Skill] §8• §eYou won: §3481 Xp in a random Skill§e!"
 scoreboard players set anon_cnoL-r-9_6080 __sandstone 0
 execute store result score anon_cnoL-r-9_6080 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_6080 __sandstone matches 0 run function prodige_skills:__lib/crate/legendary/run/if63/if

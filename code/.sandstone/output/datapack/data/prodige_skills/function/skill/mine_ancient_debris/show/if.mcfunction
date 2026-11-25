@@ -1,0 +1,2 @@
+execute if score anon_cnoL-r-9_19353 __sandstone matches ..-1 run return run function prodige_skills:skill/mine_ancient_debris/show/if/0_if/return_run
+data modify storage prodige_skills:prodigelib Float.sign set value ''

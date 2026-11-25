@@ -1,6 +1,6 @@
-scoreboard players add @p prodige_skills.player.pts 800
-scoreboard players add @p prodige_skills.reward.pending.2_enchanted_golden_apple 1
-scoreboard players add @p prodige_skills.reward.pending.rare_crate_key 1
+scoreboard players add @p prodige_skills.player.pts 1700
+scoreboard players add @p prodige_skills.reward.pending.24_bread 1
+scoreboard players add @p prodige_skills.reward.pending.x3_pts_booster 1
 scoreboard players set anon_cnoL-r-9_11870 __sandstone 0
 execute store result score anon_cnoL-r-9_11870 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_11870 __sandstone matches 0 run function prodige_skills:skill/mining/level_up/if48/if

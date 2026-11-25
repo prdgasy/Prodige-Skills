@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.player.pts 1000
-scoreboard players add @p prodige_skills.reward.pending.16_gold_ingot 1
+scoreboard players add @p prodige_skills.player.pts 1300
+scoreboard players add @p prodige_skills.reward.pending.16_golden_carrots 1
 scoreboard players add @p prodige_skills.reward.pending.x3_xp_booster 1
 scoreboard players set anon_cnoL-r-9_12849 __sandstone 0
 execute store result score anon_cnoL-r-9_12849 __sandstone run random value 0..4

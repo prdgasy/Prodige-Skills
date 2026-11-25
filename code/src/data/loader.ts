@@ -8,6 +8,7 @@ import * as path from 'path';
 import { loadResourceRewards, setCrateRewards, setDefaultRewards, setSkillRewards } from './loader/rewards';
 import { loadTools } from './loader/tools';
 import { loadSkillData } from './loader/skill-data';
+import { loadTasks } from './loader/tasks';
 
 // Construit toutes les compétences définies dans definitions.ts.
 function createSkills(): Record<SkillName, Skill> {
@@ -26,18 +27,6 @@ function createCrates(): Record<CrateName, Crate> {
   ) as Record<CrateName, Crate>;
 }
 
-// Crée la liste des tâches quotidiennes et hebdomadaires.
-function createTasks(): Task[] {
-  return [
-    new Task('stone', 'Mine stone', 100, 'minecraft.mined:minecraft.stone', [Reward.point(100)]),
-    new Task('dirt', 'Mine dirt', 1000, 'minecraft.mined:minecraft.dirt', [Reward.point(200)]),
-    new Task('sand', 'Mine sand', 10000, 'minecraft.mined:minecraft.sand', [Reward.point(300)]),
-    new Task('brick', 'Mine stone', 100, 'minecraft.mined:minecraft.stone', [Reward.point(100)]),
-    new Task('diamond', 'Mine dirt', 1000, 'minecraft.mined:minecraft.dirt', [Reward.point(200)]),
-    new Task('sandstone', 'Mine sand', 10000, 'minecraft.mined:minecraft.sand', [Reward.point(300)]),
-  ];
-}
-
 export class Loader {
   // Initialise toutes les données dans l'ordre nécessaire.
   public static init(): void {
@@ -52,6 +41,6 @@ export class Loader {
     setCrateRewards(tools, resources);
     setSkillRewards(tools, resources);
     loadSkillData(csvDir, resources.byTier.legendary);
-    Task.tasks = createTasks();
+    Task.tasks = loadTasks(path.join(csvDir, 'tasks.csv'), resources);
   }
 }

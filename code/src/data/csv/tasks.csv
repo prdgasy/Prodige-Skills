@@ -1,0 +1,7 @@
+item,name,goal,criteria,rarity
+stone,Mine Stone,100,minecraft.mined:minecraft.stone,common
+dirt,Mine Dirt,1000,minecraft.mined:minecraft.dirt,common
+sand,Mine Sand,10000,minecraft.mined:minecraft.sand,rare
+brick,Mine Bricks,500,minecraft.mined:minecraft.bricks,rare
+diamond_ore,Mine Diamond Ore,25,minecraft.mined:minecraft.diamond_ore,epic
+ancient_debris,Mine Ancient Debris,5,minecraft.mined:minecraft.ancient_debris,legendary

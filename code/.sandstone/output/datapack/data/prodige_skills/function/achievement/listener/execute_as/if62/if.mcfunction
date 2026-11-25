@@ -1,8 +1,8 @@
-scoreboard players add @p prodige_skills.reward.pending.64_gold_ingot 1
-scoreboard players add @p prodige_skills.reward.pending.256_redstone 1
+scoreboard players add @p prodige_skills.reward.pending.64_emerald 1
+scoreboard players add @p prodige_skills.reward.pending.16_diamond_block 1
 scoreboard players add @p prodige_skills.player.pts 500
-scoreboard players add @p prodige_skills.reward.pending.24_lapis_lazuli 1
-scoreboard players add @p prodige_skills.reward.pending.x2_xp_booster 1
+scoreboard players add @p prodige_skills.reward.pending.32_redstone 1
+scoreboard players add @p prodige_skills.reward.pending.x2_pts_booster 1
 scoreboard players set anon_cnoL-r-9_8382 __sandstone 0
 execute store result score anon_cnoL-r-9_8382 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_8382 __sandstone matches 0 run function prodige_skills:achievement/listener/execute_as/if62/if/if

@@ -1,8 +1,8 @@
-scoreboard players add @p prodige_skills.reward.pending.256_redstone 1
+scoreboard players add @p prodige_skills.reward.pending.64_oak_logs 1
 scoreboard players add @p prodige_skills.reward.pending.96_blaze_rod 1
-scoreboard players add @p prodige_skills.player.pts 1700
-scoreboard players add @p prodige_skills.reward.pending.16_gold_ingot 1
-scoreboard players add @p prodige_skills.reward.pending.x3_pts_booster 1
+scoreboard players add @p prodige_skills.player.pts 800
+scoreboard players add @p prodige_skills.reward.pending.4_diamond_block 1
+scoreboard players add @p prodige_skills.reward.pending.rare_crate_key 1
 scoreboard players set anon_cnoL-r-9_8414 __sandstone 0
 execute store result score anon_cnoL-r-9_8414 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_8414 __sandstone matches 0 run function prodige_skills:achievement/listener/execute_as/if64/if/if

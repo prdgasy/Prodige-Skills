@@ -31,5 +31,5 @@ data modify storage __sandstone:variable anon_cnoL-r-9_3242.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_3242.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3242
 data modify storage prodige_skills:prodigelib Float.var_997.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::tasks::click -> §9Mine sand §8• §e$(macro_arg_4135)§6/§e10000($(macro_arg_4134))
+# prodige_skills::tasks::click -> §9Mine Sand §8• §e$(macro_arg_4135)§6/§e10000($(macro_arg_4134))
 execute if score anon_cnoL-r-9_39 __sandstone matches 0 run function prodige_skills:__lib/gui/prodige_skills/pages/37/click/if4/if/0_if/return_run/if4

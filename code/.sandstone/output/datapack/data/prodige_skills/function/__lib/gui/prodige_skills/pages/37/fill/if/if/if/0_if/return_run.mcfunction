@@ -31,7 +31,7 @@ data modify storage __sandstone:variable anon_cnoL-r-9_3226.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_3226.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3226
 data modify storage prodige_skills:prodigelib Float.var_989.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::tasks::fill -> §9Mine stone §8• §e$(macro_arg_4077)§6/§e100($(macro_arg_4076))
+# prodige_skills::tasks::fill -> §9Mine Stone §8• §e$(macro_arg_4077)§6/§e100($(macro_arg_4076))
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4076 int 1 run scoreboard players get anon_cnoL-r-9_6686 __sandstone
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4077 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_stone
 data modify storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4078 set from storage prodige_skills:prodigelib Float.var_989.out

@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.task.mine_ancient_debris.$(env_0)

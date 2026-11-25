@@ -1,7 +1,7 @@
-scoreboard players add @p prodige_skills.reward.pending.24_diamond 1
 scoreboard players add @p prodige_skills.reward.pending.256_redstone 1
-scoreboard players add @p prodige_skills.player.pts 400
-scoreboard players add @p prodige_skills.reward.pending.24_lapis_lazuli 1
+scoreboard players add @p prodige_skills.reward.pending.96_blaze_rod 1
+scoreboard players add @p prodige_skills.player.pts 100
+scoreboard players add @p prodige_skills.reward.pending.16_coal 1
 scoreboard players add @p prodige_skills.reward.pending.common_crate_key 1
 scoreboard players set anon_cnoL-r-9_7806 __sandstone 0
 execute store result score anon_cnoL-r-9_7806 __sandstone run random value 0..4

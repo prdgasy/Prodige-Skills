@@ -12,117 +12,115 @@ import { Mask } from "../mask";
 const SLOTS = [11, 13, 15];
 
 export class Tasks {
-	public static getName() {
-		return this.name;
-	}
+  public static getName() {
+    return this.name;
+  }
 
-	public static init(g: Gui, p: Page) {
-		p.add(() => Mask.layered(p, "orange_stained_glass_pane", "brown_stained_glass_pane"));
+  public static init(g: Gui, p: Page) {
+    p.add(() => Mask.layered(p, "orange_stained_glass_pane", "brown_stained_glass_pane"));
 
-		p.add(() => {
-			_.if(_.not(Player.gotFirstTask), () => {
-				const noTask = (slot: number) =>
-					new Button('gunpowder', slot, '§7§lNo Task', [
+    p.add(() => {
+      _.if(_.not(Player.gotFirstTask), () => {
+        const noTask = (slot: number) =>
+          new Button('gunpowder', slot, '§7§lNo Task', [
+            '§7This slot is waiting for a task.',
+            '§7Roll a new set to begin!',
+            '',
+            '§8Use Get New Tasks §eto get started.'
+          ], () => Player.throw('No task assigned yet!'));
+        p.emit(noTask(SLOTS[0]));
+        p.emit(noTask(SLOTS[1]));
+        p.emit(noTask(SLOTS[2]));
+      }).
+        else(() => {
+          const s = Variable(SLOTS[0]);
+          for (const task of Task.tasks) {
+            const assigned = _.or(Player.task(task.id, 'progress'), Player.task(task.id, 'done'));
+            _.if(assigned, () => {
+              this.btn(p, task, s);
+              s['+='](2);
+            });
+          }
+        });
 
-						'§7This slot is waiting for a task.',
-						'§7Roll a new set to begin!',
-						'',
-						'§8Use Get New Tasks §eto get started.'
-					], () => Player.throw('No task assigned yet!'));
-				p.emit(noTask(SLOTS[0]));
-				p.emit(noTask(SLOTS[1]));
-				p.emit(noTask(SLOTS[2]));
-			}).
-				else(() => {
-					const s = Variable(SLOTS[0]);
-					for (const task of Task.tasks) {
-						const assigned = _.or(Player.task(task.id, 'progress'), Player.task(task.id, 'done'));
-						_.if(assigned, () => {
-							this.btn(p, task, s);
-							s['+='](2);
-						});
-					}
-				});
+      this.getNewTasks(p);
+    })
+    p.add(Menu.back(g, Main));
 
-			this.getNewTasks(p);
-		})
-		p.add(Menu.back(g, Main));
+    return p;
+  }
 
-		return p;
-	}
+  private static getNewTasks(p: Page) {
+    _.if(Task.timer['>'](0), () => {
+      p.emit(new Button(
+        'anvil', 4, $`§cTask Refresh §8• §c${Task.timer}m`,
+        [
+          ...Text.wrap('A fresh set of challenges is on its way.', '§7'),
+          '',
+          $`§7Time until refresh: §c${Task.timer}m`,
+        ], () => {
+          Player.throw('You cannot get new Tasks yet!');
+        }
+      ))
+    }).
+      else(() => {
+        p.emit(new Button(
+          'compass', 4, '§6Get New Tasks',
+          [
+            '',
+            ...Text.wrap('Take on fresh challenges and earn rewards as you complete them.', '§7'),
+            '',
+            '§7Refresh available: §aReady',
+            '§8A new set can be rolled every hour.',
+            '',
+            '§eClick to roll your tasks!'
+          ], () => { Task.roll(); }
+        ))
+      })
+  }
 
-	private static getNewTasks(p: Page) {
-		_.if(Task.timer['>'](0), () => {
-			p.emit(new Button(
-				'anvil', 4, $`§cTask Refresh §8• §c${Task.timer}m`,
-				[
-					'',
-					...Text.wrap('A fresh set of challenges is on its way.', '§7'),
-					'',
-					$`§7Time until refresh: §c${Task.timer}m`,
-				], () => {
-					Player.throw('You cannot get new Tasks yet!');
-				}
-			))
-		}).
-			else(() => {
-				p.emit(new Button(
-					'compass', 4, '§6Get New Tasks',
-					[
-						'',
-						...Text.wrap('Take on fresh challenges and earn rewards as you complete them.', '§7'),
-						'',
-						'§7Refresh available: §aReady',
-						'§8A new set can be rolled every hour.',
-						'',
-						'§eClick to roll your tasks!'
-					], () => { Task.roll(); }
-				))
-			})
-	}
+  private static btn(p: Page, task: Task, s: Score) {
+    _.if(Player.task(task.id, "progress"), () => this.progress(p, task, s)).
+      else(() => this.done(p, task, s))
+  }
 
-	private static btn(p: Page, task: Task, s: Score) {
-		_.if(Player.task(task.id, "progress"), () => this.progress(p, task, s)).
-			else(() => this.done(p, task, s))
-	}
+  private static progress(p: Page, task: Task, s: Score) {
+    const progress = Float.variable(task.executed)['*='](100)['/='](task.goal);
+    const bar = new Bar(progress.toScore()).toData({ length: 10 });
+    return p.emit(new Button(
+      task.item, $(s), $`§9${task.name} §8• §e${task.executed}§6/§e${task.goal}`,
+      [
+        '',
+        $`§7Progress: §e${progress.show()}%`,
+        $` §8> ${bar} §e${task.executed}§6/§e${task.goal}`,
+        '',
+        '§f§lRewards:',
+        ...task.rewards.map(r => ` §8• ${r.name}`),
+        '',
+        '§e• IN PROGRESS',
+      ], () => {
+        Player.send('This task is still in progress.');
+        Player.playSound('tick');
+      }, 1, ['!attribute_modifiers']
+    ));
+  }
 
-	private static progress(p: Page, task: Task, s: Score) {
-		const progress = Float.variable(task.executed)['*='](100)['/='](task.goal);
-		const bar = new Bar(progress.toScore()).toData({ length: 10 });
-		return p.emit(new Button(
-			task.item, $(s), $`§9${task.name} §8• §e${task.executed}§6/§e${task.goal}`,
-			[
-				'',
-				$`§7Progress: §e${progress.show()}%`,
-				$` §8> ${bar} §e${task.executed}§6/§e${task.goal}`,
-				'',
-				'§f§lRewards:',
-				...task.rewards.map(r => ` §8• ${r.name}`),
-				'',
-				'§e• IN PROGRESS',
-			], () => {
-				Player.send('This task is still in progress.');
-				Player.playSound('tick');
-			}, 1, ['!attribute_modifiers']
-		));
-	}
-
-	private static done(p: Page, task: Task, s: Score) {
-		return p.emit(new Button(
-			task.item, $(s), `§9${task.name} §8• §e${task.goal}§6/§e${task.goal} §8• §a§lCLAIM!`,
-			[
-				'',
-				'§f§lProgress: §e100%',
-				$` §8> §a----------- §e${task.executed}§6/§e${task.goal}`,
-				'',
-				'§a• §lTASK COMPLETE',
-				'§7Your reward is ready to claim.',
-				'',
-				'§f§lRewards:',
-				...task.rewards.map(r => ` §8• ${r.name}`),
-				'',
-				'§eClick to collect!'
-			], () => Player.throw('This Task is already complete!'), 1, ['!attribute_modifiers', 'enchantment_glint_override=true']
-		))
-	}
+  private static done(p: Page, task: Task, s: Score) {
+    return p.emit(new Button(
+      task.item, $(s), `§9${task.name} §8• §e${task.goal}§6/§e${task.goal} §8• §a§lCLAIM!`,
+      [
+        '',
+        '§f§lProgress: §e100%',
+        $` §8> §a----------- §e${task.executed}§6/§e${task.goal}`,
+        '',
+        '§a• §lTASK COMPLETE',
+        '§7Your reward is ready to claim.',
+        '',
+        '§f§lRewards:',
+        ...task.rewards.map(r => ` §8• ${r.name}`),
+        '',
+        '§eClick to collect!'
+      ], () => Player.throw('This Task is already complete!'), 1, ['!attribute_modifiers', 'enchantment_glint_override=true']
+    ))
+  }
 }

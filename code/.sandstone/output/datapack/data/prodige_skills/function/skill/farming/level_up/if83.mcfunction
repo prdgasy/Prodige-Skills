@@ -1,6 +1,6 @@
 scoreboard players add @p prodige_skills.player.pts 3000
-scoreboard players add @p prodige_skills.reward.pending.32_emerald 1
-scoreboard players add @p prodige_skills.reward.pending.epic_crate_key 1
+scoreboard players add @p prodige_skills.reward.pending.32_gold_ingot 1
+scoreboard players add @p prodige_skills.reward.pending.x4_pts_booster 1
 scoreboard players set anon_cnoL-r-9_15668 __sandstone 0
 execute store result score anon_cnoL-r-9_15668 __sandstone run random value 0..4
 execute if score anon_cnoL-r-9_15668 __sandstone matches 0 run function prodige_skills:skill/farming/level_up/if83/if

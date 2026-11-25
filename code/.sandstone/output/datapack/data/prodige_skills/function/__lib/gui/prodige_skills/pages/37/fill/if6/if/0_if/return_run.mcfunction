@@ -1,10 +1,10 @@
-scoreboard players operation anon_cnoL-r-9_6723 __sandstone = @p prodige_skills.task.progress.mine_dirt
+scoreboard players operation anon_cnoL-r-9_6723 __sandstone = @p prodige_skills.task.progress.mine_diamond_ore
 scoreboard players operation anon_cnoL-r-9_6723 __sandstone *= 10 __sandstone
 scoreboard players operation var_993 prodige_skills.prodigelib.float = anon_cnoL-r-9_6723 __sandstone
 scoreboard players set anon_cnoL-r-9_6724 __sandstone 1000
 scoreboard players operation var_993 prodige_skills.prodigelib.float *= anon_cnoL-r-9_6724 __sandstone
 scoreboard players operation var_993 prodige_skills.prodigelib.float /= 10 __sandstone
-scoreboard players set anon_cnoL-r-9_6725 __sandstone 10000
+scoreboard players set anon_cnoL-r-9_6725 __sandstone 250
 scoreboard players operation var_993 prodige_skills.prodigelib.float *= 10 __sandstone
 scoreboard players operation var_993 prodige_skills.prodigelib.float /= anon_cnoL-r-9_6725 __sandstone
 scoreboard players operation anon_cnoL-r-9_6726 __sandstone = var_993 prodige_skills.prodigelib.float
@@ -31,10 +31,10 @@ data modify storage __sandstone:variable anon_cnoL-r-9_3234.env_1 set from stora
 data modify storage __sandstone:variable anon_cnoL-r-9_3234.env_2 set from storage prodige_skills:prodigelib Float.d0
 function prodige_skills:__lib/floatvar/set_value_1 with storage __sandstone:variable anon_cnoL-r-9_3234
 data modify storage prodige_skills:prodigelib Float.var_993.out set from storage prodige_skills:prodigelib Float.temp
-# prodige_skills::tasks::fill -> §9Mine dirt §8• §e$(macro_arg_4105)§6/§e1000($(macro_arg_4104))
+# prodige_skills::tasks::fill -> §9Mine Diamond Ore §8• §e$(macro_arg_4105)§6/§e25($(macro_arg_4104))
 execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4104 int 1 run scoreboard players get anon_cnoL-r-9_6686 __sandstone
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4105 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_dirt
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4105 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_diamond_ore
 data modify storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4106 set from storage prodige_skills:prodigelib Float.var_993.out
 data modify storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4107 set from storage prodige_skills:prodigelib bar.out_210
-execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4108 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_dirt
+execute store result storage prodige_skills:prodigelib gui.prodige_skills.tasks.macro_arg_4108 int 1 run scoreboard players get @p prodige_skills.task.progress.mine_diamond_ore
 return run function prodige_skills:__lib/gui/prodige_skills/pages/37/fill/with_macro9 with storage prodige_skills:prodigelib gui.prodige_skills.tasks

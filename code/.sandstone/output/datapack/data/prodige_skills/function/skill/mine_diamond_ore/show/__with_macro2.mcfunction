@@ -1,0 +1,1 @@
+$bossbar remove prodige_skills.task.mine_diamond_ore.$(env_0)

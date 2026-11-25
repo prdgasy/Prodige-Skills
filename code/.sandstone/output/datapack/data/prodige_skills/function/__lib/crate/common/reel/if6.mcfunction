@@ -1,5 +1,5 @@
-# prodige_skills::crate_common_open::fill -> §354 Xp in a random Skill(9)
-item replace entity @s container.9 with experience_bottle[custom_name={text: "§354 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eChance: §716.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
+# prodige_skills::crate_common_open::fill -> §374 Xp in a random Skill(9)
+item replace entity @s container.9 with experience_bottle[custom_name={text: "§374 Xp in a random Skill", italic: false, color: "white"},lore=[{text: "§eChance: §716.1%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_common_open::fill -> §bx2 Xp Booster(10)
 item replace entity @s container.10 with experience_bottle[custom_name={text: "§bx2 Xp Booster", italic: false, color: "white"},lore=[{text: "§eChance: §77.7%", italic: false, color: "white"}],custom_data={prodige_skills: 1b}] 1
 # prodige_skills::crate_common_open::fill -> §6x2 Pts Booster(11)

@@ -150,13 +150,13 @@ tag @p remove prodige_skills.misc.task.1.done
 scoreboard players reset @p prodige_skills.task.progress.mine_sand
 tag @p remove prodige_skills.misc.task.2.progress
 tag @p remove prodige_skills.misc.task.2.done
-scoreboard players reset @p prodige_skills.task.progress.mine_stone
+scoreboard players reset @p prodige_skills.task.progress.mine_bricks
 tag @p remove prodige_skills.misc.task.3.progress
 tag @p remove prodige_skills.misc.task.3.done
-scoreboard players reset @p prodige_skills.task.progress.mine_dirt
+scoreboard players reset @p prodige_skills.task.progress.mine_diamond_ore
 tag @p remove prodige_skills.misc.task.4.progress
 tag @p remove prodige_skills.misc.task.4.done
-scoreboard players reset @p prodige_skills.task.progress.mine_sand
+scoreboard players reset @p prodige_skills.task.progress.mine_ancient_debris
 tag @p remove prodige_skills.misc.task.5.progress
 tag @p remove prodige_skills.misc.task.5.done
 tag @p add prodige_skills.level_up_notif

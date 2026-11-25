@@ -6,160 +6,173 @@ import { _, execute, MCFunction, Objective, Score, Variable, Macro as S } from "
 import { Reward } from "./reward";
 import { Float } from "@prodigelib/floatVar";
 
+export const TASK_RARITIES = ['common', 'rare', 'epic', 'legendary'] as const;
+export type TaskRarity = typeof TASK_RARITIES[number];
+
 export class Task {
-	public static tasks: Task[] = [];
-	public static nextId = 0;
-	public static timer = Objective.create('task.timer')('@p');
-	public static bossbar = Variable(0);
-	public executed: Score;
-	public name: string;
-	public item: Item;
-	public resource: string;
-	public goal: number;
-	public watcher: Score;
-	public id = Task.nextId++;
-	public rewards: Reward[];
+  public static tasks: Task[] = [];
+  public static nextId = 0;
+  public static timer = Objective.create('task.timer')('@p');
+  public static bossbar = Variable(0);
+  public executed: Score;
+  public name: string;
+  public item: Item;
+  public resource: string;
+  public goal: number;
+  public watcher: Score;
+  public id = Task.nextId++;
+  public rewards: Reward[];
+  public rarity: TaskRarity;
 
-	constructor(item: Item, name: string, goal: number, criteria: Criteria, rewards: Reward[]) {
-		this.item = item;
-		this.name = name;
-		this.resource = Global.toResource(this.name);
-		this.goal = goal;
-		this.executed = Objective.create(`task.progress.${this.resource}`)('@p');
-		this.watcher = Objective.create(`task.watcher.${this.resource}`, criteria)('@p');
+  constructor(
+    item: Item,
+    name: string,
+    goal: number,
+    criteria: Criteria,
+    rarity: TaskRarity,
+    rewards: Reward[]
+  ) {
+    this.item = item;
+    this.name = name;
+    this.resource = Global.toResource(this.name);
+    this.goal = goal;
+    this.rarity = rarity;
 
-		this.rewards = rewards;
-		Task.tasks.push(this);
-	}
+    this.executed = Objective.create(`task.progress.${this.resource}`)('@p');
+    this.watcher = Objective.create(`task.watcher.${this.resource}`, criteria)('@p');
 
-	public static init() {
-		this.manageTimer();
-		this.watch();
-	}
+    this.rewards = rewards;
+    Task.tasks.push(this);
+  }
 
-	private display() {
-		const fn = MCFunction(`skill/${this.resource}/show`, () => {
-			Task.bossbar['++'];
-			const key = Variable(Task.bossbar);
-			const progress = Float.variable(this.executed)['*='](100)['/='](this.goal).show();
+  public static init() {
+    this.manageTimer();
+    this.watch();
+  }
 
-			_.with([key, progress, this.executed], () => {
-				const id = S`prodige_skills.task.${this.resource}.${key}`;
+  private display() {
+    const fn = MCFunction(`skill/${this.resource}/show`, () => {
+      Task.bossbar['++'];
+      const key = Variable(Task.bossbar);
+      const progress = Float.variable(this.executed)['*='](100)['/='](this.goal).show();
 
-				S.bossbar.add(id, S`"§6§lTASK §8| §9${this.name} §8• §e${this.executed}§6/§e${this.goal} §8• §7${progress}%"`);
+      _.with([key, progress, this.executed], () => {
+        const id = S`prodige_skills.task.${this.resource}.${key}`;
 
-				S.bossbar.set(id).max(this.goal);
-				S.bossbar.set(id).value(S`${this.executed}`);
-				S.bossbar.set(id).color('blue');
-				S.bossbar.set(id).style('progress');
-				S.bossbar.set(id).players('@s');
-			});
+        S.bossbar.add(id, S`"§6§lTASK §8| §9${this.name} §8• §e${this.executed}§6/§e${this.goal} §8• §7${progress}%"`);
 
-			_.await.sleep("5s");
+        S.bossbar.set(id).max(this.goal);
+        S.bossbar.set(id).value(S`${this.executed}`);
+        S.bossbar.set(id).color('blue');
+        S.bossbar.set(id).style('progress');
+        S.bossbar.set(id).players('@s');
+      });
 
-			// clean
-			_.with([key], () => {
-				S.bossbar.remove(S`prodige_skills.task.${this.resource}.${key}`);
-			});
-			Task.bossbar['--'];
-		}, { asyncContext: true });
+      _.await.sleep("5s");
 
-		return fn();
-	}
+      // clean
+      _.with([key], () => {
+        S.bossbar.remove(S`prodige_skills.task.${this.resource}.${key}`);
+      });
+      Task.bossbar['--'];
+    }, { asyncContext: true });
 
-	private onEvent() {
-		const fn = MCFunction(`misc/task/on_event/${this.id}`, () => {
-			this.executed['+='](this.watcher);
-			_.if(Player.taskNotif, () => this.display());
-			_.if(this.executed['>='](this.goal), () => {
-				this.finished();
-			})
-		})
+    return fn();
+  }
 
-		return fn();
-	}
+  private onEvent() {
+    const fn = MCFunction(`misc/task/on_event/${this.id}`, () => {
+      this.executed['+='](this.watcher);
+      _.if(Player.taskNotif, () => this.display());
+      _.if(this.executed['>='](this.goal), () => {
+        this.finished();
+      })
+    })
 
-	private finished() {
-		Reward.vaultOrGiveAll(this.rewards);
-		Player.task(this.id, 'done').add();
-		Player.task(this.id, 'progress').remove();
-		Player.playSound('levelup', 2);
-		smartTellraw([
-			Global.encapsuler + '\n',
-			` §e§lTASK COMPLETE!\n\n`,
-			` §f§lTask:\n`,
-			`  §8• §9${this.name}§7: §e${this.goal}§6/§e${this.goal}\n\n`,
-			' §f§lRewards Collected: §7(See the Reward Vault)\n',
-			...this.rewards.map(r => `  §8• ${r.name}\n`),
-			'\n',
-			' §8Keep going and take on your next challenge!\n',
-			Global.encapsuler
-		], '@p');
-	}
+    return fn();
+  }
 
-	public static manageTimer() {
-		return MCFunction('misc/task/timer', () => {
-			execute.as('@a').run(() => {
-				_.if(Task.timer['>'](0), () => Task.timer['--']);
-			});
-		}, { runEvery: '60s' })
-	}
+  private finished() {
+    Reward.vaultOrGiveAll(this.rewards);
+    Player.task(this.id, 'done').add();
+    Player.task(this.id, 'progress').remove();
+    Player.playSound('levelup', 2);
+    smartTellraw([
+      Global.encapsuler + '\n',
+      ` §e§lTASK COMPLETE!\n\n`,
+      ` §f§lTask:\n`,
+      `  §8• §9${this.name}§7: §e${this.goal}§6/§e${this.goal}\n\n`,
+      ' §f§lRewards Collected: §7(See the Reward Vault)\n',
+      ...this.rewards.map(r => `  §8• ${r.name}\n`),
+      '\n',
+      ' §8Keep going and take on your next challenge!\n',
+      Global.encapsuler
+    ], '@p');
+  }
 
-	public static roll() {
-		const fn = MCFunction('misc/task/roll', () => {
-			Player.gotFirstTask.add();
-			Player.playSound('success', 2);
-			this.reset();
-			const assigned: Score[] = [];
-			const taskCount = Task.tasks.length;
-			for (let i = 0; i < 3; i++) {
-				const roll = Variable();
-				execute.store.result(roll).run.random.value([0, taskCount - 1]);
+  public static manageTimer() {
+    return MCFunction('misc/task/timer', () => {
+      execute.as('@a').run(() => {
+        _.if(Task.timer['>'](0), () => Task.timer['--']);
+      });
+    }, { runEvery: '60s' })
+  }
 
-				for (let attempt = 0; attempt < taskCount; attempt++) for (const previous of assigned) {
-					_.if(roll['=='](previous), () => {
-						roll['++'];
-						_.if(roll['>='](taskCount), () => roll.set(0));
-					});
-				}
+  public static roll() {
+    const fn = MCFunction('misc/task/roll', () => {
+      Player.gotFirstTask.add();
+      Player.playSound('success', 2);
+      this.reset();
+      const assigned: Score[] = [];
+      const taskCount = Task.tasks.length;
+      for (let i = 0; i < 3; i++) {
+        const roll = Variable();
+        execute.store.result(roll).run.random.value([0, taskCount - 1]);
 
-				_.with([roll], () => {
-					Player.addMacroTask(roll, "progress");
-				});
-				assigned.push(Variable(roll));
-			}
+        for (let attempt = 0; attempt < taskCount; attempt++) for (const previous of assigned) {
+          _.if(roll['=='](previous), () => {
+            roll['++'];
+            _.if(roll['>='](taskCount), () => roll.set(0));
+          });
+        }
 
-			Task.timer.set(60);
-		}, { onConflict: 'ignore' });
+        _.with([roll], () => {
+          Player.addMacroTask(roll, "progress");
+        });
+        assigned.push(Variable(roll));
+      }
 
-		return fn();
-	}
+      Task.timer.set(60);
+    }, { onConflict: 'ignore' });
 
-	public static reset() {
-		for (const task of Task.tasks) {
-			task.executed.reset();
-			Player.task(task.id, 'progress').remove();
-			Player.task(task.id, 'done').remove();
-		}
-	}
+    return fn();
+  }
+
+  public static reset() {
+    for (const task of Task.tasks) {
+      task.executed.reset();
+      Player.task(task.id, 'progress').remove();
+      Player.task(task.id, 'done').remove();
+    }
+  }
 
 
-	public static watch() {
-		return MCFunction('misc/task/watch', () => {
-			execute.as('@a').run(() => {
-				for (const task of Task.tasks) {
-					_.if(task.watcher['>'](0), () => {
-						_.if(Player.task(task.id, 'progress'), () => {
-							task.onEvent();
-						})
-						task.watcher.reset();
-					})
-				}
-			});
-		}, { runEvery: '5s' });
-	}
+  public static watch() {
+    return MCFunction('misc/task/watch', () => {
+      execute.as('@a').run(() => {
+        for (const task of Task.tasks) {
+          _.if(task.watcher['>'](0), () => {
+            _.if(Player.task(task.id, 'progress'), () => {
+              task.onEvent();
+            })
+            task.watcher.reset();
+          })
+        }
+      });
+    }, { runEvery: '5s' });
+  }
 
-	public static firstJoin() {
-		Task.reset();
-	}
+  public static firstJoin() {
+    Task.reset();
+  }
 }

@@ -1,5 +1,5 @@
-scoreboard players add @p prodige_skills.reward.pending.32_netherite_scrap 1
-scoreboard players add @p prodige_skills.reward.pending.64_gold_ingot 1
+scoreboard players add @p prodige_skills.reward.pending.16_golden_apple 1
+scoreboard players add @p prodige_skills.reward.pending.96_blaze_rod 1
 scoreboard players add @p prodige_skills.player.pts 3600
 scoreboard players add @p prodige_skills.reward.pending.12_diamond 1
 scoreboard players add @p prodige_skills.reward.pending.x4_xp_booster 1

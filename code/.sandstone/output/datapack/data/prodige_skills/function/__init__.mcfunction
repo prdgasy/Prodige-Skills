@@ -1009,6 +1009,12 @@ scoreboard objectives add prodige_skills.task.progress.mine_dirt dummy
 scoreboard objectives add prodige_skills.task.watcher.mine_dirt minecraft.mined:minecraft.dirt
 scoreboard objectives add prodige_skills.task.progress.mine_sand dummy
 scoreboard objectives add prodige_skills.task.watcher.mine_sand minecraft.mined:minecraft.sand
+scoreboard objectives add prodige_skills.task.progress.mine_bricks dummy
+scoreboard objectives add prodige_skills.task.watcher.mine_bricks minecraft.mined:minecraft.bricks
+scoreboard objectives add prodige_skills.task.progress.mine_diamond_ore dummy
+scoreboard objectives add prodige_skills.task.watcher.mine_diamond_ore minecraft.mined:minecraft.diamond_ore
+scoreboard objectives add prodige_skills.task.progress.mine_ancient_debris dummy
+scoreboard objectives add prodige_skills.task.watcher.mine_ancient_debris minecraft.mined:minecraft.ancient_debris
 scoreboard objectives add prodige_skills.misc.booster.Xp.multiplier dummy
 scoreboard objectives add prodige_skills.misc.booster.Xp.timer dummy
 scoreboard objectives add prodige_skills.misc.booster.Pts.multiplier dummy
@@ -1179,6 +1185,9 @@ scoreboard objectives add __sandstone.asyncTimer.prodige_skills.__lib.crate.myth
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_stone.show.__sleep dummy
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_dirt.show.__sleep dummy
 scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_sand.show.__sleep dummy
+scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_bricks.show.__sleep dummy
+scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_diamond_ore.show.__sleep dummy
+scoreboard objectives add __sandstone.asyncTimer.prodige_skills.skill.mine_ancient_debris.show.__sleep dummy
 scoreboard players set prodige_skills load.status 1
 scoreboard players set anon_cnoL-r-9_0 __sandstone 0
 scoreboard players set anon_cnoL-r-9_2 __sandstone 0
